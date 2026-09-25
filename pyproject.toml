@@ -1,0 +1,18 @@
+[project]
+name = "nihonga"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+dependencies = [
+    "modal>=1.0.0",
+    "torch",
+    "transformers",
+    "diffusers",
+    "accelerate",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff",
+    "pytest",
+]
