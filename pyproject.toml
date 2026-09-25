@@ -1,18 +1,20 @@
 [project]
-name = "nihonga"
+name = "my-modal-project"
 version = "0.1.0"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 
 dependencies = [
     "modal>=1.0.0",
-    "torch",
-    "transformers",
-    "diffusers",
+    "torch>=2.4.0",
+    "transformers>=5.17",
+    "diffusers @ git+https://github.com/huggingface/diffusers",
+    "torchvision",
     "accelerate",
+    "pillow"
 ]
 
-[tool.uv]
-dev-dependencies = [
-    "ruff",
-    "pytest",
+[dependency-groups]
+dev = [
+    "jupyter",
+    "ipywidgets"
 ]

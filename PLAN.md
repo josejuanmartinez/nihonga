@@ -1,4 +1,4 @@
-# Qwen Image Compression and Acceleration Plan
+# NIHONGA: Qwen Image 2.1 Compression and Acceleration Plan
 
 ## Goal
 
@@ -14,6 +14,9 @@ The full pipeline combines:
 6. Systematic benchmarking against the original model
 
 ---
+
+## Phase 0 - Exploratory
+Let's explore how Qwen Image 2.1 model looks like in terms of architecture
 
 ## Phase 1 — Build the Prompt Dataset
 
