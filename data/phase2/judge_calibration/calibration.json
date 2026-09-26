@@ -1,0 +1,168 @@
+{
+  "model": "Qwen-Image",
+  "n_prompts": 50,
+  "n_requests": 205,
+  "parse_failures_ours": 0,
+  "parse_failures_official": 0,
+  "truncated_ours": 0,
+  "pillars": {
+    "Quality": {
+      "n": 50,
+      "ours": 50.044444444444444,
+      "official": 49.53333333333333,
+      "pearson": 0.5074983131829763
+    },
+    "Aesthetics": {
+      "n": 50,
+      "ours": 53.95333333333333,
+      "official": 56.45333333333334,
+      "pearson": 0.7677313588951287
+    },
+    "Alignment": {
+      "n": 50,
+      "ours": 50.63233333333333,
+      "official": 49.48633333333332,
+      "pearson": 0.8087687900639366
+    },
+    "Real-world Fidelity": {
+      "n": 24,
+      "ours": 44.97685185185185,
+      "official": 45.254629629629626,
+      "pearson": 0.9554603794112254
+    },
+    "Creative Generation": {
+      "n": 31,
+      "ours": 47.19713261648746,
+      "official": 45.1594982078853,
+      "pearson": 0.9036058953084741
+    }
+  },
+  "total": {
+    "n": 50,
+    "ours": 50.52706666666666,
+    "official": 50.41754629629631,
+    "pearson": 0.8600305435947196
+  },
+  "facets": {
+    "n": 2212,
+    "exact_agreement": 0.9231464737793852,
+    "exact_agreement_scored": 0.891645988420182,
+    "within_one_level_scored": 0.989247311827957
+  },
+  "throughput": {
+    "sec_per_request": 0.4836585365853659,
+    "mean_out_tokens": 550.0585365853658,
+    "full_requests": 11613,
+    "rerun_requests": 1156,
+    "estimated_gpu_hours": 1.7155099593495937,
+    "estimated_usd": 6.774891931463416
+  },
+  "analysis": {
+    "n_bootstrap": 5000,
+    "pillars": {
+      "Quality": {
+        "n": 50,
+        "mean_diff": 0.511111111111111,
+        "ci95": [
+          -2.8005555555555546,
+          3.6888888888888887
+        ],
+        "sd_official": 12.513873782208169,
+        "mae": 5.755555555555555
+      },
+      "Aesthetics": {
+        "n": 50,
+        "mean_diff": -2.5,
+        "ci95": [
+          -6.540166666666667,
+          1.4666666666666663
+        ],
+        "sd_official": 19.164058953039035,
+        "mae": 7.433333333333333
+      },
+      "Alignment": {
+        "n": 50,
+        "mean_diff": 1.1459999999999997,
+        "ci95": [
+          -1.79075,
+          3.8840916666666656
+        ],
+        "sd_official": 16.489025875816115,
+        "mae": 6.316666666666667
+      },
+      "Real-world Fidelity": {
+        "n": 24,
+        "mean_diff": -0.2777777777777777,
+        "ci95": [
+          -2.083333333333334,
+          1.2500000000000009
+        ],
+        "sd_official": 13.334277712183145,
+        "mae": 1.1111111111111116
+      },
+      "Creative Generation": {
+        "n": 31,
+        "mean_diff": 2.0376344086021505,
+        "ci95": [
+          -0.9732526881720431,
+          6.134543010752687
+        ],
+        "sd_official": 23.059732065187934,
+        "mae": 3.7365591397849465
+      }
+    },
+    "aesthetics_facets": {
+      "Composition": {
+        "n": 50,
+        "ours": 55.6,
+        "official": 57.6,
+        "exact": 0.92,
+        "na_disagreements": 0
+      },
+      "Color Harmony": {
+        "n": 50,
+        "ours": 69.2,
+        "official": 72.0,
+        "exact": 0.86,
+        "na_disagreements": 0
+      },
+      "Lighting & Atmosphere": {
+        "n": 49,
+        "ours": 66.12244897959184,
+        "official": 69.79591836734694,
+        "exact": 0.8163265306122449,
+        "na_disagreements": 1
+      },
+      "Anatomical Fidelity": {
+        "n": 25,
+        "ours": 7.2,
+        "official": 8.8,
+        "exact": 0.88,
+        "na_disagreements": 1
+      },
+      "Emotional Expression": {
+        "n": 44,
+        "ours": 55.90909090909091,
+        "official": 57.27272727272727,
+        "exact": 0.8181818181818182,
+        "na_disagreements": 2
+      },
+      "Style Control": {
+        "n": 31,
+        "ours": 42.58064516129032,
+        "official": 44.516129032258064,
+        "exact": 0.7741935483870968,
+        "na_disagreements": 1
+      }
+    },
+    "total": {
+      "n": 50,
+      "mean_diff": 0.10952037037036981,
+      "ci95": [
+        -1.6250930092592597,
+        1.9197015277777754
+      ],
+      "mae": 4.042868518518517
+    }
+  }
+}

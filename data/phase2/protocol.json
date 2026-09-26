@@ -1,0 +1,138 @@
+{
+  "PHASE": "Phase 2 — Establish the Original Baseline",
+  "PROTOCOL_VERSION": "phase2-v1",
+  "FORCE_RECOMPUTE": false,
+  "MODEL_REPO": "Qwen/Qwen-Image-2.1",
+  "MODEL_REVISION": "790c92633540aa0cb11d9abf19eb46d861714758",
+  "DTYPE": "bfloat16",
+  "NUM_INFERENCE_STEPS": 40,
+  "TRUE_CFG_SCALE": 1.0,
+  "NOISE_DEVICE": "cpu",
+  "TARGET_AREA": 1048576,
+  "ASPECT_RATIOS": [
+    "1:1",
+    "16:9",
+    "9:16",
+    "4:3",
+    "3:4",
+    "3:2",
+    "2:3",
+    "21:9"
+  ],
+  "RESOLUTIONS": {
+    "1:1": [
+      1024,
+      1024
+    ],
+    "16:9": [
+      1376,
+      768
+    ],
+    "9:16": [
+      768,
+      1376
+    ],
+    "4:3": [
+      1184,
+      896
+    ],
+    "3:4": [
+      896,
+      1184
+    ],
+    "3:2": [
+      1248,
+      832
+    ],
+    "2:3": [
+      832,
+      1248
+    ],
+    "21:9": [
+      1568,
+      672
+    ]
+  },
+  "BENCH_ASPECT_RATIO": "1:1",
+  "BENCH_LANGS": [
+    "cn",
+    "en"
+  ],
+  "BENCH_SEED_SALT": "nihonga-bench-v1",
+  "NOISE_FLOOR_EVERY": 10,
+  "JUDGE_REPO": "Qwen/Qwen-Image-Bench",
+  "JUDGE_REVISION": "1b77ff83564ac4e4e8140769eacff7ff73f35f3c",
+  "JUDGE_CODE_REPO": "QwenLM/Qwen-Image-Bench",
+  "JUDGE_CODE_REVISION": "8ab1fb47df2fba7b0cb046770a87f6323b98ecfc",
+  "JUDGE_DIMENSIONS": [
+    "Quality",
+    "Aesthetics",
+    "Alignment",
+    "Real-world Fidelity",
+    "Creative Generation"
+  ],
+  "JUDGE_SAMPLING": {
+    "temperature": 0.0,
+    "top_k": 1,
+    "top_p": 1.0,
+    "repetition_penalty": 1.05,
+    "max_tokens": 4096,
+    "seed": 42
+  },
+  "JUDGE_ENABLE_THINKING": true,
+  "JUDGE_ENGINE": "vllm==0.30.0",
+  "JUDGE_MAX_SIDE": 1024,
+  "JUDGE_MAX_MODEL_LEN": 8192,
+  "JUDGE_MAX_NUM_SEQS": 64,
+  "JUDGE_MAX_BATCHED_TOKENS": 8192,
+  "INTERNAL_PILLARS": {
+    "alignment": [
+      "Quality",
+      "Aesthetics",
+      "Alignment"
+    ],
+    "visual_quality": [
+      "Quality",
+      "Aesthetics",
+      "Alignment"
+    ],
+    "aesthetics": [
+      "Quality",
+      "Aesthetics",
+      "Alignment"
+    ],
+    "real_world": [
+      "Quality",
+      "Aesthetics",
+      "Alignment",
+      "Real-world Fidelity"
+    ],
+    "creative": [
+      "Quality",
+      "Aesthetics",
+      "Alignment",
+      "Creative Generation"
+    ]
+  },
+  "GEN_GPU": "H100",
+  "JUDGE_GPU": "H100",
+  "JUDGE_MAX_CONTAINERS": 2,
+  "JUDGE_BATCH_SIZE": 64,
+  "EFF_WARMUP_RUNS": 3,
+  "EFF_TIMED_RUNS": 10,
+  "GEN_MAX_CONTAINERS": 8,
+  "GEN_BATCH_SIZE": 16,
+  "GEN_PACKAGES": [
+    "torch==2.14.0",
+    "torchvision==0.29.0",
+    "transformers==5.17.0",
+    "accelerate==1.15.0",
+    "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+    "pillow"
+  ],
+  "PHASE1_DIR": "data/phase1",
+  "INTERNAL_TEST_PATH": "data/phase1/pilot_20k/internal_test.jsonl",
+  "BENCH_PROMPTS_PATH": "data/qwen_image_bench/prompts.jsonl",
+  "DATA_DIR": "data/phase2",
+  "IMAGES_DIR": "data/phase2/images"
+}

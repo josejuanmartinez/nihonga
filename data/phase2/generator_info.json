@@ -1,0 +1,44 @@
+{
+  "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+  "scheduler_config": {
+    "num_train_timesteps": 1000,
+    "shift": 1.0,
+    "use_dynamic_shifting": true,
+    "base_shift": 0.5,
+    "max_shift": 0.9,
+    "base_image_seq_len": 256,
+    "max_image_seq_len": 8192,
+    "invert_sigmas": false,
+    "shift_terminal": 0.02,
+    "use_karras_sigmas": false,
+    "use_exponential_sigmas": false,
+    "use_beta_sigmas": false,
+    "time_shift_type": "exponential",
+    "stochastic_sampling": false,
+    "_class_name": "FlowMatchEulerDiscreteScheduler",
+    "_diffusers_version": "0.37.0.dev0"
+  },
+  "components": {
+    "vae": {
+      "class": "AutoencoderKLQwenImage21",
+      "params": 337740404,
+      "bytes": 675480808
+    },
+    "text_encoder": {
+      "class": "Qwen3VLForConditionalGeneration",
+      "params": 8767123696,
+      "bytes": 17534248048
+    },
+    "transformer": {
+      "class": "QwenImage21Transformer2DModel",
+      "params": 7115124736,
+      "bytes": 14230249984
+    }
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "torch": "2.14.0+cu130",
+  "cuda": "13.0",
+  "diffusers": "0.41.0.dev0",
+  "transformers": "5.17.0",
+  "recorded_utc": "2026-09-26T17:19:07.080948+00:00"
+}

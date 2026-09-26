@@ -3,3 +3,8 @@ CLAUDE.md
 dist
 *.egg-info
 uv.lock
+# Generated images: too large for GitHub, backed up separately
+data/phase2/images/
+data/phase2/images_rerun/
+__pycache__/
+*.pyc

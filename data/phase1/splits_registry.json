@@ -1,0 +1,26 @@
+{
+  "phase": "Phase 1 — Build the Prompt Dataset",
+  "splits": {
+    "train": {
+      "source": "synthetic (this notebook)",
+      "usage": "bridge pretraining, healing, speed distillation"
+    },
+    "validation": {
+      "source": "synthetic (this notebook)",
+      "usage": "model selection, early stopping"
+    },
+    "internal_test": {
+      "source": "synthetic (this notebook)",
+      "usage": "final internal evaluation only"
+    },
+    "qwen_image_bench": {
+      "source": "hf://datasets/Qwen/Qwen-Image-Bench@d2493deb153b020cf169c7e3f57d15e4dd697038/qwen_image_bench_hf_v0518.jsonl",
+      "local_prompts": "data\\qwen_image_bench\\prompts.jsonl",
+      "n_prompts": 1000,
+      "usage": "EVALUATION ONLY — never used for training",
+      "pool_decontaminated": true,
+      "llm_outputs_decontaminated": true
+    }
+  },
+  "split_rule": "stratified by (dimension, subdimension, difficulty); SPLIT_PATTERN 18:1:1; nested by pool_rank"
+}
