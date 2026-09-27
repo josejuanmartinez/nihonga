@@ -1,0 +1,29 @@
+{
+  "version": "phase3-architecture-config-v1",
+  "model_repo": "Qwen/Qwen-Image-2.1",
+  "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+  "config_relative_path": "transformer/config.json",
+  "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+  "depth_fields": {
+    "num_layers": 32
+  },
+  "config": {
+    "_class_name": "QwenImage21Transformer2DModel",
+    "_diffusers_version": "0.37.0.dev0",
+    "attention_head_dim": 128,
+    "axes_dims_rope": [
+      16,
+      56,
+      56
+    ],
+    "context_in_dim": 4096,
+    "in_channels": 64,
+    "num_attention_heads": 32,
+    "num_layers": 32,
+    "out_channels": 64,
+    "patch_size": 1,
+    "mlp_ratio": 3,
+    "eps": 1e-06,
+    "causal_condition": true
+  }
+}
