@@ -1,0 +1,68 @@
+{
+  "request_key": "7025e4237ce301af9975e5d5cbb657f12261db125931c583230fff6e649e8453",
+  "image_identities": {
+    "internal-p1-e0d8dd3b84cd": {
+      "old_sha256": "f27c8f9c81c57a5b3049a84ba268b1a90588a35abed27b7172ce033022aea9c6",
+      "new_sha256": "f27c8f9c81c57a5b3049a84ba268b1a90588a35abed27b7172ce033022aea9c6"
+    },
+    "internal-p1-5bec387a9a76": {
+      "old_sha256": "ad7ac1130e01bc8a58721c475c814632672e3d2c245752757e9c285036258b33",
+      "new_sha256": "ad7ac1130e01bc8a58721c475c814632672e3d2c245752757e9c285036258b33"
+    },
+    "internal-p1-4a1cdb170e44": {
+      "old_sha256": "b9a02f7d2863bb372ef8da9ef3a77240dc3795542a13e298f6065c31f2f05a4d",
+      "new_sha256": "b9a02f7d2863bb372ef8da9ef3a77240dc3795542a13e298f6065c31f2f05a4d"
+    },
+    "internal-p1-425ec4e55730": {
+      "old_sha256": "f7dc7ed2b8dc1b4dc974f21eb35bb4e1df070e2becaea399b2e1cdd7c052ba5c",
+      "new_sha256": "06689bdd9e8009daa3d17d7e67dfd21e72390df35f2626fe3251808fab6b82f3"
+    },
+    "internal-p1-6177a6812fbc": {
+      "old_sha256": "7e7abfc84a751dfc1353202ffd1b8a9b3df10149a5bc7c7cce90ef076d38b00d",
+      "new_sha256": "7e7abfc84a751dfc1353202ffd1b8a9b3df10149a5bc7c7cce90ef076d38b00d"
+    }
+  },
+  "comparison": "earlier intact activation PNG versus regenerated intact teacher PNG; not a bypassed image",
+  "entries": [
+    {
+      "eval_id": "internal-p1-e0d8dd3b84cd",
+      "dimension": "aesthetics",
+      "png_byte_identical": true,
+      "mean_absolute_channel_difference_8bit": 0.0,
+      "max_absolute_channel_difference_8bit": 0,
+      "fraction_of_pixels_changed": 0.0
+    },
+    {
+      "eval_id": "internal-p1-5bec387a9a76",
+      "dimension": "alignment",
+      "png_byte_identical": true,
+      "mean_absolute_channel_difference_8bit": 0.0,
+      "max_absolute_channel_difference_8bit": 0,
+      "fraction_of_pixels_changed": 0.0
+    },
+    {
+      "eval_id": "internal-p1-4a1cdb170e44",
+      "dimension": "creative",
+      "png_byte_identical": true,
+      "mean_absolute_channel_difference_8bit": 0.0,
+      "max_absolute_channel_difference_8bit": 0,
+      "fraction_of_pixels_changed": 0.0
+    },
+    {
+      "eval_id": "internal-p1-425ec4e55730",
+      "dimension": "real_world",
+      "png_byte_identical": false,
+      "mean_absolute_channel_difference_8bit": 0.18658030938304376,
+      "max_absolute_channel_difference_8bit": 100,
+      "fraction_of_pixels_changed": 0.2887363507480695
+    },
+    {
+      "eval_id": "internal-p1-6177a6812fbc",
+      "dimension": "visual_quality",
+      "png_byte_identical": true,
+      "mean_absolute_channel_difference_8bit": 0.0,
+      "max_absolute_channel_difference_8bit": 0,
+      "fraction_of_pixels_changed": 0.0
+    }
+  ]
+}

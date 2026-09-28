@@ -1,0 +1,19 @@
+{
+  "request_key": "5570ead16061e5e61d0cf1c87328f56fbc5f1dc5c9122e32661850c831b05ba4",
+  "gallery_sha256": {
+    "internal-p1-e0d8dd3b84cd-comparison.png": "a02dcc5aa07f4d9d42e6d9e5e43fad95805ce555e2125543109bbb60fcb326df",
+    "internal-p1-5bec387a9a76-comparison.png": "1301c8e4639b54ce8de05e3a7e6f32a26173d93e0e9a058415da96bfd44bd972",
+    "internal-p1-4a1cdb170e44-comparison.png": "4ac18fb629482d778a73bdecdde78cdcdb24c0a76b8fb3d7b02e46ac1ab259cb",
+    "internal-p1-425ec4e55730-comparison.png": "be747c71131e871feb399724f30e43f32fa3c6d80ef312de7249af7960ca3923",
+    "internal-p1-6177a6812fbc-comparison.png": "64e8680b7d2590cd477dedd8f4dbaa714893cb54f3b8e4bacc32700a953e29a1"
+  },
+  "method": "qualitative inspection of five saved comparison thumbnails; no automated judge or blinded scores",
+  "observations": {
+    "aesthetics": "All three images retain the flower-meadow scene. Block 4 appears closer to the teacher composition; block 5 changes prominent flower stems and placement. This is a similarity observation, not a rated aesthetic preference.",
+    "alignment": "The teacher depicts an astronaut skateboarding. With block 4 skipped, the rider wears ordinary clothing rather than a spacesuit: the astronaut requirement is lost. With block 5 skipped, the spacesuit and helmet remain, although the pose and background change. This is a concrete prompt-adherence difference in this one example.",
+    "creative": "All three retain an animal-like creature with crystal antlers. Block 4 changes facial proportions. Block 5 changes the creature more visibly, including fur color, proportions and pose. Preserving the broad concept does not establish fidelity to the teacher or overall creative quality.",
+    "real_world": "All three show a kettle against a white background, but the design changes substantially. Block 4 produces a taller metal design with a water-level window; block 5 produces a cream-colored design. The prompt does not specify the teacher kettle design, so these differences alone are not proof of worse prompt adherence.",
+    "visual_quality": "All three depict old books. Both bypasses alter stack arrangement, book placement and surface details. Thumbnail inspection does not establish which is aesthetically better or rule out defects at full resolution."
+  },
+  "decision": "identity bypass is not accepted as a replacement; prioritize block 5 for a learned-bridge pilot, retaining block 4 as comparator; no final pruning decision"
+}

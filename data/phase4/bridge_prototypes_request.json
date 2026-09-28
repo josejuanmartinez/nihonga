@@ -1,0 +1,55 @@
+{
+  "request": {
+    "version": "phase4-bridge-prototypes-v1",
+    "model_repo": "Qwen/Qwen-Image-2.1",
+    "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+    "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+    "num_teacher_blocks": 32,
+    "hidden_dim": 4096,
+    "bottleneck_dim": 256,
+    "bias": false,
+    "formula": "h + W_up(GELU(W_down(h)))",
+    "definition_sha256": "1e3955167ab2c1f432f391edb3c8c7a71c25d9b1831522d632d849bc6625d1d4",
+    "initialization": "random down projection, zero up projection; initially identity, trained later",
+    "initialization_seed_by_layer": {
+      "2": 20260930,
+      "4": 20260932,
+      "5": 20260933,
+      "3": 20260931
+    },
+    "prototype_dtype": "float32",
+    "candidate_layers": [
+      2,
+      4,
+      5,
+      3
+    ],
+    "candidate_policy": "all four measured candidates remain eligible for learned bridges; no layer permanently excluded by identity tests",
+    "replacement_policy": "independent single-block experiments before joint replacement; same rank and training budget per candidate",
+    "phase3_source_sha256": {
+      "architecture.json": "bdb4c880712168d28e33b464c3052d493c7843eb86212e3537fde6f7f2d7e9f0",
+      "bypass_shortlist.json": "1bd8916093b2955e773a3b172c632a38ad11269699a6471e937e19aa93f78ff7",
+      "block_02_pilot/summary.json": "df700b4cb0e5b42d838640a0b1397851d6941f8c1ddeff76a46f820b674dc201",
+      "block_04_pilot/summary.json": "0461bf922d5f15004e36d79fbf410407ecd6c89cc8b2292f47be514af3290148",
+      "block_05_pilot/summary.json": "9b48e94baa35de33826fca0f284d87178c6d3ad5df637bc4a60d0f50d57720d7",
+      "block_03_pilot/summary.json": "9ddbdfa82e16adb7dfaa126563526818e365eb64d77b18fa189339072b53dd0f",
+      "full_images_pilot/visual_review.json": "c2c0a9c8b504152852feb5cbfebce1d361706cf70e3ecc687df9f3b743a5aa97"
+    },
+    "split_sha256": {
+      "train": "56ed184aaed289f587eb51a2495854e06b5caa261090a5817597ba7be4baaa59",
+      "validation": "eb6b0366b9bf217400fb2e806c099356dde33484346ae7ce66cf841cf3fc8823",
+      "internal_test": "75e18e3232e3863f35e6519c210a805bfa4bc629201d8b112b85ed99a6632f50"
+    },
+    "training_source": "data\\phase1\\pilot_20k\\train.jsonl",
+    "selection_source": "data\\phase1\\pilot_20k\\validation.jsonl",
+    "evaluation_only": [
+      "internal_test",
+      "qwen_image_bench",
+      "phase3 pilot and full probe sets"
+    ],
+    "target_capture_policy": "capture paired block input and output from TRAIN; validation separately; save token roles, masks and stage metadata",
+    "integration_policy": "core module is not a complete drop-in block; preserve parent processor inspection and rebuild downstream prefix caches with the bridge",
+    "conditioning_policy": "unconditioned tokenwise baseline; evaluate prefix and image tokens and each stage separately; timestep conditioning only if needed"
+  },
+  "request_key": "6c5a69aa833f10d6ed6c2082e10e1bd5a3bad33af45bd3187201dd91fa3b79c8"
+}

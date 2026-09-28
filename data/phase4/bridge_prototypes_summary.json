@@ -1,0 +1,59 @@
+{
+  "request_key": "6c5a69aa833f10d6ed6c2082e10e1bd5a3bad33af45bd3187201dd91fa3b79c8",
+  "definition_sha256": "1e3955167ab2c1f432f391edb3c8c7a71c25d9b1831522d632d849bc6625d1d4",
+  "checkpoint_sha256": {
+    "2": "49de293a3ec2d1483ecc1d478cc0967747ff0824a647be14b509d0f28871b16d",
+    "4": "a6e26baf65a9b4942073120571045ce8b3fe82da42f31713de6b618b36c54593",
+    "5": "375fcd975aa98e0d7329b24ba9b550dd50644203d6412d47d31a912387db9ba0",
+    "3": "ec0441470a893c76353c606d246dac113e147494dbba05cc09b14bd65051ea15"
+  },
+  "checks": [
+    {
+      "layer": 2,
+      "initialization_seed": 20260930,
+      "parameters": 2097152,
+      "identity_at_initialization": true,
+      "synthetic_up_gradient_norm": 0.006865140050649643,
+      "synthetic_loss_before": 0.01012460608035326,
+      "synthetic_loss_after_one_update": 0.010119893588125706,
+      "synthetic_nonidentity_after_update": true,
+      "checkpoint_status": "initialization only; synthetic update not saved"
+    },
+    {
+      "layer": 4,
+      "initialization_seed": 20260932,
+      "parameters": 2097152,
+      "identity_at_initialization": true,
+      "synthetic_up_gradient_norm": 0.007210751064121723,
+      "synthetic_loss_before": 0.009889359585940838,
+      "synthetic_loss_after_one_update": 0.00988416001200676,
+      "synthetic_nonidentity_after_update": true,
+      "checkpoint_status": "initialization only; synthetic update not saved"
+    },
+    {
+      "layer": 5,
+      "initialization_seed": 20260933,
+      "parameters": 2097152,
+      "identity_at_initialization": true,
+      "synthetic_up_gradient_norm": 0.006893781945109367,
+      "synthetic_loss_before": 0.009923991747200489,
+      "synthetic_loss_after_one_update": 0.009919239208102226,
+      "synthetic_nonidentity_after_update": true,
+      "checkpoint_status": "initialization only; synthetic update not saved"
+    },
+    {
+      "layer": 3,
+      "initialization_seed": 20260931,
+      "parameters": 2097152,
+      "identity_at_initialization": true,
+      "synthetic_up_gradient_norm": 0.007359416224062443,
+      "synthetic_loss_before": 0.010047676041722298,
+      "synthetic_loss_after_one_update": 0.01004225853830576,
+      "synthetic_nonidentity_after_update": true,
+      "checkpoint_status": "initialization only; synthetic update not saved"
+    }
+  ],
+  "parameters_per_bridge": 2097152,
+  "full_linear_parameters": 16777216,
+  "status": "prototypes initialized; no teacher targets collected, no bridge trained or installed"
+}

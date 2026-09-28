@@ -1,0 +1,128 @@
+{
+  "request_key": "5570ead16061e5e61d0cf1c87328f56fbc5f1dc5c9122e32661850c831b05ba4",
+  "report_hashes": {
+    "internal-p1-e0d8dd3b84cd-block-04": "17ec3bb97958a5439ac3f40e774c0208896227906797acb207c6ae2d416ee1cb",
+    "internal-p1-e0d8dd3b84cd-block-05": "247ca0e613d3fd14823871c443f08c071adb85a0e0e64536603fe9f914a4c38a",
+    "internal-p1-5bec387a9a76-block-04": "99c8383ddb0649580d8195a816c963b96c8a54f8038df4176132114181c733e1",
+    "internal-p1-5bec387a9a76-block-05": "74ec7d00cc17d02f1b458d455da06d36249000add3af0bdb8cb1efc8d26bd6fa",
+    "internal-p1-4a1cdb170e44-block-04": "04421686049ac0b9e2b35efff64bb60b58bc2b6937999d1acc921a55ceafb3aa",
+    "internal-p1-4a1cdb170e44-block-05": "f68f54d0a80ba199f951068a25db3efadb5a18b5e19c67e7b337d90708f13328",
+    "internal-p1-425ec4e55730-block-04": "321980dee294c8e0fa367b882e5ec42ef51a1946f9d2702e3cfcf10b4280cd45",
+    "internal-p1-425ec4e55730-block-05": "1d4d46acb09c684e5243f100421d2e2f7fb4af35a87fdf077be3fd6fb631d268",
+    "internal-p1-6177a6812fbc-block-04": "e02a0a1ea5ae822122e098d9242abc85d73fe3b62523666325cc6279c85fd4a3",
+    "internal-p1-6177a6812fbc-block-05": "d5d85ae669d83f10b044077a9b78ea77ba845f3caec73dacbbb19a242b1679c4"
+  },
+  "gallery_sha256": {
+    "internal-p1-e0d8dd3b84cd-comparison.png": "a02dcc5aa07f4d9d42e6d9e5e43fad95805ce555e2125543109bbb60fcb326df",
+    "internal-p1-5bec387a9a76-comparison.png": "1301c8e4639b54ce8de05e3a7e6f32a26173d93e0e9a058415da96bfd44bd972",
+    "internal-p1-4a1cdb170e44-comparison.png": "4ac18fb629482d778a73bdecdde78cdcdb24c0a76b8fb3d7b02e46ac1ab259cb",
+    "internal-p1-425ec4e55730-comparison.png": "be747c71131e871feb399724f30e43f32fa3c6d80ef312de7249af7960ca3923",
+    "internal-p1-6177a6812fbc-comparison.png": "64e8680b7d2590cd477dedd8f4dbaa714893cb54f3b8e4bacc32700a953e29a1"
+  },
+  "n_prompts": 5,
+  "n_generated_images": 10,
+  "teacher_regenerated": false,
+  "measurements": [
+    {
+      "eval_id": "internal-p1-e0d8dd3b84cd",
+      "dimension": "aesthetics",
+      "layer": 4,
+      "rgb8_mae": 7.362817887495963,
+      "rgb8_rmse": 11.539641200582203,
+      "psnr_db": 26.886957496461186,
+      "identical_pixels": false,
+      "generation_seconds": 11.941761695000004
+    },
+    {
+      "eval_id": "internal-p1-e0d8dd3b84cd",
+      "dimension": "aesthetics",
+      "layer": 5,
+      "rgb8_mae": 8.68419495417474,
+      "rgb8_rmse": 12.497548486791628,
+      "psnr_db": 26.194307001438478,
+      "identical_pixels": false,
+      "generation_seconds": 6.054206300999994
+    },
+    {
+      "eval_id": "internal-p1-5bec387a9a76",
+      "dimension": "alignment",
+      "layer": 4,
+      "rgb8_mae": 34.3358200043146,
+      "rgb8_rmse": 51.49687846848052,
+      "psnr_db": 13.895185515234152,
+      "identical_pixels": false,
+      "generation_seconds": 7.651953730999992
+    },
+    {
+      "eval_id": "internal-p1-5bec387a9a76",
+      "dimension": "alignment",
+      "layer": 5,
+      "rgb8_mae": 30.353252704326923,
+      "rgb8_rmse": 48.36809293196312,
+      "psnr_db": 14.439624323367148,
+      "identical_pixels": false,
+      "generation_seconds": 5.949346067000008
+    },
+    {
+      "eval_id": "internal-p1-4a1cdb170e44",
+      "dimension": "creative",
+      "layer": 4,
+      "rgb8_mae": 11.782377459912537,
+      "rgb8_rmse": 19.556674826723043,
+      "psnr_db": 22.3049033145425,
+      "identical_pixels": false,
+      "generation_seconds": 7.058740153999992
+    },
+    {
+      "eval_id": "internal-p1-4a1cdb170e44",
+      "dimension": "creative",
+      "layer": 5,
+      "rgb8_mae": 15.947094165046972,
+      "rgb8_rmse": 22.57674075017184,
+      "psnr_db": 21.05757868894775,
+      "identical_pixels": false,
+      "generation_seconds": 6.193156570999989
+    },
+    {
+      "eval_id": "internal-p1-425ec4e55730",
+      "dimension": "real_world",
+      "layer": 4,
+      "rgb8_mae": 21.707116086510617,
+      "rgb8_rmse": 43.19600193050654,
+      "psnr_db": 15.42193257046953,
+      "identical_pixels": false,
+      "generation_seconds": 7.732690645999995
+    },
+    {
+      "eval_id": "internal-p1-425ec4e55730",
+      "dimension": "real_world",
+      "layer": 5,
+      "rgb8_mae": 20.103421990629023,
+      "rgb8_rmse": 46.13923769305945,
+      "psnr_db": 14.849395311016924,
+      "identical_pixels": false,
+      "generation_seconds": 6.131669373999998
+    },
+    {
+      "eval_id": "internal-p1-6177a6812fbc",
+      "dimension": "visual_quality",
+      "layer": 4,
+      "rgb8_mae": 21.128201484680176,
+      "rgb8_rmse": 31.977048625244162,
+      "psnr_db": 18.0340360620758,
+      "identical_pixels": false,
+      "generation_seconds": 6.942215422999993
+    },
+    {
+      "eval_id": "internal-p1-6177a6812fbc",
+      "dimension": "visual_quality",
+      "layer": 5,
+      "rgb8_mae": 22.988023440043133,
+      "rgb8_rmse": 32.96113692334289,
+      "psnr_db": 17.770759941977005,
+      "identical_pixels": false,
+      "generation_seconds": 6.039357157000012
+    }
+  ],
+  "interpretation": "pixel differences measure similarity to saved teacher images; no quality scores or speedup claim"
+}

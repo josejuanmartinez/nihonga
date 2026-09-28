@@ -1,0 +1,12 @@
+# Preserve exact bytes: cached experiment artifacts include SHA-256 checksums.
+data/phase3/** -text
+data/phase4/** -text
+data/phase2/manifest.json -text
+data/phase2/protocol.json -text
+data/phase2/internal_eval_set.jsonl -text
+data/phase1/pilot_20k/train.jsonl -text
+data/phase1/pilot_20k/validation.jsonl -text
+data/phase1/pilot_20k/internal_test.jsonl -text
+data/phase3/**/*.pt filter=lfs diff=lfs merge=lfs -text
+data/phase3/**/*.png filter=lfs diff=lfs merge=lfs -text
+data/phase4/**/*.pt filter=lfs diff=lfs merge=lfs -text

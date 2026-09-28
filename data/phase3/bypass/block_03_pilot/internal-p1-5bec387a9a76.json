@@ -1,0 +1,90 @@
+{
+  "request_key": "2338b6fa85750e95d9a94d0c6bc2e8bd4a1da5f4834c9e0459ec7e82743e154b",
+  "row": {
+    "eval_id": "internal-p1-5bec387a9a76",
+    "set": "internal",
+    "source_id": "p1-5bec387a9a76",
+    "prompt": "An astronaut skateboarding down a ramp at a skate park, digital painting",
+    "language": "en",
+    "seed": 1542207610,
+    "aspect_ratio": "3:2",
+    "width": 1248,
+    "height": 832,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "dimension": "alignment",
+    "subdimension": "actions",
+    "facet": "human_action",
+    "difficulty": 1,
+    "style": "digital_illustration",
+    "prompt_format": "short",
+    "hard": false,
+    "keywords": [
+      "skateboarding"
+    ]
+  },
+  "bypassed_layer": 3,
+  "recorded_utc": "2026-09-28T17:04:39.970709+00:00",
+  "status": "passed",
+  "teacher_targets_reused": true,
+  "measurements": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "sigma": 1.0,
+      "target_tokens": 4056,
+      "bypass": {
+        "relative_l2_error": 0.13198226690292358,
+        "rmse": 0.1971495896577835,
+        "cosine": 0.9915765523910522,
+        "teacher_rms": 1.493758201599121
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0,
+        "teacher_rms": 1.493758201599121
+      }
+    },
+    {
+      "stage": "middle",
+      "step_index": 19,
+      "sigma": 0.6787687540054321,
+      "target_tokens": 4056,
+      "bypass": {
+        "relative_l2_error": 0.03790809586644173,
+        "rmse": 0.051424939185380936,
+        "cosine": 0.9992859959602356,
+        "teacher_rms": 1.3565688133239746
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0000001192092896,
+        "teacher_rms": 1.3565688133239746
+      }
+    },
+    {
+      "stage": "final",
+      "step_index": 39,
+      "sigma": 0.019999980926513672,
+      "target_tokens": 4056,
+      "bypass": {
+        "relative_l2_error": 0.13786709308624268,
+        "rmse": 0.1448632776737213,
+        "cosine": 0.9906798005104065,
+        "teacher_rms": 1.050745964050293
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0000001192092896,
+        "teacher_rms": 1.050745964050293
+      }
+    }
+  ],
+  "targets_sha256": "4e9f7943fd2e52c8f4f81f1ccb86d86a7a27343c4793fbe494355aa9faca7642",
+  "teacher_image_sha256": "ad7ac1130e01bc8a58721c475c814632672e3d2c245752757e9c285036258b33",
+  "outputs_sha256": "acfb327ff29a3f7f6c92d8ee72a16615b5acf4666d7e29b293bd8651e20f2569",
+  "teacher_png_matches_activation": true
+}

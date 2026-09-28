@@ -1,0 +1,88 @@
+{
+  "request_key": "17ef227a20772364b2271107c8a671f65e3efb253f646fa5c4c639aceefe1e59",
+  "row": {
+    "eval_id": "internal-p1-e0d8dd3b84cd",
+    "set": "internal",
+    "source_id": "p1-e0d8dd3b84cd",
+    "prompt": "Generate an image of an alpine flower meadow. Style: candid photo, natural light.",
+    "language": "en",
+    "seed": 3772308795,
+    "aspect_ratio": "16:9",
+    "width": 1376,
+    "height": 768,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "dimension": "aesthetics",
+    "subdimension": "landscapes",
+    "facet": "meadow",
+    "difficulty": 1,
+    "style": "photographic",
+    "prompt_format": "imperative",
+    "hard": false,
+    "keywords": []
+  },
+  "bypassed_layer": 5,
+  "recorded_utc": "2026-09-28T16:43:04.204141+00:00",
+  "status": "passed",
+  "teacher_targets_reused": true,
+  "measurements": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "sigma": 1.0,
+      "target_tokens": 4128,
+      "bypass": {
+        "relative_l2_error": 0.0936540812253952,
+        "rmse": 0.13471709191799164,
+        "cosine": 0.995868444442749,
+        "teacher_rms": 1.4384539127349854
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0,
+        "teacher_rms": 1.4384539127349854
+      }
+    },
+    {
+      "stage": "middle",
+      "step_index": 19,
+      "sigma": 0.6795137524604797,
+      "target_tokens": 4128,
+      "bypass": {
+        "relative_l2_error": 0.026746485382318497,
+        "rmse": 0.034865401685237885,
+        "cosine": 0.9996434450149536,
+        "teacher_rms": 1.3035507202148438
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0000001192092896,
+        "teacher_rms": 1.3035507202148438
+      }
+    },
+    {
+      "stage": "final",
+      "step_index": 39,
+      "sigma": 0.019999980926513672,
+      "target_tokens": 4128,
+      "bypass": {
+        "relative_l2_error": 0.0411277674138546,
+        "rmse": 0.04166073724627495,
+        "cosine": 0.9991546273231506,
+        "teacher_rms": 1.0129588842391968
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0,
+        "teacher_rms": 1.0129588842391968
+      }
+    }
+  ],
+  "targets_sha256": "1cec88c28838c4a60d8584a1e8f3b9f10d0542799d6d035c2b896798bbcdb666",
+  "teacher_image_sha256": "f27c8f9c81c57a5b3049a84ba268b1a90588a35abed27b7172ce033022aea9c6",
+  "outputs_sha256": "8270eaa5804efd4a02fb3e8d24c375b6c30294dd3a9bcc7db0ac1044fd54532a",
+  "teacher_png_matches_activation": true
+}

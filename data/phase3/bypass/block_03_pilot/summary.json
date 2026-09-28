@@ -1,0 +1,41 @@
+{
+  "request_key": "2338b6fa85750e95d9a94d0c6bc2e8bd4a1da5f4834c9e0459ec7e82743e154b",
+  "bypassed_layer": 3,
+  "report_hashes": {
+    "internal-p1-e0d8dd3b84cd": "85c72be868fc769d95c40934e7252ca9140888e064b8fe7d4dedf3ce5a57af8b",
+    "internal-p1-5bec387a9a76": "6f13e7867a99aaa30bbc9ec1ec892c785e507ed3976ad4c933289c3b10bf5599",
+    "internal-p1-4a1cdb170e44": "0e864e86cffa473863b9db98057a1fe364ee0facff8b57c4b5239aefcd5486e1",
+    "internal-p1-425ec4e55730": "2866c65e258d189652fe0c5098199866dff484650038848e5fef7d6a59bb14b5",
+    "internal-p1-6177a6812fbc": "63e3f9988605ec26ed2844208b25b418943508ca16e759cef6adb789dedf87de"
+  },
+  "n_prompts": 5,
+  "n_comparisons": 15,
+  "stages": [
+    {
+      "stage": "early",
+      "n_prompts": 5,
+      "mean_relative_l2_error": 0.15801089107990265,
+      "max_relative_l2_error": 0.18530622124671936,
+      "mean_velocity_cosine": 0.9877777457237243,
+      "max_intact_replay_relative_error": 0.0
+    },
+    {
+      "stage": "middle",
+      "n_prompts": 5,
+      "mean_relative_l2_error": 0.03442001715302467,
+      "max_relative_l2_error": 0.039253633469343185,
+      "mean_velocity_cosine": 0.9994064569473267,
+      "max_intact_replay_relative_error": 0.0
+    },
+    {
+      "stage": "final",
+      "n_prompts": 5,
+      "mean_relative_l2_error": 0.11853965073823929,
+      "max_relative_l2_error": 0.13786709308624268,
+      "mean_velocity_cosine": 0.9930556774139404,
+      "max_intact_replay_relative_error": 0.0
+    }
+  ],
+  "teacher_png_matches_activation_count": 4,
+  "scope": "paired velocity pilot on teacher trajectories; no bypassed full-trajectory image evaluation"
+}
