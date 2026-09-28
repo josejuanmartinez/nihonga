@@ -1,0 +1,437 @@
+{
+  "request_key": "56980d5abc8a06d11d5d73234a56f46a2333df90e0bfac965b19865976cbc704",
+  "status": "passed",
+  "layer": 5,
+  "recorded_utc": "2026-09-28T18:16:45.144326+00:00",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "generation_seconds": 10.545286888999996,
+  "peak_allocated_gib": 36.492406368255615,
+  "peak_reserved_gib": 38.41796875,
+  "calls": [
+    {
+      "mode": "extract",
+      "shape": [
+        1,
+        4155,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    },
+    {
+      "mode": "cached",
+      "shape": [
+        1,
+        4128,
+        4096
+      ],
+      "dtype": "torch.bfloat16",
+      "exact_identity": true
+    }
+  ],
+  "image_sha256": "e338d90876ca7436613d279c8a75c9cf36f5e430490950a73384e2555443242f",
+  "image_size": [
+    1376,
+    768
+  ],
+  "recipe_sha256": "e3117fc470b4bf264d3a21ccf9c0788d1c753346013f91a1f4d68ed8338a2d8f",
+  "parameters_before": 7115124736,
+  "parameters_after": 6899117824,
+  "removed_block_parameters": 218104064,
+  "bridge_parameters": 2097152,
+  "trainable_parameters": 2097152,
+  "identity_reference_sha256": "e338d90876ca7436613d279c8a75c9cf36f5e430490950a73384e2555443242f",
+  "rgb8_mae": 0.0,
+  "rgb8_rmse": 0.0,
+  "max_pixel_difference": 0,
+  "identical_reference_pixels": true,
+  "teacher_regenerated": false,
+  "checkpoint_modified": false
+}

@@ -1,0 +1,25 @@
+{
+  "version": "phase4-student-recipe-v1",
+  "request_key": "56980d5abc8a06d11d5d73234a56f46a2333df90e0bfac965b19865976cbc704",
+  "teacher_model_repo": "Qwen/Qwen-Image-2.1",
+  "teacher_model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+  "teacher_config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+  "num_original_slots": 32,
+  "surviving_transformer_blocks": 31,
+  "replacement": {
+    "slot": 5,
+    "checkpoint": "data/phase4/bridge_block_05_initial.pt",
+    "checkpoint_sha256": "375fcd975aa98e0d7329b24ba9b550dd50644203d6412d47d31a912387db9ba0",
+    "hidden_dim": 4096,
+    "bottleneck_dim": 256,
+    "trained": false
+  },
+  "core_sha256": "1e3955167ab2c1f432f391edb3c8c7a71c25d9b1831522d632d849bc6625d1d4",
+  "wrapper_sha256": "e15148b422a8723a50dbe4680b1fdd625e75d89365a8457e662b5ab330b8ccac",
+  "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+  "dtype": "bfloat16",
+  "cache_policy": "fresh student cache; no teacher cache reuse",
+  "frozen": "all inherited teacher parameters",
+  "trainable": "bridge only",
+  "assembly": "load pinned teacher, load checkpoint, insert_bridge at slot 5; keep original slot indexing"
+}

@@ -1,0 +1,37 @@
+{
+  "request": {
+    "version": "phase4-block-contract-v1",
+    "prototype_request_key": "6c5a69aa833f10d6ed6c2082e10e1bd5a3bad33af45bd3187201dd91fa3b79c8",
+    "checkpoint_sha256": {
+      "2": "49de293a3ec2d1483ecc1d478cc0967747ff0824a647be14b509d0f28871b16d",
+      "4": "a6e26baf65a9b4942073120571045ce8b3fe82da42f31713de6b618b36c54593",
+      "5": "375fcd975aa98e0d7329b24ba9b550dd50644203d6412d47d31a912387db9ba0",
+      "3": "ec0441470a893c76353c606d246dac113e147494dbba05cc09b14bd65051ea15"
+    },
+    "wrapper_sha256": "e15148b422a8723a50dbe4680b1fdd625e75d89365a8457e662b5ab330b8ccac",
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/bdc2bea37a36038c44452811610489ea30ede229/src/diffusers/models/transformers/transformer_qwenimage21.py",
+    "seed": 20260928,
+    "test_dtype": "float32",
+    "tiny_architecture": {
+      "num_layers": 3,
+      "num_attention_heads": 2,
+      "attention_head_dim": 16,
+      "context_in_dim": 32,
+      "in_channels": 4,
+      "out_channels": 4,
+      "axes_dims_rope": [
+        4,
+        6,
+        6
+      ],
+      "mlp_ratio": 3,
+      "causal_condition": true
+    },
+    "tiny_replaced_slot": 1,
+    "tiny_bottleneck": 8,
+    "scope": "CPU synthetic block contract; pinned transformer source with local supporting dependencies; no teacher weights or quality evaluation",
+    "cache_policy": "preserve original slot indices; discard old cache and extract new student prefix; bridge slot has no K/V"
+  },
+  "request_key": "a4e28144d3e1818bf6bb36692a5a8fe5adff533f4bda0be40fc2a1d2c6e27de0"
+}

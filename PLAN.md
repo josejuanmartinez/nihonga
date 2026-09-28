@@ -865,7 +865,7 @@ We tick each step as we complete it (`- [ ]` → `- [x]`).
 - [ ] 1. We build a 20k prompt dataset ([Phase 1](#phase-1--build-the-prompt-dataset))
 - [ ] 2. Then we benchmark the original Qwen ([Phase 2](#phase-2--establish-the-original-baseline))
 - [ ] 3. We prune 60 → 50 layers ([Phase 3](#phase-3--identify-layers-to-remove))
-- [ ] 4. We insert residual bottleneck bridges ([Phase 4](#phase-4--insert-bridge-modules))
+- [x] 4. We insert residual bottleneck bridges ([Phase 4](#phase-4--insert-bridge-modules)) — first independent slot-5 pilot verified: 31 transformer blocks + 1 bridge in 32 original slots; bridges remain untrained.
 - [ ] 5. We train the bridges only ([Phase 5](#phase-5--pretrain-the-bridges))
 - [ ] 6. We run full architecture healing ([Phase 6](#phase-6--architecture-healing), [Phase 7](#phase-7--healing-dataset-strategy))
 - [ ] 7. We benchmark ([Phase 8](#phase-8--evaluate-the-pruned-model))

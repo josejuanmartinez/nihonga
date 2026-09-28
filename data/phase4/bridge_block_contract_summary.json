@@ -1,0 +1,50 @@
+{
+  "request_key": "a4e28144d3e1818bf6bb36692a5a8fe5adff533f4bda0be40fc2a1d2c6e27de0",
+  "status": "passed",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0"
+  },
+  "full_width_checks": [
+    {
+      "layer": 2,
+      "parameters": 2097152,
+      "exact_identity": true
+    },
+    {
+      "layer": 4,
+      "parameters": 2097152,
+      "exact_identity": true
+    },
+    {
+      "layer": 5,
+      "parameters": 2097152,
+      "exact_identity": true
+    },
+    {
+      "layer": 3,
+      "parameters": 2097152,
+      "exact_identity": true
+    }
+  ],
+  "cache_checks": [
+    {
+      "condition_image": false,
+      "padded_text": true,
+      "cached_vs_fresh_max_abs_error": 5.960464477539063e-08,
+      "downstream_prefix_key_max_change": 0.4651245176792145,
+      "bridge_slot_cache_empty": true
+    },
+    {
+      "condition_image": true,
+      "padded_text": true,
+      "cached_vs_fresh_max_abs_error": 0.0,
+      "downstream_prefix_key_max_change": 0.4150390625,
+      "bridge_slot_cache_empty": true
+    }
+  ],
+  "positional_forward_and_gradient_passed": true,
+  "full_model_installed": false,
+  "teacher_trained": false
+}

@@ -1,0 +1,226 @@
+{
+  "request": {
+    "version": "phase5-pilot-prompt-teacher-capture-v2",
+    "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+    "capture_request": {
+      "version": "phase5-target-capture-pilot-manifest-v1",
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "candidate_layers": [
+        2,
+        4,
+        5,
+        3
+      ],
+      "initial_checkpoint_sha256": {
+        "2": "49de293a3ec2d1483ecc1d478cc0967747ff0824a647be14b509d0f28871b16d",
+        "4": "a6e26baf65a9b4942073120571045ce8b3fe82da42f31713de6b618b36c54593",
+        "5": "375fcd975aa98e0d7329b24ba9b550dd50644203d6412d47d31a912387db9ba0",
+        "3": "ec0441470a893c76353c606d246dac113e147494dbba05cc09b14bd65051ea15"
+      },
+      "prototype_request_key": "6c5a69aa833f10d6ed6c2082e10e1bd5a3bad33af45bd3187201dd91fa3b79c8",
+      "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      },
+      "dtype": "bfloat16",
+      "noise_device": "cpu",
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "resolutions": {
+        "1:1": [
+          1024,
+          1024
+        ],
+        "16:9": [
+          1376,
+          768
+        ],
+        "9:16": [
+          768,
+          1376
+        ],
+        "4:3": [
+          1184,
+          896
+        ],
+        "3:4": [
+          896,
+          1184
+        ],
+        "3:2": [
+          1248,
+          832
+        ],
+        "2:3": [
+          832,
+          1248
+        ],
+        "21:9": [
+          1568,
+          672
+        ]
+      },
+      "source_sha256": {
+        "train": "56ed184aaed289f587eb51a2495854e06b5caa261090a5817597ba7be4baaa59",
+        "validation": "eb6b0366b9bf217400fb2e806c099356dde33484346ae7ce66cf841cf3fc8823",
+        "internal_test": "75e18e3232e3863f35e6519c210a805bfa4bc629201d8b112b85ed99a6632f50",
+        "qwen_image_bench": "a2004696921a065bb4d71ce3a2b4e96b0a04946945504d222d40c65458cc8a49",
+        "phase3_probes": "b95ceac046388cad62c01022b478e7f6733969635694b12f5355365b25cbf53e"
+      },
+      "phase4_artifact_sha256": {
+        "prototype_manifest": "82d0969cb86122539588cfc28a9272ce3b465d1f96b856a73e5d857f625c7610",
+        "prototype_summary": "e7f9335cf4e92d34fecb2ce3e30d4c0d116db5c64ebc97f34e7af428a3b10c5b",
+        "insertion_summary": "7d121696985dd24f35a76720966bcfc6f976babc8c4c8a08bca725c074afd1af",
+        "insertion_request": "eaa446ac68e2189db7d38aa1cbedee0050942f3eb6996623b2cbe79014ca4545",
+        "contract_request": "dc73f8d0801e2c23e8806304f509fcfa9e4b593b6b7b7667ec375351199b3c89",
+        "phase2_protocol": "383022a9ddde1580c1289b206ec79e158009f24f27542b32759b7831a9df0fbf",
+        "core": "1e3955167ab2c1f432f391edb3c8c7a71c25d9b1831522d632d849bc6625d1d4",
+        "wrapper": "e15148b422a8723a50dbe4680b1fdd625e75d89365a8457e662b5ab330b8ccac"
+      },
+      "dimensions": [
+        "alignment",
+        "visual_quality",
+        "aesthetics",
+        "real_world",
+        "creative"
+      ],
+      "selection_salt": "nihonga-phase5-capture-pilot-v1",
+      "selection": "per dimension: TRAIN 2 general + 2 hard; VALIDATION 1 general + 1 hard; prefer distinct subdimensions using salted hash order",
+      "stages": [
+        {
+          "name": "early",
+          "step_index": 0
+        },
+        {
+          "name": "middle",
+          "step_index": 20
+        },
+        {
+          "name": "late",
+          "step_index": 39
+        }
+      ],
+      "capture": {
+        "teacher_only": true,
+        "teacher_frozen": true,
+        "use_kv_cache": true,
+        "image_token_cap_per_stage": 256,
+        "valid_prefix_token_cap_at_step_zero": 64,
+        "token_selection": "deterministic uniform without replacement within role; same indices across candidate layers; save actual indices and total available counts",
+        "token_selection_seed_salt": "nihonga-phase5-token-sampling-v1",
+        "tensor_dtype": "bfloat16",
+        "store": [
+          "paired_block_input",
+          "paired_block_output",
+          "token_indices",
+          "token_roles",
+          "valid_token_mask"
+        ],
+        "metadata": [
+          "source_id",
+          "split",
+          "prompt",
+          "seed",
+          "width",
+          "height",
+          "step_index",
+          "scheduler_timestep",
+          "scheduler_sigma",
+          "cache_mode",
+          "full_hidden_shape",
+          "prefix_token_count",
+          "image_token_count",
+          "layer",
+          "request_key",
+          "tensor_sha256"
+        ],
+        "prefix_policy": "valid prefix only at extraction; cached stages capture target-image tokens only; padded text excluded",
+        "teacher_inputs": "save initial packed latent and prompt embeddings/masks once per prompt; save current packed latent and transformer-call metadata at each sampled stage",
+        "persistence": "commit each prompt packet remotely before return; verify and save locally; started-without-result or failures stop without automatic recapture"
+      },
+      "data_policy": {
+        "train": "gradient updates only",
+        "validation": "selection and diagnostics only; never optimizer updates",
+        "excluded": [
+          "internal_test",
+          "qwen_image_bench",
+          "phase3_probes"
+        ],
+        "duplicate_check": "source IDs and NFKC/casefold/whitespace-normalized exact prompt matches"
+      },
+      "fitting_policy": "independent single-block bridges; equal rank, same captured examples and optimizer budget for every candidate; no joint replacement",
+      "scope": "capture and fitting implementation pilot, not a representative evaluation or sufficient training dataset"
+    },
+    "rows_sha256": "a0f0f304978e0cc725e4a645d70d02a68e5362f15e234301bc664797d776ed97",
+    "row": {
+      "aspect_ratio": "3:4",
+      "capture_id": "p5-validation-p1-36fe86287034",
+      "difficulty": 3,
+      "dimension": "visual_quality",
+      "facet": "electronics",
+      "generator_version": "phase1-v1",
+      "hard": true,
+      "height": 1184,
+      "id": "p1-36fe86287034",
+      "keywords": [],
+      "language": "en",
+      "num_inference_steps": 40,
+      "pool_rank": 18567,
+      "prompt": "a detailed circuit board, top-down view, microscopic precision, natural colors, candid photo, natural light",
+      "prompt_format": "tags",
+      "prompt_template": "a detailed circuit board, top-down view, microscopic precision, natural colors, candid photo, natural light",
+      "seed": 922650152,
+      "source": "template",
+      "source_id": "p1-36fe86287034",
+      "split": "validation",
+      "style": "photographic",
+      "subdimension": "fine_detail",
+      "true_cfg_scale": 1.0,
+      "usage": "validation_only",
+      "width": 896
+    },
+    "worker_sha256": "53305f3007340993daef4f304c0911b4ca0b0b17fb58cc0f9e20d1b25beaf2c1",
+    "replay_relative_l2_tolerance": 0.001,
+    "scope": "full pilot prompt; 40 teacher steps plus 3 persisted replay controls; no training"
+  },
+  "request_key": "98e8ea6832d058ae2472d2c7c5101a3dbf3c5822d2ddfe3dff7dac529aa04a61"
+}

@@ -1,0 +1,68 @@
+{
+  "request_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+  "status": "manifest_ready; no teacher targets captured",
+  "rows_sha256": "a0f0f304978e0cc725e4a645d70d02a68e5362f15e234301bc664797d776ed97",
+  "n_prompts": 30,
+  "split_counts": {
+    "train": 20,
+    "validation": 10
+  },
+  "dimension_counts_by_split": {
+    "train": {
+      "alignment": 4,
+      "visual_quality": 4,
+      "aesthetics": 4,
+      "real_world": 4,
+      "creative": 4
+    },
+    "validation": {
+      "alignment": 2,
+      "visual_quality": 2,
+      "aesthetics": 2,
+      "real_world": 2,
+      "creative": 2
+    }
+  },
+  "hard_counts_by_split": {
+    "train": {
+      "general": 10,
+      "hard": 10
+    },
+    "validation": {
+      "general": 5,
+      "hard": 5
+    }
+  },
+  "aspect_ratio_counts": {
+    "1:1": 12,
+    "16:9": 7,
+    "2:3": 3,
+    "3:2": 2,
+    "3:4": 3,
+    "9:16": 1,
+    "4:3": 2
+  },
+  "difficulty_counts": {
+    "3": 11,
+    "4": 9,
+    "2": 2,
+    "5": 3,
+    "1": 5
+  },
+  "subdimension_count": 21,
+  "planned_teacher_trajectories": 30,
+  "planned_teacher_transformer_calls": 1200,
+  "planned_stage_snapshots": 90,
+  "planned_block_pair_records": 360,
+  "maximum_selected_token_pairs": 99840,
+  "maximum_pair_tensor_bytes": 1635778560,
+  "captured_block_pair_records": 0,
+  "optimizer_updates": 0,
+  "leakage_checks": {
+    "train_validation_id_overlap": 0,
+    "train_validation_normalized_prompt_overlap": 0,
+    "evaluation_id_overlap": 0,
+    "evaluation_normalized_prompt_overlap": 0
+  },
+  "interpretation": "small balanced implementation pilot; upper bound covers paired BF16 hidden tensors only; no quality or fit evidence"
+}

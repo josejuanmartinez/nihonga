@@ -1,0 +1,27 @@
+{
+  "request_key": "7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618",
+  "status": "passed",
+  "weights_only_load": true,
+  "selected": [
+    {
+      "layer": 2,
+      "step": 500,
+      "nonzero_up_projection": true
+    },
+    {
+      "layer": 4,
+      "step": 400,
+      "nonzero_up_projection": true
+    },
+    {
+      "layer": 5,
+      "step": 300,
+      "nonzero_up_projection": true
+    },
+    {
+      "layer": 3,
+      "step": 300,
+      "nonzero_up_projection": true
+    }
+  ]
+}

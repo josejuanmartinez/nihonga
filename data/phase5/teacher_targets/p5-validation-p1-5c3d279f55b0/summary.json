@@ -1,0 +1,409 @@
+{
+  "request_key": "f8a8ced6aedf372e42f96fab3e246cac3ce30f11056447d9f866af72b62c062d",
+  "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+  "row": {
+    "aspect_ratio": "4:3",
+    "capture_id": "p5-validation-p1-5c3d279f55b0",
+    "difficulty": 5,
+    "dimension": "alignment",
+    "facet": "circle",
+    "generator_version": "phase1-v1",
+    "hard": true,
+    "height": 896,
+    "id": "p1-5c3d279f55b0",
+    "keywords": [
+      "four",
+      "circle"
+    ],
+    "language": "en",
+    "num_inference_steps": 40,
+    "pool_rank": 13824,
+    "prompt": "A watercolor painting of four hats arranged in a circle around a coin, natural colors.",
+    "prompt_format": "natural",
+    "prompt_template": "A watercolor painting of four hats arranged in a circle around a coin, natural colors.",
+    "seed": 1547511711,
+    "source": "template",
+    "source_id": "p1-5c3d279f55b0",
+    "split": "validation",
+    "style": "watercolor",
+    "subdimension": "composition_layout",
+    "true_cfg_scale": 1.0,
+    "usage": "validation_only",
+    "width": 1184
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-28T18:58:16.843384+00:00",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "capture_seconds": 6.235396894000019,
+  "peak_allocated_gib": 30.856261253356934,
+  "tensor_sha256": "095303c8aec61ee0a617d42b6562ad28081775deb9b3c3637e5bf1f3ae2b3455",
+  "tensor_bytes": 57588941,
+  "teacher_trajectory_calls": 40,
+  "teacher_replay_calls": 3,
+  "captured_block_pair_records": 12,
+  "selected_token_pairs": 3176,
+  "stages": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "scheduler_timestep": 1000.0,
+      "scheduler_sigma": 1.0,
+      "transformer_timestep": [
+        1.0
+      ],
+      "cache_mode": "extract",
+      "target_image_tokens": 4144
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "scheduler_timestep": 657.1795043945312,
+      "scheduler_sigma": 0.6571794748306274,
+      "transformer_timestep": [
+        0.65625
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4144
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "scheduler_timestep": 19.999980926513672,
+      "scheduler_sigma": 0.019999980926513672,
+      "transformer_timestep": [
+        0.02001953125
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4144
+    }
+  ],
+  "identity_metrics": [
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 26,
+      "identity_relative_l2_error": 0.06683717668056488,
+      "identity_normalized_mse": 3.601908019845723e-06,
+      "identity_mean_token_cosine": 0.9926233291625977,
+      "teacher_target_rms": 56.332191467285156
+    },
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07174138724803925,
+      "identity_normalized_mse": 7.992640576048871e-07,
+      "identity_mean_token_cosine": 0.9983628392219543,
+      "teacher_target_rms": 6.818191051483154
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 26,
+      "identity_relative_l2_error": 0.0640866607427597,
+      "identity_normalized_mse": 2.890890755224973e-06,
+      "identity_mean_token_cosine": 0.9940794706344604,
+      "teacher_target_rms": 58.09457778930664
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.11251910775899887,
+      "identity_normalized_mse": 1.4922492255209363e-06,
+      "identity_mean_token_cosine": 0.9969435334205627,
+      "teacher_target_rms": 7.346575736999512
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 26,
+      "identity_relative_l2_error": 0.11752119660377502,
+      "identity_normalized_mse": 3.454505758782034e-06,
+      "identity_mean_token_cosine": 0.992925226688385,
+      "teacher_target_rms": 60.3962287902832
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08041664958000183,
+      "identity_normalized_mse": 1.357162886961305e-06,
+      "identity_mean_token_cosine": 0.9972201585769653,
+      "teacher_target_rms": 7.279706001281738
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 26,
+      "identity_relative_l2_error": 0.4905616343021393,
+      "identity_normalized_mse": 8.448867447441444e-06,
+      "identity_mean_token_cosine": 0.9826966524124146,
+      "teacher_target_rms": 75.40057373046875
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.1019783765077591,
+      "identity_normalized_mse": 1.9711869754246436e-06,
+      "identity_mean_token_cosine": 0.9959627389907837,
+      "teacher_target_rms": 7.0439653396606445
+    },
+    {
+      "layer": 2,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.058671142905950546,
+      "identity_normalized_mse": 7.266103807523905e-07,
+      "identity_mean_token_cosine": 0.9985118508338928,
+      "teacher_target_rms": 8.250927925109863
+    },
+    {
+      "layer": 3,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07832885533571243,
+      "identity_normalized_mse": 9.030526371134329e-07,
+      "identity_mean_token_cosine": 0.9981503486633301,
+      "teacher_target_rms": 7.917792797088623
+    },
+    {
+      "layer": 4,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10024469345808029,
+      "identity_normalized_mse": 1.2768937267537694e-06,
+      "identity_mean_token_cosine": 0.9973846673965454,
+      "teacher_target_rms": 7.456064224243164
+    },
+    {
+      "layer": 5,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.11079932749271393,
+      "identity_normalized_mse": 1.867796072474448e-06,
+      "identity_mean_token_cosine": 0.9961744546890259,
+      "teacher_target_rms": 7.043049335479736
+    },
+    {
+      "layer": 2,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08263646066188812,
+      "identity_normalized_mse": 1.0833206260940642e-06,
+      "identity_mean_token_cosine": 0.9977812170982361,
+      "teacher_target_rms": 10.116522789001465
+    },
+    {
+      "layer": 3,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08423828333616257,
+      "identity_normalized_mse": 9.86614395515062e-07,
+      "identity_mean_token_cosine": 0.9979792237281799,
+      "teacher_target_rms": 9.622608184814453
+    },
+    {
+      "layer": 4,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10943543910980225,
+      "identity_normalized_mse": 1.3031935850449372e-06,
+      "identity_mean_token_cosine": 0.9973308444023132,
+      "teacher_target_rms": 8.930048942565918
+    },
+    {
+      "layer": 5,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09752006828784943,
+      "identity_normalized_mse": 1.5212731341307517e-06,
+      "identity_mean_token_cosine": 0.9968842267990112,
+      "teacher_target_rms": 8.491934776306152
+    }
+  ],
+  "replay_controls": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    }
+  ],
+  "selected_shapes": [
+    {
+      "stage": "early",
+      "layer": 2,
+      "shape": [
+        1,
+        282,
+        4096
+      ],
+      "prefix_tokens": 26,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 3,
+      "shape": [
+        1,
+        282,
+        4096
+      ],
+      "prefix_tokens": 26,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 4,
+      "shape": [
+        1,
+        282,
+        4096
+      ],
+      "prefix_tokens": 26,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 5,
+      "shape": [
+        1,
+        282,
+        4096
+      ],
+      "prefix_tokens": 26,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    }
+  ],
+  "optimizer_updates": 0,
+  "teacher_frozen": true,
+  "images_decoded": 0
+}
