@@ -1,0 +1,173 @@
+{
+  "request_key": "2496bd62c8765eb1bd2f97894fca10afc3da54d0c7b7ffe57783f6d2ddc161df",
+  "status": "probe_complete",
+  "teacher_calls": 15,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "variants": [
+    {
+      "name": "default",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "status": "complete",
+      "control_passed": false
+    },
+    {
+      "name": "flash",
+      "controls": [],
+      "status": "failed",
+      "error": "RuntimeError: No available kernel. Aborting execution."
+    },
+    {
+      "name": "efficient",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004618274979293346,
+          "max_abs_error": 0.2109375,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031670585740357637,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02516760863363743,
+          "max_abs_error": 0.21875,
+          "exact_equal": false
+        }
+      ],
+      "status": "complete",
+      "control_passed": false
+    },
+    {
+      "name": "cudnn",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "status": "complete",
+      "control_passed": false
+    },
+    {
+      "name": "math",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.0062911733984947205,
+          "max_abs_error": 0.1171875,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.003176820231601596,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.025987252593040466,
+          "max_abs_error": 0.23828125,
+          "exact_equal": false
+        }
+      ],
+      "status": "complete",
+      "control_passed": false
+    },
+    {
+      "name": "default_full_reduction",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "status": "complete",
+      "control_passed": false
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "default.pt",
+      "sha256": "2b5e47b388a9a73f69b821ac8334505299e2ac023d40f19f3137f9d12f0ca1e5",
+      "bytes": 1575073
+    },
+    {
+      "name": "flash.pt",
+      "sha256": "1f1ae2f51d9c5b780fd6af1e910ec46944db1636624da4ef6f60a6ff4eb3790e",
+      "bytes": 1377
+    },
+    {
+      "name": "efficient.pt",
+      "sha256": "db6b562585df767428c449987465140eb730948d721e03c81434790073405285",
+      "bytes": 1575219
+    },
+    {
+      "name": "cudnn.pt",
+      "sha256": "122702bf50869f124d82f386f56614eb07d4bfcc14178063a1b05763140ce54e",
+      "bytes": 1574991
+    },
+    {
+      "name": "math.pt",
+      "sha256": "6498a6e720ea21a5e6e3ce069fbf9382b2f8bb85de342109b482da5b63005302",
+      "bytes": 1574982
+    },
+    {
+      "name": "default_full_reduction.pt",
+      "sha256": "123a520626c6e7955aeebdf73b9c5a61a5612c4d4af3d38aea0ed3cd048e33ef",
+      "bytes": 1575400
+    }
+  ],
+  "gpu": "NVIDIA H100 80GB HBM3"
+}

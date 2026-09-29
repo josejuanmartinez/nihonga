@@ -1,0 +1,51 @@
+{
+  "request_key": "6eb7228ae46fabe2844cedf4019f97b5fd0bbfcba60501147a316e37006f2e6c",
+  "status": "control_mismatch",
+  "teacher_calls": 1,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "controls": [
+    {
+      "source_id": "p1-4a84d737d801",
+      "split": "validation",
+      "stage": "early",
+      "relative_l2_error": 0.003878689371049404,
+      "max_abs_error": 0.25,
+      "exact_equal": false,
+      "passed": false
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p5-validation-p1-4a84d737d801.pt",
+      "sha256": "2339b8ae4cdcb3763bf8a6ae279c1cd253ac2efbcb67db46647b4136a0cc360c",
+      "bytes": 526467
+    }
+  ],
+  "cublas_workspace_config": null,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "max_relative_l2_error": 0.003878689371049404,
+  "exact_equal_controls": 0,
+  "completed_prompts": 1,
+  "attention_routes": [
+    {
+      "route": "original_masked",
+      "query_tokens": 16,
+      "key_tokens": 16,
+      "calls": 32
+    },
+    {
+      "route": "flash_unmasked",
+      "query_tokens": 4096,
+      "key_tokens": 4112,
+      "calls": 32
+    }
+  ]
+}

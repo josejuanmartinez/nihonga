@@ -10,3 +10,9 @@ data/phase2/images_rerun/
 __pycache__/
 *.pyc
 .cache/
+
+# Phase 6 source, notebooks, and small result records are versioned.
+# Large saved tensor packets remain in the local/remote experiment archive.
+data/phase6/**/*.pt
+data/phase6/**/*.log
+data/phase6/website_review/

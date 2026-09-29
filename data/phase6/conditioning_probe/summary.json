@@ -1,0 +1,169 @@
+{
+  "request_key": "aa4c3241352eabdd58626deb1b02259d92dc8a6bcffbea7dff8e6d511aad638d",
+  "status": "probe_complete",
+  "teacher_calls": 15,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "variants": [
+    {
+      "name": "original_argument_order",
+      "status": "complete",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "control_passed": false
+    },
+    {
+      "name": "bf16_frequency_buffer",
+      "status": "complete",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.09801684319972992,
+          "max_abs_error": 0.875,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.00455000065267086,
+          "max_abs_error": 0.0625,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.032779477536678314,
+          "max_abs_error": 0.26953125,
+          "exact_equal": false
+        }
+      ],
+      "control_passed": false
+    },
+    {
+      "name": "cpu_timestep_embedding",
+      "status": "complete",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "control_passed": false
+    },
+    {
+      "name": "canonical_cpu_rope",
+      "status": "complete",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "control_passed": false
+    },
+    {
+      "name": "after_novel_text_warmup",
+      "status": "complete",
+      "controls": [
+        {
+          "stage": "early",
+          "relative_l2_error": 0.004191763233393431,
+          "max_abs_error": 0.203125,
+          "exact_equal": false
+        },
+        {
+          "stage": "middle",
+          "relative_l2_error": 0.0031405470799654722,
+          "max_abs_error": 0.03125,
+          "exact_equal": false
+        },
+        {
+          "stage": "late",
+          "relative_l2_error": 0.02385052666068077,
+          "max_abs_error": 0.171875,
+          "exact_equal": false
+        }
+      ],
+      "control_passed": false
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "original_argument_order.pt",
+      "sha256": "8f0951a50d7fc8c1d25d1a51dddf9fdd636ef2a3ed1abdaff8d807070e9bec4e",
+      "bytes": 1579349
+    },
+    {
+      "name": "bf16_frequency_buffer.pt",
+      "sha256": "2890c8c462df7a13865ae19ae453eae7e2d26eaac8acfefaa0dc490efce365e8",
+      "bytes": 1579261
+    },
+    {
+      "name": "cpu_timestep_embedding.pt",
+      "sha256": "07145ca58ff18109770910e0f59f9ff565c68fe7ecdfabd302e58822b3b4fe23",
+      "bytes": 1577801
+    },
+    {
+      "name": "canonical_cpu_rope.pt",
+      "sha256": "c06f8f1508996e22d95caf68d80d33bc9f731de925670c75271b305cf5958383",
+      "bytes": 1579225
+    },
+    {
+      "name": "novel_text_warmup.pt",
+      "sha256": "7b0ba95675a6c5c0a2aa8bd117bce840735d8794853fef64053722716cd79874",
+      "bytes": 190581
+    },
+    {
+      "name": "after_novel_text_warmup.pt",
+      "sha256": "eb00657f107d2acdc7df136ccf6d965556142a00c7f9e8f8df37b84d4adef255",
+      "bytes": 1579349
+    }
+  ],
+  "text_encoder_calls": 1,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "initial_frequency_dtype": "torch.float32"
+}

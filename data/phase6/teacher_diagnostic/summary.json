@@ -1,0 +1,786 @@
+{
+  "request_key": "db405c9760bbe3eaa2705b4c6c910e7be4d473a18882857ed43571951f22f51b",
+  "status": "diagnostic_complete",
+  "teacher_calls": 6,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "velocity_metrics": [
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "relative_l2_error": 0.004191763233393431,
+      "max_abs_error": 0.203125,
+      "rmse": 0.008834108710289001,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "relative_l2_error": 0.0031405470799654722,
+      "max_abs_error": 0.03125,
+      "rmse": 0.005243354476988316,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "relative_l2_error": 0.02385052666068077,
+      "max_abs_error": 0.171875,
+      "rmse": 0.03563186526298523,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "relative_l2_error": 0.004191763233393431,
+      "max_abs_error": 0.203125,
+      "rmse": 0.008834108710289001,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "relative_l2_error": 0.0031405470799654722,
+      "max_abs_error": 0.03125,
+      "rmse": 0.005243354476988316,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "relative_l2_error": 0.02385052666068077,
+      "max_abs_error": 0.171875,
+      "rmse": 0.03563186526298523,
+      "exact_equal": false
+    }
+  ],
+  "pair_metrics": [
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 2,
+      "role": "input",
+      "relative_l2_error": 0.00022141335648484528,
+      "max_abs_error": 1.0,
+      "rmse": 0.003950541373342276,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 2,
+      "role": "output",
+      "relative_l2_error": 0.0003820849524345249,
+      "max_abs_error": 2.0,
+      "rmse": 0.007058952935039997,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 3,
+      "role": "input",
+      "relative_l2_error": 0.0003820849524345249,
+      "max_abs_error": 2.0,
+      "rmse": 0.007058952935039997,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 3,
+      "role": "output",
+      "relative_l2_error": 0.0005828693974763155,
+      "max_abs_error": 2.0,
+      "rmse": 0.011096669360995293,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 4,
+      "role": "input",
+      "relative_l2_error": 0.0005828693974763155,
+      "max_abs_error": 2.0,
+      "rmse": 0.011096669360995293,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 4,
+      "role": "output",
+      "relative_l2_error": 0.0007341873133555055,
+      "max_abs_error": 2.0,
+      "rmse": 0.014444960281252861,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 5,
+      "role": "input",
+      "relative_l2_error": 0.0007341873133555055,
+      "max_abs_error": 2.0,
+      "rmse": 0.014444960281252861,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "early",
+      "layer": 5,
+      "role": "output",
+      "relative_l2_error": 0.0007521907682530582,
+      "max_abs_error": 2.0,
+      "rmse": 0.018160060048103333,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 2,
+      "role": "input",
+      "relative_l2_error": 0.0003093581763096154,
+      "max_abs_error": 2.0,
+      "rmse": 0.0027616519946604967,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 2,
+      "role": "output",
+      "relative_l2_error": 0.000705385347828269,
+      "max_abs_error": 2.0,
+      "rmse": 0.006192346103489399,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 3,
+      "role": "input",
+      "relative_l2_error": 0.000705385347828269,
+      "max_abs_error": 2.0,
+      "rmse": 0.006192346103489399,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 3,
+      "role": "output",
+      "relative_l2_error": 0.001118720741942525,
+      "max_abs_error": 2.0,
+      "rmse": 0.00928480178117752,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 4,
+      "role": "input",
+      "relative_l2_error": 0.001118720741942525,
+      "max_abs_error": 2.0,
+      "rmse": 0.00928480178117752,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 4,
+      "role": "output",
+      "relative_l2_error": 0.0015452285297214985,
+      "max_abs_error": 2.0,
+      "rmse": 0.011866094544529915,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 5,
+      "role": "input",
+      "relative_l2_error": 0.0015452285297214985,
+      "max_abs_error": 2.0,
+      "rmse": 0.011866094544529915,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "middle",
+      "layer": 5,
+      "role": "output",
+      "relative_l2_error": 0.0021815269719809294,
+      "max_abs_error": 2.0,
+      "rmse": 0.01580272987484932,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 2,
+      "role": "input",
+      "relative_l2_error": 0.00048661857726983726,
+      "max_abs_error": 2.0,
+      "rmse": 0.0054776836186647415,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 2,
+      "role": "output",
+      "relative_l2_error": 0.0008877713698893785,
+      "max_abs_error": 2.0,
+      "rmse": 0.009484113194048405,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 3,
+      "role": "input",
+      "relative_l2_error": 0.0008877713698893785,
+      "max_abs_error": 2.0,
+      "rmse": 0.009484113194048405,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 3,
+      "role": "output",
+      "relative_l2_error": 0.0013057601172477007,
+      "max_abs_error": 2.0,
+      "rmse": 0.013149173930287361,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 4,
+      "role": "input",
+      "relative_l2_error": 0.0013057601172477007,
+      "max_abs_error": 2.0,
+      "rmse": 0.013149173930287361,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 4,
+      "role": "output",
+      "relative_l2_error": 0.0017631236696615815,
+      "max_abs_error": 3.0,
+      "rmse": 0.016768628731369972,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 5,
+      "role": "input",
+      "relative_l2_error": 0.0017631236696615815,
+      "max_abs_error": 3.0,
+      "rmse": 0.016768628731369972,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_1",
+      "stage": "late",
+      "layer": 5,
+      "role": "output",
+      "relative_l2_error": 0.0025175956543534994,
+      "max_abs_error": 4.0,
+      "rmse": 0.022218771278858185,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 2,
+      "role": "input",
+      "relative_l2_error": 0.00022141335648484528,
+      "max_abs_error": 1.0,
+      "rmse": 0.003950541373342276,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 2,
+      "role": "output",
+      "relative_l2_error": 0.0003820849524345249,
+      "max_abs_error": 2.0,
+      "rmse": 0.007058952935039997,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 3,
+      "role": "input",
+      "relative_l2_error": 0.0003820849524345249,
+      "max_abs_error": 2.0,
+      "rmse": 0.007058952935039997,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 3,
+      "role": "output",
+      "relative_l2_error": 0.0005828693974763155,
+      "max_abs_error": 2.0,
+      "rmse": 0.011096669360995293,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 4,
+      "role": "input",
+      "relative_l2_error": 0.0005828693974763155,
+      "max_abs_error": 2.0,
+      "rmse": 0.011096669360995293,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 4,
+      "role": "output",
+      "relative_l2_error": 0.0007341873133555055,
+      "max_abs_error": 2.0,
+      "rmse": 0.014444960281252861,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 5,
+      "role": "input",
+      "relative_l2_error": 0.0007341873133555055,
+      "max_abs_error": 2.0,
+      "rmse": 0.014444960281252861,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "early",
+      "layer": 5,
+      "role": "output",
+      "relative_l2_error": 0.0007521907682530582,
+      "max_abs_error": 2.0,
+      "rmse": 0.018160060048103333,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 2,
+      "role": "input",
+      "relative_l2_error": 0.0003093581763096154,
+      "max_abs_error": 2.0,
+      "rmse": 0.0027616519946604967,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 2,
+      "role": "output",
+      "relative_l2_error": 0.000705385347828269,
+      "max_abs_error": 2.0,
+      "rmse": 0.006192346103489399,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 3,
+      "role": "input",
+      "relative_l2_error": 0.000705385347828269,
+      "max_abs_error": 2.0,
+      "rmse": 0.006192346103489399,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 3,
+      "role": "output",
+      "relative_l2_error": 0.001118720741942525,
+      "max_abs_error": 2.0,
+      "rmse": 0.00928480178117752,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 4,
+      "role": "input",
+      "relative_l2_error": 0.001118720741942525,
+      "max_abs_error": 2.0,
+      "rmse": 0.00928480178117752,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 4,
+      "role": "output",
+      "relative_l2_error": 0.0015452285297214985,
+      "max_abs_error": 2.0,
+      "rmse": 0.011866094544529915,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 5,
+      "role": "input",
+      "relative_l2_error": 0.0015452285297214985,
+      "max_abs_error": 2.0,
+      "rmse": 0.011866094544529915,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "middle",
+      "layer": 5,
+      "role": "output",
+      "relative_l2_error": 0.0021815269719809294,
+      "max_abs_error": 2.0,
+      "rmse": 0.01580272987484932,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 2,
+      "role": "input",
+      "relative_l2_error": 0.00048661857726983726,
+      "max_abs_error": 2.0,
+      "rmse": 0.0054776836186647415,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 2,
+      "role": "output",
+      "relative_l2_error": 0.0008877713698893785,
+      "max_abs_error": 2.0,
+      "rmse": 0.009484113194048405,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 3,
+      "role": "input",
+      "relative_l2_error": 0.0008877713698893785,
+      "max_abs_error": 2.0,
+      "rmse": 0.009484113194048405,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 3,
+      "role": "output",
+      "relative_l2_error": 0.0013057601172477007,
+      "max_abs_error": 2.0,
+      "rmse": 0.013149173930287361,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 4,
+      "role": "input",
+      "relative_l2_error": 0.0013057601172477007,
+      "max_abs_error": 2.0,
+      "rmse": 0.013149173930287361,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 4,
+      "role": "output",
+      "relative_l2_error": 0.0017631236696615815,
+      "max_abs_error": 3.0,
+      "rmse": 0.016768628731369972,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 5,
+      "role": "input",
+      "relative_l2_error": 0.0017631236696615815,
+      "max_abs_error": 3.0,
+      "rmse": 0.016768628731369972,
+      "exact_equal": false
+    },
+    {
+      "run": "fresh_2",
+      "stage": "late",
+      "layer": 5,
+      "role": "output",
+      "relative_l2_error": 0.0025175956543534994,
+      "max_abs_error": 4.0,
+      "rmse": 0.022218771278858185,
+      "exact_equal": false
+    }
+  ],
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "math_settings": {
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "bf16_reduced_precision_reduction": true,
+    "deterministic_algorithms": false,
+    "flash_sdp": true,
+    "math_sdp": true,
+    "mem_efficient_sdp": true
+  },
+  "attention_processors": [
+    "QwenImage21AttnProcessor"
+  ],
+  "attention_backends": [
+    "None"
+  ],
+  "buffers": [
+    {
+      "name": "time_text_embed.time_proj.freqs",
+      "dtype": "torch.float32",
+      "shape": [
+        128
+      ],
+      "finite": true,
+      "device": "cuda:0"
+    }
+  ],
+  "temporal_frequency_comparison": {
+    "relative_l2_error": 0.0,
+    "max_abs_error": 0.0,
+    "rmse": 0.0,
+    "exact_equal": true
+  },
+  "input_metadata": [
+    {
+      "stage": "early",
+      "tensor_fields": {
+        "encoder_hidden_states": {
+          "shape": [
+            1,
+            16,
+            4096
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            65536,
+            4096,
+            1
+          ],
+          "contiguous": true
+        },
+        "img_mask": {
+          "shape": [
+            1,
+            1040
+          ],
+          "dtype": "torch.bool",
+          "stride": [
+            1040,
+            1
+          ],
+          "contiguous": true
+        },
+        "hidden_states": {
+          "shape": [
+            1,
+            4096,
+            64
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            262144,
+            64,
+            1
+          ],
+          "contiguous": true
+        },
+        "timestep": {
+          "shape": [
+            1
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            1
+          ],
+          "contiguous": true
+        }
+      },
+      "cache_mode": "extract"
+    },
+    {
+      "stage": "middle",
+      "tensor_fields": {
+        "encoder_hidden_states": {
+          "shape": [
+            1,
+            16,
+            4096
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            65536,
+            4096,
+            1
+          ],
+          "contiguous": true
+        },
+        "img_mask": {
+          "shape": [
+            1,
+            1040
+          ],
+          "dtype": "torch.bool",
+          "stride": [
+            1040,
+            1
+          ],
+          "contiguous": true
+        },
+        "hidden_states": {
+          "shape": [
+            1,
+            4096,
+            64
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            262144,
+            64,
+            1
+          ],
+          "contiguous": true
+        },
+        "timestep": {
+          "shape": [
+            1
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            1
+          ],
+          "contiguous": true
+        }
+      },
+      "cache_mode": "cached"
+    },
+    {
+      "stage": "late",
+      "tensor_fields": {
+        "encoder_hidden_states": {
+          "shape": [
+            1,
+            16,
+            4096
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            65536,
+            4096,
+            1
+          ],
+          "contiguous": true
+        },
+        "img_mask": {
+          "shape": [
+            1,
+            1040
+          ],
+          "dtype": "torch.bool",
+          "stride": [
+            1040,
+            1
+          ],
+          "contiguous": true
+        },
+        "hidden_states": {
+          "shape": [
+            1,
+            4096,
+            64
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            262144,
+            64,
+            1
+          ],
+          "contiguous": true
+        },
+        "timestep": {
+          "shape": [
+            1
+          ],
+          "dtype": "torch.bfloat16",
+          "stride": [
+            1
+          ],
+          "contiguous": true
+        }
+      },
+      "cache_mode": "cached"
+    }
+  ],
+  "repeatability": [
+    {
+      "stage": "early",
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true
+    },
+    {
+      "stage": "middle",
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true
+    },
+    {
+      "stage": "late",
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true
+    }
+  ],
+  "control_passed": false,
+  "artifacts": [
+    {
+      "name": "diagnostic_tensors.pt",
+      "sha256": "2ca9ac8298507dae3d552142b1d33fbdbaffb0045a474eb614dd0a340d00e614",
+      "bytes": 105925733
+    },
+    {
+      "name": "pipeline_qwenimage21_runtime.py",
+      "sha256": "6985b2f1f25e8dd09ef85c867ebcad184b981f10c0b4f80757ca9cc135b8fa5e",
+      "bytes": 42067
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "version": "phase6-existing-bridge-assessment-v1",
+  "input_sha256": {
+    "data/phase6/verified_student_replay/summary.json": "3eb08218179f6e799641560a957de71ccd309960497883aa4ed684466f659a6b",
+    "data/phase6/aligned_hidden_capture/summary.json": "59d143524823012d4c9950166e2c9706ef19d01033b0160f06f28448252c0eb9",
+    "data/phase6/replay_contract.json": "9daa144b3a332a25ab3703679e9d2a13998916ed0c0ec3de38ac18b7fa15b75e"
+  },
+  "target_index_path": "data/phase6/aligned_hidden_capture/target_index.json",
+  "target_index_sha256": "9eb39e41246a3302c245bceb05451841fd2ad5a3db6555aa611513965d37662e",
+  "decision": "retain existing pretrained candidate for a healing pilot; no Phase 5 rerun justified solely by the replay change",
+  "selected_candidate": {
+    "candidate_id": "single_bridge_block_05",
+    "removed_teacher_slots": [
+      5
+    ],
+    "teacher_blocks": 32,
+    "surviving_transformer_blocks": 31,
+    "bridge_count": 1,
+    "original_slot_count": 32,
+    "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_05_selected.pt",
+    "checkpoint_sha256": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+    "selected_update": 300,
+    "bridge_parameters": 2097152,
+    "surviving_hidden_alignment": [
+      {
+        "teacher_slot": 0,
+        "student_slot": 0
+      },
+      {
+        "teacher_slot": 1,
+        "student_slot": 1
+      },
+      {
+        "teacher_slot": 2,
+        "student_slot": 2
+      },
+      {
+        "teacher_slot": 3,
+        "student_slot": 3
+      },
+      {
+        "teacher_slot": 4,
+        "student_slot": 4
+      },
+      {
+        "teacher_slot": 6,
+        "student_slot": 6
+      },
+      {
+        "teacher_slot": 7,
+        "student_slot": 7
+      },
+      {
+        "teacher_slot": 8,
+        "student_slot": 8
+      },
+      {
+        "teacher_slot": 9,
+        "student_slot": 9
+      },
+      {
+        "teacher_slot": 10,
+        "student_slot": 10
+      },
+      {
+        "teacher_slot": 11,
+        "student_slot": 11
+      },
+      {
+        "teacher_slot": 12,
+        "student_slot": 12
+      },
+      {
+        "teacher_slot": 13,
+        "student_slot": 13
+      },
+      {
+        "teacher_slot": 14,
+        "student_slot": 14
+      },
+      {
+        "teacher_slot": 15,
+        "student_slot": 15
+      },
+      {
+        "teacher_slot": 16,
+        "student_slot": 16
+      },
+      {
+        "teacher_slot": 17,
+        "student_slot": 17
+      },
+      {
+        "teacher_slot": 18,
+        "student_slot": 18
+      },
+      {
+        "teacher_slot": 19,
+        "student_slot": 19
+      },
+      {
+        "teacher_slot": 20,
+        "student_slot": 20
+      },
+      {
+        "teacher_slot": 21,
+        "student_slot": 21
+      },
+      {
+        "teacher_slot": 22,
+        "student_slot": 22
+      },
+      {
+        "teacher_slot": 23,
+        "student_slot": 23
+      },
+      {
+        "teacher_slot": 24,
+        "student_slot": 24
+      },
+      {
+        "teacher_slot": 25,
+        "student_slot": 25
+      },
+      {
+        "teacher_slot": 26,
+        "student_slot": 26
+      },
+      {
+        "teacher_slot": 27,
+        "student_slot": 27
+      },
+      {
+        "teacher_slot": 28,
+        "student_slot": 28
+      },
+      {
+        "teacher_slot": 29,
+        "student_slot": 29
+      },
+      {
+        "teacher_slot": 30,
+        "student_slot": 30
+      },
+      {
+        "teacher_slot": 31,
+        "student_slot": 31
+      }
+    ],
+    "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+  },
+  "candidate_evidence": [
+    {
+      "candidate_id": "single_bridge_block_02",
+      "layer": 2,
+      "mean_velocity_relative_l2": 0.12023494659612576,
+      "velocity_error_reduction": 0.06641214557027164,
+      "improved_velocity_comparisons": 27,
+      "total_velocity_comparisons": 30,
+      "historical_validation_objective": 0.003969003023521509,
+      "fresh_validation_objective": 0.0039686774194706235,
+      "fresh_objective_relative_change": -8.203673541085088e-05,
+      "fresh_objective_reduction_from_identity": 0.4552967409951858
+    },
+    {
+      "candidate_id": "single_bridge_block_03",
+      "layer": 3,
+      "mean_velocity_relative_l2": 0.10238446481525898,
+      "velocity_error_reduction": 0.03743600272757319,
+      "improved_velocity_comparisons": 20,
+      "total_velocity_comparisons": 30,
+      "historical_validation_objective": 0.005215348385390825,
+      "fresh_validation_objective": 0.005213093210477382,
+      "fresh_objective_relative_change": -0.00043241117309822386,
+      "fresh_objective_reduction_from_identity": 0.3800381590253503
+    },
+    {
+      "candidate_id": "single_bridge_block_04",
+      "layer": 4,
+      "mean_velocity_relative_l2": 0.05873384519169728,
+      "velocity_error_reduction": 0.17971039169834868,
+      "improved_velocity_comparisons": 26,
+      "total_velocity_comparisons": 30,
+      "historical_validation_objective": 0.005036106774350628,
+      "fresh_validation_objective": 0.005036986034247092,
+      "fresh_objective_relative_change": 0.00017459119432139403,
+      "fresh_objective_reduction_from_identity": 0.49702562593242616
+    },
+    {
+      "candidate_id": "single_bridge_block_05",
+      "layer": 5,
+      "mean_velocity_relative_l2": 0.055178944828609626,
+      "velocity_error_reduction": 0.13859436946637405,
+      "improved_velocity_comparisons": 24,
+      "total_velocity_comparisons": 30,
+      "historical_validation_objective": 0.006713706885348074,
+      "fresh_validation_objective": 0.006711873243330046,
+      "fresh_objective_relative_change": -0.00027311916491756794,
+      "fresh_objective_reduction_from_identity": 0.6139765770656838
+    }
+  ],
+  "selection_policy": "lowest equal-prompt/equal-stage mean validation velocity relative L2 among existing candidates improving both velocity and fresh local fit versus identity; no claim of statistical superiority",
+  "original_targets_preserved": true,
+  "optimizer_updates": 0,
+  "limitations": "same small validation split used for Phase 5 checkpoint selection; no independent test, generated images, student trajectories, healing or speed benchmark",
+  "teacher_contract": "data/phase6/replay_contract.json"
+}

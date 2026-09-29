@@ -1,0 +1,753 @@
+{
+  "request": {
+    "version": "phase6-independent-student-replay-v1",
+    "handoff_manifest_sha256": "7d8d61b1db37482327065b0ba826197aa49e6ffc9d1c76c012cd1448554c7400",
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "candidates": [
+      {
+        "candidate_id": "single_bridge_block_02",
+        "removed_teacher_slots": [
+          2
+        ],
+        "teacher_blocks": 32,
+        "surviving_transformer_blocks": 31,
+        "bridge_count": 1,
+        "original_slot_count": 32,
+        "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_02_selected.pt",
+        "checkpoint_sha256": "dc64cd6a2c825f7c4c2804ef69a5595ff8e6012466452043d424d0f0e96b15de",
+        "selected_update": 500,
+        "bridge_parameters": 2097152,
+        "surviving_hidden_alignment": [
+          {
+            "teacher_slot": 0,
+            "student_slot": 0
+          },
+          {
+            "teacher_slot": 1,
+            "student_slot": 1
+          },
+          {
+            "teacher_slot": 3,
+            "student_slot": 3
+          },
+          {
+            "teacher_slot": 4,
+            "student_slot": 4
+          },
+          {
+            "teacher_slot": 5,
+            "student_slot": 5
+          },
+          {
+            "teacher_slot": 6,
+            "student_slot": 6
+          },
+          {
+            "teacher_slot": 7,
+            "student_slot": 7
+          },
+          {
+            "teacher_slot": 8,
+            "student_slot": 8
+          },
+          {
+            "teacher_slot": 9,
+            "student_slot": 9
+          },
+          {
+            "teacher_slot": 10,
+            "student_slot": 10
+          },
+          {
+            "teacher_slot": 11,
+            "student_slot": 11
+          },
+          {
+            "teacher_slot": 12,
+            "student_slot": 12
+          },
+          {
+            "teacher_slot": 13,
+            "student_slot": 13
+          },
+          {
+            "teacher_slot": 14,
+            "student_slot": 14
+          },
+          {
+            "teacher_slot": 15,
+            "student_slot": 15
+          },
+          {
+            "teacher_slot": 16,
+            "student_slot": 16
+          },
+          {
+            "teacher_slot": 17,
+            "student_slot": 17
+          },
+          {
+            "teacher_slot": 18,
+            "student_slot": 18
+          },
+          {
+            "teacher_slot": 19,
+            "student_slot": 19
+          },
+          {
+            "teacher_slot": 20,
+            "student_slot": 20
+          },
+          {
+            "teacher_slot": 21,
+            "student_slot": 21
+          },
+          {
+            "teacher_slot": 22,
+            "student_slot": 22
+          },
+          {
+            "teacher_slot": 23,
+            "student_slot": 23
+          },
+          {
+            "teacher_slot": 24,
+            "student_slot": 24
+          },
+          {
+            "teacher_slot": 25,
+            "student_slot": 25
+          },
+          {
+            "teacher_slot": 26,
+            "student_slot": 26
+          },
+          {
+            "teacher_slot": 27,
+            "student_slot": 27
+          },
+          {
+            "teacher_slot": 28,
+            "student_slot": 28
+          },
+          {
+            "teacher_slot": 29,
+            "student_slot": 29
+          },
+          {
+            "teacher_slot": 30,
+            "student_slot": 30
+          },
+          {
+            "teacher_slot": 31,
+            "student_slot": 31
+          }
+        ],
+        "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+      },
+      {
+        "candidate_id": "single_bridge_block_03",
+        "removed_teacher_slots": [
+          3
+        ],
+        "teacher_blocks": 32,
+        "surviving_transformer_blocks": 31,
+        "bridge_count": 1,
+        "original_slot_count": 32,
+        "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_03_selected.pt",
+        "checkpoint_sha256": "1f7c9314063e87ae32624bcaafaf919733d926e1f0340ab35c00d0690340f637",
+        "selected_update": 300,
+        "bridge_parameters": 2097152,
+        "surviving_hidden_alignment": [
+          {
+            "teacher_slot": 0,
+            "student_slot": 0
+          },
+          {
+            "teacher_slot": 1,
+            "student_slot": 1
+          },
+          {
+            "teacher_slot": 2,
+            "student_slot": 2
+          },
+          {
+            "teacher_slot": 4,
+            "student_slot": 4
+          },
+          {
+            "teacher_slot": 5,
+            "student_slot": 5
+          },
+          {
+            "teacher_slot": 6,
+            "student_slot": 6
+          },
+          {
+            "teacher_slot": 7,
+            "student_slot": 7
+          },
+          {
+            "teacher_slot": 8,
+            "student_slot": 8
+          },
+          {
+            "teacher_slot": 9,
+            "student_slot": 9
+          },
+          {
+            "teacher_slot": 10,
+            "student_slot": 10
+          },
+          {
+            "teacher_slot": 11,
+            "student_slot": 11
+          },
+          {
+            "teacher_slot": 12,
+            "student_slot": 12
+          },
+          {
+            "teacher_slot": 13,
+            "student_slot": 13
+          },
+          {
+            "teacher_slot": 14,
+            "student_slot": 14
+          },
+          {
+            "teacher_slot": 15,
+            "student_slot": 15
+          },
+          {
+            "teacher_slot": 16,
+            "student_slot": 16
+          },
+          {
+            "teacher_slot": 17,
+            "student_slot": 17
+          },
+          {
+            "teacher_slot": 18,
+            "student_slot": 18
+          },
+          {
+            "teacher_slot": 19,
+            "student_slot": 19
+          },
+          {
+            "teacher_slot": 20,
+            "student_slot": 20
+          },
+          {
+            "teacher_slot": 21,
+            "student_slot": 21
+          },
+          {
+            "teacher_slot": 22,
+            "student_slot": 22
+          },
+          {
+            "teacher_slot": 23,
+            "student_slot": 23
+          },
+          {
+            "teacher_slot": 24,
+            "student_slot": 24
+          },
+          {
+            "teacher_slot": 25,
+            "student_slot": 25
+          },
+          {
+            "teacher_slot": 26,
+            "student_slot": 26
+          },
+          {
+            "teacher_slot": 27,
+            "student_slot": 27
+          },
+          {
+            "teacher_slot": 28,
+            "student_slot": 28
+          },
+          {
+            "teacher_slot": 29,
+            "student_slot": 29
+          },
+          {
+            "teacher_slot": 30,
+            "student_slot": 30
+          },
+          {
+            "teacher_slot": 31,
+            "student_slot": 31
+          }
+        ],
+        "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+      },
+      {
+        "candidate_id": "single_bridge_block_04",
+        "removed_teacher_slots": [
+          4
+        ],
+        "teacher_blocks": 32,
+        "surviving_transformer_blocks": 31,
+        "bridge_count": 1,
+        "original_slot_count": 32,
+        "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_04_selected.pt",
+        "checkpoint_sha256": "907a04d05a5178f3d3aa514bdfa339dbe5174b55a230a4c9ce1c446205cba9da",
+        "selected_update": 400,
+        "bridge_parameters": 2097152,
+        "surviving_hidden_alignment": [
+          {
+            "teacher_slot": 0,
+            "student_slot": 0
+          },
+          {
+            "teacher_slot": 1,
+            "student_slot": 1
+          },
+          {
+            "teacher_slot": 2,
+            "student_slot": 2
+          },
+          {
+            "teacher_slot": 3,
+            "student_slot": 3
+          },
+          {
+            "teacher_slot": 5,
+            "student_slot": 5
+          },
+          {
+            "teacher_slot": 6,
+            "student_slot": 6
+          },
+          {
+            "teacher_slot": 7,
+            "student_slot": 7
+          },
+          {
+            "teacher_slot": 8,
+            "student_slot": 8
+          },
+          {
+            "teacher_slot": 9,
+            "student_slot": 9
+          },
+          {
+            "teacher_slot": 10,
+            "student_slot": 10
+          },
+          {
+            "teacher_slot": 11,
+            "student_slot": 11
+          },
+          {
+            "teacher_slot": 12,
+            "student_slot": 12
+          },
+          {
+            "teacher_slot": 13,
+            "student_slot": 13
+          },
+          {
+            "teacher_slot": 14,
+            "student_slot": 14
+          },
+          {
+            "teacher_slot": 15,
+            "student_slot": 15
+          },
+          {
+            "teacher_slot": 16,
+            "student_slot": 16
+          },
+          {
+            "teacher_slot": 17,
+            "student_slot": 17
+          },
+          {
+            "teacher_slot": 18,
+            "student_slot": 18
+          },
+          {
+            "teacher_slot": 19,
+            "student_slot": 19
+          },
+          {
+            "teacher_slot": 20,
+            "student_slot": 20
+          },
+          {
+            "teacher_slot": 21,
+            "student_slot": 21
+          },
+          {
+            "teacher_slot": 22,
+            "student_slot": 22
+          },
+          {
+            "teacher_slot": 23,
+            "student_slot": 23
+          },
+          {
+            "teacher_slot": 24,
+            "student_slot": 24
+          },
+          {
+            "teacher_slot": 25,
+            "student_slot": 25
+          },
+          {
+            "teacher_slot": 26,
+            "student_slot": 26
+          },
+          {
+            "teacher_slot": 27,
+            "student_slot": 27
+          },
+          {
+            "teacher_slot": 28,
+            "student_slot": 28
+          },
+          {
+            "teacher_slot": 29,
+            "student_slot": 29
+          },
+          {
+            "teacher_slot": 30,
+            "student_slot": 30
+          },
+          {
+            "teacher_slot": 31,
+            "student_slot": 31
+          }
+        ],
+        "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+      },
+      {
+        "candidate_id": "single_bridge_block_05",
+        "removed_teacher_slots": [
+          5
+        ],
+        "teacher_blocks": 32,
+        "surviving_transformer_blocks": 31,
+        "bridge_count": 1,
+        "original_slot_count": 32,
+        "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_05_selected.pt",
+        "checkpoint_sha256": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+        "selected_update": 300,
+        "bridge_parameters": 2097152,
+        "surviving_hidden_alignment": [
+          {
+            "teacher_slot": 0,
+            "student_slot": 0
+          },
+          {
+            "teacher_slot": 1,
+            "student_slot": 1
+          },
+          {
+            "teacher_slot": 2,
+            "student_slot": 2
+          },
+          {
+            "teacher_slot": 3,
+            "student_slot": 3
+          },
+          {
+            "teacher_slot": 4,
+            "student_slot": 4
+          },
+          {
+            "teacher_slot": 6,
+            "student_slot": 6
+          },
+          {
+            "teacher_slot": 7,
+            "student_slot": 7
+          },
+          {
+            "teacher_slot": 8,
+            "student_slot": 8
+          },
+          {
+            "teacher_slot": 9,
+            "student_slot": 9
+          },
+          {
+            "teacher_slot": 10,
+            "student_slot": 10
+          },
+          {
+            "teacher_slot": 11,
+            "student_slot": 11
+          },
+          {
+            "teacher_slot": 12,
+            "student_slot": 12
+          },
+          {
+            "teacher_slot": 13,
+            "student_slot": 13
+          },
+          {
+            "teacher_slot": 14,
+            "student_slot": 14
+          },
+          {
+            "teacher_slot": 15,
+            "student_slot": 15
+          },
+          {
+            "teacher_slot": 16,
+            "student_slot": 16
+          },
+          {
+            "teacher_slot": 17,
+            "student_slot": 17
+          },
+          {
+            "teacher_slot": 18,
+            "student_slot": 18
+          },
+          {
+            "teacher_slot": 19,
+            "student_slot": 19
+          },
+          {
+            "teacher_slot": 20,
+            "student_slot": 20
+          },
+          {
+            "teacher_slot": 21,
+            "student_slot": 21
+          },
+          {
+            "teacher_slot": 22,
+            "student_slot": 22
+          },
+          {
+            "teacher_slot": 23,
+            "student_slot": 23
+          },
+          {
+            "teacher_slot": 24,
+            "student_slot": 24
+          },
+          {
+            "teacher_slot": 25,
+            "student_slot": 25
+          },
+          {
+            "teacher_slot": 26,
+            "student_slot": 26
+          },
+          {
+            "teacher_slot": 27,
+            "student_slot": 27
+          },
+          {
+            "teacher_slot": 28,
+            "student_slot": 28
+          },
+          {
+            "teacher_slot": 29,
+            "student_slot": 29
+          },
+          {
+            "teacher_slot": 30,
+            "student_slot": 30
+          },
+          {
+            "teacher_slot": 31,
+            "student_slot": 31
+          }
+        ],
+        "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+      }
+    ],
+    "validation": [
+      {
+        "capture_id": "p5-validation-p1-4a84d737d801",
+        "source_id": "p1-4a84d737d801",
+        "dimension": "alignment",
+        "request_key": "5e1e03061e0f2d30a8124153973bce281b539df12a3034bd7dcab7636fe0bcfb",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/targets.pt",
+        "tensor_sha256": "082fd02c3055f8ecd59282de8510fae6e167df4f9c2c485781e1966390184658",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3136
+      },
+      {
+        "capture_id": "p5-validation-p1-5c3d279f55b0",
+        "source_id": "p1-5c3d279f55b0",
+        "dimension": "alignment",
+        "request_key": "f8a8ced6aedf372e42f96fab3e246cac3ce30f11056447d9f866af72b62c062d",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/targets.pt",
+        "tensor_sha256": "095303c8aec61ee0a617d42b6562ad28081775deb9b3c3637e5bf1f3ae2b3455",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3176
+      },
+      {
+        "capture_id": "p5-validation-p1-df869d4d578d",
+        "source_id": "p1-df869d4d578d",
+        "dimension": "visual_quality",
+        "request_key": "c497528b82b1a96a1f80a82f57637365a6b96fcb38994a72cf97d35aaa95fd04",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/targets.pt",
+        "tensor_sha256": "10b44f5920d6d0dd2385361b68940c1577305d216ce04b0f8a116487902cfb48",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3164
+      },
+      {
+        "capture_id": "p5-validation-p1-36fe86287034",
+        "source_id": "p1-36fe86287034",
+        "dimension": "visual_quality",
+        "request_key": "98e8ea6832d058ae2472d2c7c5101a3dbf3c5822d2ddfe3dff7dac529aa04a61",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/targets.pt",
+        "tensor_sha256": "eebe66fd30f665c10f0423451c3d7571edef5250c3fffa0136c5888df474bfe2",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3184
+      },
+      {
+        "capture_id": "p5-validation-p1-a6227b574def",
+        "source_id": "p1-a6227b574def",
+        "dimension": "aesthetics",
+        "request_key": "945f11d70a8af0d8b024ed7fa620875f23829bcc2f1abdba7f840f2ffd6cf7aa",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/targets.pt",
+        "tensor_sha256": "8a8fda3dddf58c4329fe6bbfa2da2f6a35856c94626690b72c060ff323b98e64",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3168
+      },
+      {
+        "capture_id": "p5-validation-p1-8d56f0bbd4df",
+        "source_id": "p1-8d56f0bbd4df",
+        "dimension": "aesthetics",
+        "request_key": "904e27969f6053342998a969e8479467c7f5d9aa927c857d43ebbb6c353e52a9",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/targets.pt",
+        "tensor_sha256": "be4bfc9528c131f5da574166f8a670d3ecfd96b77e9266d4a453dc35a84cbb8f",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3236
+      },
+      {
+        "capture_id": "p5-validation-p1-b5d1aaa3235d",
+        "source_id": "p1-b5d1aaa3235d",
+        "dimension": "real_world",
+        "request_key": "75b65369af2d7ff02af4c6edb0170c00cde328d86263cf191744aaf5752ac4cf",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/targets.pt",
+        "tensor_sha256": "db04deb488106852a91517f2646b28e1ac7a5684ccb4efb14aef24fa2c4cb41b",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3172
+      },
+      {
+        "capture_id": "p5-validation-p1-79652b776ffc",
+        "source_id": "p1-79652b776ffc",
+        "dimension": "real_world",
+        "request_key": "fe01005662ed77c4d1cac54628c2b6af53f7c5d3f7fb78d857d77fe056b0cf25",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/targets.pt",
+        "tensor_sha256": "8e813f5b15dabb2ea3e7118a1cb57d901416276b3a74c3f6e0d52ec3dc4ab613",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3232
+      },
+      {
+        "capture_id": "p5-validation-p1-17fb78d1c4bf",
+        "source_id": "p1-17fb78d1c4bf",
+        "dimension": "creative",
+        "request_key": "056cc4878e4583d2b53d250954f7f6bb7e90cd1fc9da2b07179e225284880314",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/targets.pt",
+        "tensor_sha256": "02800f47039ec1704c1ede2213f0968f67216e986e0cc273b2851b468a2b0ba2",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3204
+      },
+      {
+        "capture_id": "p5-validation-p1-81fc1d548f81",
+        "source_id": "p1-81fc1d548f81",
+        "dimension": "creative",
+        "request_key": "25265886ff2427ac189912dc4626818d452aad3b587ddfe72ac303c82fe05ccf",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/targets.pt",
+        "tensor_sha256": "cf470d8de8627386d197f4a7826c62ee07f1a68d6db31754f24d1369469d3fc7",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3264
+      }
+    ],
+    "fit_key": "7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618",
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "core_source": "import torch\nfrom torch import nn\n\nclass ResidualBottleneckBridge(nn.Module):\n    \"\"\"Trainable tokenwise residual approximation; pipeline integration is a separate wrapper.\"\"\"\n    def __init__(self, hidden_dim=4096, bottleneck_dim=256):\n        super().__init__()\n        self.down = nn.Linear(hidden_dim, bottleneck_dim, bias=False)\n        self.activation = nn.GELU()\n        self.up = nn.Linear(bottleneck_dim, hidden_dim, bias=False)\n        # Identity initialization is a starting point for learning, not the final replacement.\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        return hidden_states + self.up(self.activation(self.down(hidden_states)))\n",
+    "wrapper_source": "\"\"\"Qwen-Image 2.1 block contract for an unconditioned tokenwise bridge.\"\"\"\nfrom types import SimpleNamespace\nfrom torch import nn\n\n\nclass QwenImage21BridgeBlock(nn.Module):\n    def __init__(self, bridge, processor):\n        super().__init__()\n        self.bridge = bridge\n        # Parent forward inspects this processor to choose mask construction.\n        # This contains no attention projections and performs no attention.\n        self.attn = SimpleNamespace(processor=processor)\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        if kv_cache_mode not in (None, 'extract', 'cached'):\n            raise ValueError('Unknown KV cache mode.')\n        # No K/V is required in this slot. Subsequent surviving blocks build\n        # their own prefix K/V from the transformed prefix during extraction.\n        return self.bridge(hidden_states)\n\n\ndef insert_bridge(transformer, layer, bridge, cache_class):\n    \"\"\"Replace one slot; caller must discard all prior caches and use returned cache.\"\"\"\n    if not 0 <= layer < len(transformer.transformer_blocks):\n        raise IndexError('Bridge slot is outside transformer depth.')\n    if bridge.down.in_features != transformer.config.num_attention_heads * transformer.config.attention_head_dim:\n        raise ValueError('Bridge width differs from transformer width.')\n    old = transformer.transformer_blocks[layer]\n    reference = next(transformer.parameters())\n    bridge = bridge.to(device=reference.device, dtype=reference.dtype)\n    wrapper = QwenImage21BridgeBlock(bridge, old.attn.processor)\n    wrapper.train(transformer.training)\n    transformer.transformer_blocks[layer] = wrapper\n    return old, cache_class(len(transformer.transformer_blocks))\n",
+    "worker_source": "def replay_students(request, key):\n    \"\"\"Replay immutable validation inputs; results_volume supplied by coordinator.\"\"\"\n    import hashlib\n    import inspect\n    import json\n    import math\n    import time\n    from pathlib import Path\n    import torch\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache\n\n    directory = Path('/phase3/phase6/replay') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n    if (directory / 'started.json').exists():\n        raise RuntimeError('Incomplete replay exists; inspect instead of repeating forwards.')\n    (directory / 'started.json').write_text(json.dumps({'request_key': key}))\n    (directory / 'request.json').write_text(json.dumps({'request': request, 'request_key': key}, indent=2))\n    results_volume.commit()\n    report = {'request_key': key, 'status': 'failed', 'teacher_calls': 0, 'student_calls': 0,\n              'optimizer_updates': 0, 'records': [], 'controls': []}\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def gpu(value):\n        if isinstance(value, torch.Tensor):\n            return value.to('cuda')\n        if isinstance(value, dict):\n            return {k: gpu(v) for k, v in value.items()}\n        if isinstance(value, (list, tuple)):\n            return type(value)(gpu(v) for v in value)\n        return value\n\n    def metrics(pred, target):\n        x, y = pred.float(), target.float()\n        if not torch.isfinite(x).all() or not torch.isfinite(y).all():\n            raise RuntimeError('Nonfinite velocity.')\n        delta = x - y\n        return {'relative_l2_error': float(delta.norm() / y.norm().clamp_min(1e-12)),\n                'mse': float(delta.square().mean()), 'rmse': float(delta.square().mean().sqrt()),\n                'max_abs_error': float(delta.abs().max()),\n                'cosine': float(torch.nn.functional.cosine_similarity(x.flatten(), y.flatten(), dim=0))}\n\n    try:\n        teacher = request['teacher']\n        report['gpu'] = torch.cuda.get_device_name(0)\n        if 'H100' not in report['gpu']:\n            raise RuntimeError('Runtime GPU differs.')\n        pipe = QwenImage21Pipeline.from_pretrained(teacher['model_repo'], revision=teacher['model_revision'],\n            dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        model = pipe.transformer.eval()\n        for component in (model, pipe.text_encoder, pipe.vae):\n            component.requires_grad_(False)\n        if digest(Path(inspect.getfile(type(model)))) != request['transformer_source_sha256']:\n            raise RuntimeError('Pinned transformer source differs.')\n        if len(model.transformer_blocks) != 32 or not model.config.causal_condition:\n            raise RuntimeError('Teacher architecture differs.')\n        config_path = (Path('/root/.cache/huggingface/hub') / ('models--' + teacher['model_repo'].replace('/', '--'))\n                       / 'snapshots' / teacher['model_revision'] / 'transformer/config.json')\n        if digest(config_path) != teacher['config_sha256']:\n            raise RuntimeError('Teacher configuration differs.')\n        if type(pipe.scheduler).__name__ != teacher['scheduler_class'] or json.loads(json.dumps(dict(pipe.scheduler.config), default=str)) != teacher['scheduler_config']:\n            raise RuntimeError('Scheduler differs.')\n        namespace = {}\n        exec(compile(request['core_source'], 'bridge_definition.py', 'exec'), namespace)\n        exec(compile(request['wrapper_source'], 'bridge_block_definition.py', 'exec'), namespace)\n        Bridge, insert = namespace['ResidualBottleneckBridge'], namespace['insert_bridge']\n        weights = {}\n        for candidate in request['candidates']:\n            path = Path('/phase3/phase5/fitting') / request['fit_key'] / Path(candidate['checkpoint_path']).name\n            if digest(path) != candidate['checkpoint_sha256']:\n                raise RuntimeError('Remote selected checkpoint differs.')\n            checkpoint = torch.load(path, weights_only=True, map_location='cpu')\n            if checkpoint['request_key'] != request['fit_key'] or checkpoint['layer'] != candidate['removed_teacher_slots'][0] or checkpoint['step'] != candidate['selected_update']:\n                raise RuntimeError('Checkpoint provenance differs.')\n            weights[candidate['candidate_id']] = checkpoint['state_dict']\n        outputs = []\n        torch.cuda.reset_peak_memory_stats()\n        torch.cuda.synchronize()\n        started = time.perf_counter()\n        for record in request['validation']:\n            path = Path('/phase3/phase5/capture') / record['request_key'] / 'targets.pt'\n            if digest(path) != record['tensor_sha256']:\n                raise RuntimeError('Remote teacher bundle differs.')\n            bundle = torch.load(path, weights_only=True, map_location='cpu')\n            if bundle['request_key'] != record['request_key'] or bundle['row']['source_id'] != record['source_id'] or bundle['row']['split'] != 'validation':\n                raise RuntimeError('Target provenance or split differs.')\n            stages = bundle['stages']\n            if [s['step_index'] for s in stages] != [0, 20, 39]:\n                raise RuntimeError('Saved stage order differs.')\n            common = gpu(bundle['shared_transformer_kwargs'])\n\n            def replay(candidate_id, variant):\n                cache = QwenImage21KVCache(32)\n                with torch.inference_mode(), model.cache_context('cond'):\n                    for stage in stages:\n                        kwargs = {**common, **gpu(stage['kwargs']), 'kv_cache': cache}\n                        pred = model(**kwargs)[0][:, -stage['target_image_tokens']:]\n                        values = metrics(pred, gpu(stage['teacher_velocity']))\n                        entry = {'source_id': record['source_id'], 'dimension': record['dimension'],\n                                 'candidate_id': candidate_id, 'variant': variant, 'stage': stage['stage'],\n                                 'step_index': stage['step_index'], 'scheduler_sigma': stage['scheduler_sigma'], **values}\n                        outputs.append({**entry, 'velocity': pred.detach().cpu().contiguous()})\n                        if variant == 'teacher_control':\n                            report['teacher_calls'] += 1\n                            report['controls'].append(entry)\n                            if values['relative_l2_error'] > 0.001:\n                                raise RuntimeError('Intact teacher control exceeds 0.001 relative L2.')\n                        else:\n                            report['student_calls'] += 1\n                            report['records'].append(entry)\n\n            replay('teacher', 'teacher_control')\n            for candidate in request['candidates']:\n                layer = candidate['removed_teacher_slots'][0]\n                original = model.transformer_blocks[layer]\n                try:\n                    for variant in ('identity', 'trained'):\n                        model.transformer_blocks[layer] = original\n                        bridge = Bridge(4096, 256)\n                        bridge.load_state_dict(weights[candidate['candidate_id']])\n                        if variant == 'identity':\n                            with torch.no_grad():\n                                bridge.up.weight.zero_()\n                        bridge.requires_grad_(False)\n                        insert(model, layer, bridge, QwenImage21KVCache)\n                        replay(candidate['candidate_id'], variant)\n                finally:\n                    model.transformer_blocks[layer] = original\n            del bundle, common\n        if report['teacher_calls'] != 30 or report['student_calls'] != 240:\n            raise RuntimeError('Unexpected forward counts.')\n        torch.cuda.synchronize()\n        report['replay_seconds'] = time.perf_counter() - started\n        report['peak_allocated_gib'] = torch.cuda.max_memory_allocated() / 2**30\n        aggregates = []\n        for candidate in request['candidates']:\n            for stage in ('early', 'middle', 'late'):\n                selected = [r for r in report['records'] if r['candidate_id'] == candidate['candidate_id'] and r['stage'] == stage]\n                baseline = [r for r in selected if r['variant'] == 'identity']\n                trained = [r for r in selected if r['variant'] == 'trained']\n                if len(baseline) != 10 or len(trained) != 10:\n                    raise RuntimeError('Aggregation prompt counts differ.')\n                by_id = {r['source_id']: r for r in baseline}\n                aggregates.append({'candidate_id': candidate['candidate_id'], 'stage': stage, 'prompts': 10,\n                    'identity_mean_relative_l2': sum(r['relative_l2_error'] for r in baseline) / 10,\n                    'trained_mean_relative_l2': sum(r['relative_l2_error'] for r in trained) / 10,\n                    'trained_max_relative_l2': max(r['relative_l2_error'] for r in trained),\n                    'improved_prompts': sum(r['relative_l2_error'] < by_id[r['source_id']]['relative_l2_error'] for r in trained)})\n        tensor_path = directory / 'velocities.pt'\n        temporary = tensor_path.with_suffix('.tmp')\n        torch.save({'request_key': key, 'outputs': outputs}, temporary)\n        temporary.replace(tensor_path)\n        report.update(status='passed', aggregates=aggregates,\n                      artifacts=[{'name': tensor_path.name, 'sha256': digest(tensor_path), 'bytes': tensor_path.stat().st_size}],\n                      scope='fixed teacher-input BF16 inference replay only; no student trajectories, images, gradients or healing')\n    except Exception as exc:\n        report['error'] = f'{type(exc).__name__}: {exc}'\n    report_path.write_text(json.dumps(report, indent=2) + '\\n')\n    results_volume.commit()\n    return report\n",
+    "variants": [
+      "identity",
+      "trained"
+    ],
+    "stages": [
+      0,
+      20,
+      39
+    ],
+    "teacher_control_relative_l2_tolerance": 0.001,
+    "precision": "BF16 pipeline weights and residual addition; FP32 metrics",
+    "cache_policy": "fresh prefix cache for every teacher/candidate/variant/prompt; rebuild at extraction",
+    "metrics": "full target-image velocity relative L2, MSE, RMSE, maximum absolute difference and cosine; unweighted prompt means by stage",
+    "selection": "no winner selected; retain all per-prompt outputs and regressions",
+    "scope": "held-out fixed-input inference compatibility; no optimizer, gradient test, images or student trajectories"
+  },
+  "request_key": "9b5ffb887f2433e5bd5e76c842a4bfb44d98eb8df2311960fc8832fa2f5efa05"
+}

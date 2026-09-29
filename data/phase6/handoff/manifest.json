@@ -1,0 +1,1077 @@
+{
+  "version": "phase6-handoff-v1",
+  "artifact_sha256": {
+    "data/phase5/bridge_fitting_pilot/request.json": "110927588e32e6eab954a0d9935276d6e9879e21532d6e8b6af07dfa45631fb7",
+    "data/phase5/bridge_fitting_pilot/summary.json": "ae4c6437bca204cc20a121f937bc62fdd220a1810d2fd24e9de22180f0669f06",
+    "data/phase5/bridge_fitting_pilot/local_checkpoint_inspection.json": "23b0bcfcb8994c2d159337b4874f5d4c8e75b0c8e2e4336f5ef85b8b83510171",
+    "data/phase5/capture_pilot_request.json": "a13736965cde761de66a65e9112785992357e37f3b2f8f9a9b5f25f10d447ec2",
+    "data/phase5/capture_pilot_rows.jsonl": "a0f0f304978e0cc725e4a645d70d02a68e5362f15e234301bc664797d776ed97",
+    "data/phase5/capture_full_index.json": "535a81a348e1cb23debdea9779ca5d2e4264fde63c78b75e9159241a0359b8f8",
+    "data/phase5/capture_full_summary.json": "3b0683a172e7139fe471864aa789f18224f03e10158df0866eb3a71ecf417a50",
+    "data/phase4/bridge_definition.py": "1e3955167ab2c1f432f391edb3c8c7a71c25d9b1831522d632d849bc6625d1d4",
+    "data/phase4/bridge_block_definition.py": "e15148b422a8723a50dbe4680b1fdd625e75d89365a8457e662b5ab330b8ccac",
+    "data/phase4/transformer_qwenimage21_pinned.py": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_progress.json": "5178333f73e47758d5e724da79367549728c265d06ed34de92e04cb75f0daa84",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_selected.pt": "dc64cd6a2c825f7c4c2804ef69a5595ff8e6012466452043d424d0f0e96b15de",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_step_0000.pt": "6e671621ac60da14c6126333a623dabe7b132808f3cd94beadb0c7a53d5f00ad",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_step_0100.pt": "cf48e5bfe41f967cf25409ecf3f8aab1eb1373986a4c03183f0938b3f711d3fe",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_step_0200.pt": "36be81c2993569bf43af820fbf62a45703250cfd7d8bd62a14914ac1041f4db0",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_step_0300.pt": "43045a1717512069ce9eee4e6611b553059e61c3e40f98ed893d096e0e367b3e",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_step_0400.pt": "263c0797f5d807f0527acd407c554fe760b6047cf37359553d1fad4cb82a381c",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_step_0500.pt": "093b5033bd8a45e5f4c4e923434c12432d56d42872d6804ad9f3344bf7a4c125",
+    "data/phase5/bridge_fitting_pilot/bridge_block_02_summary.json": "1318e490e4484fd6ebb4028213775ba8b13bcba3531714fd3f65dec0ffad6b67",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_progress.json": "18dab155258a0caaa9d6b88eab0ad4b3391b258a01d1e0b12cd1282945ab1a13",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_selected.pt": "1f7c9314063e87ae32624bcaafaf919733d926e1f0340ab35c00d0690340f637",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_step_0000.pt": "cf8f256ad97b9f5e5b64303a30c807daf7bb4285823dd8a8b922bb69bccf0141",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_step_0100.pt": "9dc665de7ac4101a691daad5b022f76d32ef0c4fab1cc926581ae07dd3c7cd5d",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_step_0200.pt": "22ce0a2698c378e45e520e0b69100d1a61982f7811ec20b029721b5ddd009a9d",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_step_0300.pt": "20a920b13ad989499314e35b9802ebf16b9cace4a40226d183c9c2eb7a11f6f2",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_step_0400.pt": "2beae370ae30d7c4437be716e7dcd7966f5d903657a030fb7a780e82c2ecda7b",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_step_0500.pt": "45ac12b04f57faad9b444e4b18db808b419452537b675a7f6221d7eb812f70fc",
+    "data/phase5/bridge_fitting_pilot/bridge_block_03_summary.json": "1d05783a5864002d3da00175afbcc539c961e0a49de273f8ebffc200001b6ded",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_progress.json": "9cf0e2a873ed851095f693ab27e222ef191d3791bba872d555ea4788ef7cccef",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_selected.pt": "907a04d05a5178f3d3aa514bdfa339dbe5174b55a230a4c9ce1c446205cba9da",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_step_0000.pt": "6e26c0d9e4dced560577985266f83fa00bff4f3ce33de227304487ec94e8c379",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_step_0100.pt": "ed1b49e15c28ec2ef809af6ef5b668f846032aa0b521cf233273108e36451e3c",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_step_0200.pt": "ba3a11741b2f4ba0ec0e4451c824f1c086e291e31a79fb076dec92a20639b8be",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_step_0300.pt": "776d5c96b0ac2e0312ab7d03e9767b4b40b3e3ce24d3692a9b65b9ca6853fb5e",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_step_0400.pt": "a7a5044c4907508739d9b02e62cba334ae2ce59c5a425d4cde20226054cec487",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_step_0500.pt": "d40b7bc1e1b91fd1ab9847068ca5b3047fbc1876b22ebab9a52ffede0201f83c",
+    "data/phase5/bridge_fitting_pilot/bridge_block_04_summary.json": "0b7cb8c66b4e9182179cbcd7f2bf7100861562a0f938fc981dde02f5744db728",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_progress.json": "ab876ac766c10f372c8a03b797cd3c382c3bac385607f302e1923c0b63d7e44e",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_selected.pt": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_step_0000.pt": "e4ff0fc39e64fe20e025f39e8902274d153ef0bbd160f3e669ce9535193b1fa8",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_step_0100.pt": "cede87541b708296cea05cff5fe0f422e575fe07fc164767b94c2b6df221f007",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_step_0200.pt": "b787a4df7fecb9ae5bab66f05546469d908af705ea38f4157edbe066da3eb708",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_step_0300.pt": "a972efa12ba4af9cf6a4c3c3f6b6047cda7fff94e11ae1d9f5ef94a3247c79fb",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_step_0400.pt": "c1c5c766e592f5cef1579aa39f7fbc8da361cef135cc44de9280d008cb9ecc70",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_step_0500.pt": "6b8e97131b8bd7895a9f2b9552efd5a769f4f22cbba9404dead50ea9470bd622",
+    "data/phase5/bridge_fitting_pilot/bridge_block_05_summary.json": "9644619a84b841d10f524f12726866e2c4fac011590b06e369e624683885daf5",
+    "data/phase5/bridge_fitting_pilot/sampling_schedule.pt": "7fdbf01604d932f3a597388c4db6bd6f5aaf6b2747425349cdfe83f196102af4",
+    "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/targets.pt": "4c6a52d5b7ff761afca4e786bef720a9efc76083bafa03f0e9945705f491eed7",
+    "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/summary.json": "1e21bd30ce1af2bdb2611436c2d8ae61c53f93e0be4ea2e74216fe53b6be6f6a",
+    "data/phase5/teacher_targets/p5-train-p1-5342860a6667/targets.pt": "dba3372ceb5fb4b7910286dc989ce888d0b8c5b2fc7465d1826c37539db0a2fe",
+    "data/phase5/teacher_targets/p5-train-p1-5342860a6667/summary.json": "48287f2db66516a5e0fa727ea0dfeeda07e079704cb2032ae2bc4964122038e9",
+    "data/phase5/teacher_targets/p5-train-p1-fd07a4ad1fcf/targets.pt": "ed1c06d7e344d74b2f93a38e78097187bcc61a15d7857c6188a7667433d5f2d4",
+    "data/phase5/teacher_targets/p5-train-p1-fd07a4ad1fcf/summary.json": "5ecc65ccf414c66460eab55001f160c4c91c5dd03347042ad0d8ac6b5966c88c",
+    "data/phase5/teacher_targets/p5-train-p1-850fffd166fb/targets.pt": "7c9f7d6f150baf6130faf8ae62b1a6153a17a2da14a820af3ff9667d2498a32b",
+    "data/phase5/teacher_targets/p5-train-p1-850fffd166fb/summary.json": "047ad98de751d3365d285525086e5b5bfe5449a01fd258c27415d6ee37251bfc",
+    "data/phase5/teacher_targets/p5-train-p1-77ceedf5feb4/targets.pt": "614f1563f62d7c582eca99f21de4eeb6413a6aa6980ff9d4e940d948ca90faa1",
+    "data/phase5/teacher_targets/p5-train-p1-77ceedf5feb4/summary.json": "98054d966b091edaff094f108907160b8ff00345c9733e8bc8fba26aa0a2b606",
+    "data/phase5/teacher_targets/p5-train-p1-b0a7cd44f474/targets.pt": "bae1920fbfb321d47e4d377c066ee1eff4022cbeb0b3eaebbaf21a9b57481cbc",
+    "data/phase5/teacher_targets/p5-train-p1-b0a7cd44f474/summary.json": "4df1d4c23c1777905f46be9cdd06d08410ed9fd56c28eb84bd089dd3bec69ff2",
+    "data/phase5/teacher_targets/p5-train-p1-ebb93e49db7a/targets.pt": "a704bbe47322020e1cac68e7c6cb3f379ea5dfa74d538b0e78e748812766554a",
+    "data/phase5/teacher_targets/p5-train-p1-ebb93e49db7a/summary.json": "fac8887e0d6aaee2921d5f3570a9482afd288ff3a6c12e5f95584aacf1a2cc8c",
+    "data/phase5/teacher_targets/p5-train-p1-86b8d8da8b4e/targets.pt": "88ba829560ab65ad363c2e298169380c9575a564055e9cf7c22bc404bbc82f55",
+    "data/phase5/teacher_targets/p5-train-p1-86b8d8da8b4e/summary.json": "a567f4995d7367c1ed668b0df98b5d7db21fd3bcb84c57076035152b1a5e2ac2",
+    "data/phase5/teacher_targets/p5-train-p1-77c5bb57a408/targets.pt": "1b6d0918fafb10def648f2cf4aa236745df81827004db0615abdf1e2d542594a",
+    "data/phase5/teacher_targets/p5-train-p1-77c5bb57a408/summary.json": "5d247b6deb4efcc391509254a4ae37c41211a49daa29739da057aef800679d41",
+    "data/phase5/teacher_targets/p5-train-p1-042ed95ebd8e/targets.pt": "dd69617937f047282d7ff02ca47b384964e352020409603ab2bfb355b40c3ff8",
+    "data/phase5/teacher_targets/p5-train-p1-042ed95ebd8e/summary.json": "d137e54a07611521c22e852dc326e7773f17b3871d8279efc52edf0b2c82d4d7",
+    "data/phase5/teacher_targets/p5-train-p1-3b3ca527b264/targets.pt": "8f72533993e83eee97d0931c3204cb0f094f5cd72029314f005c046353a74e13",
+    "data/phase5/teacher_targets/p5-train-p1-3b3ca527b264/summary.json": "014fd3925ee3ea1fa454650cd7bb62db649f4eb3655b14b9279c62efe3ba5832",
+    "data/phase5/teacher_targets/p5-train-p1-c12b5a530f1b/targets.pt": "564bf11ef0ba2218835e1f5a24e89db30428c08e645e2660a12f491878c21b59",
+    "data/phase5/teacher_targets/p5-train-p1-c12b5a530f1b/summary.json": "2a90dce65caa0519d7fd1c9bb8e5f051b796d2631350af6e6df2d86b8a131768",
+    "data/phase5/teacher_targets/p5-train-p1-893d33baab92/targets.pt": "8a0b5847b184d0d9b03617d2d592029072204387bda004029ea12f57fcb4fc8a",
+    "data/phase5/teacher_targets/p5-train-p1-893d33baab92/summary.json": "32f4131ab7a482894d970912777d48d5099c7b979fb066c65dbabdf477a384e9",
+    "data/phase5/teacher_targets/p5-train-p1-baf6386f5063/targets.pt": "9479884273c6d4ecaf339327f04589ca556692c84760bfd5217d6f54debbb166",
+    "data/phase5/teacher_targets/p5-train-p1-baf6386f5063/summary.json": "1d141a5aa782387bf532ea5541a118db5698cb54a5b4ac81f872294c55fb8a78",
+    "data/phase5/teacher_targets/p5-train-p1-cae4a5db0004/targets.pt": "72da8205d22778d32bf8d610612aa2486ea3a711e9f42148c6e11056b5af61cf",
+    "data/phase5/teacher_targets/p5-train-p1-cae4a5db0004/summary.json": "b6262adffa178cf6eb01efbe26ec74f06b2009c762e3a39fdbff8fbb8f975337",
+    "data/phase5/teacher_targets/p5-train-p1-971106134937/targets.pt": "fecec8c0c3151220e22a62e012ece3e06a0ca6f5d50fa0c696d689d4bd5eb6ef",
+    "data/phase5/teacher_targets/p5-train-p1-971106134937/summary.json": "599b29dde1a26ead18aa8c86d2664a379946ae14bb772170fd9595178d5174d5",
+    "data/phase5/teacher_targets/p5-train-p1-f36dcf9a11b1/targets.pt": "8c29f50a288c70cb44f13442c95dc74e3e66397da91360f3f17ae28d6eca248d",
+    "data/phase5/teacher_targets/p5-train-p1-f36dcf9a11b1/summary.json": "2579c9eb246da2da21bfcfdc21d898033c88ee83f44efb731900ab8c94407e33",
+    "data/phase5/teacher_targets/p5-train-p1-ed028a9f5ea3/targets.pt": "9051800baad10d1aac370b31308ee80f298692a0ab87df385fce24ac2499179b",
+    "data/phase5/teacher_targets/p5-train-p1-ed028a9f5ea3/summary.json": "164b3fbeb2560b370ed4d58ee06da1390689692865a3d51457fd414d485becf2",
+    "data/phase5/teacher_targets/p5-train-p1-ae66fbad2783/targets.pt": "d828f9bfc125638a29fd31778cc2f10ddfa5fa3d7eaeddfd89b75ac32243ca60",
+    "data/phase5/teacher_targets/p5-train-p1-ae66fbad2783/summary.json": "2c92c10125234d79e55941a3262e41dba688027e320c05b964af7638d772c2de",
+    "data/phase5/teacher_targets/p5-train-p1-23855cc68f20/targets.pt": "d60e7e5072a90089b930df822fe45a85191ccc5ed6887d9e2162da1cddd8385b",
+    "data/phase5/teacher_targets/p5-train-p1-23855cc68f20/summary.json": "238158ad7e153a6dc6bbed66fb17f893d54eed9bd3841d1fe504a0ec766fbf15",
+    "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/targets.pt": "082fd02c3055f8ecd59282de8510fae6e167df4f9c2c485781e1966390184658",
+    "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/summary.json": "6a3c298afe1c05e298644895ee00c835fdecd3ed38f89e382862b13155da7064",
+    "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/targets.pt": "095303c8aec61ee0a617d42b6562ad28081775deb9b3c3637e5bf1f3ae2b3455",
+    "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/summary.json": "2530a147624002aa16e55c48d7d2e13a16367453a54d214c5075b7c7327cd892",
+    "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/targets.pt": "10b44f5920d6d0dd2385361b68940c1577305d216ce04b0f8a116487902cfb48",
+    "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/summary.json": "f48556d9a0ee57ff81d6294ba1421c5648e42635256ea692ff2564878aa754ac",
+    "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/targets.pt": "eebe66fd30f665c10f0423451c3d7571edef5250c3fffa0136c5888df474bfe2",
+    "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/summary.json": "f2dbf8e3677b1f3e5632d4246dae570d9ca06b521d37c603245af285770ae41f",
+    "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/targets.pt": "8a8fda3dddf58c4329fe6bbfa2da2f6a35856c94626690b72c060ff323b98e64",
+    "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/summary.json": "58d03796676e8c3aaf6bd911cb9d338799810df292553ac0b1b00fb9bc15cc59",
+    "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/targets.pt": "be4bfc9528c131f5da574166f8a670d3ecfd96b77e9266d4a453dc35a84cbb8f",
+    "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/summary.json": "275b081221f9ede4f05df69fdcaa8fe66d530418ec27cfdd439b75f5f614f30d",
+    "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/targets.pt": "db04deb488106852a91517f2646b28e1ac7a5684ccb4efb14aef24fa2c4cb41b",
+    "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/summary.json": "f76078e0ef3bdd53478651f0db2aeff9607b772d1b1b01f01e4ade33ddb4716d",
+    "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/targets.pt": "8e813f5b15dabb2ea3e7118a1cb57d901416276b3a74c3f6e0d52ec3dc4ab613",
+    "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/summary.json": "50537cfdd894581f461a6ddb929bb2a354e987d30dd5b53a08c5cebd3d839533",
+    "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/targets.pt": "02800f47039ec1704c1ede2213f0968f67216e986e0cc273b2851b468a2b0ba2",
+    "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/summary.json": "2d3f1b7dba6135f93ee97ff7cca44b5f32f5647c92182bed2913e46918021142",
+    "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/targets.pt": "cf470d8de8627386d197f4a7826c62ee07f1a68d6db31754f24d1369469d3fc7",
+    "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/summary.json": "76c9f1ff487b50e97b1fdb3c347781e6fd3c68253fe6b8441d3a4ec0b198ea96"
+  },
+  "phase5_fitting_request_key": "7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618",
+  "teacher": {
+    "model_repo": "Qwen/Qwen-Image-2.1",
+    "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+    "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+    "num_teacher_blocks": 32,
+    "hidden_dim": 4096,
+    "dtype": "bfloat16",
+    "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+    "scheduler_config": {
+      "num_train_timesteps": 1000,
+      "shift": 1.0,
+      "use_dynamic_shifting": true,
+      "base_shift": 0.5,
+      "max_shift": 0.9,
+      "base_image_seq_len": 256,
+      "max_image_seq_len": 8192,
+      "invert_sigmas": false,
+      "shift_terminal": 0.02,
+      "use_karras_sigmas": false,
+      "use_exponential_sigmas": false,
+      "use_beta_sigmas": false,
+      "time_shift_type": "exponential",
+      "stochastic_sampling": false,
+      "_class_name": "FlowMatchEulerDiscreteScheduler",
+      "_diffusers_version": "0.37.0.dev0"
+    },
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "runtime": {
+      "version": "phase3-modal-preflight-v1",
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_layers": 32,
+      "packages": [
+        "torch==2.14.0",
+        "torchvision==0.29.0",
+        "transformers==5.17.0",
+        "accelerate==1.15.0",
+        "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+        "pillow"
+      ],
+      "python_version": "3.13",
+      "gpu_requested": "H100!",
+      "weights_volume": "nihonga-hf-cache",
+      "results_volume": "nihonga-phase3-artifacts"
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "single_bridge_block_02",
+      "removed_teacher_slots": [
+        2
+      ],
+      "teacher_blocks": 32,
+      "surviving_transformer_blocks": 31,
+      "bridge_count": 1,
+      "original_slot_count": 32,
+      "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_02_selected.pt",
+      "checkpoint_sha256": "dc64cd6a2c825f7c4c2804ef69a5595ff8e6012466452043d424d0f0e96b15de",
+      "selected_update": 500,
+      "bridge_parameters": 2097152,
+      "surviving_hidden_alignment": [
+        {
+          "teacher_slot": 0,
+          "student_slot": 0
+        },
+        {
+          "teacher_slot": 1,
+          "student_slot": 1
+        },
+        {
+          "teacher_slot": 3,
+          "student_slot": 3
+        },
+        {
+          "teacher_slot": 4,
+          "student_slot": 4
+        },
+        {
+          "teacher_slot": 5,
+          "student_slot": 5
+        },
+        {
+          "teacher_slot": 6,
+          "student_slot": 6
+        },
+        {
+          "teacher_slot": 7,
+          "student_slot": 7
+        },
+        {
+          "teacher_slot": 8,
+          "student_slot": 8
+        },
+        {
+          "teacher_slot": 9,
+          "student_slot": 9
+        },
+        {
+          "teacher_slot": 10,
+          "student_slot": 10
+        },
+        {
+          "teacher_slot": 11,
+          "student_slot": 11
+        },
+        {
+          "teacher_slot": 12,
+          "student_slot": 12
+        },
+        {
+          "teacher_slot": 13,
+          "student_slot": 13
+        },
+        {
+          "teacher_slot": 14,
+          "student_slot": 14
+        },
+        {
+          "teacher_slot": 15,
+          "student_slot": 15
+        },
+        {
+          "teacher_slot": 16,
+          "student_slot": 16
+        },
+        {
+          "teacher_slot": 17,
+          "student_slot": 17
+        },
+        {
+          "teacher_slot": 18,
+          "student_slot": 18
+        },
+        {
+          "teacher_slot": 19,
+          "student_slot": 19
+        },
+        {
+          "teacher_slot": 20,
+          "student_slot": 20
+        },
+        {
+          "teacher_slot": 21,
+          "student_slot": 21
+        },
+        {
+          "teacher_slot": 22,
+          "student_slot": 22
+        },
+        {
+          "teacher_slot": 23,
+          "student_slot": 23
+        },
+        {
+          "teacher_slot": 24,
+          "student_slot": 24
+        },
+        {
+          "teacher_slot": 25,
+          "student_slot": 25
+        },
+        {
+          "teacher_slot": 26,
+          "student_slot": 26
+        },
+        {
+          "teacher_slot": 27,
+          "student_slot": 27
+        },
+        {
+          "teacher_slot": 28,
+          "student_slot": 28
+        },
+        {
+          "teacher_slot": 29,
+          "student_slot": 29
+        },
+        {
+          "teacher_slot": 30,
+          "student_slot": 30
+        },
+        {
+          "teacher_slot": 31,
+          "student_slot": 31
+        }
+      ],
+      "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+    },
+    {
+      "candidate_id": "single_bridge_block_03",
+      "removed_teacher_slots": [
+        3
+      ],
+      "teacher_blocks": 32,
+      "surviving_transformer_blocks": 31,
+      "bridge_count": 1,
+      "original_slot_count": 32,
+      "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_03_selected.pt",
+      "checkpoint_sha256": "1f7c9314063e87ae32624bcaafaf919733d926e1f0340ab35c00d0690340f637",
+      "selected_update": 300,
+      "bridge_parameters": 2097152,
+      "surviving_hidden_alignment": [
+        {
+          "teacher_slot": 0,
+          "student_slot": 0
+        },
+        {
+          "teacher_slot": 1,
+          "student_slot": 1
+        },
+        {
+          "teacher_slot": 2,
+          "student_slot": 2
+        },
+        {
+          "teacher_slot": 4,
+          "student_slot": 4
+        },
+        {
+          "teacher_slot": 5,
+          "student_slot": 5
+        },
+        {
+          "teacher_slot": 6,
+          "student_slot": 6
+        },
+        {
+          "teacher_slot": 7,
+          "student_slot": 7
+        },
+        {
+          "teacher_slot": 8,
+          "student_slot": 8
+        },
+        {
+          "teacher_slot": 9,
+          "student_slot": 9
+        },
+        {
+          "teacher_slot": 10,
+          "student_slot": 10
+        },
+        {
+          "teacher_slot": 11,
+          "student_slot": 11
+        },
+        {
+          "teacher_slot": 12,
+          "student_slot": 12
+        },
+        {
+          "teacher_slot": 13,
+          "student_slot": 13
+        },
+        {
+          "teacher_slot": 14,
+          "student_slot": 14
+        },
+        {
+          "teacher_slot": 15,
+          "student_slot": 15
+        },
+        {
+          "teacher_slot": 16,
+          "student_slot": 16
+        },
+        {
+          "teacher_slot": 17,
+          "student_slot": 17
+        },
+        {
+          "teacher_slot": 18,
+          "student_slot": 18
+        },
+        {
+          "teacher_slot": 19,
+          "student_slot": 19
+        },
+        {
+          "teacher_slot": 20,
+          "student_slot": 20
+        },
+        {
+          "teacher_slot": 21,
+          "student_slot": 21
+        },
+        {
+          "teacher_slot": 22,
+          "student_slot": 22
+        },
+        {
+          "teacher_slot": 23,
+          "student_slot": 23
+        },
+        {
+          "teacher_slot": 24,
+          "student_slot": 24
+        },
+        {
+          "teacher_slot": 25,
+          "student_slot": 25
+        },
+        {
+          "teacher_slot": 26,
+          "student_slot": 26
+        },
+        {
+          "teacher_slot": 27,
+          "student_slot": 27
+        },
+        {
+          "teacher_slot": 28,
+          "student_slot": 28
+        },
+        {
+          "teacher_slot": 29,
+          "student_slot": 29
+        },
+        {
+          "teacher_slot": 30,
+          "student_slot": 30
+        },
+        {
+          "teacher_slot": 31,
+          "student_slot": 31
+        }
+      ],
+      "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+    },
+    {
+      "candidate_id": "single_bridge_block_04",
+      "removed_teacher_slots": [
+        4
+      ],
+      "teacher_blocks": 32,
+      "surviving_transformer_blocks": 31,
+      "bridge_count": 1,
+      "original_slot_count": 32,
+      "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_04_selected.pt",
+      "checkpoint_sha256": "907a04d05a5178f3d3aa514bdfa339dbe5174b55a230a4c9ce1c446205cba9da",
+      "selected_update": 400,
+      "bridge_parameters": 2097152,
+      "surviving_hidden_alignment": [
+        {
+          "teacher_slot": 0,
+          "student_slot": 0
+        },
+        {
+          "teacher_slot": 1,
+          "student_slot": 1
+        },
+        {
+          "teacher_slot": 2,
+          "student_slot": 2
+        },
+        {
+          "teacher_slot": 3,
+          "student_slot": 3
+        },
+        {
+          "teacher_slot": 5,
+          "student_slot": 5
+        },
+        {
+          "teacher_slot": 6,
+          "student_slot": 6
+        },
+        {
+          "teacher_slot": 7,
+          "student_slot": 7
+        },
+        {
+          "teacher_slot": 8,
+          "student_slot": 8
+        },
+        {
+          "teacher_slot": 9,
+          "student_slot": 9
+        },
+        {
+          "teacher_slot": 10,
+          "student_slot": 10
+        },
+        {
+          "teacher_slot": 11,
+          "student_slot": 11
+        },
+        {
+          "teacher_slot": 12,
+          "student_slot": 12
+        },
+        {
+          "teacher_slot": 13,
+          "student_slot": 13
+        },
+        {
+          "teacher_slot": 14,
+          "student_slot": 14
+        },
+        {
+          "teacher_slot": 15,
+          "student_slot": 15
+        },
+        {
+          "teacher_slot": 16,
+          "student_slot": 16
+        },
+        {
+          "teacher_slot": 17,
+          "student_slot": 17
+        },
+        {
+          "teacher_slot": 18,
+          "student_slot": 18
+        },
+        {
+          "teacher_slot": 19,
+          "student_slot": 19
+        },
+        {
+          "teacher_slot": 20,
+          "student_slot": 20
+        },
+        {
+          "teacher_slot": 21,
+          "student_slot": 21
+        },
+        {
+          "teacher_slot": 22,
+          "student_slot": 22
+        },
+        {
+          "teacher_slot": 23,
+          "student_slot": 23
+        },
+        {
+          "teacher_slot": 24,
+          "student_slot": 24
+        },
+        {
+          "teacher_slot": 25,
+          "student_slot": 25
+        },
+        {
+          "teacher_slot": 26,
+          "student_slot": 26
+        },
+        {
+          "teacher_slot": 27,
+          "student_slot": 27
+        },
+        {
+          "teacher_slot": 28,
+          "student_slot": 28
+        },
+        {
+          "teacher_slot": 29,
+          "student_slot": 29
+        },
+        {
+          "teacher_slot": 30,
+          "student_slot": 30
+        },
+        {
+          "teacher_slot": 31,
+          "student_slot": 31
+        }
+      ],
+      "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+    },
+    {
+      "candidate_id": "single_bridge_block_05",
+      "removed_teacher_slots": [
+        5
+      ],
+      "teacher_blocks": 32,
+      "surviving_transformer_blocks": 31,
+      "bridge_count": 1,
+      "original_slot_count": 32,
+      "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_05_selected.pt",
+      "checkpoint_sha256": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+      "selected_update": 300,
+      "bridge_parameters": 2097152,
+      "surviving_hidden_alignment": [
+        {
+          "teacher_slot": 0,
+          "student_slot": 0
+        },
+        {
+          "teacher_slot": 1,
+          "student_slot": 1
+        },
+        {
+          "teacher_slot": 2,
+          "student_slot": 2
+        },
+        {
+          "teacher_slot": 3,
+          "student_slot": 3
+        },
+        {
+          "teacher_slot": 4,
+          "student_slot": 4
+        },
+        {
+          "teacher_slot": 6,
+          "student_slot": 6
+        },
+        {
+          "teacher_slot": 7,
+          "student_slot": 7
+        },
+        {
+          "teacher_slot": 8,
+          "student_slot": 8
+        },
+        {
+          "teacher_slot": 9,
+          "student_slot": 9
+        },
+        {
+          "teacher_slot": 10,
+          "student_slot": 10
+        },
+        {
+          "teacher_slot": 11,
+          "student_slot": 11
+        },
+        {
+          "teacher_slot": 12,
+          "student_slot": 12
+        },
+        {
+          "teacher_slot": 13,
+          "student_slot": 13
+        },
+        {
+          "teacher_slot": 14,
+          "student_slot": 14
+        },
+        {
+          "teacher_slot": 15,
+          "student_slot": 15
+        },
+        {
+          "teacher_slot": 16,
+          "student_slot": 16
+        },
+        {
+          "teacher_slot": 17,
+          "student_slot": 17
+        },
+        {
+          "teacher_slot": 18,
+          "student_slot": 18
+        },
+        {
+          "teacher_slot": 19,
+          "student_slot": 19
+        },
+        {
+          "teacher_slot": 20,
+          "student_slot": 20
+        },
+        {
+          "teacher_slot": 21,
+          "student_slot": 21
+        },
+        {
+          "teacher_slot": 22,
+          "student_slot": 22
+        },
+        {
+          "teacher_slot": 23,
+          "student_slot": 23
+        },
+        {
+          "teacher_slot": 24,
+          "student_slot": 24
+        },
+        {
+          "teacher_slot": 25,
+          "student_slot": 25
+        },
+        {
+          "teacher_slot": 26,
+          "student_slot": 26
+        },
+        {
+          "teacher_slot": 27,
+          "student_slot": 27
+        },
+        {
+          "teacher_slot": 28,
+          "student_slot": 28
+        },
+        {
+          "teacher_slot": 29,
+          "student_slot": 29
+        },
+        {
+          "teacher_slot": 30,
+          "student_slot": 30
+        },
+        {
+          "teacher_slot": 31,
+          "student_slot": 31
+        }
+      ],
+      "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+    }
+  ],
+  "target_index": {
+    "request_key": "43786ce3f07042425ea9a1a19306bb63ca2ff87276bfb1181db07ab60de84b18",
+    "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+    "train": [
+      {
+        "capture_id": "p5-train-p1-2eea6009c17f",
+        "source_id": "p1-2eea6009c17f",
+        "dimension": "alignment",
+        "request_key": "3c45b6ad7faa141882c143b99bb990d1a1dde362efb111ded59e55c42cefde75",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/targets.pt",
+        "tensor_sha256": "4c6a52d5b7ff761afca4e786bef720a9efc76083bafa03f0e9945705f491eed7",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3232
+      },
+      {
+        "capture_id": "p5-train-p1-5342860a6667",
+        "source_id": "p1-5342860a6667",
+        "dimension": "alignment",
+        "request_key": "12467fd75a0f61bce85197b0139c4204cef62e1573a4495d896a4705d5d43165",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-5342860a6667/targets.pt",
+        "tensor_sha256": "dba3372ceb5fb4b7910286dc989ce888d0b8c5b2fc7465d1826c37539db0a2fe",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-5342860a6667/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3196
+      },
+      {
+        "capture_id": "p5-train-p1-fd07a4ad1fcf",
+        "source_id": "p1-fd07a4ad1fcf",
+        "dimension": "alignment",
+        "request_key": "4ed1bea919e8142611b24c5c26d9311c74aa69fd9fe265aa7375964f01201eb3",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-fd07a4ad1fcf/targets.pt",
+        "tensor_sha256": "ed1c06d7e344d74b2f93a38e78097187bcc61a15d7857c6188a7667433d5f2d4",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-fd07a4ad1fcf/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3200
+      },
+      {
+        "capture_id": "p5-train-p1-850fffd166fb",
+        "source_id": "p1-850fffd166fb",
+        "dimension": "alignment",
+        "request_key": "6d5f84af1523087aae4ed320074e97679c7eb49bfd375d105d7aab32ad365ae4",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-850fffd166fb/targets.pt",
+        "tensor_sha256": "7c9f7d6f150baf6130faf8ae62b1a6153a17a2da14a820af3ff9667d2498a32b",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-850fffd166fb/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3204
+      },
+      {
+        "capture_id": "p5-train-p1-77ceedf5feb4",
+        "source_id": "p1-77ceedf5feb4",
+        "dimension": "visual_quality",
+        "request_key": "75ce9472b43cc44b5abd152f53053bdd8c997df6e478f1ab53b5030c7ce04918",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-77ceedf5feb4/targets.pt",
+        "tensor_sha256": "614f1563f62d7c582eca99f21de4eeb6413a6aa6980ff9d4e940d948ca90faa1",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-77ceedf5feb4/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3216
+      },
+      {
+        "capture_id": "p5-train-p1-b0a7cd44f474",
+        "source_id": "p1-b0a7cd44f474",
+        "dimension": "visual_quality",
+        "request_key": "c265eb6f6f66ccb3601f0b120edfe739d95b59bfd53e1c94306a8ac1ecef6b23",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-b0a7cd44f474/targets.pt",
+        "tensor_sha256": "bae1920fbfb321d47e4d377c066ee1eff4022cbeb0b3eaebbaf21a9b57481cbc",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-b0a7cd44f474/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3200
+      },
+      {
+        "capture_id": "p5-train-p1-ebb93e49db7a",
+        "source_id": "p1-ebb93e49db7a",
+        "dimension": "visual_quality",
+        "request_key": "3217e5eda5e15138b7d60209061bda5743de30060fa93be11b63f4807da411cf",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-ebb93e49db7a/targets.pt",
+        "tensor_sha256": "a704bbe47322020e1cac68e7c6cb3f379ea5dfa74d538b0e78e748812766554a",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-ebb93e49db7a/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3236
+      },
+      {
+        "capture_id": "p5-train-p1-86b8d8da8b4e",
+        "source_id": "p1-86b8d8da8b4e",
+        "dimension": "visual_quality",
+        "request_key": "1c459d15a2fdb92e5255a89712147c72c315b3e261fde5d0040b6e5563daae96",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-86b8d8da8b4e/targets.pt",
+        "tensor_sha256": "88ba829560ab65ad363c2e298169380c9575a564055e9cf7c22bc404bbc82f55",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-86b8d8da8b4e/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3208
+      },
+      {
+        "capture_id": "p5-train-p1-77c5bb57a408",
+        "source_id": "p1-77c5bb57a408",
+        "dimension": "aesthetics",
+        "request_key": "4abe049c5fc11f0140825ecef0deb52ea5703246a96ef9798c59dc9e3e593dd3",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-77c5bb57a408/targets.pt",
+        "tensor_sha256": "1b6d0918fafb10def648f2cf4aa236745df81827004db0615abdf1e2d542594a",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-77c5bb57a408/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3192
+      },
+      {
+        "capture_id": "p5-train-p1-042ed95ebd8e",
+        "source_id": "p1-042ed95ebd8e",
+        "dimension": "aesthetics",
+        "request_key": "1490c4467d9c45386adad6e4677ca171fdc54d7def205ce0ff3952ed3f8a5d90",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-042ed95ebd8e/targets.pt",
+        "tensor_sha256": "dd69617937f047282d7ff02ca47b384964e352020409603ab2bfb355b40c3ff8",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-042ed95ebd8e/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3188
+      },
+      {
+        "capture_id": "p5-train-p1-3b3ca527b264",
+        "source_id": "p1-3b3ca527b264",
+        "dimension": "aesthetics",
+        "request_key": "f18f2afb554f5fef9179c3b170531881a266d622d5ee255642adcb6815719b84",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-3b3ca527b264/targets.pt",
+        "tensor_sha256": "8f72533993e83eee97d0931c3204cb0f094f5cd72029314f005c046353a74e13",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-3b3ca527b264/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3208
+      },
+      {
+        "capture_id": "p5-train-p1-c12b5a530f1b",
+        "source_id": "p1-c12b5a530f1b",
+        "dimension": "aesthetics",
+        "request_key": "df717a6f9b38282b8c8bf51b7f915c53a3f653fd3d2b59847b0268384c9f9b65",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-c12b5a530f1b/targets.pt",
+        "tensor_sha256": "564bf11ef0ba2218835e1f5a24e89db30428c08e645e2660a12f491878c21b59",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-c12b5a530f1b/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3264
+      },
+      {
+        "capture_id": "p5-train-p1-893d33baab92",
+        "source_id": "p1-893d33baab92",
+        "dimension": "real_world",
+        "request_key": "f6571e5f12f115a5e513fd93d7cd855e20af9b4c890646c79d5152539e7cb544",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-893d33baab92/targets.pt",
+        "tensor_sha256": "8a0b5847b184d0d9b03617d2d592029072204387bda004029ea12f57fcb4fc8a",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-893d33baab92/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3188
+      },
+      {
+        "capture_id": "p5-train-p1-baf6386f5063",
+        "source_id": "p1-baf6386f5063",
+        "dimension": "real_world",
+        "request_key": "b991f2f0dcd6a1f1afca879cdfce66c03531adf1c6aacb522501ebe52f73b3fc",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-baf6386f5063/targets.pt",
+        "tensor_sha256": "9479884273c6d4ecaf339327f04589ca556692c84760bfd5217d6f54debbb166",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-baf6386f5063/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3228
+      },
+      {
+        "capture_id": "p5-train-p1-cae4a5db0004",
+        "source_id": "p1-cae4a5db0004",
+        "dimension": "real_world",
+        "request_key": "a03c43acbf80fbb33a88023b28ebcb4df1b694be853b5f0e68ac48d3a6f20925",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-cae4a5db0004/targets.pt",
+        "tensor_sha256": "72da8205d22778d32bf8d610612aa2486ea3a711e9f42148c6e11056b5af61cf",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-cae4a5db0004/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3216
+      },
+      {
+        "capture_id": "p5-train-p1-971106134937",
+        "source_id": "p1-971106134937",
+        "dimension": "real_world",
+        "request_key": "58ab5a05a78f2759f2e25a2f506b06c5048c7f78056723198f40d81008a39c62",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-971106134937/targets.pt",
+        "tensor_sha256": "fecec8c0c3151220e22a62e012ece3e06a0ca6f5d50fa0c696d689d4bd5eb6ef",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-971106134937/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3208
+      },
+      {
+        "capture_id": "p5-train-p1-f36dcf9a11b1",
+        "source_id": "p1-f36dcf9a11b1",
+        "dimension": "creative",
+        "request_key": "fff24430aec84dbe63d996876fbd6f6864213695c257be55249f9a51ef02fc64",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-f36dcf9a11b1/targets.pt",
+        "tensor_sha256": "8c29f50a288c70cb44f13442c95dc74e3e66397da91360f3f17ae28d6eca248d",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-f36dcf9a11b1/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3172
+      },
+      {
+        "capture_id": "p5-train-p1-ed028a9f5ea3",
+        "source_id": "p1-ed028a9f5ea3",
+        "dimension": "creative",
+        "request_key": "2d6b817e0c9c49392625fa311b446bd8468a6202ccb04e09be9a308696310377",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-ed028a9f5ea3/targets.pt",
+        "tensor_sha256": "9051800baad10d1aac370b31308ee80f298692a0ab87df385fce24ac2499179b",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-ed028a9f5ea3/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3168
+      },
+      {
+        "capture_id": "p5-train-p1-ae66fbad2783",
+        "source_id": "p1-ae66fbad2783",
+        "dimension": "creative",
+        "request_key": "98ea1f1b37ceff3fb898935696d960e5283f7b4403654c561ff084a0d88dc6a8",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-ae66fbad2783/targets.pt",
+        "tensor_sha256": "d828f9bfc125638a29fd31778cc2f10ddfa5fa3d7eaeddfd89b75ac32243ca60",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-ae66fbad2783/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3256
+      },
+      {
+        "capture_id": "p5-train-p1-23855cc68f20",
+        "source_id": "p1-23855cc68f20",
+        "dimension": "creative",
+        "request_key": "708047681db5514ab73b255ce05392c771becdc71842c3a202425ff93418f62f",
+        "tensor_path": "data/phase5/teacher_targets/p5-train-p1-23855cc68f20/targets.pt",
+        "tensor_sha256": "d60e7e5072a90089b930df822fe45a85191ccc5ed6887d9e2162da1cddd8385b",
+        "report_path": "data/phase5/teacher_targets/p5-train-p1-23855cc68f20/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3300
+      }
+    ],
+    "validation": [
+      {
+        "capture_id": "p5-validation-p1-4a84d737d801",
+        "source_id": "p1-4a84d737d801",
+        "dimension": "alignment",
+        "request_key": "5e1e03061e0f2d30a8124153973bce281b539df12a3034bd7dcab7636fe0bcfb",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/targets.pt",
+        "tensor_sha256": "082fd02c3055f8ecd59282de8510fae6e167df4f9c2c485781e1966390184658",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3136
+      },
+      {
+        "capture_id": "p5-validation-p1-5c3d279f55b0",
+        "source_id": "p1-5c3d279f55b0",
+        "dimension": "alignment",
+        "request_key": "f8a8ced6aedf372e42f96fab3e246cac3ce30f11056447d9f866af72b62c062d",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/targets.pt",
+        "tensor_sha256": "095303c8aec61ee0a617d42b6562ad28081775deb9b3c3637e5bf1f3ae2b3455",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3176
+      },
+      {
+        "capture_id": "p5-validation-p1-df869d4d578d",
+        "source_id": "p1-df869d4d578d",
+        "dimension": "visual_quality",
+        "request_key": "c497528b82b1a96a1f80a82f57637365a6b96fcb38994a72cf97d35aaa95fd04",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/targets.pt",
+        "tensor_sha256": "10b44f5920d6d0dd2385361b68940c1577305d216ce04b0f8a116487902cfb48",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3164
+      },
+      {
+        "capture_id": "p5-validation-p1-36fe86287034",
+        "source_id": "p1-36fe86287034",
+        "dimension": "visual_quality",
+        "request_key": "98e8ea6832d058ae2472d2c7c5101a3dbf3c5822d2ddfe3dff7dac529aa04a61",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/targets.pt",
+        "tensor_sha256": "eebe66fd30f665c10f0423451c3d7571edef5250c3fffa0136c5888df474bfe2",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3184
+      },
+      {
+        "capture_id": "p5-validation-p1-a6227b574def",
+        "source_id": "p1-a6227b574def",
+        "dimension": "aesthetics",
+        "request_key": "945f11d70a8af0d8b024ed7fa620875f23829bcc2f1abdba7f840f2ffd6cf7aa",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/targets.pt",
+        "tensor_sha256": "8a8fda3dddf58c4329fe6bbfa2da2f6a35856c94626690b72c060ff323b98e64",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3168
+      },
+      {
+        "capture_id": "p5-validation-p1-8d56f0bbd4df",
+        "source_id": "p1-8d56f0bbd4df",
+        "dimension": "aesthetics",
+        "request_key": "904e27969f6053342998a969e8479467c7f5d9aa927c857d43ebbb6c353e52a9",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/targets.pt",
+        "tensor_sha256": "be4bfc9528c131f5da574166f8a670d3ecfd96b77e9266d4a453dc35a84cbb8f",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3236
+      },
+      {
+        "capture_id": "p5-validation-p1-b5d1aaa3235d",
+        "source_id": "p1-b5d1aaa3235d",
+        "dimension": "real_world",
+        "request_key": "75b65369af2d7ff02af4c6edb0170c00cde328d86263cf191744aaf5752ac4cf",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/targets.pt",
+        "tensor_sha256": "db04deb488106852a91517f2646b28e1ac7a5684ccb4efb14aef24fa2c4cb41b",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3172
+      },
+      {
+        "capture_id": "p5-validation-p1-79652b776ffc",
+        "source_id": "p1-79652b776ffc",
+        "dimension": "real_world",
+        "request_key": "fe01005662ed77c4d1cac54628c2b6af53f7c5d3f7fb78d857d77fe056b0cf25",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/targets.pt",
+        "tensor_sha256": "8e813f5b15dabb2ea3e7118a1cb57d901416276b3a74c3f6e0d52ec3dc4ab613",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3232
+      },
+      {
+        "capture_id": "p5-validation-p1-17fb78d1c4bf",
+        "source_id": "p1-17fb78d1c4bf",
+        "dimension": "creative",
+        "request_key": "056cc4878e4583d2b53d250954f7f6bb7e90cd1fc9da2b07179e225284880314",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/targets.pt",
+        "tensor_sha256": "02800f47039ec1704c1ede2213f0968f67216e986e0cc273b2851b468a2b0ba2",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3204
+      },
+      {
+        "capture_id": "p5-validation-p1-81fc1d548f81",
+        "source_id": "p1-81fc1d548f81",
+        "dimension": "creative",
+        "request_key": "25265886ff2427ac189912dc4626818d452aad3b587ddfe72ac303c82fe05ccf",
+        "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/targets.pt",
+        "tensor_sha256": "cf470d8de8627386d197f4a7826c62ee07f1a68d6db31754f24d1369469d3fc7",
+        "report_path": "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/summary.json",
+        "records": 12,
+        "sampled_token_pairs": 3264
+      }
+    ],
+    "policy": "TRAIN for gradient updates; VALIDATION only for diagnostics and selection"
+  },
+  "candidate_policy": "independent single-block students; no joint insertion and no winner selected",
+  "input_policy": "teacher and student receive identical saved prompt conditioning, latent and measured timestep",
+  "data_policy": "TRAIN only for gradients; VALIDATION for diagnostics/selection; no internal test or benchmark optimization",
+  "readiness": "handoff only; assembled BF16 student replay and gradient/cache compatibility are untested",
+  "healing_losses_from_plan": {
+    "output_weight": 1.0,
+    "hidden_weight": 0.1,
+    "optional_bridge_weight": 0.1,
+    "status": "starting suggestions; no training configuration selected"
+  },
+  "hidden_target_limit": "cached paired states cover candidate blocks only; surviving-block hidden supervision needs additional capture"
+}

@@ -1,0 +1,10 @@
+{
+  "version": "phase6-functional-cache-check-v1",
+  "status": "passed",
+  "source_sha256": "8ad79f201f2c643ac803a336ec6550c121b127dabb334ebedc883e13055186ee",
+  "maximum_absolute_difference": 0.0,
+  "prefix_input_gradient_norm": 0.4549865881281639,
+  "shared_cache_unchanged_after_backward": true,
+  "zero_adapter_exact_baseline": true,
+  "scope": "two-block CPU float64 cache/gradient equivalence and zero-adapter identity; real-model GPU check still required"
+}

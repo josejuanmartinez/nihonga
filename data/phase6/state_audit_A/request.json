@@ -1,0 +1,76 @@
+{
+  "request": {
+    "version": "phase6-loaded-tensor-state-audit-v1",
+    "audit_id": "A",
+    "handoff_manifest_sha256": "7d8d61b1db37482327065b0ba826197aa49e6ffc9d1c76c012cd1448554c7400",
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "record": {
+      "capture_id": "p5-train-p1-2eea6009c17f",
+      "source_id": "p1-2eea6009c17f",
+      "dimension": "alignment",
+      "request_key": "3c45b6ad7faa141882c143b99bb990d1a1dde362efb111ded59e55c42cefde75",
+      "tensor_path": "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/targets.pt",
+      "tensor_sha256": "4c6a52d5b7ff761afca4e786bef720a9efc76083bafa03f0e9945705f491eed7",
+      "report_path": "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/summary.json",
+      "records": 12,
+      "sampled_token_pairs": 3232
+    },
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "worker_source": "def audit_model_state(request, key):\n    import hashlib\n    import inspect\n    import json\n    import os\n    import platform\n    from pathlib import Path\n    import torch\n    from torch.nn.attention import sdpa_kernel, SDPBackend\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache\n\n    directory = Path('/phase3/phase6/state_audit') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n    if (directory / 'started.json').exists():\n        raise RuntimeError('Incomplete state audit; preserve instead of repeating.')\n    (directory / 'started.json').write_text(json.dumps({'request_key': key}))\n    (directory / 'request.json').write_text(json.dumps({'request': request, 'request_key': key}, indent=2))\n    results_volume.commit()\n    report = {'request_key': key, 'status': 'failed', 'teacher_calls': 0, 'student_calls': 0,\n              'optimizer_updates': 0, 'artifacts': [], 'state': {}, 'controls': [],\n              'process': {'pid': os.getpid(), 'modal_task_id': os.environ.get('MODAL_TASK_ID')}}\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def tensor_digest(value):\n        cpu = value.detach().cpu().contiguous()\n        return hashlib.sha256(memoryview(cpu.view(torch.uint8).numpy())).hexdigest()\n\n    def gpu(value):\n        if isinstance(value, torch.Tensor):\n            return value.to('cuda')\n        if isinstance(value, dict):\n            return {k: gpu(v) for k, v in value.items()}\n        if isinstance(value, (list, tuple)):\n            return type(value)(gpu(v) for v in value)\n        return value\n\n    def save(name, data):\n        path = directory / name\n        torch.save(data, path)\n        report['artifacts'].append({'name': name, 'sha256': digest(path), 'bytes': path.stat().st_size})\n\n    try:\n        torch.use_deterministic_algorithms(True)\n        torch.set_float32_matmul_precision('highest')\n        torch.backends.cuda.matmul.allow_tf32 = False\n        torch.backends.cudnn.allow_tf32 = False\n        torch.backends.cudnn.benchmark = False\n        torch.backends.cudnn.deterministic = True\n        torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = False\n        torch.backends.cuda.allow_fp16_bf16_reduction_math_sdp(False)\n        report['gpu'] = torch.cuda.get_device_name(0)\n        report['cpu'] = {'machine': platform.machine(), 'threads': torch.get_num_threads(),\n                         'cpuinfo': Path('/proc/cpuinfo').read_text().split('\\n\\n')[0]}\n        teacher = request['teacher']\n        pipe = QwenImage21Pipeline.from_pretrained(teacher['model_repo'], revision=teacher['model_revision'],\n            dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        model = pipe.transformer.eval()\n        for component in (model, pipe.text_encoder, pipe.vae):\n            component.requires_grad_(False)\n        if digest(Path(inspect.getfile(type(model)))) != request['transformer_source_sha256']:\n            raise RuntimeError('Source differs.')\n        constants = {}\n        for kind, values in (('parameter', model.named_parameters()), ('buffer', model.named_buffers())):\n            for name, value in values:\n                report['state'][name] = {'kind': kind, 'dtype': str(value.dtype), 'shape': list(value.shape),\n                    'stride': list(value.stride()), 'sha256': tensor_digest(value)}\n                if kind == 'buffer':\n                    constants[name] = value.detach().cpu().clone()\n        for axis, value in enumerate(model.pos_embed.freqs):\n            name = f'pos_embed.freqs.{axis}'\n            report['state'][name] = {'kind': 'unregistered_rope_table', 'dtype': str(value.dtype),\n                'shape': list(value.shape), 'stride': list(value.stride()), 'sha256': tensor_digest(value)}\n            constants[name] = value.detach().cpu().clone()\n        report['state_sha256'] = hashlib.sha256(json.dumps(report['state'], sort_keys=True).encode()).hexdigest()\n        save('constants.pt', {'request_key': key, 'constants': constants})\n        if request.get('previous_state'):\n            previous = request['previous_state']\n            report['state_differences'] = {name: {'previous': previous.get(name), 'current': value}\n                for name, value in report['state'].items() if previous.get(name) != value}\n        record = request['record']\n        path = Path('/phase3/phase5/capture') / record['request_key'] / 'targets.pt'\n        if digest(path) != record['tensor_sha256']:\n            raise RuntimeError('Input bundle differs.')\n        bundle = torch.load(path, weights_only=True, map_location='cpu')\n        cache = QwenImage21KVCache(32)\n        outputs = []\n        with torch.inference_mode(), model.cache_context('cond'), sdpa_kernel([SDPBackend.MATH]):\n            for stage in bundle['stages']:\n                kwargs = gpu({**bundle['shared_transformer_kwargs'], **stage['kwargs']})\n                kwargs['kv_cache'] = cache\n                pred = model(**kwargs)[0][:, -stage['target_image_tokens']:].detach().cpu().contiguous()\n                report['teacher_calls'] += 1\n                target = stage['teacher_velocity']\n                d = pred.float() - target.float()\n                report['controls'].append({'stage': stage['stage'], 'relative_l2_error': float(d.norm()/target.float().norm().clamp_min(1e-12)),\n                    'velocity_sha256': tensor_digest(pred)})\n                outputs.append({'stage': stage['stage'], 'velocity': pred})\n        save('velocities.pt', {'request_key': key, 'outputs': outputs})\n        report['status'] = 'audit_complete'\n    except Exception as exc:\n        report['error'] = f'{type(exc).__name__}: {exc}'\n    report_path.write_text(json.dumps(report, indent=2) + '\\n')\n    results_volume.commit()\n    return report\n",
+    "runtime_environment": {
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "previous_state": null,
+    "policy": "hash every loaded parameter, registered buffer and unregistered RoPE table; preserve actual constant tensors; three deterministic math teacher forwards; compare a second independent load before drawing conclusions"
+  },
+  "request_key": "413dc0f428829eec40d609453cfbfca5bc690a4f25bcbd4058c724890281b3ef"
+}

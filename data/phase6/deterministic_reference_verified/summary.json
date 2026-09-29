@@ -1,0 +1,102 @@
+{
+  "request_key": "8cb31f94dd62d42f19c26eb1a4791dd50f6e4f7f00c814d9cb345826ee3c6b39",
+  "status": "failed",
+  "mode": "verify",
+  "teacher_calls": 3,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "controls": [
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.006278480403125286,
+        "max_abs_error": 0.4365234375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.004721154924482107,
+        "max_abs_error": 0.21484375,
+        "exact_equal": false
+      },
+      "passed": false
+    },
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003715723752975464,
+        "max_abs_error": 0.03125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0037607806734740734,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "passed": false
+    },
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008260420523583889,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.007459064479917288,
+        "max_abs_error": 0.0703125,
+        "exact_equal": false
+      },
+      "passed": false
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p5-train-p1-2eea6009c17f.pt",
+      "sha256": "abb0ff1a639dbd2416b7c6a8c768f0b890f337cdf91aae7d6e4b5e8eac5b3183",
+      "bytes": 1575994
+    }
+  ],
+  "process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "faa92bb2060441c9acbccbbbdcc128d4",
+    "modal_task_id": "ta-01M3PB97G5DCRT9803XWWXAB7R"
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "cudnn_version": 92400,
+  "settings": {
+    "weights_dtype": "bfloat16",
+    "attention_backend": "SDPBackend.MATH",
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "bf16_reduced_precision_matmul_reduction": false,
+    "fp16_bf16_reduction_math_sdp": false,
+    "input_order": "original pipeline argument order; stage tensors copied inside inference mode",
+    "prefix_cache": "fresh teacher cache per prompt; populate at early; use at middle and late"
+  },
+  "reference_process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "613d8c36de054bdcb9d0684cc4e6f788",
+    "modal_task_id": "ta-01M3PAVXZV5XS0D0MHJ78F5TQR"
+  },
+  "error": "RuntimeError: Independent-process reference replay exceeds tolerance."
+}

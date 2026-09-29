@@ -866,8 +866,8 @@ We tick each step as we complete it (`- [ ]` → `- [x]`).
 - [ ] 2. Then we benchmark the original Qwen ([Phase 2](#phase-2--establish-the-original-baseline))
 - [ ] 3. We prune 60 → 50 layers ([Phase 3](#phase-3--identify-layers-to-remove))
 - [x] 4. We insert residual bottleneck bridges ([Phase 4](#phase-4--insert-bridge-modules)) — first independent slot-5 pilot verified: 31 transformer blocks + 1 bridge in 32 original slots; bridges remain untrained.
-- [ ] 5. We train the bridges only ([Phase 5](#phase-5--pretrain-the-bridges))
-- [ ] 6. We run full architecture healing ([Phase 6](#phase-6--architecture-healing), [Phase 7](#phase-7--healing-dataset-strategy))
+- [x] 5. We train the bridges only ([Phase 5](#phase-5--pretrain-the-bridges)) — pretraining pilot complete: four independent rank-256 candidates (blocks 2, 3, 4 and 5), 500 updates each on 20 TRAIN prompts; selected using 10 VALIDATION prompts, with validation objective reductions of 38–61%. Teacher targets, selected weights, training states and evaluations are saved locally and backed up remotely. Full-student behavior and image quality remain unverified.
+- [ ] 6. We run full architecture healing ([Phase 6](#phase-6--architecture-healing), [Phase 7](#phase-7--healing-dataset-strategy)) ? verified replay and bridge comparisons complete; two parameter-efficient healing pilots ran 120 updates each at learning rates 0.0001 and 0.00001. Neither beat the pretrained block-5 baseline (5.518% mean validation velocity error), so both select update 0. Full-weight healing and student image-quality/speed evaluation remain open.
 - [ ] 7. We benchmark ([Phase 8](#phase-8--evaluate-the-pruned-model))
 - [ ] 8. We expand the dataset toward 100k ([Phase 15](#phase-15--dataset-size-strategy))
 - [ ] 9. We try 50 → 40 layers ([Phase 18](#phase-18--progressive-architecture-reduction))

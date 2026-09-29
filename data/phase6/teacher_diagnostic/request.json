@@ -1,0 +1,81 @@
+{
+  "request": {
+    "version": "phase6-teacher-replay-diagnostic-v1",
+    "handoff_manifest_sha256": "7d8d61b1db37482327065b0ba826197aa49e6ffc9d1c76c012cd1448554c7400",
+    "failed_report_sha256": "d2f4a59344d26d467ef6d9c6473b6f2d4827a3eca2425a2defc1b9e54a90fccc",
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "record": {
+      "capture_id": "p5-validation-p1-4a84d737d801",
+      "source_id": "p1-4a84d737d801",
+      "dimension": "alignment",
+      "request_key": "5e1e03061e0f2d30a8124153973bce281b539df12a3034bd7dcab7636fe0bcfb",
+      "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/targets.pt",
+      "tensor_sha256": "082fd02c3055f8ecd59282de8510fae6e167df4f9c2c485781e1966390184658",
+      "report_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/summary.json",
+      "records": 12,
+      "sampled_token_pairs": 3136
+    },
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "worker_source": "def diagnose_teacher(request, key):\n    \"\"\"One independent diagnostic; preserve all outputs, including failed controls.\"\"\"\n    import hashlib\n    import importlib.metadata\n    import inspect\n    import json\n    import math\n    from pathlib import Path\n    import torch\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache\n\n    directory = Path('/phase3/phase6/teacher_diagnostic') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n    if (directory / 'started.json').exists():\n        raise RuntimeError('Incomplete diagnostic exists; inspect rather than repeat calls.')\n    (directory / 'started.json').write_text(json.dumps({'request_key': key}))\n    (directory / 'request.json').write_text(json.dumps({'request_key': key, 'request': request}, indent=2))\n    results_volume.commit()\n    report = {'request_key': key, 'status': 'failed', 'teacher_calls': 0,\n              'student_calls': 0, 'optimizer_updates': 0, 'velocity_metrics': [], 'pair_metrics': []}\n    tensors = {'request_key': key, 'velocities': [], 'sampled_pairs': [], 'buffers': {}}\n    hooks = []\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def gpu(value):\n        if isinstance(value, torch.Tensor):\n            return value.to('cuda')\n        if isinstance(value, dict):\n            return {k: gpu(v) for k, v in value.items()}\n        if isinstance(value, (tuple, list)):\n            return type(value)(gpu(v) for v in value)\n        return value\n\n    def metrics(pred, target):\n        x, y = pred.float(), target.float()\n        if not torch.isfinite(x).all() or not torch.isfinite(y).all():\n            raise RuntimeError('Nonfinite diagnostic tensor.')\n        delta = x - y\n        return {'relative_l2_error': float(delta.norm() / y.norm().clamp_min(1e-12)),\n                'max_abs_error': float(delta.abs().max()), 'rmse': float(delta.square().mean().sqrt()),\n                'exact_equal': bool(torch.equal(pred, target))}\n\n    try:\n        teacher = request['teacher']\n        record = request['record']\n        path = Path('/phase3/phase5/capture') / record['request_key'] / 'targets.pt'\n        if digest(path) != record['tensor_sha256']:\n            raise RuntimeError('Diagnostic target differs.')\n        bundle = torch.load(path, weights_only=True, map_location='cpu')\n        if bundle['request_key'] != record['request_key'] or bundle['row']['split'] != 'validation':\n            raise RuntimeError('Diagnostic target provenance differs.')\n        report['gpu'] = torch.cuda.get_device_name(0)\n        if 'H100' not in report['gpu']:\n            raise RuntimeError('GPU differs from capture runtime.')\n        report['packages'] = {p: importlib.metadata.version(p) for p in ('torch', 'diffusers', 'transformers', 'accelerate', 'pillow')}\n        report['torch_cuda'] = torch.version.cuda\n        report['math_settings'] = {\n            'float32_matmul_precision': torch.get_float32_matmul_precision(),\n            'matmul_allow_tf32': torch.backends.cuda.matmul.allow_tf32,\n            'bf16_reduced_precision_reduction': torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction,\n            'deterministic_algorithms': torch.are_deterministic_algorithms_enabled(),\n            'flash_sdp': torch.backends.cuda.flash_sdp_enabled(),\n            'math_sdp': torch.backends.cuda.math_sdp_enabled(),\n            'mem_efficient_sdp': torch.backends.cuda.mem_efficient_sdp_enabled(),\n        }\n        pipe = QwenImage21Pipeline.from_pretrained(teacher['model_repo'], revision=teacher['model_revision'],\n            dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        model = pipe.transformer.eval()\n        for component in (model, pipe.text_encoder, pipe.vae):\n            component.requires_grad_(False)\n        transformer_path = Path(inspect.getfile(type(model)))\n        if digest(transformer_path) != request['transformer_source_sha256'] or len(model.transformer_blocks) != 32:\n            raise RuntimeError('Model source or depth differs.')\n        config_path = (Path('/root/.cache/huggingface/hub') / ('models--' + teacher['model_repo'].replace('/', '--'))\n                       / 'snapshots' / teacher['model_revision'] / 'transformer/config.json')\n        if digest(config_path) != teacher['config_sha256']:\n            raise RuntimeError('Model configuration differs.')\n        report['attention_processors'] = sorted({type(b.attn.processor).__name__ for b in model.transformer_blocks})\n        report['attention_backends'] = sorted({str(getattr(b.attn.processor, '_attention_backend', None)) for b in model.transformer_blocks})\n        report['buffers'] = []\n        for name, buffer in model.named_buffers():\n            report['buffers'].append({'name': name, 'dtype': str(buffer.dtype), 'shape': list(buffer.shape),\n                'finite': bool(torch.isfinite(buffer).all()), 'device': str(buffer.device)})\n            if buffer.numel() <= 4096:\n                tensors['buffers'][name] = buffer.detach().cpu().clone()\n        temporal = model.time_text_embed.time_proj\n        reference = torch.exp(-math.log(10000) * torch.arange(128, dtype=torch.float32) / 128)\n        tensors['buffers']['canonical_temporal_freqs_fp32'] = reference\n        report['temporal_frequency_comparison'] = metrics(temporal.freqs.detach().cpu(), reference.to(temporal.freqs.dtype))\n        report['input_metadata'] = []\n        common = gpu(bundle['shared_transformer_kwargs'])\n        state = {}\n        pair_by_key = {(p['stage'], p['layer']): p for p in bundle['pairs']}\n\n        def hook_for(layer, role):\n            def hook(module, args, kwargs, output=None):\n                stage = state['stage']\n                saved = pair_by_key[(stage['stage'], layer)]\n                full = kwargs['hidden_states'] if role == 'input' else output\n                sample = full.index_select(1, saved['token_indices'].to(full.device)).detach().cpu().contiguous()\n                tensors['sampled_pairs'].append({'run': state['run'], 'stage': stage['stage'],\n                    'layer': layer, 'role': role, 'value': sample})\n                report['pair_metrics'].append({'run': state['run'], 'stage': stage['stage'], 'layer': layer,\n                    'role': role, **metrics(sample, saved['input' if role == 'input' else 'target'])})\n            return hook\n\n        for layer in (2, 3, 4, 5):\n            hooks.append(model.transformer_blocks[layer].register_forward_pre_hook(hook_for(layer, 'input'), with_kwargs=True))\n            hooks.append(model.transformer_blocks[layer].register_forward_hook(hook_for(layer, 'output'), with_kwargs=True))\n        for run in ('fresh_1', 'fresh_2'):\n            cache = QwenImage21KVCache(32)\n            with torch.inference_mode(), model.cache_context('cond'):\n                for stage in bundle['stages']:\n                    state.update(run=run, stage=stage)\n                    kwargs = {**common, **gpu(stage['kwargs']), 'kv_cache': cache}\n                    if run == 'fresh_1':\n                        report['input_metadata'].append({'stage': stage['stage'], 'tensor_fields': {\n                            k: {'shape': list(v.shape), 'dtype': str(v.dtype), 'stride': list(v.stride()),\n                                'contiguous': v.is_contiguous()} for k, v in kwargs.items() if isinstance(v, torch.Tensor)},\n                            'cache_mode': kwargs['kv_cache_mode']})\n                    pred = model(**kwargs)[0][:, -stage['target_image_tokens']:].detach().cpu().contiguous()\n                    report['teacher_calls'] += 1\n                    tensors['velocities'].append({'run': run, 'stage': stage['stage'], 'velocity': pred})\n                    report['velocity_metrics'].append({'run': run, 'stage': stage['stage'],\n                        **metrics(pred, stage['teacher_velocity'])})\n        report['repeatability'] = []\n        for stage in bundle['stages']:\n            values = [v['velocity'] for v in tensors['velocities'] if v['stage'] == stage['stage']]\n            report['repeatability'].append({'stage': stage['stage'], **metrics(values[1], values[0])})\n        report['status'] = 'diagnostic_complete'\n        report['control_passed'] = all(v['relative_l2_error'] <= 0.001 for v in report['velocity_metrics'])\n    except Exception as exc:\n        report['error'] = f'{type(exc).__name__}: {exc}'\n    finally:\n        for hook in hooks:\n            hook.remove()\n        # Preserve measured tensors even if the diagnostic itself fails.\n        tensor_path = directory / 'diagnostic_tensors.pt'\n        temporary = tensor_path.with_suffix('.tmp')\n        torch.save(tensors, temporary)\n        temporary.replace(tensor_path)\n        pipeline_source = Path(inspect.getfile(QwenImage21Pipeline)).read_text()\n        source_path = directory / 'pipeline_qwenimage21_runtime.py'\n        source_path.write_text(pipeline_source)\n        report['artifacts'] = [{'name': p.name, 'sha256': digest(p), 'bytes': p.stat().st_size}\n                               for p in (tensor_path, source_path)]\n        report_path.write_text(json.dumps(report, indent=2) + '\\n')\n        results_volume.commit()\n    return report\n",
+    "runs": [
+      "fresh_1",
+      "fresh_2"
+    ],
+    "stages": [
+      0,
+      20,
+      39
+    ],
+    "control_relative_l2_tolerance": 0.001,
+    "policy": "two fresh-cache intact-teacher replays; sampled paired states compared with capture; no bridge, changed precision, trajectory or optimizer",
+    "persistence": "save measured velocities, sampled hidden states, runtime buffers, pipeline source and diagnostics even when control tolerance fails"
+  },
+  "request_key": "db405c9760bbe3eaa2705b4c6c910e7be4d473a18882857ed43571951f22f51b"
+}
