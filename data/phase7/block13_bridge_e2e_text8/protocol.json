@@ -1,0 +1,10 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-17",
+  "question": "Is the remaining spelling gap a capacity or a data limit? Decisive test before choosing the strategy for four removed blocks.",
+  "context": "e2e_attn_text (4-head attention bridge, 150 text prompts): 6.25% overall, worst case 18.5%, but 5/12 exact signs across four seeds (B 9/12, teacher 11/12).",
+  "data": "The same 200 recorded prompts as before (150 text, 50 general) plus 300 new text_rendering prompts from the pilot TRAIN split (fixed seed, excluding every prompt used before): 450 text prompts. Recordings at steps 0 and 19 are saved to the volume for reuse; a replay must reproduce the teacher within 1e-3.",
+  "bridge": "Attention branch grown from 4 to 8 heads (x128): the 4 trained heads are copied from e2e_attn_text, the 4 new heads get fresh query/key/value weights and zero output columns, so the warm start reproduces e2e_attn_text exactly.",
+  "training": "Bridge weights only; 600 updates; each update one full prompt (40% from the 450 text prompts, 60% from the 60 original plus 50 general) weighted 0.7 and one early-pool example weighted 0.3; final-velocity loss against live teacher targets; AdamW lr 1e-4, 20-update warmup; gate10 every 100 updates, lowest selected.",
+  "decision_rule": "Primary: exact signs across four seeds on the three signs (The Rusty Anchor, Happy Birthday Emma, Moonlight Motel). >= 8/12: continue with bridges (block 5 with the same recipe, joint fine-tuning, then blocks 3 and 4). <= 6/12: bridges alone do not carry spelling; choose and bridge four blocks, then heal the whole 28-block student on text-rich data. Velocity is reported and must not get worse than e2e_attn_text by more than 0.1 points on the wider prompts."
+}
