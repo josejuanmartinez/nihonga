@@ -1,5 +1,19 @@
 # NIHONGA: Qwen Image 2.1 Compression and Acceleration Plan
 
+## Recorded status (17 October 2026)
+
+The measured teacher has 32 blocks (~6.9B DiT parameters). Phases 0-5 are complete.
+The published Phase 6 conclusion selects the pretrained block-5 bridge; full-weight
+healing was not promoted after blinded image QA. Phase 7 candidate A removes blocks
+4-5 with a rank-512 region bridge and 60 healing updates. Its 7.41% wider validation
+error fails the historical 6.52% gate; the 30-prompt image screen was unblinded.
+The four-block cut (2-5) failed. Conditional importance scanning has not run.
+
+Published summaries are preserved under `data/published/2026-10-04`; original
+Phase 6/7 sources and checkpoints remain missing. See README.md and
+`data/phase7/NEXT_EXPERIMENT.md` for recovery prerequisites and experiment order.
+This status distinguishes published findings from locally reproduced evidence.
+
 ## Goal
 
 We create a significantly smaller and faster Qwen Image variant while preserving as much quality, prompt adherence, and general capability as possible.
@@ -152,17 +166,11 @@ We start conservatively.
 Example:
 
 ```text
-Original:
-60 Transformer blocks
-
-First target:
-50 blocks
-
-Second target:
-40 blocks
+Original: 32 transformer blocks
+Selected Phase 6 student: 31 blocks + rank-256 bridge replacing block 5
+Provisional Phase 7 candidate A: 30 blocks + region bridge replacing blocks 4-5
+Failed experiment: 28 blocks, blocks 2-5 removed
 ```
-
-We do not immediately jump from 60 to 30.
 
 We evaluate layer importance before pruning.
 
@@ -294,7 +302,7 @@ conditioning
 Teacher:
 
 ```text
-60-layer frozen model
+32-block frozen model
 → v_teacher
 ```
 
@@ -320,13 +328,9 @@ $$
 Example mapping:
 
 ```text
-Teacher 0   → Student 0
-Teacher 10  → Student 7
-Teacher 20  → Student 13
-Teacher 30  → Student 20
-Teacher 40  → Student 26
-Teacher 50  → Student 33
-Teacher 59  → Student 39
+Use original block IDs to align surviving slots, rather than compacted indices.
+For candidate A, supervise the region bridge against teacher block 5's output.
+Capture additional surviving slots only under a verified replay/cache contract.
 ```
 
 We add bridge supervision if useful:
@@ -388,7 +392,7 @@ prompt
 After healing, we compare:
 
 ```text
-Original 60L
+Original 32-block teacher
 vs
 Pruned student before healing
 vs
@@ -438,11 +442,11 @@ For example:
 
 ```text
 Teacher student architecture:
-40 layers
+accepted student architecture (31 or 30 blocks)
 40 steps
 
 Target:
-40 layers
+accepted student architecture (31 or 30 blocks)
 8 steps
 ```
 
@@ -749,17 +753,11 @@ We do not apply the final pruning ratio immediately.
 Recommended sequence:
 
 ```text
-60 layers
-→ 50
-→ heal + benchmark
-
-50
-→ 40
-→ heal + benchmark
-
-40
-→ possibly 32–36
-→ heal + benchmark
+32 teacher blocks
+-> 31 blocks + pretrained bridge (selected)
+-> 30 blocks + region bridge (candidate A, provisional)
+-> independent conditional scan, learned replacement and quality/latency gates
+-> rerank after each accepted removal
 ```
 
 We stop when the quality/latency tradeoff becomes unattractive.
@@ -832,13 +830,13 @@ The final comparison should look like:
 
 | Variant | Layers | Steps | Precision | Quality | Alignment | Text | Latency | VRAM |
 |---|---:|---:|---|---:|---:|---:|---:|---:|
-| Original Qwen | 60 | 40 | BF16 | baseline | baseline | baseline | baseline | baseline |
-| Pruned | 40 | 40 | BF16 | | | | | |
-| Pruned + healed | 40 | 40 | BF16 | | | | | |
-| Distilled | 40 | 8 | BF16 | | | | | |
-| Distilled | 40 | 4 | BF16 | | | | | |
-| Distilled + FP8 | 40 | 8 | FP8 | | | | | |
-| Distilled + INT8 | 40 | 8 | INT8 | | | | | |
+| Original Qwen | 32 | 40 | BF16 | baseline | baseline | baseline | baseline | baseline |
+| Pruned | 31 | 40 | BF16 | | | | | |
+| Candidate A (provisional) | 30 | 40 | BF16 | | | | | |
+| Distilled (planned) | TBD | 8 | BF16 | | | | | |
+| Distilled (planned) | TBD | 4 | BF16 | | | | | |
+| Distilled + FP8 | TBD | 8 | FP8 | | | | | |
+| Distilled + INT8 | TBD | 8 | INT8 | | | | | |
 
 We also report:
 
@@ -862,15 +860,15 @@ The final target should be defined as a Pareto objective, for example:
 
 We tick each step as we complete it (`- [ ]` → `- [x]`).
 
-- [ ] 1. We build a 20k prompt dataset ([Phase 1](#phase-1--build-the-prompt-dataset))
-- [ ] 2. Then we benchmark the original Qwen ([Phase 2](#phase-2--establish-the-original-baseline))
-- [ ] 3. We prune 60 → 50 layers ([Phase 3](#phase-3--identify-layers-to-remove))
-- [x] 4. We insert residual bottleneck bridges ([Phase 4](#phase-4--insert-bridge-modules)) — first independent slot-5 pilot verified: 31 transformer blocks + 1 bridge in 32 original slots; bridges remain untrained.
-- [x] 5. We train the bridges only ([Phase 5](#phase-5--pretrain-the-bridges)) — pretraining pilot complete: four independent rank-256 candidates (blocks 2, 3, 4 and 5), 500 updates each on 20 TRAIN prompts; selected using 10 VALIDATION prompts, with validation objective reductions of 38–61%. Teacher targets, selected weights, training states and evaluations are saved locally and backed up remotely. Full-student behavior and image quality remain unverified.
-- [ ] 6. We run full architecture healing ([Phase 6](#phase-6--architecture-healing), [Phase 7](#phase-7--healing-dataset-strategy)) ? verified replay and bridge comparisons complete; two parameter-efficient healing pilots ran 120 updates each at learning rates 0.0001 and 0.00001. Neither beat the pretrained block-5 baseline (5.518% mean validation velocity error), so both select update 0. Full-weight healing and student image-quality/speed evaluation remain open.
+- [x] 1. Build the 20k pilot dataset (Phase 1).
+- [x] 2. Establish the teacher baseline (Phase 2); extended performance benchmarking remains open.
+- [x] 3. Diagnose the 32-block architecture and select first removal candidates (Phase 3).
+- [x] 4. Insert and verify residual bottleneck bridges (Phase 4).
+- [x] 5. Pretrain bridges; select block 5, rank 256 (Phase 5, 5.518% validation velocity error).
+- [x] 6. Close Phase 6: healing not promoted. Published full-weight continuation and blinded 129-prompt adherence QA retain pretrained; gain +2.3 points, 95% CI [0.0, 5.4], below +5 promotion bar. Original later records await recovery.
 - [ ] 7. We benchmark ([Phase 8](#phase-8--evaluate-the-pruned-model))
 - [ ] 8. We expand the dataset toward 100k ([Phase 15](#phase-15--dataset-size-strategy))
-- [ ] 9. We try 50 → 40 layers ([Phase 18](#phase-18--progressive-architecture-reduction))
+- [ ] 9. We try 50 → accepted student architecture (31 or 30 blocks) ([Phase 18](#phase-18--progressive-architecture-reduction))
 - [ ] 10. We heal again
 - [ ] 11. We benchmark
 - [ ] 12. We distill 40 steps → 8 steps ([Phases 9–12](#phase-9--speed-distillation))
@@ -884,26 +882,26 @@ We tick each step as we complete it (`- [ ]` → `- [x]`).
 
 ```text
 Original Qwen Image
-60 layers
+32 blocks
 40–50 denoising steps
 BF16
         │
         │ structured pruning
         ▼
 Pruned Qwen
-40–50 layers
+accepted 31- or 30-block architecture
 + cheap bridge modules
         │
         │ architecture healing
         ▼
 Recovered Small Qwen
-40–50 layers
+accepted 31- or 30-block architecture
 40 steps
         │
         │ trajectory / speed distillation
         ▼
 Fast Small Qwen
-40–50 layers
+accepted 31- or 30-block architecture
 8 or 4 steps
         │
         │ quantization

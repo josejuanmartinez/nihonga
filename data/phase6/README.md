@@ -18,5 +18,8 @@ without first checking the recorded remote copy and provenance.
 
 The completed block-5 healing pilots selected update 0: validation velocity
 error was 5.518% before healing, and no saved trained checkpoint improved it.
-The pilot protocol passed, but full architecture healing and image evaluation
-remain open.
+The original checkout ends here. The published 4 October record additionally
+reports full-weight healing and blinded image QA, closing Phase 6 without
+promoting healing. See ../../README.md and ../published/2026-10-04/results.json.
+Those later original notebooks, checkpoints and source reports remain missing;
+the preserved webpage summary is secondary evidence.
