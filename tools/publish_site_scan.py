@@ -68,6 +68,19 @@ def review_parts():
             '<p class="note">Unblinded review by an AI visual reviewer, one seed per prompt; a screen, not a benchmark.</p>']
 
 
+def anchor_parts():
+    site = ROOT.parent / 'niwaki-page/nihonga/images'
+    if not (site / 'phase7-anchor-seed0.jpg').exists():
+        return []
+    return ['<h3 id="phase7-anchor">The attention bridge spells &ldquo;The Rusty Anchor&rdquo; on one seed</h3>',
+            '<p class="summary">On the original seed, every earlier bridge wrote &ldquo;The Rusty <b>Achor</b>&rdquo;. The attention bridge is the first to write the sign correctly, like the teacher and B. Across four seeds, however, it is right once (B: three times), so attention moves spelling in the right direction without restoring it.</p>',
+            '<div class="decision-examples"><figure class="comparison"><a href="images/phase7-anchor-seed0.jpg"><img loading="lazy" src="images/phase7-anchor-seed0.jpg" alt="The Rusty Anchor sign, seed 0: teacher, B and attention bridge correct; first and conditioned bridges write Achor"></a>'
+            '<figcaption><b>Seed 0, same prompt and noise for every model</b> | teacher, B and the attention bridge write &ldquo;Anchor&rdquo;; both per-token bridges write &ldquo;Achor&rdquo;</figcaption></figure>'
+            '<figure class="comparison"><a href="images/phase7-anchor-seeds.jpg"><img loading="lazy" src="images/phase7-anchor-seeds.jpg" alt="B versus the attention bridge on four seeds: B correct three times, the attention bridge once"></a>'
+            '<figcaption><b>Four seeds, B (top) and the attention bridge (bottom)</b> | B 3/4 correct; attention bridge 1/4 (&ldquo;Achar&rdquo;, &ldquo;Ancher&rdquo;, garbled)</figcaption></figure></div>',
+            '<p class="note">Only 2 of the bridge&rsquo;s 60 full training prompts contain text; a run that adds 150 recorded text prompts to its training is in progress.</p>']
+
+
 def variant_review_parts():
     path = ROOT / 'data/phase7/bridge_variant_images/review.json'
     if not path.exists():
@@ -116,7 +129,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped.</p></div>'] + variant_review_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped.</p></div>'] + anchor_parts() + variant_review_parts()
 
 
 def bridge13_section(protocol, report):
