@@ -12,13 +12,13 @@ def verify_migration(manifest,cache_layout,key):
     import json
     import os
     from pathlib import Path
-    roots={'nihonga-phase3-artifacts':Path('/research'),'nihonga-hf-cache':Path('/hf')}
+    roots={'nihonga-phase3-artifacts':Path('/research').resolve(),'nihonga-hf-cache':Path('/hf').resolve()}
     report=dict(status='verifying',account='new',gpu_requested=False,files_verified=0,bytes_verified=0,failures=[])
     for volume,files in manifest.items():
         base=roots[volume]
         for name,expected in files.items():
             path=base/name
-            if not path.resolve().is_relative_to(base):raise ValueError('Unsafe archive path')
+            if not path.resolve().is_relative_to(base):raise ValueError('Unsafe archive path: '+name)
             if not path.is_file():
                 report['failures'].append(dict(volume=volume,path=name,error='missing'));continue
             h=hashlib.sha256()

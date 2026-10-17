@@ -1,9 +1,9 @@
 def scan_candidate(request, key):
-    """Stage-balanced healing of a student whose removed region is request['region_slots'] (step 11: blocks 4-5),
-    with a fresh early-moment input from the step-7 pool in every update."""
-    # Derived from heal_stage_balanced; its docstring follows.
-    """Stage-balanced healing of the 28-block student: every update uses one prompt at early, middle and late noise,
-    each stage's objective normalized by its update-0 training value; linear warm-up; one learning rate per request."""
+    """Independently bypass surviving blocks inside frozen candidate A.
+
+    Reuses the saved teacher replay contract before assembling the 30-block
+    student. No training or architecture promotion is performed.
+    """
     import hashlib
     import importlib.metadata
     import inspect
@@ -225,7 +225,7 @@ def scan_candidate(request, key):
         report['status'] = 'teacher_verified'
         (directory / 'teacher_control_report.json').write_text(json.dumps(report, indent=2))
         results_volume.commit()
-        print('All 90 intact-teacher controls passed; assembling the 28-block student.', flush=True)
+        print('All 90 intact-teacher controls passed; assembling frozen 30-block candidate A.', flush=True)
 
         import gc
         import time
