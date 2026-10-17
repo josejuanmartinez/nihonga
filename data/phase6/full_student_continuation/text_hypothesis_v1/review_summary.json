@@ -1,0 +1,84 @@
+{
+  "version": "phase6-text-hypothesis-summary-v1",
+  "status": "passed",
+  "prompt_count": 16,
+  "image_count": 64,
+  "optimizer_updates": 0,
+  "counts": {
+    "teacher": {
+      "true": 15,
+      "uncertain": 1
+    },
+    "pretrained": {
+      "true": 13,
+      "false": 3
+    },
+    "update120": {
+      "true": 13,
+      "uncertain": 1,
+      "false": 2
+    },
+    "update180": {
+      "true": 12,
+      "false": 4
+    }
+  },
+  "groups": {
+    "posters": {
+      "teacher": {
+        "true": 8
+      },
+      "pretrained": {
+        "true": 7,
+        "false": 1
+      },
+      "update120": {
+        "true": 7,
+        "uncertain": 1
+      },
+      "update180": {
+        "true": 6,
+        "false": 2
+      }
+    },
+    "text_rendering": {
+      "teacher": {
+        "uncertain": 1,
+        "true": 7
+      },
+      "pretrained": {
+        "false": 2,
+        "true": 6
+      },
+      "update120": {
+        "false": 2,
+        "true": 6
+      },
+      "update180": {
+        "false": 2,
+        "true": 6
+      }
+    }
+  },
+  "paired_vs_pretrained": {
+    "update120_clear_win": 0,
+    "update120_clear_loss": 0,
+    "same_status": 15,
+    "uncertain_pair": 1
+  },
+  "paired_vs_update180": {
+    "update120_clear_win": 1,
+    "update120_clear_loss": 0,
+    "same_status": 14,
+    "uncertain_pair": 1
+  },
+  "source_sha256": {
+    "request.json": "c1cd1fea864607e44e751241b3aebbc10e256f7d088ed2ade068aba7d22ed1e5",
+    "summary.json": "eaad0383cc374ecec8bf4a8c0bc239209c98ef6f666fe2ded0bbb8f161082152",
+    "sheets.json": "94046d420b92236805dcef0c077ae9b07eaa42dfd89f7cd718990e6756c0ad1f",
+    "rubric.json": "00da0c0e78e15a01bc0089ef8a3da38137a85b6605e629159f3cfa4bb5395d48",
+    "manual_review.json": "3eaee55cd04b490b134b4488a46f815c4ef01ccb1e62a88e9fe3177b29e34618"
+  },
+  "scope": "One fixed seed per prompt, 8 posters and 8 other text scenes; unblinded manual exact-text review",
+  "interpretation": "Update 120 has 13 clearly correct full prompts of 16 and one borderline prompt; pretrained has 13, update 180 has 12. Update 120 restores one title and avoids one update-180 regression, but this pilot does not establish a general text-fidelity win over the pretrained bridge."
+}

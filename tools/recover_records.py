@@ -55,6 +55,9 @@ def main():
             for ascii_only in (True, False):
                 offer(json.dumps(value, indent=2, ensure_ascii=ascii_only).encode(), origin)
 
+    # The publisher retained some full protocol/review dictionaries inline.
+    # Recover them only when their serialized bytes match an original source hash.
+    walk(published, 'published-snapshot:embedded-record')
     if args.site:
         for source in (args.site / 'images').rglob('*'):
             if source.is_file():

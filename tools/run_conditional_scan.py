@@ -3,10 +3,13 @@ import argparse
 import hashlib
 import json
 import os
+import sys
 from pathlib import Path
 
 
 def main():
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--old-account', action='store_true')
     args = parser.parse_args()

@@ -62,7 +62,9 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         temporary = target.with_name(target.name + '.partial')
         with temporary.open('wb') as stream:
-            volume.read_file_into_fileobj(name, stream)
+            # Bound SDK block concurrency rather than multiplying it by CPU count
+            # for each file in this thread pool (SDK 1.6.2).
+            volume._read_file_into_fileobj(name, stream, concurrency=2)
         if temporary.stat().st_size != entry['size']:
             raise RuntimeError('Size mismatch: ' + name)
         checksum = digest(temporary)

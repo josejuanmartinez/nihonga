@@ -1,0 +1,472 @@
+{
+  "request_key": "4e8607a660ac179ab09cd8990b149750eaadb678604756d81d9a6b76ae2d99c3",
+  "request": {
+    "version": "phase7-latency-benchmark-v1",
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "runtime_environment": {
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_derived_tables": {
+      "pos_embed.freqs.0": "d9f978ae9c2ee6aef13d2aa18347b93df320f4f6b05d0742e57116f02d77be7f",
+      "pos_embed.freqs.1": "3015ce7f0237fbdd7a7488973b1a4a386016545c82df983713812edc05d46ee2",
+      "pos_embed.freqs.2": "3015ce7f0237fbdd7a7488973b1a4a386016545c82df983713812edc05d46ee2",
+      "time_text_embed.time_proj.freqs": "b0027ea79a908a68429763225ca6c1f7f988692cfd20a922185a0bb73bc3c1c6"
+    },
+    "canonical_tables_key": "c8de0bd9af682097371de501b8d4feeea34badd5dc911a880f144de450b1dd9f",
+    "core_source": "import torch\nfrom torch import nn\n\nclass ResidualBottleneckBridge(nn.Module):\n    \"\"\"Trainable tokenwise residual approximation; pipeline integration is a separate wrapper.\"\"\"\n    def __init__(self, hidden_dim=4096, bottleneck_dim=256):\n        super().__init__()\n        self.down = nn.Linear(hidden_dim, bottleneck_dim, bias=False)\n        self.activation = nn.GELU()\n        self.up = nn.Linear(bottleneck_dim, hidden_dim, bias=False)\n        # Identity initialization is a starting point for learning, not the final replacement.\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        return hidden_states + self.up(self.activation(self.down(hidden_states)))\n",
+    "wrapper_source": "\"\"\"Qwen-Image 2.1 block contract for an unconditioned tokenwise bridge.\"\"\"\nfrom types import SimpleNamespace\nfrom torch import nn\n\n\nclass QwenImage21BridgeBlock(nn.Module):\n    def __init__(self, bridge, processor):\n        super().__init__()\n        self.bridge = bridge\n        # Parent forward inspects this processor to choose mask construction.\n        # This contains no attention projections and performs no attention.\n        self.attn = SimpleNamespace(processor=processor)\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        if kv_cache_mode not in (None, 'extract', 'cached'):\n            raise ValueError('Unknown KV cache mode.')\n        # No K/V is required in this slot. Subsequent surviving blocks build\n        # their own prefix K/V from the transformed prefix during extraction.\n        return self.bridge(hidden_states)\n\n\ndef insert_bridge(transformer, layer, bridge, cache_class):\n    \"\"\"Replace one slot; caller must discard all prior caches and use returned cache.\"\"\"\n    if not 0 <= layer < len(transformer.transformer_blocks):\n        raise IndexError('Bridge slot is outside transformer depth.')\n    if bridge.down.in_features != transformer.config.num_attention_heads * transformer.config.attention_head_dim:\n        raise ValueError('Bridge width differs from transformer width.')\n    old = transformer.transformer_blocks[layer]\n    reference = next(transformer.parameters())\n    bridge = bridge.to(device=reference.device, dtype=reference.dtype)\n    wrapper = QwenImage21BridgeBlock(bridge, old.attn.processor)\n    wrapper.train(transformer.training)\n    transformer.transformer_blocks[layer] = wrapper\n    return old, cache_class(len(transformer.transformer_blocks))\n",
+    "components_source": "\"\"\"FP32 master adapters and functional prefix-cache checkpointing for the pilot.\"\"\"\nimport torch\nfrom torch import nn\nfrom torch.nn import functional as F\nfrom torch.utils.checkpoint import checkpoint\n\n\nclass MasterBridge(nn.Module):\n    def __init__(self, width=4096, rank=256):\n        super().__init__()\n        self.down = nn.Linear(width, rank, bias=False, dtype=torch.float32)\n        self.up = nn.Linear(rank, width, bias=False, dtype=torch.float32)\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        dtype = hidden_states.dtype\n        residual = F.linear(hidden_states, self.down.weight.to(dtype))\n        residual = F.gelu(residual)\n        residual = F.linear(residual, self.up.weight.to(dtype))\n        return hidden_states + residual\n\n\nclass MasterLoRALinear(nn.Module):\n    def __init__(self, base, rank=8, alpha=8):\n        super().__init__()\n        self.base = base.requires_grad_(False)\n        self.down = nn.Linear(base.in_features, rank, bias=False,\n                              device=base.weight.device, dtype=torch.float32)\n        self.up = nn.Linear(rank, base.out_features, bias=False,\n                            device=base.weight.device, dtype=torch.float32)\n        nn.init.zeros_(self.up.weight)\n        self.scale = alpha / rank\n\n    def forward(self, value):\n        delta = F.linear(value, self.down.weight.to(value.dtype))\n        delta = F.linear(delta, self.up.weight.to(value.dtype))\n        return self.base(value) + delta * self.scale\n\n\nclass FunctionalCheckpointBlock(nn.Module):\n    \"\"\"Return prefix K/V as checkpoint outputs; snapshot cached K/V as inputs.\n\n    Recomputations receive a private cache. They cannot mutate the cache used\n    by another stage, and prefix gradients remain connected to its extraction.\n    \"\"\"\n    def __init__(self, inner, cache_layer_class):\n        super().__init__()\n        self.inner = inner\n        self.cache_layer_class = cache_layer_class\n\n    @property\n    def attn(self):\n        return self.inner.attn\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        common = dict(attention_mask=attention_mask,\n                      target_token_mask=target_token_mask,\n                      kv_cache_mode=kv_cache_mode,\n                      cache_write_slice=cache_write_slice,\n                      segments=segments, key_valid=key_valid)\n        if not torch.is_grad_enabled():\n            return self.inner(hidden_states, modulation, rotary_emb=rotary_emb,\n                              layer_cache=layer_cache, **common)\n\n        if kv_cache_mode == 'extract':\n            def extract(h, m, r):\n                private = self.cache_layer_class()\n                output = self.inner(h, m, rotary_emb=r, layer_cache=private, **common)\n                k, v = private.get()\n                return output, k, v\n            output, k, v = checkpoint(extract, hidden_states, modulation,\n                                      rotary_emb, use_reentrant=False)\n            layer_cache.store(k, v)\n            return output\n\n        if kv_cache_mode == 'cached':\n            prefix_k, prefix_v = layer_cache.get()\n            def cached(h, m, r, k, v):\n                private = self.cache_layer_class()\n                private.store(k, v)\n                return self.inner(h, m, rotary_emb=r, layer_cache=private, **common)\n            return checkpoint(cached, hidden_states, modulation, rotary_emb,\n                              prefix_k, prefix_v, use_reentrant=False)\n\n        def uncached(h, m, r):\n            return self.inner(h, m, rotary_emb=r, layer_cache=None, **common)\n        return checkpoint(uncached, hidden_states, modulation, rotary_emb,\n                          use_reentrant=False)\n\n\ndef attach_adapters(model, bridge_weights, insert_bridge, cache_class,\n                    cache_layer_class, rank=8, alpha=8):\n    bridge = MasterBridge()\n    bridge.load_state_dict(bridge_weights)\n    removed, _ = insert_bridge(model, 5, bridge, cache_class)\n    # insert_bridge matches inference dtype; restore FP32 optimizer masters.\n    # Reload the original FP32 checkpoint after the temporary BF16 conversion.\n    bridge.float()\n    bridge.load_state_dict(bridge_weights)\n    del removed\n    adapters = []\n    for slot, block in enumerate(model.transformer_blocks):\n        if slot == 5:\n            continue\n        for name in ('to_q', 'to_k', 'to_v'):\n            setattr(block.attn, name, MasterLoRALinear(getattr(block.attn, name), rank, alpha))\n            adapters.append(f'transformer_blocks.{slot}.attn.{name}')\n        block.attn.to_out[0] = MasterLoRALinear(block.attn.to_out[0], rank, alpha)\n        adapters.append(f'transformer_blocks.{slot}.attn.to_out.0')\n        model.transformer_blocks[slot] = FunctionalCheckpointBlock(block, cache_layer_class)\n    model.eval()\n    model.gradient_checkpointing = False\n    trainable = {name: param for name, param in model.named_parameters() if param.requires_grad}\n    return trainable, adapters\n",
+    "rows": [
+      {
+        "source_id": "p1-ecb07d42d1aa",
+        "prompt": "A high-resolution DSLR photo of a dog in the upper half of the image and a vase in the lower half. Sharp focus. DSLR photo, high resolution.",
+        "seed": 3970989378,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "alignment",
+        "subdimension": "composition_layout",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-a2bdeab6aa35",
+        "prompt": "\u4e00\u4e2a\u5706\u76d8\u653e\u5728\u68cb\u76d8\u5730\u677f\u4e0a\uff0c35\u6beb\u7c73\u80f6\u7247\u7167\u7247\uff0c\u80f6\u7247\u9897\u7c92",
+        "seed": 2730355382,
+        "width": 768,
+        "height": 1376,
+        "dimension": "alignment",
+        "subdimension": "shapes",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-39f4413adbe6",
+        "prompt": "A 3D render of three shapes on a mirror surface: white star-shaped block, purple cone, blue triangular prism. Clean composition. 3D render, soft global illumination.",
+        "seed": 972308794,
+        "width": 1248,
+        "height": 832,
+        "dimension": "alignment",
+        "subdimension": "shapes",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-271794e7e3fc",
+        "prompt": "A crystal cone next to a gray octahedron floating in empty space, anime style",
+        "seed": 655856871,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "alignment",
+        "subdimension": "shapes",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-47d1be211277",
+        "prompt": "\u4e00\u4f4d\u4e2d\u5e74\u6df7\u8840\u7537\u5b50\u5728\u9633\u53f0\u4e0a\u5582\u72d7\uff0cDSLR\u7167\u7247",
+        "seed": 1204928033,
+        "width": 832,
+        "height": 1248,
+        "dimension": "alignment",
+        "subdimension": "actions",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-cef0daad2aa6",
+        "prompt": "Show a lace wedding veil beside a detailed circuit board, extreme close-up, extremely intricate detail, even studio lighting, clean composition. Style: cinematic still, anamorphic, color graded.",
+        "seed": 3471891117,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "visual_quality",
+        "subdimension": "fine_detail",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-682468cd7087",
+        "prompt": "Make a picture of a peacock feather eye, extreme close-up, razor-sharp fine detail, highly detailed. Style: stylized 3D, clay-like materials.",
+        "seed": 1747216589,
+        "width": 896,
+        "height": 1184,
+        "dimension": "visual_quality",
+        "subdimension": "fine_detail",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-cf35e4976f11",
+        "prompt": "An elderly white man with natural, unaltered skin tone and no makeup, extreme close-up capturing the detailed texture of his face, candid photograph with raw and authentic expression",
+        "seed": 3476415639,
+        "width": 832,
+        "height": 1248,
+        "dimension": "visual_quality",
+        "subdimension": "skin",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-9a66654bd414",
+        "prompt": "A watercolor painting of a stack of aged books resting next to a hand-thrown clay pot. Extreme close-up shot capturing every grain and fiber in exquisite detail. Raking side light accentuates the textures, creating a highly detailed and realistic rendering. Soft washes of watercolor with visible paper texture.",
+        "seed": 2590401867,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "visual_quality",
+        "subdimension": "textures",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-df82ff32e45b",
+        "prompt": "\u4e00\u5f20\u5728\u9ed1\u6697\u623f\u95f4\u4e2d\u62cd\u6444\u7684 candid \u7167\u7247\uff0c\u4eba\u8138\u88ab\u7b14\u8bb0\u672c\u7535\u8111\u5c4f\u5e55\u7167\u4eae\u3002\u5e7f\u89d2\u955c\u5934\u3002\u6df1\u9083\u7684\u9634\u5f71\u4e2d\u7ec6\u8282\u6e05\u6670\u3002\u660e\u6697\u5bf9\u6bd4\u5f3a\u70c8\u3002\u81ea\u7136\u8272\u5f69\u3002 candid \u7167\u7247\uff0c\u81ea\u7136\u5149\u7ebf\u3002",
+        "seed": 3749904178,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "visual_quality",
+        "subdimension": "low_light",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-8bdc83e503ad",
+        "prompt": "A movie still of four friends posing together in a wheat field. Group portrait. Late afternoon sun. Clean composition. Movie still, dramatic lighting.",
+        "seed": 2346484709,
+        "width": 896,
+        "height": 1184,
+        "dimension": "aesthetics",
+        "subdimension": "portraits",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-b2e087f02067",
+        "prompt": "A claymation scene of an old man feeding pigeons, calm atmosphere, high dynamic range.",
+        "seed": 3001059312,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "aesthetics",
+        "subdimension": "illustration_styles",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-2d014d9d92c6",
+        "prompt": "A 3D render of a cyclist on a country road, melancholic tone, soft shadows.",
+        "seed": 755060125,
+        "width": 1376,
+        "height": 768,
+        "dimension": "aesthetics",
+        "subdimension": "illustration_styles",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-79d02f27f6ef",
+        "prompt": "A candid shot of a college student appearing contemplative in a sunlit studio setting. Profile portrait view. Overcast sky with diffused lighting. Gentle, soft shadows. Natural illumination. Candid photograph.",
+        "seed": 2043686695,
+        "width": 832,
+        "height": 1248,
+        "dimension": "aesthetics",
+        "subdimension": "portraits",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-cd77b482d916",
+        "prompt": "\u4e00\u5e45\u6c34\u5f69\u753b\uff0c\u63cf\u7ed8\u4e00\u4f4d\u9752\u5c11\u5e74\u592a\u5e73\u6d0b\u5c9b\u6c11\u7537\u5b69\u5728\u6d77\u8fb9\u6c89\u601d\u7684\u6837\u5b50\uff0c\u534a\u8eab\u8096\u50cf\uff0c\u67d4\u548c\u7684\u6668\u5149\uff0c\u67d4\u548c\u7684\u9634\u5f71\u3002",
+        "seed": 3447174274,
+        "width": 768,
+        "height": 1376,
+        "dimension": "aesthetics",
+        "subdimension": "portraits",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-64b66354b27c",
+        "prompt": "A cinematic film still of a messy desk with a frying pan, a wallet, a sewing machine and a coffee grinder. Natural light. Nostalgic feeling. Rich colors. 50mm lens. Cinematic still, anamorphic, color graded.",
+        "seed": 1689674580,
+        "width": 1184,
+        "height": 896,
+        "dimension": "real_world",
+        "subdimension": "everyday_objects",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-1eb4795a4a26",
+        "prompt": "A vintage biplane, 35mm film photo",
+        "seed": 515144026,
+        "width": 896,
+        "height": 1184,
+        "dimension": "real_world",
+        "subdimension": "vehicles",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-87ab7bffaa94",
+        "prompt": "a spoon in a glass of water appearing bent, high-speed photography, serene mood, isometric view, clean 3D illustration",
+        "seed": 2276162559,
+        "width": 832,
+        "height": 1248,
+        "dimension": "real_world",
+        "subdimension": "physical_interactions",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-ac649400b1e1",
+        "prompt": "A candid photograph of an alarm clock, a pair of reading glasses and a frying pan neatly arranged, flat lay, top-down view, mysterious atmosphere, overcast diffuse light.",
+        "seed": 2892272640,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "real_world",
+        "subdimension": "everyday_objects",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-010ab142fc14",
+        "prompt": "A stylized 3D scene featuring sunlight creating window-like shadows on the floor, high-speed capture, uniform lighting direction, realistic color tones.",
+        "seed": 17477954,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "real_world",
+        "subdimension": "physical_interactions",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-b16a0b2869d5",
+        "prompt": "a hover tank, sense of scale with tiny figures, detailed design, rich colors, stylized 3D, clay-like materials",
+        "seed": 2976516904,
+        "width": 1376,
+        "height": 768,
+        "dimension": "creative",
+        "subdimension": "concept_art",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-9090c0f5a9b8",
+        "prompt": "A digital illustration of clocks melting over the branches of a tree in a city square, dreamlike atmosphere, precise perspective, soft morning light, clean composition.",
+        "seed": 2425405685,
+        "width": 1376,
+        "height": 768,
+        "dimension": "creative",
+        "subdimension": "surreal",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-513061408026",
+        "prompt": "A digital illustration of clocks melting over the branches of a tree in the ocean. Surrealism. Photorealistic details. Clean composition. Digital illustration, clean lines.",
+        "seed": 1362125120,
+        "width": 1376,
+        "height": 768,
+        "dimension": "creative",
+        "subdimension": "surreal",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-35b465dfc187",
+        "prompt": "A digital illustration depicting a solitary musician playing the violin on a slowly sinking ship, with a hopeful atmosphere illuminated by a gentle backlight.",
+        "seed": 901015007,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "storytelling",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-708a4ed371cc",
+        "prompt": "An oil painting depicting a cross-section of a historic home with all interior elements visible.",
+        "seed": 1888112339,
+        "width": 832,
+        "height": 1248,
+        "dimension": "creative",
+        "subdimension": "unusual_compositions",
+        "set": "fresh"
+      },
+      {
+        "source_id": "p1-e83d7dcacb2d",
+        "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+        "seed": 3896344010,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "set": "text",
+        "target_strings": [
+          "GOLDEN RIVER",
+          "Live in Berlin"
+        ]
+      },
+      {
+        "source_id": "p1-0b32a45e0b90",
+        "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+        "seed": 187868254,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Welcome Home"
+        ]
+      },
+      {
+        "source_id": "p1-c9344c076abf",
+        "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+        "seed": 3375647751,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Happy Birthday Emma"
+        ]
+      },
+      {
+        "source_id": "p1-f66dd8002f66",
+        "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+        "seed": 4134393856,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "\u8425\u4e1a\u4e2d"
+        ]
+      },
+      {
+        "source_id": "p1-2fa54a3c4eb8",
+        "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+        "seed": 799361596,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "The Rusty Anchor",
+          "Moonlight Motel"
+        ]
+      }
+    ],
+    "students": {
+      "blocks45": {
+        "slots": [
+          4,
+          5
+        ],
+        "region_bridge": {
+          "fit_key": "f9077f043d0a6a440ed7feefd349993dd59b2a7c6b7f48858a34eaf329d70b32",
+          "variant": "region_rank512",
+          "rank": 512,
+          "selected_step": 400,
+          "checkpoint": "region_rank512_selected.pt",
+          "sha256": "18215d00107337e1a155da293b184129831c662481cb382b234e749f86282b34"
+        },
+        "trainable_parameters": 6683110912
+      },
+      "blocks25": {
+        "slots": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "region_bridge": {
+          "fit_key": "a5500a300316755e0b8f3b7a3eea2355b331ab9a883cb870ed96e7dec4147467",
+          "variant": "region_rank1024",
+          "rank": 1024,
+          "selected_step": 800,
+          "checkpoint": "region_rank1024_selected.pt",
+          "sha256": "15f05d44a9120d05288346e5be3952c9629e9b33f6c9b5a86003c809803c7b5f"
+        },
+        "trainable_parameters": 6251097088
+      }
+    },
+    "checkpoints": {
+      "A_healed_u60": {
+        "request_key": "95fcd2cfae35cb7f124b8af2865c30f928cbd681a0d015df5e56e8ae5ba4fd78",
+        "step": 60,
+        "remote_path": "/phase3/phase7/blocks45_healing/95fcd2cfae35cb7f124b8af2865c30f928cbd681a0d015df5e56e8ae5ba4fd78/checkpoint_step_060.pt",
+        "sha256": "e22bb8771a81609a7f70043394652ae65b1e2876aaacd5c15256de98c9633885",
+        "bytes": 26743016318
+      },
+      "B_healed_u240": {
+        "request_key": "95fcd2cfae35cb7f124b8af2865c30f928cbd681a0d015df5e56e8ae5ba4fd78",
+        "step": 240,
+        "remote_path": "/phase3/phase7/blocks45_healing/95fcd2cfae35cb7f124b8af2865c30f928cbd681a0d015df5e56e8ae5ba4fd78/checkpoint_step_240.pt",
+        "sha256": "68b4246e6e68cb46aa6cc353101e0d4500110170935868582e475c7f3bd10965",
+        "bytes": 26743113534
+      },
+      "D_blocks25_u420": {
+        "request_key": "f62f039a9a66f8cb582ff0abf0dd7dfbb5bb88a6b8cded771026dd2d469c728c",
+        "step": 420,
+        "remote_path": "/phase3/phase7/early_pool_healing/f62f039a9a66f8cb582ff0abf0dd7dfbb5bb88a6b8cded771026dd2d469c728c/checkpoint_step_420.pt",
+        "sha256": "765536cd9f440e1ecee4cf18e0b7e0e1b8c4f99575c038cbab6775de3b6e6ebf",
+        "bytes": 25014352869
+      }
+    },
+    "families": {
+      "blocks45": [
+        "teacher",
+        "C_bridge_only",
+        "A_healed_u60",
+        "B_healed_u240"
+      ],
+      "blocks25": [
+        "D_blocks25_u420"
+      ]
+    },
+    "worker_source": "def benchmark_candidate(request, key):\n    \"\"\"Matched 40-step images for the Phase 7 candidates. family 'blocks45': teacher, C (bridge only), A and B (healed);\n    family 'blocks25': D (28-block healed). Same prompt, CPU noise seed, size, scheduler and 40 steps for every model.\"\"\"\n    import gc\n    import hashlib\n    import inspect\n    import json\n    import os\n    import time\n    from pathlib import Path\n\n    import torch\n    from torch.nn.attention import sdpa_kernel, SDPBackend\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache, QwenImage21KVLayerCache\n\n    directory = Path('/phase3/phase7/latency_benchmark') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n    if (directory / 'started.json').exists():\n        raise RuntimeError('Incomplete image attempt exists; inspect before repeating calls.')\n    (directory / 'started.json').write_text(json.dumps({'request_key': key}))\n    (directory / 'request.json').write_text(json.dumps({'request_key': key, 'request': request}, indent=2))\n    results_volume.commit()\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def table_hash(value):\n        return hashlib.sha256(memoryview(value.detach().cpu().contiguous().view(torch.uint8).numpy())).hexdigest()\n\n    variants = ['teacher', 'candidate_A']\n    report = {'request_key': key, 'status': 'running', 'rows': [], 'artifacts': [],\n              'calls': {v: 0 for v in variants}, 'optimizer_updates': 0}\n    try:\n        if os.environ.get('CUBLAS_WORKSPACE_CONFIG') != ':4096:8':\n            raise RuntimeError('Deterministic workspace environment differs.')\n        teacher = request['teacher']\n        report['gpu'] = torch.cuda.get_device_name(0)\n        if 'H100' not in report['gpu']:\n            raise RuntimeError('Expected H100.')\n        load_started = time.perf_counter()\n        pipe = QwenImage21Pipeline.from_pretrained(teacher['model_repo'], revision=teacher['model_revision'],\n                                                   dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        torch.cuda.synchronize()\n        pipeline_load_seconds = time.perf_counter()-load_started\n        pipe.set_progress_bar_config(disable=True)\n        model = pipe.transformer.eval()\n        for component in (model, pipe.text_encoder, pipe.vae):\n            component.requires_grad_(False)\n        torch.use_deterministic_algorithms(True)\n        torch.set_float32_matmul_precision('highest')\n        torch.backends.cuda.matmul.allow_tf32 = False\n        torch.backends.cudnn.allow_tf32 = False\n        torch.backends.cudnn.benchmark = False\n        torch.backends.cudnn.deterministic = True\n        torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = False\n        torch.backends.cuda.allow_fp16_bf16_reduction_math_sdp(False)\n        if digest(Path(inspect.getfile(type(model)))) != request['transformer_source_sha256']:\n            raise RuntimeError('Transformer source differs.')\n        config_path = (Path('/root/.cache/huggingface/hub') / ('models--' + teacher['model_repo'].replace('/', '--')) /\n                       'snapshots' / teacher['model_revision'] / 'transformer/config.json')\n        if digest(config_path) != teacher['config_sha256'] or len(model.transformer_blocks) != 32:\n            raise RuntimeError('Teacher configuration differs.')\n        # Derived position/time tables: use the audited values on every host (as in steps 7-11).\n        derived = {f'pos_embed.freqs.{axis}': value for axis, value in enumerate(model.pos_embed.freqs)}\n        derived['time_text_embed.time_proj.freqs'] = model.time_text_embed.time_proj.freqs\n        expected = request['expected_derived_tables']\n        mismatched = sorted(n for n, v in derived.items() if table_hash(v) != expected[n])\n        if mismatched:\n            canonical = torch.load(Path('/phase3/phase7/canonical_derived_tables') / (request['canonical_tables_key'] + '.pt'),\n                                   weights_only=True, map_location='cpu')\n            if any(table_hash(canonical[n]) != expected[n] for n in expected):\n                raise RuntimeError('Canonical derived tables differ from the audited hashes.')\n            original = model.pos_embed.freqs\n            replaced = [canonical[f'pos_embed.freqs.{a}'].to(device=v.device, dtype=v.dtype) for a, v in enumerate(original)]\n            model.pos_embed.freqs = tuple(replaced) if isinstance(original, tuple) else replaced\n            with torch.no_grad():\n                model.time_text_embed.time_proj.freqs.copy_(canonical['time_text_embed.time_proj.freqs'])\n            if any(table_hash(v) != expected[n] for n, v in\n                   list({f'pos_embed.freqs.{a}': v for a, v in enumerate(model.pos_embed.freqs)}.items()) +\n                   [('time_text_embed.time_proj.freqs', model.time_text_embed.time_proj.freqs)]):\n                raise RuntimeError('Derived tables still differ after loading the audited copy.')\n            report['canonical_tables_applied'] = mismatched\n\n        import random\n        import statistics\n        from types import SimpleNamespace\n        started_loading = time.perf_counter()\n        teacher_state = {n:v.detach().cpu().clone() for n,v in model.state_dict().items()}\n        original_blocks = list(model.transformer_blocks)\n        namespace = {}\n        for field in ('core_source','wrapper_source','components_source'):\n            exec(compile(request[field],field+'.py','exec'),namespace)\n        checkpoint = request['checkpoints']['A_healed_u60']\n        path = Path(checkpoint['remote_path'])\n        if path.stat().st_size != checkpoint['bytes'] or digest(path) != checkpoint['sha256']:\n            raise RuntimeError('Candidate A checkpoint differs')\n        state = torch.load(path,weights_only=True,map_location='cpu')\n        if state['request_key']!=checkpoint['request_key'] or state['step']!=60:\n            raise RuntimeError('Candidate A provenance differs')\n        masters = state['master_state']\n        del state\n        student = request['students']['blocks45']\n        region = student['region_bridge']\n        region_path = Path('/phase3/phase7/region_bridge_fit')/region['fit_key']/region['checkpoint']\n        if digest(region_path)!=region['sha256']:\n            raise RuntimeError('Bridge checkpoint differs')\n        region_value = torch.load(region_path,weights_only=True,map_location='cpu')\n        report['cpu_snapshot_and_checkpoint_seconds']=time.perf_counter()-started_loading\n        report['protocol']=request['benchmark_protocol']\n        report['packages']={p:__import__('importlib.metadata',fromlist=['version']).version(p)\n                            for p in ('torch','diffusers','transformers','accelerate','pillow')}\n        report['torch_cuda']=torch.version.cuda\n        report['cold_pipeline_load_seconds']=pipeline_load_seconds\n\n        def restore(variant):\n            model.transformer_blocks=torch.nn.ModuleList(original_blocks)\n            model.to('cuda')\n            model.load_state_dict(teacher_state,strict=True)\n            if variant=='candidate_A':\n                bridge=namespace['MasterBridge'](4096,512)\n                bridge.load_state_dict(region_value['state_dict'])\n                removed,_=namespace['insert_bridge'](model,4,bridge,QwenImage21KVCache)\n                bridge.float()\n                bridge.load_state_dict(region_value['state_dict'])\n                del removed\n                passthrough=namespace['ResidualBottleneckBridge'](4096,256)\n                with torch.no_grad():passthrough.up.weight.zero_()\n                removed,_=namespace['insert_bridge'](model,5,passthrough,QwenImage21KVCache)\n                del removed\n                for slot,block in enumerate(model.transformer_blocks):\n                    if slot not in (4,5):\n                        model.transformer_blocks[slot]=namespace['FunctionalCheckpointBlock'](block,QwenImage21KVLayerCache)\n                frozen={'transformer_blocks.5.bridge.down.weight','transformer_blocks.5.bridge.up.weight'}\n                parameters={n:p for n,p in model.named_parameters() if n not in frozen}\n                if set(parameters)!=set(masters):raise RuntimeError('Candidate parameter names differ')\n                with torch.no_grad():\n                    for name,p in parameters.items():p.copy_(masters[name].to(device=p.device,dtype=p.dtype))\n                original_blocks[4].cpu()\n                original_blocks[5].cpu()\n            model.requires_grad_(False).eval()\n            model.gradient_checkpointing=False\n            gc.collect()\n            torch.cuda.empty_cache()\n            torch.cuda.synchronize()\n\n        events=[]\n        def before(module,args):\n            start=torch.cuda.Event(enable_timing=True)\n            end=torch.cuda.Event(enable_timing=True)\n            start.record()\n            events.append((start,end))\n        def after(module,args,output):events[-1][1].record()\n        pre=model.register_forward_pre_hook(before)\n        post=model.register_forward_hook(after)\n\n        def generate(row):\n            events.clear()\n            torch.cuda.synchronize()\n            started=time.perf_counter()\n            with torch.inference_mode(), sdpa_kernel([SDPBackend.MATH]):\n                image=pipe(prompt=row['prompt'],width=row['width'],height=row['height'],\n                           num_inference_steps=40,true_cfg_scale=teacher['true_cfg_scale'],\n                           generator=torch.Generator('cpu').manual_seed(row['seed']),\n                           use_kv_cache=True,output_type='pil').images[0]\n            torch.cuda.synchronize()\n            seconds=time.perf_counter()-started\n            denoiser=sum(a.elapsed_time(b) for a,b in events)/1000\n            return image,seconds,denoiser\n\n        # Fifteen AB and fifteen BA pairs, shuffled before observing timings.\n        rng=random.Random(request['benchmark_protocol']['order_seed'])\n        orders=[('teacher','candidate_A')]*15+[('candidate_A','teacher')]*15\n        rng.shuffle(orders)\n        report['pair_orders']=orders\n        report['rows']=[]\n        for index,(row,order) in enumerate(zip(request['rows'],orders)):\n            for position,variant in enumerate(order):\n                restore_started=time.perf_counter()\n                restore(variant)\n                restore_seconds=time.perf_counter()-restore_started\n                for _ in range(request['benchmark_protocol']['warmups_per_restore']):\n                    warm,_,_=generate(row)\n                    del warm\n                gc.collect()\n                torch.cuda.empty_cache()\n                torch.cuda.reset_peak_memory_stats()\n                image,seconds,denoiser=generate(row)\n                record=dict(pair=index,position=position,variant=variant,source_id=row['source_id'],\n                            seed=row['seed'],width=row['width'],height=row['height'],seconds=seconds,\n                            denoiser_seconds=denoiser,restore_seconds_excluded=restore_seconds,\n                            peak_allocated_gib=torch.cuda.max_memory_allocated()/2**30,\n                            peak_reserved_gib=torch.cuda.max_memory_reserved()/2**30,\n                            resident_allocated_gib=torch.cuda.memory_allocated()/2**30)\n                image_path=directory/f'pair_{index:02d}_{variant}.png'\n                image.save(image_path)\n                record['image']=dict(name=image_path.name,sha256=digest(image_path),bytes=image_path.stat().st_size)\n                del image\n                report['rows'].append(record)\n                report['calls'][variant]+=1\n                (directory/'progress.json').write_text(json.dumps(report,indent=2))\n                results_volume.commit()\n                print(f'Pair {index+1}/30 {variant}: {seconds:.3f}s, {record[\"peak_allocated_gib\"]:.3f} GiB',flush=True)\n        pre.remove()\n        post.remove()\n        ratios=[]\n        for index in range(30):\n            pair={r['variant']:r for r in report['rows'] if r['pair']==index}\n            ratios.append(pair['teacher']['seconds']/pair['candidate_A']['seconds'])\n        bootstrap_rng=random.Random(20261017)\n        boot=sorted(statistics.median(bootstrap_rng.choices(ratios,k=len(ratios))) for _ in range(20000))\n        report['paired_speedup']=dict(median=statistics.median(ratios),bootstrap_95pct=[boot[499],boot[19499]],\n                                      replicates=20000,ratios=ratios)\n        report['summary']={}\n        for variant in variants:\n            rows=[r for r in report['rows'] if r['variant']==variant]\n            values=sorted(r['seconds'] for r in rows)\n            median=statistics.median(values)\n            report['summary'][variant]=dict(pairs=len(rows),median_seconds=median,p90_seconds=values[26]+.1*(values[27]-values[26]),\n                throughput_images_per_second=1/median,median_denoiser_seconds=statistics.median(r['denoiser_seconds'] for r in rows),\n                peak_allocated_gib=max(r['peak_allocated_gib'] for r in rows),peak_reserved_gib=max(r['peak_reserved_gib'] for r in rows))\n        report['status']='passed'\n        report['scope']='Matched 40-step teacher vs provisional candidate A, one H100, 30 balanced randomized pairs; no quality promotion.'\n    except Exception as exc:\n        import traceback\n        report['status']='failed'\n        report['error']=repr(exc)\n        report['traceback']=traceback.format_exc()\n    (directory/'summary.json').write_text(json.dumps(report,indent=2))\n    results_volume.commit()\n    return report\n",
+    "selection": "5 never-used VALIDATION prompts per dimension (salted SHA-256 rank) + 5 explicit-text prompts from the Phase 6 text set (salted rank)",
+    "protocol": "same prompt, CPU noise seed, image size, scheduler, true CFG 1.0, 40 denoising steps, deterministic kernels; audited derived tables on every host; no training",
+    "benchmark_protocol": {
+      "pairs": 30,
+      "order_seed": 20261017,
+      "warmups_per_restore": 1,
+      "precision": "BF16 with original FP32 bridge masters cast per forward",
+      "attention": "SDPBackend.MATH",
+      "steps": 40,
+      "batch_size": 1,
+      "kv_cache": true,
+      "timing": "CUDA-synchronized pipeline wall time, excluding restoration, warmup and image serialization; CUDA events for denoiser",
+      "memory": "one active variant; unused teacher blocks moved to CPU; reset peaks after warmup; no offload of active pipeline"
+    }
+  }
+}

@@ -7,11 +7,12 @@ The published Phase 6 conclusion selects the pretrained block-5 bridge; full-wei
 healing was not promoted after blinded image QA. Phase 7 candidate A removes blocks
 4-5 with a rank-512 region bridge and 60 healing updates. Its 7.41% wider validation
 error fails the historical 6.52% gate; the 30-prompt image screen was unblinded.
-The four-block cut (2-5) failed. Conditional importance scanning has not run.
+The four-block cut (2-5) failed. Conditional importance scanning and a 30-pair
+randomized latency/VRAM benchmark were launched on 17 October; results are pending.
 
 Published summaries are preserved under `data/published/2026-10-04`; original
 Phase 6/7 requests, embedded sources and experiment summaries have been recovered
-from Modal; 16 original local review/protocol artifacts remain missing. Selected
+from Modal; 10 original local review/protocol artifacts remain missing. Selected
 large tensors are being restored outside Git. See README.md and
 `data/phase7/NEXT_EXPERIMENT.md` for recovery prerequisites and experiment order.
 This status distinguishes published findings from locally reproduced evidence.

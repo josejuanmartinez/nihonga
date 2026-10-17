@@ -1,0 +1,77 @@
+{
+  "updated": "2026-10-04",
+  "status": "planned_not_executed",
+  "baseline": {
+    "candidate": "A_healed_u60",
+    "surviving_transformer_blocks": 30,
+    "removed_original_block_ids": [
+      4,
+      5
+    ],
+    "region_bridge_rank": 512,
+    "healing_updates": 60,
+    "checkpoint_record": "data/phase7/blocks45_healing_v3/checkpoint_step_060.pt.remote.json",
+    "quality_status": "Provisional: 30-prompt unblinded image screen; historical velocity gate failed."
+  },
+  "eligible_original_block_ids": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "denoising_steps": 40,
+  "scope": "Recalculate importance in the frozen current student; independently bypass each surviving transformer block.",
+  "metrics": {
+    "baseline_displacement": "L2(v_bypass - v_A) / L2(v_A)",
+    "teacher_error_change_percentage_points": "100 * (relative_L2(v_bypass, v_teacher) - relative_L2(v_A, v_teacher))",
+    "reporting": [
+      "overall",
+      "early",
+      "middle",
+      "late",
+      "prompt_group",
+      "percentiles",
+      "worst_regressions"
+    ]
+  },
+  "validation": {
+    "screening": "Existing saved 10 and 50 validation prompts are development data; use matched inputs and verified replay.",
+    "replacement": "Fit bridges on TRAIN inputs from the changed student; evaluate complete candidates against baseline A and the teacher.",
+    "acceptance": "Predeclare tolerances and image-review rule; require fresh blinded matched images and measured quality/latency evidence.",
+    "iteration": "Recalculate all surviving blocks after every accepted removal; never infer joint removal from summed individual scores."
+  },
+  "persistence": "Version and save outputs, metrics, input identities, checkpoint and contract hashes locally; cached reruns make no computation or calls.",
+  "limitations": [
+    "No conditional importance ranking has been computed.",
+    "The tested four-block recipe failed; other removal sequences have not been ruled out.",
+    "Bypass scores do not establish bridge replaceability or image quality.",
+    "Negative teacher error changes may reflect cancellation of existing student error.",
+    "Candidate A has not passed the historical 6.52% velocity gate or a larger blinded image evaluation."
+  ]
+}

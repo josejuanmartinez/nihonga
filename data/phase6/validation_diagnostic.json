@@ -1,0 +1,67 @@
+{
+  "source": "data/phase6/full_student_healing_lr_low_v2/summary.json",
+  "source_sha256": "f8d7931e8d6574c4845da51dffbda5ff00630ae05b6d40e83c5c9077445bfee1",
+  "baseline_mean_percent": 5.517894482860963,
+  "final_mean_percent": 5.653896580139796,
+  "improved_comparisons": 21,
+  "worsened_comparisons": 9,
+  "by_stage": [
+    {
+      "stage": "early",
+      "baseline_mean_percent": 9.94701612740755,
+      "final_mean_percent": 10.37087295204401
+    },
+    {
+      "stage": "middle",
+      "baseline_mean_percent": 2.5970355793833733,
+      "final_mean_percent": 2.57349856197834
+    },
+    {
+      "stage": "late",
+      "baseline_mean_percent": 4.009631741791964,
+      "final_mean_percent": 4.0173182263970375
+    }
+  ],
+  "largest_regressions": [
+    {
+      "source_id": "p1-81fc1d548f81",
+      "stage": "early",
+      "dimension": "creative",
+      "baseline_percent": 13.325463235378265,
+      "final_percent": 14.726601541042328,
+      "change_percentage_points": 1.4011383056640625
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "stage": "early",
+      "dimension": "alignment",
+      "baseline_percent": 8.573050051927567,
+      "final_percent": 9.893594682216644,
+      "change_percentage_points": 1.3205446302890778
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "stage": "early",
+      "dimension": "aesthetics",
+      "baseline_percent": 11.886639147996902,
+      "final_percent": 12.78877705335617,
+      "change_percentage_points": 0.9021379053592682
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "stage": "early",
+      "dimension": "alignment",
+      "baseline_percent": 15.094755589962006,
+      "final_percent": 15.925279259681702,
+      "change_percentage_points": 0.830523669719696
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "stage": "late",
+      "dimension": "alignment",
+      "baseline_percent": 5.2032191306352615,
+      "final_percent": 5.780774727463722,
+      "change_percentage_points": 0.5775555968284607
+    }
+  ]
+}

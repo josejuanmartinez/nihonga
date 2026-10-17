@@ -1,0 +1,12 @@
+{
+  "version": "phase6-trained-image-manual-review-v1",
+  "scope": "Visual inspection of 11 matched teacher, pretrained-bridge, and low-rate update-60 image triples; not blinded or a numeric quality benchmark",
+  "source_id_poster": "p1-81fc1d548f81",
+  "poster_observation": "The teacher renders the requested CRIMSON HARBOR title. Both students replace HARBOR with unrelated letters. The update-60 checkpoint does not repair this text failure.",
+  "other_observations": [
+    "On the snail, cupcake, aurora, chrome sphere, tundra, Gothic house, and comic prompts, the two student versions retain broadly similar subjects and styles. Their differences are mostly in composition or detail and do not establish a consistent winner by visual inspection.",
+    "On the Songkran prompt, the teacher shows a standing person amid water spray; both student images instead center a seated person on the road.",
+    "On the robot gardener prompt, the teacher shows a full-body robot with a yellow backpack; both student images use a much tighter portrait and change the face and body design."
+  ],
+  "decision": "Retain the pretrained bridge as the current selected image model. Keep low-rate update 60 as a candidate for a controlled image-quality evaluation; teacher-velocity agreement alone does not justify promotion."
+}

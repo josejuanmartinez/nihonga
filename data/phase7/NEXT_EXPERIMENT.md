@@ -1,6 +1,8 @@
 # Conditional pruning and performance protocol
 
-Status: awaiting original archive recovery; no GPU experiment executed.
+Status (17 October 2026): remote requests, sources and available summaries recovered;
+conditional scan and latency benchmark launched. See their hash-addressed request
+and call records under `conditional_importance/` and `latency_benchmark/`.
 The authoritative saved protocol is the `phase7_adaptive_pruning_plan` field in
 `../published/2026-10-04/results.json`. This document specifies execution order;
 it does not replace that record or claim newly chosen thresholds were historical.
@@ -44,7 +46,8 @@ it does not replace that record or claim newly chosen thresholds were historical
    sampling, validation and independent quality/latency gates (Phases 9–12).
    Do not start training or pick a block from historical unconditional scores.
 
-Recovery is a prerequisite for an executable worker: the published snapshot does
-not contain candidate A's state, fixed input packets or the complete cache/replay
-contract for Phase 7. An implementation invented without them cannot fulfill the
-saved experiment protocol.
+The workers now use the recovered requests, candidate A checkpoint hash, fixed
+input hashes and original cache/replay contract. The scan verifies all 90 teacher
+controls and historical candidate A predictions before any bypass trial. The
+saved historical protocol remains unchanged with its original
+`planned_not_executed` status; new execution records are stored separately.

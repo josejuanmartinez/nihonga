@@ -1,0 +1,863 @@
+{
+  "version": "phase6-text-qa-validation-review-v1",
+  "status": "passed",
+  "prompt_count": 45,
+  "image_count": 180,
+  "target_string_count": 66,
+  "optimizer_updates": 0,
+  "counts": {
+    "teacher": {
+      "pass": 43,
+      "fail": 2
+    },
+    "pretrained": {
+      "pass": 41,
+      "fail": 3,
+      "uncertain": 1
+    },
+    "update120": {
+      "pass": 41,
+      "fail": 3,
+      "uncertain": 1
+    },
+    "update180": {
+      "pass": 39,
+      "fail": 5,
+      "uncertain": 1
+    }
+  },
+  "groups": {
+    "posters": {
+      "teacher": {
+        "pass": 9,
+        "fail": 1
+      },
+      "pretrained": {
+        "pass": 8,
+        "uncertain": 1,
+        "fail": 1
+      },
+      "update120": {
+        "pass": 8,
+        "uncertain": 1,
+        "fail": 1
+      },
+      "update180": {
+        "pass": 6,
+        "fail": 3,
+        "uncertain": 1
+      }
+    },
+    "text_rendering": {
+      "teacher": {
+        "pass": 34,
+        "fail": 1
+      },
+      "pretrained": {
+        "pass": 33,
+        "fail": 2
+      },
+      "update120": {
+        "pass": 33,
+        "fail": 2
+      },
+      "update180": {
+        "pass": 33,
+        "fail": 2
+      }
+    },
+    "multilingual_target": {
+      "teacher": {
+        "pass": 11
+      },
+      "pretrained": {
+        "pass": 11
+      },
+      "update120": {
+        "pass": 11
+      },
+      "update180": {
+        "pass": 11
+      }
+    },
+    "latin_only_target": {
+      "teacher": {
+        "pass": 32,
+        "fail": 2
+      },
+      "pretrained": {
+        "pass": 30,
+        "fail": 3,
+        "uncertain": 1
+      },
+      "update120": {
+        "pass": 30,
+        "fail": 3,
+        "uncertain": 1
+      },
+      "update180": {
+        "pass": 28,
+        "fail": 5,
+        "uncertain": 1
+      }
+    },
+    "one_target": {
+      "teacher": {
+        "pass": 28
+      },
+      "pretrained": {
+        "pass": 26,
+        "fail": 1,
+        "uncertain": 1
+      },
+      "update120": {
+        "pass": 26,
+        "fail": 1,
+        "uncertain": 1
+      },
+      "update180": {
+        "pass": 24,
+        "fail": 3,
+        "uncertain": 1
+      }
+    },
+    "multiple_targets": {
+      "teacher": {
+        "pass": 15,
+        "fail": 2
+      },
+      "pretrained": {
+        "pass": 15,
+        "fail": 2
+      },
+      "update120": {
+        "pass": 15,
+        "fail": 2
+      },
+      "update180": {
+        "pass": 15,
+        "fail": 2
+      }
+    }
+  },
+  "paired_vs_pretrained": {
+    "update120_win": 0,
+    "update120_loss": 0,
+    "same_status": 44,
+    "uncertain_pair": 1
+  },
+  "paired_vs_update180": {
+    "update120_win": 2,
+    "update120_loss": 0,
+    "same_status": 42,
+    "uncertain_pair": 1
+  },
+  "rows": [
+    {
+      "source_id": "p1-05148c0fe256",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "Velvet Station",
+        "Live in Berlin"
+      ],
+      "scores": {
+        "pretrained": "pass",
+        "update180": "pass",
+        "update120": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-05d395dbf2c5",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "SALE"
+      ],
+      "scores": {
+        "pretrained": "pass",
+        "teacher": "pass",
+        "update120": "pass",
+        "update180": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-0b32a45e0b90",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Welcome Home"
+      ],
+      "scores": {
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass",
+        "update120": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-0f120aa700ba",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "谢谢惠顾"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-1077141c96ef",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Live Music Tonight"
+      ],
+      "scores": {
+        "pretrained": "pass",
+        "update120": "pass",
+        "update180": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-1612d187dc78",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "茶馆"
+      ],
+      "scores": {
+        "update120": "pass",
+        "teacher": "pass",
+        "pretrained": "pass",
+        "update180": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-17f51f3f25f4",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "EXIT"
+      ],
+      "scores": {
+        "update120": "pass",
+        "pretrained": "pass",
+        "update180": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-1d6fa13f37df",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Good Vibes Only"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update180": "pass",
+        "pretrained": "pass",
+        "update120": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-2c41ce781634",
+      "subdimension": "posters",
+      "language": "zh",
+      "target_strings": [
+        "HIDDEN GARDEN",
+        "Visit Kyoto"
+      ],
+      "scores": {
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-2e7777685216",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "欢迎光临"
+      ],
+      "scores": {
+        "update180": "pass",
+        "update120": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-2fa54a3c4eb8",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "The Rusty Anchor",
+        "Moonlight Motel"
+      ],
+      "scores": {
+        "update180": "fail",
+        "pretrained": "fail",
+        "teacher": "fail",
+        "update120": "fail"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-31848d442c94",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "WILD PARADE",
+        "Since 1924"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-31ba2f60467a",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Latte $4",
+        "Espresso $3",
+        "Croissant $3"
+      ],
+      "scores": {
+        "update120": "pass",
+        "pretrained": "pass",
+        "update180": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-336acc6ded43",
+      "subdimension": "posters",
+      "language": "zh",
+      "target_strings": [
+        "PAPER STATION"
+      ],
+      "scores": {
+        "pretrained": "pass",
+        "update120": "pass",
+        "update180": "fail",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-355b052eaf84",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Handmade with Love"
+      ],
+      "scores": {
+        "update180": "pass",
+        "pretrained": "pass",
+        "update120": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-3a37b6221abf",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Live Music Tonight"
+      ],
+      "scores": {
+        "pretrained": "pass",
+        "update120": "pass",
+        "teacher": "pass",
+        "update180": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-51bad79bda2a",
+      "subdimension": "text_rendering",
+      "language": "zh",
+      "target_strings": [
+        "Room 404",
+        "Fresh Bread Daily"
+      ],
+      "scores": {
+        "pretrained": "pass",
+        "update180": "pass",
+        "update120": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-5cbf83d843d3",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "LIBRARY"
+      ],
+      "scores": {
+        "update120": "pass",
+        "teacher": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-62c0faa25a08",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Quiet Please"
+      ],
+      "scores": {
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass",
+        "update120": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-7fe4a627f6e1",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "谢谢惠顾",
+        "Back in 5 Minutes"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "pretrained": "pass",
+        "update120": "pass",
+        "update180": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-90c3c54eb7a1",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "生日快乐",
+        "Room 404"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-94318bd2ede8",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "CINEMA"
+      ],
+      "scores": {
+        "update120": "pass",
+        "teacher": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-9842c445b578",
+      "subdimension": "text_rendering",
+      "language": "zh",
+      "target_strings": [
+        "Fresh Bread Daily"
+      ],
+      "scores": {
+        "update180": "fail",
+        "teacher": "pass",
+        "update120": "fail",
+        "pretrained": "fail"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-984c714ca196",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Espresso $3",
+        "Tea $2",
+        "Latte $4"
+      ],
+      "scores": {
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-a2a80158c807",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Good Vibes Only"
+      ],
+      "scores": {
+        "update180": "pass",
+        "teacher": "pass",
+        "pretrained": "pass",
+        "update120": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-aee20d9d33c4",
+      "subdimension": "text_rendering",
+      "language": "zh",
+      "target_strings": [
+        "Thank You!",
+        "Quiet Please"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "pretrained": "pass",
+        "update120": "pass",
+        "update180": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-b15e85ef5199",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Espresso $3",
+        "Latte $4",
+        "Matcha $5"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-bf672df00204",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "The Rusty Anchor"
+      ],
+      "scores": {
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-c476fb4c5c41",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Sunday Brunch"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-c6eb44933bf1",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "NORTHERN PARADE"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "pretrained": "pass",
+        "update180": "fail",
+        "update120": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-c9344c076abf",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Happy Birthday Emma"
+      ],
+      "scores": {
+        "update180": "pass",
+        "update120": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-c9b5daa60f9e",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "The Last Station"
+      ],
+      "scores": {
+        "update120": "pass",
+        "pretrained": "pass",
+        "update180": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-cec2ab394088",
+      "subdimension": "posters",
+      "language": "zh",
+      "target_strings": [
+        "Electric Frontier"
+      ],
+      "scores": {
+        "update120": "uncertain",
+        "teacher": "pass",
+        "pretrained": "uncertain",
+        "update180": "uncertain"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-e0e52949635d",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "你好世界"
+      ],
+      "scores": {
+        "update120": "pass",
+        "pretrained": "pass",
+        "update180": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-e239a237e9ac",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "CRIMSON FRONTIER",
+        "Summer 2026"
+      ],
+      "scores": {
+        "update120": "pass",
+        "teacher": "pass",
+        "update180": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-e6dff23e44f3",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Quiet Please",
+        "Gate 42"
+      ],
+      "scores": {
+        "update180": "pass",
+        "update120": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-e83d7dcacb2d",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "GOLDEN RIVER",
+        "Live in Berlin"
+      ],
+      "scores": {
+        "pretrained": "fail",
+        "teacher": "fail",
+        "update120": "fail",
+        "update180": "fail"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-ea0faedaffbc",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "福"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "update180": "pass",
+        "update120": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-f115c13b6d80",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "新年快乐",
+        "Moonlight Motel"
+      ],
+      "scores": {
+        "update180": "pass",
+        "pretrained": "pass",
+        "update120": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-f5e48d1b6f34",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "小心地滑"
+      ],
+      "scores": {
+        "update180": "pass",
+        "update120": "pass",
+        "teacher": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-f66dd8002f66",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "营业中"
+      ],
+      "scores": {
+        "update180": "pass",
+        "update120": "pass",
+        "teacher": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-f6c5630e5822",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "Matcha $5",
+        "Latte $4",
+        "Tea $2"
+      ],
+      "scores": {
+        "update180": "pass",
+        "update120": "pass",
+        "teacher": "pass",
+        "pretrained": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-f7a43f21c771",
+      "subdimension": "posters",
+      "language": "en",
+      "target_strings": [
+        "Golden Echo",
+        "Visit Kyoto"
+      ],
+      "scores": {
+        "update120": "pass",
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-fce7153ce00a",
+      "subdimension": "text_rendering",
+      "language": "zh",
+      "target_strings": [
+        "Nihonga Tea Room"
+      ],
+      "scores": {
+        "teacher": "pass",
+        "pretrained": "pass",
+        "update180": "pass",
+        "update120": "pass"
+      },
+      "note": ""
+    },
+    {
+      "source_id": "p1-fcebe5f20cef",
+      "subdimension": "text_rendering",
+      "language": "en",
+      "target_strings": [
+        "茶馆"
+      ],
+      "scores": {
+        "update180": "pass",
+        "pretrained": "pass",
+        "teacher": "pass",
+        "update120": "pass"
+      },
+      "note": ""
+    }
+  ],
+  "source_sha256": {
+    "request.json": "9b78bfd90ba030c1c5e24e7ca09afc81b01b97eabd2353fa8d78ea61b5e51045",
+    "summary.json": "e82a25f7e4ec99cc701a9fcde3856b3b09bd7dab4ef7a7d15970da9d3c6ebe34",
+    "rubric.json": "1a4259c683b9ad87853f5b3d37e281625a0868e246df60afbff1e08cf8ca183a",
+    "blind_key.json": "16da37cf0b986c634ad77d5aca0e63dd3262dc75006819e7165c1f5e513486bc",
+    "blind_sheets.json": "6f782aa491909cf7f87af5c64db05342b29bebff96d86192465e0623dc1a6023",
+    "blind_scores.json": "1f2fefada7f24f4d6e10b74cc0d609bec6c1515aceb5867c2f30501cb6019baa",
+    "labeled_sheets.json": "67cfe399229a8ec0d40433f7c1f3375d2699bf2b68bf3e54548f5bfc3e3ab535"
+  },
+  "scope": "All 45 previously unused validation text prompts at one seed each; model-blind first-pass visual scoring; uncertain cases preserved"
+}

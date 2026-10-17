@@ -1,0 +1,76 @@
+{
+  "version": "phase7-candidate-images-visual-review-v1",
+  "request_key": "dda8c184e657dfb604c35fb261d83371c108c39fac033a0f57db66f7686c30ad",
+  "reviewer": "Claude (unblinded, model labels visible), one seed per prompt, 2026-10-03",
+  "rubric": "text prompts: pass only if every requested phrase is readable and correctly spelled (small sign checked on a full-resolution crop); fresh prompts: qualitative notes on subject, prompt adherence and image quality versus the teacher",
+  "text_prompts": [
+    {
+      "source_id": "p1-e83d7dcacb2d",
+      "requested": "\"GOLDEN RIVER\" / \"Live in Berlin\"",
+      "verdicts": {
+        "teacher": "pass",
+        "A_healed_u60": "pass",
+        "B_healed_u240": "pass",
+        "C_bridge_only": "pass",
+        "D_blocks25_u420": "fail: \"GOLDLEN RAVER\""
+      }
+    },
+    {
+      "source_id": "p1-0b32a45e0b90",
+      "requested": "\"Welcome Home\"",
+      "verdicts": {
+        "teacher": "pass",
+        "A_healed_u60": "pass",
+        "B_healed_u240": "pass",
+        "C_bridge_only": "pass",
+        "D_blocks25_u420": "fail: \"Wolome Home\""
+      }
+    },
+    {
+      "source_id": "p1-c9344c076abf",
+      "requested": "\"Happy Birthday Emma\"",
+      "verdicts": {
+        "teacher": "pass",
+        "A_healed_u60": "pass",
+        "B_healed_u240": "pass",
+        "C_bridge_only": "pass",
+        "D_blocks25_u420": "fail: \"Happy B'rday Emma\""
+      }
+    },
+    {
+      "source_id": "p1-f66dd8002f66",
+      "requested": "营业中",
+      "verdicts": {
+        "teacher": "pass",
+        "A_healed_u60": "pass",
+        "B_healed_u240": "pass",
+        "C_bridge_only": "pass",
+        "D_blocks25_u420": "fail: wrong first character"
+      }
+    },
+    {
+      "source_id": "p1-2fa54a3c4eb8",
+      "requested": "\"The Rusty Anchor\" + small \"Moonlight Motel\" sign",
+      "verdicts": {
+        "teacher": "pass",
+        "A_healed_u60": "pass",
+        "B_healed_u240": "fail: \"The Rusty Anchar\", sign has no text",
+        "C_bridge_only": "fail: sign has no text",
+        "D_blocks25_u420": "fail: \"The Rusty Coit\", sign has no text"
+      }
+    }
+  ],
+  "text_pass_counts": {
+    "teacher": 5,
+    "A_healed_u60": 5,
+    "B_healed_u240": 4,
+    "C_bridge_only": 4,
+    "D_blocks25_u420": 0
+  },
+  "fresh_prompt_notes": {
+    "thirty_block_students": "A, B and C are nearly identical to each other and usually share a composition that differs from the teacher (e.g. checkered vs plain plate, yellow vs grey biplane, different group arrangement); sharpness, lighting, anatomy and style match the teacher on every fresh prompt; on the 3D-shapes prompt all three draw the requested star while the teacher star is malformed",
+    "twenty_eight_block_student": "D often loses the subject or the prompt: a cat instead of the requested dog, an eye instead of a peacock feather, a harbour scene instead of a biplane, a missing alarm clock, a creature instead of a hover tank, a chess piece instead of a crystal cone"
+  },
+  "conclusion": "Blocks 2-5 removed (28 blocks, D) is not usable. Blocks 4-5 removed (30 blocks) looks release-quality in this unblinded 30-prompt screen; A (healed update 60) is the strongest candidate (5/5 text, like the teacher).",
+  "limitations": "single unblinded reviewer, 30 prompts, one seed each; not a blinded benchmark"
+}

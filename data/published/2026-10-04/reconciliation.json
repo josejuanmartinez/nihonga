@@ -1,12 +1,12 @@
 {
-  "status": "partial_recovery_published_summary_only",
+  "status": "recovered_available_sources_with_gaps",
   "snapshot_sha256": "ddd1baf752f553f625df5f927bd096904322f1495b980390cba648500d5ca476",
   "snapshot_updated": "2026-10-04",
   "source_repository": "https://github.com/Neopolita/niwaki-page",
   "source_commit": "57ce7e4",
   "counts": {
-    "match": 143,
-    "missing": 16,
+    "match": 149,
+    "missing": 10,
     "different": 0
   },
   "artifacts": [
@@ -109,8 +109,8 @@
     {
       "path": "data/phase6/validation_diagnostic.json",
       "expected_sha256": "34a43290880ea3bd2acf71b536ce4fbf03b68374df7796d096d268b08d95b0d3",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "34a43290880ea3bd2acf71b536ce4fbf03b68374df7796d096d268b08d95b0d3",
+      "status": "match"
     },
     {
       "path": "data/phase6/expanded_validation/summary.json",
@@ -139,8 +139,8 @@
     {
       "path": "data/phase6/trained_image_pairs/visual_review.json",
       "expected_sha256": "20c9e010236a9c4b1f43148b8bdbe46413b2e008a79a6e72a9e90b311aaaad17",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "20c9e010236a9c4b1f43148b8bdbe46413b2e008a79a6e72a9e90b311aaaad17",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/run_v1/summary.json",
@@ -187,8 +187,8 @@
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/review_summary.json",
       "expected_sha256": "ee98a59fae8b001a65d7717f112fb0e08dc4f81cee978261f4879fffbfd4ff2f",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "ee98a59fae8b001a65d7717f112fb0e08dc4f81cee978261f4879fffbfd4ff2f",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/sheets.json",
@@ -211,8 +211,8 @@
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/review_summary.json",
       "expected_sha256": "8ebf46f4f43f71283441c155982cdf18e4bf2a0cde7c8826646f9bb3e0032597",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "8ebf46f4f43f71283441c155982cdf18e4bf2a0cde7c8826646f9bb3e0032597",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheets.json",
@@ -337,14 +337,14 @@
     {
       "path": "data/phase7/candidate_images/visual_review.json",
       "expected_sha256": "4454280e75cc7ca470f0b8ae8f7278f690fd6102d2e97ee7726bbe433e019381",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4454280e75cc7ca470f0b8ae8f7278f690fd6102d2e97ee7726bbe433e019381",
+      "status": "match"
     },
     {
       "path": "data/phase7/adaptive_pruning_plan.json",
       "expected_sha256": "a13b29d648d849b317612d645c20b164a896e26bac368da3205ff6a12d558659",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "a13b29d648d849b317612d645c20b164a896e26bac368da3205ff6a12d558659",
+      "status": "match"
     },
     {
       "path": "data/phase3/activations/full/summary.json",
@@ -966,7 +966,7 @@
     }
   ],
   "limitations": [
-    "Published fields cannot reconstruct original source files or checkpoints.",
-    "No conditional scan, benchmark, training or promotion performed."
+    "Only hash-identical source bytes count as recovered; missing artifacts remain explicit.",
+    "This reconciliation performs no model computation or promotion."
   ]
 }

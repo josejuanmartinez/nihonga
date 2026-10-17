@@ -33,7 +33,7 @@ def main():
                             status='missing' if actual is None else
                             'match' if actual == expected else 'different'))
     report = {
-        'status': 'partial_recovery_published_summary_only',
+        'status': 'recovered_available_sources_with_gaps' if any(r['status']=='missing' for r in records) else 'all_published_sources_verified',
         'snapshot_sha256': sha256(target),
         'snapshot_updated': published['updated'],
         'source_repository': 'https://github.com/Neopolita/niwaki-page',
@@ -41,8 +41,8 @@ def main():
         'counts': {status: sum(r['status'] == status for r in records)
                    for status in ('match', 'missing', 'different')},
         'artifacts': records,
-        'limitations': ['Published fields cannot reconstruct original source files or checkpoints.',
-                        'No conditional scan, benchmark, training or promotion performed.'],
+        'limitations': ['Only hash-identical source bytes count as recovered; missing artifacts remain explicit.',
+                        'This reconciliation performs no model computation or promotion.'],
     }
     (destination / 'reconciliation.json').write_text(
         json.dumps(report, indent=2) + '\n', encoding='utf-8')
