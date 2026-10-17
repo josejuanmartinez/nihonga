@@ -11,13 +11,15 @@ def main():
     sys.stderr.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--variants-dir', default='block13_bridge_v2')
+    parser.add_argument('--order', nargs='*', help='Variant names in rendering order (default: as fitted).')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     recovered = root / 'data/recovered/modal'
     images_key = 'dda8c184e657dfb604c35fb261d83371c108c39fac033a0f57db66f7686c30ad'
     base = json.loads((recovered / 'phase7/candidate_images' / images_key / 'request.json').read_bytes())['request']
     scan_b = json.loads(next((root / 'data/phase7/conditional_importance_b').glob('*/request.json')).read_bytes())['request']
-    fit = json.loads(next((root / 'data/phase7/block13_bridge_v2').glob('*/summary.json')).read_bytes())
+    fit = next(r for r in (json.loads(p.read_bytes()) for p in (root / 'data/phase7' / args.variants_dir).glob('*/summary.json')) if r.get('status') == 'passed')
     if fit.get('status') != 'passed':
         raise RuntimeError('Bridge variants run did not complete.')
     selected = scan_b['selected_candidate']
@@ -30,8 +32,8 @@ def main():
         execution_account='new',
         block5_bridge=dict(remote_path=f"/phase3/phase5/fitting/{scan_b['fit_key']}/{Path(selected['checkpoint_path']).name}",
                            sha256=selected['checkpoint_sha256'], step=selected['selected_update'], request_key=scan_b['fit_key']),
-        variants=[dict(name=name, remote_path=f"/phase3/phase7/bridge_variants/{fit['request_key']}/{v['checkpoint']['name']}",
-                       sha256=v['checkpoint']['sha256']) for name, v in fit['variants'].items()],
+        variants=[dict(name=name, remote_path=f"/phase3/phase7/{'bridge_variants' if args.variants_dir == 'block13_bridge_v2' else 'bridge_variants_v3'}/{fit['request_key']}/{v['checkpoint']['name']}",
+                       sha256=v['checkpoint']['sha256']) for name, v in sorted(fit['variants'].items(), key=lambda kv: (args.order or list(fit['variants'])).index(kv[0]))],
         scope='Qualitative matched-seed screen of block-13 bridge variants inside B; teacher and B images reused from the earlier run')
     from experiment_runtime import pin_reference_runtime
     pin_reference_runtime(request, recovered)

@@ -132,7 +132,10 @@ def generate_variant_images(request, key):
             if checkpoint['layer'] != 13 or checkpoint['variant']['name'] != variant['name']:
                 raise RuntimeError('Variant provenance differs.')
             spec = checkpoint['variant']
-            bridge13 = conditioned['ConditionedBridge'](4096, spec['rank'], spec['conditioned'])
+            if spec.get('local'):
+                bridge13 = conditioned['LocalConditionedBridge'](4096, spec['rank'])
+            else:
+                bridge13 = conditioned['ConditionedBridge'](4096, spec['rank'], spec['conditioned'])
             bridge13.load_state_dict(checkpoint['state_dict'])
             bridge13.requires_grad_(False)
             conditioned['insert_conditioned_bridge'](model, 13, bridge13)
