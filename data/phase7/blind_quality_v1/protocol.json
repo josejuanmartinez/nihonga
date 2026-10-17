@@ -1,0 +1,37 @@
+{
+  "status": "preregistered_not_scored",
+  "date": "2026-10-17",
+  "candidate": "A_healed_u60",
+  "reference": "teacher",
+  "counts": {
+    "counting": 35,
+    "spatial_relation": 34,
+    "colors": 30,
+    "multiple_objects": 30,
+    "text_rendering": 30
+  },
+  "prompt_count": 159,
+  "images": 318,
+  "steps": 40,
+  "selection": "Existing master-pool VALIDATION with pool_rank >= 20000; exclude IDs in recovered requests and published QA; hash-ranked within group before viewing images",
+  "master_pool_sha256": "d358101292e899bd47ce5e6fbb689cf7a77da57b9ef0e4665723cb7e1e915c22",
+  "prompt_file_sha256": "0c5dad941c8542372403e2a905bafcf6cdbed4755eeb73ee782886be524df499",
+  "review": {
+    "reviewer": "Single model-blind AI visual review",
+    "labels": [
+      "pass",
+      "fail",
+      "uncertain"
+    ],
+    "rule": "Score each category question separately; uncertain is not a clear pass. Lock scores before revealing per-prompt randomized model labels."
+  },
+  "acceptance": {
+    "adherence": "129-prompt paired clear-pass gain A minus teacher; paired bootstrap 95% lower bound must be >= -0.05",
+    "text": "30-prompt panel: A clear passes must be >= teacher clear passes minus 1; zero clear-pass losses permitted for entirely missing requested phrases",
+    "performance": "30-pair benchmark paired speedup bootstrap 95% lower bound must exceed 1.0",
+    "historical_velocity": "The 0.0652 historical gate remains failed and must be reported; this image panel cannot retroactively pass it.",
+    "promotion": "Passing this screen permits research on a replacement inside A, not production promotion. All replacement velocity/stage/worst-case tolerances must be registered before fitting."
+  },
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20261017
+}
