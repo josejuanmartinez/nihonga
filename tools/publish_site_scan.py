@@ -68,6 +68,28 @@ def review_parts():
             '<p class="note">Unblinded review by an AI visual reviewer, one seed per prompt; a screen, not a benchmark.</p>']
 
 
+def variants_parts():
+    paths = sorted((ROOT / 'data/phase7/block13_bridge_v2').glob('*/summary.json'))
+    if not paths:
+        return []
+    r = json.loads(paths[0].read_text(encoding='utf-8'))
+    first = bridge13()[1]
+    names = {'plain_r1024': 'Plain, rank 1024', 'cond_r256': 'Timestep-conditioned, rank 256', 'cond_r1024': 'Timestep-conditioned, rank 1024'}
+
+    def row(label, params, c):
+        o = c['overall']['teacher_relative_l2']['mean']
+        g10, w50 = (c['panels'][p]['teacher_relative_l2']['mean'] for p in ('gate10', 'wider50'))
+        e, m, l = (c['stages'][s]['teacher_relative_l2']['mean'] for s in ('early', 'middle', 'late'))
+        return [label, params, f'<b>{pct(o)}</b>', pct(g10), pct(w50), f'{pct(e, 1)} / {pct(m, 1)} / {pct(l, 1)}']
+    rows = [row('Plain, rank 256 (first bridge)', '2.1M', first['candidate'])]
+    rows += [row(names.get(n, n), f"{v['parameters'] / 1e6:.1f}M", v) for n, v in r['variants'].items()]
+    return ['<h3 id="phase7-bridge-variants">Better bridges for block 13: timestep conditioning helps</h3>',
+            '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
+            table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
+                  ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training curves were still falling at the last step, so these bridges are undertrained. Images of all three variants are being rendered on the same 30 prompts and seeds.</p></div>']
+
+
 def bridge13_section(protocol, report):
     g, base = protocol['velocity_gates'], protocol['base']
     c = report['candidate']
@@ -134,6 +156,7 @@ def build(a, lat, b, q):
     b13_protocol, b13 = bridge13()
     if b13 is not None:
         parts.extend(bridge13_section(b13_protocol, b13))
+        parts.extend(variants_parts())
     parts.append('<h3>The same scan inside candidate A</h3>')
     parts.append(f'<p class="summary">A alone measures <b>{pct(base_a)}</b> on all 180 comparisons ({pct(panels_a["wider50"])} on the 50 wider prompts and {pct(panels_a["gate10"])} on the 10 check prompts, reproducing the earlier 7.41% and 7.97%).</p>')
     parts.append(table('Candidate A scan: velocity error against the teacher with one extra block bypassed (lower is better); A alone measures ' + pct(base_a),
