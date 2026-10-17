@@ -17,7 +17,7 @@ def main():
     import modal
     root=Path(__file__).resolve().parents[1]
     volume=modal.Volume.from_name('nihonga-phase3-artifacts')
-    for experiment in ('conditional_importance','latency_benchmark'):
+    for experiment in ('conditional_importance','latency_benchmark','blind_quality'):
         for call_path in (root/'data/phase7'/experiment).glob('*/call.json'):
             call=json.loads(call_path.read_bytes())
             for filename in ('summary.json','progress.json','started.json'):
@@ -34,7 +34,7 @@ def main():
                     status='in_progress'
                 print(json.dumps(dict(experiment=experiment,file=filename,status=status,
                     teacher_controls=len(report.get('controls',[])),blocks=len(report.get('blocks',[])),
-                    timed_images=len(report.get('rows',[])),error=report.get('error'))))
+                    timed_images=len(report.get('rows',[])),calls=report.get('calls'),error=report.get('error'))))
                 break
             else:
                 print(experiment+': waiting for container start')

@@ -25,6 +25,10 @@ def main():
     for split in ('train','validation'):
         for r in request['aligned_target_index'][split]:
             expected[request['aligned_target_index']['remote_directory'].strip('/')+'/'+Path(r['tensor_path']).name] = r['tensor_sha256']
+    fresh=request['fresh_aligned_train']
+    directory=fresh['remote_directory'].removeprefix('/phase3/').strip('/')
+    for artifact in fresh['artifacts']:
+        expected[directory+'/'+artifact['name']]=artifact['sha256']
     for artifact in summary['artifacts']:
         if artifact['name'] in ('checkpoint_step_060.pt','validation_step_060.pt'):
             expected[f"phase7/blocks45_healing/{KEY}/{artifact['name']}"] = artifact['sha256']
