@@ -111,7 +111,8 @@ def variants_parts():
     first = bridge13()[1]
     names = {'plain_r1024': 'Plain, rank 1024', 'cond_r256': 'Timestep-conditioned, rank 256', 'cond_r1024': 'Timestep-conditioned, rank 1024',
              'cond_r1024_long': 'Conditioned rank 1024, 3,000 updates', 'cond_local_r1024': 'Conditioned rank 1024 + 3×3 local mixing, 3,000 updates',
-             'e2e_cond': 'Same, trained on the final output (no gain; best at its start)', 'e2e_attn': '<b>+ attention branch, trained on the final output</b>'}
+             'e2e_cond': 'Same, trained on the final output (no gain; best at its start)', 'e2e_attn': '+ attention branch, trained on the final output',
+             'e2e_attn_text': '<b>+ 150 recorded text prompts, 600 more updates</b>'}
 
     def row(label, params, c):
         o = c['overall']['teacher_relative_l2']['mean']
@@ -121,7 +122,8 @@ def variants_parts():
     rows = [row('Plain, rank 256 (first bridge)', '2.1M', first['candidate'])]
     rows += [row(names.get(n, n), f"{v['parameters'] / 1e6:.1f}M", v) for n, v in r['variants'].items()]
     for later in sorted(list((ROOT / 'data/phase7/block13_bridge_v3').glob('*/summary.json')) +
-                        list((ROOT / 'data/phase7/block13_bridge_e2e').glob('*/summary.json'))):
+                        list((ROOT / 'data/phase7/block13_bridge_e2e').glob('*/summary.json')) +
+                        list((ROOT / 'data/phase7/block13_bridge_e2e_text').glob('*/summary.json'))):
         extra = json.loads(later.read_text(encoding='utf-8'))
         if extra.get('status') == 'passed':
             rows += [row(names.get(n, n), f"{v['parameters'] / 1e6:.1f}M", v) for n, v in extra['variants'].items()]
@@ -129,7 +131,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped.</p></div>'] + variant_review_parts() + anchor_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%).</p></div>'] + variant_review_parts() + anchor_parts()
 
 
 def bridge13_section(protocol, report):
