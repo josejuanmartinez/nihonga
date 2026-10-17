@@ -1,0 +1,11 @@
+{
+  "type": "multi-seed text check, exact-spelling count per sign out of 4 seeds, read by Claude",
+  "The Rusty Anchor": {"teacher": 4, "B": 3, "cond_r1024_long": 0, "e2e_attn": 1, "e2e_attn_text": 1},
+  "Happy Birthday Emma": {"teacher": 4, "B": 3, "cond_r1024_long": 1, "e2e_attn": 1, "e2e_attn_text": 2},
+  "Moonlight Motel": {"teacher": 3, "B": 3, "cond_r1024_long": 1, "e2e_attn": 2, "e2e_attn_text": 2},
+  "notes": {
+    "e2e_attn_text": "Rusty Anchor: seed 0 correct, seed 1 'Achar', seed 2 'Ancher', seed 3 'The Rust Anchor'. Emma: seed 0 correct, seed 1 'Emmaa', seed 2 matches B's stylised script, seed 3 'Lmna'. Moonlight: seed 3 'Moonlght'.",
+    "e2e_attn": "Emma counted 1 on the most lenient reading of seed 2 (same stylised script as B)."
+  },
+  "verdict": "Text improves step by step (per-token 2/12, attention 4/12, attention + text data 5/12 across the three signs) but stays below B (9/12)."
+}

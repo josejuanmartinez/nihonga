@@ -78,7 +78,13 @@ def anchor_parts():
             '<figcaption><b>Seed 0, same prompt and noise for every model</b> | teacher, B and the attention bridge write &ldquo;Anchor&rdquo;; both per-token bridges write &ldquo;Achor&rdquo;</figcaption></figure>'
             '<figure class="comparison"><a href="images/phase7-anchor-seeds.jpg"><img loading="lazy" src="images/phase7-anchor-seeds.jpg" alt="B versus the attention bridge on four seeds: B correct three times, the attention bridge once"></a>'
             '<figcaption><b>Four seeds, B (top) and the attention bridge (bottom)</b> | B 3/4 correct; attention bridge 1/4 (&ldquo;Achar&rdquo;, &ldquo;Ancher&rdquo;, garbled)</figcaption></figure></div>',
-            '<p class="note">Only 2 of the bridge&rsquo;s 60 full training prompts contain text; a run that adds 150 recorded text prompts to its training is in progress.</p>']
+            table('Exactly spelled signs out of four seeds, by bridge',
+                  ['Text', 'Teacher', 'B', 'Per-token (cond r1024)', 'Attention', 'Attention + 150 text prompts'],
+                  [['The Rusty Anchor', '4/4', '3/4', '0/4', '1/4', '1/4'],
+                   ['Happy Birthday Emma', '4/4', '3/4', '1/4', '1/4', '2/4'],
+                   ['Moonlight Motel', '3/4', '3/4', '1/4', '2/4', '2/4'],
+                   ['<b>All three</b>', '<b>11/12</b>', '<b>9/12</b>', '<b>2/12</b>', '<b>4/12</b>', '<b>5/12</b>']]),
+            '<div class="verdict"><p><b>Spelling recovers step by step but not yet to B.</b> Only 2 of the bridge&rsquo;s first 60 training prompts contained text; adding 150 recorded text prompts improved velocity everywhere and fixed &ldquo;Emma&rdquo; on one more seed, while &ldquo;The Rusty Anchor&rdquo; stays at one seed of four (seed 3 now reads &ldquo;The Rust Anchor&rdquo;).</p></div>']
 
 
 def variant_review_parts():
