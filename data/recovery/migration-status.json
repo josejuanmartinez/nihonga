@@ -1,5 +1,5 @@
 {
-  "status": "local_recovery_verified_destination_transfer_in_progress",
+  "status": "local_and_new_account_verified",
   "old_account_policy": "download_only",
   "compute_account": "new",
   "old_apps_stopped": [
@@ -21,9 +21,14 @@
   ],
   "old_credentials_can_be_removed": true,
   "removal_gate": "Satisfied: every continuation dependency is downloaded and verified locally. Remaining transfer, verification and execution use only the new credentials.",
-  "remaining": "Finish new-account upload and destination verification, then run replay and experiments in the new account.",
+  "remaining": "Run teacher/candidate replay, conditional scan, benchmark and blinded quality panel in new account only.",
   "superseded_checkpoint_policy": "Large intermediate and abandoned optimizer checkpoints remain in old archive; their records and inventories are preserved. They are not dependencies of continuation.",
   "old_downloads_complete": true,
   "local_verified_tensor_artifacts": 153,
-  "local_verified_model_blobs": 23
+  "local_verified_model_blobs": 23,
+  "old_account_deletion_policy": "User will retain the old account. Superseded intermediate checkpoints were inventoried but not copied; the continuation payload and recovered records are backed up locally.",
+  "new_account_files_verified": 3374,
+  "new_account_bytes_verified": 76502494509,
+  "new_account_cache_aliases_verified": 31,
+  "new_account_verification_report": "data/recovery/new-account-verification.json"
 }
