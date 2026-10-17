@@ -84,7 +84,8 @@ def variants_parts():
         return []
     r = json.loads(paths[0].read_text(encoding='utf-8'))
     first = bridge13()[1]
-    names = {'plain_r1024': 'Plain, rank 1024', 'cond_r256': 'Timestep-conditioned, rank 256', 'cond_r1024': 'Timestep-conditioned, rank 1024'}
+    names = {'plain_r1024': 'Plain, rank 1024', 'cond_r256': 'Timestep-conditioned, rank 256', 'cond_r1024': 'Timestep-conditioned, rank 1024',
+             'cond_r1024_long': 'Conditioned rank 1024, 3,000 updates', 'cond_local_r1024': 'Conditioned rank 1024 + 3×3 local mixing, 3,000 updates'}
 
     def row(label, params, c):
         o = c['overall']['teacher_relative_l2']['mean']
@@ -93,11 +94,15 @@ def variants_parts():
         return [label, params, f'<b>{pct(o)}</b>', pct(g10), pct(w50), f'{pct(e, 1)} / {pct(m, 1)} / {pct(l, 1)}']
     rows = [row('Plain, rank 256 (first bridge)', '2.1M', first['candidate'])]
     rows += [row(names.get(n, n), f"{v['parameters'] / 1e6:.1f}M", v) for n, v in r['variants'].items()]
+    for later in sorted((ROOT / 'data/phase7/block13_bridge_v3').glob('*/summary.json')):
+        extra = json.loads(later.read_text(encoding='utf-8'))
+        if extra.get('status') == 'passed':
+            rows += [row(names.get(n, n), f"{v['parameters'] / 1e6:.1f}M", v) for n, v in extra['variants'].items()]
     return ['<h3 id="phase7-bridge-variants">Better bridges for block 13: timestep conditioning helps</h3>',
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training curves were still falling at the last step, so these bridges are undertrained.</p></div>'] + variant_review_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling.</p></div>'] + variant_review_parts()
 
 
 def bridge13_section(protocol, report):
