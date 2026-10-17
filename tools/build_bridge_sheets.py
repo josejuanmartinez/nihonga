@@ -32,8 +32,10 @@ def main():
     for row in report['rows']:
         old = next((h for n, h in earlier_hashes.items() if n.startswith(row['source_id']) and 'teacher' in n), None)
         matches.append(None if old is None else old == row['teacher']['sha256'])
-    font = ImageFont.truetype('C:/Windows/Fonts/arial.ttf', 20)
-    big = ImageFont.truetype('C:/Windows/Fonts/arial.ttf', 26)
+    # A CJK-capable font so the Chinese prompts render.
+    face = next((f for f in ('C:/Windows/Fonts/msyh.ttc', 'C:/Windows/Fonts/simsun.ttc') if Path(f).exists()), 'C:/Windows/Fonts/arial.ttf')
+    font = ImageFont.truetype(face, 20)
+    big = ImageFont.truetype(face, 26)
     sheets = run.parent / 'sheets'
     sheets.mkdir(exist_ok=True)
     tile = 640
@@ -41,7 +43,7 @@ def main():
         canvas = Image.new('RGB', (3 * tile, tile + 150), 'white')
         draw = ImageDraw.Draw(canvas)
         draw.text((10, 6), f"P{index + 1:02d} | {row['source_id']} | {row.get('subdimension', '')}", font=big, fill='black')
-        for line, text in enumerate(textwrap.wrap(row['prompt'], 170)[:3]):
+        for line, text in enumerate(textwrap.wrap(row['prompt'], 170 if row['prompt'].isascii() else 85)[:3]):
             draw.text((10, 42 + 24 * line), text, font=font, fill='black')
         for column, variant in enumerate(('teacher', 'B', 'C')):
             label = {'teacher': 'Teacher (32 blocks)', 'B': 'B: block 5 bridged (accepted)', 'C': 'C: blocks 5 + 13 bridged'}[variant]

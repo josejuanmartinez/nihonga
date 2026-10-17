@@ -58,6 +58,16 @@ def bridge13():
     return protocol, None
 
 
+def review_parts():
+    path = ROOT / 'data/phase7/bridge_images/review.json'
+    if not path.exists():
+        return []
+    r = json.loads(path.read_text(encoding='utf-8'))
+    c = r['c_vs_b']
+    return [f'<p class="summary"><b>Qualitative image check.</b> Because the teacher is not a perfect reference, we also rendered the teacher, B and C on the 30 earlier Phase 7 prompts with matched seeds (the regenerated teacher images matched the earlier renders byte for byte) and judged each image against its prompt. C was worse than B on <b>{c["worse"]}</b> prompts, similar on {c["same"]} and better on {c["better"]}. The failures appear at unchanged composition: hair smearing into the jaw, circuit-board traces dissolving, an incoherent house cross-section, misspelled signs (&ldquo;Happy Birtliday Emma&rdquo;, &ldquo;The Rusty Achor&rdquo;) where B is exact, and a missing alarm clock. B stays close to the teacher.</p>',
+            '<p class="note">Unblinded review by an AI visual reviewer, one seed per prompt; a screen, not a benchmark.</p>']
+
+
 def bridge13_section(protocol, report):
     g, base = protocol['velocity_gates'], protocol['base']
     c = report['candidate']
@@ -78,6 +88,7 @@ def bridge13_section(protocol, report):
              f'<p class="summary">Block 13 ranked first inside the accepted student, so we replaced it with a rank-256 bridge while keeping the block-5 bridge and every other weight frozen. Pass rules were committed before the run. The bridge was fitted to block 13’s own inputs and outputs captured inside the student: 60 training prompts at three moments plus 600 early training examples. The 10 check prompts were used only to choose the checkpoint. The fit worked on its own terms: the hidden-state objective fell from {fit["identity_validation"]:.4f} (plain skip) to {fit["selected_validation"]:.4f}, a {100 * (1 - fit["selected_validation"] / fit["identity_validation"]):.0f}% reduction.</p>',
              table('Candidate C (blocks 5 and 13 bridged, 30 blocks): velocity error against the teacher and the preregistered limits',
                    ['Measure', 'C', 'Limit', 'Result'], rows),
+             *review_parts(),
              f'<div class="verdict"><p><b>{"All velocity gates pass." if passed else "Candidate C fails the velocity gates; it is not promoted and no images or timings were produced for it."}</b> Skipping block 13 gives {pct(skip)} on the check prompts; the bridge brings it only to {pct(gate10)}, against {pct(base["gate10_mean_relative_l2"])} for the accepted student. Middle and late moments stay within limits; the early moment does not. A likely reason: the bridge acts on each token separately, so it cannot reproduce the cross-token attention a mid-network block performs, and most of the damage of removing block 13 remains.</p></div>']
     return parts
 

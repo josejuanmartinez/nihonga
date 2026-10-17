@@ -1,0 +1,15 @@
+{
+  "type": "qualitative, unblinded AI visual review against each prompt (not against the teacher); one seed per prompt",
+  "prompts": 30,
+  "c_vs_b": {"worse": 15, "same": 13, "better": 2},
+  "c_vs_b_worse": ["P01", "P03", "P05", "P06", "P07", "P09", "P14", "P18", "P19", "P21", "P22", "P23", "P25", "P28", "P30"],
+  "c_vs_b_better": ["P12", "P26"],
+  "b_vs_teacher": "B stays close to the teacher, often with near-identical composition; clear drops only on P02 (checker disc) and P19 (deformed glasses), gains on P03 (star) and P09",
+  "teacher_renders_match_earlier": 30,
+  "main_failure_modes": [
+    "Loss of fine structure at unchanged composition: hair smearing into the jaw (P14), circuit-board traces dissolving (P06), incoherent house cross-section (P25)",
+    "Text: misspellings where B is exact, 'Happy Birtliday Emma' (P28) and 'The Rusty Achor' (P30); one gain, a clean 'Live in Berlin' tagline (P26)",
+    "Object binding: alarm clock missing and glasses multiplied (P19); metal spoon turned to glass (P18); weaker melting clocks (P22)"
+  ],
+  "verdict": "C is a visible step down from B, consistent with the failed velocity gates; B remains close to the teacher"
+}
