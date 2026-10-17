@@ -98,10 +98,10 @@ class ConditionedBridgeBlock(nn.Module):
         if getattr(self.bridge, 'local', False):
             mask = target_token_mask if target_token_mask is not None else torch.ones(
                 hidden_states.shape[1], dtype=torch.bool, device=hidden_states.device)
-            side = int(round(int(mask.sum()) ** 0.5))
-            if side * side != int(mask.sum()):
-                raise RuntimeError('Local mixing expects a square image-token grid.')
-            return self.bridge(hidden_states, rows, mask, (side, side))
+            height, width = self.grid
+            if height * width != int(mask.sum()):
+                raise RuntimeError('Target image grid does not match the image-token count.')
+            return self.bridge(hidden_states, rows, mask, (height, width))
         return self.bridge(hidden_states, rows)
 
 
@@ -113,4 +113,13 @@ def insert_conditioned_bridge(transformer, layer, bridge):
     wrapper = ConditionedBridgeBlock(bridge, old.attn.processor)
     wrapper.train(transformer.training)
     transformer.transformer_blocks[layer] = wrapper
+    if getattr(bridge, 'local', False) and not getattr(transformer, '_bridge_grid_hook', False):
+        # The block never sees img_shapes; record the target image's (height, width) in tokens on every call.
+        def record_grid(module, args, kwargs):
+            frames, height, width = kwargs['img_shapes'][0][-1]
+            for block in module.transformer_blocks:
+                if isinstance(block, ConditionedBridgeBlock):
+                    block.grid = (int(height), int(width))
+        transformer.register_forward_pre_hook(record_grid, with_kwargs=True)
+        transformer._bridge_grid_hook = True
     return old

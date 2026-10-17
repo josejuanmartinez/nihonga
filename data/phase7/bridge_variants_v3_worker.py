@@ -424,14 +424,15 @@ def fit_bridge_variants(request, key):
                         entry[1].append(output[0].index_select(0, device_index).to(torch.bfloat16).cpu())
                         entry[2].append(rows)
                         if group != 'prompt_tokens':
-                            side = int(round((high - low) ** 0.5))
-                            if side * side != high - low:
-                                raise RuntimeError('Image tokens do not form a square grid.')
+                            frames, rows_grid, cols_grid = {**item['shared_transformer_kwargs'], **stage['kwargs']}['img_shapes'][0][-1]
+                            rows_grid, cols_grid = int(rows_grid), int(cols_grid)
+                            if frames != 1 or rows_grid * cols_grid != high - low:
+                                raise RuntimeError('Target image grid does not match the image-token count.')
                             position = index - low
-                            y = position.div(side, rounding_mode='floor')[:, None] + offsets_y
-                            x = (position % side)[:, None] + offsets_x
-                            valid = (y >= 0) & (y < side) & (x >= 0) & (x < side)
-                            neighbors = low + y.clamp(0, side - 1) * side + x.clamp(0, side - 1)
+                            y = position.div(cols_grid, rounding_mode='floor')[:, None] + offsets_y
+                            x = (position % cols_grid)[:, None] + offsets_x
+                            valid = (y >= 0) & (y < rows_grid) & (x >= 0) & (x < cols_grid)
+                            neighbors = low + y.clamp(0, rows_grid - 1) * cols_grid + x.clamp(0, cols_grid - 1)
                             gathered = hidden[0][neighbors.to(hidden.device)] * valid[..., None].to(hidden.device, hidden.dtype)
                             entry[3].append(gathered.to(torch.bfloat16).cpu())
                     report['student_calls'] += 1
