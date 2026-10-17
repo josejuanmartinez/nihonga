@@ -14,10 +14,9 @@ def main():
     parser.add_argument('--old-account', action='store_true')
     args = parser.parse_args()
     if args.old_account:
-        import winreg
-        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, 'Environment') as key:
-            for name in ('MODAL_TOKEN_ID', 'MODAL_TOKEN_SECRET'):
-                os.environ[name] = winreg.QueryValueEx(key, name + '_OLD')[0]
+        parser.error('Old account is download-only; GPU execution must use the new account.')
+    from modal_accounts import set_modal_account
+    set_modal_account('current', purpose='compute')
     import modal
     root = Path(__file__).resolve().parents[1]
     recovered = root / 'data/recovered/modal'
@@ -29,7 +28,7 @@ def main():
     protocol = json.loads(protocol_path.read_bytes())
     if hashlib.sha256(prompts_path.read_bytes()).hexdigest() != protocol['prompt_file_sha256']:
         raise RuntimeError('Preregistered prompt list changed')
-    request.update(version='phase7-blind-quality-v1', worker_source=source,
+    request.update(version='phase7-blind-quality-v1', worker_source=source, execution_account='new',
                    rows=json.loads(prompts_path.read_bytes()), quality_protocol=protocol)
     request_key = hashlib.sha256(json.dumps(request, sort_keys=True).encode()).hexdigest()
     local = root / 'data/phase7/blind_quality' / request_key
@@ -60,7 +59,7 @@ def main():
                                        '/root/.cache/huggingface':weights.with_mount_options(read_only=True)})(namespace['generate_blind_quality'])
         with modal.enable_output(), app.run(detach=True):
             call = worker.spawn(request, request_key)
-            (local / 'call.json').write_text(json.dumps(dict(request_key=request_key, function_call_id=call.object_id),indent=2)+'\n')
+            (local / 'call.json').write_text(json.dumps(dict(request_key=request_key, function_call_id=call.object_id, account='new'),indent=2)+'\n')
             print('Request:',request_key,'Call:',call.object_id,flush=True)
             report = call.get()
     (local / 'summary.json').write_text(json.dumps(report, indent=2)+'\n',encoding='utf-8')

@@ -1,8 +1,11 @@
 # Conditional pruning and performance protocol
 
 Status (17 October 2026): remote requests, sources and available summaries recovered;
-conditional scan and latency benchmark launched. See their hash-addressed request
-and call records under `conditional_importance/` and `latency_benchmark/`.
+initial old-account runs were stopped at the user's correction. All old-account
+GPU containers are confirmed stopped with zero running tasks. The old account
+is download-only. Required payloads are migrating to the new account; only that
+account may run new work. Aborted attempts remain in the hash-addressed run
+directories under `attempts/old-account-aborted/`.
 The authoritative saved protocol is the `phase7_adaptive_pruning_plan` field in
 `../published/2026-10-04/results.json`. This document specifies execution order;
 it does not replace that record or claim newly chosen thresholds were historical.

@@ -16,11 +16,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--old-account',action='store_true')
     args=parser.parse_args()
-    if args.old_account:
-        import winreg
-        with winreg.OpenKey(winreg.HKEY_CURRENT_USER,'Environment') as key:
-            for name in ('MODAL_TOKEN_ID','MODAL_TOKEN_SECRET'):
-                os.environ[name]=winreg.QueryValueEx(key,name+'_OLD')[0]
+    from modal_accounts import set_modal_account
+    set_modal_account('old' if args.old_account else 'current', purpose='download')
     import modal
     from PIL import Image,ImageDraw,ImageFont
     root=Path(__file__).resolve().parents[1]

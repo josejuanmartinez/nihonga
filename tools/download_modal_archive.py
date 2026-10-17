@@ -30,7 +30,10 @@ def main():
     parser.add_argument('--metadata-only', action='store_true')
     parser.add_argument('--ledger', default='download-ledger.json')
     parser.add_argument('--paths', type=Path, help='JSON array of exact volume-relative paths')
+    parser.add_argument('--old-account', action='store_true', help='Read the old archive account; never schedules computation')
     args = parser.parse_args()
+    from modal_accounts import set_modal_account
+    set_modal_account('old' if args.old_account else 'current', purpose='download')
     inventory_path = Path('data/recovery') / (args.volume + '-inventory.json')
     inventory = json.loads(inventory_path.read_text())
     destination = args.destination.resolve() / args.volume

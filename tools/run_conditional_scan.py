@@ -14,10 +14,9 @@ def main():
     parser.add_argument('--old-account', action='store_true')
     args = parser.parse_args()
     if args.old_account:
-        import winreg
-        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, 'Environment') as key:
-            for name in ('MODAL_TOKEN_ID', 'MODAL_TOKEN_SECRET'):
-                os.environ[name] = winreg.QueryValueEx(key, name + '_OLD')[0]
+        parser.error('Old account is download-only; GPU execution must use the new account.')
+    from modal_accounts import set_modal_account
+    set_modal_account('current', purpose='compute')
     import modal
     root = Path(__file__).resolve().parents[1]
     recovered = root / 'data/recovered/modal'
@@ -29,7 +28,7 @@ def main():
     request['image_request'] = json.loads((recovered / 'phase7/candidate_images' / images_key / 'request.json').read_bytes())['request']
     request['historical_validation_sha256'] = next(a['sha256'] for a in summary['artifacts'] if a['name']=='validation_step_060.pt')
     source = (root / 'data/phase7/conditional_scan_worker.py').read_text(encoding='utf-8')
-    request.update(version='phase7-conditional-importance-v1', worker_source=source,
+    request.update(version='phase7-conditional-importance-v1', worker_source=source, execution_account='new',
                    eligible_original_block_ids=[i for i in range(32) if i not in (4, 5)],
                    selection='Screening only: independent frozen bypasses; no pruning or quality promotion',
                    scope='Fixed gate10 and wider50 development prompts, three saved stages; compare A and teacher')
@@ -62,7 +61,7 @@ def main():
                                        '/root/.cache/huggingface':weights.with_mount_options(read_only=True)})(namespace['scan_candidate'])
         with modal.enable_output(), app.run(detach=True):
             call = worker.spawn(request, request_key)
-            (local / 'call.json').write_text(json.dumps(dict(request_key=request_key, function_call_id=call.object_id),indent=2)+'\n')
+            (local / 'call.json').write_text(json.dumps(dict(request_key=request_key, function_call_id=call.object_id, account='new'),indent=2)+'\n')
             print('Request:',request_key,'Call:',call.object_id,flush=True)
             report = call.get()
     (local / 'summary.json').write_text(json.dumps(report, indent=2)+'\n',encoding='utf-8')
