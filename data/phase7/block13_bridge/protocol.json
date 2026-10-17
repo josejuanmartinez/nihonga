@@ -1,0 +1,47 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-17",
+  "candidate": "C: candidate B (31 blocks, frozen pretrained rank-256 bridge at block 5) with block 13 replaced by a learned rank-256 bridge; 30 surviving transformer blocks plus two bridges",
+  "base": {
+    "name": "B: selected Phase 6 one-block student",
+    "scan_request_key": "b0a27f0cbe0f8e7f9938044fe088576a648c7b22e63a2ddbd771ee6b8e777aae",
+    "gate10_mean_relative_l2": 0.055178944828609626,
+    "wider50_mean_relative_l2": 0.05373050672312578,
+    "stage_mean_relative_l2": {"early": 0.10009093880653382, "middle": 0.02573088255400459, "late": 0.03609391786158085},
+    "overall_p90_relative_l2": 0.11624561175704001,
+    "overall_maximum_relative_l2": 0.17926660180091858,
+    "skip_block_13_gate10_mean_relative_l2": 0.07564548787971338
+  },
+  "why_block_13": "Lowest teacher-relative velocity error when bypassed inside B (7.63% over 180 comparisons); top-five candidates 13, 12, 14, 17, 11 coincide with the scan inside candidate A. Block 12 is the fallback if block 13 fails.",
+  "fit": {
+    "inputs": "Block-13 input and output hidden states captured inside frozen B (not the teacher) with the verified replay contract",
+    "train": "60 TRAIN prompts at early, middle and late moments (20 Phase 5 captures + 40 Phase 6 fresh aligned captures) plus 600 TRAIN early-moment examples from step 7; no validation, internal-test or benchmark inputs",
+    "selection_data": "The 10 gate VALIDATION prompts, three moments; used only to select a checkpoint by the hidden-state objective",
+    "target": "B's own block-13 output for the same input (local replacement of the removed block)",
+    "bridge": "ResidualBottleneckBridge(4096, 256), identity start (up projection zero), init seed 20261017",
+    "objective": "Phase 5 objective: mean token squared L2 between unit-normalized prediction and target plus 0.1 x mean per-token squared relative error; groups prompt_tokens, early_image, middle_image, late_image weighted equally",
+    "optimizer": "AdamW lr 1e-3, weight decay 0.01, gradient clip 1.0, 1000 updates, 256 sampled tokens per group per update, FP32 parameters and losses with BF16 autocast projections",
+    "checkpoints": "Every 100 updates plus the identity start; select the minimum validation objective",
+    "no_other_training": "All transformer weights and the block-5 bridge stay frozen; no healing in this request"
+  },
+  "velocity_gates": {
+    "description": "Teacher-relative L2 velocity error on the same saved inputs as the scans (gate10 + wider50, three moments, 180 comparisons). All must pass.",
+    "gate10_mean_max": 0.065179,
+    "gate10_rule": "B gate10 + 1.0 percentage point (same rule and value as the historical 6.52% gate)",
+    "wider50_mean_max": 0.063731,
+    "stage_mean_max": {"early": 0.120091, "middle": 0.045731, "late": 0.056094},
+    "stage_rule": "B stage mean + 2.0 percentage points",
+    "overall_p90_max": 0.136246,
+    "overall_p90_rule": "B p90 + 2.0 percentage points",
+    "overall_maximum_max": 0.279267,
+    "overall_maximum_rule": "B maximum + 10 percentage points",
+    "skip_penalty_removed_min": 0.5,
+    "skip_penalty_rule": "On gate10, (skip13 - C) / (skip13 - B) >= 0.5"
+  },
+  "later_gates_if_velocity_passes": {
+    "latency": "30 balanced randomized paired runs, same protocol as the candidate A benchmark; paired speedup over the teacher bootstrap 95% lower bound > 1.0; report speedup over B",
+    "images": "Fresh blinded panel registered before rendering, disjoint from all earlier QA prompts, same groups, rubric and rules as the candidate A panel: adherence paired bootstrap 95% lower bound of (C - teacher) clear-pass gain >= -0.05; text clear passes >= teacher - 1 with no entirely missing phrase losses",
+    "promotion": "Only if velocity, latency and image gates all pass does C replace B as the accepted model; importance is then rescanned inside C"
+  },
+  "if_velocity_fails": "Report the failure. Any healing or fallback (block 12, higher rank) requires a new versioned request registered before execution."
+}
