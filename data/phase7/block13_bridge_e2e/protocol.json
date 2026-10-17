@@ -1,0 +1,13 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-17",
+  "question": "Can a bridge with a small attention branch, trained against the final output, keep the text that block 13 carries?",
+  "context": "Multi-seed check: without block 13 the best per-token bridge spells 'The Rusty Anchor' 0/4 (B 3/4), 'Happy Birthday Emma' 1/4 (B 3/4), 'Moonlight Motel' 1/4 (B 3/4).",
+  "variants": {
+    "e2e_attn": "Conditioned rank-1024 MLP (warm start from cond_r1024_long) plus an attention branch: 4 heads x 128 dims, RoPE and key masks as in the real blocks, target-image queries over prompt and image keys, own prefix K/V in the replaced slot's cache, zero-initialised output, attention-modulation conditioning. About 8.4M extra parameters.",
+    "e2e_cond": "Same warm-started conditioned MLP without attention: isolates the effect of the end-to-end objective"
+  },
+  "training": "Only bridge weights train (FP32); all transformer weights and the block-5 bridge frozen. Loss: normalised squared velocity error against LIVE teacher targets recomputed in this run (stored legacy targets differ by up to 2.6%), over the three moments of a TRAIN prompt (weight 0.7) plus one early-moment TRAIN example (weight 0.3) per update; gradients through blocks 14-31 with functional checkpointing. AdamW lr 2e-4, 20-update warmup, clip 1.0, 300 updates, gate10 velocity evaluated every 50 updates; checkpoint with lowest gate10 error selected.",
+  "decision_rule": "Velocity reported for all 180 comparisons. Images decide: the 4-seed text grid (target: 'The Rusty Anchor' approaching B's 3/4) and the 30-prompt sheets compared with B and cond_r1024_long; if comparable to B, a fresh blinded panel graded against the prompts decides acceptance.",
+  "caveat": "gate10 selects the checkpoint, so its velocity is optimistic; the wider 50 prompts and images are the less biased signals."
+}

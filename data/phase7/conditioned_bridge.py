@@ -75,6 +75,65 @@ class LocalConditionedBridge(ConditionedBridge):
         return neighborhood[:, 4] + torch.tanh(gate) * self.up(nn.functional.gelu(z))
 
 
+class AttentionConditionedBridge(ConditionedBridge):
+    """Conditioned bridge with a small attention branch in front of its MLP, mirroring a block.
+
+    Target-image tokens attend to the prompt prefix and all image tokens with the model's RoPE and key masks; prefix
+    tokens only take the MLP path. The branch keeps its own prefix K/V in the layer cache of the slot it replaces.
+    The output projection starts at zero, so a fresh branch leaves the conditioned MLP bridge unchanged.
+    """
+    attention = True
+
+    def __init__(self, hidden_dim=4096, rank=1024, heads=4, head_dim=128, eps=1e-6):
+        super().__init__(hidden_dim, rank, True, eps)
+        inner = heads * head_dim
+        self.heads, self.head_dim, self.eps = heads, head_dim, eps
+        self.to_q = nn.Linear(hidden_dim, inner, bias=False)
+        self.to_k = nn.Linear(hidden_dim, inner, bias=False)
+        self.to_v = nn.Linear(hidden_dim, inner, bias=False)
+        self.to_out = nn.Linear(inner, hidden_dim, bias=False)
+        nn.init.zeros_(self.to_out.weight)
+        self.norm_q = nn.Parameter(torch.ones(head_dim))
+        self.norm_k = nn.Parameter(torch.ones(head_dim))
+        # Attention modulation starts from the block's own attention terms (weight 1 on scale1/gate1).
+        mix = torch.zeros(2, hidden_dim)
+        mix[0] = 1
+        self.attn_scale_mix = nn.Parameter(mix.clone())
+        self.attn_gate_mix = nn.Parameter(mix.clone())
+        self.attn_scale_bias = nn.Parameter(torch.zeros(hidden_dim))
+        self.attn_gate_bias = nn.Parameter(torch.zeros(hidden_dim))
+
+    def _rms(self, x, weight):
+        return x * torch.rsqrt(x.float().square().mean(-1, keepdim=True) + self.eps).to(x.dtype) * weight
+
+    @staticmethod
+    def _rope(x, freqs):
+        rotated = torch.view_as_complex(x.float().reshape(*x.shape[:-1], -1, 2)) * freqs.unsqueeze(1)
+        return torch.view_as_real(rotated).flatten(3).type_as(x)
+
+    def attend(self, hidden_states, modulation_rows, rotary_emb, target_count, layer_cache, kv_cache_mode,
+               cache_write_slice, key_mask):
+        scale1, gate1, scale2, gate2 = modulation_rows.chunk(4, dim=-1)
+        scale = self.attn_scale_mix[0] * scale1 + self.attn_scale_mix[1] * scale2 + self.attn_scale_bias
+        gate = self.attn_gate_mix[0] * gate1 + self.attn_gate_mix[1] * gate2 + self.attn_gate_bias
+        x = self.norm(hidden_states) * (1 + scale)
+        q, k, v = (proj(x).unflatten(-1, (self.heads, self.head_dim)) for proj in (self.to_q, self.to_k, self.to_v))
+        q, k = self._rms(q, self.norm_q), self._rms(k, self.norm_k)
+        if rotary_emb is not None:
+            q, k = self._rope(q, rotary_emb), self._rope(k, rotary_emb)
+        if layer_cache is not None:
+            if kv_cache_mode == 'extract' and cache_write_slice is not None:
+                layer_cache.store(k[:, cache_write_slice].clone(), v[:, cache_write_slice].clone())
+            elif kv_cache_mode == 'cached':
+                cached_k, cached_v = layer_cache.get()
+                k, v = torch.cat([cached_k, k], dim=1), torch.cat([cached_v, v], dim=1)
+        prefix = hidden_states.shape[1] - target_count
+        out = nn.functional.scaled_dot_product_attention(
+            q[:, prefix:].transpose(1, 2), k.transpose(1, 2), v.transpose(1, 2), attn_mask=key_mask)
+        update = torch.tanh(gate[:, prefix:]) * self.to_out(out.transpose(1, 2).flatten(2))
+        return torch.cat([hidden_states[:, :prefix], hidden_states[:, prefix:] + update], dim=1)
+
+
 def modulation_rows(modulation, target_token_mask):
     """Per-token modulation rows, selected exactly as the transformer block does."""
     if target_token_mask is None:
@@ -95,6 +154,18 @@ class ConditionedBridgeBlock(nn.Module):
         if kv_cache_mode not in (None, 'extract', 'cached'):
             raise ValueError('Unknown KV cache mode.')
         rows = modulation_rows(modulation, target_token_mask) if self.bridge.conditioned else None
+        dtype = hidden_states.dtype
+        bridge_dtype = next(self.bridge.parameters()).dtype
+        if getattr(self.bridge, 'attention', False):
+            # Small bridges may keep FP32 weights for training; compute in their dtype and return the model dtype.
+            target_count = hidden_states.shape[1] if target_token_mask is None else int(target_token_mask.sum())
+            key_mask = key_valid[:, None, None, :] if key_valid is not None else attention_mask
+            h = hidden_states.to(bridge_dtype)
+            r = rows.to(bridge_dtype)
+            h = self.bridge.attend(h, r, rotary_emb, target_count, layer_cache, kv_cache_mode, cache_write_slice, key_mask)
+            return self.bridge(h, r).to(dtype)
+        if bridge_dtype != dtype:
+            return self.bridge(hidden_states.to(bridge_dtype), None if rows is None else rows.to(bridge_dtype)).to(dtype)
         if getattr(self.bridge, 'local', False):
             mask = target_token_mask if target_token_mask is not None else torch.ones(
                 hidden_states.shape[1], dtype=torch.bool, device=hidden_states.device)
@@ -105,11 +176,11 @@ class ConditionedBridgeBlock(nn.Module):
         return self.bridge(hidden_states, rows)
 
 
-def insert_conditioned_bridge(transformer, layer, bridge):
-    """Replace one slot; callers must use fresh KV caches afterwards."""
+def insert_conditioned_bridge(transformer, layer, bridge, keep_dtype=False):
+    """Replace one slot; callers must use fresh KV caches afterwards. keep_dtype keeps FP32 bridge weights."""
     old = transformer.transformer_blocks[layer]
     reference = next(transformer.parameters())
-    bridge = bridge.to(device=reference.device, dtype=reference.dtype)
+    bridge = bridge.to(device=reference.device) if keep_dtype else bridge.to(device=reference.device, dtype=reference.dtype)
     wrapper = ConditionedBridgeBlock(bridge, old.attn.processor)
     wrapper.train(transformer.training)
     transformer.transformer_blocks[layer] = wrapper
