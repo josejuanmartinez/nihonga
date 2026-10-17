@@ -118,8 +118,10 @@ def generate_multiseed_text(request, key):
             return torch.load(path, weights_only=True, map_location='cpu')
 
         outputs = {v: {} for v in variants}
-        for row in request['rows']:
-            outputs['teacher'][row['source_id']] = generate(row, 'teacher')
+        references = not request.get('candidate_only', False)
+        if references:
+            for row in request['rows']:
+                outputs['teacher'][row['source_id']] = generate(row, 'teacher')
         block5 = request['block5_bridge']
         checkpoint = load_checkpoint(block5)
         if checkpoint['layer'] != 5 or checkpoint['step'] != block5['step']:
@@ -129,26 +131,35 @@ def generate_multiseed_text(request, key):
         bridge.requires_grad_(False)
         namespace['insert_bridge'](model, 5, bridge, QwenImage21KVCache)
         model.eval()
-        for row in request['rows']:
-            outputs['B'][row['source_id']] = generate(row, 'B')
+        if references:
+            for row in request['rows']:
+                outputs['B'][row['source_id']] = generate(row, 'B')
         spec = request['c_variant']
         checkpoint = load_checkpoint(spec)
         if checkpoint['layer'] != 13 or checkpoint['variant']['name'] != spec['name']:
             raise RuntimeError('Block-13 bridge provenance differs.')
         fitted = checkpoint['variant']
-        if fitted.get('local'):
+        keep_dtype = False
+        if fitted.get('attention'):
+            bridge13 = conditioned['AttentionConditionedBridge'](4096, 1024, fitted['heads'], 128)
+            keep_dtype = True
+        elif 'attention' in fitted:
+            bridge13 = conditioned['ConditionedBridge'](4096, 1024, True)
+            keep_dtype = True
+        elif fitted.get('local'):
             bridge13 = conditioned['LocalConditionedBridge'](4096, fitted['rank'])
         else:
             bridge13 = conditioned['ConditionedBridge'](4096, fitted['rank'], fitted['conditioned'])
         bridge13.load_state_dict(checkpoint['state_dict'])
         bridge13.requires_grad_(False)
-        conditioned['insert_conditioned_bridge'](model, 13, bridge13)
+        conditioned['insert_conditioned_bridge'](model, 13, bridge13.float() if keep_dtype else bridge13, keep_dtype=keep_dtype)
         model.eval()
         for row in request['rows']:
             outputs[spec['name']][row['source_id']] = generate(row, spec['name'])
+        rendered = [v for v in variants if outputs[v]]
         for row in request['rows']:
-            report['rows'].append({**row, **{v: outputs[v][row['source_id']] for v in variants}})
-            report['artifacts'].extend(outputs[v][row['source_id']] for v in variants)
+            report['rows'].append({**row, **{v: outputs[v][row['source_id']] for v in rendered}})
+            report['artifacts'].extend(outputs[v][row['source_id']] for v in rendered)
         report['status'] = 'passed'
     except Exception as exc:
         report['status'] = 'failed'

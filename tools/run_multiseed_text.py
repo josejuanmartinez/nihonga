@@ -12,18 +12,23 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--variant', default='cond_r1024_long')
+    parser.add_argument('--source', default='block13_bridge_v3', help='Run folder holding the bridge checkpoint.')
+    parser.add_argument('--with-base-prompts', action='store_true', help='Also render the 30 base prompts at seed 0; candidate only.')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     recovered = root / 'data/recovered/modal'
     images_key = 'dda8c184e657dfb604c35fb261d83371c108c39fac033a0f57db66f7686c30ad'
     base = json.loads((recovered / 'phase7/candidate_images' / images_key / 'request.json').read_bytes())['request']
     scan_b = json.loads(next((root / 'data/phase7/conditional_importance_b').glob('*/request.json')).read_bytes())['request']
-    fit = next(r for r in (json.loads(p.read_bytes()) for p in (root / 'data/phase7/block13_bridge_v3').glob('*/summary.json')) if r.get('status') == 'passed')
+    fit = next(r for r in (json.loads(p.read_bytes()) for p in (root / 'data/phase7' / args.source).glob('*/summary.json')) if r.get('status') == 'passed')
     best = fit['variants'][args.variant]
+    remote_dir = {'block13_bridge_v3': 'bridge_variants_v3', 'block13_bridge_e2e': 'bridge_end_to_end'}[args.source]
     selected = scan_b['selected_candidate']
     text_rows = [r for r in base['rows'] if r['subdimension'] in ('text_rendering', 'posters')]
     rows = [{**r, 'source_id': f"{r['source_id']}-s{k}", 'seed': (r['seed'] + 1000003 * k) % 2**32}
             for r in text_rows for k in (1, 2, 3)]
+    if args.with_base_prompts:
+        rows += base['rows']
     request = {k: base[k] for k in ('teacher', 'transformer_source_sha256', 'runtime_environment', 'expected_derived_tables',
                                     'canonical_tables_key', 'core_source', 'wrapper_source')}
     request.update(
@@ -33,9 +38,10 @@ def main():
         execution_account='new',
         block5_bridge=dict(remote_path=f"/phase3/phase5/fitting/{scan_b['fit_key']}/{Path(selected['checkpoint_path']).name}",
                            sha256=selected['checkpoint_sha256'], step=selected['selected_update']),
-        c_variant=dict(name=args.variant, remote_path=f"/phase3/phase7/bridge_variants_v3/{fit['request_key']}/{best['checkpoint']['name']}",
+        c_variant=dict(name=args.variant, remote_path=f"/phase3/phase7/{remote_dir}/{fit['request_key']}/{best['checkpoint']['name']}",
                        sha256=best['checkpoint']['sha256']),
-        scope='Extra seeds (3 per prompt) for the 5 text prompts of the Phase 7 image set; seed 0 images are reused')
+        candidate_only=args.with_base_prompts,
+        scope='Extra seeds (3 per prompt) for the 5 text prompts of the Phase 7 image set' + ('; plus the 30 base prompts at seed 0, candidate only' if args.with_base_prompts else '; seed 0 images are reused'))
     from experiment_runtime import pin_reference_runtime
     pin_reference_runtime(request, recovered)
     request_key = hashlib.sha256(json.dumps(request, sort_keys=True).encode()).hexdigest()
