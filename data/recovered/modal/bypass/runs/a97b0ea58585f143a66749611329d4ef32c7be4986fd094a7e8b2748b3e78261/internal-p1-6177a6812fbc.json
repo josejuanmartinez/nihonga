@@ -1,0 +1,88 @@
+{
+  "request_key": "a97b0ea58585f143a66749611329d4ef32c7be4986fd094a7e8b2748b3e78261",
+  "row": {
+    "eval_id": "internal-p1-6177a6812fbc",
+    "set": "internal",
+    "source_id": "p1-6177a6812fbc",
+    "prompt": "\u4e00\u5f20\u7535\u5f71\u5267\u7167\uff0c\u4e00\u5806\u65e7\u4e66",
+    "language": "zh",
+    "seed": 1635231361,
+    "aspect_ratio": "1:1",
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "dimension": "visual_quality",
+    "subdimension": "textures",
+    "facet": "paper",
+    "difficulty": 1,
+    "style": "cinematic",
+    "prompt_format": "natural",
+    "hard": false,
+    "keywords": []
+  },
+  "bypassed_layer": 4,
+  "recorded_utc": "2026-09-28T16:38:46.753872+00:00",
+  "status": "passed",
+  "teacher_targets_reused": true,
+  "measurements": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "sigma": 1.0,
+      "target_tokens": 4096,
+      "bypass": {
+        "relative_l2_error": 0.07072704285383224,
+        "rmse": 0.11120890080928802,
+        "cosine": 0.9974979758262634,
+        "teacher_rms": 1.5723674297332764
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0,
+        "teacher_rms": 1.5723674297332764
+      }
+    },
+    {
+      "stage": "middle",
+      "step_index": 19,
+      "sigma": 0.679182767868042,
+      "target_tokens": 4096,
+      "bypass": {
+        "relative_l2_error": 0.03442823141813278,
+        "rmse": 0.05146279186010361,
+        "cosine": 0.9994071125984192,
+        "teacher_rms": 1.4947845935821533
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0,
+        "teacher_rms": 1.4947845935821533
+      }
+    },
+    {
+      "stage": "final",
+      "step_index": 39,
+      "sigma": 0.019999980926513672,
+      "target_tokens": 4096,
+      "bypass": {
+        "relative_l2_error": 0.0496300645172596,
+        "rmse": 0.06072726473212242,
+        "cosine": 0.9987680315971375,
+        "teacher_rms": 1.2235983610153198
+      },
+      "intact_replay_control": {
+        "relative_l2_error": 0.0,
+        "rmse": 0.0,
+        "cosine": 1.0,
+        "teacher_rms": 1.2235983610153198
+      }
+    }
+  ],
+  "targets_sha256": "73f506dac8739ec39f1db7a2f37869f53198df76e72770445e42980edafc91b5",
+  "teacher_image_sha256": "7e7abfc84a751dfc1353202ffd1b8a9b3df10149a5bc7c7cce90ef076d38b00d",
+  "outputs_sha256": "c5c871b8862ab0b4778b5459ae566a32059bde47cc03cd61ad6405f56b404350",
+  "teacher_png_matches_activation": true
+}

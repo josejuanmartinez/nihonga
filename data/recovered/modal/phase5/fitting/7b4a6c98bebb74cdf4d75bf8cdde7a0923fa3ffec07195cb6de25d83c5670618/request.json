@@ -1,0 +1,407 @@
+{
+  "request": {
+    "version": "phase5-bridge-fitting-pilot-v1",
+    "target_index": {
+      "request_key": "43786ce3f07042425ea9a1a19306bb63ca2ff87276bfb1181db07ab60de84b18",
+      "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+      "train": [
+        {
+          "capture_id": "p5-train-p1-2eea6009c17f",
+          "source_id": "p1-2eea6009c17f",
+          "dimension": "alignment",
+          "request_key": "3c45b6ad7faa141882c143b99bb990d1a1dde362efb111ded59e55c42cefde75",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/targets.pt",
+          "tensor_sha256": "4c6a52d5b7ff761afca4e786bef720a9efc76083bafa03f0e9945705f491eed7",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-2eea6009c17f/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3232
+        },
+        {
+          "capture_id": "p5-train-p1-5342860a6667",
+          "source_id": "p1-5342860a6667",
+          "dimension": "alignment",
+          "request_key": "12467fd75a0f61bce85197b0139c4204cef62e1573a4495d896a4705d5d43165",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-5342860a6667/targets.pt",
+          "tensor_sha256": "dba3372ceb5fb4b7910286dc989ce888d0b8c5b2fc7465d1826c37539db0a2fe",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-5342860a6667/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3196
+        },
+        {
+          "capture_id": "p5-train-p1-fd07a4ad1fcf",
+          "source_id": "p1-fd07a4ad1fcf",
+          "dimension": "alignment",
+          "request_key": "4ed1bea919e8142611b24c5c26d9311c74aa69fd9fe265aa7375964f01201eb3",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-fd07a4ad1fcf/targets.pt",
+          "tensor_sha256": "ed1c06d7e344d74b2f93a38e78097187bcc61a15d7857c6188a7667433d5f2d4",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-fd07a4ad1fcf/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3200
+        },
+        {
+          "capture_id": "p5-train-p1-850fffd166fb",
+          "source_id": "p1-850fffd166fb",
+          "dimension": "alignment",
+          "request_key": "6d5f84af1523087aae4ed320074e97679c7eb49bfd375d105d7aab32ad365ae4",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-850fffd166fb/targets.pt",
+          "tensor_sha256": "7c9f7d6f150baf6130faf8ae62b1a6153a17a2da14a820af3ff9667d2498a32b",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-850fffd166fb/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3204
+        },
+        {
+          "capture_id": "p5-train-p1-77ceedf5feb4",
+          "source_id": "p1-77ceedf5feb4",
+          "dimension": "visual_quality",
+          "request_key": "75ce9472b43cc44b5abd152f53053bdd8c997df6e478f1ab53b5030c7ce04918",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-77ceedf5feb4/targets.pt",
+          "tensor_sha256": "614f1563f62d7c582eca99f21de4eeb6413a6aa6980ff9d4e940d948ca90faa1",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-77ceedf5feb4/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3216
+        },
+        {
+          "capture_id": "p5-train-p1-b0a7cd44f474",
+          "source_id": "p1-b0a7cd44f474",
+          "dimension": "visual_quality",
+          "request_key": "c265eb6f6f66ccb3601f0b120edfe739d95b59bfd53e1c94306a8ac1ecef6b23",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-b0a7cd44f474/targets.pt",
+          "tensor_sha256": "bae1920fbfb321d47e4d377c066ee1eff4022cbeb0b3eaebbaf21a9b57481cbc",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-b0a7cd44f474/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3200
+        },
+        {
+          "capture_id": "p5-train-p1-ebb93e49db7a",
+          "source_id": "p1-ebb93e49db7a",
+          "dimension": "visual_quality",
+          "request_key": "3217e5eda5e15138b7d60209061bda5743de30060fa93be11b63f4807da411cf",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-ebb93e49db7a/targets.pt",
+          "tensor_sha256": "a704bbe47322020e1cac68e7c6cb3f379ea5dfa74d538b0e78e748812766554a",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-ebb93e49db7a/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3236
+        },
+        {
+          "capture_id": "p5-train-p1-86b8d8da8b4e",
+          "source_id": "p1-86b8d8da8b4e",
+          "dimension": "visual_quality",
+          "request_key": "1c459d15a2fdb92e5255a89712147c72c315b3e261fde5d0040b6e5563daae96",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-86b8d8da8b4e/targets.pt",
+          "tensor_sha256": "88ba829560ab65ad363c2e298169380c9575a564055e9cf7c22bc404bbc82f55",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-86b8d8da8b4e/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3208
+        },
+        {
+          "capture_id": "p5-train-p1-77c5bb57a408",
+          "source_id": "p1-77c5bb57a408",
+          "dimension": "aesthetics",
+          "request_key": "4abe049c5fc11f0140825ecef0deb52ea5703246a96ef9798c59dc9e3e593dd3",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-77c5bb57a408/targets.pt",
+          "tensor_sha256": "1b6d0918fafb10def648f2cf4aa236745df81827004db0615abdf1e2d542594a",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-77c5bb57a408/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3192
+        },
+        {
+          "capture_id": "p5-train-p1-042ed95ebd8e",
+          "source_id": "p1-042ed95ebd8e",
+          "dimension": "aesthetics",
+          "request_key": "1490c4467d9c45386adad6e4677ca171fdc54d7def205ce0ff3952ed3f8a5d90",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-042ed95ebd8e/targets.pt",
+          "tensor_sha256": "dd69617937f047282d7ff02ca47b384964e352020409603ab2bfb355b40c3ff8",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-042ed95ebd8e/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3188
+        },
+        {
+          "capture_id": "p5-train-p1-3b3ca527b264",
+          "source_id": "p1-3b3ca527b264",
+          "dimension": "aesthetics",
+          "request_key": "f18f2afb554f5fef9179c3b170531881a266d622d5ee255642adcb6815719b84",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-3b3ca527b264/targets.pt",
+          "tensor_sha256": "8f72533993e83eee97d0931c3204cb0f094f5cd72029314f005c046353a74e13",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-3b3ca527b264/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3208
+        },
+        {
+          "capture_id": "p5-train-p1-c12b5a530f1b",
+          "source_id": "p1-c12b5a530f1b",
+          "dimension": "aesthetics",
+          "request_key": "df717a6f9b38282b8c8bf51b7f915c53a3f653fd3d2b59847b0268384c9f9b65",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-c12b5a530f1b/targets.pt",
+          "tensor_sha256": "564bf11ef0ba2218835e1f5a24e89db30428c08e645e2660a12f491878c21b59",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-c12b5a530f1b/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3264
+        },
+        {
+          "capture_id": "p5-train-p1-893d33baab92",
+          "source_id": "p1-893d33baab92",
+          "dimension": "real_world",
+          "request_key": "f6571e5f12f115a5e513fd93d7cd855e20af9b4c890646c79d5152539e7cb544",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-893d33baab92/targets.pt",
+          "tensor_sha256": "8a0b5847b184d0d9b03617d2d592029072204387bda004029ea12f57fcb4fc8a",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-893d33baab92/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3188
+        },
+        {
+          "capture_id": "p5-train-p1-baf6386f5063",
+          "source_id": "p1-baf6386f5063",
+          "dimension": "real_world",
+          "request_key": "b991f2f0dcd6a1f1afca879cdfce66c03531adf1c6aacb522501ebe52f73b3fc",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-baf6386f5063/targets.pt",
+          "tensor_sha256": "9479884273c6d4ecaf339327f04589ca556692c84760bfd5217d6f54debbb166",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-baf6386f5063/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3228
+        },
+        {
+          "capture_id": "p5-train-p1-cae4a5db0004",
+          "source_id": "p1-cae4a5db0004",
+          "dimension": "real_world",
+          "request_key": "a03c43acbf80fbb33a88023b28ebcb4df1b694be853b5f0e68ac48d3a6f20925",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-cae4a5db0004/targets.pt",
+          "tensor_sha256": "72da8205d22778d32bf8d610612aa2486ea3a711e9f42148c6e11056b5af61cf",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-cae4a5db0004/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3216
+        },
+        {
+          "capture_id": "p5-train-p1-971106134937",
+          "source_id": "p1-971106134937",
+          "dimension": "real_world",
+          "request_key": "58ab5a05a78f2759f2e25a2f506b06c5048c7f78056723198f40d81008a39c62",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-971106134937/targets.pt",
+          "tensor_sha256": "fecec8c0c3151220e22a62e012ece3e06a0ca6f5d50fa0c696d689d4bd5eb6ef",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-971106134937/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3208
+        },
+        {
+          "capture_id": "p5-train-p1-f36dcf9a11b1",
+          "source_id": "p1-f36dcf9a11b1",
+          "dimension": "creative",
+          "request_key": "fff24430aec84dbe63d996876fbd6f6864213695c257be55249f9a51ef02fc64",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-f36dcf9a11b1/targets.pt",
+          "tensor_sha256": "8c29f50a288c70cb44f13442c95dc74e3e66397da91360f3f17ae28d6eca248d",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-f36dcf9a11b1/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3172
+        },
+        {
+          "capture_id": "p5-train-p1-ed028a9f5ea3",
+          "source_id": "p1-ed028a9f5ea3",
+          "dimension": "creative",
+          "request_key": "2d6b817e0c9c49392625fa311b446bd8468a6202ccb04e09be9a308696310377",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-ed028a9f5ea3/targets.pt",
+          "tensor_sha256": "9051800baad10d1aac370b31308ee80f298692a0ab87df385fce24ac2499179b",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-ed028a9f5ea3/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3168
+        },
+        {
+          "capture_id": "p5-train-p1-ae66fbad2783",
+          "source_id": "p1-ae66fbad2783",
+          "dimension": "creative",
+          "request_key": "98ea1f1b37ceff3fb898935696d960e5283f7b4403654c561ff084a0d88dc6a8",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-ae66fbad2783/targets.pt",
+          "tensor_sha256": "d828f9bfc125638a29fd31778cc2f10ddfa5fa3d7eaeddfd89b75ac32243ca60",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-ae66fbad2783/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3256
+        },
+        {
+          "capture_id": "p5-train-p1-23855cc68f20",
+          "source_id": "p1-23855cc68f20",
+          "dimension": "creative",
+          "request_key": "708047681db5514ab73b255ce05392c771becdc71842c3a202425ff93418f62f",
+          "tensor_path": "data/phase5/teacher_targets/p5-train-p1-23855cc68f20/targets.pt",
+          "tensor_sha256": "d60e7e5072a90089b930df822fe45a85191ccc5ed6887d9e2162da1cddd8385b",
+          "report_path": "data/phase5/teacher_targets/p5-train-p1-23855cc68f20/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3300
+        }
+      ],
+      "validation": [
+        {
+          "capture_id": "p5-validation-p1-4a84d737d801",
+          "source_id": "p1-4a84d737d801",
+          "dimension": "alignment",
+          "request_key": "5e1e03061e0f2d30a8124153973bce281b539df12a3034bd7dcab7636fe0bcfb",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/targets.pt",
+          "tensor_sha256": "082fd02c3055f8ecd59282de8510fae6e167df4f9c2c485781e1966390184658",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-4a84d737d801/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3136
+        },
+        {
+          "capture_id": "p5-validation-p1-5c3d279f55b0",
+          "source_id": "p1-5c3d279f55b0",
+          "dimension": "alignment",
+          "request_key": "f8a8ced6aedf372e42f96fab3e246cac3ce30f11056447d9f866af72b62c062d",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/targets.pt",
+          "tensor_sha256": "095303c8aec61ee0a617d42b6562ad28081775deb9b3c3637e5bf1f3ae2b3455",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-5c3d279f55b0/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3176
+        },
+        {
+          "capture_id": "p5-validation-p1-df869d4d578d",
+          "source_id": "p1-df869d4d578d",
+          "dimension": "visual_quality",
+          "request_key": "c497528b82b1a96a1f80a82f57637365a6b96fcb38994a72cf97d35aaa95fd04",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/targets.pt",
+          "tensor_sha256": "10b44f5920d6d0dd2385361b68940c1577305d216ce04b0f8a116487902cfb48",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-df869d4d578d/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3164
+        },
+        {
+          "capture_id": "p5-validation-p1-36fe86287034",
+          "source_id": "p1-36fe86287034",
+          "dimension": "visual_quality",
+          "request_key": "98e8ea6832d058ae2472d2c7c5101a3dbf3c5822d2ddfe3dff7dac529aa04a61",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/targets.pt",
+          "tensor_sha256": "eebe66fd30f665c10f0423451c3d7571edef5250c3fffa0136c5888df474bfe2",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-36fe86287034/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3184
+        },
+        {
+          "capture_id": "p5-validation-p1-a6227b574def",
+          "source_id": "p1-a6227b574def",
+          "dimension": "aesthetics",
+          "request_key": "945f11d70a8af0d8b024ed7fa620875f23829bcc2f1abdba7f840f2ffd6cf7aa",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/targets.pt",
+          "tensor_sha256": "8a8fda3dddf58c4329fe6bbfa2da2f6a35856c94626690b72c060ff323b98e64",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-a6227b574def/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3168
+        },
+        {
+          "capture_id": "p5-validation-p1-8d56f0bbd4df",
+          "source_id": "p1-8d56f0bbd4df",
+          "dimension": "aesthetics",
+          "request_key": "904e27969f6053342998a969e8479467c7f5d9aa927c857d43ebbb6c353e52a9",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/targets.pt",
+          "tensor_sha256": "be4bfc9528c131f5da574166f8a670d3ecfd96b77e9266d4a453dc35a84cbb8f",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-8d56f0bbd4df/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3236
+        },
+        {
+          "capture_id": "p5-validation-p1-b5d1aaa3235d",
+          "source_id": "p1-b5d1aaa3235d",
+          "dimension": "real_world",
+          "request_key": "75b65369af2d7ff02af4c6edb0170c00cde328d86263cf191744aaf5752ac4cf",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/targets.pt",
+          "tensor_sha256": "db04deb488106852a91517f2646b28e1ac7a5684ccb4efb14aef24fa2c4cb41b",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-b5d1aaa3235d/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3172
+        },
+        {
+          "capture_id": "p5-validation-p1-79652b776ffc",
+          "source_id": "p1-79652b776ffc",
+          "dimension": "real_world",
+          "request_key": "fe01005662ed77c4d1cac54628c2b6af53f7c5d3f7fb78d857d77fe056b0cf25",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/targets.pt",
+          "tensor_sha256": "8e813f5b15dabb2ea3e7118a1cb57d901416276b3a74c3f6e0d52ec3dc4ab613",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-79652b776ffc/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3232
+        },
+        {
+          "capture_id": "p5-validation-p1-17fb78d1c4bf",
+          "source_id": "p1-17fb78d1c4bf",
+          "dimension": "creative",
+          "request_key": "056cc4878e4583d2b53d250954f7f6bb7e90cd1fc9da2b07179e225284880314",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/targets.pt",
+          "tensor_sha256": "02800f47039ec1704c1ede2213f0968f67216e986e0cc273b2851b468a2b0ba2",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-17fb78d1c4bf/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3204
+        },
+        {
+          "capture_id": "p5-validation-p1-81fc1d548f81",
+          "source_id": "p1-81fc1d548f81",
+          "dimension": "creative",
+          "request_key": "25265886ff2427ac189912dc4626818d452aad3b587ddfe72ac303c82fe05ccf",
+          "tensor_path": "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/targets.pt",
+          "tensor_sha256": "cf470d8de8627386d197f4a7826c62ee07f1a68d6db31754f24d1369469d3fc7",
+          "report_path": "data/phase5/teacher_targets/p5-validation-p1-81fc1d548f81/summary.json",
+          "records": 12,
+          "sampled_token_pairs": 3264
+        }
+      ],
+      "policy": "TRAIN for gradient updates; VALIDATION only for diagnostics and selection"
+    },
+    "target_index_sha256": "535a81a348e1cb23debdea9779ca5d2e4264fde63c78b75e9159241a0359b8f8",
+    "capture_summary_sha256": "3b0683a172e7139fe471864aa789f18224f03e10158df0866eb3a71ecf417a50",
+    "prototype_request_key": "6c5a69aa833f10d6ed6c2082e10e1bd5a3bad33af45bd3187201dd91fa3b79c8",
+    "candidate_layers": [
+      2,
+      4,
+      5,
+      3
+    ],
+    "initial_checkpoint_sha256": {
+      "2": "49de293a3ec2d1483ecc1d478cc0967747ff0824a647be14b509d0f28871b16d",
+      "4": "a6e26baf65a9b4942073120571045ce8b3fe82da42f31713de6b618b36c54593",
+      "5": "375fcd975aa98e0d7329b24ba9b550dd50644203d6412d47d31a912387db9ba0",
+      "3": "ec0441470a893c76353c606d246dac113e147494dbba05cc09b14bd65051ea15"
+    },
+    "core_source": "import torch\nfrom torch import nn\n\nclass ResidualBottleneckBridge(nn.Module):\n    \"\"\"Trainable tokenwise residual approximation; pipeline integration is a separate wrapper.\"\"\"\n    def __init__(self, hidden_dim=4096, bottleneck_dim=256):\n        super().__init__()\n        self.down = nn.Linear(hidden_dim, bottleneck_dim, bias=False)\n        self.activation = nn.GELU()\n        self.up = nn.Linear(bottleneck_dim, hidden_dim, bias=False)\n        # Identity initialization is a starting point for learning, not the final replacement.\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        return hidden_states + self.up(self.activation(self.down(hidden_states)))\n",
+    "worker_source": "def fit_bridges(expected, request_key, initial_payloads):\n    \"\"\"Fit only adapters to cached TRAIN states; results_volume is supplied by coordinator.\"\"\"\n    import hashlib\n    import importlib.metadata\n    import io\n    import json\n    import math\n    import time\n    from datetime import datetime, timezone\n    from pathlib import Path\n    import torch\n    import torch.nn.functional as F\n\n    directory = Path('/phase3/phase5/fitting') / request_key\n    directory.mkdir(parents=True, exist_ok=True)\n    summary_path = directory / 'summary.json'\n    if summary_path.exists():\n        return json.loads(summary_path.read_text())\n    if (directory / 'started.json').exists():\n        raise RuntimeError('Earlier fitting attempt is incomplete; preserve checkpoints and inspect before resuming.')\n    (directory / 'started.json').write_text(json.dumps({'request_key': request_key, 'utc': datetime.now(timezone.utc).isoformat()}))\n    (directory / 'request.json').write_text(json.dumps({'request': expected, 'request_key': request_key}, indent=2) + '\\n')\n    results_volume.commit()\n    report = {'request_key': request_key, 'status': 'failed', 'recorded_utc': datetime.now(timezone.utc).isoformat(),\n              'teacher_calls': 0, 'validation_optimizer_updates': 0}\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def save_tensor(path, value):\n        temporary = path.with_suffix('.tmp')\n        torch.save(value, temporary)\n        temporary.replace(path)\n\n    def save_json(path, value):\n        temporary = path.with_suffix('.tmp')\n        temporary.write_text(json.dumps(value, indent=2) + '\\n')\n        temporary.replace(path)\n\n    try:\n        if hashlib.sha256(json.dumps(expected, sort_keys=True).encode()).hexdigest() != request_key:\n            raise RuntimeError('Fitting request checksum differs.')\n        if not torch.cuda.is_bf16_supported():\n            raise RuntimeError('Allocated GPU lacks BF16 support.')\n        report['gpu'] = torch.cuda.get_device_name(0)\n        if 'L4' not in report['gpu']:\n            raise RuntimeError('Allocated GPU differs from requested L4.')\n        report['torch'] = importlib.metadata.version('torch')\n        torch.manual_seed(expected['seed'])\n        torch.cuda.manual_seed_all(expected['seed'])\n        torch.use_deterministic_algorithms(True)\n        torch.backends.cuda.matmul.allow_tf32 = False\n        namespace = {}\n        exec(compile(expected['core_source'], 'bridge_definition.py', 'exec'), namespace)\n        Bridge = namespace['ResidualBottleneckBridge']\n        groups = expected['groups']\n        layers = expected['candidate_layers']\n        data = {split: {layer: {group: [] for group in groups} for layer in layers} for split in ('train', 'validation')}\n        # Read the existing remote captures once. No teacher model is loaded or executed.\n        for split in ('train', 'validation'):\n            for record in expected['target_index'][split]:\n                path = Path('/phase3/phase5/capture') / record['request_key'] / 'targets.pt'\n                if digest(path) != record['tensor_sha256']:\n                    raise RuntimeError('Remote teacher target checksum differs.')\n                bundle = torch.load(path, weights_only=True, map_location='cpu')\n                if bundle['row']['split'] != split or bundle['request_key'] != record['request_key']:\n                    raise RuntimeError('Cached target split or provenance differs.')\n                for pair in bundle['pairs']:\n                    for role, name in ((0, 'prompt_tokens'), (1, pair['stage'] + '_image')):\n                        selected = pair['token_roles'] == role\n                        if not selected.any():\n                            continue\n                        if name not in groups:\n                            raise RuntimeError('Unexpected token role or stage.')\n                        x = pair['input'][0, selected].clone()\n                        y = pair['target'][0, selected].clone()\n                        data[split][pair['layer']][name].append({'source_id': bundle['row']['source_id'], 'x': x, 'y': y})\n                del bundle\n        for split, count in (('train', 20), ('validation', 10)):\n            for layer in layers:\n                for group in groups:\n                    records = data[split][layer][group]\n                    if len(records) != count or len(set(record['source_id'] for record in records)) != count:\n                        raise RuntimeError('Prompt coverage is incomplete or duplicated within a loss group.')\n        # Common sample schedule: prompt uniformly, then token uniformly within that prompt.\n        # Layer captures share indices, so identical offsets select identical examples for every bridge.\n        lengths, offsets = {}, {}\n        for group in groups:\n            sizes = torch.tensor([len(record['x']) for record in data['train'][layers[0]][group]], dtype=torch.int64)\n            lengths[group] = sizes\n            offsets[group] = torch.cat([torch.zeros(1, dtype=torch.int64), sizes.cumsum(0)[:-1]])\n            for layer in layers:\n                assert [record['source_id'] for record in data['train'][layer][group]] == [record['source_id'] for record in data['train'][layers[0]][group]]\n                assert [len(record['x']) for record in data['train'][layer][group]] == sizes.tolist()\n        generator = torch.Generator('cpu').manual_seed(expected['sampling_seed'])\n        sampling = torch.empty(expected['updates_per_bridge'], len(groups), expected['tokens_per_group'], dtype=torch.int64)\n        for step in range(expected['updates_per_bridge']):\n            for g, group in enumerate(groups):\n                prompts = torch.randint(20, (expected['tokens_per_group'],), generator=generator)\n                token = (torch.rand(expected['tokens_per_group'], generator=generator) * lengths[group][prompts]).long()\n                sampling[step, g] = offsets[group][prompts] + token\n        save_tensor(directory / 'sampling_schedule.pt', {'request_key': request_key, 'groups': groups, 'indices': sampling})\n        results_volume.commit()\n\n        def token_losses(prediction, target):\n            prediction, target = prediction.float(), target.float()\n            directional = (F.normalize(prediction, dim=-1, eps=1e-12) - F.normalize(target, dim=-1, eps=1e-12)).square().sum(-1)\n            relative_squared = (prediction - target).square().sum(-1) / target.square().sum(-1).clamp_min(1e-12)\n            return directional, relative_squared\n\n        def evaluate(bridge, split, layer):\n            bridge.eval()\n            measured = []\n            with torch.no_grad():\n                for group in groups:\n                    prompt_metrics = []\n                    for record in data[split][layer][group]:\n                        x, y = record['x'].to('cuda').float(), record['y'].to('cuda').float()\n                        with torch.autocast('cuda', dtype=torch.bfloat16):\n                            prediction = bridge(x)\n                        directional, relative_squared = token_losses(prediction, y)\n                        error = prediction - y\n                        prompt_metrics.append({'source_id': record['source_id'], 'directional_loss': float(directional.mean()),\n                            'relative_squared_loss': float(relative_squared.mean()),\n                            'relative_l2_error': float(error.norm() / y.norm().clamp_min(1e-12)),\n                            'mean_token_cosine': float(F.cosine_similarity(prediction, y, dim=-1).mean())})\n                    def mean(field):\n                        return sum(record[field] for record in prompt_metrics) / len(prompt_metrics)\n                    measured.append({'group': group, 'n_prompts': len(prompt_metrics),\n                        'directional_loss': mean('directional_loss'), 'relative_squared_loss': mean('relative_squared_loss'),\n                        'relative_l2_error': mean('relative_l2_error'), 'mean_token_cosine': mean('mean_token_cosine'),\n                        'max_prompt_relative_l2_error': max(record['relative_l2_error'] for record in prompt_metrics),\n                        'per_prompt': prompt_metrics})\n            score = sum(group['directional_loss'] + expected['magnitude_weight'] * group['relative_squared_loss'] for group in measured) / len(groups)\n            return {'balanced_objective': score, 'groups': measured}\n\n        fitted, artifacts = [], []\n        started = time.perf_counter()\n        torch.cuda.reset_peak_memory_stats()\n        for layer in layers:\n            if hashlib.sha256(initial_payloads[str(layer)]).hexdigest() != expected['initial_checkpoint_sha256'][str(layer)]:\n                raise RuntimeError('Initial checkpoint transfer checksum differs.')\n            initial = torch.load(io.BytesIO(initial_payloads[str(layer)]), map_location='cpu', weights_only=True)\n            if initial['layer'] != layer or initial['request_key'] != expected['prototype_request_key'] or initial['trained']:\n                raise RuntimeError('Initial bridge provenance differs.')\n            bridge = Bridge(4096, 256).to('cuda')\n            bridge.load_state_dict(initial['state_dict'], strict=True)\n            if sum(p.numel() for p in bridge.parameters()) != 2097152:\n                raise RuntimeError('Bridge architecture changed.')\n            optimizer = torch.optim.AdamW(bridge.parameters(), lr=expected['learning_rate'], weight_decay=expected['weight_decay'])\n            baseline_train, baseline_validation = evaluate(bridge, 'train', layer), evaluate(bridge, 'validation', layer)\n            evaluations = [{'step': 0, 'train': baseline_train, 'validation': baseline_validation}]\n            best_step, best_score = 0, baseline_validation['balanced_objective']\n            best_state = {name: tensor.detach().cpu().clone() for name, tensor in bridge.state_dict().items()}\n            history = []\n            training_groups = {group: {'x': torch.cat([r['x'] for r in data['train'][layer][group]]).to('cuda'),\n                                       'y': torch.cat([r['y'] for r in data['train'][layer][group]]).to('cuda')} for group in groups}\n            def checkpoint(step):\n                path = directory / f'bridge_block_{layer:02d}_step_{step:04d}.pt'\n                save_tensor(path, {'request_key': request_key, 'layer': layer, 'step': step, 'trained': step > 0,\n                    'state_dict': {name: tensor.detach().cpu().clone() for name, tensor in bridge.state_dict().items()},\n                    'optimizer_state_dict': optimizer.state_dict(), 'torch_rng_state': torch.get_rng_state(),\n                    'cuda_rng_states': torch.cuda.get_rng_state_all(), 'sampling_schedule_sha256': digest(directory / 'sampling_schedule.pt'),\n                    'best_step': best_step, 'best_validation_score': best_score, 'best_state_dict': best_state,\n                    'history': history, 'evaluations': evaluations})\n                save_json(directory / f'bridge_block_{layer:02d}_progress.json', {'request_key': request_key, 'layer': layer,\n                    'step': step, 'checkpoint': path.name, 'checkpoint_sha256': digest(path),\n                    'best_step': best_step, 'best_validation_score': best_score})\n                results_volume.commit()\n            checkpoint(0)\n            for step in range(expected['updates_per_bridge']):\n                bridge.train()\n                optimizer.zero_grad(set_to_none=True)\n                xs, ys = [], []\n                for g, group in enumerate(groups):\n                    selected = sampling[step, g].to('cuda')\n                    xs.append(training_groups[group]['x'][selected].float())\n                    ys.append(training_groups[group]['y'][selected].float())\n                x, y = torch.cat(xs), torch.cat(ys)\n                with torch.autocast('cuda', dtype=torch.bfloat16):\n                    prediction = bridge(x)\n                directional, relative_squared = token_losses(prediction, y)\n                loss = (directional + expected['magnitude_weight'] * relative_squared).mean()\n                if not torch.isfinite(loss):\n                    raise RuntimeError('Training produced a nonfinite loss.')\n                loss.backward()\n                norm = torch.nn.utils.clip_grad_norm_(bridge.parameters(), expected['gradient_clip'], error_if_nonfinite=True)\n                optimizer.step()\n                history.append({'step': step + 1, 'objective': float(loss.detach()), 'gradient_norm': float(norm)})\n                if (step + 1) % expected['checkpoint_every'] == 0:\n                    train_metrics, validation_metrics = evaluate(bridge, 'train', layer), evaluate(bridge, 'validation', layer)\n                    evaluations.append({'step': step + 1, 'train': train_metrics, 'validation': validation_metrics})\n                    score = validation_metrics['balanced_objective']\n                    if not math.isfinite(score):\n                        raise RuntimeError('Validation objective is nonfinite.')\n                    if score < best_score:\n                        best_score, best_step = score, step + 1\n                        best_state = {name: tensor.detach().cpu().clone() for name, tensor in bridge.state_dict().items()}\n                    checkpoint(step + 1)\n            best_metrics = next(item for item in evaluations if item['step'] == best_step)\n            selected_path = directory / f'bridge_block_{layer:02d}_selected.pt'\n            save_tensor(selected_path, {'request_key': request_key, 'layer': layer, 'step': best_step, 'trained': best_step > 0,\n                'state_dict': best_state, 'prototype_request_key': expected['prototype_request_key'],\n                'selection': 'minimum balanced validation objective at saved checkpoints; no validation gradients'})\n            result = {'layer': layer, 'updates': expected['updates_per_bridge'], 'parameters': 2097152,\n                'selected_step': best_step, 'selected_validation_score': best_score, 'baseline_train': baseline_train,\n                'baseline_validation': baseline_validation, 'selected_train': best_metrics['train'],\n                'selected_validation': best_metrics['validation'], 'final_train': evaluations[-1]['train'],\n                'final_validation': evaluations[-1]['validation'], 'evaluations': evaluations,\n                'selected_checkpoint': selected_path.name, 'selected_checkpoint_sha256': digest(selected_path)}\n            save_json(directory / f'bridge_block_{layer:02d}_summary.json', result)\n            results_volume.commit()\n            fitted.append(result)\n            print(f\"Block {layer}: {expected['updates_per_bridge']} updates; selected step {best_step}; validation {baseline_validation['balanced_objective']:.6f} -> {best_score:.6f}.\", flush=True)\n            del bridge, optimizer, training_groups\n            torch.cuda.empty_cache()\n        for path in sorted(directory.iterdir()):\n            if path.is_file() and path.name not in ('summary.json', 'started.json', 'request.json') and path.suffix != '.tmp':\n                artifacts.append({'name': path.name, 'bytes': path.stat().st_size, 'sha256': digest(path)})\n        report.update(status='passed', results=fitted, artifacts=artifacts,\n            total_optimizer_updates=sum(result['updates'] for result in fitted),\n            fit_seconds=time.perf_counter() - started, peak_allocated_gib=torch.cuda.max_memory_allocated()/2**30,\n            fitting_precision='FP32 parameters/residual/loss; BF16 autocast projections',\n            scope='cached local hidden-state fitting; no full student forward or image evaluation')\n    except Exception as error:\n        report['error'] = f'{type(error).__name__}: {error}'\n    save_json(summary_path, report)\n    results_volume.commit()\n    return report\n",
+    "worker_sha256": "738b01e74912217f4edb4981adba383cec20580b9fd957e10252a40c3e0b0181",
+    "runtime": {
+      "version": "phase3-modal-preflight-v1",
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_layers": 32,
+      "packages": [
+        "torch==2.14.0",
+        "torchvision==0.29.0",
+        "transformers==5.17.0",
+        "accelerate==1.15.0",
+        "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+        "pillow"
+      ],
+      "python_version": "3.13",
+      "gpu_requested": "H100!",
+      "weights_volume": "nihonga-hf-cache",
+      "results_volume": "nihonga-phase3-artifacts"
+    },
+    "gpu": "L4",
+    "seed": 20260928,
+    "sampling_seed": 20260929,
+    "updates_per_bridge": 500,
+    "checkpoint_every": 100,
+    "tokens_per_group": 64,
+    "groups": [
+      "prompt_tokens",
+      "early_image",
+      "middle_image",
+      "late_image"
+    ],
+    "sampling_policy": "equal group weight; each token draws TRAIN prompt uniformly then token uniformly within that prompt; identical schedule for all candidates",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "magnitude_weight": 0.1,
+    "objective": "mean token squared L2 distance between unit-normalized prediction and target, plus 0.1 * mean per-token squared relative error; four groups weighted equally",
+    "precision": "FP32 parameters, residual addition and losses; BF16 autocast down/up projections",
+    "evaluation": "baseline and every 100 updates; unweighted mean over prompts within each group; equal group weights",
+    "selection": "minimum balanced validation objective at saved checkpoints including identity baseline; every candidate still receives 500 updates",
+    "checkpoint_policy": "retain initialization and every 100 updates with model, optimizer, RNG, schedule hash, history, evaluations and best state; interrupted run stops for inspection",
+    "data_policy": "only TRAIN gradients; VALIDATION no gradients, only diagnostics and checkpoint selection; no INTERNAL TEST or benchmark use",
+    "scope": "20-prompt fitting implementation pilot; no full teacher/student forward or image evaluation"
+  },
+  "request_key": "7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618"
+}

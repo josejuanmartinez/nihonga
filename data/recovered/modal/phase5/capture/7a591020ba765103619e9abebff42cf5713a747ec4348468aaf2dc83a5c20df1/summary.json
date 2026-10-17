@@ -1,0 +1,407 @@
+{
+  "request_key": "7a591020ba765103619e9abebff42cf5713a747ec4348468aaf2dc83a5c20df1",
+  "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+  "row": {
+    "prompt": "A spontaneous shot of hands working dough covered in flour, tight focus on the face, realistic skin translucency, ultra-detailed.",
+    "dimension": "visual_quality",
+    "subdimension": "skin",
+    "facet": "hands",
+    "difficulty": 3,
+    "style": "photographic",
+    "aspect_ratio": "3:4",
+    "language": "en",
+    "prompt_format": "natural",
+    "hard": false,
+    "keywords": [],
+    "source": "llm_rewrite",
+    "prompt_template": "A candid photograph of hands kneading bread dough dusted with flour, extreme close-up of the face, realistic subsurface scattering, highly detailed.",
+    "generator_version": "phase1-v1",
+    "id": "p1-a745f08b72dc",
+    "seed": 2806378635,
+    "split": "validation",
+    "pool_rank": 731,
+    "llm_model": "Qwen/Qwen3-8B",
+    "source_id": "p1-a745f08b72dc",
+    "capture_id": "p6-continuation-test-p1-a745f08b72dc",
+    "width": 896,
+    "height": 1184,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "usage": "phase6_continuation_independent_test_only"
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-30T20:23:55.392130+00:00",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "capture_seconds": 6.2785597039999885,
+  "peak_allocated_gib": 30.86106777191162,
+  "tensor_sha256": "2cfe9be7054f9ef34ef328882ea1e9861e49dc8ac213db036831ef715d2dcd39",
+  "tensor_bytes": 58252749,
+  "teacher_trajectory_calls": 40,
+  "teacher_replay_calls": 3,
+  "captured_block_pair_records": 12,
+  "selected_token_pairs": 3212,
+  "stages": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "scheduler_timestep": 1000.0,
+      "scheduler_sigma": 1.0,
+      "transformer_timestep": [
+        1.0
+      ],
+      "cache_mode": "extract",
+      "target_image_tokens": 4144
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "scheduler_timestep": 657.1795043945312,
+      "scheduler_sigma": 0.6571794748306274,
+      "transformer_timestep": [
+        0.65625
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4144
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "scheduler_timestep": 19.999980926513672,
+      "scheduler_sigma": 0.019999980926513672,
+      "transformer_timestep": [
+        0.02001953125
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4144
+    }
+  ],
+  "identity_metrics": [
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 35,
+      "identity_relative_l2_error": 0.06952907145023346,
+      "identity_normalized_mse": 3.4676390896493103e-06,
+      "identity_mean_token_cosine": 0.9928983449935913,
+      "teacher_target_rms": 48.89688491821289
+    },
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08550630509853363,
+      "identity_normalized_mse": 9.148922686108563e-07,
+      "identity_mean_token_cosine": 0.9981260299682617,
+      "teacher_target_rms": 6.9936418533325195
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 35,
+      "identity_relative_l2_error": 0.06548047810792923,
+      "identity_normalized_mse": 3.3324051855743164e-06,
+      "identity_mean_token_cosine": 0.993175208568573,
+      "teacher_target_rms": 50.41815948486328
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.096305713057518,
+      "identity_normalized_mse": 1.4411648407985922e-06,
+      "identity_mean_token_cosine": 0.9970481991767883,
+      "teacher_target_rms": 7.34055233001709
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 35,
+      "identity_relative_l2_error": 0.11784239113330841,
+      "identity_normalized_mse": 3.471779791652807e-06,
+      "identity_mean_token_cosine": 0.9928898215293884,
+      "teacher_target_rms": 52.40607833862305
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.0891241580247879,
+      "identity_normalized_mse": 1.5620954627593164e-06,
+      "identity_mean_token_cosine": 0.9968005418777466,
+      "teacher_target_rms": 7.209172248840332
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 35,
+      "identity_relative_l2_error": 0.4886780083179474,
+      "identity_normalized_mse": 7.006407031440176e-06,
+      "identity_mean_token_cosine": 0.9856508374214172,
+      "teacher_target_rms": 65.25218200683594
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.0953107625246048,
+      "identity_normalized_mse": 1.906154921016423e-06,
+      "identity_mean_token_cosine": 0.9960958957672119,
+      "teacher_target_rms": 7.138248443603516
+    },
+    {
+      "layer": 2,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.06010739505290985,
+      "identity_normalized_mse": 7.737351097603096e-07,
+      "identity_mean_token_cosine": 0.9984153509140015,
+      "teacher_target_rms": 8.28203010559082
+    },
+    {
+      "layer": 3,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07480866461992264,
+      "identity_normalized_mse": 8.417158596785157e-07,
+      "identity_mean_token_cosine": 0.9982759952545166,
+      "teacher_target_rms": 7.951180934906006
+    },
+    {
+      "layer": 4,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09842527657747269,
+      "identity_normalized_mse": 1.3136431107341195e-06,
+      "identity_mean_token_cosine": 0.9973093867301941,
+      "teacher_target_rms": 7.496331691741943
+    },
+    {
+      "layer": 5,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.1028941422700882,
+      "identity_normalized_mse": 1.7741742794896709e-06,
+      "identity_mean_token_cosine": 0.9963662028312683,
+      "teacher_target_rms": 7.14056921005249
+    },
+    {
+      "layer": 2,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08293827623128891,
+      "identity_normalized_mse": 1.2364109807094792e-06,
+      "identity_mean_token_cosine": 0.997467577457428,
+      "teacher_target_rms": 10.252615928649902
+    },
+    {
+      "layer": 3,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07820265740156174,
+      "identity_normalized_mse": 1.0665723948477535e-06,
+      "identity_mean_token_cosine": 0.9978154897689819,
+      "teacher_target_rms": 9.88134765625
+    },
+    {
+      "layer": 4,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10247906297445297,
+      "identity_normalized_mse": 1.347101601822942e-06,
+      "identity_mean_token_cosine": 0.9972409009933472,
+      "teacher_target_rms": 9.264286041259766
+    },
+    {
+      "layer": 5,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10591309517621994,
+      "identity_normalized_mse": 1.6932152675508405e-06,
+      "identity_mean_token_cosine": 0.9965320825576782,
+      "teacher_target_rms": 8.73423957824707
+    }
+  ],
+  "replay_controls": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    }
+  ],
+  "selected_shapes": [
+    {
+      "stage": "early",
+      "layer": 2,
+      "shape": [
+        1,
+        291,
+        4096
+      ],
+      "prefix_tokens": 35,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 3,
+      "shape": [
+        1,
+        291,
+        4096
+      ],
+      "prefix_tokens": 35,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 4,
+      "shape": [
+        1,
+        291,
+        4096
+      ],
+      "prefix_tokens": 35,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 5,
+      "shape": [
+        1,
+        291,
+        4096
+      ],
+      "prefix_tokens": 35,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    }
+  ],
+  "optimizer_updates": 0,
+  "teacher_frozen": true,
+  "images_decoded": 0
+}

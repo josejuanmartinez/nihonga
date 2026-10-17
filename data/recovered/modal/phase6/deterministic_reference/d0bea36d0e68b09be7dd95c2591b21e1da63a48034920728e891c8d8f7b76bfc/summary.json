@@ -1,0 +1,41 @@
+{
+  "request_key": "d0bea36d0e68b09be7dd95c2591b21e1da63a48034920728e891c8d8f7b76bfc",
+  "status": "failed",
+  "mode": "verify",
+  "teacher_calls": 0,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "controls": [],
+  "artifacts": [],
+  "process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "651301e04f8640279a34550d5cb7bac4",
+    "modal_task_id": "ta-01M3PB4XX51S5CJY7371W4W2NR"
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "cudnn_version": 92400,
+  "settings": {
+    "weights_dtype": "bfloat16",
+    "attention_backend": "SDPBackend.MATH",
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "bf16_reduced_precision_matmul_reduction": false,
+    "fp16_bf16_reduction_math_sdp": false,
+    "input_order": "original pipeline argument order; stage tensors copied inside inference mode",
+    "prefix_cache": "fresh teacher cache per prompt; populate at early; use at middle and late"
+  },
+  "error": "RuntimeError: Generation report differs."
+}

@@ -1,0 +1,5045 @@
+{
+  "request_key": "adb98bb2d4a656eb05a9f8761611a6a4c3dc4a2e1eefca7de2c6b90ba3455360",
+  "status": "passed",
+  "rows": [
+    {
+      "source_id": "p1-021a3d99464e",
+      "prompt": "A candid photograph of a tomato, a scarf and an orange in a greenhouse.",
+      "seed": 35274137,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-021a3d99464e-pretrained.png",
+        "sha256": "2fd29e59539fd3db67e4739842be926009dce165847dc8a7198eeb3c6f955b0d",
+        "bytes": 2291601,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-021a3d99464e-update120.png",
+        "sha256": "dd71746ec893fce3d37c3e2dfc8aabcf7fdf0a3ccb4b0aacc41eccc42c5c5798",
+        "bytes": 2312523,
+        "seconds": 6.614482141000053,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-02da40765f31",
+      "prompt": "Two coffee mugs on a stone ledge, DSLR photo",
+      "seed": 47857782,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-02da40765f31-pretrained.png",
+        "sha256": "b011e31f28f83b542f10fc18f454e13fbeee1618f628901dff2e37974acd87f6",
+        "bytes": 1792535,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-02da40765f31-update120.png",
+        "sha256": "b9938ba5b8464820fa9326e5ba46e5c44337961b3c55e61cef9e9b5cf11ff3ec",
+        "bytes": 1802272,
+        "seconds": 6.6082575540000335,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-05a5b4844ca8",
+      "prompt": "A pink donut resting on a plain green background, crafted in claymation style with smooth, textured surfaces and subtle lighting effects.",
+      "seed": 94745732,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-05a5b4844ca8-pretrained.png",
+        "sha256": "e3bac8bcebb7cdb3a6395479013d9ab16db163136f2aa104fcdf619a5245a109",
+        "bytes": 1244771,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-05a5b4844ca8-update120.png",
+        "sha256": "f17f2599f086c2a5fb2b42243476f79528e121443b7619f3beeb8d097a2a2f62",
+        "bytes": 1252964,
+        "seconds": 6.745622301000026,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-0b5e2d9247dd",
+      "prompt": "A 3D render of a toy robot, an ivory egg, a pink orange, a toy car and a mushroom in a sunlit meadow. Highly detailed. 3D render, soft global illumination.",
+      "seed": 190721426,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-0b5e2d9247dd-pretrained.png",
+        "sha256": "9740ed9e30122eda7d390fc24e6e1043a8b64dbc236e73bd2cdd109a2a1c24d3",
+        "bytes": 1581050,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-0b5e2d9247dd-update120.png",
+        "sha256": "ae422d098c1eb1dd25fb0452be85824bd518356061750b7f1b7a9b7adfb4f1f8",
+        "bytes": 1587672,
+        "seconds": 6.755845101999967,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-0c99a4e9e487",
+      "prompt": "A giraffe partially hidden behind a coffee mug, stylized 3D",
+      "seed": 211395817,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-0c99a4e9e487-pretrained.png",
+        "sha256": "885b40bb9753f1596b0b627a13e9fad9884d875a6eee8ec080b7875829e0e404",
+        "bytes": 1328596,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-0c99a4e9e487-update120.png",
+        "sha256": "66ca4119df49aa581d10196902c029d951698ad5c6898356a6c72476fdfb75d2",
+        "bytes": 1260218,
+        "seconds": 6.764000704999944,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-0fbe4269ee90",
+      "prompt": "A flamingo and a chess piece in a busy city street, stylized 3D",
+      "seed": 264127081,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-0fbe4269ee90-pretrained.png",
+        "sha256": "63d6ac82002ab441951f1c687f62ba1676eb9078d7b8f0848e194492a74a61eb",
+        "bytes": 1810362,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-0fbe4269ee90-update120.png",
+        "sha256": "7db424f0633bba3a4e55a215cc223702b34af2b4a1c0ee6bba6d422c1678b2c9",
+        "bytes": 1831329,
+        "seconds": 6.7669052249999595,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-12fc55607a46",
+      "prompt": "A cherry in front of a wolf, 3D render",
+      "seed": 318526816,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-12fc55607a46-pretrained.png",
+        "sha256": "0026a8f16398ca25e5aa4459e139e92e95c19f533d68ea97cea47945efd8decb",
+        "bytes": 1712079,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-12fc55607a46-update120.png",
+        "sha256": "367ec7eec3ccb844792faef5c2e099cf37157afd3cf420a63396730e5138b034",
+        "bytes": 1698677,
+        "seconds": 6.7580574639999895,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-13a010a29d6b",
+      "prompt": "A digital illustration of four paintbrushes on a sandy beach.",
+      "seed": 329257122,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-13a010a29d6b-pretrained.png",
+        "sha256": "e9094d6496d00f4f706c8caca9b581844367222e615726e45e45c648b8869837",
+        "bytes": 1460518,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-13a010a29d6b-update120.png",
+        "sha256": "9643c7fe56c5944d368b226b97850483949b4def4118edb50fd045073115bdd9",
+        "bytes": 1390497,
+        "seconds": 6.763258288000088,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-160567f53922",
+      "prompt": "A 35mm film photograph of a potted cactus, a blue horse, a paintbrush and a black apple on a stone ledge, soft shadows.",
+      "seed": 369453045,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-160567f53922-pretrained.png",
+        "sha256": "a26d434b5d1e57149eefb214146f7b4cc415062cd74bde20cb1ed6b882cd6760",
+        "bytes": 1755021,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-160567f53922-update120.png",
+        "sha256": "e9748b2a02bb3b3b44512b76e1d1bff5bebd6394d1dc6c77c2b27601cc54bee3",
+        "bytes": 1755783,
+        "seconds": 6.641833012000006,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-16814dfaf8b3",
+      "prompt": "\u4e00\u53ea\u8003\u62c9\u5728\u67e0\u6aac\u4e0b\uff0c\u6570\u5b57\u7ed8\u753b\uff0c\u6cb9\u753b\u98ce\u683c",
+      "seed": 377572858,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "zh",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-16814dfaf8b3-pretrained.png",
+        "sha256": "d3dd093fbc6a8551c0c2ce5d8aceeebd6210db02166b7b3b1311f24458400da8",
+        "bytes": 2778765,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-16814dfaf8b3-update120.png",
+        "sha256": "1c17f76f137afc74b8892bbead5195ae42f4aff565db4c1bf79571a619f5f759",
+        "bytes": 2812289,
+        "seconds": 6.6384755139999925,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-17d01c85087d",
+      "prompt": "A photorealistic photograph of six magenta coins on a marble countertop, natural colors.",
+      "seed": 399514757,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-17d01c85087d-pretrained.png",
+        "sha256": "c28b657910145495eb0f7234d34415aeb382b5605fb0a2e540aeb7eca7d3aea6",
+        "bytes": 1606002,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-17d01c85087d-update120.png",
+        "sha256": "4374faa9d9cdeae7d2dfa5914c37e32b1d089f7998959a8a00a4b20cb6cae605",
+        "bytes": 1622376,
+        "seconds": 6.602773720999949,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-19e3e694998c",
+      "prompt": "A photorealistic photograph of twelve snails on a snowy field. Natural colors. Photorealistic, professional photography.",
+      "seed": 434366100,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-19e3e694998c-pretrained.png",
+        "sha256": "ed75b0c70ae4697a8ddc6f531f100acdb42b41ea63bcb8bd3f068507e073c5cb",
+        "bytes": 1689085,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-19e3e694998c-update120.png",
+        "sha256": "02dddb0dde9ceb455d2d6853259eff66b0a8a89694c79fb47ed319c9bf89cba5",
+        "bytes": 1699810,
+        "seconds": 6.767386356000088,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-1a417b6b5e0f",
+      "prompt": "A digital painting of a bell with green and black stripes next to an ivory potted cactus. Sharp focus. Digital painting, painterly.",
+      "seed": 440499051,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-1a417b6b5e0f-pretrained.png",
+        "sha256": "63b70785c9b3df8951f0a3fe595cd243dc5157417c45fa2195509d97464fda19",
+        "bytes": 1823472,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-1a417b6b5e0f-update120.png",
+        "sha256": "89ea57bde7b3316d7d5d974856ab21fe8f33ed1b0dfe8066a08d4b22400b4288",
+        "bytes": 1782353,
+        "seconds": 6.644983162000017,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-1b70508ffda7",
+      "prompt": "A watercolor painting of a mint green cherry and a silver globe on a rustic shelf, soft shadows.",
+      "seed": 460345487,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-1b70508ffda7-pretrained.png",
+        "sha256": "d88cef9082a969d73ed764af9f2c1af81550180e3481f1c8a6402b11da34ca01",
+        "bytes": 1842118,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-1b70508ffda7-update120.png",
+        "sha256": "52a5c6b9f708a77a39efd22fefb6e53a6e84cea3b2d95bf14a7322a2c2a38e2d",
+        "bytes": 1827121,
+        "seconds": 6.643357463000029,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-1ff0c06e4d45",
+      "prompt": "A flat vector illustration of a crab directly below a sunflower, and an orange spoon in front of a sunflower, natural colors.",
+      "seed": 535871598,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-1ff0c06e4d45-pretrained.png",
+        "sha256": "c75dcd30fe33bccbb0ef9d46c919f5fe024fd9a97a1d93bc704e422e9abde9bc",
+        "bytes": 971313,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-1ff0c06e4d45-update120.png",
+        "sha256": "96293a99d3de835422d47630f162bfaa2715dd93c368f53c6df84b7dddc4ce72",
+        "bytes": 955417,
+        "seconds": 6.60187831099995,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-208d97f93b13",
+      "prompt": "A brown cupcake in watercolor style",
+      "seed": 546150393,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-208d97f93b13-pretrained.png",
+        "sha256": "1ba3d12bd8793107393b89cfad7f3f6fd2cdba8fe0e72c2312d4e7ad39a0c368",
+        "bytes": 1431394,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-208d97f93b13-update120.png",
+        "sha256": "54270374d5b1dfdd5bb4212b98734477c5b56a0d521f3c66943c81b972ca760e",
+        "bytes": 1357420,
+        "seconds": 6.639515328000016,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-225675420c39",
+      "prompt": "An oil painting of seven orange strawberries on snowy ground, rich colors.",
+      "seed": 576091458,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-225675420c39-pretrained.png",
+        "sha256": "417f8b3019665997ecccbbcd8cdecdf8602a595ba9ebfc3d822b54cc12c07cc9",
+        "bytes": 2691699,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-225675420c39-update120.png",
+        "sha256": "c99da8f24ef6d044689df88f56847df5e3b41e1bbc39679734ab734e94190604",
+        "bytes": 2709152,
+        "seconds": 6.729164206000064,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-25dc97e0de76",
+      "prompt": "A graphite pencil sketch of a black snow globe sitting on a plain yellow background, featuring detailed cross-hatching to create texture and depth.",
+      "seed": 635213792,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-25dc97e0de76-pretrained.png",
+        "sha256": "f02b713256ebfdaa685b52c8df55a9bd04ded1f225e4527afdf243088217fbb4",
+        "bytes": 1671150,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-25dc97e0de76-update120.png",
+        "sha256": "278481dbf27675a510da11d8bbe81a9664c294be8ee323e9ff26567bf0f08312",
+        "bytes": 1650035,
+        "seconds": 6.75884759600001,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-29d0703cc9e6",
+      "prompt": "Show eight zebras on a riverbank, crisp details. Style: graphite pencil sketch, cross-hatching.",
+      "seed": 701526076,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-29d0703cc9e6-pretrained.png",
+        "sha256": "290db9b791e82f62662906b5a4b235ed74490872c498201cd83aa8118eb15419",
+        "bytes": 2216113,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-29d0703cc9e6-update120.png",
+        "sha256": "095f4fd283d086fd81b9927e89eedf179ba334559838bdaaea78f94509f9cc73",
+        "bytes": 2187721,
+        "seconds": 6.735745815999962,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-2df84e5f0aa6",
+      "prompt": "A candid photograph of a wolf, a maroon backpack, a crab and a teal teddy bear in a subway station, rich colors.",
+      "seed": 771247711,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-2df84e5f0aa6-pretrained.png",
+        "sha256": "596c3301a431c008621c9d56b21c27e431d9347ac542fe47fac079fc02115daa",
+        "bytes": 2248258,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-2df84e5f0aa6-update120.png",
+        "sha256": "86839ae8db8009ef3de37eb7aea3ab3eb06bc70f645c13995ea6d32c1ca684e9",
+        "bytes": 2279099,
+        "seconds": 6.636108096000044,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-2f254870e71a",
+      "prompt": "A candid photograph of four octopuses on a rocky hillside, high dynamic range.",
+      "seed": 790972528,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-2f254870e71a-pretrained.png",
+        "sha256": "45535d5b4e253758c797d050753114e8af5f3de1211324e9e6ad25ade2226c44",
+        "bytes": 2558629,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-2f254870e71a-update120.png",
+        "sha256": "fba4c397f4d9182c4a1975aa87ff542a946191a01e6b91b1bd66a2575df6ff5b",
+        "bytes": 2579174,
+        "seconds": 6.731623336000098,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-2fa5fe695687",
+      "prompt": "A feather underneath a turtle, watercolor",
+      "seed": 799407721,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-2fa5fe695687-pretrained.png",
+        "sha256": "fa88ae154e132421fff670c47faca2af9bcf1e4075154bde06d9ecdff1af7c53",
+        "bytes": 2508632,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-2fa5fe695687-update120.png",
+        "sha256": "1bb89c98c07be0e4a03362c586b2c88492ef24ae6cc7c43da68bf46510696dcf",
+        "bytes": 2482940,
+        "seconds": 6.735991094000042,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-32d162396e4a",
+      "prompt": "\u4e00\u53ea\u7f8a\u548c\u4e00\u53ea\u7070\u8272\u8717\u725b\u81ea\u7136\u989c\u8272\u7684\u5199\u5b9e\u7167\u7247\uff0c\u4e24\u8005\u7d27\u6328\u7740\u3002",
+      "seed": 852582969,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "zh",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-32d162396e4a-pretrained.png",
+        "sha256": "80b4445b881177874f16d24e1069340a09415ad8db60995a9907bcce9bc42dd9",
+        "bytes": 2207264,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-32d162396e4a-update120.png",
+        "sha256": "573d9b27943527912c92d9e3f485039bec6cb09a9f7b37ef3972601d8d8b210f",
+        "bytes": 2242878,
+        "seconds": 6.762767499999995,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-348049160148",
+      "prompt": "\u6e32\u67d3\u4e00\u4e2a\u5496\u5561\u676f\u653e\u5728\u9a86\u9a7c\u4e0a\uff0c\u6e05\u6670\u7684\u7ec6\u8282\u3002\u98ce\u683c\uff1a\u6c34\u5f69\uff0c\u67d4\u548c\u7684\u6e10\u53d8\uff0c\u7eb8\u5f20\u7eb9\u7406\u3002",
+      "seed": 880822550,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "zh",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-348049160148-pretrained.png",
+        "sha256": "bc09e0a9c916bd39de6bf4c41e0f8124a3d436e73c4608b68361449349e89fdc",
+        "bytes": 1695372,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-348049160148-update120.png",
+        "sha256": "ea87b438028a221bb778eb9669635f55b519413e42022d160118ba35159b52ad",
+        "bytes": 1692575,
+        "seconds": 6.765887459999931,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-35258a6fe9b9",
+      "prompt": "An oil painting of exactly two koalas and five butterflies in a sunlit garden. Natural colors. Oil on canvas, visible brushstrokes.",
+      "seed": 891652719,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-35258a6fe9b9-pretrained.png",
+        "sha256": "577b6abf2dedfc4ec7e3e0b3d206b74437feaf699e776a7f41106f8b7b16150d",
+        "bytes": 2844848,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-35258a6fe9b9-update120.png",
+        "sha256": "892eb9f9597c2df9aa35b7f3f1da276b7e9e4b9ed54b0e2f1ad63173034538ca",
+        "bytes": 2869787,
+        "seconds": 6.643045919999963,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-361454af8cbd",
+      "prompt": "\u4e00\u4e2a\u6241\u5e73\u77e2\u91cf\u63d2\u753b\uff0c\u5c55\u793a\u4e00\u672c\u4e66\u3001\u4e00\u4e2a\u84dd\u8272\u756a\u8304\u3001\u4e00\u4e2a\u7c89\u8272\u9999\u8549\u548c\u4e00\u4e2a\u7c89\u8272\u68cb\u5b50\u653e\u5728\u8349\u5730\u4e0a\u3002\u81ea\u7136\u8272\u5f69\u3002\u6241\u5e73\u77e2\u91cf\u827a\u672f\uff0c\u5927\u80c6\u7b80\u6d01\u7684\u5f62\u72b6\u3002",
+      "seed": 907302063,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "zh",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-361454af8cbd-pretrained.png",
+        "sha256": "0d43d63d250e9e5bb041e8d95c56ff633271ae552127c6774d611bf31eac2401",
+        "bytes": 889148,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-361454af8cbd-update120.png",
+        "sha256": "414ddf4d1fab155b3034d449abbebba197486ef2e915a3fab648a6a5ba2e6ed2",
+        "bytes": 910807,
+        "seconds": 6.6132676419999825,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-3a32d2b118f4",
+      "prompt": "Two cats playing in a lush grassy meadow, candid photo with natural lighting and soft textures",
+      "seed": 976409265,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-3a32d2b118f4-pretrained.png",
+        "sha256": "a03f22a3793f06c10c38f3cd1d1db90ff250f1a55232a516b41cab6e1282ed2a",
+        "bytes": 2432377,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-3a32d2b118f4-update120.png",
+        "sha256": "cbc77e48971a37a5ab29f7c0753567b76ba2ea7d1dbe398c5641d9967cff315f",
+        "bytes": 2485269,
+        "seconds": 6.680428326999845,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-3a45aa4fbdce",
+      "prompt": "A 35mm film photograph of a blue hat, a silver feather, a white desk lamp and a purple scarf in a greenhouse. Rich colors. 35mm film photo, film grain.",
+      "seed": 977644111,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-3a45aa4fbdce-pretrained.png",
+        "sha256": "7d064e6d751bd7e779c3a515b9aa9c4869b5cf5dfb558862ccae5b0c2a627403",
+        "bytes": 2021924,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-3a45aa4fbdce-update120.png",
+        "sha256": "6c66e00c220ede009c454f08d00b149c05c602ec4f04ddcef34d189c5f0a4179",
+        "bytes": 2047641,
+        "seconds": 6.809940653000012,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-3ea5a30dc8a2",
+      "prompt": "A watercolor painting featuring an orange lollipop resting on a plain red background, rendered in natural, soft colors.",
+      "seed": 1051042573,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-3ea5a30dc8a2-pretrained.png",
+        "sha256": "7c48b01c0da3f7c3a0f4d594f2990eba7316ee4908a5be26894ac0c95402f559",
+        "bytes": 2010735,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-3ea5a30dc8a2-update120.png",
+        "sha256": "231dd74c5ef11e6df37ea567fdd2fe9e4c2da9ac7f66eb963e63376d12815056",
+        "bytes": 2036825,
+        "seconds": 6.650158986999941,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-3eaca196926c",
+      "prompt": "A stylized 3D render of a swan inside a paper bag, sharp focus.",
+      "seed": 1051500950,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-3eaca196926c-pretrained.png",
+        "sha256": "b429067da8de6a6609e5a780aa6a11b59f5322ebaa59a30248a2a06a1bb9b368",
+        "bytes": 1301242,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-3eaca196926c-update120.png",
+        "sha256": "1d3dff96747b829dead5d9c3ae62bfff7c02e4d1edd0a680dc6ae60ec3622282",
+        "bytes": 1270698,
+        "seconds": 6.760508350000009,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-3f8228ebe75f",
+      "prompt": "A 3D render of a green fox right next to a mint green tiger. Sharp focus. 3D render, soft global illumination.",
+      "seed": 1065494763,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-3f8228ebe75f-pretrained.png",
+        "sha256": "ac8754d8fd4303b93e20b96ac268fc885cecb9ca4a998e67a55048e55c96799c",
+        "bytes": 1283906,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-3f8228ebe75f-update120.png",
+        "sha256": "f1cada621bc53a2a3d527b7715f01fdb2d6e24ff31ae4e15779fccf52c429307",
+        "bytes": 1242537,
+        "seconds": 6.617014673000085,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-46630dfe90b3",
+      "prompt": "A photorealistic photograph of a cyan coffee mug on top of an ivory book, highly detailed.",
+      "seed": 1180896766,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-46630dfe90b3-pretrained.png",
+        "sha256": "d33dcbf9211efcba2dd5d9bb77a97bba6102500f90b978055ca392ea53c54962",
+        "bytes": 1260985,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-46630dfe90b3-update120.png",
+        "sha256": "cc3243e6b89a47e38d01df0d66b9e7e1100affc5393fcba3d1b7747d6e7efea4",
+        "bytes": 1270863,
+        "seconds": 6.747225627000034,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-476af9f44f99",
+      "prompt": "a gray desk lamp, a potted cactus, an egg, a pear and a sunflower on a rainy sidewalk, sharp focus, graphite pencil sketch, cross-hatching",
+      "seed": 1198193140,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-476af9f44f99-pretrained.png",
+        "sha256": "e9f006d3b3f77dc3ad11846bdce607ba944b521082d8e4b4fe96c488fc5c4694",
+        "bytes": 2359965,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-476af9f44f99-update120.png",
+        "sha256": "4ac39cad1ef6404810d874726935c0856dd495c74109c7b9ae167e5f2619e3d2",
+        "bytes": 2329991,
+        "seconds": 6.789828459999853,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-481b4317a17d",
+      "prompt": "Render a mushroom to the right of a rose. Style: anime style, cel shading.",
+      "seed": 1209746199,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-481b4317a17d-pretrained.png",
+        "sha256": "d2ed10105385bd0526fdfff611d3ec09918f7dd2fcedf42d33e754665ae4c47d",
+        "bytes": 1305332,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-481b4317a17d-update120.png",
+        "sha256": "dbe093ccf4388af79eb98ece69be8271ca9e8faddab99de4d9dc7d326f19c6dd",
+        "bytes": 1280265,
+        "seconds": 6.7635193210001034,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-48a571659728",
+      "prompt": "A detailed 3D illustration featuring a balloon, a red feather, an orange toy robot, a teal chess piece, and a gold book arranged on a white studio background. Highly detailed. Stylized 3D rendering with clay-like textures and materials.",
+      "seed": 1218802021,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-48a571659728-pretrained.png",
+        "sha256": "68c4c672a88124c325a7764b32af54fe1f9016344b331f1731865a07ecb71621",
+        "bytes": 1206825,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-48a571659728-update120.png",
+        "sha256": "093e0645b35797db3b6136c199a65845a931a923da660d973314952e06391820",
+        "bytes": 1206858,
+        "seconds": 6.646422550000125,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-494f50be65c1",
+      "prompt": "\u6570\u5b57\u7ed8\u753b\u98ce\u683c\uff0c\u4e00\u4e2a\u7a7a\u623f\u95f4\u4e2d\u6709\u4e00\u53ea\u7f8a\u3001\u4e00\u53ea\u6c34\u736d\u3001\u4e00\u53ea\u7c73\u8272\u5c71\u7f8a\u3001\u4e00\u53ea\u91d1\u72d0\u72f8\u548c\u4e00\u4e2a\u67e0\u6aac\uff0c\u4e30\u5bcc\u8272\u5f69\uff0c\u753b\u98ce\u5177\u6709\u7b14\u89e6\u611f\u3002\"\u7f8a\" \"\u6c34\u736d\" \"\u7c73\u8272\u5c71\u7f8a\" \"\u91d1\u72d0\u72f8\" \"\u67e0\u6aac\"",
+      "seed": 1229934782,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "zh",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-494f50be65c1-pretrained.png",
+        "sha256": "38a0ca15391b77c5c0360f73d2e5c9fd172610a7700adf6b9c403ffa5a5ce588",
+        "bytes": 2207474,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-494f50be65c1-update120.png",
+        "sha256": "275bb325cc4bc7b258ebf5691e76540e2dca46893aba1d9cb58810af510dff16",
+        "bytes": 2190191,
+        "seconds": 6.770468526000059,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-4fc82f0c52de",
+      "prompt": "Make a picture of a candle, a pencil and a book in a cozy caf\u00e9, high dynamic range. Style: digital painting, painterly.",
+      "seed": 1338519308,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-4fc82f0c52de-pretrained.png",
+        "sha256": "ed6ca360efc2385468b89c78d06ced148865254aa8ce19ba637c3d7636912b26",
+        "bytes": 2059903,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-4fc82f0c52de-update120.png",
+        "sha256": "e9d3af19c4ce4f0371d74235881b68e068ecb829cffd11fc962bc93f3405e096",
+        "bytes": 2030673,
+        "seconds": 6.777225194000039,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-51b03a95dd88",
+      "prompt": "\u4e00\u5f20\u9ad8\u52a8\u6001\u8303\u56f4\u7684\u5199\u5b9e\u7167\u7247\uff0c\u516b\u4e2a\u9ed1\u8272\u5496\u5561\u676f\u653e\u5728\u516c\u56ed\u957f\u6905\u4e0a\uff0c\u5199\u5b9e\u98ce\u683c\uff0c\u4e13\u4e1a\u6444\u5f71\u3002",
+      "seed": 1370503829,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "zh",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-51b03a95dd88-pretrained.png",
+        "sha256": "11f2ee0220a6901fd727d322fdbb14bb334d100d84d68f98d7a959c5e545f202",
+        "bytes": 2318790,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-51b03a95dd88-update120.png",
+        "sha256": "38133b7944cb6b167a5885c83447e6b0475ae58c1e3f97a1a9e87bdb5a4ef294",
+        "bytes": 2355152,
+        "seconds": 6.757309191000104,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-53819a9de4cc",
+      "prompt": "Two swans in a rural setting, 35mm film photograph",
+      "seed": 1401002653,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-53819a9de4cc-pretrained.png",
+        "sha256": "87c15955f8631d6beae5ed1f9c4a58942ffae289485f99e5c105114f8c049303",
+        "bytes": 2158358,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-53819a9de4cc-update120.png",
+        "sha256": "3fb1d8e3236e77269f038e146e4bd1b68260fbfda93173723c7801bc6ba6f0d0",
+        "bytes": 2177699,
+        "seconds": 6.653572804000078,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-5679956e6a0b",
+      "prompt": "An otter to the right of an orange desk lamp, candid photo",
+      "seed": 1450808686,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-5679956e6a0b-pretrained.png",
+        "sha256": "4f643a8e607608c98dfea11dd781a176dd3e9016adea00deafcb320b09104694",
+        "bytes": 1529080,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-5679956e6a0b-update120.png",
+        "sha256": "360f5b56147e947fcd40eff00b5ee37eab3e8cb810e720a5e162cbeccf45637e",
+        "bytes": 1546918,
+        "seconds": 6.755613164999886,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-57e8f2b9e2c3",
+      "prompt": "A digital illustration of a burgundy fox, a teal pocket watch, a red crab and a flamingo on a glass table. Sharp focus. Digital illustration, clean lines.",
+      "seed": 1474884281,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-57e8f2b9e2c3-pretrained.png",
+        "sha256": "40f25c41252fcdb4399cbe44f08085fa129754ba1c3b516ad8a79fa7c6d3cea8",
+        "bytes": 1617072,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-57e8f2b9e2c3-update120.png",
+        "sha256": "e646301666035b25e25ae5fcc1bb739a4cbdb57749e7f7df9868d3647ebebe6b",
+        "bytes": 1573676,
+        "seconds": 6.7764756470000975,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-5acc00bc9433",
+      "prompt": "A photorealistic image of a white paintbrush and a navy blue orange placed on a sandy beach, sharp and detailed.",
+      "seed": 1523318972,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-5acc00bc9433-pretrained.png",
+        "sha256": "a0ffd78339b119307ec5f7e6353ad6711e0958da68ec0744a3a09c66ffce8596",
+        "bytes": 2244958,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-5acc00bc9433-update120.png",
+        "sha256": "a31302d9722331395d0592f8d42d54d25d1730502a9bdc37514770e9ede43883",
+        "bytes": 2267951,
+        "seconds": 6.630176360000178,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-5ba4a6d3fc87",
+      "prompt": "Two purple apples on a marble countertop, highly detailed. Style: stylized 3D with clay-like materials.",
+      "seed": 1537517267,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-5ba4a6d3fc87-pretrained.png",
+        "sha256": "48a29bcaa36abcb2ed875abd7f2a62f925f10d43dfb808b1076a4a275959d142",
+        "bytes": 1590771,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-5ba4a6d3fc87-update120.png",
+        "sha256": "8ac9162a44e43c65b749beb7ea95002d76910d4322d31523305a0a7b8dabcdba",
+        "bytes": 1589390,
+        "seconds": 6.63878171500005,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-5cb15c25d610",
+      "prompt": "Display two globes on a picnic blanket. Style: candid photograph, soft natural lighting.",
+      "seed": 1555127333,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-5cb15c25d610-pretrained.png",
+        "sha256": "a80285b4c2591feb7f7822150e68a12456a9ecf3ca484fce103264f3c1c0a251",
+        "bytes": 2106122,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-5cb15c25d610-update120.png",
+        "sha256": "ccb36f8764b6ebdf83760d36c4e00a4ea0c34a4aa2f943e52c0654cdee934d73",
+        "bytes": 2155240,
+        "seconds": 6.610846427999832,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-5f79935fad9d",
+      "prompt": "A 35mm film photo of four purple coffee mugs on a rustic shelf. Film grain, crisp details.",
+      "seed": 1601803103,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-5f79935fad9d-pretrained.png",
+        "sha256": "046a4b60cacdbf9cc00c96defcbbeca5831110ef5d154b3f4f326a76477760ab",
+        "bytes": 1934279,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-5f79935fad9d-update120.png",
+        "sha256": "2dda0344cc6d58078612eef6bd1dca0022312a3844f47b65305bb660e3c13883",
+        "bytes": 1986673,
+        "seconds": 6.646782614999893,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-6126a35add39",
+      "prompt": "a teal sneaker, a beige seashell, a green banana and a snow globe in a sunlit meadow, clean composition, 35mm film photo, film grain",
+      "seed": 1629922138,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-6126a35add39-pretrained.png",
+        "sha256": "550b90bf3ff174059ac3fae2927bbde76133bfe233ed31672b1d340762bdfbff",
+        "bytes": 2375348,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-6126a35add39-update120.png",
+        "sha256": "513f5f098a205647ee44f2e5a7905037f660cf87b8afdad4a50111eb50e0b986",
+        "bytes": 2419487,
+        "seconds": 6.77890663900007,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-647aff9cae44",
+      "prompt": "A 35mm film photograph of a gray cat, a teal teacup, a lavender desk lamp, an indigo lantern, a hedgehog and a backpack at a harbor at dawn. Highly detailed. 35mm film photo, film grain.",
+      "seed": 1685782428,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-647aff9cae44-pretrained.png",
+        "sha256": "ac1be2d797852fc4f5608840577d332b1216b344ebc1e1ff0b81ca0694b8a3dd",
+        "bytes": 1664888,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-647aff9cae44-update120.png",
+        "sha256": "873037e5ef03357c51933471b1e284f09985ecc46c239c62a6ceab998aa6d53f",
+        "bytes": 1686734,
+        "seconds": 6.656578404000129,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-6bdab6cbaae4",
+      "prompt": "A high-resolution DSLR photo of a chess piece, a bell and a donut in a cozy caf\u00e9, soft shadows.",
+      "seed": 1809495755,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-6bdab6cbaae4-pretrained.png",
+        "sha256": "d9de1a2dd0d67df37512d5d3a7770e433fa7975f701546bea0be46c51b5f08ae",
+        "bytes": 1694934,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-6bdab6cbaae4-update120.png",
+        "sha256": "4912ab2abe1aa7700b5091e4018765b2ef020d2ed8498aa668ef71d3d02af037",
+        "bytes": 1713578,
+        "seconds": 6.79387892800014,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-6e8e326086e6",
+      "prompt": "A digital painting of exactly two scarfs and five chess pieces on a glass table. Natural colors. Digital painting, painterly.",
+      "seed": 1854812768,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-6e8e326086e6-pretrained.png",
+        "sha256": "75327275f9e02d77dcc4f1a3c3db555f80c49cbf79fe2fd6b482cc9670141c10",
+        "bytes": 2352059,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-6e8e326086e6-update120.png",
+        "sha256": "e66b24163f5ce03997b37bb6d5e0e779bf991840689bca0452ce51b1f50642c4",
+        "bytes": 2346345,
+        "seconds": 6.809091514000102,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-6f457706ee9c",
+      "prompt": "a turquoise strawberry on top of a red duck, clean composition, watercolor, soft washes, paper texture",
+      "seed": 1866823430,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-6f457706ee9c-pretrained.png",
+        "sha256": "4afd24b80ad3ef17aec8e218b90700b262b65022ca4d14cf19ec6ca14c3fd389",
+        "bytes": 1622723,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-6f457706ee9c-update120.png",
+        "sha256": "bd233151c4d0324773f7a93f9d1b81c74f3cc95d64c06a0cd96fa441c74a06d2",
+        "bytes": 1622026,
+        "seconds": 6.777448893999917,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-7283c4cd2748",
+      "prompt": "A panda on top of a balloon, 35mm film photo",
+      "seed": 1921238221,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-7283c4cd2748-pretrained.png",
+        "sha256": "8ff8fd7a1ee6b8aeb1145ac937b1b48c0b4c95fd3bfe4671ab790e510aedf5ff",
+        "bytes": 1466855,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-7283c4cd2748-update120.png",
+        "sha256": "0bb89493aa9e889f5964e8dd3d85d957a4159071e6b30eb5c01a6158d5a2f291",
+        "bytes": 1470859,
+        "seconds": 6.659843344999899,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-72c07e619246",
+      "prompt": "Three brown strawberries in an empty room, classical oil painting",
+      "seed": 1925217889,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-72c07e619246-pretrained.png",
+        "sha256": "55fbb31c4b937b5c5707125d50dc5d7a2f8b23f8fa544b97f38cffffb82bb60e",
+        "bytes": 1839415,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-72c07e619246-update120.png",
+        "sha256": "d2c4a74a15a01d4d5c10fb0a09f40bbe67396daaaad28acaff02db7cdf17b9a4",
+        "bytes": 1864257,
+        "seconds": 6.604110084000013,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-736229a39d54",
+      "prompt": "A 35mm film shot of a brown tennis ball on a plain pink background, clean composition.",
+      "seed": 1935813027,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-736229a39d54-pretrained.png",
+        "sha256": "6c9d50c14b4f56c828db8268c40cc61e7cfab4b5544db2a3fb960f47df528fd1",
+        "bytes": 1258291,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-736229a39d54-update120.png",
+        "sha256": "9881c67b84dd9cb84250e5aea581715cd2370ce7f7c31f6f043c6d86fff9e56c",
+        "bytes": 1264168,
+        "seconds": 6.642116004000172,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-75d11b3c691a",
+      "prompt": "\u4e00\u4e2a3D\u6e32\u67d3\u7684\u9ec4\u8272\u8336\u58f6\u3001\u4e00\u4e2a\u54c1\u7ea2\u6a61\u80f6\u9e2d\u5b50\u548c\u4e00\u4e2a\u7329\u7ea2\u96ea\u7403\u5728\u7a7a\u623f\u95f4\u4e2d\uff0c\u67d4\u548c\u9634\u5f71\u30023D\u6e32\u67d3\uff0c\u67d4\u548c\u5168\u5c40\u5149\u7167\u3002",
+      "seed": 1976638268,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "zh",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-75d11b3c691a-pretrained.png",
+        "sha256": "39b6123c8eb300a4d5a8e5e9ae2e91f98819b31a854b167eb3cb4f7d49270704",
+        "bytes": 977144,
+        "seconds": null,
+        "reused": true
+      },
+      "update120": {
+        "name": "p1-75d11b3c691a-update120.png",
+        "sha256": "7fc924fdcbd24cbb530f6e44ec97b7f2f1f72e006a9d28fcfe98ef1685153d54",
+        "bytes": 984430,
+        "seconds": 6.64165042500008,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-774fc52e997a",
+      "prompt": "\u4e00\u5e45\u6570\u5b57\u7ed8\u753b\uff0c\u4e03\u4e2a\u753b\u7b14\u653e\u5728\u767d\u8272\u5de5\u4f5c\u5ba4\u80cc\u666f\u4e0a\uff0c\u9ad8\u5ea6\u8be6\u7ec6\u3002",
+      "seed": 2001716526,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "zh",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-774fc52e997a-pretrained.png",
+        "sha256": "8652dd6e135a180c79b2cc4d55029b248d7085dc9a011961e16bc66e6b17f7ad",
+        "bytes": 1853120,
+        "seconds": 9.542492128000006,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-774fc52e997a-update120.png",
+        "sha256": "d500bccda635cf654f8da180245ab9914b89380dc5fd0d7276b0a2d03ac404f0",
+        "bytes": 1835799,
+        "seconds": 6.742934381000168,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-78619f2f97ea",
+      "prompt": "A squirrel underneath a crow, stylized 3D",
+      "seed": 2019663663,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-78619f2f97ea-pretrained.png",
+        "sha256": "f44a85ef7ae36d3f30b07d70a822ade3b8427a7e4adecef1c7901c91e004d6b4",
+        "bytes": 1046692,
+        "seconds": 6.617201952000002,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-78619f2f97ea-update120.png",
+        "sha256": "ffe4949c5bd2d8839770acad1efa2baef5a636231554f19918eb801c8027c376",
+        "bytes": 989806,
+        "seconds": 6.656948825999962,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-79d1abf1854a",
+      "prompt": "A digital illustration of a candle, an apple, a backpack, a brown potted cactus and an orange cherry on a white studio backdrop, soft shadows.",
+      "seed": 2043784177,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-79d1abf1854a-pretrained.png",
+        "sha256": "68421472134edb569964f07177a456cf4811a0b456d0fe110d69fe33e5d88f38",
+        "bytes": 1163149,
+        "seconds": 6.760518843,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-79d1abf1854a-update120.png",
+        "sha256": "fcd6a5b02ce2296f50344a4f4a70d6d57bf06a15fc06ad35464d6506a7c003e2",
+        "bytes": 1168938,
+        "seconds": 6.771866236000051,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-7e1e0f098671",
+      "prompt": "A 3D render of seven squirrels on a snowy field. Soft shadows. 3D render, soft global illumination.",
+      "seed": 2115899145,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-7e1e0f098671-pretrained.png",
+        "sha256": "0880ac2b30003726a98f1fdfcb403a138d1713c10144e7b083eab1b5dbd5eb30",
+        "bytes": 1358860,
+        "seconds": 6.798129042999989,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-7e1e0f098671-update120.png",
+        "sha256": "c2fcff88e1e87f596dcceed760dc8c6ed8ea69a3ddd1432b5088864cb0b3d5aa",
+        "bytes": 1337673,
+        "seconds": 6.6487816169999405,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-8131406fafec",
+      "prompt": "Generate a 3D render of a hat and a lion in a small fishing village with soft global illumination.",
+      "seed": 2167488623,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-8131406fafec-pretrained.png",
+        "sha256": "ff3ea1427dbc52c3d0b7028ce4566ef727ee39bff1524c421fd61a7d1781c46f",
+        "bytes": 1833375,
+        "seconds": 6.625050098000003,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-8131406fafec-update120.png",
+        "sha256": "3c5c84a5059697179ac8a781f2ce13acd01a36cb61410e94bc7e8d64680cfd39",
+        "bytes": 1817388,
+        "seconds": 6.62438991099998,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-84b9834a32f6",
+      "prompt": "A sock, a hat and a pocket watch in a busy city street, 35mm film photo",
+      "seed": 2226750282,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-84b9834a32f6-pretrained.png",
+        "sha256": "63cd4b41ccfd5ecb3f19910748353a4a4a6d81446a3702fd06e8f69c05130372",
+        "bytes": 2026107,
+        "seconds": 6.737847774000016,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-84b9834a32f6-update120.png",
+        "sha256": "1cfc2f23c2a01a08949e7f3e87e7dee9b4ab3044f978402b57b84436516eb8c3",
+        "bytes": 2044662,
+        "seconds": 6.748156462999987,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-87689caaaea3",
+      "prompt": "\u6a44\u6984\u7eff\u8272\u889c\u5b50\u3001\u9752\u8272\u8336\u58f6\u548c\u767d\u8272\u82f9\u679c\u653e\u5728\u73bb\u7483\u684c\u4e0a\u7684\u94c5\u7b14\u7d20\u63cf\uff0c\u67d4\u548c\u9634\u5f71\uff0c\u70ad\u7b14\u7d20\u63cf\uff0c\u4ea4\u53c9\u6392\u7ebf\u3002",
+      "seed": 2271780010,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "zh",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-87689caaaea3-pretrained.png",
+        "sha256": "5a6363f31435f42b920fd19af7d54409acde43419b0139c85556f63bcbd4dbc6",
+        "bytes": 2166169,
+        "seconds": 6.6459004280000045,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-87689caaaea3-update120.png",
+        "sha256": "027fca5d3667b7f08bcca3e26fec54cf1d62a5f6816e5c3ecf3ce3c732931830",
+        "bytes": 2162720,
+        "seconds": 6.647783756000081,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-879faf36ef0a",
+      "prompt": "\u4e00\u5f20\u6293\u62cd\u7684\u7167\u7247\uff0c\u4e94\u679a\u7d2b\u8272\u68cb\u5b50\u653e\u5728\u684c\u5b50\u65c1\u7684\u7a97\u8fb9\uff0c\u6e05\u6670\u7684\u7ec6\u8282\u3002",
+      "seed": 2275389238,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "zh",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-879faf36ef0a-pretrained.png",
+        "sha256": "a4955270f9f2b368c3e6df291efce7b8b7fc68012376ca0c13a90049d67b956b",
+        "bytes": 1633729,
+        "seconds": 6.637724165000009,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-879faf36ef0a-update120.png",
+        "sha256": "57958a42add8c6ed0e7a9e49424a38626853ae6ec3ed05f34c0096b5532e545d",
+        "bytes": 1663994,
+        "seconds": 6.649092426000152,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-885aa50e2805",
+      "prompt": "Create a detailed image of seven umbrellas arranged on a lush grassy lawn, captured with high dynamic range. Style: claymation, handmade clay figures.",
+      "seed": 2287641870,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-885aa50e2805-pretrained.png",
+        "sha256": "29a3c723a6dd56b373796488c9fb9d6edc61b0cd37be8e0d65d6e97fc706f4dc",
+        "bytes": 1606414,
+        "seconds": 6.656851074999992,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-885aa50e2805-update120.png",
+        "sha256": "41174082690d2c5e5fb9794683f22a20d41f64fa091d2a4e66dc7781f45def2b",
+        "bytes": 1597865,
+        "seconds": 6.64627156399979,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-893d2b2343c1",
+      "prompt": "A digital painting of a yellow frog to the right of a brown seashell, sharp focus.",
+      "seed": 2302487331,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-893d2b2343c1-pretrained.png",
+        "sha256": "8183340a3d3e296b8872121d4f2917a7624a2a3fb40f678b8658166a91538556",
+        "bytes": 2379874,
+        "seconds": 6.733120174999982,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-893d2b2343c1-update120.png",
+        "sha256": "8ea5f6a74101ff148c794b4a41c9e5388b703d1c18e406946799aa15a27e36ac",
+        "bytes": 2321299,
+        "seconds": 6.762947246000067,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-895f1b8c42ae",
+      "prompt": "A flat vector illustration of a cherry hovering above a crimson hedgehog, sharp focus.",
+      "seed": 2304711564,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-895f1b8c42ae-pretrained.png",
+        "sha256": "61a10cf2445b9c2c56e15d58a0b27bf54ac1e996ca9d909a0583ce44d0cbd117",
+        "bytes": 829782,
+        "seconds": 6.638006562999976,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-895f1b8c42ae-update120.png",
+        "sha256": "ddfc9ffed6b89213fff04f59c2962d98faa4b35c5fb03ceb086b52a47bf53478",
+        "bytes": 847469,
+        "seconds": 6.639617127999827,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-8c4343b18bdd",
+      "prompt": "\u6c34\u5f69\u753b\u98ce\u683c\uff0c\u8c61\u7259\u8272\u82b1\u74f6\u548c\u4e00\u4e2a\u7ea2\u8272\u82f9\u679c\u653e\u5728\u516c\u56ed\u957f\u6905\u4e0a\uff0c\u7ec6\u8282\u6e05\u6670\u3002\"",
+      "seed": 2353218481,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "zh",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-8c4343b18bdd-pretrained.png",
+        "sha256": "a14a41214d9d86c164d7c7ec1b6ac0034369b386fdcb16da1ba91f091e2d33c3",
+        "bytes": 2588218,
+        "seconds": 6.769041686999998,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-8c4343b18bdd-update120.png",
+        "sha256": "b452dfc5222ae1ab3788b11d997f40e617e8e86020d850ee4f8e20dd8d65b6c4",
+        "bytes": 2488885,
+        "seconds": 6.771710025999937,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-8cfbaef7b3dd",
+      "prompt": "A watercolor painting of a single sneaker on a marble countertop.",
+      "seed": 2365304567,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-8cfbaef7b3dd-pretrained.png",
+        "sha256": "dc29944203f42f552973accbe064931b1892c391a8a37d3e42efbccc2ab016bf",
+        "bytes": 2137171,
+        "seconds": 6.747502013000002,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-8cfbaef7b3dd-update120.png",
+        "sha256": "7c87e1e0eb3987bcd128e688b0f7a542b035c50b55739729e6b10c59933e890f",
+        "bytes": 2139450,
+        "seconds": 6.74130091699999,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-8e50247e3318",
+      "prompt": "An octopus and a rubber duck in a quiet forest, watercolor",
+      "seed": 2387616894,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-8e50247e3318-pretrained.png",
+        "sha256": "1e8aa79dd3189c7b2c2400b5b4d99edaa055aca1c4f64adc2cb4753e205ef707",
+        "bytes": 2664917,
+        "seconds": 6.738275299999998,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-8e50247e3318-update120.png",
+        "sha256": "602eca73d091a4c207409740f86ce561092c8b9be74370c65b14fb05e0566be5",
+        "bytes": 2669010,
+        "seconds": 6.754349269999921,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9318639fe814",
+      "prompt": "Five pink pencils on a marble countertop, 3D render",
+      "seed": 2467849119,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-9318639fe814-pretrained.png",
+        "sha256": "e461f8cfbd3f8cc6d9c283e592012c2b280a4af7d83b9bf1360135155b85e565",
+        "bytes": 1328245,
+        "seconds": 6.639172430000002,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9318639fe814-update120.png",
+        "sha256": "01031ed73376d3f6378a91f4e67b13a204c341244be93330485a88a844300dee",
+        "bytes": 1336744,
+        "seconds": 6.662386870000091,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-943328e52ac5",
+      "prompt": "A 35mm film photograph of a pear, a maroon bear, a lavender pine cone and a brown scarf on a rooftop at dusk, highly detailed.",
+      "seed": 2486380773,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-943328e52ac5-pretrained.png",
+        "sha256": "b512238435808e4e9d312d72f938797b854ffdd53adc4721f582c850872353e4",
+        "bytes": 1915130,
+        "seconds": 6.619833308000011,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-943328e52ac5-update120.png",
+        "sha256": "9e596625bd5088bb655765d1f0ca2acd7674de1d247a49f66fd0f1f0685638a6",
+        "bytes": 1926105,
+        "seconds": 6.666173082000114,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-945c492e67f7",
+      "prompt": "Render a cherry, a glass bottle and a cupcake in an empty room. Style: 35mm film photo, film grain.",
+      "seed": 2489076014,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-945c492e67f7-pretrained.png",
+        "sha256": "7415d3f53b3405db6528c373e0bf57ae3b6029b3809b481f59e32b512f25264d",
+        "bytes": 1793423,
+        "seconds": 6.7812334540000165,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-945c492e67f7-update120.png",
+        "sha256": "52766a07b9e556c755bdafb9b27549bda0e0e067b818380801930a1b38484c26",
+        "bytes": 1844503,
+        "seconds": 6.783273480999924,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-976fd6e227ad",
+      "prompt": "A high-resolution DSLR photograph featuring a maroon lantern, a white candle, and a mint green toy car arranged on a rustic shelf. Sharp focus. DSLR photo, high resolution.",
+      "seed": 2540689122,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-976fd6e227ad-pretrained.png",
+        "sha256": "4169327397090367d450714f89407afc186faa502c8c5c9df69e235b1ccbeba4",
+        "bytes": 1495431,
+        "seconds": 6.691995913999989,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-976fd6e227ad-update120.png",
+        "sha256": "7fffb23e67bedc58b7a86a2fac44175649d8f3d0b96258c34eac59decfef9657",
+        "bytes": 1595479,
+        "seconds": 6.659870879999971,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-97cbe74d68d4",
+      "prompt": "A candid photograph of a turtle right next to a frog, and a beige hat to the right of a frog. Soft shadows. Candid photo, natural light.",
+      "seed": 2546722637,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-97cbe74d68d4-pretrained.png",
+        "sha256": "df0307c127311b4b541bc8e7e33c3ef1f6c517ba5ff991d0d4387dad1afedb68",
+        "bytes": 2091367,
+        "seconds": 6.650653124999991,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-97cbe74d68d4-update120.png",
+        "sha256": "f6859019024ebbacd461917f0081b464f229883227d121a1a5a588b2e3971df0",
+        "bytes": 2121900,
+        "seconds": 6.675036546000001,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-98ba0869d2a5",
+      "prompt": "An anime-style illustration of a brown cat partially hidden behind a lollipop, and a navy blue coffee mug directly below a lollipop. Sharp focus. Anime style, cel shading.",
+      "seed": 2562328681,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-98ba0869d2a5-pretrained.png",
+        "sha256": "5d2167070bcf99e120806dcdb79c7c873b5348a87060975c41dabe7fae27e353",
+        "bytes": 1360708,
+        "seconds": 6.771610236000015,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-98ba0869d2a5-update120.png",
+        "sha256": "de77f587441b377f7dbdd1d97cb0f25ec024391a494ab21424d19c80f53e2408",
+        "bytes": 1355472,
+        "seconds": 6.760984398999881,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9af0f4658cc1",
+      "prompt": "an orange cupcake, candid photo, natural light",
+      "seed": 2599482469,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-9af0f4658cc1-pretrained.png",
+        "sha256": "a78ecb9af5122b447bf704d74b92b6d989234c524cb732f75714edc3af628fbc",
+        "bytes": 1890203,
+        "seconds": 6.776407316000018,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9af0f4658cc1-update120.png",
+        "sha256": "681feff001fbea4744b914c5cd371a89d4217b478de1a8d20bec17be5420423e",
+        "bytes": 1920890,
+        "seconds": 6.67949055400004,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9b73dee7067b",
+      "prompt": "Show four globes on a rustic shelf, high dynamic range. Style: 3D render, soft global illumination.",
+      "seed": 2608062183,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-9b73dee7067b-pretrained.png",
+        "sha256": "cc55da08b972739503b169d6f7fe0e945716c0a07eb7d31c959cd6d45fa24c73",
+        "bytes": 2186762,
+        "seconds": 6.6125223559999995,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9b73dee7067b-update120.png",
+        "sha256": "86d637580c4b94f42e826b59ea4bd3b726036344deba37a8641d5485a7c97a9c",
+        "bytes": 2219331,
+        "seconds": 6.606515488000014,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9cad7eff4723",
+      "prompt": "A flat vector illustration featuring a purple zebra, a silver rubber duck, a rubber boot, and an ivory globe arranged in a sunlit meadow. High dynamic range. Bold, simple shapes with flat vector art style.",
+      "seed": 2628615935,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-9cad7eff4723-pretrained.png",
+        "sha256": "370534395051133480d75f15a0d2a9e280828ac59361b344a642e1aa71c1aacb",
+        "bytes": 1185910,
+        "seconds": 6.851889342999982,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9cad7eff4723-update120.png",
+        "sha256": "960c24e63f7556a5c988902a899e914ed824e99208ea74c3525f8a51240e9c27",
+        "bytes": 1118208,
+        "seconds": 6.643877420000081,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9d5ab4175bc3",
+      "prompt": "Three cherries arranged on a wooden kitchen table, stylized 3D rendering with detailed textures and vibrant colors",
+      "seed": 2639967255,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-9d5ab4175bc3-pretrained.png",
+        "sha256": "eddc2981638f94fe91fe9b85cc73f9e0ab95fc1f7e6d82db9d7658ed661fe3e3",
+        "bytes": 1530109,
+        "seconds": 6.628281837000031,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9d5ab4175bc3-update120.png",
+        "sha256": "fbad87c53a2aa6dc5f3391ef9eeb9f96c4c3099aec85af9c56aa3cb532e19fc6",
+        "bytes": 1533389,
+        "seconds": 6.639416470000015,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9e601065c649",
+      "prompt": "A pink globe on a plain white background, graphite pencil sketch",
+      "seed": 2657095781,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-9e601065c649-pretrained.png",
+        "sha256": "194356225c60b73f442aadad0231bf66a17320012a4e3ef91df7cfc5644cbc97",
+        "bytes": 1595426,
+        "seconds": 6.734862057999976,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9e601065c649-update120.png",
+        "sha256": "dbe3277673c049662da1fe0b1ae157b6f1941b154ba183f41cd170ba6b5d1c47",
+        "bytes": 1591280,
+        "seconds": 6.746966181000062,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9f7dcd798e2e",
+      "prompt": "A watercolor illustration featuring a mushroom perched atop a donut.",
+      "seed": 2675821945,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-9f7dcd798e2e-pretrained.png",
+        "sha256": "87729f1233828651afe64d6424702e6528e2ba860c4ee35e6a8a080750263a55",
+        "bytes": 1620896,
+        "seconds": 6.737048847999972,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9f7dcd798e2e-update120.png",
+        "sha256": "9365458c1420f75c2fc20ba22b714b4eb821c35940c516cb6c3b88e4d851da68",
+        "bytes": 1589287,
+        "seconds": 6.739935758999991,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-9fc7b3c8d8c0",
+      "prompt": "A 3D render of an orange violin and an ivory sock on a red tablecloth. Clean composition. 3D render, soft global illumination.",
+      "seed": 2680665032,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-9fc7b3c8d8c0-pretrained.png",
+        "sha256": "e17fc371889143bb3892640dfcf500c6bce17a7e39378ca8c08a47aebb953d32",
+        "bytes": 1537245,
+        "seconds": 6.624769732000004,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-9fc7b3c8d8c0-update120.png",
+        "sha256": "61b332ab8ee371102649537edd23b37915fece7153e24a8b11c59cbefb161cc1",
+        "bytes": 1497592,
+        "seconds": 6.6544690609998725,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a1c04e9184c0",
+      "prompt": "A stylized 3D render of a cherry, a balloon, a silver snow globe, a gray lantern, a mint green headphone set and an orange violin in a night market. High dynamic range. Stylized 3D, clay-like materials.",
+      "seed": 2713734801,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-a1c04e9184c0-pretrained.png",
+        "sha256": "d0b03ef1e00e1145d73f3c4038044b43f8530acbd7de1f3f02d163f8f6ba8c76",
+        "bytes": 1524498,
+        "seconds": 6.6551929859999746,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-a1c04e9184c0-update120.png",
+        "sha256": "fe5135ee51d7e7e7ee76ebbd9c0a99704d9868d4cd714cb1fbaeda439ceb2685",
+        "bytes": 1511453,
+        "seconds": 6.655262312000104,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a50e79e52c51",
+      "prompt": "A flat vector illustration of a blue wine glass and a lime green tomato on a wooden kitchen table, high dynamic range.",
+      "seed": 2769189349,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-a50e79e52c51-pretrained.png",
+        "sha256": "2aa5ad8f0049521073f32f4ef4bd41d823908436f1c7fe2df196dfa5d680fef9",
+        "bytes": 1048224,
+        "seconds": 6.636265536999986,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-a50e79e52c51-update120.png",
+        "sha256": "ffb30cd05c03f40a1a969f862e6ce23e993785a250c9d9fabc27d83f683417b2",
+        "bytes": 1024488,
+        "seconds": 6.652466378000099,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a706ef27d981",
+      "prompt": "A stylized 3D render of eight deer in a grassy meadow. Sharp focus. Stylized 3D, clay-like materials.",
+      "seed": 2802249511,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-a706ef27d981-pretrained.png",
+        "sha256": "2a98dcb6874b37b066e19f7c597de9069c85178956cd00434ff757fd3738f210",
+        "bytes": 1674491,
+        "seconds": 6.642291532999991,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-a706ef27d981-update120.png",
+        "sha256": "74bd601443fe0d5bd005cd59c5e70747e926c0302db52b63bac3eeaa205e23d6",
+        "bytes": 1679795,
+        "seconds": 6.728641333000041,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a70da1c684c5",
+      "prompt": "Create an image of a mint green flamingo inside a fishbowl, which is in front of an olive green koala, soft shadows. Style: DSLR photo, high resolution.",
+      "seed": 2802688454,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-a70da1c684c5-pretrained.png",
+        "sha256": "e202b3c7674e290750140f269d0cdb889100398527070c4902defd51ae535d7d",
+        "bytes": 1522472,
+        "seconds": 6.771638402000008,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-a70da1c684c5-update120.png",
+        "sha256": "368a29fa3bfe72ca45c92beae50eccdfc6e169863f1b533e9ac4603d15665edc",
+        "bytes": 1530228,
+        "seconds": 6.7834463880001294,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a9c7d38ad735",
+      "prompt": "A photorealistic image featuring an alarm clock, a cherry, and a headphone set arranged on a white studio backdrop. Highly detailed and professionally captured, with lifelike textures and precise lighting.",
+      "seed": 2848445322,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-a9c7d38ad735-pretrained.png",
+        "sha256": "1597ab9b06c6961b0355595c4829fb00d540e44ebe445071a889a08c64a325c0",
+        "bytes": 1311865,
+        "seconds": 6.7508930689999715,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-a9c7d38ad735-update120.png",
+        "sha256": "28624c98cb39f703b72b6de36315186fc692d4dfbc664b5b49aef3293d728085",
+        "bytes": 1316418,
+        "seconds": 6.761571745000083,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ab2a706c5cc0",
+      "prompt": "A candid photograph of a paper crane, a green rubber duck, a maroon cupcake and a yellow glass bottle in a busy city street. High dynamic range. Candid photo, natural light.",
+      "seed": 2871685228,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-ab2a706c5cc0-pretrained.png",
+        "sha256": "00ab6c71e2e564de743351ea9f904367ec9a84967ac0e521b1d9329d8adff895",
+        "bytes": 2026850,
+        "seconds": 6.627481503000013,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-ab2a706c5cc0-update120.png",
+        "sha256": "1e09f7f615d595b1e90fb715c1becb00238ccb29075371fee935b4a362b17616",
+        "bytes": 2038398,
+        "seconds": 6.628584778000004,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-aca4b47a0e89",
+      "prompt": "\u4e00\u5e45\u6cb9\u753b\uff0c\u524d\u666f\u662f\u84dd\u8272\u8721\u70db\uff0c\u4f4d\u4e8e\u68d5\u8272\u9a86\u9a7c\u524d\u65b9\uff0c\u53f3\u4fa7\u662f\u7d2b\u8272\u8783\u87f9\uff0c\u68d5\u8272\u9a86\u9a7c\u65c1\u8fb9\uff0c\u67d4\u548c\u7684\u9634\u5f71\u3002",
+      "seed": 2896475258,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "zh",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-aca4b47a0e89-pretrained.png",
+        "sha256": "8d031d85b94249f6267b841e4ae935adc4e8f8037c75c6a989d632c9d5152258",
+        "bytes": 2357694,
+        "seconds": 6.643896752000046,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-aca4b47a0e89-update120.png",
+        "sha256": "4bc4f603959217973ab9c4fd1032d47ee6480b2f7c1885c2e99109ec90fb5080",
+        "bytes": 2383261,
+        "seconds": 6.660668289999876,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-afebdf34163f",
+      "prompt": "\u4e00\u6761\u56f4\u5dfe\u76f4\u63a5\u4f4d\u4e8e\u68d5\u8272\u82b1\u74f6\u4e0b\u65b9\uff0c\u6e05\u6670\u5bf9\u7126\u3002\u6570\u5b57\u63d2\u753b\uff0c\u7ebf\u6761\u5e72\u51c0\u3002",
+      "seed": 2951470900,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "zh",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-afebdf34163f-pretrained.png",
+        "sha256": "65e68ede94fcb7b78583d60c098321d0e17afadfb609c9cbc46b6a959819e2fd",
+        "bytes": 1123296,
+        "seconds": 6.7471382619999645,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-afebdf34163f-update120.png",
+        "sha256": "8f5c6393125a453523313d32c6056fddc3197e8944f375a05876c76b405eecc2",
+        "bytes": 946516,
+        "seconds": 6.737519986999814,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-b0f90120c791",
+      "prompt": "\u4e00\u4e2a\u7f51\u7403\u548c\u4e00\u4e2a\u751c\u751c\u5708\u653e\u5728\u7ea2\u8272\u684c\u5e03\u4e0a\uff0c candid \u62cd\u6444\u7167\u7247",
+      "seed": 2969108768,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "zh",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-b0f90120c791-pretrained.png",
+        "sha256": "34f2e4353b82781f43609bc8967f6205cd984c859fabe47e932c88f8264de887",
+        "bytes": 1774941,
+        "seconds": 6.777817210000023,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-b0f90120c791-update120.png",
+        "sha256": "19dcd29551bfbc00fef3ee16a401990e4666c1af8632493ed5b768eeeec505da",
+        "bytes": 1795280,
+        "seconds": 6.778488025999877,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-b177cb38cfed",
+      "prompt": "A highly detailed photorealistic image featuring a vibrant lime green sock and a bright magenta wooden block placed on a soft, textured picnic blanket, showcasing rich and saturated colors.",
+      "seed": 2977418040,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-b177cb38cfed-pretrained.png",
+        "sha256": "67fbf6dbdca059ce1635af08cd97413df57cacfc2162035dfb14b99795d9482a",
+        "bytes": 2379335,
+        "seconds": 6.64357774299998,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-b177cb38cfed-update120.png",
+        "sha256": "1030dbcaae6441f11971c833567cb33e7786d09d364fca52b638d3d43361508b",
+        "bytes": 2403377,
+        "seconds": 6.659715097000117,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-b267a040b663",
+      "prompt": "a seashell between a green violin and an orange koala, clean composition, stylized 3D, clay-like materials",
+      "seed": 2993135680,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-b267a040b663-pretrained.png",
+        "sha256": "3e226a5a0f84cdab25e8c445aa1f64d5d6ac7dca76c4623e0abafae5b2f776bd",
+        "bytes": 1093420,
+        "seconds": 6.658816175000027,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-b267a040b663-update120.png",
+        "sha256": "cb0125f71e6542992306829af727e32e576040842200890e63b0f74ddf5f82f4",
+        "bytes": 1134179,
+        "seconds": 6.665514092999956,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ba26868d9f65",
+      "prompt": "Six stylized 3D hedgehogs lounging on a sandy beach, each with distinct fur textures and subtle color variations",
+      "seed": 3123086989,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-ba26868d9f65-pretrained.png",
+        "sha256": "9535e1f29fe892956b39066fbe00e3c8f0700b3c064e9d0699a0f78baaa9865f",
+        "bytes": 1943288,
+        "seconds": 6.607805502999952,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-ba26868d9f65-update120.png",
+        "sha256": "6811f91c85eef482306235357441f1ddc445a0919b057e1e0f205717e867f31e",
+        "bytes": 1938000,
+        "seconds": 6.61587334900014,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-bbea1c023df4",
+      "prompt": "A high-resolution DSLR photo of a lavender rubber boot, a magenta apple, a silver banana and a coral donut on a park bench. Highly detailed. DSLR photo, high resolution.",
+      "seed": 3152681986,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-bbea1c023df4-pretrained.png",
+        "sha256": "bb38bab78530280d62dc2039758695ba38c92b1876ba56f57fd4a5def154dd7c",
+        "bytes": 1704089,
+        "seconds": 6.768692230999989,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-bbea1c023df4-update120.png",
+        "sha256": "9a4c5461610b7f1305b1dc6e5ad1909f4ef0fe39b51eb0a68345122dd761b3ad",
+        "bytes": 1730468,
+        "seconds": 6.7705874089999725,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-bbead476386c",
+      "prompt": "A candid shot of five green tennis balls arranged on a polished marble countertop, casting soft, diffused shadows across the surface.",
+      "seed": 3152729206,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-bbead476386c-pretrained.png",
+        "sha256": "377555e9d10be30e92901ecb4d34997a79198e4185e324faac29156f7f8ce038",
+        "bytes": 1600732,
+        "seconds": 6.661778083999991,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-bbead476386c-update120.png",
+        "sha256": "9f73ca6ae9393909aff5e03c62df6337fe515c377a2e94fd035a9f60f7cb8c6d",
+        "bytes": 1622914,
+        "seconds": 6.661086768000132,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-bef74dc9eeb6",
+      "prompt": "An anime-style illustration of a black balloon, a mint green potted cactus and a crimson pine cone on a red tablecloth. Rich colors. Anime style, cel shading.",
+      "seed": 3203878345,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-bef74dc9eeb6-pretrained.png",
+        "sha256": "93e5901ba19a61671d579c95a83cf79a270f720e8244e61c00de5c4fcb6e8a17",
+        "bytes": 1532923,
+        "seconds": 6.754828938999992,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-bef74dc9eeb6-update120.png",
+        "sha256": "cc53cdda326e4fc3b58cd237bd9e4df721f45dfd999957b14919bb1f991c0686",
+        "bytes": 1514690,
+        "seconds": 6.761271154000042,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-bf7cb713addd",
+      "prompt": "\u56db\u652f\u54c1\u7ea2\u94c5\u7b14\u653e\u5728\u7ea2\u8272\u684c\u5e03\u4e0a\uff0c\u9510\u5229\u5bf9\u7126\u3002\u98ce\u683c\uff1a3D\u6e32\u67d3\uff0c\u67d4\u548c\u5168\u5c40\u5149\u7167\u3002",
+      "seed": 3212621587,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "zh",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-bf7cb713addd-pretrained.png",
+        "sha256": "d9d2cfe7ca0ab65cc69d876c0fbc41a97bcc7a747e2b0f80f581908da3ee94bb",
+        "bytes": 1540170,
+        "seconds": 6.760529961000032,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-bf7cb713addd-update120.png",
+        "sha256": "3ffe4e1d886b2d81eb1100b97d2f0b8df9bb9a0fc0bd25a71f1a025090a2c8e1",
+        "bytes": 1551145,
+        "seconds": 6.766319477999787,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-c022b2c076da",
+      "prompt": "A stylized 3D render of an indigo pear underneath a dog, and a purple turtle hovering above a dog. Crisp details. Stylized 3D, clay-like materials.",
+      "seed": 3223499456,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-c022b2c076da-pretrained.png",
+        "sha256": "a86f00915d4a04f37f357bac45d14d061817544d30298aa057b34c0bd034e3a2",
+        "bytes": 1419262,
+        "seconds": 6.7833775120000155,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-c022b2c076da-update120.png",
+        "sha256": "3b42863ea9c4b54bbc8f6c3f12467da0df385fa5460fbda97ab7e5d6e396365c",
+        "bytes": 1376254,
+        "seconds": 6.795690923000166,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-c049c41d2d54",
+      "prompt": "A camel underneath a sneaker, candid photo",
+      "seed": 3226059805,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-c049c41d2d54-pretrained.png",
+        "sha256": "1688317206dd60579c5b56935143d7c53cc024e32eb924cb61e89150c5237556",
+        "bytes": 2543229,
+        "seconds": 6.798577835000003,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-c049c41d2d54-update120.png",
+        "sha256": "11f57024ad4f9db13ee26955b7dcbd09bfbd5db66fb13471b0cf21eb28cf8a9a",
+        "bytes": 2559953,
+        "seconds": 6.686607509999931,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-c29a5786dfb5",
+      "prompt": "An oil painting of a seashell directly below a donut, natural colors.",
+      "seed": 3264894854,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-c29a5786dfb5-pretrained.png",
+        "sha256": "7fc512d7cd5fd073d0de1dbb00bf065bf224f05d2dd370790188324303651eb8",
+        "bytes": 2447357,
+        "seconds": 6.727678340000011,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-c29a5786dfb5-update120.png",
+        "sha256": "bd29d56452770668d8e97667d08a7faf6a9ebca2c13aba7cb0904349442ac2f7",
+        "bytes": 2473257,
+        "seconds": 6.766596875999994,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-c34cb68895af",
+      "prompt": "\u4e00\u5f2035\u6beb\u7c73\u80f6\u7247\u7167\u7247\uff0c\u4e00\u6735\u5e26\u6709\u9ec4\u8272\u548c\u7ea2\u8272\u6761\u7eb9\u7684\u73ab\u7470\u65c1\u8fb9\u6709\u4e00\u53ea\u9152\u7ea2\u8272\u6a61\u80f6\u9e2d\u5b50\uff0c\u6e05\u6670\u7ec6\u8282\uff0c35\u6beb\u7c73\u80f6\u7247\u6444\u5f71\uff0c\u80f6\u7247\u9897\u7c92\u6548\u679c\u3002\"35mm film photograph\" \"burgundy rubber duck\"",
+      "seed": 3276584584,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "zh",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-c34cb68895af-pretrained.png",
+        "sha256": "adbe431b04ad4faec0029ed803a0794d8bfc375f2b079283f5285239f2965832",
+        "bytes": 1676507,
+        "seconds": 6.645995345000017,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-c34cb68895af-update120.png",
+        "sha256": "08c5b48d86398e147457e9fae876658ac7de332e3d9072d71f6cb65eca117427",
+        "bytes": 1694705,
+        "seconds": 6.662478962000023,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-c8881e2e3fb1",
+      "prompt": "A 3D render of seven lions in a farmyard. Highly detailed. 3D render, soft global illumination.",
+      "seed": 3364363822,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-c8881e2e3fb1-pretrained.png",
+        "sha256": "ca34cce1e084b9f5d8f6e14d341c151f366eb220c8c3a372c4e834c1b49ae8a8",
+        "bytes": 2245754,
+        "seconds": 6.773204815000042,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-c8881e2e3fb1-update120.png",
+        "sha256": "6f42c38cb6529980a62cb9d8a4cff6c550fb49b9cad540f6f12c96a75800d3d6",
+        "bytes": 2266177,
+        "seconds": 6.769738059000019,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-c960b5387a4c",
+      "prompt": "\u4e00\u4e2a\u7ea2\u8272\u706f\u7b3c\u548c\u4e00\u4e2a\u85cf\u7ea2\u82b1\u8272\u82f9\u679c\u653e\u5728\u5927\u7406\u77f3\u53f0\u9762\u4e0a\uff0c\u4e30\u5bcc\u7684\u8272\u5f69\uff0c\u6570\u5b57\u63d2\u753b\u98ce\u683c\uff0c\u7b80\u6d01\u7ebf\u6761",
+      "seed": 3378558264,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "zh",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-c960b5387a4c-pretrained.png",
+        "sha256": "f7955f6a24e78521694eb09f59ac6c8798290688a49d36b4022f1fef06d322eb",
+        "bytes": 1475325,
+        "seconds": 6.644877377999933,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-c960b5387a4c-update120.png",
+        "sha256": "99bcda2546720ac52d901702053269f2e47cb5813f3174e0d51bc8dac416b223",
+        "bytes": 1398427,
+        "seconds": 6.648533169000075,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-cb3f74615ef9",
+      "prompt": "Two gray baseball caps on a concrete floor, graphite pencil sketch",
+      "seed": 3409933409,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-cb3f74615ef9-pretrained.png",
+        "sha256": "b9fb2dcb4292c67e8b2fe325d572873773a857528db339b9410cf61bb007b30a",
+        "bytes": 2268716,
+        "seconds": 6.758692096999994,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-cb3f74615ef9-update120.png",
+        "sha256": "a5a93a68886a989847a98e299c3e53af924903eb3bd58e12a97c4403a3d90cfe",
+        "bytes": 2303654,
+        "seconds": 6.74324492300002,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-cbfe09f86b0f",
+      "prompt": "five bells on a glass table, clean composition, flat vector art, bold simple shapes",
+      "seed": 3422423544,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-cbfe09f86b0f-pretrained.png",
+        "sha256": "b433eb81a79fa3303f5de381c0504729de1b378f3ccdf1c6c76f0cc09b01e192",
+        "bytes": 991882,
+        "seconds": 6.635036530000093,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-cbfe09f86b0f-update120.png",
+        "sha256": "9ece83d6664e150fcc8fdc5310c97fd433421050de9db9e0917bc5958927aac4",
+        "bytes": 1026293,
+        "seconds": 6.6363918219999505,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ce5b8c47e620",
+      "prompt": "A watercolor illustration featuring a gray spoon resting on a simple green background.",
+      "seed": 3462106183,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-ce5b8c47e620-pretrained.png",
+        "sha256": "5dbd66dcfa76056a92e045b53f3855b5ded27336639f6bbc71d8ca2033149890",
+        "bytes": 1657902,
+        "seconds": 6.591301594000015,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-ce5b8c47e620-update120.png",
+        "sha256": "01ae681cccf0bdfdb77fbdea1f8c0aba5d91168ee0795baf4b47bc2a9a3a5f00",
+        "bytes": 1680011,
+        "seconds": 6.600899408000032,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-cf0f852c61dc",
+      "prompt": "A single feather lying on snowy ground, captured in a 35mm film photo with rich texture and grainy detail",
+      "seed": 3473900844,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-cf0f852c61dc-pretrained.png",
+        "sha256": "22df1196050e1d6b2c57834b1ea769f5ec7bd5cc116d2bb1904bbe84d42be34c",
+        "bytes": 2564561,
+        "seconds": 6.636972302999993,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-cf0f852c61dc-update120.png",
+        "sha256": "fb8d590af3d93859fc9de0f76b8106e37bc89d7cbce4a0f8e06f26e87c7c390b",
+        "bytes": 2605919,
+        "seconds": 6.638517793999881,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-d8aa46f6a73a",
+      "prompt": "A high-resolution DSLR photo of a violin directly below an elephant. Crisp details. DSLR photo, high resolution.",
+      "seed": 3635037942,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-d8aa46f6a73a-pretrained.png",
+        "sha256": "c217c557e202450571a88b7ce9c1f10edd2c403febe80bed0057ea07e682b0b8",
+        "bytes": 2406080,
+        "seconds": 6.750572821999981,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-d8aa46f6a73a-update120.png",
+        "sha256": "a13a66c14d78b13c48a33e3f09d902aac9ae9769dd3bc69935d4076cd666f6d9",
+        "bytes": 2422074,
+        "seconds": 6.755779181999969,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-daad903be239",
+      "prompt": "A candid photograph of twelve teal pumpkins on a concrete floor. Sharp focus. Candid photo, natural light.",
+      "seed": 3668807739,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-daad903be239-pretrained.png",
+        "sha256": "84e8062b031f495bf257c394f08ff2e2516e9e7cdd792c7b3288d9da76eb76a7",
+        "bytes": 2240644,
+        "seconds": 6.646258530999944,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-daad903be239-update120.png",
+        "sha256": "7d22d5a38717fcc3322f7aeeab322a7898dd84b659a4cffe4bdf7bd5e44ef8ca",
+        "bytes": 2279903,
+        "seconds": 6.640394506999883,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-dd4f19c9e3b1",
+      "prompt": "Render a vibrant mustard yellow panda sitting beside a luxurious gold scarf draped on a crisp picnic blanket, arranged with a clean and balanced composition. Style: 35mm film photo with visible film grain.",
+      "seed": 3712948681,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-dd4f19c9e3b1-pretrained.png",
+        "sha256": "5b5631cd273589f506526508aad1e320f6c8931fb6ecd05585cf552907ac959d",
+        "bytes": 1894493,
+        "seconds": 6.615553607999914,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-dd4f19c9e3b1-update120.png",
+        "sha256": "5737c46e19f941853d0e3c1dbc0d4e583e0204aa50897de1c2d65d79e6793aa6",
+        "bytes": 1909943,
+        "seconds": 6.6144945020000705,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-dd7be2740719",
+      "prompt": "\u4e00\u4e2a3D\u6e32\u67d3\u7684\u54c1\u7ea2\u6d77\u8d1d\u58f3\u548c\u9ec4\u8272\u5730\u7403\u4eea\u653e\u5728\u77f3\u5934\u53f0\u9762\u4e0a\uff0c\u67d4\u548c\u7684\u9634\u5f71\u3002",
+      "seed": 3715883636,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "zh",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-dd7be2740719-pretrained.png",
+        "sha256": "40d8a6675cfb2794e2416b7fd09f138df321d6c05df6aabac2dae71b7d370025",
+        "bytes": 1354266,
+        "seconds": 6.768181309000056,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-dd7be2740719-update120.png",
+        "sha256": "0bbe2a25ef48517a90080198d3daabe03932f93f72cd3f0e0ea34c59885cf07a",
+        "bytes": 1345977,
+        "seconds": 6.767319262000001,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-e0f86ec59356",
+      "prompt": "A high-resolution DSLR photo of a mint green sheep right next to a navy blue dog, and a squirrel on top of a navy blue dog, sharp focus.",
+      "seed": 3774377669,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-e0f86ec59356-pretrained.png",
+        "sha256": "14b7966a118b37e3fb5c58d18263abe8cebe5fbbde6f4cd62819efd695c473fa",
+        "bytes": 2050008,
+        "seconds": 6.7563844580000705,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-e0f86ec59356-update120.png",
+        "sha256": "d4505bf7007234f56aa4ba2e43038890901880c398539e3943b0e821fa612fbf",
+        "bytes": 2066442,
+        "seconds": 6.796884971000054,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-e2f15c7e431a",
+      "prompt": "A digital illustration of a cyan scarf and a mustard yellow pocket watch in an empty room. Soft shadows. Clean lines.",
+      "seed": 3807468670,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-e2f15c7e431a-pretrained.png",
+        "sha256": "191b0962009ab6e5db9df91c07e86c63ec6858135088afab09bced59e4cd8ce9",
+        "bytes": 1133305,
+        "seconds": 6.754995255999916,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-e2f15c7e431a-update120.png",
+        "sha256": "a6dd6e4d48451753b220afe08b633e0580a77578806d7d29c37d0314d3801aaf",
+        "bytes": 1076746,
+        "seconds": 6.796200341000031,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-e5b414feb4c1",
+      "prompt": "A detailed mushroom, a small toy robot, and a worn backpack arranged on a weathered rustic shelf, digital illustration",
+      "seed": 3853784318,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-e5b414feb4c1-pretrained.png",
+        "sha256": "295d3abe390fda8cc3f8d723890c2f8828b020628dc69481a5d4da6131cb7d9d",
+        "bytes": 2086337,
+        "seconds": 6.775345866999942,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-e5b414feb4c1-update120.png",
+        "sha256": "16763b7fd39fe587b67a366938b85a707701d2c20dbd35f5e01e67730844b8f8",
+        "bytes": 2099962,
+        "seconds": 6.787160118999964,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-e918c7a75376",
+      "prompt": "a teddy bear on top of a red seashell, soft shadows, candid photo, natural light",
+      "seed": 3910715303,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-e918c7a75376-pretrained.png",
+        "sha256": "f74bddd8291fc7f41ea71255b4407d708ed05ac038ffb78c5569b4fc7c81ce89",
+        "bytes": 1897915,
+        "seconds": 6.648444805000054,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-e918c7a75376-update120.png",
+        "sha256": "f6de17e047c48d2a984cffa2702c0e3ded2f31fbb1e9738994d7bf1d0e9bfd9d",
+        "bytes": 1918007,
+        "seconds": 6.675785140000016,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-eb0ec04828b3",
+      "prompt": "An anime-style illustration featuring a vivid lime green paper crane, a deep indigo desk lamp, and a soft lavender rubber boot arranged on a picnic blanket. High dynamic range with anime style and cel shading.",
+      "seed": 3943612488,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-eb0ec04828b3-pretrained.png",
+        "sha256": "5a976ea596f452a518ab43a393a676877c8910aeca77d7f4b73975d07bf38c0b",
+        "bytes": 1683961,
+        "seconds": 6.670766529000048,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-eb0ec04828b3-update120.png",
+        "sha256": "255e6b85a5166c9c2fabf420b09128f3986a0ad6374e2337bb529f864cd45965",
+        "bytes": 1677533,
+        "seconds": 6.659607210999866,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-eb113defdcd6",
+      "prompt": "An anime-style illustration of exactly four sunflowers and four toy robots on a picnic blanket. Crisp details. Anime style, cel shading.",
+      "seed": 3943775727,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "en",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-eb113defdcd6-pretrained.png",
+        "sha256": "8412d01843b16b05d467e5cfc931830487c02a02bebb740eb7e44c1f91e70dab",
+        "bytes": 2099582,
+        "seconds": 6.599375437000049,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-eb113defdcd6-update120.png",
+        "sha256": "44ac29336a379838b5a59ae6e6f1df349332360d7344e0fe37e864d65c0e7162",
+        "bytes": 2098332,
+        "seconds": 6.6247395339999,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ec3c2f033a55",
+      "prompt": "Generate an image of a koala inside a ceramic bowl, which is on top of a magenta spoon, clean composition. Style: candid photo, natural light.",
+      "seed": 3963367171,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-ec3c2f033a55-pretrained.png",
+        "sha256": "8d5107e85a04d5d245d036d400c0d465bb5912c6097199254ff2507f32626f63",
+        "bytes": 1900293,
+        "seconds": 6.653272061000052,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-ec3c2f033a55-update120.png",
+        "sha256": "288a0f0b0c60feb858e336423351c1afa39586904414d436310f00773a690170",
+        "bytes": 1920196,
+        "seconds": 6.654592959999945,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ed712e9790fe",
+      "prompt": "a maroon banana and a mustard yellow candle in an empty room, high dynamic range, watercolor, soft washes, paper texture",
+      "seed": 3983617687,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-ed712e9790fe-pretrained.png",
+        "sha256": "41e3b47679ed6e9bb488932c35403adb24f56b60a78f4b0d23f3e0016f1a8ce1",
+        "bytes": 1838378,
+        "seconds": 6.761037277000014,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-ed712e9790fe-update120.png",
+        "sha256": "fad65a8c0d29f2129a812557b9be735a1eeee690cfeb9e68b671db80685b1605",
+        "bytes": 1826878,
+        "seconds": 6.765843937999989,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-edb884c5e8a4",
+      "prompt": "\u4e00\u4e2a\u98ce\u683c\u53163D\u6e32\u67d3\u7684\u516b\u9897\u82f9\u679c\u653e\u5728\u516c\u56ed\u957f\u6905\u4e0a\uff0c\u6e05\u6670\u5bf9\u7126\uff0c\u98ce\u683c\u53163D\uff0c\u9ecf\u571f\u8d28\u611f\u6750\u6599",
+      "seed": 3988292805,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "language": "zh",
+      "question": "Are the requested number(s) of each named object visible?",
+      "pretrained": {
+        "name": "p1-edb884c5e8a4-pretrained.png",
+        "sha256": "56c79064d02a746180245a36a80facd323afa13c1f003156c36440ef4517c291",
+        "bytes": 1495563,
+        "seconds": 6.761596111000017,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-edb884c5e8a4-update120.png",
+        "sha256": "d133f6853adce381748956119e8bab5b8aff06b12fa5c53ecc84a2307dc06f72",
+        "bytes": 1486456,
+        "seconds": 6.758094041000049,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ef150c5d83ad",
+      "prompt": "A 35mm film photograph featuring an alarm clock and an egg set in a night market scene",
+      "seed": 4011134045,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-ef150c5d83ad-pretrained.png",
+        "sha256": "a1d59410ef5aa5c2693cffa72bb64a70248ae1015019b8ade798f861f0f4a074",
+        "bytes": 1661139,
+        "seconds": 6.641644528000029,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-ef150c5d83ad-update120.png",
+        "sha256": "5ebe8e21b64990403a1f1f65f913709faaf3c02dd6a95dd951a13912e51ac8bd",
+        "bytes": 1673258,
+        "seconds": 6.633581374999949,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-f0e803304fbb",
+      "prompt": "A green backpack, 3D render",
+      "seed": 4041737008,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-f0e803304fbb-pretrained.png",
+        "sha256": "fe3f3c51c0f141a4cba660b6f2988fed2b3323cf9ab63b97671f8ceb6efd99f1",
+        "bytes": 1371102,
+        "seconds": 6.753913104000048,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-f0e803304fbb-update120.png",
+        "sha256": "e483bf60a8c621a9d8854ffa93edcd0fbb902d216d83434d3765f1bdcaf280e5",
+        "bytes": 1358727,
+        "seconds": 6.740574531999982,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-f42b7b646e1e",
+      "prompt": "A backpack, a lemon, and a book placed on a rooftop during dusk, candid photograph",
+      "seed": 4096490340,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-f42b7b646e1e-pretrained.png",
+        "sha256": "d889835220d7ed59ed0980e0176a5ea53da17687085c3ea6566b352626f247c6",
+        "bytes": 1416869,
+        "seconds": 6.604832876000046,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-f42b7b646e1e-update120.png",
+        "sha256": "920a7399eaf4dc6616d952dd1ae1716eee8a7b674c8ac16d872409c7ce9e635c",
+        "bytes": 1428485,
+        "seconds": 6.612773054000172,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-f4b6718b3ab6",
+      "prompt": "A lantern inside a glass jar, oil on canvas",
+      "seed": 4105597323,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-f4b6718b3ab6-pretrained.png",
+        "sha256": "38b27bb3f0786e1a7989fce40296d195042bddec54d793d8a65066af7407574b",
+        "bytes": 2278331,
+        "seconds": 6.636445959000071,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-f4b6718b3ab6-update120.png",
+        "sha256": "66cda76b886c4e049e3b3546914ed8138b1cb4ac5228fef2db44dcab7de5cd99",
+        "bytes": 2326527,
+        "seconds": 6.606507314000055,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-f4da070d23c5",
+      "prompt": "A stylized 3D illustration featuring a lavender chess piece, a maroon violin, a teal glass bottle, and a silver umbrella arranged on a stone ledge. Sharp details. Stylized 3D, clay-like textures.",
+      "seed": 4107929357,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-f4da070d23c5-pretrained.png",
+        "sha256": "1bab1cb8d8caf613d6f1577bf724dc9e2b03a400ac25dd7e1bab967590355005",
+        "bytes": 1323577,
+        "seconds": 6.647794556999997,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-f4da070d23c5-update120.png",
+        "sha256": "8c240a6ba3887c74b6df791f305deb55a7fedd2d2fba9b9f2fad4333835aa082",
+        "bytes": 1242098,
+        "seconds": 6.641917401000001,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-fd180db9136c",
+      "prompt": "An orange sheep right next to a blue fox, DSLR photo",
+      "seed": 4246212025,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-fd180db9136c-pretrained.png",
+        "sha256": "1805fbb41cb2869a2571d46dca135865b045d9ed4131955445936a4f83d2499a",
+        "bytes": 2496713,
+        "seconds": 6.733009350999964,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-fd180db9136c-update120.png",
+        "sha256": "30b9b733fb31fc43ec3dd08c18553133466486d0649695a32490e2da027bbe6d",
+        "bytes": 2542518,
+        "seconds": 6.7384287219999806,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-fdbf0b0f82f5",
+      "prompt": "A flat vector illustration of a crimson strawberry, an orange cupcake, a crow, a squirrel and an indigo octopus on a rooftop at dusk, rich colors.",
+      "seed": 4257155855,
+      "width": 896,
+      "height": 1184,
+      "dimension": "alignment",
+      "subdimension": "multiple_objects",
+      "language": "en",
+      "question": "Are all requested objects visible together?",
+      "pretrained": {
+        "name": "p1-fdbf0b0f82f5-pretrained.png",
+        "sha256": "7293ead58c48eb05ae2a807014def38553998e290307e76d3e3d5dbf1ee3202e",
+        "bytes": 1005632,
+        "seconds": 6.773488574999988,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-fdbf0b0f82f5-update120.png",
+        "sha256": "7770aa112977f864b70a4e4410136fe34e37b8f0dacbd27e2e65e0d62c11c83d",
+        "bytes": 928938,
+        "seconds": 6.769687801999908,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-fe804da7db90",
+      "prompt": "Make a picture of a brown tea kettle on a plain black background, clean composition. Style: candid photo, natural light.",
+      "seed": 4269821351,
+      "width": 1184,
+      "height": 896,
+      "dimension": "alignment",
+      "subdimension": "colors",
+      "language": "en",
+      "question": "Are the named objects visible with the requested colors assigned correctly?",
+      "pretrained": {
+        "name": "p1-fe804da7db90-pretrained.png",
+        "sha256": "4bb8a2319d8980648d3d115d3302af35ce88110a3256585d813a1386cb199d7d",
+        "bytes": 1276658,
+        "seconds": 6.761688348000007,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-fe804da7db90-update120.png",
+        "sha256": "b012b2b2c55277298d75f676d34446c879962dc13d30779f2296bbb8513bf71a",
+        "bytes": 1272782,
+        "seconds": 6.803575069999852,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-feea467551a7",
+      "prompt": "a pink spoon in front of an orange pocket watch, rich colors, stylized 3D, clay-like materials",
+      "seed": 4276766325,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "language": "en",
+      "question": "Are all named objects visible in the requested relative positions?",
+      "pretrained": {
+        "name": "p1-feea467551a7-pretrained.png",
+        "sha256": "7b3ec811ab8c9f0f3567f762f8c1ddb63d5602862d372b137c765a23639dd7c5",
+        "bytes": 1228916,
+        "seconds": 6.601463573999922,
+        "reused": false
+      },
+      "update120": {
+        "name": "p1-feea467551a7-update120.png",
+        "sha256": "97919097fa54c329b542a303870f4a2c8f3b32fe6ec6ed50d8b63af4b6038efd",
+        "bytes": 1225500,
+        "seconds": 6.604991576999964,
+        "reused": false
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p1-021a3d99464e-pretrained.png",
+      "sha256": "2fd29e59539fd3db67e4739842be926009dce165847dc8a7198eeb3c6f955b0d",
+      "bytes": 2291601,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-021a3d99464e-update120.png",
+      "sha256": "dd71746ec893fce3d37c3e2dfc8aabcf7fdf0a3ccb4b0aacc41eccc42c5c5798",
+      "bytes": 2312523,
+      "seconds": 6.614482141000053,
+      "reused": false
+    },
+    {
+      "name": "p1-02da40765f31-pretrained.png",
+      "sha256": "b011e31f28f83b542f10fc18f454e13fbeee1618f628901dff2e37974acd87f6",
+      "bytes": 1792535,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-02da40765f31-update120.png",
+      "sha256": "b9938ba5b8464820fa9326e5ba46e5c44337961b3c55e61cef9e9b5cf11ff3ec",
+      "bytes": 1802272,
+      "seconds": 6.6082575540000335,
+      "reused": false
+    },
+    {
+      "name": "p1-05a5b4844ca8-pretrained.png",
+      "sha256": "e3bac8bcebb7cdb3a6395479013d9ab16db163136f2aa104fcdf619a5245a109",
+      "bytes": 1244771,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-05a5b4844ca8-update120.png",
+      "sha256": "f17f2599f086c2a5fb2b42243476f79528e121443b7619f3beeb8d097a2a2f62",
+      "bytes": 1252964,
+      "seconds": 6.745622301000026,
+      "reused": false
+    },
+    {
+      "name": "p1-0b5e2d9247dd-pretrained.png",
+      "sha256": "9740ed9e30122eda7d390fc24e6e1043a8b64dbc236e73bd2cdd109a2a1c24d3",
+      "bytes": 1581050,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-0b5e2d9247dd-update120.png",
+      "sha256": "ae422d098c1eb1dd25fb0452be85824bd518356061750b7f1b7a9b7adfb4f1f8",
+      "bytes": 1587672,
+      "seconds": 6.755845101999967,
+      "reused": false
+    },
+    {
+      "name": "p1-0c99a4e9e487-pretrained.png",
+      "sha256": "885b40bb9753f1596b0b627a13e9fad9884d875a6eee8ec080b7875829e0e404",
+      "bytes": 1328596,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-0c99a4e9e487-update120.png",
+      "sha256": "66ca4119df49aa581d10196902c029d951698ad5c6898356a6c72476fdfb75d2",
+      "bytes": 1260218,
+      "seconds": 6.764000704999944,
+      "reused": false
+    },
+    {
+      "name": "p1-0fbe4269ee90-pretrained.png",
+      "sha256": "63d6ac82002ab441951f1c687f62ba1676eb9078d7b8f0848e194492a74a61eb",
+      "bytes": 1810362,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-0fbe4269ee90-update120.png",
+      "sha256": "7db424f0633bba3a4e55a215cc223702b34af2b4a1c0ee6bba6d422c1678b2c9",
+      "bytes": 1831329,
+      "seconds": 6.7669052249999595,
+      "reused": false
+    },
+    {
+      "name": "p1-12fc55607a46-pretrained.png",
+      "sha256": "0026a8f16398ca25e5aa4459e139e92e95c19f533d68ea97cea47945efd8decb",
+      "bytes": 1712079,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-12fc55607a46-update120.png",
+      "sha256": "367ec7eec3ccb844792faef5c2e099cf37157afd3cf420a63396730e5138b034",
+      "bytes": 1698677,
+      "seconds": 6.7580574639999895,
+      "reused": false
+    },
+    {
+      "name": "p1-13a010a29d6b-pretrained.png",
+      "sha256": "e9094d6496d00f4f706c8caca9b581844367222e615726e45e45c648b8869837",
+      "bytes": 1460518,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-13a010a29d6b-update120.png",
+      "sha256": "9643c7fe56c5944d368b226b97850483949b4def4118edb50fd045073115bdd9",
+      "bytes": 1390497,
+      "seconds": 6.763258288000088,
+      "reused": false
+    },
+    {
+      "name": "p1-160567f53922-pretrained.png",
+      "sha256": "a26d434b5d1e57149eefb214146f7b4cc415062cd74bde20cb1ed6b882cd6760",
+      "bytes": 1755021,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-160567f53922-update120.png",
+      "sha256": "e9748b2a02bb3b3b44512b76e1d1bff5bebd6394d1dc6c77c2b27601cc54bee3",
+      "bytes": 1755783,
+      "seconds": 6.641833012000006,
+      "reused": false
+    },
+    {
+      "name": "p1-16814dfaf8b3-pretrained.png",
+      "sha256": "d3dd093fbc6a8551c0c2ce5d8aceeebd6210db02166b7b3b1311f24458400da8",
+      "bytes": 2778765,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-16814dfaf8b3-update120.png",
+      "sha256": "1c17f76f137afc74b8892bbead5195ae42f4aff565db4c1bf79571a619f5f759",
+      "bytes": 2812289,
+      "seconds": 6.6384755139999925,
+      "reused": false
+    },
+    {
+      "name": "p1-17d01c85087d-pretrained.png",
+      "sha256": "c28b657910145495eb0f7234d34415aeb382b5605fb0a2e540aeb7eca7d3aea6",
+      "bytes": 1606002,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-17d01c85087d-update120.png",
+      "sha256": "4374faa9d9cdeae7d2dfa5914c37e32b1d089f7998959a8a00a4b20cb6cae605",
+      "bytes": 1622376,
+      "seconds": 6.602773720999949,
+      "reused": false
+    },
+    {
+      "name": "p1-19e3e694998c-pretrained.png",
+      "sha256": "ed75b0c70ae4697a8ddc6f531f100acdb42b41ea63bcb8bd3f068507e073c5cb",
+      "bytes": 1689085,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-19e3e694998c-update120.png",
+      "sha256": "02dddb0dde9ceb455d2d6853259eff66b0a8a89694c79fb47ed319c9bf89cba5",
+      "bytes": 1699810,
+      "seconds": 6.767386356000088,
+      "reused": false
+    },
+    {
+      "name": "p1-1a417b6b5e0f-pretrained.png",
+      "sha256": "63b70785c9b3df8951f0a3fe595cd243dc5157417c45fa2195509d97464fda19",
+      "bytes": 1823472,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-1a417b6b5e0f-update120.png",
+      "sha256": "89ea57bde7b3316d7d5d974856ab21fe8f33ed1b0dfe8066a08d4b22400b4288",
+      "bytes": 1782353,
+      "seconds": 6.644983162000017,
+      "reused": false
+    },
+    {
+      "name": "p1-1b70508ffda7-pretrained.png",
+      "sha256": "d88cef9082a969d73ed764af9f2c1af81550180e3481f1c8a6402b11da34ca01",
+      "bytes": 1842118,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-1b70508ffda7-update120.png",
+      "sha256": "52a5c6b9f708a77a39efd22fefb6e53a6e84cea3b2d95bf14a7322a2c2a38e2d",
+      "bytes": 1827121,
+      "seconds": 6.643357463000029,
+      "reused": false
+    },
+    {
+      "name": "p1-1ff0c06e4d45-pretrained.png",
+      "sha256": "c75dcd30fe33bccbb0ef9d46c919f5fe024fd9a97a1d93bc704e422e9abde9bc",
+      "bytes": 971313,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-1ff0c06e4d45-update120.png",
+      "sha256": "96293a99d3de835422d47630f162bfaa2715dd93c368f53c6df84b7dddc4ce72",
+      "bytes": 955417,
+      "seconds": 6.60187831099995,
+      "reused": false
+    },
+    {
+      "name": "p1-208d97f93b13-pretrained.png",
+      "sha256": "1ba3d12bd8793107393b89cfad7f3f6fd2cdba8fe0e72c2312d4e7ad39a0c368",
+      "bytes": 1431394,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-208d97f93b13-update120.png",
+      "sha256": "54270374d5b1dfdd5bb4212b98734477c5b56a0d521f3c66943c81b972ca760e",
+      "bytes": 1357420,
+      "seconds": 6.639515328000016,
+      "reused": false
+    },
+    {
+      "name": "p1-225675420c39-pretrained.png",
+      "sha256": "417f8b3019665997ecccbbcd8cdecdf8602a595ba9ebfc3d822b54cc12c07cc9",
+      "bytes": 2691699,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-225675420c39-update120.png",
+      "sha256": "c99da8f24ef6d044689df88f56847df5e3b41e1bbc39679734ab734e94190604",
+      "bytes": 2709152,
+      "seconds": 6.729164206000064,
+      "reused": false
+    },
+    {
+      "name": "p1-25dc97e0de76-pretrained.png",
+      "sha256": "f02b713256ebfdaa685b52c8df55a9bd04ded1f225e4527afdf243088217fbb4",
+      "bytes": 1671150,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-25dc97e0de76-update120.png",
+      "sha256": "278481dbf27675a510da11d8bbe81a9664c294be8ee323e9ff26567bf0f08312",
+      "bytes": 1650035,
+      "seconds": 6.75884759600001,
+      "reused": false
+    },
+    {
+      "name": "p1-29d0703cc9e6-pretrained.png",
+      "sha256": "290db9b791e82f62662906b5a4b235ed74490872c498201cd83aa8118eb15419",
+      "bytes": 2216113,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-29d0703cc9e6-update120.png",
+      "sha256": "095f4fd283d086fd81b9927e89eedf179ba334559838bdaaea78f94509f9cc73",
+      "bytes": 2187721,
+      "seconds": 6.735745815999962,
+      "reused": false
+    },
+    {
+      "name": "p1-2df84e5f0aa6-pretrained.png",
+      "sha256": "596c3301a431c008621c9d56b21c27e431d9347ac542fe47fac079fc02115daa",
+      "bytes": 2248258,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-2df84e5f0aa6-update120.png",
+      "sha256": "86839ae8db8009ef3de37eb7aea3ab3eb06bc70f645c13995ea6d32c1ca684e9",
+      "bytes": 2279099,
+      "seconds": 6.636108096000044,
+      "reused": false
+    },
+    {
+      "name": "p1-2f254870e71a-pretrained.png",
+      "sha256": "45535d5b4e253758c797d050753114e8af5f3de1211324e9e6ad25ade2226c44",
+      "bytes": 2558629,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-2f254870e71a-update120.png",
+      "sha256": "fba4c397f4d9182c4a1975aa87ff542a946191a01e6b91b1bd66a2575df6ff5b",
+      "bytes": 2579174,
+      "seconds": 6.731623336000098,
+      "reused": false
+    },
+    {
+      "name": "p1-2fa5fe695687-pretrained.png",
+      "sha256": "fa88ae154e132421fff670c47faca2af9bcf1e4075154bde06d9ecdff1af7c53",
+      "bytes": 2508632,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-2fa5fe695687-update120.png",
+      "sha256": "1bb89c98c07be0e4a03362c586b2c88492ef24ae6cc7c43da68bf46510696dcf",
+      "bytes": 2482940,
+      "seconds": 6.735991094000042,
+      "reused": false
+    },
+    {
+      "name": "p1-32d162396e4a-pretrained.png",
+      "sha256": "80b4445b881177874f16d24e1069340a09415ad8db60995a9907bcce9bc42dd9",
+      "bytes": 2207264,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-32d162396e4a-update120.png",
+      "sha256": "573d9b27943527912c92d9e3f485039bec6cb09a9f7b37ef3972601d8d8b210f",
+      "bytes": 2242878,
+      "seconds": 6.762767499999995,
+      "reused": false
+    },
+    {
+      "name": "p1-348049160148-pretrained.png",
+      "sha256": "bc09e0a9c916bd39de6bf4c41e0f8124a3d436e73c4608b68361449349e89fdc",
+      "bytes": 1695372,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-348049160148-update120.png",
+      "sha256": "ea87b438028a221bb778eb9669635f55b519413e42022d160118ba35159b52ad",
+      "bytes": 1692575,
+      "seconds": 6.765887459999931,
+      "reused": false
+    },
+    {
+      "name": "p1-35258a6fe9b9-pretrained.png",
+      "sha256": "577b6abf2dedfc4ec7e3e0b3d206b74437feaf699e776a7f41106f8b7b16150d",
+      "bytes": 2844848,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-35258a6fe9b9-update120.png",
+      "sha256": "892eb9f9597c2df9aa35b7f3f1da276b7e9e4b9ed54b0e2f1ad63173034538ca",
+      "bytes": 2869787,
+      "seconds": 6.643045919999963,
+      "reused": false
+    },
+    {
+      "name": "p1-361454af8cbd-pretrained.png",
+      "sha256": "0d43d63d250e9e5bb041e8d95c56ff633271ae552127c6774d611bf31eac2401",
+      "bytes": 889148,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-361454af8cbd-update120.png",
+      "sha256": "414ddf4d1fab155b3034d449abbebba197486ef2e915a3fab648a6a5ba2e6ed2",
+      "bytes": 910807,
+      "seconds": 6.6132676419999825,
+      "reused": false
+    },
+    {
+      "name": "p1-3a32d2b118f4-pretrained.png",
+      "sha256": "a03f22a3793f06c10c38f3cd1d1db90ff250f1a55232a516b41cab6e1282ed2a",
+      "bytes": 2432377,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-3a32d2b118f4-update120.png",
+      "sha256": "cbc77e48971a37a5ab29f7c0753567b76ba2ea7d1dbe398c5641d9967cff315f",
+      "bytes": 2485269,
+      "seconds": 6.680428326999845,
+      "reused": false
+    },
+    {
+      "name": "p1-3a45aa4fbdce-pretrained.png",
+      "sha256": "7d064e6d751bd7e779c3a515b9aa9c4869b5cf5dfb558862ccae5b0c2a627403",
+      "bytes": 2021924,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-3a45aa4fbdce-update120.png",
+      "sha256": "6c66e00c220ede009c454f08d00b149c05c602ec4f04ddcef34d189c5f0a4179",
+      "bytes": 2047641,
+      "seconds": 6.809940653000012,
+      "reused": false
+    },
+    {
+      "name": "p1-3ea5a30dc8a2-pretrained.png",
+      "sha256": "7c48b01c0da3f7c3a0f4d594f2990eba7316ee4908a5be26894ac0c95402f559",
+      "bytes": 2010735,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-3ea5a30dc8a2-update120.png",
+      "sha256": "231dd74c5ef11e6df37ea567fdd2fe9e4c2da9ac7f66eb963e63376d12815056",
+      "bytes": 2036825,
+      "seconds": 6.650158986999941,
+      "reused": false
+    },
+    {
+      "name": "p1-3eaca196926c-pretrained.png",
+      "sha256": "b429067da8de6a6609e5a780aa6a11b59f5322ebaa59a30248a2a06a1bb9b368",
+      "bytes": 1301242,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-3eaca196926c-update120.png",
+      "sha256": "1d3dff96747b829dead5d9c3ae62bfff7c02e4d1edd0a680dc6ae60ec3622282",
+      "bytes": 1270698,
+      "seconds": 6.760508350000009,
+      "reused": false
+    },
+    {
+      "name": "p1-3f8228ebe75f-pretrained.png",
+      "sha256": "ac8754d8fd4303b93e20b96ac268fc885cecb9ca4a998e67a55048e55c96799c",
+      "bytes": 1283906,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-3f8228ebe75f-update120.png",
+      "sha256": "f1cada621bc53a2a3d527b7715f01fdb2d6e24ff31ae4e15779fccf52c429307",
+      "bytes": 1242537,
+      "seconds": 6.617014673000085,
+      "reused": false
+    },
+    {
+      "name": "p1-46630dfe90b3-pretrained.png",
+      "sha256": "d33dcbf9211efcba2dd5d9bb77a97bba6102500f90b978055ca392ea53c54962",
+      "bytes": 1260985,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-46630dfe90b3-update120.png",
+      "sha256": "cc3243e6b89a47e38d01df0d66b9e7e1100affc5393fcba3d1b7747d6e7efea4",
+      "bytes": 1270863,
+      "seconds": 6.747225627000034,
+      "reused": false
+    },
+    {
+      "name": "p1-476af9f44f99-pretrained.png",
+      "sha256": "e9f006d3b3f77dc3ad11846bdce607ba944b521082d8e4b4fe96c488fc5c4694",
+      "bytes": 2359965,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-476af9f44f99-update120.png",
+      "sha256": "4ac39cad1ef6404810d874726935c0856dd495c74109c7b9ae167e5f2619e3d2",
+      "bytes": 2329991,
+      "seconds": 6.789828459999853,
+      "reused": false
+    },
+    {
+      "name": "p1-481b4317a17d-pretrained.png",
+      "sha256": "d2ed10105385bd0526fdfff611d3ec09918f7dd2fcedf42d33e754665ae4c47d",
+      "bytes": 1305332,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-481b4317a17d-update120.png",
+      "sha256": "dbe093ccf4388af79eb98ece69be8271ca9e8faddab99de4d9dc7d326f19c6dd",
+      "bytes": 1280265,
+      "seconds": 6.7635193210001034,
+      "reused": false
+    },
+    {
+      "name": "p1-48a571659728-pretrained.png",
+      "sha256": "68c4c672a88124c325a7764b32af54fe1f9016344b331f1731865a07ecb71621",
+      "bytes": 1206825,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-48a571659728-update120.png",
+      "sha256": "093e0645b35797db3b6136c199a65845a931a923da660d973314952e06391820",
+      "bytes": 1206858,
+      "seconds": 6.646422550000125,
+      "reused": false
+    },
+    {
+      "name": "p1-494f50be65c1-pretrained.png",
+      "sha256": "38a0ca15391b77c5c0360f73d2e5c9fd172610a7700adf6b9c403ffa5a5ce588",
+      "bytes": 2207474,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-494f50be65c1-update120.png",
+      "sha256": "275bb325cc4bc7b258ebf5691e76540e2dca46893aba1d9cb58810af510dff16",
+      "bytes": 2190191,
+      "seconds": 6.770468526000059,
+      "reused": false
+    },
+    {
+      "name": "p1-4fc82f0c52de-pretrained.png",
+      "sha256": "ed6ca360efc2385468b89c78d06ced148865254aa8ce19ba637c3d7636912b26",
+      "bytes": 2059903,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-4fc82f0c52de-update120.png",
+      "sha256": "e9d3af19c4ce4f0371d74235881b68e068ecb829cffd11fc962bc93f3405e096",
+      "bytes": 2030673,
+      "seconds": 6.777225194000039,
+      "reused": false
+    },
+    {
+      "name": "p1-51b03a95dd88-pretrained.png",
+      "sha256": "11f2ee0220a6901fd727d322fdbb14bb334d100d84d68f98d7a959c5e545f202",
+      "bytes": 2318790,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-51b03a95dd88-update120.png",
+      "sha256": "38133b7944cb6b167a5885c83447e6b0475ae58c1e3f97a1a9e87bdb5a4ef294",
+      "bytes": 2355152,
+      "seconds": 6.757309191000104,
+      "reused": false
+    },
+    {
+      "name": "p1-53819a9de4cc-pretrained.png",
+      "sha256": "87c15955f8631d6beae5ed1f9c4a58942ffae289485f99e5c105114f8c049303",
+      "bytes": 2158358,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-53819a9de4cc-update120.png",
+      "sha256": "3fb1d8e3236e77269f038e146e4bd1b68260fbfda93173723c7801bc6ba6f0d0",
+      "bytes": 2177699,
+      "seconds": 6.653572804000078,
+      "reused": false
+    },
+    {
+      "name": "p1-5679956e6a0b-pretrained.png",
+      "sha256": "4f643a8e607608c98dfea11dd781a176dd3e9016adea00deafcb320b09104694",
+      "bytes": 1529080,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-5679956e6a0b-update120.png",
+      "sha256": "360f5b56147e947fcd40eff00b5ee37eab3e8cb810e720a5e162cbeccf45637e",
+      "bytes": 1546918,
+      "seconds": 6.755613164999886,
+      "reused": false
+    },
+    {
+      "name": "p1-57e8f2b9e2c3-pretrained.png",
+      "sha256": "40f25c41252fcdb4399cbe44f08085fa129754ba1c3b516ad8a79fa7c6d3cea8",
+      "bytes": 1617072,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-57e8f2b9e2c3-update120.png",
+      "sha256": "e646301666035b25e25ae5fcc1bb739a4cbdb57749e7f7df9868d3647ebebe6b",
+      "bytes": 1573676,
+      "seconds": 6.7764756470000975,
+      "reused": false
+    },
+    {
+      "name": "p1-5acc00bc9433-pretrained.png",
+      "sha256": "a0ffd78339b119307ec5f7e6353ad6711e0958da68ec0744a3a09c66ffce8596",
+      "bytes": 2244958,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-5acc00bc9433-update120.png",
+      "sha256": "a31302d9722331395d0592f8d42d54d25d1730502a9bdc37514770e9ede43883",
+      "bytes": 2267951,
+      "seconds": 6.630176360000178,
+      "reused": false
+    },
+    {
+      "name": "p1-5ba4a6d3fc87-pretrained.png",
+      "sha256": "48a29bcaa36abcb2ed875abd7f2a62f925f10d43dfb808b1076a4a275959d142",
+      "bytes": 1590771,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-5ba4a6d3fc87-update120.png",
+      "sha256": "8ac9162a44e43c65b749beb7ea95002d76910d4322d31523305a0a7b8dabcdba",
+      "bytes": 1589390,
+      "seconds": 6.63878171500005,
+      "reused": false
+    },
+    {
+      "name": "p1-5cb15c25d610-pretrained.png",
+      "sha256": "a80285b4c2591feb7f7822150e68a12456a9ecf3ca484fce103264f3c1c0a251",
+      "bytes": 2106122,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-5cb15c25d610-update120.png",
+      "sha256": "ccb36f8764b6ebdf83760d36c4e00a4ea0c34a4aa2f943e52c0654cdee934d73",
+      "bytes": 2155240,
+      "seconds": 6.610846427999832,
+      "reused": false
+    },
+    {
+      "name": "p1-5f79935fad9d-pretrained.png",
+      "sha256": "046a4b60cacdbf9cc00c96defcbbeca5831110ef5d154b3f4f326a76477760ab",
+      "bytes": 1934279,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-5f79935fad9d-update120.png",
+      "sha256": "2dda0344cc6d58078612eef6bd1dca0022312a3844f47b65305bb660e3c13883",
+      "bytes": 1986673,
+      "seconds": 6.646782614999893,
+      "reused": false
+    },
+    {
+      "name": "p1-6126a35add39-pretrained.png",
+      "sha256": "550b90bf3ff174059ac3fae2927bbde76133bfe233ed31672b1d340762bdfbff",
+      "bytes": 2375348,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-6126a35add39-update120.png",
+      "sha256": "513f5f098a205647ee44f2e5a7905037f660cf87b8afdad4a50111eb50e0b986",
+      "bytes": 2419487,
+      "seconds": 6.77890663900007,
+      "reused": false
+    },
+    {
+      "name": "p1-647aff9cae44-pretrained.png",
+      "sha256": "ac1be2d797852fc4f5608840577d332b1216b344ebc1e1ff0b81ca0694b8a3dd",
+      "bytes": 1664888,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-647aff9cae44-update120.png",
+      "sha256": "873037e5ef03357c51933471b1e284f09985ecc46c239c62a6ceab998aa6d53f",
+      "bytes": 1686734,
+      "seconds": 6.656578404000129,
+      "reused": false
+    },
+    {
+      "name": "p1-6bdab6cbaae4-pretrained.png",
+      "sha256": "d9de1a2dd0d67df37512d5d3a7770e433fa7975f701546bea0be46c51b5f08ae",
+      "bytes": 1694934,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-6bdab6cbaae4-update120.png",
+      "sha256": "4912ab2abe1aa7700b5091e4018765b2ef020d2ed8498aa668ef71d3d02af037",
+      "bytes": 1713578,
+      "seconds": 6.79387892800014,
+      "reused": false
+    },
+    {
+      "name": "p1-6e8e326086e6-pretrained.png",
+      "sha256": "75327275f9e02d77dcc4f1a3c3db555f80c49cbf79fe2fd6b482cc9670141c10",
+      "bytes": 2352059,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-6e8e326086e6-update120.png",
+      "sha256": "e66b24163f5ce03997b37bb6d5e0e779bf991840689bca0452ce51b1f50642c4",
+      "bytes": 2346345,
+      "seconds": 6.809091514000102,
+      "reused": false
+    },
+    {
+      "name": "p1-6f457706ee9c-pretrained.png",
+      "sha256": "4afd24b80ad3ef17aec8e218b90700b262b65022ca4d14cf19ec6ca14c3fd389",
+      "bytes": 1622723,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-6f457706ee9c-update120.png",
+      "sha256": "bd233151c4d0324773f7a93f9d1b81c74f3cc95d64c06a0cd96fa441c74a06d2",
+      "bytes": 1622026,
+      "seconds": 6.777448893999917,
+      "reused": false
+    },
+    {
+      "name": "p1-7283c4cd2748-pretrained.png",
+      "sha256": "8ff8fd7a1ee6b8aeb1145ac937b1b48c0b4c95fd3bfe4671ab790e510aedf5ff",
+      "bytes": 1466855,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-7283c4cd2748-update120.png",
+      "sha256": "0bb89493aa9e889f5964e8dd3d85d957a4159071e6b30eb5c01a6158d5a2f291",
+      "bytes": 1470859,
+      "seconds": 6.659843344999899,
+      "reused": false
+    },
+    {
+      "name": "p1-72c07e619246-pretrained.png",
+      "sha256": "55fbb31c4b937b5c5707125d50dc5d7a2f8b23f8fa544b97f38cffffb82bb60e",
+      "bytes": 1839415,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-72c07e619246-update120.png",
+      "sha256": "d2c4a74a15a01d4d5c10fb0a09f40bbe67396daaaad28acaff02db7cdf17b9a4",
+      "bytes": 1864257,
+      "seconds": 6.604110084000013,
+      "reused": false
+    },
+    {
+      "name": "p1-736229a39d54-pretrained.png",
+      "sha256": "6c9d50c14b4f56c828db8268c40cc61e7cfab4b5544db2a3fb960f47df528fd1",
+      "bytes": 1258291,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-736229a39d54-update120.png",
+      "sha256": "9881c67b84dd9cb84250e5aea581715cd2370ce7f7c31f6f043c6d86fff9e56c",
+      "bytes": 1264168,
+      "seconds": 6.642116004000172,
+      "reused": false
+    },
+    {
+      "name": "p1-75d11b3c691a-pretrained.png",
+      "sha256": "39b6123c8eb300a4d5a8e5e9ae2e91f98819b31a854b167eb3cb4f7d49270704",
+      "bytes": 977144,
+      "seconds": null,
+      "reused": true
+    },
+    {
+      "name": "p1-75d11b3c691a-update120.png",
+      "sha256": "7fc924fdcbd24cbb530f6e44ec97b7f2f1f72e006a9d28fcfe98ef1685153d54",
+      "bytes": 984430,
+      "seconds": 6.64165042500008,
+      "reused": false
+    },
+    {
+      "name": "p1-774fc52e997a-pretrained.png",
+      "sha256": "8652dd6e135a180c79b2cc4d55029b248d7085dc9a011961e16bc66e6b17f7ad",
+      "bytes": 1853120,
+      "seconds": 9.542492128000006,
+      "reused": false
+    },
+    {
+      "name": "p1-774fc52e997a-update120.png",
+      "sha256": "d500bccda635cf654f8da180245ab9914b89380dc5fd0d7276b0a2d03ac404f0",
+      "bytes": 1835799,
+      "seconds": 6.742934381000168,
+      "reused": false
+    },
+    {
+      "name": "p1-78619f2f97ea-pretrained.png",
+      "sha256": "f44a85ef7ae36d3f30b07d70a822ade3b8427a7e4adecef1c7901c91e004d6b4",
+      "bytes": 1046692,
+      "seconds": 6.617201952000002,
+      "reused": false
+    },
+    {
+      "name": "p1-78619f2f97ea-update120.png",
+      "sha256": "ffe4949c5bd2d8839770acad1efa2baef5a636231554f19918eb801c8027c376",
+      "bytes": 989806,
+      "seconds": 6.656948825999962,
+      "reused": false
+    },
+    {
+      "name": "p1-79d1abf1854a-pretrained.png",
+      "sha256": "68421472134edb569964f07177a456cf4811a0b456d0fe110d69fe33e5d88f38",
+      "bytes": 1163149,
+      "seconds": 6.760518843,
+      "reused": false
+    },
+    {
+      "name": "p1-79d1abf1854a-update120.png",
+      "sha256": "fcd6a5b02ce2296f50344a4f4a70d6d57bf06a15fc06ad35464d6506a7c003e2",
+      "bytes": 1168938,
+      "seconds": 6.771866236000051,
+      "reused": false
+    },
+    {
+      "name": "p1-7e1e0f098671-pretrained.png",
+      "sha256": "0880ac2b30003726a98f1fdfcb403a138d1713c10144e7b083eab1b5dbd5eb30",
+      "bytes": 1358860,
+      "seconds": 6.798129042999989,
+      "reused": false
+    },
+    {
+      "name": "p1-7e1e0f098671-update120.png",
+      "sha256": "c2fcff88e1e87f596dcceed760dc8c6ed8ea69a3ddd1432b5088864cb0b3d5aa",
+      "bytes": 1337673,
+      "seconds": 6.6487816169999405,
+      "reused": false
+    },
+    {
+      "name": "p1-8131406fafec-pretrained.png",
+      "sha256": "ff3ea1427dbc52c3d0b7028ce4566ef727ee39bff1524c421fd61a7d1781c46f",
+      "bytes": 1833375,
+      "seconds": 6.625050098000003,
+      "reused": false
+    },
+    {
+      "name": "p1-8131406fafec-update120.png",
+      "sha256": "3c5c84a5059697179ac8a781f2ce13acd01a36cb61410e94bc7e8d64680cfd39",
+      "bytes": 1817388,
+      "seconds": 6.62438991099998,
+      "reused": false
+    },
+    {
+      "name": "p1-84b9834a32f6-pretrained.png",
+      "sha256": "63cd4b41ccfd5ecb3f19910748353a4a4a6d81446a3702fd06e8f69c05130372",
+      "bytes": 2026107,
+      "seconds": 6.737847774000016,
+      "reused": false
+    },
+    {
+      "name": "p1-84b9834a32f6-update120.png",
+      "sha256": "1cfc2f23c2a01a08949e7f3e87e7dee9b4ab3044f978402b57b84436516eb8c3",
+      "bytes": 2044662,
+      "seconds": 6.748156462999987,
+      "reused": false
+    },
+    {
+      "name": "p1-87689caaaea3-pretrained.png",
+      "sha256": "5a6363f31435f42b920fd19af7d54409acde43419b0139c85556f63bcbd4dbc6",
+      "bytes": 2166169,
+      "seconds": 6.6459004280000045,
+      "reused": false
+    },
+    {
+      "name": "p1-87689caaaea3-update120.png",
+      "sha256": "027fca5d3667b7f08bcca3e26fec54cf1d62a5f6816e5c3ecf3ce3c732931830",
+      "bytes": 2162720,
+      "seconds": 6.647783756000081,
+      "reused": false
+    },
+    {
+      "name": "p1-879faf36ef0a-pretrained.png",
+      "sha256": "a4955270f9f2b368c3e6df291efce7b8b7fc68012376ca0c13a90049d67b956b",
+      "bytes": 1633729,
+      "seconds": 6.637724165000009,
+      "reused": false
+    },
+    {
+      "name": "p1-879faf36ef0a-update120.png",
+      "sha256": "57958a42add8c6ed0e7a9e49424a38626853ae6ec3ed05f34c0096b5532e545d",
+      "bytes": 1663994,
+      "seconds": 6.649092426000152,
+      "reused": false
+    },
+    {
+      "name": "p1-885aa50e2805-pretrained.png",
+      "sha256": "29a3c723a6dd56b373796488c9fb9d6edc61b0cd37be8e0d65d6e97fc706f4dc",
+      "bytes": 1606414,
+      "seconds": 6.656851074999992,
+      "reused": false
+    },
+    {
+      "name": "p1-885aa50e2805-update120.png",
+      "sha256": "41174082690d2c5e5fb9794683f22a20d41f64fa091d2a4e66dc7781f45def2b",
+      "bytes": 1597865,
+      "seconds": 6.64627156399979,
+      "reused": false
+    },
+    {
+      "name": "p1-893d2b2343c1-pretrained.png",
+      "sha256": "8183340a3d3e296b8872121d4f2917a7624a2a3fb40f678b8658166a91538556",
+      "bytes": 2379874,
+      "seconds": 6.733120174999982,
+      "reused": false
+    },
+    {
+      "name": "p1-893d2b2343c1-update120.png",
+      "sha256": "8ea5f6a74101ff148c794b4a41c9e5388b703d1c18e406946799aa15a27e36ac",
+      "bytes": 2321299,
+      "seconds": 6.762947246000067,
+      "reused": false
+    },
+    {
+      "name": "p1-895f1b8c42ae-pretrained.png",
+      "sha256": "61a10cf2445b9c2c56e15d58a0b27bf54ac1e996ca9d909a0583ce44d0cbd117",
+      "bytes": 829782,
+      "seconds": 6.638006562999976,
+      "reused": false
+    },
+    {
+      "name": "p1-895f1b8c42ae-update120.png",
+      "sha256": "ddfc9ffed6b89213fff04f59c2962d98faa4b35c5fb03ceb086b52a47bf53478",
+      "bytes": 847469,
+      "seconds": 6.639617127999827,
+      "reused": false
+    },
+    {
+      "name": "p1-8c4343b18bdd-pretrained.png",
+      "sha256": "a14a41214d9d86c164d7c7ec1b6ac0034369b386fdcb16da1ba91f091e2d33c3",
+      "bytes": 2588218,
+      "seconds": 6.769041686999998,
+      "reused": false
+    },
+    {
+      "name": "p1-8c4343b18bdd-update120.png",
+      "sha256": "b452dfc5222ae1ab3788b11d997f40e617e8e86020d850ee4f8e20dd8d65b6c4",
+      "bytes": 2488885,
+      "seconds": 6.771710025999937,
+      "reused": false
+    },
+    {
+      "name": "p1-8cfbaef7b3dd-pretrained.png",
+      "sha256": "dc29944203f42f552973accbe064931b1892c391a8a37d3e42efbccc2ab016bf",
+      "bytes": 2137171,
+      "seconds": 6.747502013000002,
+      "reused": false
+    },
+    {
+      "name": "p1-8cfbaef7b3dd-update120.png",
+      "sha256": "7c87e1e0eb3987bcd128e688b0f7a542b035c50b55739729e6b10c59933e890f",
+      "bytes": 2139450,
+      "seconds": 6.74130091699999,
+      "reused": false
+    },
+    {
+      "name": "p1-8e50247e3318-pretrained.png",
+      "sha256": "1e8aa79dd3189c7b2c2400b5b4d99edaa055aca1c4f64adc2cb4753e205ef707",
+      "bytes": 2664917,
+      "seconds": 6.738275299999998,
+      "reused": false
+    },
+    {
+      "name": "p1-8e50247e3318-update120.png",
+      "sha256": "602eca73d091a4c207409740f86ce561092c8b9be74370c65b14fb05e0566be5",
+      "bytes": 2669010,
+      "seconds": 6.754349269999921,
+      "reused": false
+    },
+    {
+      "name": "p1-9318639fe814-pretrained.png",
+      "sha256": "e461f8cfbd3f8cc6d9c283e592012c2b280a4af7d83b9bf1360135155b85e565",
+      "bytes": 1328245,
+      "seconds": 6.639172430000002,
+      "reused": false
+    },
+    {
+      "name": "p1-9318639fe814-update120.png",
+      "sha256": "01031ed73376d3f6378a91f4e67b13a204c341244be93330485a88a844300dee",
+      "bytes": 1336744,
+      "seconds": 6.662386870000091,
+      "reused": false
+    },
+    {
+      "name": "p1-943328e52ac5-pretrained.png",
+      "sha256": "b512238435808e4e9d312d72f938797b854ffdd53adc4721f582c850872353e4",
+      "bytes": 1915130,
+      "seconds": 6.619833308000011,
+      "reused": false
+    },
+    {
+      "name": "p1-943328e52ac5-update120.png",
+      "sha256": "9e596625bd5088bb655765d1f0ca2acd7674de1d247a49f66fd0f1f0685638a6",
+      "bytes": 1926105,
+      "seconds": 6.666173082000114,
+      "reused": false
+    },
+    {
+      "name": "p1-945c492e67f7-pretrained.png",
+      "sha256": "7415d3f53b3405db6528c373e0bf57ae3b6029b3809b481f59e32b512f25264d",
+      "bytes": 1793423,
+      "seconds": 6.7812334540000165,
+      "reused": false
+    },
+    {
+      "name": "p1-945c492e67f7-update120.png",
+      "sha256": "52766a07b9e556c755bdafb9b27549bda0e0e067b818380801930a1b38484c26",
+      "bytes": 1844503,
+      "seconds": 6.783273480999924,
+      "reused": false
+    },
+    {
+      "name": "p1-976fd6e227ad-pretrained.png",
+      "sha256": "4169327397090367d450714f89407afc186faa502c8c5c9df69e235b1ccbeba4",
+      "bytes": 1495431,
+      "seconds": 6.691995913999989,
+      "reused": false
+    },
+    {
+      "name": "p1-976fd6e227ad-update120.png",
+      "sha256": "7fffb23e67bedc58b7a86a2fac44175649d8f3d0b96258c34eac59decfef9657",
+      "bytes": 1595479,
+      "seconds": 6.659870879999971,
+      "reused": false
+    },
+    {
+      "name": "p1-97cbe74d68d4-pretrained.png",
+      "sha256": "df0307c127311b4b541bc8e7e33c3ef1f6c517ba5ff991d0d4387dad1afedb68",
+      "bytes": 2091367,
+      "seconds": 6.650653124999991,
+      "reused": false
+    },
+    {
+      "name": "p1-97cbe74d68d4-update120.png",
+      "sha256": "f6859019024ebbacd461917f0081b464f229883227d121a1a5a588b2e3971df0",
+      "bytes": 2121900,
+      "seconds": 6.675036546000001,
+      "reused": false
+    },
+    {
+      "name": "p1-98ba0869d2a5-pretrained.png",
+      "sha256": "5d2167070bcf99e120806dcdb79c7c873b5348a87060975c41dabe7fae27e353",
+      "bytes": 1360708,
+      "seconds": 6.771610236000015,
+      "reused": false
+    },
+    {
+      "name": "p1-98ba0869d2a5-update120.png",
+      "sha256": "de77f587441b377f7dbdd1d97cb0f25ec024391a494ab21424d19c80f53e2408",
+      "bytes": 1355472,
+      "seconds": 6.760984398999881,
+      "reused": false
+    },
+    {
+      "name": "p1-9af0f4658cc1-pretrained.png",
+      "sha256": "a78ecb9af5122b447bf704d74b92b6d989234c524cb732f75714edc3af628fbc",
+      "bytes": 1890203,
+      "seconds": 6.776407316000018,
+      "reused": false
+    },
+    {
+      "name": "p1-9af0f4658cc1-update120.png",
+      "sha256": "681feff001fbea4744b914c5cd371a89d4217b478de1a8d20bec17be5420423e",
+      "bytes": 1920890,
+      "seconds": 6.67949055400004,
+      "reused": false
+    },
+    {
+      "name": "p1-9b73dee7067b-pretrained.png",
+      "sha256": "cc55da08b972739503b169d6f7fe0e945716c0a07eb7d31c959cd6d45fa24c73",
+      "bytes": 2186762,
+      "seconds": 6.6125223559999995,
+      "reused": false
+    },
+    {
+      "name": "p1-9b73dee7067b-update120.png",
+      "sha256": "86d637580c4b94f42e826b59ea4bd3b726036344deba37a8641d5485a7c97a9c",
+      "bytes": 2219331,
+      "seconds": 6.606515488000014,
+      "reused": false
+    },
+    {
+      "name": "p1-9cad7eff4723-pretrained.png",
+      "sha256": "370534395051133480d75f15a0d2a9e280828ac59361b344a642e1aa71c1aacb",
+      "bytes": 1185910,
+      "seconds": 6.851889342999982,
+      "reused": false
+    },
+    {
+      "name": "p1-9cad7eff4723-update120.png",
+      "sha256": "960c24e63f7556a5c988902a899e914ed824e99208ea74c3525f8a51240e9c27",
+      "bytes": 1118208,
+      "seconds": 6.643877420000081,
+      "reused": false
+    },
+    {
+      "name": "p1-9d5ab4175bc3-pretrained.png",
+      "sha256": "eddc2981638f94fe91fe9b85cc73f9e0ab95fc1f7e6d82db9d7658ed661fe3e3",
+      "bytes": 1530109,
+      "seconds": 6.628281837000031,
+      "reused": false
+    },
+    {
+      "name": "p1-9d5ab4175bc3-update120.png",
+      "sha256": "fbad87c53a2aa6dc5f3391ef9eeb9f96c4c3099aec85af9c56aa3cb532e19fc6",
+      "bytes": 1533389,
+      "seconds": 6.639416470000015,
+      "reused": false
+    },
+    {
+      "name": "p1-9e601065c649-pretrained.png",
+      "sha256": "194356225c60b73f442aadad0231bf66a17320012a4e3ef91df7cfc5644cbc97",
+      "bytes": 1595426,
+      "seconds": 6.734862057999976,
+      "reused": false
+    },
+    {
+      "name": "p1-9e601065c649-update120.png",
+      "sha256": "dbe3277673c049662da1fe0b1ae157b6f1941b154ba183f41cd170ba6b5d1c47",
+      "bytes": 1591280,
+      "seconds": 6.746966181000062,
+      "reused": false
+    },
+    {
+      "name": "p1-9f7dcd798e2e-pretrained.png",
+      "sha256": "87729f1233828651afe64d6424702e6528e2ba860c4ee35e6a8a080750263a55",
+      "bytes": 1620896,
+      "seconds": 6.737048847999972,
+      "reused": false
+    },
+    {
+      "name": "p1-9f7dcd798e2e-update120.png",
+      "sha256": "9365458c1420f75c2fc20ba22b714b4eb821c35940c516cb6c3b88e4d851da68",
+      "bytes": 1589287,
+      "seconds": 6.739935758999991,
+      "reused": false
+    },
+    {
+      "name": "p1-9fc7b3c8d8c0-pretrained.png",
+      "sha256": "e17fc371889143bb3892640dfcf500c6bce17a7e39378ca8c08a47aebb953d32",
+      "bytes": 1537245,
+      "seconds": 6.624769732000004,
+      "reused": false
+    },
+    {
+      "name": "p1-9fc7b3c8d8c0-update120.png",
+      "sha256": "61b332ab8ee371102649537edd23b37915fece7153e24a8b11c59cbefb161cc1",
+      "bytes": 1497592,
+      "seconds": 6.6544690609998725,
+      "reused": false
+    },
+    {
+      "name": "p1-a1c04e9184c0-pretrained.png",
+      "sha256": "d0b03ef1e00e1145d73f3c4038044b43f8530acbd7de1f3f02d163f8f6ba8c76",
+      "bytes": 1524498,
+      "seconds": 6.6551929859999746,
+      "reused": false
+    },
+    {
+      "name": "p1-a1c04e9184c0-update120.png",
+      "sha256": "fe5135ee51d7e7e7ee76ebbd9c0a99704d9868d4cd714cb1fbaeda439ceb2685",
+      "bytes": 1511453,
+      "seconds": 6.655262312000104,
+      "reused": false
+    },
+    {
+      "name": "p1-a50e79e52c51-pretrained.png",
+      "sha256": "2aa5ad8f0049521073f32f4ef4bd41d823908436f1c7fe2df196dfa5d680fef9",
+      "bytes": 1048224,
+      "seconds": 6.636265536999986,
+      "reused": false
+    },
+    {
+      "name": "p1-a50e79e52c51-update120.png",
+      "sha256": "ffb30cd05c03f40a1a969f862e6ce23e993785a250c9d9fabc27d83f683417b2",
+      "bytes": 1024488,
+      "seconds": 6.652466378000099,
+      "reused": false
+    },
+    {
+      "name": "p1-a706ef27d981-pretrained.png",
+      "sha256": "2a98dcb6874b37b066e19f7c597de9069c85178956cd00434ff757fd3738f210",
+      "bytes": 1674491,
+      "seconds": 6.642291532999991,
+      "reused": false
+    },
+    {
+      "name": "p1-a706ef27d981-update120.png",
+      "sha256": "74bd601443fe0d5bd005cd59c5e70747e926c0302db52b63bac3eeaa205e23d6",
+      "bytes": 1679795,
+      "seconds": 6.728641333000041,
+      "reused": false
+    },
+    {
+      "name": "p1-a70da1c684c5-pretrained.png",
+      "sha256": "e202b3c7674e290750140f269d0cdb889100398527070c4902defd51ae535d7d",
+      "bytes": 1522472,
+      "seconds": 6.771638402000008,
+      "reused": false
+    },
+    {
+      "name": "p1-a70da1c684c5-update120.png",
+      "sha256": "368a29fa3bfe72ca45c92beae50eccdfc6e169863f1b533e9ac4603d15665edc",
+      "bytes": 1530228,
+      "seconds": 6.7834463880001294,
+      "reused": false
+    },
+    {
+      "name": "p1-a9c7d38ad735-pretrained.png",
+      "sha256": "1597ab9b06c6961b0355595c4829fb00d540e44ebe445071a889a08c64a325c0",
+      "bytes": 1311865,
+      "seconds": 6.7508930689999715,
+      "reused": false
+    },
+    {
+      "name": "p1-a9c7d38ad735-update120.png",
+      "sha256": "28624c98cb39f703b72b6de36315186fc692d4dfbc664b5b49aef3293d728085",
+      "bytes": 1316418,
+      "seconds": 6.761571745000083,
+      "reused": false
+    },
+    {
+      "name": "p1-ab2a706c5cc0-pretrained.png",
+      "sha256": "00ab6c71e2e564de743351ea9f904367ec9a84967ac0e521b1d9329d8adff895",
+      "bytes": 2026850,
+      "seconds": 6.627481503000013,
+      "reused": false
+    },
+    {
+      "name": "p1-ab2a706c5cc0-update120.png",
+      "sha256": "1e09f7f615d595b1e90fb715c1becb00238ccb29075371fee935b4a362b17616",
+      "bytes": 2038398,
+      "seconds": 6.628584778000004,
+      "reused": false
+    },
+    {
+      "name": "p1-aca4b47a0e89-pretrained.png",
+      "sha256": "8d031d85b94249f6267b841e4ae935adc4e8f8037c75c6a989d632c9d5152258",
+      "bytes": 2357694,
+      "seconds": 6.643896752000046,
+      "reused": false
+    },
+    {
+      "name": "p1-aca4b47a0e89-update120.png",
+      "sha256": "4bc4f603959217973ab9c4fd1032d47ee6480b2f7c1885c2e99109ec90fb5080",
+      "bytes": 2383261,
+      "seconds": 6.660668289999876,
+      "reused": false
+    },
+    {
+      "name": "p1-afebdf34163f-pretrained.png",
+      "sha256": "65e68ede94fcb7b78583d60c098321d0e17afadfb609c9cbc46b6a959819e2fd",
+      "bytes": 1123296,
+      "seconds": 6.7471382619999645,
+      "reused": false
+    },
+    {
+      "name": "p1-afebdf34163f-update120.png",
+      "sha256": "8f5c6393125a453523313d32c6056fddc3197e8944f375a05876c76b405eecc2",
+      "bytes": 946516,
+      "seconds": 6.737519986999814,
+      "reused": false
+    },
+    {
+      "name": "p1-b0f90120c791-pretrained.png",
+      "sha256": "34f2e4353b82781f43609bc8967f6205cd984c859fabe47e932c88f8264de887",
+      "bytes": 1774941,
+      "seconds": 6.777817210000023,
+      "reused": false
+    },
+    {
+      "name": "p1-b0f90120c791-update120.png",
+      "sha256": "19dcd29551bfbc00fef3ee16a401990e4666c1af8632493ed5b768eeeec505da",
+      "bytes": 1795280,
+      "seconds": 6.778488025999877,
+      "reused": false
+    },
+    {
+      "name": "p1-b177cb38cfed-pretrained.png",
+      "sha256": "67fbf6dbdca059ce1635af08cd97413df57cacfc2162035dfb14b99795d9482a",
+      "bytes": 2379335,
+      "seconds": 6.64357774299998,
+      "reused": false
+    },
+    {
+      "name": "p1-b177cb38cfed-update120.png",
+      "sha256": "1030dbcaae6441f11971c833567cb33e7786d09d364fca52b638d3d43361508b",
+      "bytes": 2403377,
+      "seconds": 6.659715097000117,
+      "reused": false
+    },
+    {
+      "name": "p1-b267a040b663-pretrained.png",
+      "sha256": "3e226a5a0f84cdab25e8c445aa1f64d5d6ac7dca76c4623e0abafae5b2f776bd",
+      "bytes": 1093420,
+      "seconds": 6.658816175000027,
+      "reused": false
+    },
+    {
+      "name": "p1-b267a040b663-update120.png",
+      "sha256": "cb0125f71e6542992306829af727e32e576040842200890e63b0f74ddf5f82f4",
+      "bytes": 1134179,
+      "seconds": 6.665514092999956,
+      "reused": false
+    },
+    {
+      "name": "p1-ba26868d9f65-pretrained.png",
+      "sha256": "9535e1f29fe892956b39066fbe00e3c8f0700b3c064e9d0699a0f78baaa9865f",
+      "bytes": 1943288,
+      "seconds": 6.607805502999952,
+      "reused": false
+    },
+    {
+      "name": "p1-ba26868d9f65-update120.png",
+      "sha256": "6811f91c85eef482306235357441f1ddc445a0919b057e1e0f205717e867f31e",
+      "bytes": 1938000,
+      "seconds": 6.61587334900014,
+      "reused": false
+    },
+    {
+      "name": "p1-bbea1c023df4-pretrained.png",
+      "sha256": "bb38bab78530280d62dc2039758695ba38c92b1876ba56f57fd4a5def154dd7c",
+      "bytes": 1704089,
+      "seconds": 6.768692230999989,
+      "reused": false
+    },
+    {
+      "name": "p1-bbea1c023df4-update120.png",
+      "sha256": "9a4c5461610b7f1305b1dc6e5ad1909f4ef0fe39b51eb0a68345122dd761b3ad",
+      "bytes": 1730468,
+      "seconds": 6.7705874089999725,
+      "reused": false
+    },
+    {
+      "name": "p1-bbead476386c-pretrained.png",
+      "sha256": "377555e9d10be30e92901ecb4d34997a79198e4185e324faac29156f7f8ce038",
+      "bytes": 1600732,
+      "seconds": 6.661778083999991,
+      "reused": false
+    },
+    {
+      "name": "p1-bbead476386c-update120.png",
+      "sha256": "9f73ca6ae9393909aff5e03c62df6337fe515c377a2e94fd035a9f60f7cb8c6d",
+      "bytes": 1622914,
+      "seconds": 6.661086768000132,
+      "reused": false
+    },
+    {
+      "name": "p1-bef74dc9eeb6-pretrained.png",
+      "sha256": "93e5901ba19a61671d579c95a83cf79a270f720e8244e61c00de5c4fcb6e8a17",
+      "bytes": 1532923,
+      "seconds": 6.754828938999992,
+      "reused": false
+    },
+    {
+      "name": "p1-bef74dc9eeb6-update120.png",
+      "sha256": "cc53cdda326e4fc3b58cd237bd9e4df721f45dfd999957b14919bb1f991c0686",
+      "bytes": 1514690,
+      "seconds": 6.761271154000042,
+      "reused": false
+    },
+    {
+      "name": "p1-bf7cb713addd-pretrained.png",
+      "sha256": "d9d2cfe7ca0ab65cc69d876c0fbc41a97bcc7a747e2b0f80f581908da3ee94bb",
+      "bytes": 1540170,
+      "seconds": 6.760529961000032,
+      "reused": false
+    },
+    {
+      "name": "p1-bf7cb713addd-update120.png",
+      "sha256": "3ffe4e1d886b2d81eb1100b97d2f0b8df9bb9a0fc0bd25a71f1a025090a2c8e1",
+      "bytes": 1551145,
+      "seconds": 6.766319477999787,
+      "reused": false
+    },
+    {
+      "name": "p1-c022b2c076da-pretrained.png",
+      "sha256": "a86f00915d4a04f37f357bac45d14d061817544d30298aa057b34c0bd034e3a2",
+      "bytes": 1419262,
+      "seconds": 6.7833775120000155,
+      "reused": false
+    },
+    {
+      "name": "p1-c022b2c076da-update120.png",
+      "sha256": "3b42863ea9c4b54bbc8f6c3f12467da0df385fa5460fbda97ab7e5d6e396365c",
+      "bytes": 1376254,
+      "seconds": 6.795690923000166,
+      "reused": false
+    },
+    {
+      "name": "p1-c049c41d2d54-pretrained.png",
+      "sha256": "1688317206dd60579c5b56935143d7c53cc024e32eb924cb61e89150c5237556",
+      "bytes": 2543229,
+      "seconds": 6.798577835000003,
+      "reused": false
+    },
+    {
+      "name": "p1-c049c41d2d54-update120.png",
+      "sha256": "11f57024ad4f9db13ee26955b7dcbd09bfbd5db66fb13471b0cf21eb28cf8a9a",
+      "bytes": 2559953,
+      "seconds": 6.686607509999931,
+      "reused": false
+    },
+    {
+      "name": "p1-c29a5786dfb5-pretrained.png",
+      "sha256": "7fc512d7cd5fd073d0de1dbb00bf065bf224f05d2dd370790188324303651eb8",
+      "bytes": 2447357,
+      "seconds": 6.727678340000011,
+      "reused": false
+    },
+    {
+      "name": "p1-c29a5786dfb5-update120.png",
+      "sha256": "bd29d56452770668d8e97667d08a7faf6a9ebca2c13aba7cb0904349442ac2f7",
+      "bytes": 2473257,
+      "seconds": 6.766596875999994,
+      "reused": false
+    },
+    {
+      "name": "p1-c34cb68895af-pretrained.png",
+      "sha256": "adbe431b04ad4faec0029ed803a0794d8bfc375f2b079283f5285239f2965832",
+      "bytes": 1676507,
+      "seconds": 6.645995345000017,
+      "reused": false
+    },
+    {
+      "name": "p1-c34cb68895af-update120.png",
+      "sha256": "08c5b48d86398e147457e9fae876658ac7de332e3d9072d71f6cb65eca117427",
+      "bytes": 1694705,
+      "seconds": 6.662478962000023,
+      "reused": false
+    },
+    {
+      "name": "p1-c8881e2e3fb1-pretrained.png",
+      "sha256": "ca34cce1e084b9f5d8f6e14d341c151f366eb220c8c3a372c4e834c1b49ae8a8",
+      "bytes": 2245754,
+      "seconds": 6.773204815000042,
+      "reused": false
+    },
+    {
+      "name": "p1-c8881e2e3fb1-update120.png",
+      "sha256": "6f42c38cb6529980a62cb9d8a4cff6c550fb49b9cad540f6f12c96a75800d3d6",
+      "bytes": 2266177,
+      "seconds": 6.769738059000019,
+      "reused": false
+    },
+    {
+      "name": "p1-c960b5387a4c-pretrained.png",
+      "sha256": "f7955f6a24e78521694eb09f59ac6c8798290688a49d36b4022f1fef06d322eb",
+      "bytes": 1475325,
+      "seconds": 6.644877377999933,
+      "reused": false
+    },
+    {
+      "name": "p1-c960b5387a4c-update120.png",
+      "sha256": "99bcda2546720ac52d901702053269f2e47cb5813f3174e0d51bc8dac416b223",
+      "bytes": 1398427,
+      "seconds": 6.648533169000075,
+      "reused": false
+    },
+    {
+      "name": "p1-cb3f74615ef9-pretrained.png",
+      "sha256": "b9fb2dcb4292c67e8b2fe325d572873773a857528db339b9410cf61bb007b30a",
+      "bytes": 2268716,
+      "seconds": 6.758692096999994,
+      "reused": false
+    },
+    {
+      "name": "p1-cb3f74615ef9-update120.png",
+      "sha256": "a5a93a68886a989847a98e299c3e53af924903eb3bd58e12a97c4403a3d90cfe",
+      "bytes": 2303654,
+      "seconds": 6.74324492300002,
+      "reused": false
+    },
+    {
+      "name": "p1-cbfe09f86b0f-pretrained.png",
+      "sha256": "b433eb81a79fa3303f5de381c0504729de1b378f3ccdf1c6c76f0cc09b01e192",
+      "bytes": 991882,
+      "seconds": 6.635036530000093,
+      "reused": false
+    },
+    {
+      "name": "p1-cbfe09f86b0f-update120.png",
+      "sha256": "9ece83d6664e150fcc8fdc5310c97fd433421050de9db9e0917bc5958927aac4",
+      "bytes": 1026293,
+      "seconds": 6.6363918219999505,
+      "reused": false
+    },
+    {
+      "name": "p1-ce5b8c47e620-pretrained.png",
+      "sha256": "5dbd66dcfa76056a92e045b53f3855b5ded27336639f6bbc71d8ca2033149890",
+      "bytes": 1657902,
+      "seconds": 6.591301594000015,
+      "reused": false
+    },
+    {
+      "name": "p1-ce5b8c47e620-update120.png",
+      "sha256": "01ae681cccf0bdfdb77fbdea1f8c0aba5d91168ee0795baf4b47bc2a9a3a5f00",
+      "bytes": 1680011,
+      "seconds": 6.600899408000032,
+      "reused": false
+    },
+    {
+      "name": "p1-cf0f852c61dc-pretrained.png",
+      "sha256": "22df1196050e1d6b2c57834b1ea769f5ec7bd5cc116d2bb1904bbe84d42be34c",
+      "bytes": 2564561,
+      "seconds": 6.636972302999993,
+      "reused": false
+    },
+    {
+      "name": "p1-cf0f852c61dc-update120.png",
+      "sha256": "fb8d590af3d93859fc9de0f76b8106e37bc89d7cbce4a0f8e06f26e87c7c390b",
+      "bytes": 2605919,
+      "seconds": 6.638517793999881,
+      "reused": false
+    },
+    {
+      "name": "p1-d8aa46f6a73a-pretrained.png",
+      "sha256": "c217c557e202450571a88b7ce9c1f10edd2c403febe80bed0057ea07e682b0b8",
+      "bytes": 2406080,
+      "seconds": 6.750572821999981,
+      "reused": false
+    },
+    {
+      "name": "p1-d8aa46f6a73a-update120.png",
+      "sha256": "a13a66c14d78b13c48a33e3f09d902aac9ae9769dd3bc69935d4076cd666f6d9",
+      "bytes": 2422074,
+      "seconds": 6.755779181999969,
+      "reused": false
+    },
+    {
+      "name": "p1-daad903be239-pretrained.png",
+      "sha256": "84e8062b031f495bf257c394f08ff2e2516e9e7cdd792c7b3288d9da76eb76a7",
+      "bytes": 2240644,
+      "seconds": 6.646258530999944,
+      "reused": false
+    },
+    {
+      "name": "p1-daad903be239-update120.png",
+      "sha256": "7d22d5a38717fcc3322f7aeeab322a7898dd84b659a4cffe4bdf7bd5e44ef8ca",
+      "bytes": 2279903,
+      "seconds": 6.640394506999883,
+      "reused": false
+    },
+    {
+      "name": "p1-dd4f19c9e3b1-pretrained.png",
+      "sha256": "5b5631cd273589f506526508aad1e320f6c8931fb6ecd05585cf552907ac959d",
+      "bytes": 1894493,
+      "seconds": 6.615553607999914,
+      "reused": false
+    },
+    {
+      "name": "p1-dd4f19c9e3b1-update120.png",
+      "sha256": "5737c46e19f941853d0e3c1dbc0d4e583e0204aa50897de1c2d65d79e6793aa6",
+      "bytes": 1909943,
+      "seconds": 6.6144945020000705,
+      "reused": false
+    },
+    {
+      "name": "p1-dd7be2740719-pretrained.png",
+      "sha256": "40d8a6675cfb2794e2416b7fd09f138df321d6c05df6aabac2dae71b7d370025",
+      "bytes": 1354266,
+      "seconds": 6.768181309000056,
+      "reused": false
+    },
+    {
+      "name": "p1-dd7be2740719-update120.png",
+      "sha256": "0bbe2a25ef48517a90080198d3daabe03932f93f72cd3f0e0ea34c59885cf07a",
+      "bytes": 1345977,
+      "seconds": 6.767319262000001,
+      "reused": false
+    },
+    {
+      "name": "p1-e0f86ec59356-pretrained.png",
+      "sha256": "14b7966a118b37e3fb5c58d18263abe8cebe5fbbde6f4cd62819efd695c473fa",
+      "bytes": 2050008,
+      "seconds": 6.7563844580000705,
+      "reused": false
+    },
+    {
+      "name": "p1-e0f86ec59356-update120.png",
+      "sha256": "d4505bf7007234f56aa4ba2e43038890901880c398539e3943b0e821fa612fbf",
+      "bytes": 2066442,
+      "seconds": 6.796884971000054,
+      "reused": false
+    },
+    {
+      "name": "p1-e2f15c7e431a-pretrained.png",
+      "sha256": "191b0962009ab6e5db9df91c07e86c63ec6858135088afab09bced59e4cd8ce9",
+      "bytes": 1133305,
+      "seconds": 6.754995255999916,
+      "reused": false
+    },
+    {
+      "name": "p1-e2f15c7e431a-update120.png",
+      "sha256": "a6dd6e4d48451753b220afe08b633e0580a77578806d7d29c37d0314d3801aaf",
+      "bytes": 1076746,
+      "seconds": 6.796200341000031,
+      "reused": false
+    },
+    {
+      "name": "p1-e5b414feb4c1-pretrained.png",
+      "sha256": "295d3abe390fda8cc3f8d723890c2f8828b020628dc69481a5d4da6131cb7d9d",
+      "bytes": 2086337,
+      "seconds": 6.775345866999942,
+      "reused": false
+    },
+    {
+      "name": "p1-e5b414feb4c1-update120.png",
+      "sha256": "16763b7fd39fe587b67a366938b85a707701d2c20dbd35f5e01e67730844b8f8",
+      "bytes": 2099962,
+      "seconds": 6.787160118999964,
+      "reused": false
+    },
+    {
+      "name": "p1-e918c7a75376-pretrained.png",
+      "sha256": "f74bddd8291fc7f41ea71255b4407d708ed05ac038ffb78c5569b4fc7c81ce89",
+      "bytes": 1897915,
+      "seconds": 6.648444805000054,
+      "reused": false
+    },
+    {
+      "name": "p1-e918c7a75376-update120.png",
+      "sha256": "f6de17e047c48d2a984cffa2702c0e3ded2f31fbb1e9738994d7bf1d0e9bfd9d",
+      "bytes": 1918007,
+      "seconds": 6.675785140000016,
+      "reused": false
+    },
+    {
+      "name": "p1-eb0ec04828b3-pretrained.png",
+      "sha256": "5a976ea596f452a518ab43a393a676877c8910aeca77d7f4b73975d07bf38c0b",
+      "bytes": 1683961,
+      "seconds": 6.670766529000048,
+      "reused": false
+    },
+    {
+      "name": "p1-eb0ec04828b3-update120.png",
+      "sha256": "255e6b85a5166c9c2fabf420b09128f3986a0ad6374e2337bb529f864cd45965",
+      "bytes": 1677533,
+      "seconds": 6.659607210999866,
+      "reused": false
+    },
+    {
+      "name": "p1-eb113defdcd6-pretrained.png",
+      "sha256": "8412d01843b16b05d467e5cfc931830487c02a02bebb740eb7e44c1f91e70dab",
+      "bytes": 2099582,
+      "seconds": 6.599375437000049,
+      "reused": false
+    },
+    {
+      "name": "p1-eb113defdcd6-update120.png",
+      "sha256": "44ac29336a379838b5a59ae6e6f1df349332360d7344e0fe37e864d65c0e7162",
+      "bytes": 2098332,
+      "seconds": 6.6247395339999,
+      "reused": false
+    },
+    {
+      "name": "p1-ec3c2f033a55-pretrained.png",
+      "sha256": "8d5107e85a04d5d245d036d400c0d465bb5912c6097199254ff2507f32626f63",
+      "bytes": 1900293,
+      "seconds": 6.653272061000052,
+      "reused": false
+    },
+    {
+      "name": "p1-ec3c2f033a55-update120.png",
+      "sha256": "288a0f0b0c60feb858e336423351c1afa39586904414d436310f00773a690170",
+      "bytes": 1920196,
+      "seconds": 6.654592959999945,
+      "reused": false
+    },
+    {
+      "name": "p1-ed712e9790fe-pretrained.png",
+      "sha256": "41e3b47679ed6e9bb488932c35403adb24f56b60a78f4b0d23f3e0016f1a8ce1",
+      "bytes": 1838378,
+      "seconds": 6.761037277000014,
+      "reused": false
+    },
+    {
+      "name": "p1-ed712e9790fe-update120.png",
+      "sha256": "fad65a8c0d29f2129a812557b9be735a1eeee690cfeb9e68b671db80685b1605",
+      "bytes": 1826878,
+      "seconds": 6.765843937999989,
+      "reused": false
+    },
+    {
+      "name": "p1-edb884c5e8a4-pretrained.png",
+      "sha256": "56c79064d02a746180245a36a80facd323afa13c1f003156c36440ef4517c291",
+      "bytes": 1495563,
+      "seconds": 6.761596111000017,
+      "reused": false
+    },
+    {
+      "name": "p1-edb884c5e8a4-update120.png",
+      "sha256": "d133f6853adce381748956119e8bab5b8aff06b12fa5c53ecc84a2307dc06f72",
+      "bytes": 1486456,
+      "seconds": 6.758094041000049,
+      "reused": false
+    },
+    {
+      "name": "p1-ef150c5d83ad-pretrained.png",
+      "sha256": "a1d59410ef5aa5c2693cffa72bb64a70248ae1015019b8ade798f861f0f4a074",
+      "bytes": 1661139,
+      "seconds": 6.641644528000029,
+      "reused": false
+    },
+    {
+      "name": "p1-ef150c5d83ad-update120.png",
+      "sha256": "5ebe8e21b64990403a1f1f65f913709faaf3c02dd6a95dd951a13912e51ac8bd",
+      "bytes": 1673258,
+      "seconds": 6.633581374999949,
+      "reused": false
+    },
+    {
+      "name": "p1-f0e803304fbb-pretrained.png",
+      "sha256": "fe3f3c51c0f141a4cba660b6f2988fed2b3323cf9ab63b97671f8ceb6efd99f1",
+      "bytes": 1371102,
+      "seconds": 6.753913104000048,
+      "reused": false
+    },
+    {
+      "name": "p1-f0e803304fbb-update120.png",
+      "sha256": "e483bf60a8c621a9d8854ffa93edcd0fbb902d216d83434d3765f1bdcaf280e5",
+      "bytes": 1358727,
+      "seconds": 6.740574531999982,
+      "reused": false
+    },
+    {
+      "name": "p1-f42b7b646e1e-pretrained.png",
+      "sha256": "d889835220d7ed59ed0980e0176a5ea53da17687085c3ea6566b352626f247c6",
+      "bytes": 1416869,
+      "seconds": 6.604832876000046,
+      "reused": false
+    },
+    {
+      "name": "p1-f42b7b646e1e-update120.png",
+      "sha256": "920a7399eaf4dc6616d952dd1ae1716eee8a7b674c8ac16d872409c7ce9e635c",
+      "bytes": 1428485,
+      "seconds": 6.612773054000172,
+      "reused": false
+    },
+    {
+      "name": "p1-f4b6718b3ab6-pretrained.png",
+      "sha256": "38b27bb3f0786e1a7989fce40296d195042bddec54d793d8a65066af7407574b",
+      "bytes": 2278331,
+      "seconds": 6.636445959000071,
+      "reused": false
+    },
+    {
+      "name": "p1-f4b6718b3ab6-update120.png",
+      "sha256": "66cda76b886c4e049e3b3546914ed8138b1cb4ac5228fef2db44dcab7de5cd99",
+      "bytes": 2326527,
+      "seconds": 6.606507314000055,
+      "reused": false
+    },
+    {
+      "name": "p1-f4da070d23c5-pretrained.png",
+      "sha256": "1bab1cb8d8caf613d6f1577bf724dc9e2b03a400ac25dd7e1bab967590355005",
+      "bytes": 1323577,
+      "seconds": 6.647794556999997,
+      "reused": false
+    },
+    {
+      "name": "p1-f4da070d23c5-update120.png",
+      "sha256": "8c240a6ba3887c74b6df791f305deb55a7fedd2d2fba9b9f2fad4333835aa082",
+      "bytes": 1242098,
+      "seconds": 6.641917401000001,
+      "reused": false
+    },
+    {
+      "name": "p1-fd180db9136c-pretrained.png",
+      "sha256": "1805fbb41cb2869a2571d46dca135865b045d9ed4131955445936a4f83d2499a",
+      "bytes": 2496713,
+      "seconds": 6.733009350999964,
+      "reused": false
+    },
+    {
+      "name": "p1-fd180db9136c-update120.png",
+      "sha256": "30b9b733fb31fc43ec3dd08c18553133466486d0649695a32490e2da027bbe6d",
+      "bytes": 2542518,
+      "seconds": 6.7384287219999806,
+      "reused": false
+    },
+    {
+      "name": "p1-fdbf0b0f82f5-pretrained.png",
+      "sha256": "7293ead58c48eb05ae2a807014def38553998e290307e76d3e3d5dbf1ee3202e",
+      "bytes": 1005632,
+      "seconds": 6.773488574999988,
+      "reused": false
+    },
+    {
+      "name": "p1-fdbf0b0f82f5-update120.png",
+      "sha256": "7770aa112977f864b70a4e4410136fe34e37b8f0dacbd27e2e65e0d62c11c83d",
+      "bytes": 928938,
+      "seconds": 6.769687801999908,
+      "reused": false
+    },
+    {
+      "name": "p1-fe804da7db90-pretrained.png",
+      "sha256": "4bb8a2319d8980648d3d115d3302af35ce88110a3256585d813a1386cb199d7d",
+      "bytes": 1276658,
+      "seconds": 6.761688348000007,
+      "reused": false
+    },
+    {
+      "name": "p1-fe804da7db90-update120.png",
+      "sha256": "b012b2b2c55277298d75f676d34446c879962dc13d30779f2296bbb8513bf71a",
+      "bytes": 1272782,
+      "seconds": 6.803575069999852,
+      "reused": false
+    },
+    {
+      "name": "p1-feea467551a7-pretrained.png",
+      "sha256": "7b3ec811ab8c9f0f3567f762f8c1ddb63d5602862d372b137c765a23639dd7c5",
+      "bytes": 1228916,
+      "seconds": 6.601463573999922,
+      "reused": false
+    },
+    {
+      "name": "p1-feea467551a7-update120.png",
+      "sha256": "97919097fa54c329b542a303870f4a2c8f3b32fe6ec6ed50d8b63af4b6038efd",
+      "bytes": 1225500,
+      "seconds": 6.604991576999964,
+      "reused": false
+    }
+  ],
+  "calls": {
+    "pretrained": 75,
+    "update120": 129
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3"
+}

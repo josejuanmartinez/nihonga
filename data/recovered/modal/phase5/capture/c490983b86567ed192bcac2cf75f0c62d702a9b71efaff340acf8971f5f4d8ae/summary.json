@@ -1,0 +1,406 @@
+{
+  "request_key": "c490983b86567ed192bcac2cf75f0c62d702a9b71efaff340acf8971f5f4d8ae",
+  "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+  "row": {
+    "prompt": "A high-resolution DSLR photo of a young Black man wearing a ball gown, walking towards the camera in a wheat field, full-body shot, 35mm lens.",
+    "dimension": "real_world",
+    "subdimension": "clothing",
+    "facet": "formal",
+    "difficulty": 3,
+    "style": "photographic",
+    "aspect_ratio": "2:3",
+    "language": "en",
+    "prompt_format": "natural",
+    "hard": false,
+    "keywords": [],
+    "source": "template",
+    "prompt_template": "A high-resolution DSLR photo of a young Black man wearing a ball gown, walking towards the camera in a wheat field, full-body shot, 35mm lens.",
+    "generator_version": "phase1-v1",
+    "id": "p1-74853382e006",
+    "seed": 1954886530,
+    "split": "train",
+    "pool_rank": 8901,
+    "source_id": "p1-74853382e006",
+    "capture_id": "p6-continuation-p1-74853382e006",
+    "width": 832,
+    "height": 1248,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "usage": "phase6_full_student_continuation_train_only"
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-30T19:49:49.959556+00:00",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "capture_seconds": 6.116922708999994,
+  "peak_allocated_gib": 30.8528094291687,
+  "tensor_sha256": "edcf1e73df629d9f35aecd2b20614abc1e9d97f02edec36d81757a143507780a",
+  "tensor_bytes": 58729997,
+  "teacher_trajectory_calls": 40,
+  "teacher_replay_calls": 3,
+  "captured_block_pair_records": 12,
+  "selected_token_pairs": 3244,
+  "stages": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "scheduler_timestep": 1000.0,
+      "scheduler_sigma": 1.0,
+      "transformer_timestep": [
+        1.0
+      ],
+      "cache_mode": "extract",
+      "target_image_tokens": 4056
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "scheduler_timestep": 656.2384643554688,
+      "scheduler_sigma": 0.6562384366989136,
+      "transformer_timestep": [
+        0.65625
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4056
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "scheduler_timestep": 19.999980926513672,
+      "scheduler_sigma": 0.019999980926513672,
+      "transformer_timestep": [
+        0.02001953125
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4056
+    }
+  ],
+  "identity_metrics": [
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 43,
+      "identity_relative_l2_error": 0.06878727674484253,
+      "identity_normalized_mse": 2.994669102918124e-06,
+      "identity_mean_token_cosine": 0.9938668608665466,
+      "teacher_target_rms": 43.105552673339844
+    },
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08686599135398865,
+      "identity_normalized_mse": 8.277189635919058e-07,
+      "identity_mean_token_cosine": 0.9983046054840088,
+      "teacher_target_rms": 7.043078422546387
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 43,
+      "identity_relative_l2_error": 0.06821686774492264,
+      "identity_normalized_mse": 3.2641457892168546e-06,
+      "identity_mean_token_cosine": 0.9933149814605713,
+      "teacher_target_rms": 44.5429573059082
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.11428912729024887,
+      "identity_normalized_mse": 1.554774598844233e-06,
+      "identity_mean_token_cosine": 0.9968154430389404,
+      "teacher_target_rms": 7.619905471801758
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 43,
+      "identity_relative_l2_error": 0.12030952423810959,
+      "identity_normalized_mse": 3.461516826064326e-06,
+      "identity_mean_token_cosine": 0.9929106831550598,
+      "teacher_target_rms": 46.3387336730957
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08325819671154022,
+      "identity_normalized_mse": 1.5093920637809788e-06,
+      "identity_mean_token_cosine": 0.99690842628479,
+      "teacher_target_rms": 7.610860824584961
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 43,
+      "identity_relative_l2_error": 0.49553826451301575,
+      "identity_normalized_mse": 7.136227395676542e-06,
+      "identity_mean_token_cosine": 0.9853851199150085,
+      "teacher_target_rms": 58.07834243774414
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10422622412443161,
+      "identity_normalized_mse": 2.0943327854183735e-06,
+      "identity_mean_token_cosine": 0.995710551738739,
+      "teacher_target_rms": 7.3761305809021
+    },
+    {
+      "layer": 2,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.055595219135284424,
+      "identity_normalized_mse": 6.806545229665062e-07,
+      "identity_mean_token_cosine": 0.9986059665679932,
+      "teacher_target_rms": 8.307680130004883
+    },
+    {
+      "layer": 3,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07150758057832718,
+      "identity_normalized_mse": 8.543743774680479e-07,
+      "identity_mean_token_cosine": 0.9982501268386841,
+      "teacher_target_rms": 8.041807174682617
+    },
+    {
+      "layer": 4,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09626661986112595,
+      "identity_normalized_mse": 1.2641468174479087e-06,
+      "identity_mean_token_cosine": 0.9974108338356018,
+      "teacher_target_rms": 7.6050825119018555
+    },
+    {
+      "layer": 5,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10534919798374176,
+      "identity_normalized_mse": 1.7650074823905015e-06,
+      "identity_mean_token_cosine": 0.9963849782943726,
+      "teacher_target_rms": 7.214545249938965
+    },
+    {
+      "layer": 2,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08285622298717499,
+      "identity_normalized_mse": 1.1461539770607487e-06,
+      "identity_mean_token_cosine": 0.9976524710655212,
+      "teacher_target_rms": 10.218018531799316
+    },
+    {
+      "layer": 3,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07824703305959702,
+      "identity_normalized_mse": 1.0060052773042116e-06,
+      "identity_mean_token_cosine": 0.9979395270347595,
+      "teacher_target_rms": 9.856110572814941
+    },
+    {
+      "layer": 4,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09811092913150787,
+      "identity_normalized_mse": 1.2289449387026252e-06,
+      "identity_mean_token_cosine": 0.9974828958511353,
+      "teacher_target_rms": 9.269061088562012
+    },
+    {
+      "layer": 5,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10369914770126343,
+      "identity_normalized_mse": 1.5871662526478758e-06,
+      "identity_mean_token_cosine": 0.9967492818832397,
+      "teacher_target_rms": 8.743154525756836
+    }
+  ],
+  "replay_controls": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    }
+  ],
+  "selected_shapes": [
+    {
+      "stage": "early",
+      "layer": 2,
+      "shape": [
+        1,
+        299,
+        4096
+      ],
+      "prefix_tokens": 43,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 3,
+      "shape": [
+        1,
+        299,
+        4096
+      ],
+      "prefix_tokens": 43,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 4,
+      "shape": [
+        1,
+        299,
+        4096
+      ],
+      "prefix_tokens": 43,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 5,
+      "shape": [
+        1,
+        299,
+        4096
+      ],
+      "prefix_tokens": 43,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    }
+  ],
+  "optimizer_updates": 0,
+  "teacher_frozen": true,
+  "images_decoded": 0
+}

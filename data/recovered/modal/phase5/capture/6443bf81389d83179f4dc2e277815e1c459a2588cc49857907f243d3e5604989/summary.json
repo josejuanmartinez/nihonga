@@ -1,0 +1,410 @@
+{
+  "request_key": "6443bf81389d83179f4dc2e277815e1c459a2588cc49857907f243d3e5604989",
+  "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+  "row": {
+    "prompt": "\u5c55\u793a\u4e00\u53ea\u8584\u8377\u7eff\u7684\u6cf0\u8fea\u718a\u5728\u9e1f\u7b3c\u91cc\uff0c\u9e1f\u7b3c\u4f4d\u4e8e\u706b\u70c8\u9e1f\u7684\u53f3\u4fa7\uff0c\u5e72\u51c0\u7684\u6784\u56fe\u3002\u98ce\u683c\uff1a3D\u6e32\u67d3\uff0c\u67d4\u548c\u5168\u5c40\u5149\u7167\u3002",
+    "dimension": "alignment",
+    "subdimension": "spatial_relation",
+    "facet": "inside_right_of",
+    "difficulty": 5,
+    "style": "3d_render",
+    "aspect_ratio": "16:9",
+    "language": "zh",
+    "prompt_format": "imperative",
+    "hard": true,
+    "keywords": [
+      "inside",
+      "right"
+    ],
+    "source": "llm_translate",
+    "prompt_template": "Show a lime green teddy bear inside a birdcage, which is to the right of a flamingo, clean composition. Style: 3D render, soft global illumination.",
+    "generator_version": "phase1-v1",
+    "id": "p1-b6033ecb552a",
+    "seed": 3053665995,
+    "split": "validation",
+    "pool_rank": 12117,
+    "llm_model": "Qwen/Qwen3-8B",
+    "source_id": "p1-b6033ecb552a",
+    "capture_id": "p6-continuation-test-p1-b6033ecb552a",
+    "width": 1376,
+    "height": 768,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "usage": "phase6_continuation_independent_test_only"
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-30T20:23:02.127571+00:00",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "capture_seconds": 9.563101099,
+  "peak_allocated_gib": 30.86633014678955,
+  "tensor_sha256": "fd59c0017f47413182b545c3dcdea5cb070cc53a053ffe0f06488381ea027a4c",
+  "tensor_bytes": 59043469,
+  "teacher_trajectory_calls": 40,
+  "teacher_replay_calls": 3,
+  "captured_block_pair_records": 12,
+  "selected_token_pairs": 3256,
+  "stages": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "scheduler_timestep": 1000.0,
+      "scheduler_sigma": 1.0,
+      "transformer_timestep": [
+        1.0
+      ],
+      "cache_mode": "extract",
+      "target_image_tokens": 4128
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "scheduler_timestep": 657.0084228515625,
+      "scheduler_sigma": 0.6570084095001221,
+      "transformer_timestep": [
+        0.65625
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4128
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "scheduler_timestep": 19.999980926513672,
+      "scheduler_sigma": 0.019999980926513672,
+      "transformer_timestep": [
+        0.02001953125
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4128
+    }
+  ],
+  "identity_metrics": [
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 46,
+      "identity_relative_l2_error": 0.07174596190452576,
+      "identity_normalized_mse": 4.451145287021063e-06,
+      "identity_mean_token_cosine": 0.9908839464187622,
+      "teacher_target_rms": 42.89205551147461
+    },
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08346224576234818,
+      "identity_normalized_mse": 8.271284741567797e-07,
+      "identity_mean_token_cosine": 0.9983058571815491,
+      "teacher_target_rms": 6.970036506652832
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 46,
+      "identity_relative_l2_error": 0.07041981816291809,
+      "identity_normalized_mse": 4.678972345573129e-06,
+      "identity_mean_token_cosine": 0.99041748046875,
+      "teacher_target_rms": 44.298099517822266
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.1187463253736496,
+      "identity_normalized_mse": 1.6391728649978177e-06,
+      "identity_mean_token_cosine": 0.9966427087783813,
+      "teacher_target_rms": 7.527438163757324
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 46,
+      "identity_relative_l2_error": 0.11886373162269592,
+      "identity_normalized_mse": 4.656214059650665e-06,
+      "identity_mean_token_cosine": 0.9904640316963196,
+      "teacher_target_rms": 46.016937255859375
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08382552862167358,
+      "identity_normalized_mse": 1.403354076501273e-06,
+      "identity_mean_token_cosine": 0.9971256256103516,
+      "teacher_target_rms": 7.409422397613525
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 46,
+      "identity_relative_l2_error": 0.4869864284992218,
+      "identity_normalized_mse": 7.978869689395651e-06,
+      "identity_mean_token_cosine": 0.9836592674255371,
+      "teacher_target_rms": 57.16276550292969
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10937658697366714,
+      "identity_normalized_mse": 2.1507914880203316e-06,
+      "identity_mean_token_cosine": 0.9955949783325195,
+      "teacher_target_rms": 7.1672282218933105
+    },
+    {
+      "layer": 2,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.05401114746928215,
+      "identity_normalized_mse": 6.371642484737094e-07,
+      "identity_mean_token_cosine": 0.9986951351165771,
+      "teacher_target_rms": 8.418657302856445
+    },
+    {
+      "layer": 3,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07975133508443832,
+      "identity_normalized_mse": 8.590285460741143e-07,
+      "identity_mean_token_cosine": 0.99824059009552,
+      "teacher_target_rms": 8.035758972167969
+    },
+    {
+      "layer": 4,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10073251277208328,
+      "identity_normalized_mse": 1.2820669326174539e-06,
+      "identity_mean_token_cosine": 0.9973741173744202,
+      "teacher_target_rms": 7.558367729187012
+    },
+    {
+      "layer": 5,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.11077523231506348,
+      "identity_normalized_mse": 2.134379656126839e-06,
+      "identity_mean_token_cosine": 0.9956285953521729,
+      "teacher_target_rms": 7.219906330108643
+    },
+    {
+      "layer": 2,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08432776480913162,
+      "identity_normalized_mse": 1.1098206869064597e-06,
+      "identity_mean_token_cosine": 0.9977269172668457,
+      "teacher_target_rms": 10.216886520385742
+    },
+    {
+      "layer": 3,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09642600268125534,
+      "identity_normalized_mse": 1.0668125014490215e-06,
+      "identity_mean_token_cosine": 0.9978150129318237,
+      "teacher_target_rms": 9.618508338928223
+    },
+    {
+      "layer": 4,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.11322321742773056,
+      "identity_normalized_mse": 1.3419542028714204e-06,
+      "identity_mean_token_cosine": 0.9972514510154724,
+      "teacher_target_rms": 8.912734985351562
+    },
+    {
+      "layer": 5,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10380471497774124,
+      "identity_normalized_mse": 1.6037122350098798e-06,
+      "identity_mean_token_cosine": 0.9967153668403625,
+      "teacher_target_rms": 8.421993255615234
+    }
+  ],
+  "replay_controls": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    }
+  ],
+  "selected_shapes": [
+    {
+      "stage": "early",
+      "layer": 2,
+      "shape": [
+        1,
+        302,
+        4096
+      ],
+      "prefix_tokens": 46,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 3,
+      "shape": [
+        1,
+        302,
+        4096
+      ],
+      "prefix_tokens": 46,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 4,
+      "shape": [
+        1,
+        302,
+        4096
+      ],
+      "prefix_tokens": 46,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 5,
+      "shape": [
+        1,
+        302,
+        4096
+      ],
+      "prefix_tokens": 46,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    }
+  ],
+  "optimizer_updates": 0,
+  "teacher_frozen": true,
+  "images_decoded": 0
+}

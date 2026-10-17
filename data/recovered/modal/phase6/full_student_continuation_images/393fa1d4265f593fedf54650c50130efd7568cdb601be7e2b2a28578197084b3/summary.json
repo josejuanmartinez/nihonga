@@ -1,0 +1,731 @@
+{
+  "request_key": "393fa1d4265f593fedf54650c50130efd7568cdb601be7e2b2a28578197084b3",
+  "status": "passed",
+  "rows": [
+    {
+      "source_id": "p1-b6033ecb552a",
+      "prompt": "\u5c55\u793a\u4e00\u53ea\u8584\u8377\u7eff\u7684\u6cf0\u8fea\u718a\u5728\u9e1f\u7b3c\u91cc\uff0c\u9e1f\u7b3c\u4f4d\u4e8e\u706b\u70c8\u9e1f\u7684\u53f3\u4fa7\uff0c\u5e72\u51c0\u7684\u6784\u56fe\u3002\u98ce\u683c\uff1a3D\u6e32\u67d3\uff0c\u67d4\u548c\u5168\u5c40\u5149\u7167\u3002",
+      "seed": 3053665995,
+      "width": 1376,
+      "height": 768,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "teacher": {
+        "name": "p1-b6033ecb552a-teacher.png",
+        "sha256": "c95c47d52d31c1bef0b556acba55c0eab6c72e11e8591fbe276ed9407f5a32e3",
+        "bytes": 1277124,
+        "seconds": 9.550139088999998,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-b6033ecb552a-pretrained.png",
+        "sha256": "4561d01a17e4552795f5fa594e6d7f9ef1a5d381a0356c99d02df16faff10543",
+        "bytes": 1300892,
+        "seconds": 6.640963776999996,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-b6033ecb552a-update60.png",
+        "sha256": "ffb8805f2fb7d021f33acc6c84db2602f8764dcbbe9f1cb72c6929afd95aff33",
+        "bytes": 1266736,
+        "seconds": 6.621169565999992,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-b6033ecb552a-update180.png",
+        "sha256": "ff8f88265ff6d07557edbacee7bad62dc90c1645bdbb962b0635c42edd471521",
+        "bytes": 1258124,
+        "seconds": 6.625800366999954,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-520b4b6e2742",
+      "prompt": "A claymation scene of exactly four ladybugs, a single swan and three dogs in a sunlit garden. High dynamic range. Claymation, handmade clay figures.",
+      "seed": 1376471918,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "counting",
+      "teacher": {
+        "name": "p1-520b4b6e2742-teacher.png",
+        "sha256": "51948354039060e147a007fccc16a44a707a1bbf5d383d039fd42ddc5442a536",
+        "bytes": 1833518,
+        "seconds": 6.690552567000005,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-520b4b6e2742-pretrained.png",
+        "sha256": "11d9bab519dc0b7ccc5efd5496c0738b9a7755c9aedf163228fe10e9424e8476",
+        "bytes": 1806966,
+        "seconds": 6.518296227999997,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-520b4b6e2742-update60.png",
+        "sha256": "acba080b617225a325b825b4098cce9a6cd52a0db2b4be862b4c91d87dd141be",
+        "bytes": 1818318,
+        "seconds": 6.513393863000033,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-520b4b6e2742-update180.png",
+        "sha256": "4152fba188a203dfa3db5b1fbc8b98d01d487603cb781e58d8189c6fe9dde178",
+        "bytes": 1821336,
+        "seconds": 6.534594255999991,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a745f08b72dc",
+      "prompt": "A spontaneous shot of hands working dough covered in flour, tight focus on the face, realistic skin translucency, ultra-detailed.",
+      "seed": 2806378635,
+      "width": 896,
+      "height": 1184,
+      "dimension": "visual_quality",
+      "subdimension": "skin",
+      "teacher": {
+        "name": "p1-a745f08b72dc-teacher.png",
+        "sha256": "a125e266db429fcf6a3271c989ba8146f8d41b0c1de4dfd20d99d5ed6db22292",
+        "bytes": 2233811,
+        "seconds": 6.848021004000003,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-a745f08b72dc-pretrained.png",
+        "sha256": "32c39740772989709a35e2b28d9dfc9076f7b0ad2e27588a0ac4655e166741f9",
+        "bytes": 2224613,
+        "seconds": 6.648263275000005,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-a745f08b72dc-update60.png",
+        "sha256": "516418016c16ed989d2691d13d4c740c79d4bf97dd7669b7b56b8c566a3cb5e4",
+        "bytes": 2227591,
+        "seconds": 6.649358294000024,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-a745f08b72dc-update180.png",
+        "sha256": "0c3571df0a6740b51b00eb7af72ad6235dddc99d56b5f59de78f5210119b3897",
+        "bytes": 2256826,
+        "seconds": 6.667035067000029,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-4a45da9330ae",
+      "prompt": "A 35mm film photograph of a face lit by a laptop screen in a dark room. Long exposure. Deep shadows with clean detail. Strong contrast between light and shadow. High dynamic range. 35mm film photo, film grain.",
+      "seed": 1246091923,
+      "width": 1184,
+      "height": 896,
+      "dimension": "visual_quality",
+      "subdimension": "low_light",
+      "teacher": {
+        "name": "p1-4a45da9330ae-teacher.png",
+        "sha256": "28ba8920619de7af8136bea2b9389e98551c2c1e82480b22e21eea0176dcf237",
+        "bytes": 1121214,
+        "seconds": 7.059334386000003,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-4a45da9330ae-pretrained.png",
+        "sha256": "12a5581bd77ce9809d22d7ad143626ad5489bdf1877f6ad787ca55e965a6ad52",
+        "bytes": 1101665,
+        "seconds": 6.650336581999994,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-4a45da9330ae-update60.png",
+        "sha256": "596aa646cbded30f1bb2a4b5b7ee4750dcfd89f18347153cafa5a5a4477e34a1",
+        "bytes": 1097982,
+        "seconds": 6.649087337000026,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-4a45da9330ae-update180.png",
+        "sha256": "1a744f39918d7093fe5df60947e3fc3737b00acfa191757f2b5a09a73a4ffd01",
+        "bytes": 1119507,
+        "seconds": 6.656172112999911,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-86c510e4e06c",
+      "prompt": "A cinematic film still featuring a samurai poised in a serene bamboo forest, captured with a Dutch angle. The scene is rendered in a teal and orange color grade with high dynamic range, offering a cinematic still effect, anamorphic framing, and enhanced color grading.",
+      "seed": 2261061860,
+      "width": 1248,
+      "height": 832,
+      "dimension": "aesthetics",
+      "subdimension": "cinematic_framing",
+      "teacher": {
+        "name": "p1-86c510e4e06c-teacher.png",
+        "sha256": "34c7045f2dfc8ba4368fdbe60e731ffc85150939f6ef82dd84844f862591d9d0",
+        "bytes": 1840751,
+        "seconds": 6.739438135,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-86c510e4e06c-pretrained.png",
+        "sha256": "bcd978f3575bb28a1c66c5961d0443c0486d102ab30698a7c9579915c372ef4a",
+        "bytes": 1904124,
+        "seconds": 6.532123576000004,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-86c510e4e06c-update60.png",
+        "sha256": "1f5739665036935addcabbb737bc0a363fc86c45461b772acac7edeb558a7e92",
+        "bytes": 1908554,
+        "seconds": 6.519309400999987,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-86c510e4e06c-update180.png",
+        "sha256": "b1686770352f940ace3c3bf2213ac1e920af643a39686616e6826fea58fca669",
+        "bytes": 1946446,
+        "seconds": 6.5467616089999865,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ee87e9608396",
+      "prompt": "A classical oil painting of a white horse in a snowy field. A monochromatic palette of blues. Cohesive color grading. Warm window light. Natural colors. Classical oil painting, old master style.",
+      "seed": 4001884512,
+      "width": 832,
+      "height": 1248,
+      "dimension": "aesthetics",
+      "subdimension": "color_harmony",
+      "teacher": {
+        "name": "p1-ee87e9608396-teacher.png",
+        "sha256": "dddf6611c1edb3a3f599670df60ddaed2cdccb6db5e83f4567f0c35b0e55a0bd",
+        "bytes": 2159604,
+        "seconds": 6.847600021999995,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-ee87e9608396-pretrained.png",
+        "sha256": "d93e1532a3a85402f79b9474ede609ed186bfb2ab9eb568a22da5d4caa661271",
+        "bytes": 2089521,
+        "seconds": 6.567283334999985,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-ee87e9608396-update60.png",
+        "sha256": "6abf7b9948f34cc8ced46eeff5bb77edfb7290793bd07c9cfea40a0949f7754a",
+        "bytes": 2101121,
+        "seconds": 6.516396120000024,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-ee87e9608396-update180.png",
+        "sha256": "d138fb60907fc90b321d410cc4ba389ce60712a4e0188b66e984a475de4261b0",
+        "bytes": 2162249,
+        "seconds": 6.533688895999944,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-bbbf3d19c357",
+      "prompt": "An isometric illustration of a painter wearing a leather biker jacket, sitting on steps in a flower garden, fashion photography, warm window light.",
+      "seed": 3149872409,
+      "width": 768,
+      "height": 1376,
+      "dimension": "real_world",
+      "subdimension": "clothing",
+      "teacher": {
+        "name": "p1-bbbf3d19c357-teacher.png",
+        "sha256": "37cc179a541e758f7c314e430a5ad235c041952ff5053bd7cd1e74236b6c49d0",
+        "bytes": 2079560,
+        "seconds": 6.845642694000006,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-bbbf3d19c357-pretrained.png",
+        "sha256": "90c613f8d293b357a75a864333e881745660b948d88a66dbbc3ddd9b6efe99a7",
+        "bytes": 2037911,
+        "seconds": 6.678622934000003,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-bbbf3d19c357-update60.png",
+        "sha256": "c5bb3483d7c5242fa2686460019255fe4c383fb5922ef79c84ef98aa0a9d2e89",
+        "bytes": 2029138,
+        "seconds": 6.647691581000004,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-bbbf3d19c357-update180.png",
+        "sha256": "c40339d609642616d6064ea8ac41b1ddcd4ffbc4dd285452bb32242e40ff5594",
+        "bytes": 2039457,
+        "seconds": 6.669324458999995,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a1a2323c8c36",
+      "prompt": "A 35mm film photograph of a mechanical keyboard, a water bottle and a TV remote neatly arranged. Flat lay. Top-down view. Clean composition. Warm window light. 35mm film photo, film grain.",
+      "seed": 2711761468,
+      "width": 1184,
+      "height": 896,
+      "dimension": "real_world",
+      "subdimension": "everyday_objects",
+      "teacher": {
+        "name": "p1-a1a2323c8c36-teacher.png",
+        "sha256": "f80996c30fbcd11fad084cdca9ea569d22dbc491beaa5bf2a4758a26bebf78f1",
+        "bytes": 1553511,
+        "seconds": 6.845924877000002,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-a1a2323c8c36-pretrained.png",
+        "sha256": "5b0e6111d425deb4bb1fd106a4cff486067cf600634e54c82d4165f58a6bef02",
+        "bytes": 1522080,
+        "seconds": 6.710081056000007,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-a1a2323c8c36-update60.png",
+        "sha256": "ca4fd2f504f718ddf551511fb640829fe1ddad47c5abad83949b432e241639d5",
+        "bytes": 1523486,
+        "seconds": 6.6592121000000475,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-a1a2323c8c36-update180.png",
+        "sha256": "951ba13031bdf7d472ba8d29009ff399d98ccb513a98f2c0659d5236aee6ff42",
+        "bytes": 1544791,
+        "seconds": 6.678297633999932,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-dc30f8d4f347",
+      "prompt": "A flat vector illustration of an upside-down reflection of a desert in the sky. Magical realism. Rich colors. Flat vector art, bold simple shapes.",
+      "seed": 3694196948,
+      "width": 1248,
+      "height": 832,
+      "dimension": "creative",
+      "subdimension": "surreal",
+      "teacher": {
+        "name": "p1-dc30f8d4f347-teacher.png",
+        "sha256": "b13923189278e1e94c15df60d33c363eadb2d7e92c60d3fc838a32e3592894aa",
+        "bytes": 904154,
+        "seconds": 6.7034889499999935,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-dc30f8d4f347-pretrained.png",
+        "sha256": "395bf531c0ad48e2786a88f30190179e11100cfb64fe1c6167c40bdaf3c05bec",
+        "bytes": 942411,
+        "seconds": 6.573588685000004,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-dc30f8d4f347-update60.png",
+        "sha256": "4a7c88b6573dd19898ede640023e4b5b54557010e1db9d062a34bc77bad53c9e",
+        "bytes": 922449,
+        "seconds": 6.49759020700003,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-dc30f8d4f347-update180.png",
+        "sha256": "feeca87fcdcaca933c29aaa858a58e522b18252e81a21d6a9ce31678f4f6adc6",
+        "bytes": 924567,
+        "seconds": 6.492494265000005,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-46acbb8cdf62",
+      "prompt": "A flat vector illustration of an art exhibition poster with the title \"The Northern Parade\" and the tagline \"Tickets at the Door\", featuring a fisherman, elegant serif typography, soft morning light, high dynamic range.",
+      "seed": 1185725324,
+      "width": 832,
+      "height": 1248,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "teacher": {
+        "name": "p1-46acbb8cdf62-teacher.png",
+        "sha256": "b35e8730ef8e13d4d20786714d7e79fb9c779572155068b6a32bd3e56e08b29a",
+        "bytes": 1491149,
+        "seconds": 6.719153438999996,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-46acbb8cdf62-pretrained.png",
+        "sha256": "ed69542637d23ad39178c78b5213334f02c99c52b3ea8db576396a8ad61345b2",
+        "bytes": 1508840,
+        "seconds": 6.5873915949999855,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-46acbb8cdf62-update60.png",
+        "sha256": "8c9e1fcf177093d9b553113d9e67ea99c245b81e96624c07a8d4663e00209eef",
+        "bytes": 1481965,
+        "seconds": 6.523731368000028,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-46acbb8cdf62-update180.png",
+        "sha256": "5420ef118e58b1ad0c10bf663a761ecb08565390cda719a5ae7c02e23647ecd8",
+        "bytes": 1489443,
+        "seconds": 6.528973696999969,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "prompt": "a science fair poster with the title \"CRIMSON HARBOR\" and the tagline \"Visit Kyoto\", featuring a windmill, whimsical mood, graphic design, clean typography, print layout",
+      "seed": 2180783444,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "teacher": {
+        "name": "p1-81fc1d548f81-teacher.png",
+        "sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
+        "bytes": 1408297,
+        "seconds": 6.856501573000003,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-81fc1d548f81-pretrained.png",
+        "sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
+        "bytes": 1444898,
+        "seconds": 6.677796928000021,
+        "reused": false
+      },
+      "update60": {
+        "name": "p1-81fc1d548f81-update60.png",
+        "sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
+        "bytes": 1380875,
+        "seconds": 6.650433878999991,
+        "reused": false
+      },
+      "update180": {
+        "name": "p1-81fc1d548f81-update180.png",
+        "sha256": "f3dfc13644e5f47ea62684fbb34cbb8edec3a145c32e3bc9257b5d1622ea1420",
+        "bytes": 1384699,
+        "seconds": 6.658772233000036,
+        "reused": false
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p1-b6033ecb552a-teacher.png",
+      "sha256": "c95c47d52d31c1bef0b556acba55c0eab6c72e11e8591fbe276ed9407f5a32e3",
+      "bytes": 1277124,
+      "seconds": 9.550139088999998,
+      "reused": false
+    },
+    {
+      "name": "p1-b6033ecb552a-pretrained.png",
+      "sha256": "4561d01a17e4552795f5fa594e6d7f9ef1a5d381a0356c99d02df16faff10543",
+      "bytes": 1300892,
+      "seconds": 6.640963776999996,
+      "reused": false
+    },
+    {
+      "name": "p1-b6033ecb552a-update60.png",
+      "sha256": "ffb8805f2fb7d021f33acc6c84db2602f8764dcbbe9f1cb72c6929afd95aff33",
+      "bytes": 1266736,
+      "seconds": 6.621169565999992,
+      "reused": false
+    },
+    {
+      "name": "p1-b6033ecb552a-update180.png",
+      "sha256": "ff8f88265ff6d07557edbacee7bad62dc90c1645bdbb962b0635c42edd471521",
+      "bytes": 1258124,
+      "seconds": 6.625800366999954,
+      "reused": false
+    },
+    {
+      "name": "p1-520b4b6e2742-teacher.png",
+      "sha256": "51948354039060e147a007fccc16a44a707a1bbf5d383d039fd42ddc5442a536",
+      "bytes": 1833518,
+      "seconds": 6.690552567000005,
+      "reused": false
+    },
+    {
+      "name": "p1-520b4b6e2742-pretrained.png",
+      "sha256": "11d9bab519dc0b7ccc5efd5496c0738b9a7755c9aedf163228fe10e9424e8476",
+      "bytes": 1806966,
+      "seconds": 6.518296227999997,
+      "reused": false
+    },
+    {
+      "name": "p1-520b4b6e2742-update60.png",
+      "sha256": "acba080b617225a325b825b4098cce9a6cd52a0db2b4be862b4c91d87dd141be",
+      "bytes": 1818318,
+      "seconds": 6.513393863000033,
+      "reused": false
+    },
+    {
+      "name": "p1-520b4b6e2742-update180.png",
+      "sha256": "4152fba188a203dfa3db5b1fbc8b98d01d487603cb781e58d8189c6fe9dde178",
+      "bytes": 1821336,
+      "seconds": 6.534594255999991,
+      "reused": false
+    },
+    {
+      "name": "p1-a745f08b72dc-teacher.png",
+      "sha256": "a125e266db429fcf6a3271c989ba8146f8d41b0c1de4dfd20d99d5ed6db22292",
+      "bytes": 2233811,
+      "seconds": 6.848021004000003,
+      "reused": false
+    },
+    {
+      "name": "p1-a745f08b72dc-pretrained.png",
+      "sha256": "32c39740772989709a35e2b28d9dfc9076f7b0ad2e27588a0ac4655e166741f9",
+      "bytes": 2224613,
+      "seconds": 6.648263275000005,
+      "reused": false
+    },
+    {
+      "name": "p1-a745f08b72dc-update60.png",
+      "sha256": "516418016c16ed989d2691d13d4c740c79d4bf97dd7669b7b56b8c566a3cb5e4",
+      "bytes": 2227591,
+      "seconds": 6.649358294000024,
+      "reused": false
+    },
+    {
+      "name": "p1-a745f08b72dc-update180.png",
+      "sha256": "0c3571df0a6740b51b00eb7af72ad6235dddc99d56b5f59de78f5210119b3897",
+      "bytes": 2256826,
+      "seconds": 6.667035067000029,
+      "reused": false
+    },
+    {
+      "name": "p1-4a45da9330ae-teacher.png",
+      "sha256": "28ba8920619de7af8136bea2b9389e98551c2c1e82480b22e21eea0176dcf237",
+      "bytes": 1121214,
+      "seconds": 7.059334386000003,
+      "reused": false
+    },
+    {
+      "name": "p1-4a45da9330ae-pretrained.png",
+      "sha256": "12a5581bd77ce9809d22d7ad143626ad5489bdf1877f6ad787ca55e965a6ad52",
+      "bytes": 1101665,
+      "seconds": 6.650336581999994,
+      "reused": false
+    },
+    {
+      "name": "p1-4a45da9330ae-update60.png",
+      "sha256": "596aa646cbded30f1bb2a4b5b7ee4750dcfd89f18347153cafa5a5a4477e34a1",
+      "bytes": 1097982,
+      "seconds": 6.649087337000026,
+      "reused": false
+    },
+    {
+      "name": "p1-4a45da9330ae-update180.png",
+      "sha256": "1a744f39918d7093fe5df60947e3fc3737b00acfa191757f2b5a09a73a4ffd01",
+      "bytes": 1119507,
+      "seconds": 6.656172112999911,
+      "reused": false
+    },
+    {
+      "name": "p1-86c510e4e06c-teacher.png",
+      "sha256": "34c7045f2dfc8ba4368fdbe60e731ffc85150939f6ef82dd84844f862591d9d0",
+      "bytes": 1840751,
+      "seconds": 6.739438135,
+      "reused": false
+    },
+    {
+      "name": "p1-86c510e4e06c-pretrained.png",
+      "sha256": "bcd978f3575bb28a1c66c5961d0443c0486d102ab30698a7c9579915c372ef4a",
+      "bytes": 1904124,
+      "seconds": 6.532123576000004,
+      "reused": false
+    },
+    {
+      "name": "p1-86c510e4e06c-update60.png",
+      "sha256": "1f5739665036935addcabbb737bc0a363fc86c45461b772acac7edeb558a7e92",
+      "bytes": 1908554,
+      "seconds": 6.519309400999987,
+      "reused": false
+    },
+    {
+      "name": "p1-86c510e4e06c-update180.png",
+      "sha256": "b1686770352f940ace3c3bf2213ac1e920af643a39686616e6826fea58fca669",
+      "bytes": 1946446,
+      "seconds": 6.5467616089999865,
+      "reused": false
+    },
+    {
+      "name": "p1-ee87e9608396-teacher.png",
+      "sha256": "dddf6611c1edb3a3f599670df60ddaed2cdccb6db5e83f4567f0c35b0e55a0bd",
+      "bytes": 2159604,
+      "seconds": 6.847600021999995,
+      "reused": false
+    },
+    {
+      "name": "p1-ee87e9608396-pretrained.png",
+      "sha256": "d93e1532a3a85402f79b9474ede609ed186bfb2ab9eb568a22da5d4caa661271",
+      "bytes": 2089521,
+      "seconds": 6.567283334999985,
+      "reused": false
+    },
+    {
+      "name": "p1-ee87e9608396-update60.png",
+      "sha256": "6abf7b9948f34cc8ced46eeff5bb77edfb7290793bd07c9cfea40a0949f7754a",
+      "bytes": 2101121,
+      "seconds": 6.516396120000024,
+      "reused": false
+    },
+    {
+      "name": "p1-ee87e9608396-update180.png",
+      "sha256": "d138fb60907fc90b321d410cc4ba389ce60712a4e0188b66e984a475de4261b0",
+      "bytes": 2162249,
+      "seconds": 6.533688895999944,
+      "reused": false
+    },
+    {
+      "name": "p1-bbbf3d19c357-teacher.png",
+      "sha256": "37cc179a541e758f7c314e430a5ad235c041952ff5053bd7cd1e74236b6c49d0",
+      "bytes": 2079560,
+      "seconds": 6.845642694000006,
+      "reused": false
+    },
+    {
+      "name": "p1-bbbf3d19c357-pretrained.png",
+      "sha256": "90c613f8d293b357a75a864333e881745660b948d88a66dbbc3ddd9b6efe99a7",
+      "bytes": 2037911,
+      "seconds": 6.678622934000003,
+      "reused": false
+    },
+    {
+      "name": "p1-bbbf3d19c357-update60.png",
+      "sha256": "c5bb3483d7c5242fa2686460019255fe4c383fb5922ef79c84ef98aa0a9d2e89",
+      "bytes": 2029138,
+      "seconds": 6.647691581000004,
+      "reused": false
+    },
+    {
+      "name": "p1-bbbf3d19c357-update180.png",
+      "sha256": "c40339d609642616d6064ea8ac41b1ddcd4ffbc4dd285452bb32242e40ff5594",
+      "bytes": 2039457,
+      "seconds": 6.669324458999995,
+      "reused": false
+    },
+    {
+      "name": "p1-a1a2323c8c36-teacher.png",
+      "sha256": "f80996c30fbcd11fad084cdca9ea569d22dbc491beaa5bf2a4758a26bebf78f1",
+      "bytes": 1553511,
+      "seconds": 6.845924877000002,
+      "reused": false
+    },
+    {
+      "name": "p1-a1a2323c8c36-pretrained.png",
+      "sha256": "5b0e6111d425deb4bb1fd106a4cff486067cf600634e54c82d4165f58a6bef02",
+      "bytes": 1522080,
+      "seconds": 6.710081056000007,
+      "reused": false
+    },
+    {
+      "name": "p1-a1a2323c8c36-update60.png",
+      "sha256": "ca4fd2f504f718ddf551511fb640829fe1ddad47c5abad83949b432e241639d5",
+      "bytes": 1523486,
+      "seconds": 6.6592121000000475,
+      "reused": false
+    },
+    {
+      "name": "p1-a1a2323c8c36-update180.png",
+      "sha256": "951ba13031bdf7d472ba8d29009ff399d98ccb513a98f2c0659d5236aee6ff42",
+      "bytes": 1544791,
+      "seconds": 6.678297633999932,
+      "reused": false
+    },
+    {
+      "name": "p1-dc30f8d4f347-teacher.png",
+      "sha256": "b13923189278e1e94c15df60d33c363eadb2d7e92c60d3fc838a32e3592894aa",
+      "bytes": 904154,
+      "seconds": 6.7034889499999935,
+      "reused": false
+    },
+    {
+      "name": "p1-dc30f8d4f347-pretrained.png",
+      "sha256": "395bf531c0ad48e2786a88f30190179e11100cfb64fe1c6167c40bdaf3c05bec",
+      "bytes": 942411,
+      "seconds": 6.573588685000004,
+      "reused": false
+    },
+    {
+      "name": "p1-dc30f8d4f347-update60.png",
+      "sha256": "4a7c88b6573dd19898ede640023e4b5b54557010e1db9d062a34bc77bad53c9e",
+      "bytes": 922449,
+      "seconds": 6.49759020700003,
+      "reused": false
+    },
+    {
+      "name": "p1-dc30f8d4f347-update180.png",
+      "sha256": "feeca87fcdcaca933c29aaa858a58e522b18252e81a21d6a9ce31678f4f6adc6",
+      "bytes": 924567,
+      "seconds": 6.492494265000005,
+      "reused": false
+    },
+    {
+      "name": "p1-46acbb8cdf62-teacher.png",
+      "sha256": "b35e8730ef8e13d4d20786714d7e79fb9c779572155068b6a32bd3e56e08b29a",
+      "bytes": 1491149,
+      "seconds": 6.719153438999996,
+      "reused": false
+    },
+    {
+      "name": "p1-46acbb8cdf62-pretrained.png",
+      "sha256": "ed69542637d23ad39178c78b5213334f02c99c52b3ea8db576396a8ad61345b2",
+      "bytes": 1508840,
+      "seconds": 6.5873915949999855,
+      "reused": false
+    },
+    {
+      "name": "p1-46acbb8cdf62-update60.png",
+      "sha256": "8c9e1fcf177093d9b553113d9e67ea99c245b81e96624c07a8d4663e00209eef",
+      "bytes": 1481965,
+      "seconds": 6.523731368000028,
+      "reused": false
+    },
+    {
+      "name": "p1-46acbb8cdf62-update180.png",
+      "sha256": "5420ef118e58b1ad0c10bf663a761ecb08565390cda719a5ae7c02e23647ecd8",
+      "bytes": 1489443,
+      "seconds": 6.528973696999969,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-teacher.png",
+      "sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
+      "bytes": 1408297,
+      "seconds": 6.856501573000003,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-pretrained.png",
+      "sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
+      "bytes": 1444898,
+      "seconds": 6.677796928000021,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-update60.png",
+      "sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
+      "bytes": 1380875,
+      "seconds": 6.650433878999991,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-update180.png",
+      "sha256": "f3dfc13644e5f47ea62684fbb34cbb8edec3a145c32e3bc9257b5d1622ea1420",
+      "bytes": 1384699,
+      "seconds": 6.658772233000036,
+      "reused": false
+    }
+  ],
+  "calls": {
+    "teacher": 11,
+    "pretrained": 11,
+    "update60": 11,
+    "update180": 11
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3"
+}

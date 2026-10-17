@@ -1,0 +1,202 @@
+{
+  "request_key": "af503fb98f8b90c94e30226e2361001191815c2061605067972d81b91eb09656",
+  "shard": 0,
+  "status": "failed",
+  "mode": "verify",
+  "teacher_calls": 3,
+  "pipeline_calls": 0,
+  "replay_calls": 0,
+  "optimizer_updates": 0,
+  "controls": [
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.006278480403125286,
+        "max_abs_error": 0.4365234375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.004721154924482107,
+        "max_abs_error": 0.21484375,
+        "exact_equal": false
+      },
+      "passed": false
+    },
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003715723752975464,
+        "max_abs_error": 0.03125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0037607806734740734,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "passed": false
+    },
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008260420523583889,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.007459064479917288,
+        "max_abs_error": 0.0703125,
+        "exact_equal": false
+      },
+      "passed": false
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p5-train-p1-2eea6009c17f.pt",
+      "sha256": "834cca0212fcda6b8a3a7a3fd23c839e416de07fbadf686610e4cb20f4ccd158",
+      "bytes": 1575994
+    }
+  ],
+  "captures": [],
+  "process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "7a2138006a6e4fd7941f47ee61002e74",
+    "modal_task_id": "ta-01M40PV72KP087Y0RAR6G2XTSR"
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "cudnn_version": 92400,
+  "settings": {
+    "weights_dtype": "bfloat16",
+    "attention_backend": "SDPBackend.MATH",
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "bf16_reduced_precision_matmul_reduction": false,
+    "fp16_bf16_reduction_math_sdp": false,
+    "input_order": "original pipeline argument order; stage tensors copied inside inference mode",
+    "prefix_cache": "fresh teacher cache per prompt; populate at early; use at middle and late"
+  },
+  "reference_process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "613d8c36de054bdcb9d0684cc4e6f788",
+    "modal_task_id": "ta-01M3PAVXZV5XS0D0MHJ78F5TQR"
+  },
+  "state_mismatch": {
+    "actual_count": 301,
+    "expected_count": 301,
+    "missing_names": [],
+    "extra_names": [],
+    "different": [
+      {
+        "name": "pos_embed.freqs.1",
+        "actual": {
+          "kind": "unregistered_rope_table",
+          "dtype": "torch.complex64",
+          "shape": [
+            9216,
+            28
+          ],
+          "stride": [
+            28,
+            1
+          ],
+          "sha256": "659cf4eee5cb843e628bd458f69f91e3fde612692ab3676b156b8bd7e0966706"
+        },
+        "expected": {
+          "kind": "unregistered_rope_table",
+          "dtype": "torch.complex64",
+          "shape": [
+            9216,
+            28
+          ],
+          "stride": [
+            28,
+            1
+          ],
+          "sha256": "3015ce7f0237fbdd7a7488973b1a4a386016545c82df983713812edc05d46ee2"
+        }
+      },
+      {
+        "name": "pos_embed.freqs.2",
+        "actual": {
+          "kind": "unregistered_rope_table",
+          "dtype": "torch.complex64",
+          "shape": [
+            9216,
+            28
+          ],
+          "stride": [
+            28,
+            1
+          ],
+          "sha256": "659cf4eee5cb843e628bd458f69f91e3fde612692ab3676b156b8bd7e0966706"
+        },
+        "expected": {
+          "kind": "unregistered_rope_table",
+          "dtype": "torch.complex64",
+          "shape": [
+            9216,
+            28
+          ],
+          "stride": [
+            28,
+            1
+          ],
+          "sha256": "3015ce7f0237fbdd7a7488973b1a4a386016545c82df983713812edc05d46ee2"
+        }
+      },
+      {
+        "name": "time_text_embed.time_proj.freqs",
+        "actual": {
+          "kind": "buffer",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ],
+          "sha256": "b5c3f7dda95bc52035d318adbe28f7629426fd8d96ac447e237835678e945788"
+        },
+        "expected": {
+          "kind": "buffer",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ],
+          "sha256": "b0027ea79a908a68429763225ca6c1f7f988692cfd20a922185a0bb73bc3c1c6"
+        }
+      }
+    ]
+  },
+  "derived_table_variation_requires_output_replay": [
+    "pos_embed.freqs.1",
+    "pos_embed.freqs.2",
+    "time_text_embed.time_proj.freqs"
+  ],
+  "state_sha256": "4fe41982fa7836e6255d947797236fa12c2e032eab540be6f04de4d8a0ba1a1b",
+  "error": "RuntimeError: Independent-process reference replay exceeds tolerance."
+}

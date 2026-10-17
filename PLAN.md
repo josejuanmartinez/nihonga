@@ -10,7 +10,9 @@ error fails the historical 6.52% gate; the 30-prompt image screen was unblinded.
 The four-block cut (2-5) failed. Conditional importance scanning has not run.
 
 Published summaries are preserved under `data/published/2026-10-04`; original
-Phase 6/7 sources and checkpoints remain missing. See README.md and
+Phase 6/7 requests, embedded sources and experiment summaries have been recovered
+from Modal; 16 original local review/protocol artifacts remain missing. Selected
+large tensors are being restored outside Git. See README.md and
 `data/phase7/NEXT_EXPERIMENT.md` for recovery prerequisites and experiment order.
 This status distinguishes published findings from locally reproduced evidence.
 

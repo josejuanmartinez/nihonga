@@ -3,11 +3,15 @@
 Compression research for Qwen Image 2.1: 32 transformer blocks, approximately
 6.9 billion DiT parameters. Run notebooks from this repository root.
 
-The experiment archive is incomplete in this checkout. The original notebooks
-end during Phase 6. The published 4 October record is preserved byte for byte in
+The original notebooks end during Phase 6. Later Modal experiment records and
+embedded worker sources have now been recovered under `data/recovered/`.
+`phase6-7-recovered-continuation.ipynb` is an explicitly reconstructed notebook;
+the original later notebooks were not present in the archive.
+The published 4 October record is preserved byte for byte in
 `data/published/2026-10-04/results.json`; its source inventory is in
 `reconciliation.json` beside it. These are published summaries, not recovered
-training notebooks or independently verified experiment outputs.
+training notebooks. The reconciliation inventory distinguishes exact recovered
+source files from local-only review records still missing.
 
 The Phase 6 selected student removes original block 5, using a rank-256 pretrained
 bridge (5.518% pilot validation velocity error). Full-weight healing was tested
@@ -30,9 +34,9 @@ To audit a local copy of the published evidence without GPU calls:
 python tools/reconcile_record.py --site D:\niwaki-page\nihonga
 ```
 
-On 17 October 2026 the configured Modal credentials authenticated, but exposed
-only environment `main`, with no volumes. The recorded results volume
-`nihonga-phase3-artifacts` was not found. Restore access to that archive and
-`nihonga-hf-cache`, including original requests, workers, replay packets and
-checkpoint hashes, before scheduling the next experiment. Do not regenerate
-missing historical artifacts and label them recovered.
+On 17 October 2026 the user supplied access to the old Modal account, exposing
+`nihonga-phase3-artifacts` and `nihonga-hf-cache`. Small records and embedded source
+code are preserved in Git; selected large tensors are downloaded into `.archive/`
+with SHA-256 ledgers. The inventories cover the full archive without requiring
+hundreds of GiB of superseded optimizer checkpoints. Do not regenerate missing
+historical artifacts and label them recovered. See `data/recovered/README.md`.

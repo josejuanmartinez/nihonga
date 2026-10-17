@@ -1,0 +1,47 @@
+{
+  "request_key": "c29c97701e0c483759318b04f1ff17ca2fcfd584bf62fbac8e7ace45c5f1b633",
+  "status": "failed",
+  "mode": "verify",
+  "teacher_calls": 0,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "controls": [],
+  "artifacts": [],
+  "process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "2350584044cb47adaf36b3fa893120e8",
+    "modal_task_id": "ta-01M3RKQ93S1BYB0VM8E74CTYPR"
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "cudnn_version": 92400,
+  "settings": {
+    "weights_dtype": "bfloat16",
+    "attention_backend": "SDPBackend.MATH",
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "bf16_reduced_precision_matmul_reduction": false,
+    "fp16_bf16_reduction_math_sdp": false,
+    "input_order": "original pipeline argument order; stage tensors copied inside inference mode",
+    "prefix_cache": "fresh teacher cache per prompt; populate at early; use at middle and late"
+  },
+  "reference_process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "613d8c36de054bdcb9d0684cc4e6f788",
+    "modal_task_id": "ta-01M3PAVXZV5XS0D0MHJ78F5TQR"
+  },
+  "error": "RuntimeError: Actual loaded teacher tensor state differs from audited reference."
+}

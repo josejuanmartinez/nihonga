@@ -1,0 +1,697 @@
+{
+  "request_key": "173d4a2d3ab854f15ae4c710e44b9e7afe122e429742f46d8fb7c72cce1880da",
+  "request": {
+    "version": "phase6-expanded-pretrained-bridge-validation-v1",
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "selected_candidate": {
+      "candidate_id": "single_bridge_block_05",
+      "removed_teacher_slots": [
+        5
+      ],
+      "teacher_blocks": 32,
+      "surviving_transformer_blocks": 31,
+      "bridge_count": 1,
+      "original_slot_count": 32,
+      "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_05_selected.pt",
+      "checkpoint_sha256": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+      "selected_update": 300,
+      "bridge_parameters": 2097152,
+      "surviving_hidden_alignment": [
+        {
+          "teacher_slot": 0,
+          "student_slot": 0
+        },
+        {
+          "teacher_slot": 1,
+          "student_slot": 1
+        },
+        {
+          "teacher_slot": 2,
+          "student_slot": 2
+        },
+        {
+          "teacher_slot": 3,
+          "student_slot": 3
+        },
+        {
+          "teacher_slot": 4,
+          "student_slot": 4
+        },
+        {
+          "teacher_slot": 6,
+          "student_slot": 6
+        },
+        {
+          "teacher_slot": 7,
+          "student_slot": 7
+        },
+        {
+          "teacher_slot": 8,
+          "student_slot": 8
+        },
+        {
+          "teacher_slot": 9,
+          "student_slot": 9
+        },
+        {
+          "teacher_slot": 10,
+          "student_slot": 10
+        },
+        {
+          "teacher_slot": 11,
+          "student_slot": 11
+        },
+        {
+          "teacher_slot": 12,
+          "student_slot": 12
+        },
+        {
+          "teacher_slot": 13,
+          "student_slot": 13
+        },
+        {
+          "teacher_slot": 14,
+          "student_slot": 14
+        },
+        {
+          "teacher_slot": 15,
+          "student_slot": 15
+        },
+        {
+          "teacher_slot": 16,
+          "student_slot": 16
+        },
+        {
+          "teacher_slot": 17,
+          "student_slot": 17
+        },
+        {
+          "teacher_slot": 18,
+          "student_slot": 18
+        },
+        {
+          "teacher_slot": 19,
+          "student_slot": 19
+        },
+        {
+          "teacher_slot": 20,
+          "student_slot": 20
+        },
+        {
+          "teacher_slot": 21,
+          "student_slot": 21
+        },
+        {
+          "teacher_slot": 22,
+          "student_slot": 22
+        },
+        {
+          "teacher_slot": 23,
+          "student_slot": 23
+        },
+        {
+          "teacher_slot": 24,
+          "student_slot": 24
+        },
+        {
+          "teacher_slot": 25,
+          "student_slot": 25
+        },
+        {
+          "teacher_slot": 26,
+          "student_slot": 26
+        },
+        {
+          "teacher_slot": 27,
+          "student_slot": 27
+        },
+        {
+          "teacher_slot": 28,
+          "student_slot": 28
+        },
+        {
+          "teacher_slot": 29,
+          "student_slot": 29
+        },
+        {
+          "teacher_slot": 30,
+          "student_slot": 30
+        },
+        {
+          "teacher_slot": 31,
+          "student_slot": 31
+        }
+      ],
+      "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+    },
+    "fit_key": "7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618",
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "wrapper_source": "\"\"\"Qwen-Image 2.1 block contract for an unconditioned tokenwise bridge.\"\"\"\nfrom types import SimpleNamespace\nfrom torch import nn\n\n\nclass QwenImage21BridgeBlock(nn.Module):\n    def __init__(self, bridge, processor):\n        super().__init__()\n        self.bridge = bridge\n        # Parent forward inspects this processor to choose mask construction.\n        # This contains no attention projections and performs no attention.\n        self.attn = SimpleNamespace(processor=processor)\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        if kv_cache_mode not in (None, 'extract', 'cached'):\n            raise ValueError('Unknown KV cache mode.')\n        # No K/V is required in this slot. Subsequent surviving blocks build\n        # their own prefix K/V from the transformed prefix during extraction.\n        return self.bridge(hidden_states)\n\n\ndef insert_bridge(transformer, layer, bridge, cache_class):\n    \"\"\"Replace one slot; caller must discard all prior caches and use returned cache.\"\"\"\n    if not 0 <= layer < len(transformer.transformer_blocks):\n        raise IndexError('Bridge slot is outside transformer depth.')\n    if bridge.down.in_features != transformer.config.num_attention_heads * transformer.config.attention_head_dim:\n        raise ValueError('Bridge width differs from transformer width.')\n    old = transformer.transformer_blocks[layer]\n    reference = next(transformer.parameters())\n    bridge = bridge.to(device=reference.device, dtype=reference.dtype)\n    wrapper = QwenImage21BridgeBlock(bridge, old.attn.processor)\n    wrapper.train(transformer.training)\n    transformer.transformer_blocks[layer] = wrapper\n    return old, cache_class(len(transformer.transformer_blocks))\n",
+    "components_source": "\"\"\"FP32 master adapters and functional prefix-cache checkpointing for the pilot.\"\"\"\nimport torch\nfrom torch import nn\nfrom torch.nn import functional as F\nfrom torch.utils.checkpoint import checkpoint\n\n\nclass MasterBridge(nn.Module):\n    def __init__(self, width=4096, rank=256):\n        super().__init__()\n        self.down = nn.Linear(width, rank, bias=False, dtype=torch.float32)\n        self.up = nn.Linear(rank, width, bias=False, dtype=torch.float32)\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        dtype = hidden_states.dtype\n        residual = F.linear(hidden_states, self.down.weight.to(dtype))\n        residual = F.gelu(residual)\n        residual = F.linear(residual, self.up.weight.to(dtype))\n        return hidden_states + residual\n\n\nclass MasterLoRALinear(nn.Module):\n    def __init__(self, base, rank=8, alpha=8):\n        super().__init__()\n        self.base = base.requires_grad_(False)\n        self.down = nn.Linear(base.in_features, rank, bias=False,\n                              device=base.weight.device, dtype=torch.float32)\n        self.up = nn.Linear(rank, base.out_features, bias=False,\n                            device=base.weight.device, dtype=torch.float32)\n        nn.init.zeros_(self.up.weight)\n        self.scale = alpha / rank\n\n    def forward(self, value):\n        delta = F.linear(value, self.down.weight.to(value.dtype))\n        delta = F.linear(delta, self.up.weight.to(value.dtype))\n        return self.base(value) + delta * self.scale\n\n\nclass FunctionalCheckpointBlock(nn.Module):\n    \"\"\"Return prefix K/V as checkpoint outputs; snapshot cached K/V as inputs.\n\n    Recomputations receive a private cache. They cannot mutate the cache used\n    by another stage, and prefix gradients remain connected to its extraction.\n    \"\"\"\n    def __init__(self, inner, cache_layer_class):\n        super().__init__()\n        self.inner = inner\n        self.cache_layer_class = cache_layer_class\n\n    @property\n    def attn(self):\n        return self.inner.attn\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        common = dict(attention_mask=attention_mask,\n                      target_token_mask=target_token_mask,\n                      kv_cache_mode=kv_cache_mode,\n                      cache_write_slice=cache_write_slice,\n                      segments=segments, key_valid=key_valid)\n        if not torch.is_grad_enabled():\n            return self.inner(hidden_states, modulation, rotary_emb=rotary_emb,\n                              layer_cache=layer_cache, **common)\n\n        if kv_cache_mode == 'extract':\n            def extract(h, m, r):\n                private = self.cache_layer_class()\n                output = self.inner(h, m, rotary_emb=r, layer_cache=private, **common)\n                k, v = private.get()\n                return output, k, v\n            output, k, v = checkpoint(extract, hidden_states, modulation,\n                                      rotary_emb, use_reentrant=False)\n            layer_cache.store(k, v)\n            return output\n\n        if kv_cache_mode == 'cached':\n            prefix_k, prefix_v = layer_cache.get()\n            def cached(h, m, r, k, v):\n                private = self.cache_layer_class()\n                private.store(k, v)\n                return self.inner(h, m, rotary_emb=r, layer_cache=private, **common)\n            return checkpoint(cached, hidden_states, modulation, rotary_emb,\n                              prefix_k, prefix_v, use_reentrant=False)\n\n        def uncached(h, m, r):\n            return self.inner(h, m, rotary_emb=r, layer_cache=None, **common)\n        return checkpoint(uncached, hidden_states, modulation, rotary_emb,\n                          use_reentrant=False)\n\n\ndef attach_adapters(model, bridge_weights, insert_bridge, cache_class,\n                    cache_layer_class, rank=8, alpha=8):\n    bridge = MasterBridge()\n    bridge.load_state_dict(bridge_weights)\n    removed, _ = insert_bridge(model, 5, bridge, cache_class)\n    # insert_bridge matches inference dtype; restore FP32 optimizer masters.\n    # Reload the original FP32 checkpoint after the temporary BF16 conversion.\n    bridge.float()\n    bridge.load_state_dict(bridge_weights)\n    del removed\n    adapters = []\n    for slot, block in enumerate(model.transformer_blocks):\n        if slot == 5:\n            continue\n        for name in ('to_q', 'to_k', 'to_v'):\n            setattr(block.attn, name, MasterLoRALinear(getattr(block.attn, name), rank, alpha))\n            adapters.append(f'transformer_blocks.{slot}.attn.{name}')\n        block.attn.to_out[0] = MasterLoRALinear(block.attn.to_out[0], rank, alpha)\n        adapters.append(f'transformer_blocks.{slot}.attn.to_out.0')\n        model.transformer_blocks[slot] = FunctionalCheckpointBlock(block, cache_layer_class)\n    model.eval()\n    model.gradient_checkpointing = False\n    trainable = {name: param for name, param in model.named_parameters() if param.requires_grad}\n    return trainable, adapters\n",
+    "worker_source": "def evaluate_expanded(request, key):\n    \"\"\"Replay a pretrained single-bridge student on durable teacher captures.\"\"\"\n    import hashlib\n    import inspect\n    import json\n    import math\n    from pathlib import Path\n\n    import torch\n    from torch.nn.attention import sdpa_kernel, SDPBackend\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache\n\n    directory = Path('/phase3/phase6/expanded_validation') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    manifest = {'request_key': key, 'request': request}\n    manifest_path = directory / 'request.json'\n    if manifest_path.exists():\n        if json.loads(manifest_path.read_text()) != manifest:\n            raise RuntimeError('Existing evaluation request differs.')\n    else:\n        manifest_path.write_text(json.dumps(manifest, indent=2) + '\\n')\n        results_volume.commit()\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(8 * 1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def gpu(value):\n        if isinstance(value, torch.Tensor):\n            return value.to('cuda')\n        if isinstance(value, dict):\n            return {k: gpu(v) for k, v in value.items()}\n        if isinstance(value, (list, tuple)):\n            return type(value)(gpu(v) for v in value)\n        return value\n\n    report = {'request_key': key, 'status': 'running', 'records': [],\n              'optimizer_updates': 0, 'teacher_capture_count': len(request['new_tasks']),\n              'student_forwards': 0}\n    progress_path = directory / 'progress.json'\n    try:\n        if torch.cuda.get_device_name(0).find('H100') < 0:\n            raise RuntimeError('Expected H100 GPU.')\n        torch.use_deterministic_algorithms(True)\n        torch.set_float32_matmul_precision('highest')\n        torch.backends.cuda.matmul.allow_tf32 = False\n        torch.backends.cudnn.allow_tf32 = False\n        torch.backends.cudnn.benchmark = False\n        torch.backends.cudnn.deterministic = True\n        torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = False\n        torch.backends.cuda.allow_fp16_bf16_reduction_math_sdp(False)\n        teacher = request['teacher']\n        pipe = QwenImage21Pipeline.from_pretrained(\n            teacher['model_repo'], revision=teacher['model_revision'],\n            dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        model = pipe.transformer.eval()\n        if digest(Path(inspect.getfile(type(model)))) != request['transformer_source_sha256']:\n            raise RuntimeError('Transformer source differs.')\n        config_path = (Path('/root/.cache/huggingface/hub') /\n                       ('models--' + teacher['model_repo'].replace('/', '--')) /\n                       'snapshots' / teacher['model_revision'] / 'transformer/config.json')\n        if digest(config_path) != teacher['config_sha256'] or len(model.transformer_blocks) != 32:\n            raise RuntimeError('Teacher configuration differs.')\n        namespace = {}\n        exec(compile(request['wrapper_source'], 'bridge_block_definition.py', 'exec'), namespace)\n        exec(compile(request['components_source'], 'healing_components.py', 'exec'), namespace)\n        selected = request['selected_candidate']\n        bridge_path = (Path('/phase3/phase5/fitting') / request['fit_key'] /\n                       Path(selected['checkpoint_path']).name)\n        if digest(bridge_path) != selected['checkpoint_sha256']:\n            raise RuntimeError('Selected pretrained bridge differs.')\n        checkpoint = torch.load(bridge_path, map_location='cpu', weights_only=True)\n        if (checkpoint['request_key'] != request['fit_key'] or checkpoint['layer'] != 5 or\n                checkpoint['step'] != selected['selected_update']):\n            raise RuntimeError('Bridge checkpoint provenance differs.')\n        bridge = namespace['MasterBridge']().to('cuda')\n        bridge.load_state_dict(checkpoint['state_dict'])\n        removed, _ = namespace['insert_bridge'](model, 5, bridge, QwenImage21KVCache)\n        bridge.float()\n        bridge.load_state_dict(checkpoint['state_dict'])\n        del removed, checkpoint\n        model.requires_grad_(False)\n        fields = ('hidden_states', 'timestep', 'encoder_hidden_states',\n                  'encoder_hidden_states_mask', 'img_shapes', 'img_mask',\n                  'attention_kwargs', 'kv_cache_mode', 'return_dict')\n\n        for task in request['controls'] + request['new_tasks']:\n            capture = task['capture']\n            path = Path('/phase3/phase5/capture') / capture['request_key'] / 'targets.pt'\n            summary_path = path.with_name('summary.json')\n            summary = json.loads(summary_path.read_text())\n            if summary['status'] != 'passed' or digest(path) != summary['tensor_sha256']:\n                raise RuntimeError('Teacher capture or checksum differs: ' + capture['request_key'])\n            bundle = torch.load(path, map_location='cpu', weights_only=True)\n            if bundle['request_key'] != capture['request_key'] or bundle['row']['source_id'] != task['source_id']:\n                raise RuntimeError('Teacher capture provenance differs.')\n            if len(bundle['stages']) != 3 or any(\n                    c['relative_l2_error'] > 0.001 for c in bundle['replay_controls']):\n                raise RuntimeError('Teacher replay controls failed.')\n            cache = QwenImage21KVCache(32)\n            with torch.inference_mode(), model.cache_context('cond'), sdpa_kernel([SDPBackend.MATH]):\n                for stage in bundle['stages']:\n                    full = {**bundle['shared_transformer_kwargs'], **stage['kwargs']}\n                    kwargs = gpu({field: full[field] for field in fields})\n                    kwargs['kv_cache'] = cache\n                    output = model(**kwargs)[0][:, -stage['target_image_tokens']:].float()\n                    target = stage['teacher_velocity'].to('cuda').float()\n                    difference = output - target\n                    relative = float(difference.norm() / target.norm().clamp_min(1e-12))\n                    if not math.isfinite(relative):\n                        raise RuntimeError('Nonfinite student error.')\n                    report['records'].append({\n                        'source_id': task['source_id'], 'dimension': task['dimension'],\n                        'stage': stage['stage'], 'set': task['set'],\n                        'relative_l2_error': relative,\n                        'teacher_rms': float(target.square().mean().sqrt()),\n                        'student_rms': float(output.square().mean().sqrt()),\n                        'difference_rms': float(difference.square().mean().sqrt()),\n                    })\n                    report['student_forwards'] += 1\n            progress_path.write_text(json.dumps(report, indent=2) + '\\n')\n            results_volume.commit()\n            print('Evaluated', task['set'], task['source_id'], flush=True)\n\n        controls = [r for r in report['records'] if r['set'] == 'control']\n        fresh = [r for r in report['records'] if r['set'] == 'new_validation']\n        if len(controls) != 30 or len(fresh) != 150:\n            raise RuntimeError('Evaluation count differs.')\n        control_mean = sum(r['relative_l2_error'] for r in controls) / len(controls)\n        if abs(control_mean - request['expected_control_mean']) > 0.001:\n            raise RuntimeError('Original 10-prompt control mean differs.')\n        report['control_mean_relative_l2'] = control_mean\n        report['new_mean_relative_l2'] = sum(r['relative_l2_error'] for r in fresh) / len(fresh)\n        report['by_stage'] = [\n            {'stage': stage, 'mean_relative_l2': sum(r['relative_l2_error'] for r in subset)/len(subset),\n             'prompts': len(subset)}\n            for stage in ('early', 'middle', 'late')\n            for subset in [[r for r in fresh if r['stage'] == stage]]\n        ]\n        report['by_dimension'] = [\n            {'dimension': dimension,\n             'mean_relative_l2': sum(r['relative_l2_error'] for r in subset)/len(subset),\n             'comparisons': len(subset)}\n            for dimension in request['dimensions']\n            for subset in [[r for r in fresh if r['dimension'] == dimension]]\n        ]\n        report['status'] = 'passed'\n    except Exception as exc:\n        report['status'] = 'failed'\n        report['error'] = type(exc).__name__ + ': ' + str(exc)\n    report_path.write_text(json.dumps(report, indent=2) + '\\n')\n    results_volume.commit()\n    return report\n",
+    "capture_worker_sha256": "0f4925602ed1042e0ac4778ca42c69654a078c9b5cf64713da067b77c372ac7c",
+    "validation_source_sha256": "eb6b0366b9bf217400fb2e806c099356dde33484346ae7ce66cf841cf3fc8823",
+    "batch_key": "1631bd9c60ef7b30935cabf3f3002c6836b9ed299b64855ef26d49c0fd8f851c",
+    "controls": [
+      {
+        "source_id": "p1-4a84d737d801",
+        "dimension": "alignment",
+        "set": "control",
+        "capture": {
+          "request_key": "5e1e03061e0f2d30a8124153973bce281b539df12a3034bd7dcab7636fe0bcfb"
+        }
+      },
+      {
+        "source_id": "p1-5c3d279f55b0",
+        "dimension": "alignment",
+        "set": "control",
+        "capture": {
+          "request_key": "f8a8ced6aedf372e42f96fab3e246cac3ce30f11056447d9f866af72b62c062d"
+        }
+      },
+      {
+        "source_id": "p1-df869d4d578d",
+        "dimension": "visual_quality",
+        "set": "control",
+        "capture": {
+          "request_key": "c497528b82b1a96a1f80a82f57637365a6b96fcb38994a72cf97d35aaa95fd04"
+        }
+      },
+      {
+        "source_id": "p1-36fe86287034",
+        "dimension": "visual_quality",
+        "set": "control",
+        "capture": {
+          "request_key": "98e8ea6832d058ae2472d2c7c5101a3dbf3c5822d2ddfe3dff7dac529aa04a61"
+        }
+      },
+      {
+        "source_id": "p1-a6227b574def",
+        "dimension": "aesthetics",
+        "set": "control",
+        "capture": {
+          "request_key": "945f11d70a8af0d8b024ed7fa620875f23829bcc2f1abdba7f840f2ffd6cf7aa"
+        }
+      },
+      {
+        "source_id": "p1-8d56f0bbd4df",
+        "dimension": "aesthetics",
+        "set": "control",
+        "capture": {
+          "request_key": "904e27969f6053342998a969e8479467c7f5d9aa927c857d43ebbb6c353e52a9"
+        }
+      },
+      {
+        "source_id": "p1-b5d1aaa3235d",
+        "dimension": "real_world",
+        "set": "control",
+        "capture": {
+          "request_key": "75b65369af2d7ff02af4c6edb0170c00cde328d86263cf191744aaf5752ac4cf"
+        }
+      },
+      {
+        "source_id": "p1-79652b776ffc",
+        "dimension": "real_world",
+        "set": "control",
+        "capture": {
+          "request_key": "fe01005662ed77c4d1cac54628c2b6af53f7c5d3f7fb78d857d77fe056b0cf25"
+        }
+      },
+      {
+        "source_id": "p1-17fb78d1c4bf",
+        "dimension": "creative",
+        "set": "control",
+        "capture": {
+          "request_key": "056cc4878e4583d2b53d250954f7f6bb7e90cd1fc9da2b07179e225284880314"
+        }
+      },
+      {
+        "source_id": "p1-81fc1d548f81",
+        "dimension": "creative",
+        "set": "control",
+        "capture": {
+          "request_key": "25265886ff2427ac189912dc4626818d452aad3b587ddfe72ac303c82fe05ccf"
+        }
+      }
+    ],
+    "new_tasks": [
+      {
+        "source_id": "p1-04dd70c5760f",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "b81c4f482f9b2c185aaa3718278582e86e724b1840f5c01d66027a1445718393"
+        }
+      },
+      {
+        "source_id": "p1-1461526cb2e1",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "11b2407d88af37f660c27162a838599627c451ef6be93933b89f8fa3d0efbc86"
+        }
+      },
+      {
+        "source_id": "p1-226c607da31a",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "30f7a2d9fe89086ad78db1f36617a77c2ad2e47d5490512c4304d426431e7213"
+        }
+      },
+      {
+        "source_id": "p1-cabc84946a83",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "66b82c6cd1b80f0529cc1b5ddd4dd94a914d7166d55ac6498515a9315a966ea3"
+        }
+      },
+      {
+        "source_id": "p1-c92b61795d65",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "cb573d59a5efe676a87b8329668bc3b5492216a76d2ae553bff60bdff1999673"
+        }
+      },
+      {
+        "source_id": "p1-b2cd7963832b",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "b29968101bd91ca02cb1a1295367ea809b4aaf96ff8aa210ea35559fed2d929e"
+        }
+      },
+      {
+        "source_id": "p1-96108c459bb6",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "386e828886ece8c88000c1d0dad144e6eea6e67d37628d990279197959085e7d"
+        }
+      },
+      {
+        "source_id": "p1-1984c1c3e761",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "99d8c65a89bee8bd9cc5dd5e6f2fe796e98f7a58ecea2d4467faa51ca67691b6"
+        }
+      },
+      {
+        "source_id": "p1-58419d384824",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "f506eb5bb6afad22b319ac08740ead55e928aeefe728d538ed2963411b0c8122"
+        }
+      },
+      {
+        "source_id": "p1-a10353f56573",
+        "dimension": "alignment",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "d1a5a9d1eb5fcff5cf55345f37859710729619ae0d5271f9e99d33ba12ac6df7"
+        }
+      },
+      {
+        "source_id": "p1-ad4f062f00ce",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "e90e8e8ebe2b1d58e908b18b704e1e586ef8c75ee02565724cc64502f4848ab6"
+        }
+      },
+      {
+        "source_id": "p1-06e87c218dc9",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "77b77e19ab544756f187f08c9b026993f1ea88ed6958f2dda3d3ad02100b3f62"
+        }
+      },
+      {
+        "source_id": "p1-271ab2e64bc6",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "58b79742764c18ef7e97f76316db7bdfac252d34d6aa1d84ac38b6f31c75b22a"
+        }
+      },
+      {
+        "source_id": "p1-fcecfd532ff3",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "68c8b4f8fa022c5121135a3cf33327516abef9177dadf240d57fade07baf61cd"
+        }
+      },
+      {
+        "source_id": "p1-056df011a834",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "6a49e8e0cccf04cf9468940d5b4cdb3f8655ee0e73c3b5ccfd8a1c4602ebbb86"
+        }
+      },
+      {
+        "source_id": "p1-883e7c056f3c",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "aba260b44ed2aa7f738faf74e020166bd6df3e958945c47e341a523228a2825d"
+        }
+      },
+      {
+        "source_id": "p1-403f405d7727",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "78af46fa84b33e316ff73d35e3e7c4d6b4550377f5a7f2e7961a38caeb054d2e"
+        }
+      },
+      {
+        "source_id": "p1-ac57f1ae0a8c",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "ff4b28647357fcd0973bffbc52ddd25325a524c6795ef4f130b2e6f2cf12b1a3"
+        }
+      },
+      {
+        "source_id": "p1-2b6a0d317790",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "35e798b0c4b52688314b30336f934b92ee2ce4cb940c45996465b1344a3c6c0f"
+        }
+      },
+      {
+        "source_id": "p1-d2c7ab2a53d3",
+        "dimension": "visual_quality",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "bd9c8d3b07b12265e3c45cf8778803bd12e6d3613bf49538e8bbf8dffbc6bed6"
+        }
+      },
+      {
+        "source_id": "p1-edabf134dd58",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "4a59ffc47ffc725f1c19911e5078814a1b8da62c5f034615b48d294b0e04f8da"
+        }
+      },
+      {
+        "source_id": "p1-71c9b74b1792",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "02dcbe1a8cae9321ba7b73dfa1d08f8fe71a3ef723b04b40a3d6ce5625f850cc"
+        }
+      },
+      {
+        "source_id": "p1-888027c4ef34",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "040f3d537b2e2f4d7aa5932e914c1265d7d284409d76c3af9a6658fe5c15cce5"
+        }
+      },
+      {
+        "source_id": "p1-9930c8a8bf41",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "d9c46ac306ee6aa28b21b6b41f96cca9e5d981bbfe48605763130f13b0a02bab"
+        }
+      },
+      {
+        "source_id": "p1-72f6476062c2",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "170134f0e84d20e4ce551059af6f8286f9891fb700b0e935af260422a0ec1d8b"
+        }
+      },
+      {
+        "source_id": "p1-e870fd58694d",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "5811c0bcff986cbe3d527b2a13c47ca8e770f4a3bff095561401009a8387cc43"
+        }
+      },
+      {
+        "source_id": "p1-2b88b1fee46d",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "5dcff3a3b12ccf567ff1c6f47fdb93b4b3cadd7cf2b32a70470299b83de987b1"
+        }
+      },
+      {
+        "source_id": "p1-48a4b5aa8377",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "1adf1a104f43335e346ef8ee070e2511cd1f55586b4b4b95f0c3c3ecf4e8ae13"
+        }
+      },
+      {
+        "source_id": "p1-a483b1a96e16",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "96b614c36ab647b7b29c541cbe2b88b991412817cf572976ed488b70d4ad1709"
+        }
+      },
+      {
+        "source_id": "p1-93b1d5401c5b",
+        "dimension": "aesthetics",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "c41452807c73432f37060361eb01b62c68e5f307b5183b47cdcb21c92b654b7c"
+        }
+      },
+      {
+        "source_id": "p1-7f1939b2c5e7",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "abd300cfa0e0b68d4f1779691adfff05214cc39a376e09a50ad2ba704502f6e4"
+        }
+      },
+      {
+        "source_id": "p1-b3fb8e8187c3",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "aceaca579e49c9ec35102b31bb35de0d4c94cc8a734ac5551b951d6c3a3ff44a"
+        }
+      },
+      {
+        "source_id": "p1-7745c2b6fa92",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "4e4d7ed6f416cdfe1bf24ab0eaf12e6777113fa4d1f36f173e7663ee2230fcbf"
+        }
+      },
+      {
+        "source_id": "p1-3f13990fe1fe",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "4bfdbac6f6e4ab15eb4758e6339e38eb38bc7b2ccc3e1d8cecb756888ca00263"
+        }
+      },
+      {
+        "source_id": "p1-cac178cb0c00",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "512da38fb01db615d16cd585f2f042009fdadbb7c87152e48774f87c74401535"
+        }
+      },
+      {
+        "source_id": "p1-cc8610175236",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "c2ea0aa2cfe134ee02335223a8c62e5e3c9d76ba13f8300efc911d070dfd11ae"
+        }
+      },
+      {
+        "source_id": "p1-cdcabba6d592",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "c35e8e00921386676964ffaf1232d4dd96dc8dc749dcce255191e9b03af8dabe"
+        }
+      },
+      {
+        "source_id": "p1-84fbe95d634f",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "958ae2b27fff1108a1f00b420759f243a03aa8204fc6a11197f3ebdba7176efb"
+        }
+      },
+      {
+        "source_id": "p1-2a14a9aebaa7",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "8884e26066bb106b4e900331af3d32e9a0e731c5be3c4bdb56ca8fdf97e3828e"
+        }
+      },
+      {
+        "source_id": "p1-0871910b1774",
+        "dimension": "real_world",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "de2c37239a3006fca8135c20ccfc7b8c56c0fc59baf46df33fb391d5fffd0158"
+        }
+      },
+      {
+        "source_id": "p1-41d2c4d8a3c5",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "0ffc57b011322996b9b367e7cd16df306139c63e643db2b106724839589a7884"
+        }
+      },
+      {
+        "source_id": "p1-a0e8be3902b4",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "f76a80623afd45f313ba62c2d890784cadef5ac36c18e99aa39294b3a814ab1c"
+        }
+      },
+      {
+        "source_id": "p1-ae1d748b3f08",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "3ccf41c4a4b762870e79d7daa1fe98ba11b40305816e559d8f4c6034342144a3"
+        }
+      },
+      {
+        "source_id": "p1-36ff4b1a54bf",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "59d6d188ecb99c615031759888e7b16774cf79c974dc749a66f7cf48eeb1c442"
+        }
+      },
+      {
+        "source_id": "p1-cc415b67db6a",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "2132e2748fe298639f9cdda1665e98d657f4a593672a7c630965151890d8f39c"
+        }
+      },
+      {
+        "source_id": "p1-351eb248a104",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "b9263f15fab5ea40a1f9bb82158d778e550952267200cbb6ffbc99f7808b4706"
+        }
+      },
+      {
+        "source_id": "p1-c70f1f321ce0",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "32d164183c4295bcff9a5d4e64a8275465f922c309fd7652ab634b057b30b75f"
+        }
+      },
+      {
+        "source_id": "p1-b1a16352de21",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "9655e4155f8fc169abbb1e834c45e90cc721e921f6a0d5b4455777be39d9c3ba"
+        }
+      },
+      {
+        "source_id": "p1-e2759953da6a",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "e466e7d9df9428bcd1f992d621c86dfc6c745a3f293f14661879af61d41bed89"
+        }
+      },
+      {
+        "source_id": "p1-9a0b638ea7a9",
+        "dimension": "creative",
+        "set": "new_validation",
+        "capture": {
+          "request_key": "65620b5d5bf727e0810159f23aec86686a6d5ab11085a4b2721e7b3019f18cf6"
+        }
+      }
+    ],
+    "dimensions": [
+      "alignment",
+      "visual_quality",
+      "aesthetics",
+      "real_world",
+      "creative"
+    ],
+    "expected_control_mean": 0.055178944828609626,
+    "selection": "50 additional, previously unused validation prompts; 10 per dimension by fixed SHA-256 rank",
+    "scope": "selected pretrained bridge only; no training and no checkpoint selection"
+  }
+}

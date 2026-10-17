@@ -1,0 +1,103 @@
+{
+  "request": {
+    "version": "phase3-modal-preflight-v1",
+    "model_repo": "Qwen/Qwen-Image-2.1",
+    "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+    "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+    "num_layers": 32,
+    "packages": [
+      "torch==2.14.0",
+      "torchvision==0.29.0",
+      "transformers==5.17.0",
+      "accelerate==1.15.0",
+      "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+      "pillow"
+    ],
+    "python_version": "3.13",
+    "gpu_requested": "H100!",
+    "weights_volume": "nihonga-hf-cache",
+    "results_volume": "nihonga-phase3-artifacts"
+  },
+  "request_key": "408c29fa7c81231f03ed8c1d1dcd0081084308fd49da08445538a3651e84cc96",
+  "recorded_utc": "2026-09-28T13:19:27.371229+00:00",
+  "python": "3.13.3",
+  "cuda": "13.0",
+  "packages": {
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "transformers": "5.17.0",
+    "diffusers": "0.41.0.dev0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "gpu": {
+    "name": "NVIDIA H100 80GB HBM3",
+    "total_bytes": 85017624576,
+    "compute_capability": [
+      9,
+      0
+    ],
+    "bf16_supported": true
+  },
+  "weights": {
+    "transformer": {
+      "indexes": [
+        "diffusion_pytorch_model.safetensors.index.json"
+      ],
+      "files": [
+        {
+          "name": "diffusion_pytorch_model-00001-of-00002.safetensors",
+          "present": true,
+          "bytes": 9968332504
+        },
+        {
+          "name": "diffusion_pytorch_model-00002-of-00002.safetensors",
+          "present": true,
+          "bytes": 4261951904
+        }
+      ],
+      "total_bytes": 14230284408
+    },
+    "text_encoder": {
+      "indexes": [
+        "model.safetensors.index.json"
+      ],
+      "files": [
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "present": true,
+          "bytes": 4998056552
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "present": true,
+          "bytes": 4915962464
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "present": true,
+          "bytes": 4915962496
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "present": true,
+          "bytes": 2704357976
+        }
+      ],
+      "total_bytes": 17534339488
+    },
+    "vae": {
+      "indexes": [],
+      "files": [
+        {
+          "name": "diffusion_pytorch_model.safetensors",
+          "present": true,
+          "bytes": 1350989512
+        }
+      ],
+      "total_bytes": 1350989512
+    }
+  },
+  "status": "passed",
+  "errors": []
+}

@@ -1,0 +1,42 @@
+{
+  "request_key": "5570ead16061e5e61d0cf1c87328f56fbc5f1dc5c9122e32661850c831b05ba4",
+  "job": {
+    "row": {
+      "eval_id": "internal-p1-425ec4e55730",
+      "set": "internal",
+      "source_id": "p1-425ec4e55730",
+      "prompt": "A movie still of an electric kettle on a white background.",
+      "language": "en",
+      "seed": 1113507045,
+      "aspect_ratio": "3:4",
+      "width": 896,
+      "height": 1184,
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "dimension": "real_world",
+      "subdimension": "everyday_objects",
+      "facet": "product",
+      "difficulty": 1,
+      "style": "cinematic",
+      "prompt_format": "natural",
+      "hard": false,
+      "keywords": []
+    },
+    "layer": 4
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-28T17:11:26.608257+00:00",
+  "bypass_calls": 40,
+  "image_sha256": "269ad5c756cdbff1644bf4972981099690e308892c4c6334d7080f95686624df",
+  "teacher_image_sha256": "06689bdd9e8009daa3d17d7e67dfd21e72390df35f2626fe3251808fab6b82f3",
+  "image_size": [
+    896,
+    1184
+  ],
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "generation_seconds": 7.732690645999995,
+  "peak_allocated_gib": 36.91466522216797,
+  "peak_reserved_gib": 41.103515625,
+  "teacher_regenerated": false,
+  "scope": "own full trajectory; individual identity bypass"
+}

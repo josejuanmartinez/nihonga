@@ -1,0 +1,1855 @@
+{
+  "request_key": "e86829746b699ac752013266dd84a163f842773eb95069b63b27b726dab93f6e",
+  "status": "passed",
+  "records": [
+    {
+      "source_id": "p1-4a84d737d801",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.09745027869939804,
+      "teacher_rms": 2.1074697971343994,
+      "student_rms": 2.175189256668091,
+      "difference_rms": 0.20537352561950684
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.011405537836253643,
+      "teacher_rms": 1.6695502996444702,
+      "student_rms": 1.6706255674362183,
+      "difference_rms": 0.01904211938381195
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.05786314606666565,
+      "teacher_rms": 1.4939426183700562,
+      "student_rms": 1.494098424911499,
+      "difference_rms": 0.08644422143697739
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.1584772765636444,
+      "teacher_rms": 1.7158474922180176,
+      "student_rms": 1.87346613407135,
+      "difference_rms": 0.27192285656929016
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.01469329185783863,
+      "teacher_rms": 1.4497357606887817,
+      "student_rms": 1.4479258060455322,
+      "difference_rms": 0.02130139246582985
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.029471606016159058,
+      "teacher_rms": 1.1395584344863892,
+      "student_rms": 1.1407381296157837,
+      "difference_rms": 0.03358461707830429
+    },
+    {
+      "source_id": "p1-df869d4d578d",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.1028771847486496,
+      "teacher_rms": 1.6798394918441772,
+      "student_rms": 1.7059217691421509,
+      "difference_rms": 0.1728171557188034
+    },
+    {
+      "source_id": "p1-df869d4d578d",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.016705770045518875,
+      "teacher_rms": 1.4754232168197632,
+      "student_rms": 1.4746828079223633,
+      "difference_rms": 0.024648083373904228
+    },
+    {
+      "source_id": "p1-df869d4d578d",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.028786679729819298,
+      "teacher_rms": 1.1815755367279053,
+      "student_rms": 1.1844221353530884,
+      "difference_rms": 0.03401363268494606
+    },
+    {
+      "source_id": "p1-36fe86287034",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.06776947528123856,
+      "teacher_rms": 1.702674150466919,
+      "student_rms": 1.692180871963501,
+      "difference_rms": 0.11538932472467422
+    },
+    {
+      "source_id": "p1-36fe86287034",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.044301196932792664,
+      "teacher_rms": 1.3834292888641357,
+      "student_rms": 1.3841968774795532,
+      "difference_rms": 0.061287570744752884
+    },
+    {
+      "source_id": "p1-36fe86287034",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.04114152863621712,
+      "teacher_rms": 1.1492079496383667,
+      "student_rms": 1.1505955457687378,
+      "difference_rms": 0.04728017374873161
+    },
+    {
+      "source_id": "p1-a6227b574def",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.045988693833351135,
+      "teacher_rms": 1.642090916633606,
+      "student_rms": 1.645194172859192,
+      "difference_rms": 0.07551761716604233
+    },
+    {
+      "source_id": "p1-a6227b574def",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.02264605462551117,
+      "teacher_rms": 1.408483862876892,
+      "student_rms": 1.4081192016601562,
+      "difference_rms": 0.03189660236239433
+    },
+    {
+      "source_id": "p1-a6227b574def",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.0318044014275074,
+      "teacher_rms": 1.1036790609359741,
+      "student_rms": 1.106734275817871,
+      "difference_rms": 0.03510185331106186
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.1270173341035843,
+      "teacher_rms": 1.969789981842041,
+      "student_rms": 1.9617698192596436,
+      "difference_rms": 0.25019747018814087
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.019698455929756165,
+      "teacher_rms": 1.3974939584732056,
+      "student_rms": 1.3947279453277588,
+      "difference_rms": 0.027528472244739532
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.0439017191529274,
+      "teacher_rms": 1.115297555923462,
+      "student_rms": 1.1175583600997925,
+      "difference_rms": 0.048963479697704315
+    },
+    {
+      "source_id": "p1-b5d1aaa3235d",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.1314089447259903,
+      "teacher_rms": 1.4473519325256348,
+      "student_rms": 1.4522740840911865,
+      "difference_rms": 0.1901949942111969
+    },
+    {
+      "source_id": "p1-b5d1aaa3235d",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.03064318746328354,
+      "teacher_rms": 1.3862709999084473,
+      "student_rms": 1.3829364776611328,
+      "difference_rms": 0.04247976094484329
+    },
+    {
+      "source_id": "p1-b5d1aaa3235d",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.03381023555994034,
+      "teacher_rms": 1.119736671447754,
+      "student_rms": 1.122308611869812,
+      "difference_rms": 0.03785856068134308
+    },
+    {
+      "source_id": "p1-79652b776ffc",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.08175048977136612,
+      "teacher_rms": 1.5365537405014038,
+      "student_rms": 1.5281901359558105,
+      "difference_rms": 0.12561403214931488
+    },
+    {
+      "source_id": "p1-79652b776ffc",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.03372034430503845,
+      "teacher_rms": 1.322972059249878,
+      "student_rms": 1.3227059841156006,
+      "difference_rms": 0.04461107775568962
+    },
+    {
+      "source_id": "p1-79652b776ffc",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.03971477970480919,
+      "teacher_rms": 0.9935546517372131,
+      "student_rms": 0.994674563407898,
+      "difference_rms": 0.039458803832530975
+    },
+    {
+      "source_id": "p1-17fb78d1c4bf",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.07837951183319092,
+      "teacher_rms": 1.6297361850738525,
+      "student_rms": 1.6469554901123047,
+      "difference_rms": 0.12773792445659637
+    },
+    {
+      "source_id": "p1-17fb78d1c4bf",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.0337812602519989,
+      "teacher_rms": 1.3595154285430908,
+      "student_rms": 1.3582525253295898,
+      "difference_rms": 0.04592614248394966
+    },
+    {
+      "source_id": "p1-17fb78d1c4bf",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.0420985147356987,
+      "teacher_rms": 1.0560871362686157,
+      "student_rms": 1.0580326318740845,
+      "difference_rms": 0.04445970058441162
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "control",
+      "relative_l2_error": 0.14677532017230988,
+      "teacher_rms": 1.8644583225250244,
+      "student_rms": 1.9800721406936646,
+      "difference_rms": 0.2736564576625824
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "control",
+      "relative_l2_error": 0.028118498623371124,
+      "teacher_rms": 1.6138373613357544,
+      "student_rms": 1.6127620935440063,
+      "difference_rms": 0.045378684997558594
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "control",
+      "relative_l2_error": 0.05433908477425575,
+      "teacher_rms": 1.3649013042449951,
+      "student_rms": 1.3647979497909546,
+      "difference_rms": 0.07416749000549316
+    },
+    {
+      "source_id": "p1-04dd70c5760f",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.08595019578933716,
+      "teacher_rms": 1.7067642211914062,
+      "student_rms": 1.7015063762664795,
+      "difference_rms": 0.14669671654701233
+    },
+    {
+      "source_id": "p1-04dd70c5760f",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.026194114238023758,
+      "teacher_rms": 1.5158694982528687,
+      "student_rms": 1.5141794681549072,
+      "difference_rms": 0.03970685601234436
+    },
+    {
+      "source_id": "p1-04dd70c5760f",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.02736951783299446,
+      "teacher_rms": 1.2302559614181519,
+      "student_rms": 1.2314847707748413,
+      "difference_rms": 0.03367151319980621
+    },
+    {
+      "source_id": "p1-1461526cb2e1",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07656686007976532,
+      "teacher_rms": 1.9224252700805664,
+      "student_rms": 1.9608628749847412,
+      "difference_rms": 0.14719407260417938
+    },
+    {
+      "source_id": "p1-1461526cb2e1",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.023132583126425743,
+      "teacher_rms": 1.5685153007507324,
+      "student_rms": 1.5664007663726807,
+      "difference_rms": 0.03628380969166756
+    },
+    {
+      "source_id": "p1-1461526cb2e1",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.027797330170869827,
+      "teacher_rms": 1.2825814485549927,
+      "student_rms": 1.284413456916809,
+      "difference_rms": 0.035652339458465576
+    },
+    {
+      "source_id": "p1-226c607da31a",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09320804476737976,
+      "teacher_rms": 1.9812747240066528,
+      "student_rms": 1.9204081296920776,
+      "difference_rms": 0.18467073142528534
+    },
+    {
+      "source_id": "p1-226c607da31a",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.023662926629185677,
+      "teacher_rms": 1.5129109621047974,
+      "student_rms": 1.5138517618179321,
+      "difference_rms": 0.03579989820718765
+    },
+    {
+      "source_id": "p1-226c607da31a",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03702705726027489,
+      "teacher_rms": 1.2042261362075806,
+      "student_rms": 1.2043265104293823,
+      "difference_rms": 0.044588953256607056
+    },
+    {
+      "source_id": "p1-cabc84946a83",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07478017359972,
+      "teacher_rms": 1.4722999334335327,
+      "student_rms": 1.4802647829055786,
+      "difference_rms": 0.11009883880615234
+    },
+    {
+      "source_id": "p1-cabc84946a83",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03967517614364624,
+      "teacher_rms": 1.3392274379730225,
+      "student_rms": 1.3425863981246948,
+      "difference_rms": 0.05313408374786377
+    },
+    {
+      "source_id": "p1-cabc84946a83",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.033740270882844925,
+      "teacher_rms": 1.0089845657348633,
+      "student_rms": 1.0108956098556519,
+      "difference_rms": 0.03404341638088226
+    },
+    {
+      "source_id": "p1-c92b61795d65",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.18505769968032837,
+      "teacher_rms": 1.3595967292785645,
+      "student_rms": 1.3442411422729492,
+      "difference_rms": 0.2516038417816162
+    },
+    {
+      "source_id": "p1-c92b61795d65",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03692749887704849,
+      "teacher_rms": 1.3113545179367065,
+      "student_rms": 1.3088773488998413,
+      "difference_rms": 0.048425041139125824
+    },
+    {
+      "source_id": "p1-c92b61795d65",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.0356009267270565,
+      "teacher_rms": 0.9763168096542358,
+      "student_rms": 0.9786127805709839,
+      "difference_rms": 0.03475778177380562
+    },
+    {
+      "source_id": "p1-b2cd7963832b",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.15660393238067627,
+      "teacher_rms": 1.5333048105239868,
+      "student_rms": 1.6172064542770386,
+      "difference_rms": 0.24012158811092377
+    },
+    {
+      "source_id": "p1-b2cd7963832b",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.026830632239580154,
+      "teacher_rms": 1.3681542873382568,
+      "student_rms": 1.3651646375656128,
+      "difference_rms": 0.036708444356918335
+    },
+    {
+      "source_id": "p1-b2cd7963832b",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03252347186207771,
+      "teacher_rms": 1.062290906906128,
+      "student_rms": 1.0627045631408691,
+      "difference_rms": 0.03454938903450966
+    },
+    {
+      "source_id": "p1-96108c459bb6",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07938551157712936,
+      "teacher_rms": 2.0629944801330566,
+      "student_rms": 2.0555002689361572,
+      "difference_rms": 0.1637718826532364
+    },
+    {
+      "source_id": "p1-96108c459bb6",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.013444664888083935,
+      "teacher_rms": 1.6542474031448364,
+      "student_rms": 1.6546962261199951,
+      "difference_rms": 0.02224080264568329
+    },
+    {
+      "source_id": "p1-96108c459bb6",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03862014040350914,
+      "teacher_rms": 1.3954490423202515,
+      "student_rms": 1.400528907775879,
+      "difference_rms": 0.05389243736863136
+    },
+    {
+      "source_id": "p1-1984c1c3e761",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09745407104492188,
+      "teacher_rms": 1.6837824583053589,
+      "student_rms": 1.6725068092346191,
+      "difference_rms": 0.16409145295619965
+    },
+    {
+      "source_id": "p1-1984c1c3e761",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.023852793499827385,
+      "teacher_rms": 1.4504368305206299,
+      "student_rms": 1.4509726762771606,
+      "difference_rms": 0.03459697216749191
+    },
+    {
+      "source_id": "p1-1984c1c3e761",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03893302381038666,
+      "teacher_rms": 1.1723188161849976,
+      "student_rms": 1.174888253211975,
+      "difference_rms": 0.04564191401004791
+    },
+    {
+      "source_id": "p1-58419d384824",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.10193254798650742,
+      "teacher_rms": 1.7224533557891846,
+      "student_rms": 1.7297022342681885,
+      "difference_rms": 0.17557407915592194
+    },
+    {
+      "source_id": "p1-58419d384824",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03579698130488396,
+      "teacher_rms": 1.5414124727249146,
+      "student_rms": 1.5389801263809204,
+      "difference_rms": 0.05517791584134102
+    },
+    {
+      "source_id": "p1-58419d384824",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03897129371762276,
+      "teacher_rms": 1.2706900835037231,
+      "student_rms": 1.2727930545806885,
+      "difference_rms": 0.04952043667435646
+    },
+    {
+      "source_id": "p1-a10353f56573",
+      "dimension": "alignment",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.059517644345760345,
+      "teacher_rms": 1.5842055082321167,
+      "student_rms": 1.575784683227539,
+      "difference_rms": 0.0942881777882576
+    },
+    {
+      "source_id": "p1-a10353f56573",
+      "dimension": "alignment",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02337052673101425,
+      "teacher_rms": 1.494734287261963,
+      "student_rms": 1.4939059019088745,
+      "difference_rms": 0.03493272885680199
+    },
+    {
+      "source_id": "p1-a10353f56573",
+      "dimension": "alignment",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03259722888469696,
+      "teacher_rms": 1.2002428770065308,
+      "student_rms": 1.2018465995788574,
+      "difference_rms": 0.03912459313869476
+    },
+    {
+      "source_id": "p1-ad4f062f00ce",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.06753382086753845,
+      "teacher_rms": 1.8687353134155273,
+      "student_rms": 1.8955740928649902,
+      "difference_rms": 0.12620283663272858
+    },
+    {
+      "source_id": "p1-ad4f062f00ce",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.01947115734219551,
+      "teacher_rms": 1.382466197013855,
+      "student_rms": 1.380600094795227,
+      "difference_rms": 0.026918215677142143
+    },
+    {
+      "source_id": "p1-ad4f062f00ce",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03107815980911255,
+      "teacher_rms": 1.0653786659240723,
+      "student_rms": 1.066895842552185,
+      "difference_rms": 0.033110007643699646
+    },
+    {
+      "source_id": "p1-06e87c218dc9",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.12006057053804398,
+      "teacher_rms": 1.9317582845687866,
+      "student_rms": 1.9403070211410522,
+      "difference_rms": 0.2319279909133911
+    },
+    {
+      "source_id": "p1-06e87c218dc9",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.01542582642287016,
+      "teacher_rms": 1.571120262145996,
+      "student_rms": 1.568530797958374,
+      "difference_rms": 0.024235829710960388
+    },
+    {
+      "source_id": "p1-06e87c218dc9",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.028377167880535126,
+      "teacher_rms": 1.2875958681106567,
+      "student_rms": 1.290256142616272,
+      "difference_rms": 0.036538321524858475
+    },
+    {
+      "source_id": "p1-271ab2e64bc6",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.12973527610301971,
+      "teacher_rms": 1.673419713973999,
+      "student_rms": 1.6808521747589111,
+      "difference_rms": 0.2171015590429306
+    },
+    {
+      "source_id": "p1-271ab2e64bc6",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.020195327699184418,
+      "teacher_rms": 1.3922733068466187,
+      "student_rms": 1.3905013799667358,
+      "difference_rms": 0.02811741642653942
+    },
+    {
+      "source_id": "p1-271ab2e64bc6",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.034433212131261826,
+      "teacher_rms": 1.1057676076889038,
+      "student_rms": 1.1080840826034546,
+      "difference_rms": 0.03807513043284416
+    },
+    {
+      "source_id": "p1-fcecfd532ff3",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.05731191113591194,
+      "teacher_rms": 2.008282423019409,
+      "student_rms": 1.9930469989776611,
+      "difference_rms": 0.1150984913110733
+    },
+    {
+      "source_id": "p1-fcecfd532ff3",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.019120099022984505,
+      "teacher_rms": 1.6444042921066284,
+      "student_rms": 1.641772747039795,
+      "difference_rms": 0.03144117444753647
+    },
+    {
+      "source_id": "p1-fcecfd532ff3",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.027418622747063637,
+      "teacher_rms": 1.3676046133041382,
+      "student_rms": 1.369134783744812,
+      "difference_rms": 0.03749783709645271
+    },
+    {
+      "source_id": "p1-056df011a834",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07094961404800415,
+      "teacher_rms": 1.7486506700515747,
+      "student_rms": 1.7340060472488403,
+      "difference_rms": 0.12406609207391739
+    },
+    {
+      "source_id": "p1-056df011a834",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02725624106824398,
+      "teacher_rms": 1.3090176582336426,
+      "student_rms": 1.3074660301208496,
+      "difference_rms": 0.03567890077829361
+    },
+    {
+      "source_id": "p1-056df011a834",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.035725343972444534,
+      "teacher_rms": 0.9698621034622192,
+      "student_rms": 0.9726214408874512,
+      "difference_rms": 0.03464865684509277
+    },
+    {
+      "source_id": "p1-883e7c056f3c",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.06656263768672943,
+      "teacher_rms": 1.6622066497802734,
+      "student_rms": 1.6588507890701294,
+      "difference_rms": 0.11064086109399796
+    },
+    {
+      "source_id": "p1-883e7c056f3c",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03348778560757637,
+      "teacher_rms": 1.4968914985656738,
+      "student_rms": 1.4955343008041382,
+      "difference_rms": 0.050127580761909485
+    },
+    {
+      "source_id": "p1-883e7c056f3c",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.036223601549863815,
+      "teacher_rms": 1.240479826927185,
+      "student_rms": 1.2428287267684937,
+      "difference_rms": 0.044934649020433426
+    },
+    {
+      "source_id": "p1-403f405d7727",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.06439854949712753,
+      "teacher_rms": 1.5891376733779907,
+      "student_rms": 1.5832587480545044,
+      "difference_rms": 0.10233816504478455
+    },
+    {
+      "source_id": "p1-403f405d7727",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.027776041999459267,
+      "teacher_rms": 1.4391593933105469,
+      "student_rms": 1.4374276399612427,
+      "difference_rms": 0.0399741530418396
+    },
+    {
+      "source_id": "p1-403f405d7727",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.028640728443861008,
+      "teacher_rms": 1.1308202743530273,
+      "student_rms": 1.1336687803268433,
+      "difference_rms": 0.032387517392635345
+    },
+    {
+      "source_id": "p1-ac57f1ae0a8c",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07171101868152618,
+      "teacher_rms": 1.5976415872573853,
+      "student_rms": 1.571183204650879,
+      "difference_rms": 0.11456850171089172
+    },
+    {
+      "source_id": "p1-ac57f1ae0a8c",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.016134098172187805,
+      "teacher_rms": 1.3969817161560059,
+      "student_rms": 1.3951811790466309,
+      "difference_rms": 0.022539040073752403
+    },
+    {
+      "source_id": "p1-ac57f1ae0a8c",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.030780060216784477,
+      "teacher_rms": 1.1203221082687378,
+      "student_rms": 1.1213411092758179,
+      "difference_rms": 0.03448358178138733
+    },
+    {
+      "source_id": "p1-2b6a0d317790",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.08623939752578735,
+      "teacher_rms": 1.5957077741622925,
+      "student_rms": 1.586127758026123,
+      "difference_rms": 0.13761287927627563
+    },
+    {
+      "source_id": "p1-2b6a0d317790",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03344513475894928,
+      "teacher_rms": 1.4601250886917114,
+      "student_rms": 1.4589325189590454,
+      "difference_rms": 0.04883407801389694
+    },
+    {
+      "source_id": "p1-2b6a0d317790",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.02834903448820114,
+      "teacher_rms": 1.1561532020568848,
+      "student_rms": 1.158215045928955,
+      "difference_rms": 0.03277582675218582
+    },
+    {
+      "source_id": "p1-d2c7ab2a53d3",
+      "dimension": "visual_quality",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.15595528483390808,
+      "teacher_rms": 1.665374755859375,
+      "student_rms": 1.7109476327896118,
+      "difference_rms": 0.2597239911556244
+    },
+    {
+      "source_id": "p1-d2c7ab2a53d3",
+      "dimension": "visual_quality",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.023148376494646072,
+      "teacher_rms": 1.4149398803710938,
+      "student_rms": 1.4144412279129028,
+      "difference_rms": 0.032753560692071915
+    },
+    {
+      "source_id": "p1-d2c7ab2a53d3",
+      "dimension": "visual_quality",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.027554575353860855,
+      "teacher_rms": 1.1167911291122437,
+      "student_rms": 1.1158283948898315,
+      "difference_rms": 0.030772704631090164
+    },
+    {
+      "source_id": "p1-edabf134dd58",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.1105288490653038,
+      "teacher_rms": 1.699234127998352,
+      "student_rms": 1.7906297445297241,
+      "difference_rms": 0.1878143846988678
+    },
+    {
+      "source_id": "p1-edabf134dd58",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.014593792147934437,
+      "teacher_rms": 1.3280166387557983,
+      "student_rms": 1.328355073928833,
+      "difference_rms": 0.019380798563361168
+    },
+    {
+      "source_id": "p1-edabf134dd58",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03137875720858574,
+      "teacher_rms": 1.0047953128814697,
+      "student_rms": 1.0061804056167603,
+      "difference_rms": 0.03152922913432121
+    },
+    {
+      "source_id": "p1-71c9b74b1792",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.14131271839141846,
+      "teacher_rms": 1.6225132942199707,
+      "student_rms": 1.6682907342910767,
+      "difference_rms": 0.22928178310394287
+    },
+    {
+      "source_id": "p1-71c9b74b1792",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.019382871687412262,
+      "teacher_rms": 1.4092599153518677,
+      "student_rms": 1.4096465110778809,
+      "difference_rms": 0.02731550671160221
+    },
+    {
+      "source_id": "p1-71c9b74b1792",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03367461636662483,
+      "teacher_rms": 1.101550817489624,
+      "student_rms": 1.1037763357162476,
+      "difference_rms": 0.03709430247545242
+    },
+    {
+      "source_id": "p1-888027c4ef34",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.11780507862567902,
+      "teacher_rms": 1.7501336336135864,
+      "student_rms": 1.737093210220337,
+      "difference_rms": 0.20617461204528809
+    },
+    {
+      "source_id": "p1-888027c4ef34",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02245306968688965,
+      "teacher_rms": 1.7013859748840332,
+      "student_rms": 1.7016828060150146,
+      "difference_rms": 0.038201335817575455
+    },
+    {
+      "source_id": "p1-888027c4ef34",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.06132596358656883,
+      "teacher_rms": 1.5099836587905884,
+      "student_rms": 1.5083675384521484,
+      "difference_rms": 0.09260120242834091
+    },
+    {
+      "source_id": "p1-9930c8a8bf41",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.06270240247249603,
+      "teacher_rms": 1.8462920188903809,
+      "student_rms": 1.825941562652588,
+      "difference_rms": 0.11576694250106812
+    },
+    {
+      "source_id": "p1-9930c8a8bf41",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.020002257078886032,
+      "teacher_rms": 1.4516881704330444,
+      "student_rms": 1.450817584991455,
+      "difference_rms": 0.02903703972697258
+    },
+    {
+      "source_id": "p1-9930c8a8bf41",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.028843987733125687,
+      "teacher_rms": 1.14875328540802,
+      "student_rms": 1.1504281759262085,
+      "difference_rms": 0.03313462808728218
+    },
+    {
+      "source_id": "p1-72f6476062c2",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.11098060011863708,
+      "teacher_rms": 2.3164854049682617,
+      "student_rms": 2.179885149002075,
+      "difference_rms": 0.2570849359035492
+    },
+    {
+      "source_id": "p1-72f6476062c2",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02435777150094509,
+      "teacher_rms": 1.6509416103363037,
+      "student_rms": 1.6519542932510376,
+      "difference_rms": 0.04021325707435608
+    },
+    {
+      "source_id": "p1-72f6476062c2",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03535088151693344,
+      "teacher_rms": 1.382070541381836,
+      "student_rms": 1.3864901065826416,
+      "difference_rms": 0.04885740950703621
+    },
+    {
+      "source_id": "p1-e870fd58694d",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.06802209466695786,
+      "teacher_rms": 1.5128512382507324,
+      "student_rms": 1.516478180885315,
+      "difference_rms": 0.10290730744600296
+    },
+    {
+      "source_id": "p1-e870fd58694d",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.027628017589449883,
+      "teacher_rms": 1.4601491689682007,
+      "student_rms": 1.4581139087677002,
+      "difference_rms": 0.040341030806303024
+    },
+    {
+      "source_id": "p1-e870fd58694d",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03222445771098137,
+      "teacher_rms": 1.1780112981796265,
+      "student_rms": 1.1799991130828857,
+      "difference_rms": 0.037960778921842575
+    },
+    {
+      "source_id": "p1-2b88b1fee46d",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09749430418014526,
+      "teacher_rms": 1.5564219951629639,
+      "student_rms": 1.629761815071106,
+      "difference_rms": 0.15174227952957153
+    },
+    {
+      "source_id": "p1-2b88b1fee46d",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02616151235997677,
+      "teacher_rms": 1.2957515716552734,
+      "student_rms": 1.2883158922195435,
+      "difference_rms": 0.033898819237947464
+    },
+    {
+      "source_id": "p1-2b88b1fee46d",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.0311738308519125,
+      "teacher_rms": 0.9728602170944214,
+      "student_rms": 0.9743363261222839,
+      "difference_rms": 0.030327782034873962
+    },
+    {
+      "source_id": "p1-48a4b5aa8377",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.1211007684469223,
+      "teacher_rms": 1.4209400415420532,
+      "student_rms": 1.4842957258224487,
+      "difference_rms": 0.17207694053649902
+    },
+    {
+      "source_id": "p1-48a4b5aa8377",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.01683591865003109,
+      "teacher_rms": 1.3376933336257935,
+      "student_rms": 1.3357605934143066,
+      "difference_rms": 0.02252129651606083
+    },
+    {
+      "source_id": "p1-48a4b5aa8377",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.035108450800180435,
+      "teacher_rms": 1.01865553855896,
+      "student_rms": 1.019760012626648,
+      "difference_rms": 0.035763416439294815
+    },
+    {
+      "source_id": "p1-a483b1a96e16",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.11162456125020981,
+      "teacher_rms": 1.6104894876480103,
+      "student_rms": 1.5552033185958862,
+      "difference_rms": 0.17977018654346466
+    },
+    {
+      "source_id": "p1-a483b1a96e16",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02559182606637478,
+      "teacher_rms": 1.2809966802597046,
+      "student_rms": 1.280441403388977,
+      "difference_rms": 0.03278304263949394
+    },
+    {
+      "source_id": "p1-a483b1a96e16",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03641490265727043,
+      "teacher_rms": 0.9679021835327148,
+      "student_rms": 0.9682276248931885,
+      "difference_rms": 0.03524606302380562
+    },
+    {
+      "source_id": "p1-93b1d5401c5b",
+      "dimension": "aesthetics",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09994678199291229,
+      "teacher_rms": 1.967592716217041,
+      "student_rms": 2.028581380844116,
+      "difference_rms": 0.1966545581817627
+    },
+    {
+      "source_id": "p1-93b1d5401c5b",
+      "dimension": "aesthetics",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.023199398070573807,
+      "teacher_rms": 1.393930435180664,
+      "student_rms": 1.3925855159759521,
+      "difference_rms": 0.03233834728598595
+    },
+    {
+      "source_id": "p1-93b1d5401c5b",
+      "dimension": "aesthetics",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.034325551241636276,
+      "teacher_rms": 1.1071956157684326,
+      "student_rms": 1.110056757926941,
+      "difference_rms": 0.038005102425813675
+    },
+    {
+      "source_id": "p1-7f1939b2c5e7",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07465855032205582,
+      "teacher_rms": 1.3771634101867676,
+      "student_rms": 1.3675681352615356,
+      "difference_rms": 0.10281702131032944
+    },
+    {
+      "source_id": "p1-7f1939b2c5e7",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.0314251109957695,
+      "teacher_rms": 1.341332197189331,
+      "student_rms": 1.3408434391021729,
+      "difference_rms": 0.04215151071548462
+    },
+    {
+      "source_id": "p1-7f1939b2c5e7",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03701508045196533,
+      "teacher_rms": 1.039577603340149,
+      "student_rms": 1.0411620140075684,
+      "difference_rms": 0.03848005086183548
+    },
+    {
+      "source_id": "p1-b3fb8e8187c3",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09014517813920975,
+      "teacher_rms": 1.6546803712844849,
+      "student_rms": 1.6500418186187744,
+      "difference_rms": 0.1491614729166031
+    },
+    {
+      "source_id": "p1-b3fb8e8187c3",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03129157796502113,
+      "teacher_rms": 1.3027198314666748,
+      "student_rms": 1.3015676736831665,
+      "difference_rms": 0.04076415300369263
+    },
+    {
+      "source_id": "p1-b3fb8e8187c3",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03790045157074928,
+      "teacher_rms": 0.9835762977600098,
+      "student_rms": 0.9849944114685059,
+      "difference_rms": 0.037277985364198685
+    },
+    {
+      "source_id": "p1-7745c2b6fa92",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.11542889475822449,
+      "teacher_rms": 1.7179853916168213,
+      "student_rms": 1.7299375534057617,
+      "difference_rms": 0.198305144906044
+    },
+    {
+      "source_id": "p1-7745c2b6fa92",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.031575899571180344,
+      "teacher_rms": 1.420037865638733,
+      "student_rms": 1.42006516456604,
+      "difference_rms": 0.04483897238969803
+    },
+    {
+      "source_id": "p1-7745c2b6fa92",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.04715222492814064,
+      "teacher_rms": 1.1393635272979736,
+      "student_rms": 1.1422635316848755,
+      "difference_rms": 0.0537235252559185
+    },
+    {
+      "source_id": "p1-3f13990fe1fe",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07800795137882233,
+      "teacher_rms": 1.5363717079162598,
+      "student_rms": 1.5804719924926758,
+      "difference_rms": 0.11984920501708984
+    },
+    {
+      "source_id": "p1-3f13990fe1fe",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.036024048924446106,
+      "teacher_rms": 1.4528546333312988,
+      "student_rms": 1.4532811641693115,
+      "difference_rms": 0.052337706089019775
+    },
+    {
+      "source_id": "p1-3f13990fe1fe",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03551234304904938,
+      "teacher_rms": 1.1713697910308838,
+      "student_rms": 1.1730811595916748,
+      "difference_rms": 0.041598085314035416
+    },
+    {
+      "source_id": "p1-cac178cb0c00",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07862745225429535,
+      "teacher_rms": 1.4618339538574219,
+      "student_rms": 1.4538400173187256,
+      "difference_rms": 0.11494027078151703
+    },
+    {
+      "source_id": "p1-cac178cb0c00",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.033559951931238174,
+      "teacher_rms": 1.3821690082550049,
+      "student_rms": 1.3813841342926025,
+      "difference_rms": 0.04638552665710449
+    },
+    {
+      "source_id": "p1-cac178cb0c00",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03690973296761513,
+      "teacher_rms": 1.1063734292984009,
+      "student_rms": 1.1094560623168945,
+      "difference_rms": 0.04083595052361488
+    },
+    {
+      "source_id": "p1-cc8610175236",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09987107664346695,
+      "teacher_rms": 1.5799601078033447,
+      "student_rms": 1.5556036233901978,
+      "difference_rms": 0.15779231488704681
+    },
+    {
+      "source_id": "p1-cc8610175236",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.028356892988085747,
+      "teacher_rms": 1.402057409286499,
+      "student_rms": 1.40109121799469,
+      "difference_rms": 0.03975799307227135
+    },
+    {
+      "source_id": "p1-cc8610175236",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.030897824093699455,
+      "teacher_rms": 1.1427310705184937,
+      "student_rms": 1.1448092460632324,
+      "difference_rms": 0.035307902842760086
+    },
+    {
+      "source_id": "p1-cdcabba6d592",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07416105270385742,
+      "teacher_rms": 1.587214469909668,
+      "student_rms": 1.5375183820724487,
+      "difference_rms": 0.11770949512720108
+    },
+    {
+      "source_id": "p1-cdcabba6d592",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.0215160995721817,
+      "teacher_rms": 1.4782544374465942,
+      "student_rms": 1.4773083925247192,
+      "difference_rms": 0.03180626779794693
+    },
+    {
+      "source_id": "p1-cdcabba6d592",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.028711440041661263,
+      "teacher_rms": 1.1953023672103882,
+      "student_rms": 1.1970010995864868,
+      "difference_rms": 0.03431884944438934
+    },
+    {
+      "source_id": "p1-84fbe95d634f",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.06328057497739792,
+      "teacher_rms": 1.6104447841644287,
+      "student_rms": 1.6061784029006958,
+      "difference_rms": 0.10190986841917038
+    },
+    {
+      "source_id": "p1-84fbe95d634f",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.028609005734324455,
+      "teacher_rms": 1.4640743732452393,
+      "student_rms": 1.4617607593536377,
+      "difference_rms": 0.04188571125268936
+    },
+    {
+      "source_id": "p1-84fbe95d634f",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.028056500479578972,
+      "teacher_rms": 1.16599440574646,
+      "student_rms": 1.167999029159546,
+      "difference_rms": 0.03271372243762016
+    },
+    {
+      "source_id": "p1-2a14a9aebaa7",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.13236844539642334,
+      "teacher_rms": 1.647290587425232,
+      "student_rms": 1.622275471687317,
+      "difference_rms": 0.2180492877960205
+    },
+    {
+      "source_id": "p1-2a14a9aebaa7",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.027007468044757843,
+      "teacher_rms": 1.4773964881896973,
+      "student_rms": 1.4766409397125244,
+      "difference_rms": 0.03990073874592781
+    },
+    {
+      "source_id": "p1-2a14a9aebaa7",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.030965330079197884,
+      "teacher_rms": 1.1880420446395874,
+      "student_rms": 1.1891871690750122,
+      "difference_rms": 0.03678811341524124
+    },
+    {
+      "source_id": "p1-0871910b1774",
+      "dimension": "real_world",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07063241302967072,
+      "teacher_rms": 1.4376105070114136,
+      "student_rms": 1.4481189250946045,
+      "difference_rms": 0.1015418991446495
+    },
+    {
+      "source_id": "p1-0871910b1774",
+      "dimension": "real_world",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02285860851407051,
+      "teacher_rms": 1.428019404411316,
+      "student_rms": 1.4264886379241943,
+      "difference_rms": 0.032642535865306854
+    },
+    {
+      "source_id": "p1-0871910b1774",
+      "dimension": "real_world",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03256732225418091,
+      "teacher_rms": 1.1247837543487549,
+      "student_rms": 1.127068042755127,
+      "difference_rms": 0.03663119673728943
+    },
+    {
+      "source_id": "p1-41d2c4d8a3c5",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.12559349834918976,
+      "teacher_rms": 1.8224437236785889,
+      "student_rms": 1.8483167886734009,
+      "difference_rms": 0.22888709604740143
+    },
+    {
+      "source_id": "p1-41d2c4d8a3c5",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02652539126574993,
+      "teacher_rms": 1.5490235090255737,
+      "student_rms": 1.5471633672714233,
+      "difference_rms": 0.04108845442533493
+    },
+    {
+      "source_id": "p1-41d2c4d8a3c5",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.039674147963523865,
+      "teacher_rms": 1.2714557647705078,
+      "student_rms": 1.27438223361969,
+      "difference_rms": 0.050443924963474274
+    },
+    {
+      "source_id": "p1-a0e8be3902b4",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09490488469600677,
+      "teacher_rms": 2.085453748703003,
+      "student_rms": 2.0515084266662598,
+      "difference_rms": 0.19791975617408752
+    },
+    {
+      "source_id": "p1-a0e8be3902b4",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.025603119283914566,
+      "teacher_rms": 1.6866754293441772,
+      "student_rms": 1.692175269126892,
+      "difference_rms": 0.043184153735637665
+    },
+    {
+      "source_id": "p1-a0e8be3902b4",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.044714685529470444,
+      "teacher_rms": 1.4448353052139282,
+      "student_rms": 1.4481672048568726,
+      "difference_rms": 0.06460536271333694
+    },
+    {
+      "source_id": "p1-ae1d748b3f08",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.07405082881450653,
+      "teacher_rms": 1.4965819120407104,
+      "student_rms": 1.530038595199585,
+      "difference_rms": 0.1108231320977211
+    },
+    {
+      "source_id": "p1-ae1d748b3f08",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.014736376702785492,
+      "teacher_rms": 1.4812953472137451,
+      "student_rms": 1.4817816019058228,
+      "difference_rms": 0.021828925237059593
+    },
+    {
+      "source_id": "p1-ae1d748b3f08",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.027356525883078575,
+      "teacher_rms": 1.1783534288406372,
+      "student_rms": 1.1817281246185303,
+      "difference_rms": 0.032235655933618546
+    },
+    {
+      "source_id": "p1-36ff4b1a54bf",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.10643520206212997,
+      "teacher_rms": 1.5105834007263184,
+      "student_rms": 1.4719607830047607,
+      "difference_rms": 0.16077925264835358
+    },
+    {
+      "source_id": "p1-36ff4b1a54bf",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.018683021888136864,
+      "teacher_rms": 1.3957021236419678,
+      "student_rms": 1.3938649892807007,
+      "difference_rms": 0.026075933128595352
+    },
+    {
+      "source_id": "p1-36ff4b1a54bf",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03222174197435379,
+      "teacher_rms": 1.0769906044006348,
+      "student_rms": 1.0788216590881348,
+      "difference_rms": 0.03470251336693764
+    },
+    {
+      "source_id": "p1-cc415b67db6a",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.11251889169216156,
+      "teacher_rms": 1.7175542116165161,
+      "student_rms": 1.7807080745697021,
+      "difference_rms": 0.19325730204582214
+    },
+    {
+      "source_id": "p1-cc415b67db6a",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.022689592093229294,
+      "teacher_rms": 1.4816174507141113,
+      "student_rms": 1.47931969165802,
+      "difference_rms": 0.0336172953248024
+    },
+    {
+      "source_id": "p1-cc415b67db6a",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03207869455218315,
+      "teacher_rms": 1.199126958847046,
+      "student_rms": 1.2011882066726685,
+      "difference_rms": 0.038466427475214005
+    },
+    {
+      "source_id": "p1-351eb248a104",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09627591073513031,
+      "teacher_rms": 1.802006483078003,
+      "student_rms": 1.7637529373168945,
+      "difference_rms": 0.17348980903625488
+    },
+    {
+      "source_id": "p1-351eb248a104",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.034472156316041946,
+      "teacher_rms": 1.5179986953735352,
+      "student_rms": 1.515670895576477,
+      "difference_rms": 0.0523286871612072
+    },
+    {
+      "source_id": "p1-351eb248a104",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.0412893109023571,
+      "teacher_rms": 1.254650592803955,
+      "student_rms": 1.257277250289917,
+      "difference_rms": 0.05180365964770317
+    },
+    {
+      "source_id": "p1-c70f1f321ce0",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.1484358161687851,
+      "teacher_rms": 1.7147893905639648,
+      "student_rms": 1.6374626159667969,
+      "difference_rms": 0.25453615188598633
+    },
+    {
+      "source_id": "p1-c70f1f321ce0",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.020035674795508385,
+      "teacher_rms": 1.4629790782928467,
+      "student_rms": 1.4619795083999634,
+      "difference_rms": 0.0293117742985487
+    },
+    {
+      "source_id": "p1-c70f1f321ce0",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03645278513431549,
+      "teacher_rms": 1.1597496271133423,
+      "student_rms": 1.1620303392410278,
+      "difference_rms": 0.04227610304951668
+    },
+    {
+      "source_id": "p1-b1a16352de21",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.09672103077173233,
+      "teacher_rms": 1.744773507118225,
+      "student_rms": 1.7338781356811523,
+      "difference_rms": 0.16875629127025604
+    },
+    {
+      "source_id": "p1-b1a16352de21",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03588495030999184,
+      "teacher_rms": 1.5236515998840332,
+      "student_rms": 1.5199546813964844,
+      "difference_rms": 0.05467616394162178
+    },
+    {
+      "source_id": "p1-b1a16352de21",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.042232729494571686,
+      "teacher_rms": 1.2654169797897339,
+      "student_rms": 1.2674411535263062,
+      "difference_rms": 0.05344201251864433
+    },
+    {
+      "source_id": "p1-e2759953da6a",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.13740144670009613,
+      "teacher_rms": 1.5964596271514893,
+      "student_rms": 1.603135108947754,
+      "difference_rms": 0.21935585141181946
+    },
+    {
+      "source_id": "p1-e2759953da6a",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.03293830528855324,
+      "teacher_rms": 1.4653455018997192,
+      "student_rms": 1.4628705978393555,
+      "difference_rms": 0.04826599732041359
+    },
+    {
+      "source_id": "p1-e2759953da6a",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.03669656440615654,
+      "teacher_rms": 1.1774107217788696,
+      "student_rms": 1.1798276901245117,
+      "difference_rms": 0.04320692643523216
+    },
+    {
+      "source_id": "p1-9a0b638ea7a9",
+      "dimension": "creative",
+      "stage": "early",
+      "set": "new_validation",
+      "relative_l2_error": 0.05622098594903946,
+      "teacher_rms": 2.0069589614868164,
+      "student_rms": 1.9591898918151855,
+      "difference_rms": 0.11283321678638458
+    },
+    {
+      "source_id": "p1-9a0b638ea7a9",
+      "dimension": "creative",
+      "stage": "middle",
+      "set": "new_validation",
+      "relative_l2_error": 0.02393379807472229,
+      "teacher_rms": 1.6383062601089478,
+      "student_rms": 1.6406267881393433,
+      "difference_rms": 0.03921089321374893
+    },
+    {
+      "source_id": "p1-9a0b638ea7a9",
+      "dimension": "creative",
+      "stage": "late",
+      "set": "new_validation",
+      "relative_l2_error": 0.0423702597618103,
+      "teacher_rms": 1.3873121738433838,
+      "student_rms": 1.390366554260254,
+      "difference_rms": 0.05878077447414398
+    }
+  ],
+  "optimizer_updates": 0,
+  "teacher_capture_count": 50,
+  "student_forwards": 180,
+  "control_mean_relative_l2": 0.05655132678026954,
+  "new_mean_relative_l2": 0.05251208227748672,
+  "by_stage": [
+    {
+      "stage": "early",
+      "mean_relative_l2": 0.09736346013844013,
+      "prompts": 50
+    },
+    {
+      "stage": "middle",
+      "mean_relative_l2": 0.025525629427284,
+      "prompts": 50
+    },
+    {
+      "stage": "late",
+      "mean_relative_l2": 0.034647157266736034,
+      "prompts": 50
+    }
+  ],
+  "by_dimension": [
+    {
+      "dimension": "alignment",
+      "mean_relative_l2": 0.05421749468271931,
+      "comparisons": 30
+    },
+    {
+      "dimension": "visual_quality",
+      "mean_relative_l2": 0.04781662253662944,
+      "comparisons": 30
+    },
+    {
+      "dimension": "aesthetics",
+      "mean_relative_l2": 0.054051533124099174,
+      "comparisons": 30
+    },
+    {
+      "dimension": "real_world",
+      "mean_relative_l2": 0.05050315012534459,
+      "comparisons": 30
+    },
+    {
+      "dimension": "creative",
+      "mean_relative_l2": 0.05597161091864109,
+      "comparisons": 30
+    }
+  ]
+}

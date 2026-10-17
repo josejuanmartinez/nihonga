@@ -1,0 +1,42 @@
+{
+  "request_key": "5570ead16061e5e61d0cf1c87328f56fbc5f1dc5c9122e32661850c831b05ba4",
+  "job": {
+    "row": {
+      "eval_id": "internal-p1-e0d8dd3b84cd",
+      "set": "internal",
+      "source_id": "p1-e0d8dd3b84cd",
+      "prompt": "Generate an image of an alpine flower meadow. Style: candid photo, natural light.",
+      "language": "en",
+      "seed": 3772308795,
+      "aspect_ratio": "16:9",
+      "width": 1376,
+      "height": 768,
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "dimension": "aesthetics",
+      "subdimension": "landscapes",
+      "facet": "meadow",
+      "difficulty": 1,
+      "style": "photographic",
+      "prompt_format": "imperative",
+      "hard": false,
+      "keywords": []
+    },
+    "layer": 4
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-28T17:10:29.409875+00:00",
+  "bypass_calls": 40,
+  "image_sha256": "af05839b731f6afbe033c2f05f27903f2828e4b614cb1e5661eac7295bc20f9a",
+  "teacher_image_sha256": "f27c8f9c81c57a5b3049a84ba268b1a90588a35abed27b7172ce033022aea9c6",
+  "image_size": [
+    1376,
+    768
+  ],
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "generation_seconds": 11.941761695000004,
+  "peak_allocated_gib": 36.8938889503479,
+  "peak_reserved_gib": 38.82421875,
+  "teacher_regenerated": false,
+  "scope": "own full trajectory; individual identity bypass"
+}

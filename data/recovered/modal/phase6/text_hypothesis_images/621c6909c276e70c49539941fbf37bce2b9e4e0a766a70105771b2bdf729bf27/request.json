@@ -1,0 +1,500 @@
+{
+  "request_key": "621c6909c276e70c49539941fbf37bce2b9e4e0a766a70105771b2bdf729bf27",
+  "request": {
+    "version": "phase6-text-hypothesis-images-v1",
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "rows": [
+      {
+        "source_id": "p1-9225ba4ccf76",
+        "prompt": "A digital illustration of a concert poster with the title \"ENDLESS HARBOR\" and the tagline \"Visit Kyoto\", featuring a frozen city under an ice dome. Elegant serif typography. Cheerful mood. Rich colors. Digital illustration, clean lines.",
+        "seed": 2451946060,
+        "width": 768,
+        "height": 1376,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "ENDLESS HARBOR",
+          "Visit Kyoto"
+        ]
+      },
+      {
+        "source_id": "p1-0ffb39dc8dca",
+        "prompt": "A graphic design layout for a concert poster titled \"Iron Orchestra\".",
+        "seed": 268122588,
+        "width": 832,
+        "height": 1248,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "Iron Orchestra"
+        ]
+      },
+      {
+        "source_id": "p1-5962716b5dc8",
+        "prompt": "A digital illustration of a film festival poster showcasing the title \"Northern Orchard\" and the tagline \"Visit Kyoto\", featuring a serene deer under gentle backlighting.",
+        "seed": 1499623787,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "Northern Orchard",
+          "Visit Kyoto"
+        ]
+      },
+      {
+        "source_id": "p1-4be4a07a163d",
+        "prompt": "A flat vector illustration of a movie poster with the title \"The Golden Station\", featuring a heron, melancholic tone.",
+        "seed": 1273274490,
+        "width": 832,
+        "height": 1248,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "The Golden Station"
+        ]
+      },
+      {
+        "source_id": "p1-30b3b241cfaa",
+        "prompt": "An Art Nouveau illustration of a concert poster with the title \"Midnight River\", featuring an underwater research base.",
+        "seed": 817082945,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "Midnight River"
+        ]
+      },
+      {
+        "source_id": "p1-12025a8387d1",
+        "prompt": "A graphic design layout of a science fair poster with the title \"The Hidden Station\", featuring a deer. Graphic design, clean typography, print layout.",
+        "seed": 302144131,
+        "width": 832,
+        "height": 1248,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "The Hidden Station"
+        ]
+      },
+      {
+        "source_id": "p1-a8bf87a71d44",
+        "prompt": "a vintage travel poster with the title \"The Hidden Comet\" and the tagline \"Tickets at the Door\", featuring a desert outpost built from salvaged ships, gentle backlight, vintage print, limited palette, risograph texture",
+        "seed": 2831124391,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "The Hidden Comet",
+          "Tickets at the Door"
+        ]
+      },
+      {
+        "source_id": "p1-69cf81e56604",
+        "prompt": "An art exhibition poster featuring the title \"LITTLE LANTERNS\" in a vintage print style, showcasing a nostalgic and handcrafted aesthetic.",
+        "seed": 1775206885,
+        "width": 768,
+        "height": 1376,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "target_strings": [
+          "LITTLE LANTERNS"
+        ]
+      },
+      {
+        "source_id": "p1-da98ee3e8c11",
+        "prompt": "a storefront named \"Lucky Noodle House\" with a small sign in the window saying \"Hello, World\", mysterious atmosphere, dramatic side lighting, photorealistic, professional photography",
+        "seed": 3667455550,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Lucky Noodle House",
+          "Hello, World"
+        ]
+      },
+      {
+        "source_id": "p1-e3e97217f8c5",
+        "prompt": "A shop storefront featuring the name \"Moonlight Motel\" painted above the door in a stylized graphic design.",
+        "seed": 3823727127,
+        "width": 1184,
+        "height": 896,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Moonlight Motel"
+        ]
+      },
+      {
+        "source_id": "p1-cb685a6c42c5",
+        "prompt": "Create an image of a weathered banner hanging between two tall trees, reading \"FLOWERS\" in bold, faded letters. Style: 35mm film photo with visible film grain.",
+        "seed": 3412613740,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "FLOWERS"
+        ]
+      },
+      {
+        "source_id": "p1-9e393937816c",
+        "prompt": "A graphic design layout of a storefront named \"Happy Birthday Emma\" with a small sign in the window reading \"Thank You!\", soft backlight.",
+        "seed": 2654550327,
+        "width": 1376,
+        "height": 768,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Happy Birthday Emma",
+          "Thank You!"
+        ]
+      },
+      {
+        "source_id": "p1-da95fd390a6f",
+        "prompt": "A clear glass container featuring a label reading \"Est. 1987\", photorealistic",
+        "seed": 3667262777,
+        "width": 1376,
+        "height": 768,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Est. 1987"
+        ]
+      },
+      {
+        "source_id": "p1-76ecc2254a56",
+        "prompt": "A graphic design layout featuring a caf\u00e9 chalkboard with \"Room 404\" written in chalk, clear typography, crisp focus.",
+        "seed": 1995227685,
+        "width": 768,
+        "height": 1376,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Room 404"
+        ]
+      },
+      {
+        "source_id": "p1-027bfb77079a",
+        "prompt": "A banner suspended between two trees, displaying the text \"Room 404\" in a stylized graphic design layout",
+        "seed": 41679735,
+        "width": 1248,
+        "height": 832,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Room 404"
+        ]
+      },
+      {
+        "source_id": "p1-6954438e3284",
+        "prompt": "A graphic design layout of \"Est. 1987\" written in the sand on a beach. Graphic design, clean typography, print layout.",
+        "seed": 1767129998,
+        "width": 1184,
+        "height": 896,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "target_strings": [
+          "Est. 1987"
+        ]
+      }
+    ],
+    "selected_candidate": {
+      "candidate_id": "single_bridge_block_05",
+      "removed_teacher_slots": [
+        5
+      ],
+      "teacher_blocks": 32,
+      "surviving_transformer_blocks": 31,
+      "bridge_count": 1,
+      "original_slot_count": 32,
+      "checkpoint_path": "data/phase5/bridge_fitting_pilot/bridge_block_05_selected.pt",
+      "checkpoint_sha256": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+      "selected_update": 300,
+      "bridge_parameters": 2097152,
+      "surviving_hidden_alignment": [
+        {
+          "teacher_slot": 0,
+          "student_slot": 0
+        },
+        {
+          "teacher_slot": 1,
+          "student_slot": 1
+        },
+        {
+          "teacher_slot": 2,
+          "student_slot": 2
+        },
+        {
+          "teacher_slot": 3,
+          "student_slot": 3
+        },
+        {
+          "teacher_slot": 4,
+          "student_slot": 4
+        },
+        {
+          "teacher_slot": 6,
+          "student_slot": 6
+        },
+        {
+          "teacher_slot": 7,
+          "student_slot": 7
+        },
+        {
+          "teacher_slot": 8,
+          "student_slot": 8
+        },
+        {
+          "teacher_slot": 9,
+          "student_slot": 9
+        },
+        {
+          "teacher_slot": 10,
+          "student_slot": 10
+        },
+        {
+          "teacher_slot": 11,
+          "student_slot": 11
+        },
+        {
+          "teacher_slot": 12,
+          "student_slot": 12
+        },
+        {
+          "teacher_slot": 13,
+          "student_slot": 13
+        },
+        {
+          "teacher_slot": 14,
+          "student_slot": 14
+        },
+        {
+          "teacher_slot": 15,
+          "student_slot": 15
+        },
+        {
+          "teacher_slot": 16,
+          "student_slot": 16
+        },
+        {
+          "teacher_slot": 17,
+          "student_slot": 17
+        },
+        {
+          "teacher_slot": 18,
+          "student_slot": 18
+        },
+        {
+          "teacher_slot": 19,
+          "student_slot": 19
+        },
+        {
+          "teacher_slot": 20,
+          "student_slot": 20
+        },
+        {
+          "teacher_slot": 21,
+          "student_slot": 21
+        },
+        {
+          "teacher_slot": 22,
+          "student_slot": 22
+        },
+        {
+          "teacher_slot": 23,
+          "student_slot": 23
+        },
+        {
+          "teacher_slot": 24,
+          "student_slot": 24
+        },
+        {
+          "teacher_slot": 25,
+          "student_slot": 25
+        },
+        {
+          "teacher_slot": 26,
+          "student_slot": 26
+        },
+        {
+          "teacher_slot": 27,
+          "student_slot": 27
+        },
+        {
+          "teacher_slot": 28,
+          "student_slot": 28
+        },
+        {
+          "teacher_slot": 29,
+          "student_slot": 29
+        },
+        {
+          "teacher_slot": 30,
+          "student_slot": 30
+        },
+        {
+          "teacher_slot": 31,
+          "student_slot": 31
+        }
+      ],
+      "cache_policy": "discard all previous caches; rebuild student prefix using modified states; never reuse teacher KV caches"
+    },
+    "fit_key": "7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618",
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "wrapper_source": "\"\"\"Qwen-Image 2.1 block contract for an unconditioned tokenwise bridge.\"\"\"\nfrom types import SimpleNamespace\nfrom torch import nn\n\n\nclass QwenImage21BridgeBlock(nn.Module):\n    def __init__(self, bridge, processor):\n        super().__init__()\n        self.bridge = bridge\n        # Parent forward inspects this processor to choose mask construction.\n        # This contains no attention projections and performs no attention.\n        self.attn = SimpleNamespace(processor=processor)\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        if kv_cache_mode not in (None, 'extract', 'cached'):\n            raise ValueError('Unknown KV cache mode.')\n        # No K/V is required in this slot. Subsequent surviving blocks build\n        # their own prefix K/V from the transformed prefix during extraction.\n        return self.bridge(hidden_states)\n\n\ndef insert_bridge(transformer, layer, bridge, cache_class):\n    \"\"\"Replace one slot; caller must discard all prior caches and use returned cache.\"\"\"\n    if not 0 <= layer < len(transformer.transformer_blocks):\n        raise IndexError('Bridge slot is outside transformer depth.')\n    if bridge.down.in_features != transformer.config.num_attention_heads * transformer.config.attention_head_dim:\n        raise ValueError('Bridge width differs from transformer width.')\n    old = transformer.transformer_blocks[layer]\n    reference = next(transformer.parameters())\n    bridge = bridge.to(device=reference.device, dtype=reference.dtype)\n    wrapper = QwenImage21BridgeBlock(bridge, old.attn.processor)\n    wrapper.train(transformer.training)\n    transformer.transformer_blocks[layer] = wrapper\n    return old, cache_class(len(transformer.transformer_blocks))\n",
+    "components_source": "\"\"\"FP32 master adapters and functional prefix-cache checkpointing for the pilot.\"\"\"\nimport torch\nfrom torch import nn\nfrom torch.nn import functional as F\nfrom torch.utils.checkpoint import checkpoint\n\n\nclass MasterBridge(nn.Module):\n    def __init__(self, width=4096, rank=256):\n        super().__init__()\n        self.down = nn.Linear(width, rank, bias=False, dtype=torch.float32)\n        self.up = nn.Linear(rank, width, bias=False, dtype=torch.float32)\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        dtype = hidden_states.dtype\n        residual = F.linear(hidden_states, self.down.weight.to(dtype))\n        residual = F.gelu(residual)\n        residual = F.linear(residual, self.up.weight.to(dtype))\n        return hidden_states + residual\n\n\nclass MasterLoRALinear(nn.Module):\n    def __init__(self, base, rank=8, alpha=8):\n        super().__init__()\n        self.base = base.requires_grad_(False)\n        self.down = nn.Linear(base.in_features, rank, bias=False,\n                              device=base.weight.device, dtype=torch.float32)\n        self.up = nn.Linear(rank, base.out_features, bias=False,\n                            device=base.weight.device, dtype=torch.float32)\n        nn.init.zeros_(self.up.weight)\n        self.scale = alpha / rank\n\n    def forward(self, value):\n        delta = F.linear(value, self.down.weight.to(value.dtype))\n        delta = F.linear(delta, self.up.weight.to(value.dtype))\n        return self.base(value) + delta * self.scale\n\n\nclass FunctionalCheckpointBlock(nn.Module):\n    \"\"\"Return prefix K/V as checkpoint outputs; snapshot cached K/V as inputs.\n\n    Recomputations receive a private cache. They cannot mutate the cache used\n    by another stage, and prefix gradients remain connected to its extraction.\n    \"\"\"\n    def __init__(self, inner, cache_layer_class):\n        super().__init__()\n        self.inner = inner\n        self.cache_layer_class = cache_layer_class\n\n    @property\n    def attn(self):\n        return self.inner.attn\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        common = dict(attention_mask=attention_mask,\n                      target_token_mask=target_token_mask,\n                      kv_cache_mode=kv_cache_mode,\n                      cache_write_slice=cache_write_slice,\n                      segments=segments, key_valid=key_valid)\n        if not torch.is_grad_enabled():\n            return self.inner(hidden_states, modulation, rotary_emb=rotary_emb,\n                              layer_cache=layer_cache, **common)\n\n        if kv_cache_mode == 'extract':\n            def extract(h, m, r):\n                private = self.cache_layer_class()\n                output = self.inner(h, m, rotary_emb=r, layer_cache=private, **common)\n                k, v = private.get()\n                return output, k, v\n            output, k, v = checkpoint(extract, hidden_states, modulation,\n                                      rotary_emb, use_reentrant=False)\n            layer_cache.store(k, v)\n            return output\n\n        if kv_cache_mode == 'cached':\n            prefix_k, prefix_v = layer_cache.get()\n            def cached(h, m, r, k, v):\n                private = self.cache_layer_class()\n                private.store(k, v)\n                return self.inner(h, m, rotary_emb=r, layer_cache=private, **common)\n            return checkpoint(cached, hidden_states, modulation, rotary_emb,\n                              prefix_k, prefix_v, use_reentrant=False)\n\n        def uncached(h, m, r):\n            return self.inner(h, m, rotary_emb=r, layer_cache=None, **common)\n        return checkpoint(uncached, hidden_states, modulation, rotary_emb,\n                          use_reentrant=False)\n\n\ndef attach_adapters(model, bridge_weights, insert_bridge, cache_class,\n                    cache_layer_class, rank=8, alpha=8):\n    bridge = MasterBridge()\n    bridge.load_state_dict(bridge_weights)\n    removed, _ = insert_bridge(model, 5, bridge, cache_class)\n    # insert_bridge matches inference dtype; restore FP32 optimizer masters.\n    # Reload the original FP32 checkpoint after the temporary BF16 conversion.\n    bridge.float()\n    bridge.load_state_dict(bridge_weights)\n    del removed\n    adapters = []\n    for slot, block in enumerate(model.transformer_blocks):\n        if slot == 5:\n            continue\n        for name in ('to_q', 'to_k', 'to_v'):\n            setattr(block.attn, name, MasterLoRALinear(getattr(block.attn, name), rank, alpha))\n            adapters.append(f'transformer_blocks.{slot}.attn.{name}')\n        block.attn.to_out[0] = MasterLoRALinear(block.attn.to_out[0], rank, alpha)\n        adapters.append(f'transformer_blocks.{slot}.attn.to_out.0')\n        model.transformer_blocks[slot] = FunctionalCheckpointBlock(block, cache_layer_class)\n    model.eval()\n    model.gradient_checkpointing = False\n    trainable = {name: param for name, param in model.named_parameters() if param.requires_grad}\n    return trainable, adapters\n",
+    "checkpoints": {
+      "update120": {
+        "step": 120,
+        "request_key": "d95114be1dc04239b3ca38b7478e28534c414e7d25bef9e2b19621f7bb598587",
+        "remote_path": "/phase3/phase6/full_student_continuation/d95114be1dc04239b3ca38b7478e28534c414e7d25bef9e2b19621f7bb598587/run/checkpoint_step_120.pt",
+        "sha256": "235ec76c88a4287e27db9a21c233a64eeb777ed5621a90ac1b946b422fc97c44",
+        "bytes": 27607358500
+      },
+      "update180": {
+        "step": 180,
+        "request_key": "d95114be1dc04239b3ca38b7478e28534c414e7d25bef9e2b19621f7bb598587",
+        "remote_path": "/phase3/phase6/full_student_continuation/d95114be1dc04239b3ca38b7478e28534c414e7d25bef9e2b19621f7bb598587/run/checkpoint_step_180.pt",
+        "sha256": "a06f4b5346dde40a3f7fd1d9f349c7d40a39951a6413609a146d66ef11a26bbe",
+        "bytes": 27607376420
+      }
+    },
+    "worker_source": "def generate_text_hypothesis_quads(request, key):\n    \"\"\"Save matched teacher, pretrained, update-120, and update-180 text images.\"\"\"\n    import gc\n    import hashlib\n    import inspect\n    import json\n    import time\n    from pathlib import Path\n\n    import torch\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache, QwenImage21KVLayerCache\n\n    directory = Path('/phase3/phase6/text_hypothesis_images') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n    request_path = directory / 'request.json'\n    if request_path.exists():\n        if json.loads(request_path.read_text()) != {'request_key': key, 'request': request}:\n            raise RuntimeError('Existing image request differs.')\n    else:\n        request_path.write_text(json.dumps({'request_key': key, 'request': request}, indent=2))\n        results_volume.commit()\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    report = {'request_key': key, 'status': 'running', 'rows': [], 'artifacts': [],\n              'calls': {'teacher': 0, 'pretrained': 0, 'update120': 0, 'update180': 0},\n              'optimizer_updates': 0}\n    try:\n        teacher = request['teacher']\n        report['gpu'] = torch.cuda.get_device_name(0)\n        if 'H100' not in report['gpu']:\n            raise RuntimeError('Expected H100.')\n        pipe = QwenImage21Pipeline.from_pretrained(\n            teacher['model_repo'], revision=teacher['model_revision'],\n            dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        pipe.set_progress_bar_config(disable=True)\n        model = pipe.transformer.eval()\n        for component in (model, pipe.text_encoder, pipe.vae):\n            component.requires_grad_(False)\n        torch.use_deterministic_algorithms(True)\n        torch.set_float32_matmul_precision('highest')\n        torch.backends.cuda.matmul.allow_tf32 = False\n        torch.backends.cudnn.allow_tf32 = False\n        torch.backends.cudnn.benchmark = False\n        torch.backends.cudnn.deterministic = True\n        torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = False\n        torch.backends.cuda.allow_fp16_bf16_reduction_math_sdp(False)\n        if digest(Path(inspect.getfile(type(model)))) != request['transformer_source_sha256']:\n            raise RuntimeError('Transformer source differs.')\n        config_path = (Path('/root/.cache/huggingface/hub') /\n                       ('models--' + teacher['model_repo'].replace('/', '--')) /\n                       'snapshots' / teacher['model_revision'] / 'transformer/config.json')\n        if digest(config_path) != teacher['config_sha256'] or len(model.transformer_blocks) != 32:\n            raise RuntimeError('Teacher configuration differs.')\n        if type(pipe.scheduler).__name__ != teacher['scheduler_class']:\n            raise RuntimeError('Scheduler class differs.')\n\n        def generate(row, variant):\n            path = directory / (row['source_id'] + '-' + variant + '.png')\n            if path.exists():\n                return {'name': path.name, 'sha256': digest(path), 'bytes': path.stat().st_size,\n                        'seconds': None, 'reused': True}\n            torch.cuda.synchronize()\n            started = time.perf_counter()\n            with torch.inference_mode():\n                image = pipe(prompt=row['prompt'], width=row['width'], height=row['height'],\n                    num_inference_steps=40, true_cfg_scale=teacher['true_cfg_scale'],\n                    generator=torch.Generator('cpu').manual_seed(row['seed']),\n                    use_kv_cache=True, output_type='pil').images[0]\n            torch.cuda.synchronize()\n            elapsed = time.perf_counter() - started\n            temporary = path.with_suffix('.tmp')\n            image.save(temporary, format='PNG')\n            temporary.replace(path)\n            results_volume.commit()\n            report['calls'][variant] += 1\n            return {'name': path.name, 'sha256': digest(path), 'bytes': path.stat().st_size,\n                    'seconds': elapsed, 'reused': False}\n\n        outputs = {'teacher': {}, 'pretrained': {}, 'update120': {}, 'update180': {}}\n        for row in request['rows']:\n            outputs['teacher'][row['source_id']] = generate(row, 'teacher')\n        selected = request['selected_candidate']\n        checkpoint_path = (Path('/phase3/phase5/fitting') / request['fit_key'] /\n                           Path(selected['checkpoint_path']).name)\n        if digest(checkpoint_path) != selected['checkpoint_sha256']:\n            raise RuntimeError('Selected bridge checkpoint differs.')\n        checkpoint = torch.load(checkpoint_path, weights_only=True, map_location='cpu')\n        if checkpoint['request_key'] != request['fit_key'] or checkpoint['layer'] != 5:\n            raise RuntimeError('Bridge checkpoint provenance differs.')\n        namespace = {}\n        exec(compile(request['wrapper_source'], 'bridge_block_definition.py', 'exec'), namespace)\n        exec(compile(request['components_source'], 'healing_components.py', 'exec'), namespace)\n        bridge = namespace['MasterBridge'](4096, 256)\n        bridge.load_state_dict(checkpoint['state_dict'])\n        removed, _ = namespace['insert_bridge'](model, 5, bridge, QwenImage21KVCache)\n        bridge.float()\n        bridge.load_state_dict(checkpoint['state_dict'])\n        del removed\n        if len(model.transformer_blocks) != 32 or not hasattr(model.transformer_blocks[5], 'bridge'):\n            raise RuntimeError('Student bridge insertion failed.')\n        for row in request['rows']:\n            outputs['pretrained'][row['source_id']] = generate(row, 'pretrained')\n\n        for slot, block in enumerate(model.transformer_blocks):\n            if slot != 5:\n                model.transformer_blocks[slot] = namespace['FunctionalCheckpointBlock'](\n                    block, QwenImage21KVLayerCache)\n        parameters = dict(model.named_parameters())\n        if sum(p.numel() for p in parameters.values()) != 6899117824:\n            raise RuntimeError('Trained parameter structure differs.')\n        for variant in ('update120', 'update180'):\n            trained = request['checkpoints'][variant]\n            trained_path = Path(trained['remote_path'])\n            if trained_path.stat().st_size != trained['bytes'] or digest(trained_path) != trained['sha256']:\n                raise RuntimeError('Full-student checkpoint differs: ' + variant)\n            state = torch.load(trained_path, weights_only=True, map_location='cpu')\n            if (state['request_key'] != trained['request_key'] or\n                    state['step'] != trained['step'] or\n                    set(parameters) != set(state['master_state'])):\n                raise RuntimeError('Trained checkpoint provenance differs: ' + variant)\n            with torch.no_grad():\n                for name, parameter in parameters.items():\n                    parameter.copy_(state['master_state'][name].to(device=parameter.device,\n                                                                   dtype=parameter.dtype))\n            del state\n            gc.collect()\n            model.eval()\n            for row in request['rows']:\n                outputs[variant][row['source_id']] = generate(row, variant)\n        for row in request['rows']:\n            source_id = row['source_id']\n            report['rows'].append({**row, **{variant: outputs[variant][source_id]\n                                              for variant in ('teacher', 'pretrained', 'update120', 'update180')}})\n            report['artifacts'].extend(outputs[variant][source_id]\n                                       for variant in ('teacher', 'pretrained', 'update120', 'update180'))\n        report['status'] = 'passed'\n    except Exception as exc:\n        report['status'] = 'failed'\n        report['error'] = type(exc).__name__ + ': ' + str(exc)\n    report_path.write_text(json.dumps(report, indent=2, ensure_ascii=True) + '\\n')\n    results_volume.commit()\n    return report\n",
+    "selection": "eight unused English posters and eight unused English text-rendering validation rows with quoted target strings, fixed SHA-256 rank per group; exclude all prior validation and image selections",
+    "validation_source_sha256": "eb6b0366b9bf217400fb2e806c099356dde33484346ae7ce66cf841cf3fc8823",
+    "excluded_source_ids": [
+      "p1-04dd70c5760f",
+      "p1-056df011a834",
+      "p1-06e87c218dc9",
+      "p1-0871910b1774",
+      "p1-13e26996edd4",
+      "p1-1461526cb2e1",
+      "p1-17fb78d1c4bf",
+      "p1-1984c1c3e761",
+      "p1-1aef90c0bba7",
+      "p1-226c607da31a",
+      "p1-271ab2e64bc6",
+      "p1-2a14a9aebaa7",
+      "p1-2b6a0d317790",
+      "p1-2b88b1fee46d",
+      "p1-351eb248a104",
+      "p1-36fe86287034",
+      "p1-36ff4b1a54bf",
+      "p1-38d7a050fb8a",
+      "p1-3f13990fe1fe",
+      "p1-403f405d7727",
+      "p1-41d2c4d8a3c5",
+      "p1-46acbb8cdf62",
+      "p1-48a4b5aa8377",
+      "p1-4a45da9330ae",
+      "p1-4a84d737d801",
+      "p1-520b4b6e2742",
+      "p1-58419d384824",
+      "p1-5c3d279f55b0",
+      "p1-61c10092e857",
+      "p1-71c9b74b1792",
+      "p1-72f6476062c2",
+      "p1-7745c2b6fa92",
+      "p1-79652b776ffc",
+      "p1-7f1939b2c5e7",
+      "p1-8147b4e37d80",
+      "p1-81fc1d548f81",
+      "p1-84fbe95d634f",
+      "p1-86c510e4e06c",
+      "p1-883e7c056f3c",
+      "p1-888027c4ef34",
+      "p1-8a56d54fd19f",
+      "p1-8d56f0bbd4df",
+      "p1-93b1d5401c5b",
+      "p1-96108c459bb6",
+      "p1-9930c8a8bf41",
+      "p1-9a0b638ea7a9",
+      "p1-9c96d223f5c5",
+      "p1-9f8ac1e75e8b",
+      "p1-a0e8be3902b4",
+      "p1-a10353f56573",
+      "p1-a1a2323c8c36",
+      "p1-a483b1a96e16",
+      "p1-a6227b574def",
+      "p1-a745f08b72dc",
+      "p1-ac57f1ae0a8c",
+      "p1-ad4f062f00ce",
+      "p1-ae1d748b3f08",
+      "p1-b1a16352de21",
+      "p1-b2cd7963832b",
+      "p1-b3fb8e8187c3",
+      "p1-b5d1aaa3235d",
+      "p1-b6033ecb552a",
+      "p1-ba95e6520b6d",
+      "p1-bbbf3d19c357",
+      "p1-c70f1f321ce0",
+      "p1-c92b61795d65",
+      "p1-cabc84946a83",
+      "p1-cac178cb0c00",
+      "p1-cc415b67db6a",
+      "p1-cc8610175236",
+      "p1-cdcabba6d592",
+      "p1-d2c7ab2a53d3",
+      "p1-dc30f8d4f347",
+      "p1-df869d4d578d",
+      "p1-e2759953da6a",
+      "p1-e870fd58694d",
+      "p1-ea30a91db456",
+      "p1-edabf134dd58",
+      "p1-ee87e9608396",
+      "p1-fcecfd532ff3"
+    ],
+    "protocol": "same prompt, CPU noise seed, image size, scheduler, CFG, 40 denoising steps; teacher, pretrained, update120, update180 in one run; zero optimizer updates"
+  }
+}

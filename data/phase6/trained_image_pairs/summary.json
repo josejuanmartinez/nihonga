@@ -1,0 +1,576 @@
+{
+  "request_key": "3049cd5a711e734617379fcf37106489d4bae4f3e4185c6a2531f2a9f154fb65",
+  "status": "passed",
+  "rows": [
+    {
+      "source_id": "p1-04dd70c5760f",
+      "prompt": "A high-resolution DSLR photo of a mustard yellow snail on top of a brown bowl, and a brown egg partially hidden behind a brown bowl. Highly detailed. DSLR photo, high resolution.",
+      "seed": 81621189,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "teacher": {
+        "name": "p1-04dd70c5760f-teacher.png",
+        "sha256": "81573f14d4b77f23596519d37dca7c66a8442a5937644602f95a900d5d6783e1",
+        "bytes": 1506512,
+        "seconds": 9.205586326000002,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-04dd70c5760f-pretrained.png",
+        "sha256": "ae02e1367ddcb251962649d832f168cf916b7ef42bac018476383979c1c00a05",
+        "bytes": 1527961,
+        "seconds": 6.704259524999998,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-04dd70c5760f-trained.png",
+        "sha256": "0bd8848d99439bfe7692667ef88c8ac95861871fa8e2ac30e07b3c58a8f28ba9",
+        "bytes": 1532219,
+        "seconds": 6.684788665000042,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-1461526cb2e1",
+      "prompt": "a cupcake to the right of a potted cactus, clean composition, DSLR photo, high resolution",
+      "seed": 341922412,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "spatial_relation",
+      "teacher": {
+        "name": "p1-1461526cb2e1-teacher.png",
+        "sha256": "423a279008ba5dc6d991cfc5150d2a72fd0909c2650c0224d060b565563d28e3",
+        "bytes": 1232575,
+        "seconds": 6.796004367000002,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-1461526cb2e1-pretrained.png",
+        "sha256": "b51ae0f6c649fd7487ce36bfaa1928e062d5d73181eb4afd6240d8e8d76df5a5",
+        "bytes": 1279478,
+        "seconds": 6.597382702999994,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-1461526cb2e1-trained.png",
+        "sha256": "388fce7976ba51c124be50bc3c437417b3b5f4085ce0eda898bad2905e003b2d",
+        "bytes": 1252696,
+        "seconds": 6.586563703000024,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-ad4f062f00ce",
+      "prompt": "the aurora borealis over a frozen lake, photorealistic, professional photography",
+      "seed": 2907637295,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "visual_quality",
+      "subdimension": "low_light",
+      "teacher": {
+        "name": "p1-ad4f062f00ce-teacher.png",
+        "sha256": "b0a5bab3ea71a9cc70f05a93accb4afb77689c0ad9d681ab7c24af79b0685544",
+        "bytes": 1528751,
+        "seconds": 6.778312759999999,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-ad4f062f00ce-pretrained.png",
+        "sha256": "b0b48ae16e20fe76c8fafd101501f2c7e511dabb24bf48066c2b29b7a85791bc",
+        "bytes": 1497217,
+        "seconds": 6.599545871000004,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-ad4f062f00ce-trained.png",
+        "sha256": "dfbb9318580957bfa0d8a7745d6763ae98354a3a400dcb1dcdb7c90b3234a9e8",
+        "bytes": 1508724,
+        "seconds": 6.576986078999994,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-06e87c218dc9",
+      "prompt": "A high-resolution photo of a polished chrome ball placed on a checkered patterned floor. Eye-level perspective. Glossy reflective surface. Studio illumination using softboxes. Sharp textures. Out-of-focus background. Photorealistic, professional-grade photography.",
+      "seed": 115899425,
+      "width": 1248,
+      "height": 832,
+      "dimension": "visual_quality",
+      "subdimension": "reflective_materials",
+      "teacher": {
+        "name": "p1-06e87c218dc9-teacher.png",
+        "sha256": "2f4f66f2eae7f2b82bb48034a8b19b677dcd4715f30ad89b378c59df9b0fd60b",
+        "bytes": 1198964,
+        "seconds": 6.967621429000005,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-06e87c218dc9-pretrained.png",
+        "sha256": "589fd133971a8b2338a21ea3dbbcadedbe46130e19cd787e1d6f8955543d12c2",
+        "bytes": 1221660,
+        "seconds": 6.577843825000002,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-06e87c218dc9-trained.png",
+        "sha256": "c2d17b59fce0b566fc3b39cc22ecbdc3f8218ee3541ff76f624b24d51579381f",
+        "bytes": 1222614,
+        "seconds": 6.559880631999988,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-edabf134dd58",
+      "prompt": "A nihonga painting of a vast arctic tundra.",
+      "seed": 3987468596,
+      "width": 1376,
+      "height": 768,
+      "dimension": "aesthetics",
+      "subdimension": "landscapes",
+      "teacher": {
+        "name": "p1-edabf134dd58-teacher.png",
+        "sha256": "7fde50eb847ed6f9ea8926b6aebac7a07818a1cece30bbf213018ea4ca260fd8",
+        "bytes": 2120212,
+        "seconds": 6.868967094000013,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-edabf134dd58-pretrained.png",
+        "sha256": "1ef4cd7de781c60779af618941bd2fab01268e4e2428c945aa871c9a1d715773",
+        "bytes": 2125482,
+        "seconds": 6.691252527999978,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-edabf134dd58-trained.png",
+        "sha256": "44813c449e3fd6a79df7b661c28339190e6ebe36d03a77c6336e9163c73b4135",
+        "bytes": 2120062,
+        "seconds": 6.672004326000035,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-71c9b74b1792",
+      "prompt": "A nihonga painting of a painter gazing out of a window in a library, profile view portrait, soft morning light, clean composition.",
+      "seed": 1909045067,
+      "width": 832,
+      "height": 1248,
+      "dimension": "aesthetics",
+      "subdimension": "portraits",
+      "teacher": {
+        "name": "p1-71c9b74b1792-teacher.png",
+        "sha256": "b6c56ea7bd381c5e4e33b6c7892442b69e116bf2a6e3b6501fd732f0fc540b67",
+        "bytes": 1861703,
+        "seconds": 6.782529736000001,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-71c9b74b1792-pretrained.png",
+        "sha256": "7e6c98bb2ee413a6168108e290d94d6698de6b9205ac839e1ab32fc37c6e5e0b",
+        "bytes": 1854362,
+        "seconds": 6.583253206999984,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-71c9b74b1792-trained.png",
+        "sha256": "a61a0bedc827a12238fb9de738abff5527a7124b9961e3e949551247546e2e35",
+        "bytes": 1822932,
+        "seconds": 6.563844608000011,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-7f1939b2c5e7",
+      "prompt": "a Songkran water festival street in Thailand, documentary photography, serene mood, DSLR photo, high resolution",
+      "seed": 2132359602,
+      "width": 768,
+      "height": 1376,
+      "dimension": "real_world",
+      "subdimension": "cultural_scenes",
+      "teacher": {
+        "name": "p1-7f1939b2c5e7-teacher.png",
+        "sha256": "1828cc798587e4069ea7b29bd24bf962e80f9dd705993c43f312d428833d8542",
+        "bytes": 2045579,
+        "seconds": 6.885043736,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-7f1939b2c5e7-pretrained.png",
+        "sha256": "e022e8280f3d9422184aea89a05389b231381983d9c6655ef9dc991bb2a4de9d",
+        "bytes": 1915905,
+        "seconds": 6.684606945000013,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-7f1939b2c5e7-trained.png",
+        "sha256": "88572a90956d8438a58786050954b4d8933eb167cc388d7236f346d2da2d3962",
+        "bytes": 1925329,
+        "seconds": 6.693833917000006,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-b3fb8e8187c3",
+      "prompt": "Create an image of a Gothic family house in the rain, with people walking by, aerial view, architecturally accurate proportions, deep depth of field, mysterious atmosphere. Style: DSLR photo, high resolution.",
+      "seed": 3019607681,
+      "width": 1248,
+      "height": 832,
+      "dimension": "real_world",
+      "subdimension": "architecture",
+      "teacher": {
+        "name": "p1-b3fb8e8187c3-teacher.png",
+        "sha256": "61ca722acbca3da6fece8367c480b2595f1407d2964ccbbdec46895847fd3373",
+        "bytes": 2202611,
+        "seconds": 6.907025477000005,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-b3fb8e8187c3-pretrained.png",
+        "sha256": "e073a78b35910334c1a7dc619c0a54ea97b680e23ba72e615a95c9f8b71b8d68",
+        "bytes": 2285001,
+        "seconds": 6.569543745999994,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-b3fb8e8187c3-trained.png",
+        "sha256": "28f94b72f142b7016df3f6c7338cf5a39ec0e47aaf7db1807806f79cb0657714",
+        "bytes": 2286815,
+        "seconds": 6.574987496999995,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-41d2c4d8a3c5",
+      "prompt": "A children's book illustration featuring a 4-panel comic strip showing a snail racing a turtle, with a speech bubble containing \"Not again!\". Bright and cheerful atmosphere. Highly detailed. Children's book artwork, gouache style.",
+      "seed": 1104331992,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "comics",
+      "teacher": {
+        "name": "p1-41d2c4d8a3c5-teacher.png",
+        "sha256": "cffef90aeff8ea8063d375c629ab8393127c9c0b1415b65b5f632821e36878cc",
+        "bytes": 1878970,
+        "seconds": 6.787669062999996,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-41d2c4d8a3c5-pretrained.png",
+        "sha256": "46fbd93a3fb8a73a8267cc8826cfd45e25c5f478ed7bd051462c18306237093d",
+        "bytes": 1878150,
+        "seconds": 6.578291855000003,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-41d2c4d8a3c5-trained.png",
+        "sha256": "99a98bdad59e0681a21ddad0f9eca584d47373368e012bc4b8d3d464f826ca45",
+        "bytes": 1853525,
+        "seconds": 6.60924765499999,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-a0e8be3902b4",
+      "prompt": "a robot gardener wearing a yellow backpack, character portrait, late afternoon sun, flat vector art, bold simple shapes",
+      "seed": 2699607609,
+      "width": 832,
+      "height": 1248,
+      "dimension": "creative",
+      "subdimension": "character_design",
+      "teacher": {
+        "name": "p1-a0e8be3902b4-teacher.png",
+        "sha256": "13875908a9f54e92b2834d1136e39b42b27a52fe652b5d1fce9fe387a71ea817",
+        "bytes": 1038601,
+        "seconds": 6.750913286000014,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-a0e8be3902b4-pretrained.png",
+        "sha256": "40484542d07ccbaf8efaa8d1ca7133f03db19af7d3a645c6edcc289945d184ec",
+        "bytes": 1051307,
+        "seconds": 6.561533345000015,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-a0e8be3902b4-trained.png",
+        "sha256": "66b4f2c6274b9e47392ba84ebdcb7a87f5d7ffde9dd838e36c9f5d24d7b0eab4",
+        "bytes": 1053429,
+        "seconds": 6.564458428000023,
+        "reused": false
+      }
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "prompt": "a science fair poster with the title \"CRIMSON HARBOR\" and the tagline \"Visit Kyoto\", featuring a windmill, whimsical mood, graphic design, clean typography, print layout",
+      "seed": 2180783444,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "teacher": {
+        "name": "p1-81fc1d548f81-teacher.png",
+        "sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
+        "bytes": 1408297,
+        "seconds": 6.914484766000015,
+        "reused": false
+      },
+      "pretrained": {
+        "name": "p1-81fc1d548f81-pretrained.png",
+        "sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
+        "bytes": 1444898,
+        "seconds": 6.70828589300001,
+        "reused": false
+      },
+      "trained": {
+        "name": "p1-81fc1d548f81-trained.png",
+        "sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
+        "bytes": 1380875,
+        "seconds": 6.735674433000042,
+        "reused": false
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p1-04dd70c5760f-teacher.png",
+      "sha256": "81573f14d4b77f23596519d37dca7c66a8442a5937644602f95a900d5d6783e1",
+      "bytes": 1506512,
+      "seconds": 9.205586326000002,
+      "reused": false
+    },
+    {
+      "name": "p1-04dd70c5760f-pretrained.png",
+      "sha256": "ae02e1367ddcb251962649d832f168cf916b7ef42bac018476383979c1c00a05",
+      "bytes": 1527961,
+      "seconds": 6.704259524999998,
+      "reused": false
+    },
+    {
+      "name": "p1-04dd70c5760f-trained.png",
+      "sha256": "0bd8848d99439bfe7692667ef88c8ac95861871fa8e2ac30e07b3c58a8f28ba9",
+      "bytes": 1532219,
+      "seconds": 6.684788665000042,
+      "reused": false
+    },
+    {
+      "name": "p1-1461526cb2e1-teacher.png",
+      "sha256": "423a279008ba5dc6d991cfc5150d2a72fd0909c2650c0224d060b565563d28e3",
+      "bytes": 1232575,
+      "seconds": 6.796004367000002,
+      "reused": false
+    },
+    {
+      "name": "p1-1461526cb2e1-pretrained.png",
+      "sha256": "b51ae0f6c649fd7487ce36bfaa1928e062d5d73181eb4afd6240d8e8d76df5a5",
+      "bytes": 1279478,
+      "seconds": 6.597382702999994,
+      "reused": false
+    },
+    {
+      "name": "p1-1461526cb2e1-trained.png",
+      "sha256": "388fce7976ba51c124be50bc3c437417b3b5f4085ce0eda898bad2905e003b2d",
+      "bytes": 1252696,
+      "seconds": 6.586563703000024,
+      "reused": false
+    },
+    {
+      "name": "p1-ad4f062f00ce-teacher.png",
+      "sha256": "b0a5bab3ea71a9cc70f05a93accb4afb77689c0ad9d681ab7c24af79b0685544",
+      "bytes": 1528751,
+      "seconds": 6.778312759999999,
+      "reused": false
+    },
+    {
+      "name": "p1-ad4f062f00ce-pretrained.png",
+      "sha256": "b0b48ae16e20fe76c8fafd101501f2c7e511dabb24bf48066c2b29b7a85791bc",
+      "bytes": 1497217,
+      "seconds": 6.599545871000004,
+      "reused": false
+    },
+    {
+      "name": "p1-ad4f062f00ce-trained.png",
+      "sha256": "dfbb9318580957bfa0d8a7745d6763ae98354a3a400dcb1dcdb7c90b3234a9e8",
+      "bytes": 1508724,
+      "seconds": 6.576986078999994,
+      "reused": false
+    },
+    {
+      "name": "p1-06e87c218dc9-teacher.png",
+      "sha256": "2f4f66f2eae7f2b82bb48034a8b19b677dcd4715f30ad89b378c59df9b0fd60b",
+      "bytes": 1198964,
+      "seconds": 6.967621429000005,
+      "reused": false
+    },
+    {
+      "name": "p1-06e87c218dc9-pretrained.png",
+      "sha256": "589fd133971a8b2338a21ea3dbbcadedbe46130e19cd787e1d6f8955543d12c2",
+      "bytes": 1221660,
+      "seconds": 6.577843825000002,
+      "reused": false
+    },
+    {
+      "name": "p1-06e87c218dc9-trained.png",
+      "sha256": "c2d17b59fce0b566fc3b39cc22ecbdc3f8218ee3541ff76f624b24d51579381f",
+      "bytes": 1222614,
+      "seconds": 6.559880631999988,
+      "reused": false
+    },
+    {
+      "name": "p1-edabf134dd58-teacher.png",
+      "sha256": "7fde50eb847ed6f9ea8926b6aebac7a07818a1cece30bbf213018ea4ca260fd8",
+      "bytes": 2120212,
+      "seconds": 6.868967094000013,
+      "reused": false
+    },
+    {
+      "name": "p1-edabf134dd58-pretrained.png",
+      "sha256": "1ef4cd7de781c60779af618941bd2fab01268e4e2428c945aa871c9a1d715773",
+      "bytes": 2125482,
+      "seconds": 6.691252527999978,
+      "reused": false
+    },
+    {
+      "name": "p1-edabf134dd58-trained.png",
+      "sha256": "44813c449e3fd6a79df7b661c28339190e6ebe36d03a77c6336e9163c73b4135",
+      "bytes": 2120062,
+      "seconds": 6.672004326000035,
+      "reused": false
+    },
+    {
+      "name": "p1-71c9b74b1792-teacher.png",
+      "sha256": "b6c56ea7bd381c5e4e33b6c7892442b69e116bf2a6e3b6501fd732f0fc540b67",
+      "bytes": 1861703,
+      "seconds": 6.782529736000001,
+      "reused": false
+    },
+    {
+      "name": "p1-71c9b74b1792-pretrained.png",
+      "sha256": "7e6c98bb2ee413a6168108e290d94d6698de6b9205ac839e1ab32fc37c6e5e0b",
+      "bytes": 1854362,
+      "seconds": 6.583253206999984,
+      "reused": false
+    },
+    {
+      "name": "p1-71c9b74b1792-trained.png",
+      "sha256": "a61a0bedc827a12238fb9de738abff5527a7124b9961e3e949551247546e2e35",
+      "bytes": 1822932,
+      "seconds": 6.563844608000011,
+      "reused": false
+    },
+    {
+      "name": "p1-7f1939b2c5e7-teacher.png",
+      "sha256": "1828cc798587e4069ea7b29bd24bf962e80f9dd705993c43f312d428833d8542",
+      "bytes": 2045579,
+      "seconds": 6.885043736,
+      "reused": false
+    },
+    {
+      "name": "p1-7f1939b2c5e7-pretrained.png",
+      "sha256": "e022e8280f3d9422184aea89a05389b231381983d9c6655ef9dc991bb2a4de9d",
+      "bytes": 1915905,
+      "seconds": 6.684606945000013,
+      "reused": false
+    },
+    {
+      "name": "p1-7f1939b2c5e7-trained.png",
+      "sha256": "88572a90956d8438a58786050954b4d8933eb167cc388d7236f346d2da2d3962",
+      "bytes": 1925329,
+      "seconds": 6.693833917000006,
+      "reused": false
+    },
+    {
+      "name": "p1-b3fb8e8187c3-teacher.png",
+      "sha256": "61ca722acbca3da6fece8367c480b2595f1407d2964ccbbdec46895847fd3373",
+      "bytes": 2202611,
+      "seconds": 6.907025477000005,
+      "reused": false
+    },
+    {
+      "name": "p1-b3fb8e8187c3-pretrained.png",
+      "sha256": "e073a78b35910334c1a7dc619c0a54ea97b680e23ba72e615a95c9f8b71b8d68",
+      "bytes": 2285001,
+      "seconds": 6.569543745999994,
+      "reused": false
+    },
+    {
+      "name": "p1-b3fb8e8187c3-trained.png",
+      "sha256": "28f94b72f142b7016df3f6c7338cf5a39ec0e47aaf7db1807806f79cb0657714",
+      "bytes": 2286815,
+      "seconds": 6.574987496999995,
+      "reused": false
+    },
+    {
+      "name": "p1-41d2c4d8a3c5-teacher.png",
+      "sha256": "cffef90aeff8ea8063d375c629ab8393127c9c0b1415b65b5f632821e36878cc",
+      "bytes": 1878970,
+      "seconds": 6.787669062999996,
+      "reused": false
+    },
+    {
+      "name": "p1-41d2c4d8a3c5-pretrained.png",
+      "sha256": "46fbd93a3fb8a73a8267cc8826cfd45e25c5f478ed7bd051462c18306237093d",
+      "bytes": 1878150,
+      "seconds": 6.578291855000003,
+      "reused": false
+    },
+    {
+      "name": "p1-41d2c4d8a3c5-trained.png",
+      "sha256": "99a98bdad59e0681a21ddad0f9eca584d47373368e012bc4b8d3d464f826ca45",
+      "bytes": 1853525,
+      "seconds": 6.60924765499999,
+      "reused": false
+    },
+    {
+      "name": "p1-a0e8be3902b4-teacher.png",
+      "sha256": "13875908a9f54e92b2834d1136e39b42b27a52fe652b5d1fce9fe387a71ea817",
+      "bytes": 1038601,
+      "seconds": 6.750913286000014,
+      "reused": false
+    },
+    {
+      "name": "p1-a0e8be3902b4-pretrained.png",
+      "sha256": "40484542d07ccbaf8efaa8d1ca7133f03db19af7d3a645c6edcc289945d184ec",
+      "bytes": 1051307,
+      "seconds": 6.561533345000015,
+      "reused": false
+    },
+    {
+      "name": "p1-a0e8be3902b4-trained.png",
+      "sha256": "66b4f2c6274b9e47392ba84ebdcb7a87f5d7ffde9dd838e36c9f5d24d7b0eab4",
+      "bytes": 1053429,
+      "seconds": 6.564458428000023,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-teacher.png",
+      "sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
+      "bytes": 1408297,
+      "seconds": 6.914484766000015,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-pretrained.png",
+      "sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
+      "bytes": 1444898,
+      "seconds": 6.70828589300001,
+      "reused": false
+    },
+    {
+      "name": "p1-81fc1d548f81-trained.png",
+      "sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
+      "bytes": 1380875,
+      "seconds": 6.735674433000042,
+      "reused": false
+    }
+  ],
+  "calls": {
+    "teacher": 11,
+    "pretrained": 11,
+    "trained": 11
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3"
+}

@@ -1,0 +1,42 @@
+{
+  "request_key": "5570ead16061e5e61d0cf1c87328f56fbc5f1dc5c9122e32661850c831b05ba4",
+  "job": {
+    "row": {
+      "eval_id": "internal-p1-4a1cdb170e44",
+      "set": "internal",
+      "source_id": "p1-4a1cdb170e44",
+      "prompt": "\u4e00\u53ea\u5c0f\u578b\u72d0\u72f8\u72b6\u751f\u7269\uff0c\u5e26\u6709\u6c34\u6676\u9e7f\u89d2\uff0c3D\u6e32\u67d3",
+      "language": "zh",
+      "seed": 1243405079,
+      "aspect_ratio": "21:9",
+      "width": 1568,
+      "height": 672,
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "dimension": "creative",
+      "subdimension": "concept_art",
+      "facet": "creature",
+      "difficulty": 1,
+      "style": "3d_render",
+      "prompt_format": "short",
+      "hard": false,
+      "keywords": []
+    },
+    "layer": 4
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-28T17:11:09.469469+00:00",
+  "bypass_calls": 40,
+  "image_sha256": "322a3b00017c2eb3e2ceb5bf20182b968715e6b2497df02c41bbe4e0f72b751c",
+  "teacher_image_sha256": "b9a02f7d2863bb372ef8da9ef3a77240dc3795542a13e298f6065c31f2f05a4d",
+  "image_size": [
+    1568,
+    672
+  ],
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "generation_seconds": 7.058740153999992,
+  "peak_allocated_gib": 36.86925172805786,
+  "peak_reserved_gib": 38.82421875,
+  "teacher_regenerated": false,
+  "scope": "own full trajectory; individual identity bypass"
+}

@@ -5,8 +5,8 @@
   "source_repository": "https://github.com/Neopolita/niwaki-page",
   "source_commit": "57ce7e4",
   "counts": {
-    "match": 22,
-    "missing": 137,
+    "match": 143,
+    "missing": 16,
     "different": 0
   },
   "artifacts": [
@@ -85,26 +85,26 @@
     {
       "path": "data/phase6/bridge_only_healing_v2/summary.json",
       "expected_sha256": "483f4b824fc089d4c5cced60a003589666ee71effe20c1781c0536059369593c",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "483f4b824fc089d4c5cced60a003589666ee71effe20c1781c0536059369593c",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_healing/summary.json",
       "expected_sha256": "454fd67374c75315d4f8e2999c532ef9184ace7a3437b0616cbba7263004d92d",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "454fd67374c75315d4f8e2999c532ef9184ace7a3437b0616cbba7263004d92d",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_healing_lr_low_v2/summary.json",
       "expected_sha256": "f8d7931e8d6574c4845da51dffbda5ff00630ae05b6d40e83c5c9077445bfee1",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f8d7931e8d6574c4845da51dffbda5ff00630ae05b6d40e83c5c9077445bfee1",
+      "status": "match"
     },
     {
       "path": "data/phase6/paired_images/summary.json",
       "expected_sha256": "36127efa5ee7b827cedde7bccea2bedd1a7a205b987eee43680fc57fc6757d43",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "36127efa5ee7b827cedde7bccea2bedd1a7a205b987eee43680fc57fc6757d43",
+      "status": "match"
     },
     {
       "path": "data/phase6/validation_diagnostic.json",
@@ -115,14 +115,14 @@
     {
       "path": "data/phase6/expanded_validation/summary.json",
       "expected_sha256": "35db62667afb2a451db1b4537f4e8269ad04f6892cab05d7e53013fbdf8b39e0",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "35db62667afb2a451db1b4537f4e8269ad04f6892cab05d7e53013fbdf8b39e0",
+      "status": "match"
     },
     {
       "path": "data/phase6/expanded_trained_validation_v2/summary.json",
       "expected_sha256": "3fb64342698386a3c5a59fb6bb26c75d42c895e88c7646c8a17c882d0e404434",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "3fb64342698386a3c5a59fb6bb26c75d42c895e88c7646c8a17c882d0e404434",
+      "status": "match"
     },
     {
       "path": "data/phase6/expanded_trained_validation_v2/comparison.json",
@@ -133,8 +133,8 @@
     {
       "path": "data/phase6/trained_image_pairs/summary.json",
       "expected_sha256": "9848df82c39ae36d8b5c37a5cb148e1408b514af7a984b3dc50d813fbf705a6e",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "9848df82c39ae36d8b5c37a5cb148e1408b514af7a984b3dc50d813fbf705a6e",
+      "status": "match"
     },
     {
       "path": "data/phase6/trained_image_pairs/visual_review.json",
@@ -145,26 +145,26 @@
     {
       "path": "data/phase6/full_student_continuation/run_v1/summary.json",
       "expected_sha256": "23b2b92d71554962dba3132ce750f5f1aed7a3bd113f8e7adf774fd39c553b35",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "23b2b92d71554962dba3132ce750f5f1aed7a3bd113f8e7adf774fd39c553b35",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/test_v1/summary.json",
       "expected_sha256": "1214b86f8ed12b9782c36e26acc403eaf8145f156c754751f9e9b254148ef0a7",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "1214b86f8ed12b9782c36e26acc403eaf8145f156c754751f9e9b254148ef0a7",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/summary.json",
       "expected_sha256": "cb17aa99fe148115a88a622d56afa9b408c7ce835cd5d5cf3c561ab0e55c75d0",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cb17aa99fe148115a88a622d56afa9b408c7ce835cd5d5cf3c561ab0e55c75d0",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/update120_images_v1/summary.json",
       "expected_sha256": "222eeed6884ec0b8afa38fcbb7d204842dd98e3e6c1e21606397571987efe845",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "222eeed6884ec0b8afa38fcbb7d204842dd98e3e6c1e21606397571987efe845",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/five_way_sheets.json",
@@ -181,8 +181,8 @@
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/summary.json",
       "expected_sha256": "eaad0383cc374ecec8bf4a8c0bc239209c98ef6f666fe2ded0bbb8f161082152",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "eaad0383cc374ecec8bf4a8c0bc239209c98ef6f666fe2ded0bbb8f161082152",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/review_summary.json",
@@ -205,8 +205,8 @@
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/summary.json",
       "expected_sha256": "e82a25f7e4ec99cc701a9fcde3856b3b09bd7dab4ef7a7d15970da9d3c6ebe34",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "e82a25f7e4ec99cc701a9fcde3856b3b09bd7dab4ef7a7d15970da9d3c6ebe34",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/review_summary.json",
@@ -241,56 +241,56 @@
     {
       "path": "data/phase7/four_block_replay/summary.json",
       "expected_sha256": "d68322e348945a4d40724038529cd9b8c499cf7163c1290cf1341ab162873536",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "d68322e348945a4d40724038529cd9b8c499cf7163c1290cf1341ab162873536",
+      "status": "match"
     },
     {
       "path": "data/phase7/region_bridge_fit/summary.json",
       "expected_sha256": "7ca6e0d33bbdd5a6ccba8a0660771a522594fe926d1238a9cb48da90e8bb8f3a",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "7ca6e0d33bbdd5a6ccba8a0660771a522594fe926d1238a9cb48da90e8bb8f3a",
+      "status": "match"
     },
     {
       "path": "data/phase7/region_replay/summary.json",
       "expected_sha256": "46de60292817548d42ad9ed22d1cc6a14dc58782ba99fbf205fbcf70b90929ed",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "46de60292817548d42ad9ed22d1cc6a14dc58782ba99fbf205fbcf70b90929ed",
+      "status": "match"
     },
     {
       "path": "data/phase7/full_student_healing/summary.json",
       "expected_sha256": "bb06eecd7a43d014f7cc540dd2758dce304e81733ab96f24c6533c3c8b411ee5",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "bb06eecd7a43d014f7cc540dd2758dce304e81733ab96f24c6533c3c8b411ee5",
+      "status": "match"
     },
     {
       "path": "data/phase7/stage_balanced_grid/lr_1e-6/summary.json",
       "expected_sha256": "5ef22a8f5e15e1f66363e51e5e75bf426624c2fd311ed9a14081e29cab441c31",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "5ef22a8f5e15e1f66363e51e5e75bf426624c2fd311ed9a14081e29cab441c31",
+      "status": "match"
     },
     {
       "path": "data/phase7/stage_balanced_grid/lr_3e-6/summary.json",
       "expected_sha256": "87216830bf26d363190e5a5f1a5be733c1d55206fd5f9ca5fd794152edea0097",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "87216830bf26d363190e5a5f1a5be733c1d55206fd5f9ca5fd794152edea0097",
+      "status": "match"
     },
     {
       "path": "data/phase7/stage_balanced_grid/lr_1e-5/summary.json",
       "expected_sha256": "a853677032937a0e3fc453e5d2a0bdc2f8048e9d6caadf186ab1a51286e0175e",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "a853677032937a0e3fc453e5d2a0bdc2f8048e9d6caadf186ab1a51286e0175e",
+      "status": "match"
     },
     {
       "path": "data/phase7/stage_balanced_grid/lr_3e-5/summary.json",
       "expected_sha256": "f1315a02869b1128bcc598dabc1a25b0b8cb71cbc5a2c56bed723ff9c17a1234",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f1315a02869b1128bcc598dabc1a25b0b8cb71cbc5a2c56bed723ff9c17a1234",
+      "status": "match"
     },
     {
       "path": "data/phase7/stage_balanced_continuation/summary.json",
       "expected_sha256": "2b47aa466bc02fc449a6cd6b1739621b75fc533965c0a38e02833d26e6bb8d06",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "2b47aa466bc02fc449a6cd6b1739621b75fc533965c0a38e02833d26e6bb8d06",
+      "status": "match"
     },
     {
       "path": "data/phase7/early_capture_v2/index.json",
@@ -301,38 +301,38 @@
     {
       "path": "data/phase7/early_pool_healing/summary.json",
       "expected_sha256": "09468c41e076cd4673dc28ae5b81c636c2c3bc825c70548e04b332d144cafd89",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "09468c41e076cd4673dc28ae5b81c636c2c3bc825c70548e04b332d144cafd89",
+      "status": "match"
     },
     {
       "path": "data/phase7/region_bridge_fit_4_5/summary.json",
       "expected_sha256": "ecfda58aae622d44ca831642bd53b90155cad53ecb5952b0b3a85bec419aac50",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "ecfda58aae622d44ca831642bd53b90155cad53ecb5952b0b3a85bec419aac50",
+      "status": "match"
     },
     {
       "path": "data/phase7/region_replay_4_5/summary.json",
       "expected_sha256": "d1e0ac8636a364ce870b416e271ba14e4ba6cbecd42071c8f129b74ecc406649",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "d1e0ac8636a364ce870b416e271ba14e4ba6cbecd42071c8f129b74ecc406649",
+      "status": "match"
     },
     {
       "path": "data/phase7/blocks45_healing_v3/summary.json",
       "expected_sha256": "9d7ab1de6cdcd3acc20524b4cd461414dc6d1e1999b7019771afae3a5ec3cd39",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "9d7ab1de6cdcd3acc20524b4cd461414dc6d1e1999b7019771afae3a5ec3cd39",
+      "status": "match"
     },
     {
       "path": "data/phase7/candidate_images/summary_blocks45.json",
       "expected_sha256": "477e9ecf4ec9fab040cfd567bff7d795c444963e5fc08e98692a9e0ff1c1d386",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "477e9ecf4ec9fab040cfd567bff7d795c444963e5fc08e98692a9e0ff1c1d386",
+      "status": "match"
     },
     {
       "path": "data/phase7/candidate_images/summary_blocks25.json",
       "expected_sha256": "4b253490e629d8b77c965faefafbc771388957acd97c37a9cc2289c0ac128f9f",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4b253490e629d8b77c965faefafbc771388957acd97c37a9cc2289c0ac128f9f",
+      "status": "match"
     },
     {
       "path": "data/phase7/candidate_images/visual_review.json",
@@ -409,560 +409,560 @@
     {
       "path": "data/phase6/trained_image_pairs/p1-81fc1d548f81-teacher.png",
       "expected_sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
+      "status": "match"
     },
     {
       "path": "data/phase6/trained_image_pairs/p1-81fc1d548f81-pretrained.png",
       "expected_sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
+      "status": "match"
     },
     {
       "path": "data/phase6/trained_image_pairs/p1-81fc1d548f81-trained.png",
       "expected_sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/p1-81fc1d548f81-teacher.png",
       "expected_sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "dc24b699db16c0b0930324b4c475126724a300fb5865449c0382cb4814f94bd3",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/p1-81fc1d548f81-pretrained.png",
       "expected_sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "badc7974ea8016db13ab4e8291449a5044a4f4659eb89711b9372a373957a10b",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/p1-81fc1d548f81-update60.png",
       "expected_sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "6df506538c7547f46d7e100b3c7472249c958e4d020b4c9bdabd35aa4b1f5b96",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/update120_images_v1/p1-81fc1d548f81-update120.png",
       "expected_sha256": "215722cb1b67f3474881596a4b38bdcc9a32584951b4ffd3fe3c33718c1726bb",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "215722cb1b67f3474881596a4b38bdcc9a32584951b4ffd3fe3c33718c1726bb",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/p1-81fc1d548f81-update180.png",
       "expected_sha256": "f3dfc13644e5f47ea62684fbb34cbb8edec3a145c32e3bc9257b5d1622ea1420",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f3dfc13644e5f47ea62684fbb34cbb8edec3a145c32e3bc9257b5d1622ea1420",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/five_way_sheet_1.png",
       "expected_sha256": "cf6dbf043c7cc5b2e78c24faf941091eba003e288102db12604fae837f86f674",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cf6dbf043c7cc5b2e78c24faf941091eba003e288102db12604fae837f86f674",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/five_way_sheet_2.png",
       "expected_sha256": "e8ffc6c6afd47f4bd215d376cc6b7307a875871bedcd89f60fab74d69e8d89be",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "e8ffc6c6afd47f4bd215d376cc6b7307a875871bedcd89f60fab74d69e8d89be",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/images_v1/five_way_sheet_3.png",
       "expected_sha256": "20e18613d2640f057416c312624368de67849d0cb6f0ee40db4f75fcd2b04c97",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "20e18613d2640f057416c312624368de67849d0cb6f0ee40db4f75fcd2b04c97",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/text_sheet_1.png",
       "expected_sha256": "752a837d248a5fee0240211a0491d8a20f935f7f3058910114390d49c6a0cf63",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "752a837d248a5fee0240211a0491d8a20f935f7f3058910114390d49c6a0cf63",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/text_sheet_2.png",
       "expected_sha256": "d1922fe1bed761297e831cb1d726021463029db373e2d90a69d2497324bead0c",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "d1922fe1bed761297e831cb1d726021463029db373e2d90a69d2497324bead0c",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/text_sheet_3.png",
       "expected_sha256": "11ab88e2cca27b74f4fcbb43875b9286c3a926bbb7f99af0196b8c5c5f02b34f",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "11ab88e2cca27b74f4fcbb43875b9286c3a926bbb7f99af0196b8c5c5f02b34f",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/text_sheet_4.png",
       "expected_sha256": "7df1019df8445b9581612575dbbb05b320b3f72759ae3227bcea32a6acc45e51",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "7df1019df8445b9581612575dbbb05b320b3f72759ae3227bcea32a6acc45e51",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_01.png",
       "expected_sha256": "84a7d2b5e3e79cff8452b28acc9813cbd73ce59d54c843d06d6f3eeb373899aa",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "84a7d2b5e3e79cff8452b28acc9813cbd73ce59d54c843d06d6f3eeb373899aa",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_02.png",
       "expected_sha256": "8055eb3b7d57d1967b75c3f867fef51540267653c33c3e5797e4d94c9779127c",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "8055eb3b7d57d1967b75c3f867fef51540267653c33c3e5797e4d94c9779127c",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_03.png",
       "expected_sha256": "2e9bac0cdc3eccab3a3a6e245cb4f4333139b2da817ac003dd6daa85dfd9823f",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "2e9bac0cdc3eccab3a3a6e245cb4f4333139b2da817ac003dd6daa85dfd9823f",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_04.png",
       "expected_sha256": "a8965c7f5e9d406ec238cb9b62c67810eaf04ee2d647cdd70e4996dce39ca8a3",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "a8965c7f5e9d406ec238cb9b62c67810eaf04ee2d647cdd70e4996dce39ca8a3",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_05.png",
       "expected_sha256": "f44bab6e0ea176e6fc9bd4c70fdb0a992b22a96d8fc69a1df65b4117b5618a47",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f44bab6e0ea176e6fc9bd4c70fdb0a992b22a96d8fc69a1df65b4117b5618a47",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_06.png",
       "expected_sha256": "969349312eb6fe77a8e8c7c0a09f28d424e72c70ef6300e8881167ee72bdc112",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "969349312eb6fe77a8e8c7c0a09f28d424e72c70ef6300e8881167ee72bdc112",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_07.png",
       "expected_sha256": "96cea7005e6205afa839e9704006be6c5afb54a4f9be2b27e26126cdf4f24588",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "96cea7005e6205afa839e9704006be6c5afb54a4f9be2b27e26126cdf4f24588",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_08.png",
       "expected_sha256": "cb2bffec8ac52201cdb89f6e76c629cc6b9cb2f2fe485bb4c67e96326531c432",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cb2bffec8ac52201cdb89f6e76c629cc6b9cb2f2fe485bb4c67e96326531c432",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_09.png",
       "expected_sha256": "cfe69776353efd0472d14212d96883c8c704036f73219b2953954430ac0da70c",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cfe69776353efd0472d14212d96883c8c704036f73219b2953954430ac0da70c",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_10.png",
       "expected_sha256": "dbfc64f54c4cd9505764d1c11aad05fc2129c1f8a6c8a2a82a76f8d653671da9",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "dbfc64f54c4cd9505764d1c11aad05fc2129c1f8a6c8a2a82a76f8d653671da9",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_11.png",
       "expected_sha256": "0188c84798329bedb6670652cd5920a0047f24d5570fa098ae6922dd4baf04ab",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "0188c84798329bedb6670652cd5920a0047f24d5570fa098ae6922dd4baf04ab",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_12.png",
       "expected_sha256": "382943394a77394e6553ac37d66b9d77cce13af61af23f9f8b9fe0ed5e3d6375",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "382943394a77394e6553ac37d66b9d77cce13af61af23f9f8b9fe0ed5e3d6375",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_13.png",
       "expected_sha256": "cdc0d6444f8db633a809f36ba5433cd7ea2ac4eff4bc72af72077f9146051121",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cdc0d6444f8db633a809f36ba5433cd7ea2ac4eff4bc72af72077f9146051121",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_14.png",
       "expected_sha256": "c593d15348869d32b7b021de12575a9344b9efeaa60d4b65f5aab26b9ec26291",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "c593d15348869d32b7b021de12575a9344b9efeaa60d4b65f5aab26b9ec26291",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_qa_validation_v1/labeled_sheet_15.png",
       "expected_sha256": "4b855d875b47756fa656c96be2aed5e4ecccb6ff0bb5f8883f8ce3505f5f76b5",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4b855d875b47756fa656c96be2aed5e4ecccb6ff0bb5f8883f8ce3505f5f76b5",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-9225ba4ccf76-teacher.png",
       "expected_sha256": "7a61798a86e11c2b1c518197ff01836400f8f6e95a61ccb6cc0146e0430d4871",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "7a61798a86e11c2b1c518197ff01836400f8f6e95a61ccb6cc0146e0430d4871",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-9225ba4ccf76-pretrained.png",
       "expected_sha256": "4991b8908a0d87b53862b9d4d3e4b3c43c6737cb68bc798a1859839eaf137c4a",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4991b8908a0d87b53862b9d4d3e4b3c43c6737cb68bc798a1859839eaf137c4a",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-9225ba4ccf76-update120.png",
       "expected_sha256": "4b8043ea663bb6789d084985d5bdddbe62c3555c6659813b9be97713530b69cc",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4b8043ea663bb6789d084985d5bdddbe62c3555c6659813b9be97713530b69cc",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-9225ba4ccf76-update180.png",
       "expected_sha256": "8b64a5679967d5a9bb49ea18f97ab1a201ac70304944915fd97a4022949942da",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "8b64a5679967d5a9bb49ea18f97ab1a201ac70304944915fd97a4022949942da",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-5962716b5dc8-teacher.png",
       "expected_sha256": "c2d45658b4a3be921206093a182b12c68f3ec92830d3904d59180b09dbd03c8e",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "c2d45658b4a3be921206093a182b12c68f3ec92830d3904d59180b09dbd03c8e",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-5962716b5dc8-pretrained.png",
       "expected_sha256": "3575438c3e210f83bb506c0f6741a04cb104ac9a8b8d6ababf21aa99a2d8b29f",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "3575438c3e210f83bb506c0f6741a04cb104ac9a8b8d6ababf21aa99a2d8b29f",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-5962716b5dc8-update120.png",
       "expected_sha256": "adf383ee899fed5f4cf8e317f0fe4d3221293a5957e845f1de4c3c48b7468575",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "adf383ee899fed5f4cf8e317f0fe4d3221293a5957e845f1de4c3c48b7468575",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-5962716b5dc8-update180.png",
       "expected_sha256": "72d6ec0b37cb9113ecbc3f634a6bbb0a719022d687569816cdd78d3e5ea6ee59",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "72d6ec0b37cb9113ecbc3f634a6bbb0a719022d687569816cdd78d3e5ea6ee59",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-30b3b241cfaa-teacher.png",
       "expected_sha256": "f3cf40952f2f245e9352c676bf492dabb4baf3b9b243a4e9e101120096bba18d",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f3cf40952f2f245e9352c676bf492dabb4baf3b9b243a4e9e101120096bba18d",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-30b3b241cfaa-pretrained.png",
       "expected_sha256": "8b36a7f7677190c1d8f15bf02364872f2f59c94335d92d82edb24c89a30df6aa",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "8b36a7f7677190c1d8f15bf02364872f2f59c94335d92d82edb24c89a30df6aa",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-30b3b241cfaa-update120.png",
       "expected_sha256": "ed14bf47442dad8161853707b1b9b5ac91b59a08181bbc2ffe2e04720b341f59",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "ed14bf47442dad8161853707b1b9b5ac91b59a08181bbc2ffe2e04720b341f59",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/text_hypothesis_v1/p1-30b3b241cfaa-update180.png",
       "expected_sha256": "e1bb0cd4dabca1f07e2755501467a34e1e58836dbaad20f32b9635e2c2483844",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "e1bb0cd4dabca1f07e2755501467a34e1e58836dbaad20f32b9635e2c2483844",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_01_p1-0c99a4e9e487.jpg",
       "expected_sha256": "5bd3abde6386c6fe38b0f0a795b5dd4a1760e8ee340c8b471cbe5b2bc07ebec1",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "5bd3abde6386c6fe38b0f0a795b5dd4a1760e8ee340c8b471cbe5b2bc07ebec1",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_02_p1-2f254870e71a.jpg",
       "expected_sha256": "1bafc4de04c6f332cfd78f85f1fbac01f64d9870684ccf5a7305cfd607fc5e41",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "1bafc4de04c6f332cfd78f85f1fbac01f64d9870684ccf5a7305cfd607fc5e41",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_03_p1-79d1abf1854a.jpg",
       "expected_sha256": "f71fcd90cea6b74933772d0f2f626258a02596178530fe27a9526f1503931ebf",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f71fcd90cea6b74933772d0f2f626258a02596178530fe27a9526f1503931ebf",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_04_p1-885aa50e2805.jpg",
       "expected_sha256": "8d818fcb6e11340d89fe142bfbc070fb034b2776752dc73f713166a718dc7f4d",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "8d818fcb6e11340d89fe142bfbc070fb034b2776752dc73f713166a718dc7f4d",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_05_p1-c960b5387a4c.jpg",
       "expected_sha256": "cc5ffca61c161bb6e00471ca155a12d68df13476fccd4ff997698c82c45b883e",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cc5ffca61c161bb6e00471ca155a12d68df13476fccd4ff997698c82c45b883e",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_06_p1-a706ef27d981.jpg",
       "expected_sha256": "9fa9ca639a3f77b4c5446af5458045444f11f40ac1a5c047c40c98c46e90f758",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "9fa9ca639a3f77b4c5446af5458045444f11f40ac1a5c047c40c98c46e90f758",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_07_p1-c022b2c076da.jpg",
       "expected_sha256": "436f765d841bc6151be8d6d4a05ce7ccf1d88983ade5e324d70c71d58c750683",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "436f765d841bc6151be8d6d4a05ce7ccf1d88983ade5e324d70c71d58c750683",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/decision_examples/example_08_p1-fd180db9136c.jpg",
       "expected_sha256": "ab833c31cd7dbd386238327565a7a6d629abd5f4c4f9c3ae240751223d3cd620",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "ab833c31cd7dbd386238327565a7a6d629abd5f4c4f9c3ae240751223d3cd620",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_01.jpg",
       "expected_sha256": "d72334f96385a28f2ddd05728bf661eb852bcee6fd9c99579efa47a037510484",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "d72334f96385a28f2ddd05728bf661eb852bcee6fd9c99579efa47a037510484",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_02.jpg",
       "expected_sha256": "592c5fd102868422abd3194b63e7db9c60235f599afda682105532b61f3e1ecb",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "592c5fd102868422abd3194b63e7db9c60235f599afda682105532b61f3e1ecb",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_03.jpg",
       "expected_sha256": "b7016c1f376e2aa3089a7e6db79425bd865b58ce8a11de6854b221ceb0aa717e",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "b7016c1f376e2aa3089a7e6db79425bd865b58ce8a11de6854b221ceb0aa717e",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_04.jpg",
       "expected_sha256": "cb3124d5eb577c66e5d168199cd7b8c07f6aa0523f6aea12fded4a14f9c1abf9",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cb3124d5eb577c66e5d168199cd7b8c07f6aa0523f6aea12fded4a14f9c1abf9",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_05.jpg",
       "expected_sha256": "7770f3d15a764c7529fc3c485a10a791969c6063048925898a3d50ec122ccc82",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "7770f3d15a764c7529fc3c485a10a791969c6063048925898a3d50ec122ccc82",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_06.jpg",
       "expected_sha256": "396030b1415e0a01e4836639b098b8d85650496a187446861b0471eff834fec0",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "396030b1415e0a01e4836639b098b8d85650496a187446861b0471eff834fec0",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_07.jpg",
       "expected_sha256": "754c8c9316712e3187fd91ce55bf2c5b233eb4260e53351574b807558861d05d",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "754c8c9316712e3187fd91ce55bf2c5b233eb4260e53351574b807558861d05d",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_08.jpg",
       "expected_sha256": "80c2f610f76ad3663555dc5b1c3fd9d160cae8604cf6e605fb8ec25c921d2f17",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "80c2f610f76ad3663555dc5b1c3fd9d160cae8604cf6e605fb8ec25c921d2f17",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_09.jpg",
       "expected_sha256": "9927911628fc2d6c7d9915c45405986221cd5e95169a2421e28e496e4a303b61",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "9927911628fc2d6c7d9915c45405986221cd5e95169a2421e28e496e4a303b61",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_10.jpg",
       "expected_sha256": "f79c797c1eb377cbadb4a259a936ebf658e5611a9c2c4be5d0b57afd25a422c4",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f79c797c1eb377cbadb4a259a936ebf658e5611a9c2c4be5d0b57afd25a422c4",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_11.jpg",
       "expected_sha256": "2bb006f24501339f160a3b5c6f973adc8ae9aef956df1600b6db1ecab7c97c91",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "2bb006f24501339f160a3b5c6f973adc8ae9aef956df1600b6db1ecab7c97c91",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_12.jpg",
       "expected_sha256": "c2849628d1f9df8f34719cd5e23166d0ccc5bf39f48c076ca61e61bc7b86419f",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "c2849628d1f9df8f34719cd5e23166d0ccc5bf39f48c076ca61e61bc7b86419f",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_13.jpg",
       "expected_sha256": "df2d116969c7f0af7e0a46dffe755e2688224bc720bdbc9df90316979b5cf401",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "df2d116969c7f0af7e0a46dffe755e2688224bc720bdbc9df90316979b5cf401",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_14.jpg",
       "expected_sha256": "4ca8ee9dcc58531891ca1746dd637eb26a315947bfc7136f794efa4d1fd96492",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4ca8ee9dcc58531891ca1746dd637eb26a315947bfc7136f794efa4d1fd96492",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_15.jpg",
       "expected_sha256": "2ff2e076c215661faae50a8d075adb8f35b1948245f02b67625054bfe2a110c9",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "2ff2e076c215661faae50a8d075adb8f35b1948245f02b67625054bfe2a110c9",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_16.jpg",
       "expected_sha256": "2e6fc8cc483c6b12abf8aec1dc87f791c8514aa993c6299dfe7a0d5f8181e04b",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "2e6fc8cc483c6b12abf8aec1dc87f791c8514aa993c6299dfe7a0d5f8181e04b",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_17.jpg",
       "expected_sha256": "3bc32475be770dcabfdb3852d65fd20c90e89b6145f0963f405b5e9bc0635e25",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "3bc32475be770dcabfdb3852d65fd20c90e89b6145f0963f405b5e9bc0635e25",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_18.jpg",
       "expected_sha256": "f802168406a7ef7551cd47e99423d405e371e3480f21036c0f259db8aadfb035",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f802168406a7ef7551cd47e99423d405e371e3480f21036c0f259db8aadfb035",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_19.jpg",
       "expected_sha256": "d8eba736d8a0962152e359747f3498f52844a5388896e0569029acc9761dbe73",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "d8eba736d8a0962152e359747f3498f52844a5388896e0569029acc9761dbe73",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_20.jpg",
       "expected_sha256": "b46a5f0cbfe9c7f6b756669df5fda0002fea03a6da709c695db9c8cf1273d47c",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "b46a5f0cbfe9c7f6b756669df5fda0002fea03a6da709c695db9c8cf1273d47c",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_21.jpg",
       "expected_sha256": "3b874e37efa6b621d1d748e3406ce6f24a89a62ae6f96269d658e832238a3a55",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "3b874e37efa6b621d1d748e3406ce6f24a89a62ae6f96269d658e832238a3a55",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_22.jpg",
       "expected_sha256": "029c00945d02f5f4f99cc4c5c2bb53e9fd489f21c7c560ae59e51b85e7d38bb1",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "029c00945d02f5f4f99cc4c5c2bb53e9fd489f21c7c560ae59e51b85e7d38bb1",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_23.jpg",
       "expected_sha256": "8a5f14e36c1af8100f602c94e6f8a6de9142a5600189a2bcb93528678790a2c6",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "8a5f14e36c1af8100f602c94e6f8a6de9142a5600189a2bcb93528678790a2c6",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_24.jpg",
       "expected_sha256": "e1d37a7952288c345de70b474f083844ad69232a30132e8e6b01463057dd586c",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "e1d37a7952288c345de70b474f083844ad69232a30132e8e6b01463057dd586c",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_25.jpg",
       "expected_sha256": "7eb243ed02e99ea5895c954a01c28b6c9574d80e6e2d6f8e02ebc232998621ac",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "7eb243ed02e99ea5895c954a01c28b6c9574d80e6e2d6f8e02ebc232998621ac",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_26.jpg",
       "expected_sha256": "f9bb4ddc0e401ddce76df41e26f40a65f27636f48de38e5bffd0b6b93208871a",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f9bb4ddc0e401ddce76df41e26f40a65f27636f48de38e5bffd0b6b93208871a",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_27.jpg",
       "expected_sha256": "4b46db9982698546dc837bb52936d471d55e6fabe06635dcef25e42c7864105e",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "4b46db9982698546dc837bb52936d471d55e6fabe06635dcef25e42c7864105e",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_28.jpg",
       "expected_sha256": "02629576ac1321aade344e67f9863fedd5a905c496da590102bbc6d4dc8e2605",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "02629576ac1321aade344e67f9863fedd5a905c496da590102bbc6d4dc8e2605",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_29.jpg",
       "expected_sha256": "e10cadf6ab2bea9f8fa53e6c7cfb6a636eac419215c620a7f0445bc997dc9d5a",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "e10cadf6ab2bea9f8fa53e6c7cfb6a636eac419215c620a7f0445bc997dc9d5a",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_30.jpg",
       "expected_sha256": "9e77306a12873cf91f8a4e3f47942c875c1788312c0c664700822b007ff265d7",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "9e77306a12873cf91f8a4e3f47942c875c1788312c0c664700822b007ff265d7",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_31.jpg",
       "expected_sha256": "1ab3358c19870d1714c04b4a8eafb175371d3965c5c44b16c9c2deec8199c8e3",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "1ab3358c19870d1714c04b4a8eafb175371d3965c5c44b16c9c2deec8199c8e3",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_32.jpg",
       "expected_sha256": "1cc94af1ff8b3fb44120cbdcbae56034e53a3959a87b2c89378a6488d256ac90",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "1cc94af1ff8b3fb44120cbdcbae56034e53a3959a87b2c89378a6488d256ac90",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_33.jpg",
       "expected_sha256": "bdb64e01d096b2c7a174d07b25d49c4ae1b1c7755404e094c7793d0f44e19571",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "bdb64e01d096b2c7a174d07b25d49c4ae1b1c7755404e094c7793d0f44e19571",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_34.jpg",
       "expected_sha256": "b87aed7deb1c21efe7550d3c4d1095203ad4aa62bc2c2b8542fa4637fc77db78",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "b87aed7deb1c21efe7550d3c4d1095203ad4aa62bc2c2b8542fa4637fc77db78",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_35.jpg",
       "expected_sha256": "02c79ed8e02927aa9202c394e81ef7c68fa741d3ec6d35750f5b239327e839fd",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "02c79ed8e02927aa9202c394e81ef7c68fa741d3ec6d35750f5b239327e839fd",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_36.jpg",
       "expected_sha256": "04acf14f1156d4bf01cc2cdfc2cff623a8e38b7ab82727aaddce4f6befa680e2",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "04acf14f1156d4bf01cc2cdfc2cff623a8e38b7ab82727aaddce4f6befa680e2",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_37.jpg",
       "expected_sha256": "eeefc6278298e232b27ef0e8e9a941e1a2811f16430c890eab62de50ad853db2",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "eeefc6278298e232b27ef0e8e9a941e1a2811f16430c890eab62de50ad853db2",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_38.jpg",
       "expected_sha256": "aa4cbfc51ba0853981323027cf0b64a0c4be143bd6573bb005e83fb24a8476b6",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "aa4cbfc51ba0853981323027cf0b64a0c4be143bd6573bb005e83fb24a8476b6",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_39.jpg",
       "expected_sha256": "5b7f18c148f0cf0aa7937cb3b37b03be156d27c434a0af4c2aadab1043832884",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "5b7f18c148f0cf0aa7937cb3b37b03be156d27c434a0af4c2aadab1043832884",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_40.jpg",
       "expected_sha256": "d04e812d1fa5e7e73b4ed499616afba945785f4596fb2e60e3fae62f5d9c7aa4",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "d04e812d1fa5e7e73b4ed499616afba945785f4596fb2e60e3fae62f5d9c7aa4",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_41.jpg",
       "expected_sha256": "96ae6c02f3b96ed0df11240ed6d8db76ab7edb56c63540d080597f1f0df372fe",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "96ae6c02f3b96ed0df11240ed6d8db76ab7edb56c63540d080597f1f0df372fe",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_42.jpg",
       "expected_sha256": "f50f88d1a5dfaf712fbcac86027189d3069c96af7240982cd04e6fe65bbc5ea5",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "f50f88d1a5dfaf712fbcac86027189d3069c96af7240982cd04e6fe65bbc5ea5",
+      "status": "match"
     },
     {
       "path": "data/phase6/full_student_continuation/alignment_qa_v1/labeled_sheets/labeled_sheet_43.jpg",
       "expected_sha256": "cef899113f3c334b991fb1947f1eb41d71e85da9d9cb13c32a05d61762624793",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "cef899113f3c334b991fb1947f1eb41d71e85da9d9cb13c32a05d61762624793",
+      "status": "match"
     }
   ],
   "limitations": [

@@ -1,0 +1,26 @@
+{
+  "request_key": "9b5ffb887f2433e5bd5e76c842a4bfb44d98eb8df2311960fc8832fa2f5efa05",
+  "status": "failed",
+  "teacher_calls": 1,
+  "student_calls": 0,
+  "optimizer_updates": 0,
+  "records": [],
+  "controls": [
+    {
+      "source_id": "p1-4a84d737d801",
+      "dimension": "alignment",
+      "candidate_id": "teacher",
+      "variant": "teacher_control",
+      "stage": "early",
+      "step_index": 0,
+      "scheduler_sigma": 1.0,
+      "relative_l2_error": 0.004016262013465166,
+      "mse": 7.164185808505863e-05,
+      "rmse": 0.008464151062071323,
+      "max_abs_error": 0.109375,
+      "cosine": 0.9999927282333374
+    }
+  ],
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "error": "RuntimeError: Intact teacher control exceeds 0.001 relative L2."
+}

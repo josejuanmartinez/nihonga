@@ -1,0 +1,406 @@
+{
+  "request_key": "73267c9a7568693ee089526539c4ae6440451563091c306898cbc3185c10f1f0",
+  "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+  "row": {
+    "prompt": "A candid photograph of water being poured from a pitcher into a glass, with small splashes. High-speed photography. Physically accurate shadows. Deep depth of field. Nostalgic feeling. Candid photo, natural light.",
+    "dimension": "real_world",
+    "subdimension": "physical_interactions",
+    "facet": "fluid",
+    "difficulty": 4,
+    "style": "photographic",
+    "aspect_ratio": "1:1",
+    "language": "en",
+    "prompt_format": "descriptive",
+    "hard": true,
+    "keywords": [],
+    "source": "template",
+    "prompt_template": "A candid photograph of water being poured from a pitcher into a glass, with small splashes. High-speed photography. Physically accurate shadows. Deep depth of field. Nostalgic feeling. Candid photo, natural light.",
+    "generator_version": "phase1-v1",
+    "id": "p1-146640d26abe",
+    "seed": 342245586,
+    "split": "train",
+    "pool_rank": 5078,
+    "source_id": "p1-146640d26abe",
+    "capture_id": "p6-continuation-p1-146640d26abe",
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 40,
+    "true_cfg_scale": 1.0,
+    "usage": "phase6_full_student_continuation_train_only"
+  },
+  "status": "passed",
+  "recorded_utc": "2026-09-30T19:50:32.231027+00:00",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "capture_seconds": 6.008936726999991,
+  "peak_allocated_gib": 30.866554737091064,
+  "tensor_sha256": "956d0f46278efc291a6f957db4715a872daae46275623e352743c8c4f51575a1",
+  "tensor_bytes": 59518733,
+  "teacher_trajectory_calls": 40,
+  "teacher_replay_calls": 3,
+  "captured_block_pair_records": 12,
+  "selected_token_pairs": 3284,
+  "stages": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "scheduler_timestep": 1000.0,
+      "scheduler_sigma": 1.0,
+      "transformer_timestep": [
+        1.0
+      ],
+      "cache_mode": "extract",
+      "target_image_tokens": 4096
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "scheduler_timestep": 656.666259765625,
+      "scheduler_sigma": 0.6566662788391113,
+      "transformer_timestep": [
+        0.65625
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4096
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "scheduler_timestep": 19.999980926513672,
+      "scheduler_sigma": 0.019999980926513672,
+      "transformer_timestep": [
+        0.02001953125
+      ],
+      "cache_mode": "cached",
+      "target_image_tokens": 4096
+    }
+  ],
+  "identity_metrics": [
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 53,
+      "identity_relative_l2_error": 0.07389289140701294,
+      "identity_normalized_mse": 3.4127706385334022e-06,
+      "identity_mean_token_cosine": 0.9930106401443481,
+      "teacher_target_rms": 40.41753387451172
+    },
+    {
+      "layer": 2,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.07601841539144516,
+      "identity_normalized_mse": 7.676227937736257e-07,
+      "identity_mean_token_cosine": 0.99842768907547,
+      "teacher_target_rms": 6.916765213012695
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 53,
+      "identity_relative_l2_error": 0.06817706674337387,
+      "identity_normalized_mse": 3.3636274565651547e-06,
+      "identity_mean_token_cosine": 0.993111252784729,
+      "teacher_target_rms": 41.703125
+    },
+    {
+      "layer": 3,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.0949515551328659,
+      "identity_normalized_mse": 1.3106333653922775e-06,
+      "identity_mean_token_cosine": 0.997315526008606,
+      "teacher_target_rms": 7.29912805557251
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 53,
+      "identity_relative_l2_error": 0.11746847629547119,
+      "identity_normalized_mse": 3.5602661228040233e-06,
+      "identity_mean_token_cosine": 0.9927085041999817,
+      "teacher_target_rms": 43.27267074584961
+    },
+    {
+      "layer": 4,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08423016220331192,
+      "identity_normalized_mse": 1.4188907471179846e-06,
+      "identity_mean_token_cosine": 0.9970937967300415,
+      "teacher_target_rms": 7.142550468444824
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "prefix_text",
+      "sampled_tokens": 53,
+      "identity_relative_l2_error": 0.48441287875175476,
+      "identity_normalized_mse": 6.225712240848225e-06,
+      "identity_mean_token_cosine": 0.9872496128082275,
+      "teacher_target_rms": 53.52494812011719
+    },
+    {
+      "layer": 5,
+      "stage": "early",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09206852316856384,
+      "identity_normalized_mse": 1.833997998801351e-06,
+      "identity_mean_token_cosine": 0.9962437152862549,
+      "teacher_target_rms": 7.0759148597717285
+    },
+    {
+      "layer": 2,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.05529966205358505,
+      "identity_normalized_mse": 6.735016881975753e-07,
+      "identity_mean_token_cosine": 0.9986206293106079,
+      "teacher_target_rms": 8.23717212677002
+    },
+    {
+      "layer": 3,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08118254691362381,
+      "identity_normalized_mse": 8.572681622354139e-07,
+      "identity_mean_token_cosine": 0.9982441663742065,
+      "teacher_target_rms": 7.84670352935791
+    },
+    {
+      "layer": 4,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09533977508544922,
+      "identity_normalized_mse": 1.2966319218321587e-06,
+      "identity_mean_token_cosine": 0.9973442554473877,
+      "teacher_target_rms": 7.43179988861084
+    },
+    {
+      "layer": 5,
+      "stage": "middle",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10836552828550339,
+      "identity_normalized_mse": 1.926442564581521e-06,
+      "identity_mean_token_cosine": 0.9960544109344482,
+      "teacher_target_rms": 7.048959255218506
+    },
+    {
+      "layer": 2,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.08658772706985474,
+      "identity_normalized_mse": 1.1558045116544235e-06,
+      "identity_mean_token_cosine": 0.9976327419281006,
+      "teacher_target_rms": 10.073126792907715
+    },
+    {
+      "layer": 3,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.0816066637635231,
+      "identity_normalized_mse": 1.0203933697994216e-06,
+      "identity_mean_token_cosine": 0.9979099631309509,
+      "teacher_target_rms": 9.65126895904541
+    },
+    {
+      "layer": 4,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.09862617403268814,
+      "identity_normalized_mse": 1.2341309911789722e-06,
+      "identity_mean_token_cosine": 0.9974722862243652,
+      "teacher_target_rms": 9.074128150939941
+    },
+    {
+      "layer": 5,
+      "stage": "late",
+      "role": "target_image",
+      "sampled_tokens": 256,
+      "identity_relative_l2_error": 0.10660047829151154,
+      "identity_normalized_mse": 1.6401737639171188e-06,
+      "identity_mean_token_cosine": 0.996640682220459,
+      "teacher_target_rms": 8.54044246673584
+    }
+  ],
+  "replay_controls": [
+    {
+      "stage": "early",
+      "step_index": 0,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "middle",
+      "step_index": 20,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    },
+    {
+      "stage": "late",
+      "step_index": 39,
+      "relative_l2_error": 0.0,
+      "max_abs_error": 0.0,
+      "rmse": 0.0
+    }
+  ],
+  "selected_shapes": [
+    {
+      "stage": "early",
+      "layer": 2,
+      "shape": [
+        1,
+        309,
+        4096
+      ],
+      "prefix_tokens": 53,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 3,
+      "shape": [
+        1,
+        309,
+        4096
+      ],
+      "prefix_tokens": 53,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 4,
+      "shape": [
+        1,
+        309,
+        4096
+      ],
+      "prefix_tokens": 53,
+      "image_tokens": 256
+    },
+    {
+      "stage": "early",
+      "layer": 5,
+      "shape": [
+        1,
+        309,
+        4096
+      ],
+      "prefix_tokens": 53,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "middle",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 2,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 3,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 4,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    },
+    {
+      "stage": "late",
+      "layer": 5,
+      "shape": [
+        1,
+        256,
+        4096
+      ],
+      "prefix_tokens": 0,
+      "image_tokens": 256
+    }
+  ],
+  "optimizer_updates": 0,
+  "teacher_frozen": true,
+  "images_decoded": 0
+}

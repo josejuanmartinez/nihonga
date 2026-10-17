@@ -13,3 +13,6 @@ data/phase3/**/*.png filter=lfs diff=lfs merge=lfs -text
 data/phase4/**/*.pt filter=lfs diff=lfs merge=lfs -text
 data/phase4/**/*.png filter=lfs diff=lfs merge=lfs -text
 data/phase5/**/*.pt filter=lfs diff=lfs merge=lfs -text
+data/phase6/** -text whitespace=cr-at-eol
+data/phase7/** -text whitespace=cr-at-eol
+data/recovered/** -text whitespace=cr-at-eol

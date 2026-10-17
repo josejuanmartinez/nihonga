@@ -1,0 +1,238 @@
+{
+  "request": {
+    "version": "phase6-continuation-training-capture-batch-v2",
+    "capture_request": {
+      "version": "phase5-target-capture-pilot-manifest-v1",
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "candidate_layers": [
+        2,
+        4,
+        5,
+        3
+      ],
+      "initial_checkpoint_sha256": {
+        "2": "49de293a3ec2d1483ecc1d478cc0967747ff0824a647be14b509d0f28871b16d",
+        "4": "a6e26baf65a9b4942073120571045ce8b3fe82da42f31713de6b618b36c54593",
+        "5": "375fcd975aa98e0d7329b24ba9b550dd50644203d6412d47d31a912387db9ba0",
+        "3": "ec0441470a893c76353c606d246dac113e147494dbba05cc09b14bd65051ea15"
+      },
+      "prototype_request_key": "6c5a69aa833f10d6ed6c2082e10e1bd5a3bad33af45bd3187201dd91fa3b79c8",
+      "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      },
+      "dtype": "bfloat16",
+      "noise_device": "cpu",
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "resolutions": {
+        "1:1": [
+          1024,
+          1024
+        ],
+        "16:9": [
+          1376,
+          768
+        ],
+        "9:16": [
+          768,
+          1376
+        ],
+        "4:3": [
+          1184,
+          896
+        ],
+        "3:4": [
+          896,
+          1184
+        ],
+        "3:2": [
+          1248,
+          832
+        ],
+        "2:3": [
+          832,
+          1248
+        ],
+        "21:9": [
+          1568,
+          672
+        ]
+      },
+      "source_sha256": {
+        "train": "56ed184aaed289f587eb51a2495854e06b5caa261090a5817597ba7be4baaa59",
+        "validation": "eb6b0366b9bf217400fb2e806c099356dde33484346ae7ce66cf841cf3fc8823",
+        "internal_test": "75e18e3232e3863f35e6519c210a805bfa4bc629201d8b112b85ed99a6632f50",
+        "qwen_image_bench": "a2004696921a065bb4d71ce3a2b4e96b0a04946945504d222d40c65458cc8a49",
+        "phase3_probes": "b95ceac046388cad62c01022b478e7f6733969635694b12f5355365b25cbf53e"
+      },
+      "phase4_artifact_sha256": {
+        "prototype_manifest": "82d0969cb86122539588cfc28a9272ce3b465d1f96b856a73e5d857f625c7610",
+        "prototype_summary": "e7f9335cf4e92d34fecb2ce3e30d4c0d116db5c64ebc97f34e7af428a3b10c5b",
+        "insertion_summary": "7d121696985dd24f35a76720966bcfc6f976babc8c4c8a08bca725c074afd1af",
+        "insertion_request": "eaa446ac68e2189db7d38aa1cbedee0050942f3eb6996623b2cbe79014ca4545",
+        "contract_request": "dc73f8d0801e2c23e8806304f509fcfa9e4b593b6b7b7667ec375351199b3c89",
+        "phase2_protocol": "383022a9ddde1580c1289b206ec79e158009f24f27542b32759b7831a9df0fbf",
+        "core": "1e3955167ab2c1f432f391edb3c8c7a71c25d9b1831522d632d849bc6625d1d4",
+        "wrapper": "e15148b422a8723a50dbe4680b1fdd625e75d89365a8457e662b5ab330b8ccac"
+      },
+      "dimensions": [
+        "alignment",
+        "visual_quality",
+        "aesthetics",
+        "real_world",
+        "creative"
+      ],
+      "selection_salt": "nihonga-phase5-capture-pilot-v1",
+      "selection": "per dimension: TRAIN 2 general + 2 hard; VALIDATION 1 general + 1 hard; prefer distinct subdimensions using salted hash order",
+      "stages": [
+        {
+          "name": "early",
+          "step_index": 0
+        },
+        {
+          "name": "middle",
+          "step_index": 20
+        },
+        {
+          "name": "late",
+          "step_index": 39
+        }
+      ],
+      "capture": {
+        "teacher_only": true,
+        "teacher_frozen": true,
+        "use_kv_cache": true,
+        "image_token_cap_per_stage": 256,
+        "valid_prefix_token_cap_at_step_zero": 64,
+        "token_selection": "deterministic uniform without replacement within role; same indices across candidate layers; save actual indices and total available counts",
+        "token_selection_seed_salt": "nihonga-phase5-token-sampling-v1",
+        "tensor_dtype": "bfloat16",
+        "store": [
+          "paired_block_input",
+          "paired_block_output",
+          "token_indices",
+          "token_roles",
+          "valid_token_mask"
+        ],
+        "metadata": [
+          "source_id",
+          "split",
+          "prompt",
+          "seed",
+          "width",
+          "height",
+          "step_index",
+          "scheduler_timestep",
+          "scheduler_sigma",
+          "cache_mode",
+          "full_hidden_shape",
+          "prefix_token_count",
+          "image_token_count",
+          "layer",
+          "request_key",
+          "tensor_sha256"
+        ],
+        "prefix_policy": "valid prefix only at extraction; cached stages capture target-image tokens only; padded text excluded",
+        "teacher_inputs": "save initial packed latent and prompt embeddings/masks once per prompt; save current packed latent and transformer-call metadata at each sampled stage",
+        "persistence": "commit each prompt packet remotely before return; verify and save locally; started-without-result or failures stop without automatic recapture"
+      },
+      "data_policy": {
+        "train": "gradient updates only",
+        "validation": "selection and diagnostics only; never optimizer updates",
+        "excluded": [
+          "internal_test",
+          "qwen_image_bench",
+          "phase3_probes"
+        ],
+        "duplicate_check": "source IDs and NFKC/casefold/whitespace-normalized exact prompt matches"
+      },
+      "fitting_policy": "independent single-block bridges; equal rank, same captured examples and optimizer budget for every candidate; no joint replacement",
+      "scope": "capture and fitting implementation pilot, not a representative evaluation or sufficient training dataset"
+    },
+    "capture_manifest_key": "9aaf1b8bb4acc984173b5420c00dfb425f13657136ebabf8be01ab968e7e5d9d",
+    "worker_sha256": "0f4925602ed1042e0ac4778ca42c69654a078c9b5cf64713da067b77c372ac7c",
+    "prompt_request_keys": [
+      "3f186b8d08bba8b5b776aa46145123a1cb75ef77c45ce31abf38f856410c84c7",
+      "dcb2aa40e000748a22058eea394f1271936397c220b7f4c24418094abd4eed4d",
+      "d69ec2848e4f8c6dfb7be39a1d5eef77be0d4dbd2b29c664f297cf559aa51bcc",
+      "c1939a25c01446d472727a60bc95744542fbf36040db320886060eeda189de2d",
+      "682d7a58c8b15fd8bd16f960cf6e9abf8c4a9637f8bf2fa0b7af1f52c3659a2f",
+      "c057afc4332d20b1ede0c19023146a6fb74e32727411f5f6dd8a02015b7cca3a",
+      "9e7a62bd17db3e55d91dedf210406af670cf92ebeb60ef90376565328cb1e63b",
+      "abdb5e6727c7bb24d8a1841d63286be737fd199e241c714a1e17b2cb193ba4c2",
+      "8f2cc0d4e585cf9ea65a6b28bb4995519ba2b5303a9cf7d62d319829d0d36b9a",
+      "d2582486c23d2d78d58cf48066d71d610f284ae1bde9b434d78506839765c976",
+      "044f47a22d33b49c21ae162d4dda9b8a1498a9db90ac4a268825dfb22256da16",
+      "21dabc1f7b154476c6224d7326187a26955e8ef302574a375c1840141866fd66",
+      "289a697c6a5e7a4d6ec76b971095850db4b8b12fe5b657b2eb5cf590074c1dfd",
+      "c87b8d12ea771b2780b87bac8a8cc1957928fe6577d8c33e0d358ee1add1e67b",
+      "b327e43b2a41027e8388e565373c88867b6306093a98df563f7f92341045b63c",
+      "97e265bbdb2ce14ac1e8579040633f6f008299638e4003b773ca0b919ebe34a9",
+      "d44f66f939ad31dee72559b3ab614d424175a8846afd6cdf9399fd856e90f95e",
+      "a745be0d8a77e6cc737934f7122aa672935966a12d2781719312d29c66109447",
+      "68c8b7d3eb57f8bb963a0b2faad01a6423ace697fd7e653c38be77b8447b364d",
+      "1becdea51ba18c160f6d605d6c2d54b82d43f33b15858132c540252b94bdde37",
+      "58aa01a20aaa0e78104c8dd4eed909a21d36b32c992854ead609bd3bfdb02d61",
+      "4bd7b2e238dc15daee78ff88ac5779d2ed58c508e81164dbeca6408268722c75",
+      "d46bbd7189e2ec27e5f4ce8eff26639bc43ff444c0f564d4171488a4dc376ff2",
+      "43238b20d2590feaa0be2a6e2821f4539c517a82f41cc9581cf24e01942e79c4",
+      "ec76912b8b2b48ea911a42c16f5572116f5f111121b36431597ac482f9b97c41",
+      "ba177e2742a00d89757004ebff4e1a1b8f4aed35d945ad20d80df763611dd6cb",
+      "17472d9f42190c6768ae36f7b0100f9c072e5aa8cff497ede23f0edf45fb36eb",
+      "c77fb46e1f55e19c2905d58888e1dc5d4891b31826d40f9cb818a5e48cd7fa85",
+      "c490983b86567ed192bcac2cf75f0c62d702a9b71efaff340acf8971f5f4d8ae",
+      "9ad33af324ba5ec53724f343a8377cd403d082ee4b14f64a888b199933271e4a",
+      "c7939edca138c0275566399b1382ebc15dd85a38e32a84889be750be288a8e39",
+      "73267c9a7568693ee089526539c4ae6440451563091c306898cbc3185c10f1f0",
+      "c3e5f18b4fef2dc3b2b8b41e3b74594403b2cc5bb489fad3de4dd52d51208d20",
+      "87e708af17cf08ed364563655b9a01dd7f74ffc8de6c71362cb32da9efcd258d",
+      "9da866ef5a5aa1a5fd6040ab874854292171e59627cb17e90ca352f63d7b12eb",
+      "513d67c75b5e26c6e6d37275abb445d3de771236d9c8dc7451e915e409b4f145",
+      "e2efb1ea8a7ff7c3b31e623ea21acafaf79adbde95a75862da605c64e3b0f39f",
+      "26b13ab0ff177392eb3efb2332908d7c0e343062740d2920edaab4d7b50a68e6",
+      "c0e7e98ce9fe03853523e1c7d92f5c9eb97564ce90ec6e351e9e905e838487c0",
+      "08fcb92073c4e179ead0b100d27f344ef29392229c4a8f97a1f1dc64f5fa12cf"
+    ]
+  },
+  "request_key": "0ae9f79001e299f36a30d3b852c9ee5a057fce9979c4e78919bd76d0351ea92f"
+}
