@@ -67,6 +67,14 @@ def main():
         if any(uploaded.get(path)!=record for path,record in files.items()):
             raise RuntimeError('Upload is incomplete for '+name)
         manifest[name]=files
+    for artifact in tensor_report['artifacts']:
+        record=manifest['nihonga-phase3-artifacts'].get(artifact['path'])
+        if record is None or record['sha256']!=artifact['expected_sha256']:
+            raise RuntimeError('Required tensor omitted from destination manifest: '+artifact['path'])
+    for blob in layout['blobs']:
+        record=manifest['nihonga-hf-cache'].get(blob['path'])
+        if record is None or record['sha256']!=blob['verified_sha256']:
+            raise RuntimeError('Required model blob omitted from destination manifest: '+blob['path'])
     key=hashlib.sha256(json.dumps(manifest,sort_keys=True).encode()).hexdigest()
     results=modal.Volume.from_name('nihonga-phase3-artifacts')
     cache=modal.Volume.from_name('nihonga-hf-cache')

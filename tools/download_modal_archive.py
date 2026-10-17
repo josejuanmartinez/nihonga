@@ -7,6 +7,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 import json
+import time
 from pathlib import Path
 
 import modal
@@ -64,6 +65,14 @@ def main():
             raise RuntimeError('Previously downloaded artifact changed: ' + name)
         target.parent.mkdir(parents=True, exist_ok=True)
         temporary = target.with_name(target.name + '.partial')
+        sidecar=temporary.with_name(temporary.name+'.sha256.json')
+        if temporary.exists() and sidecar.exists():
+            completed=json.loads(sidecar.read_bytes())
+            if (temporary.stat().st_size==entry['size']==completed['size']
+                    and digest(temporary)==completed['sha256']):
+                temporary.replace(target)
+                sidecar.unlink()
+                return name,completed
         with temporary.open('wb') as stream:
             # Bound SDK block concurrency rather than multiplying it by CPU count
             # for each file in this thread pool (SDK 1.6.2).
@@ -71,7 +80,16 @@ def main():
         if temporary.stat().st_size != entry['size']:
             raise RuntimeError('Size mismatch: ' + name)
         checksum = digest(temporary)
-        temporary.replace(target)
+        # Preserve completion evidence if a Windows reader temporarily prevents rename.
+        sidecar.write_text(json.dumps(dict(size=entry['size'],sha256=checksum))+'\n')
+        for attempt in range(16):
+            try:
+                temporary.replace(target)
+                break
+            except PermissionError:
+                if attempt==15:raise
+                time.sleep(2)
+        sidecar.unlink(missing_ok=True)
         return name, dict(size=entry['size'], sha256=checksum)
 
     failures = []

@@ -31,6 +31,8 @@ def main():
                      memory='one active variant; unused teacher blocks moved to CPU; reset peaks after warmup; no offload of active pipeline'))
     if len(request['rows']) != 30:
         raise RuntimeError('Benchmark requires 30 saved prompt/seed pairs')
+    from experiment_runtime import pin_reference_runtime
+    pin_reference_runtime(request,recovered)
     request_key = hashlib.sha256(json.dumps(request, sort_keys=True).encode()).hexdigest()
     local = root / 'data/phase7/latency_benchmark' / request_key
     local.mkdir(parents=True, exist_ok=True)
@@ -50,7 +52,7 @@ def main():
             raise RuntimeError('Run already started; inspect its progress. No duplicate GPU scheduled.')
         app = modal.App('nihonga-phase7-latency-benchmark')
         image = (modal.Image.debian_slim(python_version=runtime['python_version']).apt_install('git')
-                 .pip_install(*runtime['packages']).env(request['runtime_environment']))
+                 .pip_install(*request['execution_packages']).env(request['runtime_environment']))
         weights = modal.Volume.from_name(runtime['weights_volume'])
         namespace = {'results_volume': results_volume}
         exec(compile(source, 'latency_benchmark_worker.py', 'exec'), namespace)

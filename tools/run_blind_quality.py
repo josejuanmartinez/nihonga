@@ -30,6 +30,8 @@ def main():
         raise RuntimeError('Preregistered prompt list changed')
     request.update(version='phase7-blind-quality-v1', worker_source=source, execution_account='new',
                    rows=json.loads(prompts_path.read_bytes()), quality_protocol=protocol)
+    from experiment_runtime import pin_reference_runtime
+    pin_reference_runtime(request,recovered)
     request_key = hashlib.sha256(json.dumps(request, sort_keys=True).encode()).hexdigest()
     local = root / 'data/phase7/blind_quality' / request_key
     local.mkdir(parents=True, exist_ok=True)
@@ -49,7 +51,7 @@ def main():
             raise RuntimeError('Run already started; inspect its progress. No duplicate GPU scheduled.')
         app = modal.App('nihonga-phase7-blind-quality')
         image = (modal.Image.debian_slim(python_version=runtime['python_version']).apt_install('git')
-                 .pip_install(*runtime['packages']).env(request['runtime_environment']))
+                 .pip_install(*request['execution_packages']).env(request['runtime_environment']))
         weights = modal.Volume.from_name(runtime['weights_volume'])
         namespace = {'results_volume': results_volume}
         exec(compile(source, 'blind_quality_worker.py', 'exec'), namespace)

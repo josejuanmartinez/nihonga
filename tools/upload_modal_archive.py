@@ -2,7 +2,9 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
+import shutil
 
 from modal_accounts import set_modal_account
 
@@ -18,6 +20,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--volume',default='nihonga-phase3-artifacts')
     parser.add_argument('--batch-files',type=int,default=100)
+    parser.add_argument('--stage-root',type=Path,default=(Path(os.environ['LOCALAPPDATA'])/'nihonga-upload-staging') if os.name=='nt' and 'LOCALAPPDATA' in os.environ else None)
     args=parser.parse_args()
     set_modal_account('current',purpose='upload')
     import modal
@@ -37,13 +40,24 @@ def main():
     print('NEW account upload:',args.volume,len(pending),'files',round(sum(r['size'] for _,r in pending)/2**30,3),'GiB',flush=True)
     for start in range(0,len(pending),args.batch_files):
         batch=pending[start:start+args.batch_files]
+        sources={}
         for name,record in batch:
             path=archive/name
             if not path.resolve().is_relative_to(archive.resolve()):raise ValueError(name)
+            if args.stage_root and record['size']>=1024**3:
+                args.stage_root.mkdir(parents=True,exist_ok=True)
+                staged=args.stage_root/(record['sha256']+'.blob')
+                if not staged.exists():
+                    print('Staging large file on SSD:',name,flush=True)
+                    temporary=staged.with_suffix('.partial')
+                    shutil.copyfile(path,temporary)
+                    temporary.replace(staged)
+                path=staged
             if path.stat().st_size!=record['size'] or digest(path)!=record['sha256']:
                 raise RuntimeError('Local file changed before upload: '+name)
+            sources[name]=path
         with volume.batch_upload(force=True) as upload:
-            for name,_ in batch:upload.put_file(archive/name,'/'+name)
+            for name,_ in batch:upload.put_file(sources[name],'/'+name)
         progress['files'].update(batch)
         temporary=progress_path.with_suffix('.tmp')
         temporary.write_text(json.dumps(progress,indent=2)+'\n')

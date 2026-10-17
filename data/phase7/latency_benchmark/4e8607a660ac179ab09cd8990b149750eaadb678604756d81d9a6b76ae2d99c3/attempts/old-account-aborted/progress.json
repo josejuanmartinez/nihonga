@@ -241,12 +241,72 @@
         "sha256": "11965162902f23c85d9d7b10a27dd022e399f1606600cc7063487a1e65ece05e",
         "bytes": 2781735
       }
+    },
+    {
+      "pair": 6,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-682468cd7087",
+      "seed": 1747216589,
+      "width": 896,
+      "height": 1184,
+      "seconds": 21.062797560000035,
+      "denoiser_seconds": 20.8187138671875,
+      "restore_seconds_excluded": 4.223333457000081,
+      "peak_allocated_gib": 36.13097620010376,
+      "peak_reserved_gib": 37.802734375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_06_candidate_A.png",
+        "sha256": "3eb93fa99f96cb7f907dd1c677c3c81fdb3ed51b42d4498d354e79a21d00494a",
+        "bytes": 2483592
+      }
+    },
+    {
+      "pair": 6,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-682468cd7087",
+      "seed": 1747216589,
+      "width": 896,
+      "height": 1184,
+      "seconds": 22.40664468099999,
+      "denoiser_seconds": 22.19664685058594,
+      "restore_seconds_excluded": 2.0457429110000476,
+      "peak_allocated_gib": 36.92515563964844,
+      "peak_reserved_gib": 38.513671875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_06_teacher.png",
+        "sha256": "edef9e75d3e14dd9ba1b48b525f2b2560a4373e02c9ffdc794b71f631afc6123",
+        "bytes": 2517234
+      }
+    },
+    {
+      "pair": 7,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-cf35e4976f11",
+      "seed": 3476415639,
+      "width": 832,
+      "height": 1248,
+      "seconds": 21.687063183000078,
+      "denoiser_seconds": 21.44230407714844,
+      "restore_seconds_excluded": 1.85779602599996,
+      "peak_allocated_gib": 36.78325366973877,
+      "peak_reserved_gib": 38.24609375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_07_teacher.png",
+        "sha256": "5e9f68de407b7432aaed6a682a6c00acbfc53c7efc2c2959ce6be9524910a5ab",
+        "bytes": 2200014
+      }
     }
   ],
   "artifacts": [],
   "calls": {
-    "teacher": 6,
-    "candidate_A": 6
+    "teacher": 8,
+    "candidate_A": 7
   },
   "optimizer_updates": 0,
   "gpu": "NVIDIA H100 80GB HBM3",

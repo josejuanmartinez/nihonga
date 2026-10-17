@@ -68,7 +68,7 @@ def main():
         if source.suffix not in ('.json', '.jsonl', '.py', '.ipynb', '.txt'):
             continue
         relative = source.relative_to(ARCHIVE)
-        if relative.name.endswith('ledger.json'):
+        if relative.name.endswith(('ledger.json','.partial.sha256.json')):
             continue
         content = source.read_bytes()
         target = ROOT / 'data/recovered/modal' / relative

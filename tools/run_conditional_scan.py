@@ -32,6 +32,8 @@ def main():
                    eligible_original_block_ids=[i for i in range(32) if i not in (4, 5)],
                    selection='Screening only: independent frozen bypasses; no pruning or quality promotion',
                    scope='Fixed gate10 and wider50 development prompts, three saved stages; compare A and teacher')
+    from experiment_runtime import pin_reference_runtime
+    pin_reference_runtime(request,recovered)
     request_key = hashlib.sha256(json.dumps(request, sort_keys=True).encode()).hexdigest()
     local = root / 'data/phase7/conditional_importance' / request_key
     local.mkdir(parents=True, exist_ok=True)
@@ -51,7 +53,7 @@ def main():
             raise RuntimeError('Run already started; inspect its progress. No duplicate GPU scheduled.')
         app = modal.App('nihonga-phase7-conditional-importance')
         image = (modal.Image.debian_slim(python_version=runtime['python_version']).apt_install('git')
-                 .pip_install(*runtime['packages']).env(request['runtime_environment']))
+                 .pip_install(*request['execution_packages']).env(request['runtime_environment']))
         weights = modal.Volume.from_name(runtime['weights_volume'])
         namespace = {'results_volume': results_volume}
         exec(compile(source, 'conditional_scan_worker.py', 'exec'), namespace)

@@ -32,10 +32,18 @@ def main():
         aliases.append(dict(path=(repo/'snapshots'/revision/filename).as_posix(),target=canonical.as_posix()))
     missing=[]
     checksums={}
+    report_path=root/'data/recovery/model-cache-verification.json'
+    previous=json.loads(report_path.read_bytes()) if report_path.exists() else {}
+    verified_before={r['path']:r for r in previous.get('blobs',[]) if r.get('verified_sha256')}
     for entry in blobs:
         source=base/entry['path']
         if not source.exists():missing.append(entry['path']);continue
         if source.stat().st_size!=entry['size']:raise RuntimeError('Model blob size mismatch')
+        old=verified_before.get(entry['path'])
+        if old and old.get('verified_mtime_ns')==source.stat().st_mtime_ns:
+            entry.update(verified_sha256=old['verified_sha256'],verified_mtime_ns=old['verified_mtime_ns'])
+            checksums[entry['path']]=old['verified_sha256']
+            continue
         sha256=hashlib.sha256()
         git_hash=hashlib.sha1(f"blob {entry['size']}\0".encode())
         with source.open('rb') as stream:
@@ -47,6 +55,7 @@ def main():
         if entry['expected_git_blob_sha1'] and git_hash.hexdigest()!=entry['expected_git_blob_sha1']:
             raise RuntimeError('Model Git blob SHA-1 mismatch')
         entry['verified_sha256']=actual
+        entry['verified_mtime_ns']=source.stat().st_mtime_ns
         checksums[entry['path']]=actual
     for alias in aliases:
         source=base/alias['target'];target=base/alias['path']
@@ -55,7 +64,10 @@ def main():
         if not target.exists():os.link(source,target)
     report=dict(status='verified' if not missing else 'incomplete',revision=revision,blobs=blobs,
                 aliases=aliases,missing=missing,local_cache='.archive/nihonga-hf-cache')
-    (root/'data/recovery/model-cache-verification.json').write_text(json.dumps(report,indent=2)+'\n')
+    report_path.write_text(json.dumps(report,indent=2)+'\n')
+    ledger={entry['path']:dict(size=entry['size'],sha256=entry['verified_sha256'])
+            for entry in blobs if entry.get('verified_sha256')}
+    (base/'verified-model-blobs-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
     print(f'{len(blobs)-len(missing)}/{len(blobs)} model blobs verified; {len(missing)} still downloading.')
 
 
