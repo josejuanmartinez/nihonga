@@ -1,0 +1,9 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-17",
+  "question": "Does training the attention bridge on many more text prompts restore spelling without block 13?",
+  "context": "e2e_attn (attention bridge trained on the final output) reached 6.42% overall but spells 'The Rusty Anchor' 1/4 (B 3/4) and 'Happy Birthday Emma' 0-1/4 (B 3/4). Only 2 of its 60 full training prompts contain text.",
+  "data": "150 new text_rendering prompts and 50 new prompts from other groups, drawn with a fixed seed from the pilot TRAIN split, excluding every prompt used before; recorded with the intact teacher at steps 0 (early) and 19 (middle) of the 40-step trajectory; the replay of a recorded prompt must reproduce the teacher within 1e-3",
+  "training": "Continue e2e_attn from its selected weights, bridge weights only; each update: one full prompt (40% from the new text prompts, 60% from the 60 original plus 50 new general prompts) weighted 0.7 plus one early-pool example weighted 0.3; final-velocity loss against live teacher targets; AdamW lr 1e-4, 20-update warmup, 600 updates, gate10 every 100 updates, lowest gate10 checkpoint selected",
+  "decision_rule": "Velocity reported for all 180 comparisons (overall and wider 50 must not get worse than e2e_attn by more than 0.1 points). Images decide: 4-seed text grid ('The Rusty Anchor' toward B's 3/4, 'Happy Birthday Emma', 'Moonlight Motel') and the 30-prompt sheets compared with B and e2e_attn."
+}
