@@ -14,6 +14,7 @@ SCAN_A = 'data/phase7/conditional_importance/7454da6a5c1dc33af23dd46833e698f9b75
 LATENCY_A = 'data/phase7/latency_benchmark/29f50a4db5f63a6c73135438800ab2d5413e32878bc3fa61284aebbb5c165f4c/summary.json'
 SCAN_B_DIR = 'data/phase7/conditional_importance_b'
 QUALITY_A = 'data/phase7/blind_quality_v1/review_summary.json'
+BRIDGE13_DIR = 'data/phase7/block13_bridge'
 GATE = 6.52
 
 
@@ -46,6 +47,39 @@ def scan_b():
         if report.get('status') == 'passed':
             return report
     return None
+
+
+def bridge13():
+    protocol = load(BRIDGE13_DIR + '/protocol.json')
+    for path in sorted((ROOT / BRIDGE13_DIR).glob('*/summary.json')):
+        report = json.loads(path.read_text(encoding='utf-8'))
+        if report.get('status') == 'passed':
+            return protocol, report
+    return protocol, None
+
+
+def bridge13_section(protocol, report):
+    g, base = protocol['velocity_gates'], protocol['base']
+    c = report['candidate']
+    o = c['overall']['teacher_relative_l2']
+    gate10 = c['panels']['gate10']['teacher_relative_l2']['mean']
+    wider = c['panels']['wider50']['teacher_relative_l2']['mean']
+    stages = {s: c['stages'][s]['teacher_relative_l2']['mean'] for s in ('early', 'middle', 'late')}
+    skip = base['skip_block_13_gate10_mean_relative_l2']
+    removed = (skip - gate10) / (skip - base['gate10_mean_relative_l2'])
+    checks = [('Check prompts (10)', gate10, g['gate10_mean_max']), ('Wider prompts (50)', wider, g['wider50_mean_max'])]
+    checks += [(s.capitalize() + ' moment', stages[s], g['stage_mean_max'][s]) for s in stages]
+    checks += [('90th percentile', o['p90'], g['overall_p90_max']), ('Worst comparison', o['maximum'], g['overall_maximum_max'])]
+    rows = [[name, f'<b>{pct(v)}</b>', pct(limit), 'pass' if v <= limit else '<b>fail</b>'] for name, v, limit in checks]
+    rows.append(['Skip penalty removed (check prompts)', f'<b>{100 * removed:.0f}%</b>', '50%', 'pass' if removed >= .5 else '<b>fail</b>'])
+    passed = all(v <= limit for _, v, limit in checks) and removed >= .5
+    fit = report['fit']
+    parts = ['<h3 id="phase7-block13">Learned bridge for block 13: the velocity gates fail</h3>',
+             f'<p class="summary">Block 13 ranked first inside the accepted student, so we replaced it with a rank-256 bridge while keeping the block-5 bridge and every other weight frozen. Pass rules were committed before the run. The bridge was fitted to block 13’s own inputs and outputs captured inside the student: 60 training prompts at three moments plus 600 early training examples. The 10 check prompts were used only to choose the checkpoint. The fit worked on its own terms: the hidden-state objective fell from {fit["identity_validation"]:.4f} (plain skip) to {fit["selected_validation"]:.4f}, a {100 * (1 - fit["selected_validation"] / fit["identity_validation"]):.0f}% reduction.</p>',
+             table('Candidate C (blocks 5 and 13 bridged, 30 blocks): velocity error against the teacher and the preregistered limits',
+                   ['Measure', 'C', 'Limit', 'Result'], rows),
+             f'<div class="verdict"><p><b>{"All velocity gates pass." if passed else "Candidate C fails the velocity gates; it is not promoted and no images or timings were produced for it."}</b> Skipping block 13 gives {pct(skip)} on the check prompts; the bridge brings it only to {pct(gate10)}, against {pct(base["gate10_mean_relative_l2"])} for the accepted student. Middle and late moments stay within limits; the early moment does not. A likely reason: the bridge acts on each token separately, so it cannot reproduce the cross-token attention a mid-network block performs, and most of the damage of removing block 13 remains.</p></div>']
+    return parts
 
 
 def table(caption, headers, rows):
@@ -86,6 +120,9 @@ def build(a, lat, b, q):
                      + (f'Bypasses within the {GATE:.2f}% gate without any bridge: blocks {", ".join(map(str, within))}. ' if within else f'No single bypass stays within the {GATE:.2f}% gate; any further removal needs a learned bridge. ')
                      + f'Top five in B: {", ".join(map(str, top_b))}; in A: {", ".join(map(str, top_a))}'
                      + (f' (shared: {", ".join(map(str, shared))}).' if shared else ' (none shared).') + '</p></div>')
+    b13_protocol, b13 = bridge13()
+    if b13 is not None:
+        parts.extend(bridge13_section(b13_protocol, b13))
     parts.append('<h3>The same scan inside candidate A</h3>')
     parts.append(f'<p class="summary">A alone measures <b>{pct(base_a)}</b> on all 180 comparisons ({pct(panels_a["wider50"])} on the 50 wider prompts and {pct(panels_a["gate10"])} on the 10 check prompts, reproducing the earlier 7.41% and 7.97%).</p>')
     parts.append(table('Candidate A scan: velocity error against the teacher with one extra block bypassed (lower is better); A alone measures ' + pct(base_a),
@@ -118,9 +155,12 @@ def build(a, lat, b, q):
                        'Candidate A (blocks 4-5) failed the velocity gate and the blinded image test, so the importance scan is being repeated inside the accepted student before choosing a learned replacement. '
                        f'A\'s measured speedup is {speed["median"]:.3f}×.</p>')
     else:
+        next_step = ('A rank-256 learned bridge for block 13 then failed the preregistered velocity gates, so the accepted model is unchanged. '
+                     if bridge13()[1] is not None else
+                     'The next step is a learned bridge for a shortlisted block, with predeclared velocity, image and latency gates. ')
         status_text = ('<p class="summary"><b>Research direction:</b> the accepted model is still the one-block student. '
                        f'Importance scans inside both candidate A and the accepted student are complete; block {scan_rows(b)[0]["block"]} is the gentlest bypass in the accepted student. '
-                       'The next step is a learned bridge for a shortlisted block, with predeclared velocity, image and latency gates. '
+                       + next_step +
                        f'A\'s measured speedup is {speed["median"]:.3f}×.</p>')
     status = (status_text + '\n    <p class="note">Velocity errors are measured on saved teacher inputs at three denoising moments, not on finished images. '
               'Image results come from one model-blind AI reviewer with one seed per prompt.</p>')
@@ -132,6 +172,10 @@ def build(a, lat, b, q):
                   comparisons_per_block=a['blocks'][0]['overall']['comparisons'], gate_percent=GATE)
     latency = dict(request_key=lat['request_key'], summary=lat['summary'], paired_speedup={k: v for k, v in speed.items() if k != 'ratios'})
     record['blind_quality_candidate_A'] = {k: v for k, v in q.items() if k != 'pairs'}
+    b13_protocol, b13 = bridge13()
+    if b13 is not None:
+        record['block13_bridge'] = dict(request_key=b13['request_key'], protocol=b13_protocol, fit=b13['fit'],
+                                        candidate={k: v for k, v in b13['candidate'].items() if k != 'records'})
     return scan, status, record, latency
 
 
