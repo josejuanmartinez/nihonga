@@ -498,8 +498,10 @@ def train_bridge_end_to_end(request, key):
                 for group in optimizer.param_groups:
                     group['lr'] = fit['learning_rate'] * min(1.0, (step + 1) / fit['warmup'])
                 optimizer.zero_grad(set_to_none=True)
-                (train_loss(rng.choice(train_full)) * (1 - fit['early_weight'])).backward()
-                (train_loss(rng.choice(early_pool)) * fit['early_weight']).backward()
+                # Backward recomputes checkpointed blocks: keep the same attention kernel and cache context as forward.
+                with model.cache_context('cond'), sdpa_kernel([SDPBackend.MATH]):
+                    (train_loss(rng.choice(train_full)) * (1 - fit['early_weight'])).backward()
+                    (train_loss(rng.choice(early_pool)) * fit['early_weight']).backward()
                 torch.nn.utils.clip_grad_norm_(bridge.parameters(), fit['gradient_clip'])
                 optimizer.step()
                 report['optimizer_updates'] += 1
