@@ -1,0 +1,12 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-17",
+  "question": "Does longer training, or local token mixing, bring the timestep-conditioned block-13 bridge closer to B?",
+  "context": "cond_r1024 (1000 updates) was worse than B on 8 of 30 prompts; its curve was still falling, and its remaining losses are local fine detail (lace, circuit board, peacock eye, star) and deformed shapes.",
+  "variants": {
+    "cond_r1024_long": "Same conditioned rank-1024 bridge, 3000 updates",
+    "cond_local_r1024": "Conditioned rank-1024 bridge plus a zero-initialised depthwise 3x3 convolution over the 64x64 image-token grid inside the bottleneck (image tokens only), 3000 updates; trained on recorded 3x3 neighborhoods of block-13 inputs"
+  },
+  "fit": "Identical data, objective, optimizer, seeds and checkpoint selection to block13_bridge_v2, except 3000 updates",
+  "decision_rule": "Same as block13_bridge_v2: velocity screens (gate10 below the first bridge's 7.37%), the 30-prompt qualitative image check compares with B and cond_r1024, and a fresh blinded test graded against the prompts decides acceptance if a variant looks comparable to B."
+}
