@@ -40,3 +40,10 @@ code are preserved in Git; selected large tensors are downloaded into `.archive/
 with SHA-256 ledgers. The inventories cover the full archive without requiring
 hundreds of GiB of superseded optimizer checkpoints. Do not regenerate missing
 historical artifacts and label them recovered. See `data/recovered/README.md`.
+
+Modal account policy: `MODAL_TOKEN_ID_OLD` / `MODAL_TOKEN_SECRET_OLD` are for
+archive downloads only. Uploads and all CPU/GPU jobs use the new account's
+`MODAL_TOKEN_ID` / `MODAL_TOKEN_SECRET`. Compute launchers explicitly reject
+`--old-account`. Initial jobs launched in the old account were stopped; their
+partial records are retained under `attempts/old-account-aborted/`.
+See `data/recovery/migration-status.json` before removing the old credentials.

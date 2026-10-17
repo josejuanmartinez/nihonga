@@ -70,11 +70,11 @@ def main():
     key=hashlib.sha256(json.dumps(manifest,sort_keys=True).encode()).hexdigest()
     results=modal.Volume.from_name('nihonga-phase3-artifacts')
     cache=modal.Volume.from_name('nihonga-hf-cache')
+    globals()['results_volume']=results
+    globals()['cache_volume']=cache
     app=modal.App('nihonga-new-account-migration-verification')
     function=app.function(image=modal.Image.debian_slim(python_version='3.13'),serialized=True,
         cpu=4,memory=4096,timeout=7200,volumes={'/research':results,'/hf':cache})(verify_migration)
-    globals()['results_volume']=results
-    globals()['cache_volume']=cache
     with modal.enable_output(),app.run(detach=True):
         report=function.remote(manifest,layout,key)
     report['manifest_sha256']=key
