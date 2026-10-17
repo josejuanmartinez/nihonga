@@ -16,7 +16,8 @@ def main():
     volume=modal.Volume.from_name('nihonga-phase3-artifacts')
     # Local folder -> remote experiment folder; candidate B's scan shares the remote scan folder.
     for local,experiment in (('conditional_importance','conditional_importance'),('conditional_importance_b','conditional_importance'),
-                             ('latency_benchmark','latency_benchmark'),('blind_quality','blind_quality')):
+                             ('latency_benchmark','latency_benchmark'),('blind_quality','blind_quality'),
+                             ('block13_bridge','bridge_candidate')):
         for call_path in (root/'data/phase7'/local).glob('*/call.json'):
             call=json.loads(call_path.read_bytes())
             for filename in ('summary.json','progress.json','started.json'):
