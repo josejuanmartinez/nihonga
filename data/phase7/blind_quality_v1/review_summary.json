@@ -1,0 +1,1478 @@
+{
+  "status": "scored",
+  "protocol_sha256": "5d32cb4ad9babfb34b80968b78d3c83e700466b365d5a008640cf39f5d935f60",
+  "scores_sha256": "f70cdfc0417fdb561e7b57d3b13b7e94f3ec7764cc687e0fd01863f9f6eeb415",
+  "blind_key_sha256": "1a998f7934657bcfde995784907fe782bde59720364294a08fa594be07f42c55",
+  "counts": {
+    "adherence": {
+      "teacher": {
+        "fail": 34,
+        "pass": 89,
+        "uncertain": 6
+      },
+      "candidate_A": {
+        "fail": 39,
+        "pass": 78,
+        "uncertain": 12
+      }
+    },
+    "text": {
+      "teacher": {
+        "pass": 28,
+        "fail": 2
+      },
+      "candidate_A": {
+        "fail": 12,
+        "pass": 18
+      }
+    }
+  },
+  "adherence_gain_fraction": -0.08527131782945736,
+  "paired_bootstrap_95pct": [
+    -0.15503875968992248,
+    -0.015503875968992248
+  ],
+  "adherence_noninferiority_passed": false,
+  "text_gate_passed": false,
+  "performance_gate_passed": true,
+  "research_replacement_gate_passed": false,
+  "historical_velocity_gate_passed": false,
+  "production_promoted": false,
+  "pairs": [
+    {
+      "question_id": "Q001",
+      "source_id": "p1-08632b50d51b",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q002",
+      "source_id": "p1-c515e8796e8b",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q003",
+      "source_id": "p1-2177206d162c",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q004",
+      "source_id": "p1-80599ca458c1",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q005",
+      "source_id": "p1-07c029933a3d",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q006",
+      "source_id": "p1-0111eadf3eba",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q007",
+      "source_id": "p1-0e5f2e854896",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q008",
+      "source_id": "p1-44fccbe4e6a5",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q009",
+      "source_id": "p1-2b0f69480a11",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "pass",
+      "clear_pass_delta": 1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q010",
+      "source_id": "p1-599cdd7de5e9",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q011",
+      "source_id": "p1-50edb3b05f90",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q012",
+      "source_id": "p1-7877bca38721",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q013",
+      "source_id": "p1-0a34d0e7b96c",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q014",
+      "source_id": "p1-bd489646d125",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q015",
+      "source_id": "p1-9b29317dbbd4",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q016",
+      "source_id": "p1-7a1236577b38",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q017",
+      "source_id": "p1-455926f6c2bd",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q018",
+      "source_id": "p1-d936a428d245",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q019",
+      "source_id": "p1-e0dded58388a",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q020",
+      "source_id": "p1-af1929ffffba",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q021",
+      "source_id": "p1-3597bf399743",
+      "group": "counting",
+      "teacher": "uncertain",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q022",
+      "source_id": "p1-3180e9b4ed00",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q023",
+      "source_id": "p1-c6cf2d8212ad",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "pass",
+      "clear_pass_delta": 1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q024",
+      "source_id": "p1-8d1ee46aba4b",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q025",
+      "source_id": "p1-7da3336dd82e",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q026",
+      "source_id": "p1-4b506f15e30e",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q027",
+      "source_id": "p1-df73379792fa",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q028",
+      "source_id": "p1-c080591d2b53",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "pass",
+      "clear_pass_delta": 1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q029",
+      "source_id": "p1-f63e41b230ed",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q030",
+      "source_id": "p1-34ff26334999",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q031",
+      "source_id": "p1-439548846f8f",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q032",
+      "source_id": "p1-8ff22e5faaa1",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "pass",
+      "clear_pass_delta": 1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q033",
+      "source_id": "p1-030c1e5c72d6",
+      "group": "counting",
+      "teacher": "fail",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q034",
+      "source_id": "p1-8ebb3076ed80",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q035",
+      "source_id": "p1-c77cd35766de",
+      "group": "counting",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q036",
+      "source_id": "p1-ef5f88dd14a6",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q037",
+      "source_id": "p1-e9329049f132",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q038",
+      "source_id": "p1-0a058a88bdd9",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q039",
+      "source_id": "p1-9df8a4952d3c",
+      "group": "spatial_relation",
+      "teacher": "uncertain",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q040",
+      "source_id": "p1-da7c6a0985ea",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q041",
+      "source_id": "p1-b4e1c0bb801d",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q042",
+      "source_id": "p1-a692f0f9ad0e",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q043",
+      "source_id": "p1-fa08c3ca2378",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q044",
+      "source_id": "p1-ca992d396a80",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q045",
+      "source_id": "p1-2de81d8e89a4",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q046",
+      "source_id": "p1-158177e43aab",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q047",
+      "source_id": "p1-2a8618350cec",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q048",
+      "source_id": "p1-fff243e2b803",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q049",
+      "source_id": "p1-fd7e7b010348",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q050",
+      "source_id": "p1-2aeae5e8e13f",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q051",
+      "source_id": "p1-ab39a45e6337",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q052",
+      "source_id": "p1-4a64cb0a1007",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q053",
+      "source_id": "p1-e1da76483769",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q054",
+      "source_id": "p1-5517e3d1dee3",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q055",
+      "source_id": "p1-4a8ee0abe210",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q056",
+      "source_id": "p1-fefffeaa54a6",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q057",
+      "source_id": "p1-6838a708193d",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q058",
+      "source_id": "p1-037351f6127b",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q059",
+      "source_id": "p1-26400c92fd48",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q060",
+      "source_id": "p1-35c5b75b6673",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q061",
+      "source_id": "p1-4bc5efac9a6e",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q062",
+      "source_id": "p1-615b31f99a37",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q063",
+      "source_id": "p1-ee5267f82809",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q064",
+      "source_id": "p1-45196565bfb4",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q065",
+      "source_id": "p1-48e4c8843824",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q066",
+      "source_id": "p1-d82da88baae1",
+      "group": "spatial_relation",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q067",
+      "source_id": "p1-3bb60b122c19",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q068",
+      "source_id": "p1-d4701553c2a8",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q069",
+      "source_id": "p1-0818092204a7",
+      "group": "spatial_relation",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q070",
+      "source_id": "p1-45da0098475f",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q071",
+      "source_id": "p1-2cedbaed8369",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q072",
+      "source_id": "p1-1a1d465dcfbf",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q073",
+      "source_id": "p1-7597d84eacb8",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q074",
+      "source_id": "p1-1059e310d013",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q075",
+      "source_id": "p1-dc8c2fe77632",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q076",
+      "source_id": "p1-3e40a7d7450d",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q077",
+      "source_id": "p1-f59d4a3a13ba",
+      "group": "colors",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q078",
+      "source_id": "p1-f2bd6f96b1dd",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q079",
+      "source_id": "p1-35f20d2673f5",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q080",
+      "source_id": "p1-134f0d522566",
+      "group": "colors",
+      "teacher": "uncertain",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q081",
+      "source_id": "p1-081bb473733d",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q082",
+      "source_id": "p1-f6c0371056df",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q083",
+      "source_id": "p1-f17cbf0abb0d",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q084",
+      "source_id": "p1-2e11d1b518ba",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q085",
+      "source_id": "p1-90214784d073",
+      "group": "colors",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q086",
+      "source_id": "p1-59d9277be5a2",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q087",
+      "source_id": "p1-996beaf40fb8",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q088",
+      "source_id": "p1-083f39214898",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q089",
+      "source_id": "p1-64e45c41b6e9",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q090",
+      "source_id": "p1-797b16d2cb8b",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q091",
+      "source_id": "p1-0c181fb7fb32",
+      "group": "colors",
+      "teacher": "uncertain",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q092",
+      "source_id": "p1-b5287c534f2f",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q093",
+      "source_id": "p1-af12be6f7fe8",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q094",
+      "source_id": "p1-2ab5ad5e7371",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q095",
+      "source_id": "p1-a5c221ad17d5",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q096",
+      "source_id": "p1-30a84ff139c7",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q097",
+      "source_id": "p1-2c19519584f4",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q098",
+      "source_id": "p1-f6f28bd797e8",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q099",
+      "source_id": "p1-9b05b54c9c04",
+      "group": "colors",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q100",
+      "source_id": "p1-8150c63ce591",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q101",
+      "source_id": "p1-0491560dec23",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q102",
+      "source_id": "p1-ce78e334b5d0",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q103",
+      "source_id": "p1-6fb6fcf0cf05",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q104",
+      "source_id": "p1-50c1670b1a80",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q105",
+      "source_id": "p1-4bd1823f6d1d",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q106",
+      "source_id": "p1-e469071a5097",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q107",
+      "source_id": "p1-115ffabd9bc0",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q108",
+      "source_id": "p1-31d51b75e9d0",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q109",
+      "source_id": "p1-bb729fe8cfd9",
+      "group": "multiple_objects",
+      "teacher": "uncertain",
+      "candidate_A": "pass",
+      "clear_pass_delta": 1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q110",
+      "source_id": "p1-68ab1e724281",
+      "group": "multiple_objects",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q111",
+      "source_id": "p1-c5093210742a",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q112",
+      "source_id": "p1-0045ae248220",
+      "group": "multiple_objects",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q113",
+      "source_id": "p1-3e37b32316fb",
+      "group": "multiple_objects",
+      "teacher": "uncertain",
+      "candidate_A": "pass",
+      "clear_pass_delta": 1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q114",
+      "source_id": "p1-9c277c4d5d7c",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q115",
+      "source_id": "p1-9ddceda2be9d",
+      "group": "multiple_objects",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q116",
+      "source_id": "p1-b1290cf8e993",
+      "group": "multiple_objects",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q117",
+      "source_id": "p1-bb4411535ad9",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q118",
+      "source_id": "p1-79217248f92c",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q119",
+      "source_id": "p1-2b9b9281cfc3",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q120",
+      "source_id": "p1-e1b2a8a4306b",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q121",
+      "source_id": "p1-5883078ba0a9",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q122",
+      "source_id": "p1-7b18e17e4f00",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q123",
+      "source_id": "p1-fb040adf0d86",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q124",
+      "source_id": "p1-7e7ed3dc214d",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q125",
+      "source_id": "p1-d76cf90dddbb",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "uncertain",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q126",
+      "source_id": "p1-b5b374ba43cb",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q127",
+      "source_id": "p1-07a917c41bcd",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q128",
+      "source_id": "p1-861c6fd767cf",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q129",
+      "source_id": "p1-7436474f9d5c",
+      "group": "multiple_objects",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q130",
+      "source_id": "p1-f699ead94416",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q131",
+      "source_id": "p1-9927a8438daa",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q132",
+      "source_id": "p1-92f2c449e2be",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q133",
+      "source_id": "p1-d0e043e967f4",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q134",
+      "source_id": "p1-87efed1ce7e6",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q135",
+      "source_id": "p1-c972c6b15306",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q136",
+      "source_id": "p1-181af14a05b3",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q137",
+      "source_id": "p1-b0ca78b170de",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q138",
+      "source_id": "p1-662cc32b7f8a",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q139",
+      "source_id": "p1-913b209a5abe",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q140",
+      "source_id": "p1-b44baa657369",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q141",
+      "source_id": "p1-ecf6b128d505",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q142",
+      "source_id": "p1-c0508a29dea9",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q143",
+      "source_id": "p1-5f1c19104403",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q144",
+      "source_id": "p1-ea48945c3148",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q145",
+      "source_id": "p1-ad5be5d47df3",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q146",
+      "source_id": "p1-926fcb62a3a7",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q147",
+      "source_id": "p1-84c9d0d97ae9",
+      "group": "text_rendering",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q148",
+      "source_id": "p1-c77a78dbdced",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q149",
+      "source_id": "p1-d5a713410542",
+      "group": "text_rendering",
+      "teacher": "fail",
+      "candidate_A": "fail",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q150",
+      "source_id": "p1-81f6c0570af9",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q151",
+      "source_id": "p1-c3a3b5e6d9ee",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q152",
+      "source_id": "p1-07681be3d643",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q153",
+      "source_id": "p1-822969930f66",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q154",
+      "source_id": "p1-3f45c9e19406",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q155",
+      "source_id": "p1-9f9d00b9e870",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q156",
+      "source_id": "p1-4578457bed7f",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "pass",
+      "clear_pass_delta": 0,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q157",
+      "source_id": "p1-547bc29c926f",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q158",
+      "source_id": "p1-f5a189ba3da9",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    },
+    {
+      "question_id": "Q159",
+      "source_id": "p1-090eea5838d4",
+      "group": "text_rendering",
+      "teacher": "pass",
+      "candidate_A": "fail",
+      "clear_pass_delta": -1,
+      "missing_phrase_loss": false
+    }
+  ],
+  "limitations": [
+    "One model-blind AI reviewer; one saved seed per prompt.",
+    "No independent external image-quality benchmark; no production promotion."
+  ]
+}
