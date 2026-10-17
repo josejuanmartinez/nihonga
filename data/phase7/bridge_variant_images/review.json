@@ -1,0 +1,12 @@
+{
+  "type": "qualitative, unblinded AI visual review against each prompt (two reviewers, P01-P15 and P16-P30); one seed per prompt",
+  "prompts": 30,
+  "cond_r1024_vs_B": {"worse": 8, "same": 20, "better": 2,
+                      "worse_ids": ["P02", "P03", "P06", "P07", "P13", "P18", "P22", "P30"], "better_ids": ["P19", "P26"]},
+  "cond_r256_vs_B": {"worse": 10, "same": 19, "better": 1},
+  "first_C_vs_B_earlier_review": {"worse": 15, "same": 13, "better": 2},
+  "fixed_by_conditioning": ["P14 hair smear (both conditioned bridges)", "P28 'Happy Birthday Emma' spelled correctly (cond r1024 only)", "P19 alarm clock present and one clean pair of glasses (cond r1024 only)", "P09 duplicated pot (both rank-1024 bridges)"],
+  "not_fixed": ["Fine detail: lace and circuit board (P06), peacock eye (P07), star shape (P03)", "Deformed shapes: bent spoon (P18), melting clocks (P22)", "P30 'The Rusty Anchor' still misspelled by every bridge"],
+  "caveat": "Reviewers were not fully consistent with each other or with the earlier review (e.g. first C on P14, P25); within-sheet column comparisons are the reliable signal.",
+  "verdict": "cond r1024 is clearly the best bridge and closes much of the gap, but is not yet at B's level; remaining losses are local fine detail and deformed shapes"
+}

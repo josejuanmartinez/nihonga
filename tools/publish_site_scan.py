@@ -68,6 +68,16 @@ def review_parts():
             '<p class="note">Unblinded review by an AI visual reviewer, one seed per prompt; a screen, not a benchmark.</p>']
 
 
+def variant_review_parts():
+    path = ROOT / 'data/phase7/bridge_variant_images/review.json'
+    if not path.exists():
+        return []
+    r = json.loads(path.read_text(encoding='utf-8'))
+    c, f = r['cond_r1024_vs_B'], r['first_C_vs_B_earlier_review']
+    return [f'<p class="summary"><b>Images.</b> On the same 30 prompts and seeds, the conditioned rank-1024 bridge was worse than B on <b>{c["worse"]}</b> prompts, similar on {c["same"]} and better on {c["better"]}, against {f["worse"]} worse for the first bridge. It fixes the hair smearing, spells &ldquo;Happy Birthday Emma&rdquo; correctly, keeps the alarm clock and one clean pair of glasses, and stops duplicating the pot. It does not recover fine local detail (lace and circuit board, the peacock eye, the star), the bent spoon or the melting clocks, and &ldquo;The Rusty Anchor&rdquo; is still misspelled.</p>',
+            '<p class="note">Unblinded AI visual review, two reviewers, one seed per prompt; reviewers were not fully consistent, so column-by-column comparisons within a sheet are the reliable signal.</p>']
+
+
 def variants_parts():
     paths = sorted((ROOT / 'data/phase7/block13_bridge_v2').glob('*/summary.json'))
     if not paths:
@@ -87,7 +97,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training curves were still falling at the last step, so these bridges are undertrained. Images of all three variants are being rendered on the same 30 prompts and seeds.</p></div>']
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training curves were still falling at the last step, so these bridges are undertrained.</p></div>'] + variant_review_parts()
 
 
 def bridge13_section(protocol, report):
