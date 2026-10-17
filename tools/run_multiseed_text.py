@@ -22,7 +22,7 @@ def main():
     scan_b = json.loads(next((root / 'data/phase7/conditional_importance_b').glob('*/request.json')).read_bytes())['request']
     fit = next(r for r in (json.loads(p.read_bytes()) for p in (root / 'data/phase7' / args.source).glob('*/summary.json')) if r.get('status') == 'passed')
     best = fit['variants'][args.variant]
-    remote_dir = {'block13_bridge_v3': 'bridge_variants_v3', 'block13_bridge_e2e': 'bridge_end_to_end'}[args.source]
+    remote_dir = {'block13_bridge_v3': 'bridge_variants_v3', 'block13_bridge_e2e': 'bridge_end_to_end', 'block13_bridge_e2e_text': 'bridge_end_to_end_v2'}[args.source]
     selected = scan_b['selected_candidate']
     text_rows = [r for r in base['rows'] if r['subdimension'] in ('text_rendering', 'posters')]
     rows = [{**r, 'source_id': f"{r['source_id']}-s{k}", 'seed': (r['seed'] + 1000003 * k) % 2**32}

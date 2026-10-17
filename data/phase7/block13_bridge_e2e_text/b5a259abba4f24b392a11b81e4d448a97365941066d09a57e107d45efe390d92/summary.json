@@ -1,0 +1,4714 @@
+{
+  "request_key": "b5a259abba4f24b392a11b81e4d448a97365941066d09a57e107d45efe390d92",
+  "status": "passed",
+  "mode": "verify",
+  "teacher_calls": 5050,
+  "student_calls": 2356,
+  "optimizer_updates": 600,
+  "controls": [
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.006110303103923798,
+        "max_abs_error": 0.26953125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0038824332877993584,
+        "max_abs_error": 0.12109375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-2eea6009c17f",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008303661830723286,
+        "max_abs_error": 0.1015625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-5342860a6667",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005532963201403618,
+        "max_abs_error": 0.16015625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-5342860a6667",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003189744194969535,
+        "max_abs_error": 0.1171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-5342860a6667",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.013850199989974499,
+        "max_abs_error": 0.140625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-fd07a4ad1fcf",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.007366628386080265,
+        "max_abs_error": 0.390625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-fd07a4ad1fcf",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0032556841615587473,
+        "max_abs_error": 0.12109375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-fd07a4ad1fcf",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.00899982824921608,
+        "max_abs_error": 0.109375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-850fffd166fb",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.007137009408324957,
+        "max_abs_error": 0.15234375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-850fffd166fb",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003506195265799761,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-850fffd166fb",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008075742982327938,
+        "max_abs_error": 0.0859375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-77ceedf5feb4",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.00589716574177146,
+        "max_abs_error": 0.359375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-77ceedf5feb4",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003962561953812838,
+        "max_abs_error": 0.169921875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-77ceedf5feb4",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.009003140963613987,
+        "max_abs_error": 0.109375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-b0a7cd44f474",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005382376257330179,
+        "max_abs_error": 0.84375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-b0a7cd44f474",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0035411864519119263,
+        "max_abs_error": 0.145751953125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-b0a7cd44f474",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008101335726678371,
+        "max_abs_error": 0.06640625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ebb93e49db7a",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.008197406306862831,
+        "max_abs_error": 0.3125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ebb93e49db7a",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003970879130065441,
+        "max_abs_error": 0.046875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ebb93e49db7a",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008477476425468922,
+        "max_abs_error": 0.078125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-86b8d8da8b4e",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.004902147687971592,
+        "max_abs_error": 0.1025390625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-86b8d8da8b4e",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.004936129320412874,
+        "max_abs_error": 0.140625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-86b8d8da8b4e",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.009180929511785507,
+        "max_abs_error": 0.09375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-77c5bb57a408",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.004466645419597626,
+        "max_abs_error": 0.15625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-77c5bb57a408",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003445638110861182,
+        "max_abs_error": 0.1015625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-77c5bb57a408",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.009776915423572063,
+        "max_abs_error": 0.109375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-042ed95ebd8e",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.00513335969299078,
+        "max_abs_error": 0.3203125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-042ed95ebd8e",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0035153471399098635,
+        "max_abs_error": 0.119140625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-042ed95ebd8e",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.009616593830287457,
+        "max_abs_error": 0.078125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-3b3ca527b264",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.004384320229291916,
+        "max_abs_error": 0.1875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-3b3ca527b264",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003403361886739731,
+        "max_abs_error": 0.109375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-3b3ca527b264",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.010063398629426956,
+        "max_abs_error": 0.1015625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-c12b5a530f1b",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005104290321469307,
+        "max_abs_error": 0.219482421875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-c12b5a530f1b",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003425842383876443,
+        "max_abs_error": 0.0390625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-c12b5a530f1b",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.009403449483215809,
+        "max_abs_error": 0.08984375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-893d33baab92",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.0051763104274868965,
+        "max_abs_error": 0.115234375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-893d33baab92",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003910912666469812,
+        "max_abs_error": 0.09375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-893d33baab92",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.00788707472383976,
+        "max_abs_error": 0.07958984375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-baf6386f5063",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005462769418954849,
+        "max_abs_error": 0.171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-baf6386f5063",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.004873510915786028,
+        "max_abs_error": 0.1484375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-baf6386f5063",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.011104551143944263,
+        "max_abs_error": 0.083984375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-cae4a5db0004",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005361515562981367,
+        "max_abs_error": 0.236328125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-cae4a5db0004",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003883341560140252,
+        "max_abs_error": 0.0390625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-cae4a5db0004",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.011685125529766083,
+        "max_abs_error": 0.14892578125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-971106134937",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.007149652112275362,
+        "max_abs_error": 0.1796875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-971106134937",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0032266301568597555,
+        "max_abs_error": 0.03515625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-971106134937",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.007537113502621651,
+        "max_abs_error": 0.0625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-f36dcf9a11b1",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005685022566467524,
+        "max_abs_error": 0.140625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-f36dcf9a11b1",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003584850113838911,
+        "max_abs_error": 0.03125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-f36dcf9a11b1",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008914204314351082,
+        "max_abs_error": 0.07421875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ed028a9f5ea3",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.004958711098879576,
+        "max_abs_error": 0.140625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ed028a9f5ea3",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0036456638481467962,
+        "max_abs_error": 0.0859375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ed028a9f5ea3",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.009488185867667198,
+        "max_abs_error": 0.0703125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ae66fbad2783",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.006657611578702927,
+        "max_abs_error": 0.2607421875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ae66fbad2783",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003884992329403758,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-ae66fbad2783",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.00857303012162447,
+        "max_abs_error": 0.09765625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-23855cc68f20",
+      "split": "train",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005619567818939686,
+        "max_abs_error": 0.2421875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-23855cc68f20",
+      "split": "train",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003995631355792284,
+        "max_abs_error": 0.123046875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-23855cc68f20",
+      "split": "train",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.016988975927233696,
+        "max_abs_error": 0.171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.0062911733984947205,
+        "max_abs_error": 0.1171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003176820231601596,
+        "max_abs_error": 0.03125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-4a84d737d801",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.025987252593040466,
+        "max_abs_error": 0.23828125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.004011671058833599,
+        "max_abs_error": 0.2578125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003334912471473217,
+        "max_abs_error": 0.09375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-5c3d279f55b0",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.00820956565439701,
+        "max_abs_error": 0.07421875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-df869d4d578d",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005280676763504744,
+        "max_abs_error": 0.2744140625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-df869d4d578d",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0034949863329529762,
+        "max_abs_error": 0.03515625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-df869d4d578d",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.007556446827948093,
+        "max_abs_error": 0.0703125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-36fe86287034",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.006065331865102053,
+        "max_abs_error": 0.12890625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-36fe86287034",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.004417041316628456,
+        "max_abs_error": 0.0616455078125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-36fe86287034",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.010038213804364204,
+        "max_abs_error": 0.1171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-a6227b574def",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.0044574742205441,
+        "max_abs_error": 0.193359375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-a6227b574def",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.004119749180972576,
+        "max_abs_error": 0.1171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-a6227b574def",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.010748038068413734,
+        "max_abs_error": 0.625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.0042959460988640785,
+        "max_abs_error": 0.234375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.0034738341346383095,
+        "max_abs_error": 0.0625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-8d56f0bbd4df",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.011217689141631126,
+        "max_abs_error": 0.0906982421875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-b5d1aaa3235d",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.005984040442854166,
+        "max_abs_error": 0.1640625,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-b5d1aaa3235d",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003998684696853161,
+        "max_abs_error": 0.11328125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-b5d1aaa3235d",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.008540762588381767,
+        "max_abs_error": 0.0703125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-79652b776ffc",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.007745977491140366,
+        "max_abs_error": 0.28125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-79652b776ffc",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.004912036471068859,
+        "max_abs_error": 0.078125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-79652b776ffc",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.010004379786550999,
+        "max_abs_error": 0.076171875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-17fb78d1c4bf",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.0057477024383842945,
+        "max_abs_error": 0.125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-17fb78d1c4bf",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.003938544075936079,
+        "max_abs_error": 0.0703125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-17fb78d1c4bf",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.010654262267053127,
+        "max_abs_error": 0.0859375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "split": "validation",
+      "stage": "early",
+      "legacy_difference": {
+        "relative_l2_error": 0.007031025364995003,
+        "max_abs_error": 0.21875,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "split": "validation",
+      "stage": "middle",
+      "legacy_difference": {
+        "relative_l2_error": 0.00529916537925601,
+        "max_abs_error": 0.283203125,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    },
+    {
+      "source_id": "p1-81fc1d548f81",
+      "split": "validation",
+      "stage": "late",
+      "legacy_difference": {
+        "relative_l2_error": 0.014229475520551205,
+        "max_abs_error": 0.146484375,
+        "exact_equal": false
+      },
+      "reference_difference": {
+        "relative_l2_error": 0.0,
+        "max_abs_error": 0.0,
+        "exact_equal": true
+      },
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p5-train-p1-2eea6009c17f.pt",
+      "sha256": "045107c03c78280a1bcaa912251308b596fb7fa1284499f3cad720654d49da39",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-5342860a6667.pt",
+      "sha256": "a4b612113a4d63953fc717ae2d0fc136f52a5576977906cc9597e829fb65c02b",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-fd07a4ad1fcf.pt",
+      "sha256": "2eb83f5fa5edf4c0a1e4410f757400df3cab6750aecc7c80c3dc152a502c44f5",
+      "bytes": 1588282
+    },
+    {
+      "name": "p5-train-p1-850fffd166fb.pt",
+      "sha256": "fffd8c953e3fdef478717247502be713ff6842e12ec5c7afe15177fc5910be36",
+      "bytes": 1560634
+    },
+    {
+      "name": "p5-train-p1-77ceedf5feb4.pt",
+      "sha256": "742fd6a562b65fb1e0bf737baebd3c5ba88f7c47b06769af1af455a65bc6edd8",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-b0a7cd44f474.pt",
+      "sha256": "685f388f787f474b8838328045e32da7ebbeae68898da47f4a527aaba80f50e8",
+      "bytes": 1588282
+    },
+    {
+      "name": "p5-train-p1-ebb93e49db7a.pt",
+      "sha256": "a823c2fb0c9c9eba9865b3b18d78e45f38032cec5b59100126ede0577c7555c5",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-86b8d8da8b4e.pt",
+      "sha256": "70185ea683f0b1fe48319148fb82b9987a190ffeff4cfe9a51a475c0c0b07df4",
+      "bytes": 1560634
+    },
+    {
+      "name": "p5-train-p1-77c5bb57a408.pt",
+      "sha256": "936f8c7cda02e351daaa873b01e52aa99960d845218308b73af52180603fc12c",
+      "bytes": 1594426
+    },
+    {
+      "name": "p5-train-p1-042ed95ebd8e.pt",
+      "sha256": "b8091d4206463026cbc53fd539169bb3f51c7a3e0f3fed0810d333d52b86cdbc",
+      "bytes": 1588282
+    },
+    {
+      "name": "p5-train-p1-3b3ca527b264.pt",
+      "sha256": "d89ac5bb99d14c5deeeb7c3b6ad47bd4226f3c2c34176450d324d0634e1358df",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-c12b5a530f1b.pt",
+      "sha256": "515473981c1e79da63be3a98dcc9f6c61b57fc914071e1a2ffef033f5b1ec85b",
+      "bytes": 1560634
+    },
+    {
+      "name": "p5-train-p1-893d33baab92.pt",
+      "sha256": "6f6a45ef0a3d35a0d4783d42d57dfa5f8cb8e652746fea2d9e90ae33c6ff69ae",
+      "bytes": 1560634
+    },
+    {
+      "name": "p5-train-p1-baf6386f5063.pt",
+      "sha256": "b62f07a4d4684fe0e374bc85a4b5cf4bfea624582c36e04e1db9e1306f7c1052",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-cae4a5db0004.pt",
+      "sha256": "f1549a638dce8970690dc718d346b7d301e66cf9fcfa5b50be89f5919d10efb0",
+      "bytes": 1588282
+    },
+    {
+      "name": "p5-train-p1-971106134937.pt",
+      "sha256": "6f4c76e9086c8441a66d65daa1d697584d733fa1b9e329d52f8795eeab9fe36e",
+      "bytes": 1560634
+    },
+    {
+      "name": "p5-train-p1-f36dcf9a11b1.pt",
+      "sha256": "267cfbc7d0eaeb6f169af0b52179731d7995d41d0a77c3a9476d17c30790e7ec",
+      "bytes": 1588282
+    },
+    {
+      "name": "p5-train-p1-ed028a9f5ea3.pt",
+      "sha256": "00cc1fe7159d1762197e2e6afaf0d38b579ebfe04518c449e9c79750c175905e",
+      "bytes": 1594426
+    },
+    {
+      "name": "p5-train-p1-ae66fbad2783.pt",
+      "sha256": "30d067c9ce8e219001428fc236fd0123776ef9904e380d01a4b80889b5ace4b3",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-train-p1-23855cc68f20.pt",
+      "sha256": "0a3ea809f94740be98094592360c8d7f755784dd015801a42fd3e220e0719065",
+      "bytes": 1575994
+    },
+    {
+      "name": "p5-validation-p1-4a84d737d801.pt",
+      "sha256": "c8c766349eeec5d7f94af7625e59eca4aacd44515632d43a629831c895a2f566",
+      "bytes": 1576039
+    },
+    {
+      "name": "p5-validation-p1-5c3d279f55b0.pt",
+      "sha256": "95d4f59c80e9c8f6feb5b0fa337d1e6cf13f5f58fffe41dc95c9c80c7eb0bedb",
+      "bytes": 1594471
+    },
+    {
+      "name": "p5-validation-p1-df869d4d578d.pt",
+      "sha256": "16e9feea390e1fe57953e4af0d999d0e84a539e184b7940b1191182d0c9e8c5b",
+      "bytes": 1588327
+    },
+    {
+      "name": "p5-validation-p1-36fe86287034.pt",
+      "sha256": "734b13b01244ad7a25feabc62ec22c82b1a2c09001cb41cf6d7a0a2b72e16b87",
+      "bytes": 1594471
+    },
+    {
+      "name": "p5-validation-p1-a6227b574def.pt",
+      "sha256": "91bd21f93c5e5554e559507a0bc1f4d10819ad594456de71b4ec0b57438f0fb0",
+      "bytes": 1576039
+    },
+    {
+      "name": "p5-validation-p1-8d56f0bbd4df.pt",
+      "sha256": "cc43c8bf1d04f13d4633c7d51c62f5fdd77ed60165b122e8d369a0206ab9acb6",
+      "bytes": 1588327
+    },
+    {
+      "name": "p5-validation-p1-b5d1aaa3235d.pt",
+      "sha256": "707e7d23d79ae7a69c5be06246f45abf513ba5bac54b4f8e5b65c51e2a72f357",
+      "bytes": 1576039
+    },
+    {
+      "name": "p5-validation-p1-79652b776ffc.pt",
+      "sha256": "0ccfda250b55eb1b11385247a9f3eb49587e8bb64fe1d3f940ba42a1f19e3e78",
+      "bytes": 1588327
+    },
+    {
+      "name": "p5-validation-p1-17fb78d1c4bf.pt",
+      "sha256": "76ea98548991bdd8883c7f52454de7516c848f3d6ccafc8402823ec9958b025b",
+      "bytes": 1576039
+    },
+    {
+      "name": "p5-validation-p1-81fc1d548f81.pt",
+      "sha256": "3ded7ff986b2d78dc55eeb794e9bf37b06585f4c5982feeb1ca8707a4e9d3112",
+      "bytes": 1594471
+    },
+    {
+      "name": "teacher_predictions.pt",
+      "sha256": "68d250c4e903b4701d70f188b2ccba274cbb0f709c1420c605fdc73e66ba3b0d",
+      "bytes": 94653839
+    },
+    {
+      "name": "candidate_predictions.pt",
+      "sha256": "bbc33f9848ba65a9fde0be84ee7efcfd2511228fe1915b523ed66b8697dbc3d1",
+      "bytes": 94654211
+    },
+    {
+      "name": "bridge_block_13_e2e_attn_text.pt",
+      "sha256": "d2f8e929533fe19f5b9dbc2edfc39c6ba35b8c1bd2c35e23fe5b98491adee12b",
+      "bytes": 67312791
+    }
+  ],
+  "process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "527c245980994abfb54a635fefb0907f",
+    "modal_task_id": "ta-01M55Q1PGK0W28CR5QP8PX41YR"
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "cudnn_version": 92400,
+  "settings": {
+    "weights_dtype": "bfloat16",
+    "attention_backend": "SDPBackend.MATH",
+    "deterministic_algorithms": true,
+    "float32_matmul_precision": "highest",
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "bf16_reduced_precision_matmul_reduction": false,
+    "fp16_bf16_reduction_math_sdp": false,
+    "input_order": "original pipeline argument order; stage tensors copied inside inference mode",
+    "prefix_cache": "fresh teacher cache per prompt; populate at early; use at middle and late"
+  },
+  "reference_process": {
+    "pid": 2,
+    "host": "modal",
+    "nonce": "613d8c36de054bdcb9d0684cc4e6f788",
+    "modal_task_id": "ta-01M3PAVXZV5XS0D0MHJ78F5TQR"
+  },
+  "state_sha256": "557150d2799845b3a69811384f2f5a654b42b01eb2a88b3138e6fee0e77137b2",
+  "legacy_max_relative_l2": 0.025987252593040466,
+  "max_reference_relative_l2": 0.0,
+  "exact_equal_controls": 90,
+  "train_counts": {
+    "full_prompts": 60,
+    "early_pool": 600
+  },
+  "new_prompt_replay_relative_l2": [
+    0.0,
+    0.0
+  ],
+  "new_prompt_counts": {
+    "text": 150,
+    "general": 50
+  },
+  "candidate_replay_max_relative_l2": 0.0,
+  "baseline": {
+    "comparisons": 180,
+    "baseline_displacement": {
+      "mean": 0.0,
+      "maximum": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0
+    },
+    "teacher_relative_l2": {
+      "mean": 0.05397191307403975,
+      "maximum": 0.17926660180091858,
+      "p10": 0.022473300434648992,
+      "p50": 0.03603082522749901,
+      "p90": 0.11624561175704001
+    },
+    "baseline_teacher_relative_l2": {
+      "mean": 0.05397191307403975,
+      "maximum": 0.17926660180091858,
+      "p10": 0.022473300434648992,
+      "p50": 0.03603082522749901,
+      "p90": 0.11624561175704001
+    },
+    "teacher_error_change_percentage_points": {
+      "mean": 0.0,
+      "maximum": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0
+    },
+    "worst_regressions": [
+      {
+        "panel": "gate10",
+        "source_id": "p1-4a84d737d801",
+        "dimension": "alignment",
+        "subdimension": "colors",
+        "stage": "early",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.08573050051927567,
+        "baseline_teacher_relative_l2": 0.08573050051927567,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-4a84d737d801",
+        "dimension": "alignment",
+        "subdimension": "colors",
+        "stage": "middle",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.011526605114340782,
+        "baseline_teacher_relative_l2": 0.011526605114340782,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-4a84d737d801",
+        "dimension": "alignment",
+        "subdimension": "colors",
+        "stage": "late",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.052032191306352615,
+        "baseline_teacher_relative_l2": 0.052032191306352615,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-5c3d279f55b0",
+        "dimension": "alignment",
+        "subdimension": "composition_layout",
+        "stage": "early",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.15094755589962006,
+        "baseline_teacher_relative_l2": 0.15094755589962006,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-5c3d279f55b0",
+        "dimension": "alignment",
+        "subdimension": "composition_layout",
+        "stage": "middle",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.014922531321644783,
+        "baseline_teacher_relative_l2": 0.014922531321644783,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-5c3d279f55b0",
+        "dimension": "alignment",
+        "subdimension": "composition_layout",
+        "stage": "late",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.03101092018187046,
+        "baseline_teacher_relative_l2": 0.03101092018187046,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-df869d4d578d",
+        "dimension": "visual_quality",
+        "subdimension": "reflective_materials",
+        "stage": "early",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.10215026140213013,
+        "baseline_teacher_relative_l2": 0.10215026140213013,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-df869d4d578d",
+        "dimension": "visual_quality",
+        "subdimension": "reflective_materials",
+        "stage": "middle",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.01696622744202614,
+        "baseline_teacher_relative_l2": 0.01696622744202614,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-df869d4d578d",
+        "dimension": "visual_quality",
+        "subdimension": "reflective_materials",
+        "stage": "late",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.028976090252399445,
+        "baseline_teacher_relative_l2": 0.028976090252399445,
+        "teacher_error_change_percentage_points": 0.0
+      },
+      {
+        "panel": "gate10",
+        "source_id": "p1-36fe86287034",
+        "dimension": "visual_quality",
+        "subdimension": "fine_detail",
+        "stage": "early",
+        "baseline_displacement": 0.0,
+        "teacher_relative_l2": 0.06423687189817429,
+        "baseline_teacher_relative_l2": 0.06423687189817429,
+        "teacher_error_change_percentage_points": 0.0
+      }
+    ]
+  },
+  "variants": {
+    "e2e_attn_text": {
+      "variant": {
+        "name": "e2e_attn_text",
+        "attention": true,
+        "heads": 4
+      },
+      "checkpoint": {
+        "name": "bridge_block_13_e2e_attn_text.pt",
+        "sha256": "d2f8e929533fe19f5b9dbc2edfc39c6ba35b8c1bd2c35e23fe5b98491adee12b",
+        "bytes": 67312791
+      },
+      "parameters": 16826624,
+      "fit": {
+        "curve": [
+          {
+            "step": 0,
+            "gate10": 0.0710488182802995,
+            "seconds": 15.627609441999994
+          },
+          {
+            "step": 100,
+            "gate10": 0.0712292509774367,
+            "seconds": 438.87992185099984
+          },
+          {
+            "step": 200,
+            "gate10": 0.06553842835128307,
+            "seconds": 875.1097439320001
+          },
+          {
+            "step": 300,
+            "gate10": 0.06417577390869458,
+            "seconds": 1302.899039075
+          },
+          {
+            "step": 400,
+            "gate10": 0.0643005883321166,
+            "seconds": 1721.1768758149997
+          },
+          {
+            "step": 500,
+            "gate10": 0.06453453383098046,
+            "seconds": 2146.996635887
+          },
+          {
+            "step": 600,
+            "gate10": 0.06858502315978209,
+            "seconds": 2567.9138938210003
+          }
+        ],
+        "selected_step": 300,
+        "selected_gate10": 0.06417577390869458
+      },
+      "overall": {
+        "comparisons": 180,
+        "baseline_displacement": {
+          "mean": 0.046018946031108496,
+          "maximum": 0.15645720064640045,
+          "p10": 0.02072312720119953,
+          "p50": 0.02988380193710327,
+          "p90": 0.09187628328800201
+        },
+        "teacher_relative_l2": {
+          "mean": 0.06245488231587741,
+          "maximum": 0.18465730547904968,
+          "p10": 0.028817726857960226,
+          "p50": 0.04220772720873356,
+          "p90": 0.12330715209245681
+        },
+        "baseline_teacher_relative_l2": {
+          "mean": 0.05397191307403975,
+          "maximum": 0.17926660180091858,
+          "p10": 0.022473300434648992,
+          "p50": 0.03603082522749901,
+          "p90": 0.11624561175704001
+        },
+        "teacher_error_change_percentage_points": {
+          "mean": 0.848296924183766,
+          "maximum": 7.0813097059726715,
+          "p10": -0.09289402514696116,
+          "p50": 0.6115024909377098,
+          "p90": 2.5889883190393443
+        },
+        "worst_regressions": [
+          {
+            "panel": "wider50",
+            "source_id": "p1-226c607da31a",
+            "dimension": "alignment",
+            "subdimension": "counting",
+            "stage": "early",
+            "baseline_displacement": 0.10787931084632874,
+            "teacher_relative_l2": 0.17521242797374725,
+            "baseline_teacher_relative_l2": 0.10439933091402054,
+            "teacher_error_change_percentage_points": 7.0813097059726715
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-96108c459bb6",
+            "dimension": "alignment",
+            "subdimension": "materials",
+            "stage": "early",
+            "baseline_displacement": 0.09548704326152802,
+            "teacher_relative_l2": 0.13965162634849548,
+            "baseline_teacher_relative_l2": 0.07981117814779282,
+            "teacher_error_change_percentage_points": 5.984044820070267
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-ad4f062f00ce",
+            "dimension": "visual_quality",
+            "subdimension": "low_light",
+            "stage": "early",
+            "baseline_displacement": 0.09788262844085693,
+            "teacher_relative_l2": 0.12322266399860382,
+            "baseline_teacher_relative_l2": 0.06683198362588882,
+            "teacher_error_change_percentage_points": 5.6390680372715
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-3f13990fe1fe",
+            "dimension": "real_world",
+            "subdimension": "vehicles",
+            "stage": "early",
+            "baseline_displacement": 0.07539357990026474,
+            "teacher_relative_l2": 0.1250179558992386,
+            "baseline_teacher_relative_l2": 0.0777474194765091,
+            "teacher_error_change_percentage_points": 4.727053642272949
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-93b1d5401c5b",
+            "dimension": "aesthetics",
+            "subdimension": "illustration_styles",
+            "stage": "early",
+            "baseline_displacement": 0.13672611117362976,
+            "teacher_relative_l2": 0.14225554466247559,
+            "baseline_teacher_relative_l2": 0.09538853913545609,
+            "teacher_error_change_percentage_points": 4.68670055270195
+          },
+          {
+            "panel": "gate10",
+            "source_id": "p1-8d56f0bbd4df",
+            "dimension": "aesthetics",
+            "subdimension": "landscapes",
+            "stage": "early",
+            "baseline_displacement": 0.08746256679296494,
+            "teacher_relative_l2": 0.16526246070861816,
+            "baseline_teacher_relative_l2": 0.11886639147996902,
+            "teacher_error_change_percentage_points": 4.639606922864914
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-a483b1a96e16",
+            "dimension": "aesthetics",
+            "subdimension": "landscapes",
+            "stage": "early",
+            "baseline_displacement": 0.06976207345724106,
+            "teacher_relative_l2": 0.16098546981811523,
+            "baseline_teacher_relative_l2": 0.11595441401004791,
+            "teacher_error_change_percentage_points": 4.503105580806732
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-b1a16352de21",
+            "dimension": "creative",
+            "subdimension": "comics",
+            "stage": "early",
+            "baseline_displacement": 0.11440182477235794,
+            "teacher_relative_l2": 0.13662980496883392,
+            "baseline_teacher_relative_l2": 0.09270814061164856,
+            "teacher_error_change_percentage_points": 4.392166435718536
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-a10353f56573",
+            "dimension": "alignment",
+            "subdimension": "materials",
+            "stage": "early",
+            "baseline_displacement": 0.08050310611724854,
+            "teacher_relative_l2": 0.1018681526184082,
+            "baseline_teacher_relative_l2": 0.06228191778063774,
+            "teacher_error_change_percentage_points": 3.958623483777046
+          },
+          {
+            "panel": "wider50",
+            "source_id": "p1-7f1939b2c5e7",
+            "dimension": "real_world",
+            "subdimension": "cultural_scenes",
+            "stage": "early",
+            "baseline_displacement": 0.06790848076343536,
+            "teacher_relative_l2": 0.11677443236112595,
+            "baseline_teacher_relative_l2": 0.07770387083292007,
+            "teacher_error_change_percentage_points": 3.907056152820587
+          }
+        ]
+      },
+      "panels": {
+        "gate10": {
+          "comparisons": 30,
+          "baseline_displacement": {
+            "mean": 0.04849142783010999,
+            "maximum": 0.15645720064640045,
+            "p10": 0.020189100131392478,
+            "p50": 0.03587324731051922,
+            "p90": 0.08842355161905288
+          },
+          "teacher_relative_l2": {
+            "mean": 0.06417577390869458,
+            "maximum": 0.16526246070861816,
+            "p10": 0.02599318213760853,
+            "p50": 0.04808375611901283,
+            "p90": 0.11883623674511909
+          },
+          "baseline_teacher_relative_l2": {
+            "mean": 0.055178944828609626,
+            "maximum": 0.15094755589962006,
+            "p10": 0.019309867918491364,
+            "p50": 0.042202599346637726,
+            "p90": 0.12008595392107965
+          },
+          "teacher_error_change_percentage_points": {
+            "mean": 0.8996829080084959,
+            "maximum": 4.639606922864914,
+            "p10": -0.1887521147727962,
+            "p50": 0.7469091564416885,
+            "p90": 2.6802227273583417
+          },
+          "worst_regressions": [
+            {
+              "panel": "gate10",
+              "source_id": "p1-8d56f0bbd4df",
+              "dimension": "aesthetics",
+              "subdimension": "landscapes",
+              "stage": "early",
+              "baseline_displacement": 0.08746256679296494,
+              "teacher_relative_l2": 0.16526246070861816,
+              "baseline_teacher_relative_l2": 0.11886639147996902,
+              "teacher_error_change_percentage_points": 4.639606922864914
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-36fe86287034",
+              "dimension": "visual_quality",
+              "subdimension": "fine_detail",
+              "stage": "early",
+              "baseline_displacement": 0.07867923378944397,
+              "teacher_relative_l2": 0.09546966850757599,
+              "baseline_teacher_relative_l2": 0.06423687189817429,
+              "teacher_error_change_percentage_points": 3.1232796609401703
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-a6227b574def",
+              "dimension": "aesthetics",
+              "subdimension": "color_harmony",
+              "stage": "early",
+              "baseline_displacement": 0.061996325850486755,
+              "teacher_relative_l2": 0.07313507050275803,
+              "baseline_teacher_relative_l2": 0.04396860674023628,
+              "teacher_error_change_percentage_points": 2.9166463762521744
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-17fb78d1c4bf",
+              "dimension": "creative",
+              "subdimension": "unusual_compositions",
+              "stage": "early",
+              "baseline_displacement": 0.08858764916658401,
+              "teacher_relative_l2": 0.10727503895759583,
+              "baseline_teacher_relative_l2": 0.08073550462722778,
+              "teacher_error_change_percentage_points": 2.653953433036804
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-4a84d737d801",
+              "dimension": "alignment",
+              "subdimension": "colors",
+              "stage": "late",
+              "baseline_displacement": 0.06109577789902687,
+              "teacher_relative_l2": 0.07466500997543335,
+              "baseline_teacher_relative_l2": 0.052032191306352615,
+              "teacher_error_change_percentage_points": 2.2632818669080734
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-4a84d737d801",
+              "dimension": "alignment",
+              "subdimension": "colors",
+              "stage": "early",
+              "baseline_displacement": 0.15645720064640045,
+              "teacher_relative_l2": 0.10689494013786316,
+              "baseline_teacher_relative_l2": 0.08573050051927567,
+              "teacher_error_change_percentage_points": 2.1164439618587494
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-81fc1d548f81",
+              "dimension": "creative",
+              "subdimension": "posters",
+              "stage": "middle",
+              "baseline_displacement": 0.037928059697151184,
+              "teacher_relative_l2": 0.046182792633771896,
+              "baseline_teacher_relative_l2": 0.028913533315062523,
+              "teacher_error_change_percentage_points": 1.7269259318709373
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-df869d4d578d",
+              "dimension": "visual_quality",
+              "subdimension": "reflective_materials",
+              "stage": "early",
+              "baseline_displacement": 0.06649897247552872,
+              "teacher_relative_l2": 0.11935395002365112,
+              "baseline_teacher_relative_l2": 0.10215026140213013,
+              "teacher_error_change_percentage_points": 1.7203688621520996
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-79652b776ffc",
+              "dimension": "real_world",
+              "subdimension": "architecture",
+              "stage": "middle",
+              "baseline_displacement": 0.04360555112361908,
+              "teacher_relative_l2": 0.05088379979133606,
+              "baseline_teacher_relative_l2": 0.033995624631643295,
+              "teacher_error_change_percentage_points": 1.6888175159692764
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-36fe86287034",
+              "dimension": "visual_quality",
+              "subdimension": "fine_detail",
+              "stage": "middle",
+              "baseline_displacement": 0.04682433232665062,
+              "teacher_relative_l2": 0.06002068519592285,
+              "baseline_teacher_relative_l2": 0.04479234293103218,
+              "teacher_error_change_percentage_points": 1.522834226489067
+            }
+          ]
+        },
+        "wider50": {
+          "comparisons": 150,
+          "baseline_displacement": {
+            "mean": 0.0455244496713082,
+            "maximum": 0.14998356997966766,
+            "p10": 0.021212955936789513,
+            "p50": 0.028611325658857822,
+            "p90": 0.09237095192074775
+          },
+          "teacher_relative_l2": {
+            "mean": 0.06211070399731398,
+            "maximum": 0.18465730547904968,
+            "p10": 0.02900336980819702,
+            "p50": 0.041717978194355965,
+            "p90": 0.12427053153514861
+          },
+          "baseline_teacher_relative_l2": {
+            "mean": 0.05373050672312578,
+            "maximum": 0.17926660180091858,
+            "p10": 0.02266135308891535,
+            "p50": 0.035697091370821,
+            "p90": 0.1150045834481716
+          },
+          "teacher_error_change_percentage_points": {
+            "mean": 0.83801972741882,
+            "maximum": 7.0813097059726715,
+            "p10": -0.0928940251469612,
+            "p50": 0.5212854593992233,
+            "p90": 2.527552470564842
+          },
+          "worst_regressions": [
+            {
+              "panel": "wider50",
+              "source_id": "p1-226c607da31a",
+              "dimension": "alignment",
+              "subdimension": "counting",
+              "stage": "early",
+              "baseline_displacement": 0.10787931084632874,
+              "teacher_relative_l2": 0.17521242797374725,
+              "baseline_teacher_relative_l2": 0.10439933091402054,
+              "teacher_error_change_percentage_points": 7.0813097059726715
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-96108c459bb6",
+              "dimension": "alignment",
+              "subdimension": "materials",
+              "stage": "early",
+              "baseline_displacement": 0.09548704326152802,
+              "teacher_relative_l2": 0.13965162634849548,
+              "baseline_teacher_relative_l2": 0.07981117814779282,
+              "teacher_error_change_percentage_points": 5.984044820070267
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-ad4f062f00ce",
+              "dimension": "visual_quality",
+              "subdimension": "low_light",
+              "stage": "early",
+              "baseline_displacement": 0.09788262844085693,
+              "teacher_relative_l2": 0.12322266399860382,
+              "baseline_teacher_relative_l2": 0.06683198362588882,
+              "teacher_error_change_percentage_points": 5.6390680372715
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-3f13990fe1fe",
+              "dimension": "real_world",
+              "subdimension": "vehicles",
+              "stage": "early",
+              "baseline_displacement": 0.07539357990026474,
+              "teacher_relative_l2": 0.1250179558992386,
+              "baseline_teacher_relative_l2": 0.0777474194765091,
+              "teacher_error_change_percentage_points": 4.727053642272949
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-93b1d5401c5b",
+              "dimension": "aesthetics",
+              "subdimension": "illustration_styles",
+              "stage": "early",
+              "baseline_displacement": 0.13672611117362976,
+              "teacher_relative_l2": 0.14225554466247559,
+              "baseline_teacher_relative_l2": 0.09538853913545609,
+              "teacher_error_change_percentage_points": 4.68670055270195
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-a483b1a96e16",
+              "dimension": "aesthetics",
+              "subdimension": "landscapes",
+              "stage": "early",
+              "baseline_displacement": 0.06976207345724106,
+              "teacher_relative_l2": 0.16098546981811523,
+              "baseline_teacher_relative_l2": 0.11595441401004791,
+              "teacher_error_change_percentage_points": 4.503105580806732
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-b1a16352de21",
+              "dimension": "creative",
+              "subdimension": "comics",
+              "stage": "early",
+              "baseline_displacement": 0.11440182477235794,
+              "teacher_relative_l2": 0.13662980496883392,
+              "baseline_teacher_relative_l2": 0.09270814061164856,
+              "teacher_error_change_percentage_points": 4.392166435718536
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-a10353f56573",
+              "dimension": "alignment",
+              "subdimension": "materials",
+              "stage": "early",
+              "baseline_displacement": 0.08050310611724854,
+              "teacher_relative_l2": 0.1018681526184082,
+              "baseline_teacher_relative_l2": 0.06228191778063774,
+              "teacher_error_change_percentage_points": 3.958623483777046
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-7f1939b2c5e7",
+              "dimension": "real_world",
+              "subdimension": "cultural_scenes",
+              "stage": "early",
+              "baseline_displacement": 0.06790848076343536,
+              "teacher_relative_l2": 0.11677443236112595,
+              "baseline_teacher_relative_l2": 0.07770387083292007,
+              "teacher_error_change_percentage_points": 3.907056152820587
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-056df011a834",
+              "dimension": "visual_quality",
+              "subdimension": "low_light",
+              "stage": "early",
+              "baseline_displacement": 0.10552434623241425,
+              "teacher_relative_l2": 0.10653576999902725,
+              "baseline_teacher_relative_l2": 0.07084504514932632,
+              "teacher_error_change_percentage_points": 3.5690724849700928
+            }
+          ]
+        }
+      },
+      "stages": {
+        "early": {
+          "comparisons": 60,
+          "baseline_displacement": {
+            "mean": 0.08362925431380669,
+            "maximum": 0.15645720064640045,
+            "p10": 0.053537522256374356,
+            "p50": 0.07976007834076881,
+            "p90": 0.1145769901573658
+          },
+          "teacher_relative_l2": {
+            "mean": 0.11309878292183081,
+            "maximum": 0.18465730547904968,
+            "p10": 0.07937896624207497,
+            "p50": 0.11400966346263885,
+            "p90": 0.15487206727266312
+          },
+          "baseline_teacher_relative_l2": {
+            "mean": 0.10009093880653382,
+            "maximum": 0.17926660180091858,
+            "p10": 0.06408800482749939,
+            "p50": 0.09485669434070587,
+            "p90": 0.14163115769624712
+          },
+          "teacher_error_change_percentage_points": {
+            "mean": 1.3007844115297,
+            "maximum": 7.0813097059726715,
+            "p10": -1.6935257613658905,
+            "p50": 1.4101963490247726,
+            "p90": 4.51675571501255
+          },
+          "worst_regressions": [
+            {
+              "panel": "wider50",
+              "source_id": "p1-226c607da31a",
+              "dimension": "alignment",
+              "subdimension": "counting",
+              "stage": "early",
+              "baseline_displacement": 0.10787931084632874,
+              "teacher_relative_l2": 0.17521242797374725,
+              "baseline_teacher_relative_l2": 0.10439933091402054,
+              "teacher_error_change_percentage_points": 7.0813097059726715
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-96108c459bb6",
+              "dimension": "alignment",
+              "subdimension": "materials",
+              "stage": "early",
+              "baseline_displacement": 0.09548704326152802,
+              "teacher_relative_l2": 0.13965162634849548,
+              "baseline_teacher_relative_l2": 0.07981117814779282,
+              "teacher_error_change_percentage_points": 5.984044820070267
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-ad4f062f00ce",
+              "dimension": "visual_quality",
+              "subdimension": "low_light",
+              "stage": "early",
+              "baseline_displacement": 0.09788262844085693,
+              "teacher_relative_l2": 0.12322266399860382,
+              "baseline_teacher_relative_l2": 0.06683198362588882,
+              "teacher_error_change_percentage_points": 5.6390680372715
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-3f13990fe1fe",
+              "dimension": "real_world",
+              "subdimension": "vehicles",
+              "stage": "early",
+              "baseline_displacement": 0.07539357990026474,
+              "teacher_relative_l2": 0.1250179558992386,
+              "baseline_teacher_relative_l2": 0.0777474194765091,
+              "teacher_error_change_percentage_points": 4.727053642272949
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-93b1d5401c5b",
+              "dimension": "aesthetics",
+              "subdimension": "illustration_styles",
+              "stage": "early",
+              "baseline_displacement": 0.13672611117362976,
+              "teacher_relative_l2": 0.14225554466247559,
+              "baseline_teacher_relative_l2": 0.09538853913545609,
+              "teacher_error_change_percentage_points": 4.68670055270195
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-8d56f0bbd4df",
+              "dimension": "aesthetics",
+              "subdimension": "landscapes",
+              "stage": "early",
+              "baseline_displacement": 0.08746256679296494,
+              "teacher_relative_l2": 0.16526246070861816,
+              "baseline_teacher_relative_l2": 0.11886639147996902,
+              "teacher_error_change_percentage_points": 4.639606922864914
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-a483b1a96e16",
+              "dimension": "aesthetics",
+              "subdimension": "landscapes",
+              "stage": "early",
+              "baseline_displacement": 0.06976207345724106,
+              "teacher_relative_l2": 0.16098546981811523,
+              "baseline_teacher_relative_l2": 0.11595441401004791,
+              "teacher_error_change_percentage_points": 4.503105580806732
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-b1a16352de21",
+              "dimension": "creative",
+              "subdimension": "comics",
+              "stage": "early",
+              "baseline_displacement": 0.11440182477235794,
+              "teacher_relative_l2": 0.13662980496883392,
+              "baseline_teacher_relative_l2": 0.09270814061164856,
+              "teacher_error_change_percentage_points": 4.392166435718536
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-a10353f56573",
+              "dimension": "alignment",
+              "subdimension": "materials",
+              "stage": "early",
+              "baseline_displacement": 0.08050310611724854,
+              "teacher_relative_l2": 0.1018681526184082,
+              "baseline_teacher_relative_l2": 0.06228191778063774,
+              "teacher_error_change_percentage_points": 3.958623483777046
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-7f1939b2c5e7",
+              "dimension": "real_world",
+              "subdimension": "cultural_scenes",
+              "stage": "early",
+              "baseline_displacement": 0.06790848076343536,
+              "teacher_relative_l2": 0.11677443236112595,
+              "baseline_teacher_relative_l2": 0.07770387083292007,
+              "teacher_error_change_percentage_points": 3.907056152820587
+            }
+          ]
+        },
+        "middle": {
+          "comparisons": 60,
+          "baseline_displacement": {
+            "mean": 0.028318476878727475,
+            "maximum": 0.04682433232665062,
+            "p10": 0.019240978732705118,
+            "p50": 0.027509748935699463,
+            "p90": 0.037954853102564814
+          },
+          "teacher_relative_l2": {
+            "mean": 0.03554452539732059,
+            "maximum": 0.06002068519592285,
+            "p10": 0.024152322113513945,
+            "p50": 0.03610086068511009,
+            "p90": 0.0462012130767107
+          },
+          "baseline_teacher_relative_l2": {
+            "mean": 0.02573088255400459,
+            "maximum": 0.04479234293103218,
+            "p10": 0.016333399899303915,
+            "p50": 0.025477048940956593,
+            "p90": 0.03506562486290932
+          },
+          "teacher_error_change_percentage_points": {
+            "mean": 0.9813642843315998,
+            "maximum": 1.9119162112474442,
+            "p10": 0.44356903061270714,
+            "p50": 0.9121011942625046,
+            "p90": 1.6475502215325832
+          },
+          "worst_regressions": [
+            {
+              "panel": "wider50",
+              "source_id": "p1-056df011a834",
+              "dimension": "visual_quality",
+              "subdimension": "low_light",
+              "stage": "middle",
+              "baseline_displacement": 0.03951168432831764,
+              "teacher_relative_l2": 0.04669110104441643,
+              "baseline_teacher_relative_l2": 0.027571938931941986,
+              "teacher_error_change_percentage_points": 1.9119162112474442
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-41d2c4d8a3c5",
+              "dimension": "creative",
+              "subdimension": "comics",
+              "stage": "middle",
+              "baseline_displacement": 0.03819599375128746,
+              "teacher_relative_l2": 0.045485783368349075,
+              "baseline_teacher_relative_l2": 0.026567615568637848,
+              "teacher_error_change_percentage_points": 1.8918167799711227
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-b2cd7963832b",
+              "dimension": "alignment",
+              "subdimension": "materials",
+              "stage": "middle",
+              "baseline_displacement": 0.037059567868709564,
+              "teacher_relative_l2": 0.045322075486183167,
+              "baseline_teacher_relative_l2": 0.026974663138389587,
+              "teacher_error_change_percentage_points": 1.834741234779358
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-1984c1c3e761",
+              "dimension": "alignment",
+              "subdimension": "multiple_objects",
+              "stage": "middle",
+              "baseline_displacement": 0.04065173491835594,
+              "teacher_relative_l2": 0.04160861298441887,
+              "baseline_teacher_relative_l2": 0.024330738931894302,
+              "teacher_error_change_percentage_points": 1.7277874052524567
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-81fc1d548f81",
+              "dimension": "creative",
+              "subdimension": "posters",
+              "stage": "middle",
+              "baseline_displacement": 0.037928059697151184,
+              "teacher_relative_l2": 0.046182792633771896,
+              "baseline_teacher_relative_l2": 0.028913533315062523,
+              "teacher_error_change_percentage_points": 1.7269259318709373
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-79652b776ffc",
+              "dimension": "real_world",
+              "subdimension": "architecture",
+              "stage": "middle",
+              "baseline_displacement": 0.04360555112361908,
+              "teacher_relative_l2": 0.05088379979133606,
+              "baseline_teacher_relative_l2": 0.033995624631643295,
+              "teacher_error_change_percentage_points": 1.6888175159692764
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-c70f1f321ce0",
+              "dimension": "creative",
+              "subdimension": "posters",
+              "stage": "middle",
+              "baseline_displacement": 0.0338112935423851,
+              "teacher_relative_l2": 0.03684375435113907,
+              "baseline_teacher_relative_l2": 0.02041410468518734,
+              "teacher_error_change_percentage_points": 1.6429649665951729
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-d2c7ab2a53d3",
+              "dimension": "visual_quality",
+              "subdimension": "skin",
+              "stage": "middle",
+              "baseline_displacement": 0.03339419141411781,
+              "teacher_relative_l2": 0.039400987327098846,
+              "baseline_teacher_relative_l2": 0.023570435121655464,
+              "teacher_error_change_percentage_points": 1.5830552205443382
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-0871910b1774",
+              "dimension": "real_world",
+              "subdimension": "clothing",
+              "stage": "middle",
+              "baseline_displacement": 0.03423555567860603,
+              "teacher_relative_l2": 0.03799758106470108,
+              "baseline_teacher_relative_l2": 0.022552426904439926,
+              "teacher_error_change_percentage_points": 1.5445154160261154
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-36fe86287034",
+              "dimension": "visual_quality",
+              "subdimension": "fine_detail",
+              "stage": "middle",
+              "baseline_displacement": 0.04682433232665062,
+              "teacher_relative_l2": 0.06002068519592285,
+              "baseline_teacher_relative_l2": 0.04479234293103218,
+              "teacher_error_change_percentage_points": 1.522834226489067
+            }
+          ]
+        },
+        "late": {
+          "comparisons": 60,
+          "baseline_displacement": {
+            "mean": 0.026109106900791327,
+            "maximum": 0.06109577789902687,
+            "p10": 0.02055530771613121,
+            "p50": 0.02487499825656414,
+            "p90": 0.029004899226129057
+          },
+          "teacher_relative_l2": {
+            "mean": 0.03872133862848083,
+            "maximum": 0.07466500997543335,
+            "p10": 0.0299812737852335,
+            "p50": 0.0373969916254282,
+            "p90": 0.04634730406105519
+          },
+          "baseline_teacher_relative_l2": {
+            "mean": 0.03609391786158085,
+            "maximum": 0.0568845272064209,
+            "p10": 0.029453370347619058,
+            "p50": 0.035036567598581314,
+            "p90": 0.04312377162277699
+          },
+          "teacher_error_change_percentage_points": {
+            "mean": 0.2627420766899983,
+            "maximum": 2.2632818669080734,
+            "p10": -0.039945077151060104,
+            "p50": 0.18276022747159004,
+            "p90": 0.4957170784473419
+          },
+          "worst_regressions": [
+            {
+              "panel": "gate10",
+              "source_id": "p1-4a84d737d801",
+              "dimension": "alignment",
+              "subdimension": "colors",
+              "stage": "late",
+              "baseline_displacement": 0.06109577789902687,
+              "teacher_relative_l2": 0.07466500997543335,
+              "baseline_teacher_relative_l2": 0.052032191306352615,
+              "teacher_error_change_percentage_points": 2.2632818669080734
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-888027c4ef34",
+              "dimension": "aesthetics",
+              "subdimension": "illustration_styles",
+              "stage": "late",
+              "baseline_displacement": 0.05062159523367882,
+              "teacher_relative_l2": 0.06966532766819,
+              "baseline_teacher_relative_l2": 0.0568845272064209,
+              "teacher_error_change_percentage_points": 1.2780800461769104
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-81fc1d548f81",
+              "dimension": "creative",
+              "subdimension": "posters",
+              "stage": "late",
+              "baseline_displacement": 0.045443009585142136,
+              "teacher_relative_l2": 0.06451889127492905,
+              "baseline_teacher_relative_l2": 0.05355198681354523,
+              "teacher_error_change_percentage_points": 1.096690446138382
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-36fe86287034",
+              "dimension": "visual_quality",
+              "subdimension": "fine_detail",
+              "stage": "late",
+              "baseline_displacement": 0.03381843492388725,
+              "teacher_relative_l2": 0.04914306104183197,
+              "baseline_teacher_relative_l2": 0.041294511407613754,
+              "teacher_error_change_percentage_points": 0.7848549634218216
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-cac178cb0c00",
+              "dimension": "real_world",
+              "subdimension": "cultural_scenes",
+              "stage": "late",
+              "baseline_displacement": 0.027456022799015045,
+              "teacher_relative_l2": 0.04202457144856453,
+              "baseline_teacher_relative_l2": 0.03700294345617294,
+              "teacher_error_change_percentage_points": 0.5021627992391586
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-056df011a834",
+              "dimension": "visual_quality",
+              "subdimension": "low_light",
+              "stage": "late",
+              "baseline_displacement": 0.02867353893816471,
+              "teacher_relative_l2": 0.041479676961898804,
+              "baseline_teacher_relative_l2": 0.0364883616566658,
+              "teacher_error_change_percentage_points": 0.49913153052330017
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-79652b776ffc",
+              "dimension": "real_world",
+              "subdimension": "architecture",
+              "stage": "late",
+              "baseline_displacement": 0.03122858703136444,
+              "teacher_relative_l2": 0.046118855476379395,
+              "baseline_teacher_relative_l2": 0.04116547852754593,
+              "teacher_error_change_percentage_points": 0.49533769488334656
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-e870fd58694d",
+              "dimension": "aesthetics",
+              "subdimension": "cinematic_framing",
+              "stage": "late",
+              "baseline_displacement": 0.0260029174387455,
+              "teacher_relative_l2": 0.037514787167310715,
+              "baseline_teacher_relative_l2": 0.032570820301771164,
+              "teacher_error_change_percentage_points": 0.4943966865539551
+            },
+            {
+              "panel": "gate10",
+              "source_id": "p1-b5d1aaa3235d",
+              "dimension": "real_world",
+              "subdimension": "cultural_scenes",
+              "stage": "late",
+              "baseline_displacement": 0.025761956349015236,
+              "teacher_relative_l2": 0.03845670074224472,
+              "baseline_teacher_relative_l2": 0.03407873958349228,
+              "teacher_error_change_percentage_points": 0.43779611587524414
+            },
+            {
+              "panel": "wider50",
+              "source_id": "p1-0871910b1774",
+              "dimension": "real_world",
+              "subdimension": "clothing",
+              "stage": "late",
+              "baseline_displacement": 0.02772478386759758,
+              "teacher_relative_l2": 0.0372307188808918,
+              "baseline_teacher_relative_l2": 0.03288467228412628,
+              "teacher_error_change_percentage_points": 0.4346046596765518
+            }
+          ]
+        }
+      },
+      "records": [
+        {
+          "panel": "gate10",
+          "source_id": "p1-4a84d737d801",
+          "dimension": "alignment",
+          "subdimension": "colors",
+          "stage": "early",
+          "baseline_displacement": 0.15645720064640045,
+          "teacher_relative_l2": 0.10689494013786316,
+          "baseline_teacher_relative_l2": 0.08573050051927567,
+          "teacher_error_change_percentage_points": 2.1164439618587494
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-4a84d737d801",
+          "dimension": "alignment",
+          "subdimension": "colors",
+          "stage": "middle",
+          "baseline_displacement": 0.01361085195094347,
+          "teacher_relative_l2": 0.01662518084049225,
+          "baseline_teacher_relative_l2": 0.011526605114340782,
+          "teacher_error_change_percentage_points": 0.5098575726151466
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-4a84d737d801",
+          "dimension": "alignment",
+          "subdimension": "colors",
+          "stage": "late",
+          "baseline_displacement": 0.06109577789902687,
+          "teacher_relative_l2": 0.07466500997543335,
+          "baseline_teacher_relative_l2": 0.052032191306352615,
+          "teacher_error_change_percentage_points": 2.2632818669080734
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-5c3d279f55b0",
+          "dimension": "alignment",
+          "subdimension": "composition_layout",
+          "stage": "early",
+          "baseline_displacement": 0.10437428951263428,
+          "teacher_relative_l2": 0.12263297289609909,
+          "baseline_teacher_relative_l2": 0.15094755589962006,
+          "teacher_error_change_percentage_points": -2.8314583003520966
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-5c3d279f55b0",
+          "dimension": "alignment",
+          "subdimension": "composition_layout",
+          "stage": "middle",
+          "baseline_displacement": 0.01695382595062256,
+          "teacher_relative_l2": 0.019410140812397003,
+          "baseline_teacher_relative_l2": 0.014922531321644783,
+          "teacher_error_change_percentage_points": 0.448760949075222
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-5c3d279f55b0",
+          "dimension": "alignment",
+          "subdimension": "composition_layout",
+          "stage": "late",
+          "baseline_displacement": 0.020205173641443253,
+          "teacher_relative_l2": 0.03052210994064808,
+          "baseline_teacher_relative_l2": 0.03101092018187046,
+          "teacher_error_change_percentage_points": -0.04888102412223816
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-df869d4d578d",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "early",
+          "baseline_displacement": 0.06649897247552872,
+          "teacher_relative_l2": 0.11935395002365112,
+          "baseline_teacher_relative_l2": 0.10215026140213013,
+          "teacher_error_change_percentage_points": 1.7203688621520996
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-df869d4d578d",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "middle",
+          "baseline_displacement": 0.022373465821146965,
+          "teacher_relative_l2": 0.02491740509867668,
+          "baseline_teacher_relative_l2": 0.01696622744202614,
+          "teacher_error_change_percentage_points": 0.7951177656650543
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-df869d4d578d",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "late",
+          "baseline_displacement": 0.021057695150375366,
+          "teacher_relative_l2": 0.029746493324637413,
+          "baseline_teacher_relative_l2": 0.028976090252399445,
+          "teacher_error_change_percentage_points": 0.07704030722379684
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-36fe86287034",
+          "dimension": "visual_quality",
+          "subdimension": "fine_detail",
+          "stage": "early",
+          "baseline_displacement": 0.07867923378944397,
+          "teacher_relative_l2": 0.09546966850757599,
+          "baseline_teacher_relative_l2": 0.06423687189817429,
+          "teacher_error_change_percentage_points": 3.1232796609401703
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-36fe86287034",
+          "dimension": "visual_quality",
+          "subdimension": "fine_detail",
+          "stage": "middle",
+          "baseline_displacement": 0.04682433232665062,
+          "teacher_relative_l2": 0.06002068519592285,
+          "baseline_teacher_relative_l2": 0.04479234293103218,
+          "teacher_error_change_percentage_points": 1.522834226489067
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-36fe86287034",
+          "dimension": "visual_quality",
+          "subdimension": "fine_detail",
+          "stage": "late",
+          "baseline_displacement": 0.03381843492388725,
+          "teacher_relative_l2": 0.04914306104183197,
+          "baseline_teacher_relative_l2": 0.041294511407613754,
+          "teacher_error_change_percentage_points": 0.7848549634218216
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-a6227b574def",
+          "dimension": "aesthetics",
+          "subdimension": "color_harmony",
+          "stage": "early",
+          "baseline_displacement": 0.061996325850486755,
+          "teacher_relative_l2": 0.07313507050275803,
+          "baseline_teacher_relative_l2": 0.04396860674023628,
+          "teacher_error_change_percentage_points": 2.9166463762521744
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-a6227b574def",
+          "dimension": "aesthetics",
+          "subdimension": "color_harmony",
+          "stage": "middle",
+          "baseline_displacement": 0.024008164182305336,
+          "teacher_relative_l2": 0.03291263058781624,
+          "baseline_teacher_relative_l2": 0.023610234260559082,
+          "teacher_error_change_percentage_points": 0.9302396327257156
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-a6227b574def",
+          "dimension": "aesthetics",
+          "subdimension": "color_harmony",
+          "stage": "late",
+          "baseline_displacement": 0.02243516966700554,
+          "teacher_relative_l2": 0.03342359513044357,
+          "baseline_teacher_relative_l2": 0.03133367374539375,
+          "teacher_error_change_percentage_points": 0.208992138504982
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-8d56f0bbd4df",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "early",
+          "baseline_displacement": 0.08746256679296494,
+          "teacher_relative_l2": 0.16526246070861816,
+          "baseline_teacher_relative_l2": 0.11886639147996902,
+          "teacher_error_change_percentage_points": 4.639606922864914
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-8d56f0bbd4df",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "middle",
+          "baseline_displacement": 0.020044438540935516,
+          "teacher_relative_l2": 0.026112712919712067,
+          "baseline_teacher_relative_l2": 0.01957027241587639,
+          "teacher_error_change_percentage_points": 0.6542440503835678
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-8d56f0bbd4df",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "late",
+          "baseline_displacement": 0.027315329760313034,
+          "teacher_relative_l2": 0.045431267470121384,
+          "baseline_teacher_relative_l2": 0.0444088950753212,
+          "teacher_error_change_percentage_points": 0.10223723948001862
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-b5d1aaa3235d",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "early",
+          "baseline_displacement": 0.06305303424596786,
+          "teacher_relative_l2": 0.11410645395517349,
+          "baseline_teacher_relative_l2": 0.13106201589107513,
+          "teacher_error_change_percentage_points": -1.6955561935901642
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-b5d1aaa3235d",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "middle",
+          "baseline_displacement": 0.03147123381495476,
+          "teacher_relative_l2": 0.039518389850854874,
+          "baseline_teacher_relative_l2": 0.03093072585761547,
+          "teacher_error_change_percentage_points": 0.8587663993239403
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-b5d1aaa3235d",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "late",
+          "baseline_displacement": 0.025761956349015236,
+          "teacher_relative_l2": 0.03845670074224472,
+          "baseline_teacher_relative_l2": 0.03407873958349228,
+          "teacher_error_change_percentage_points": 0.43779611587524414
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-79652b776ffc",
+          "dimension": "real_world",
+          "subdimension": "architecture",
+          "stage": "early",
+          "baseline_displacement": 0.05347111076116562,
+          "teacher_relative_l2": 0.08516468107700348,
+          "baseline_teacher_relative_l2": 0.08374927192926407,
+          "teacher_error_change_percentage_points": 0.14154091477394104
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-79652b776ffc",
+          "dimension": "real_world",
+          "subdimension": "architecture",
+          "stage": "middle",
+          "baseline_displacement": 0.04360555112361908,
+          "teacher_relative_l2": 0.05088379979133606,
+          "baseline_teacher_relative_l2": 0.033995624631643295,
+          "teacher_error_change_percentage_points": 1.6888175159692764
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-79652b776ffc",
+          "dimension": "real_world",
+          "subdimension": "architecture",
+          "stage": "late",
+          "baseline_displacement": 0.03122858703136444,
+          "teacher_relative_l2": 0.046118855476379395,
+          "baseline_teacher_relative_l2": 0.04116547852754593,
+          "teacher_error_change_percentage_points": 0.49533769488334656
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-17fb78d1c4bf",
+          "dimension": "creative",
+          "subdimension": "unusual_compositions",
+          "stage": "early",
+          "baseline_displacement": 0.08858764916658401,
+          "teacher_relative_l2": 0.10727503895759583,
+          "baseline_teacher_relative_l2": 0.08073550462722778,
+          "teacher_error_change_percentage_points": 2.653953433036804
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-17fb78d1c4bf",
+          "dimension": "creative",
+          "subdimension": "unusual_compositions",
+          "stage": "middle",
+          "baseline_displacement": 0.031145615503191948,
+          "teacher_relative_l2": 0.04156509414315224,
+          "baseline_teacher_relative_l2": 0.03447546064853668,
+          "teacher_error_change_percentage_points": 0.7089633494615555
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-17fb78d1c4bf",
+          "dimension": "creative",
+          "subdimension": "unusual_compositions",
+          "stage": "late",
+          "baseline_displacement": 0.029430460184812546,
+          "teacher_relative_l2": 0.047024451196193695,
+          "baseline_teacher_relative_l2": 0.0431106872856617,
+          "teacher_error_change_percentage_points": 0.39137639105319977
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-81fc1d548f81",
+          "dimension": "creative",
+          "subdimension": "posters",
+          "stage": "early",
+          "baseline_displacement": 0.0884053185582161,
+          "teacher_relative_l2": 0.11877871304750443,
+          "baseline_teacher_relative_l2": 0.13325463235378265,
+          "teacher_error_change_percentage_points": -1.4475919306278229
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-81fc1d548f81",
+          "dimension": "creative",
+          "subdimension": "posters",
+          "stage": "middle",
+          "baseline_displacement": 0.037928059697151184,
+          "teacher_relative_l2": 0.046182792633771896,
+          "baseline_teacher_relative_l2": 0.028913533315062523,
+          "teacher_error_change_percentage_points": 1.7269259318709373
+        },
+        {
+          "panel": "gate10",
+          "source_id": "p1-81fc1d548f81",
+          "dimension": "creative",
+          "subdimension": "posters",
+          "stage": "late",
+          "baseline_displacement": 0.045443009585142136,
+          "teacher_relative_l2": 0.06451889127492905,
+          "baseline_teacher_relative_l2": 0.05355198681354523,
+          "teacher_error_change_percentage_points": 1.096690446138382
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-04dd70c5760f",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "early",
+          "baseline_displacement": 0.06368472427129745,
+          "teacher_relative_l2": 0.09535951912403107,
+          "baseline_teacher_relative_l2": 0.08239579200744629,
+          "teacher_error_change_percentage_points": 1.2963727116584778
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-04dd70c5760f",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "middle",
+          "baseline_displacement": 0.026603933423757553,
+          "teacher_relative_l2": 0.035357967019081116,
+          "baseline_teacher_relative_l2": 0.026228677481412888,
+          "teacher_error_change_percentage_points": 0.9129289537668228
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-04dd70c5760f",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "late",
+          "baseline_displacement": 0.02469192072749138,
+          "teacher_relative_l2": 0.028824996203184128,
+          "baseline_teacher_relative_l2": 0.03001486510038376,
+          "teacher_error_change_percentage_points": -0.11898688971996307
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-1461526cb2e1",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "early",
+          "baseline_displacement": 0.0785415768623352,
+          "teacher_relative_l2": 0.07940217852592468,
+          "baseline_teacher_relative_l2": 0.06050984561443329,
+          "teacher_error_change_percentage_points": 1.8892332911491394
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-1461526cb2e1",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "middle",
+          "baseline_displacement": 0.027823451906442642,
+          "teacher_relative_l2": 0.035042211413383484,
+          "baseline_teacher_relative_l2": 0.023340530693531036,
+          "teacher_error_change_percentage_points": 1.1701680719852448
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-1461526cb2e1",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "late",
+          "baseline_displacement": 0.023825738579034805,
+          "teacher_relative_l2": 0.030308963730931282,
+          "baseline_teacher_relative_l2": 0.03078915737569332,
+          "teacher_error_change_percentage_points": -0.04801936447620392
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-226c607da31a",
+          "dimension": "alignment",
+          "subdimension": "counting",
+          "stage": "early",
+          "baseline_displacement": 0.10787931084632874,
+          "teacher_relative_l2": 0.17521242797374725,
+          "baseline_teacher_relative_l2": 0.10439933091402054,
+          "teacher_error_change_percentage_points": 7.0813097059726715
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-226c607da31a",
+          "dimension": "alignment",
+          "subdimension": "counting",
+          "stage": "middle",
+          "baseline_displacement": 0.026771191507577896,
+          "teacher_relative_l2": 0.03267473727464676,
+          "baseline_teacher_relative_l2": 0.023927630856633186,
+          "teacher_error_change_percentage_points": 0.8747106418013573
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-226c607da31a",
+          "dimension": "alignment",
+          "subdimension": "counting",
+          "stage": "late",
+          "baseline_displacement": 0.028535911813378334,
+          "teacher_relative_l2": 0.03864423558115959,
+          "baseline_teacher_relative_l2": 0.04040581360459328,
+          "teacher_error_change_percentage_points": -0.17615780234336853
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cabc84946a83",
+          "dimension": "alignment",
+          "subdimension": "actions",
+          "stage": "early",
+          "baseline_displacement": 0.06998936086893082,
+          "teacher_relative_l2": 0.08228270709514618,
+          "baseline_teacher_relative_l2": 0.07534637302160263,
+          "teacher_error_change_percentage_points": 0.6936334073543549
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cabc84946a83",
+          "dimension": "alignment",
+          "subdimension": "actions",
+          "stage": "middle",
+          "baseline_displacement": 0.027661960572004318,
+          "teacher_relative_l2": 0.04636699706315994,
+          "baseline_teacher_relative_l2": 0.035064082592725754,
+          "teacher_error_change_percentage_points": 1.1302914470434189
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cabc84946a83",
+          "dimension": "alignment",
+          "subdimension": "actions",
+          "stage": "late",
+          "baseline_displacement": 0.0218132883310318,
+          "teacher_relative_l2": 0.03637457638978958,
+          "baseline_teacher_relative_l2": 0.03475242480635643,
+          "teacher_error_change_percentage_points": 0.16221515834331512
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-c92b61795d65",
+          "dimension": "alignment",
+          "subdimension": "counting",
+          "stage": "early",
+          "baseline_displacement": 0.08808952569961548,
+          "teacher_relative_l2": 0.15713833272457123,
+          "baseline_teacher_relative_l2": 0.17926660180091858,
+          "teacher_error_change_percentage_points": -2.212826907634735
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-c92b61795d65",
+          "dimension": "alignment",
+          "subdimension": "counting",
+          "stage": "middle",
+          "baseline_displacement": 0.03683880716562271,
+          "teacher_relative_l2": 0.04512256756424904,
+          "baseline_teacher_relative_l2": 0.036009833216667175,
+          "teacher_error_change_percentage_points": 0.9112734347581863
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-c92b61795d65",
+          "dimension": "alignment",
+          "subdimension": "counting",
+          "stage": "late",
+          "baseline_displacement": 0.022596532478928566,
+          "teacher_relative_l2": 0.037279196083545685,
+          "baseline_teacher_relative_l2": 0.03615865111351013,
+          "teacher_error_change_percentage_points": 0.1120544970035553
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b2cd7963832b",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "early",
+          "baseline_displacement": 0.08723122626543045,
+          "teacher_relative_l2": 0.16396085917949677,
+          "baseline_teacher_relative_l2": 0.16077390313148499,
+          "teacher_error_change_percentage_points": 0.318695604801178
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b2cd7963832b",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "middle",
+          "baseline_displacement": 0.037059567868709564,
+          "teacher_relative_l2": 0.045322075486183167,
+          "baseline_teacher_relative_l2": 0.026974663138389587,
+          "teacher_error_change_percentage_points": 1.834741234779358
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b2cd7963832b",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "late",
+          "baseline_displacement": 0.02182793617248535,
+          "teacher_relative_l2": 0.034295327961444855,
+          "baseline_teacher_relative_l2": 0.03402893245220184,
+          "teacher_error_change_percentage_points": 0.026639550924301147
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-96108c459bb6",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "early",
+          "baseline_displacement": 0.09548704326152802,
+          "teacher_relative_l2": 0.13965162634849548,
+          "baseline_teacher_relative_l2": 0.07981117814779282,
+          "teacher_error_change_percentage_points": 5.984044820070267
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-96108c459bb6",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "middle",
+          "baseline_displacement": 0.011910618282854557,
+          "teacher_relative_l2": 0.015147816389799118,
+          "baseline_teacher_relative_l2": 0.014024446718394756,
+          "teacher_error_change_percentage_points": 0.11233696714043617
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-96108c459bb6",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "late",
+          "baseline_displacement": 0.02767067216336727,
+          "teacher_relative_l2": 0.03908434882760048,
+          "baseline_teacher_relative_l2": 0.0376385822892189,
+          "teacher_error_change_percentage_points": 0.14457665383815765
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-1984c1c3e761",
+          "dimension": "alignment",
+          "subdimension": "multiple_objects",
+          "stage": "early",
+          "baseline_displacement": 0.12334347516298294,
+          "teacher_relative_l2": 0.12111757695674896,
+          "baseline_teacher_relative_l2": 0.09222356975078583,
+          "teacher_error_change_percentage_points": 2.8894007205963135
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-1984c1c3e761",
+          "dimension": "alignment",
+          "subdimension": "multiple_objects",
+          "stage": "middle",
+          "baseline_displacement": 0.04065173491835594,
+          "teacher_relative_l2": 0.04160861298441887,
+          "baseline_teacher_relative_l2": 0.024330738931894302,
+          "teacher_error_change_percentage_points": 1.7277874052524567
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-1984c1c3e761",
+          "dimension": "alignment",
+          "subdimension": "multiple_objects",
+          "stage": "late",
+          "baseline_displacement": 0.02441207319498062,
+          "teacher_relative_l2": 0.04080267250537872,
+          "baseline_teacher_relative_l2": 0.03902054950594902,
+          "teacher_error_change_percentage_points": 0.17821229994297028
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-58419d384824",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "early",
+          "baseline_displacement": 0.06945232301950455,
+          "teacher_relative_l2": 0.12999378144741058,
+          "baseline_teacher_relative_l2": 0.11489904671907425,
+          "teacher_error_change_percentage_points": 1.5094734728336334
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-58419d384824",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "middle",
+          "baseline_displacement": 0.03693955019116402,
+          "teacher_relative_l2": 0.047929346561431885,
+          "baseline_teacher_relative_l2": 0.03595846891403198,
+          "teacher_error_change_percentage_points": 1.1970877647399902
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-58419d384824",
+          "dimension": "alignment",
+          "subdimension": "spatial_relation",
+          "stage": "late",
+          "baseline_displacement": 0.027327196672558784,
+          "teacher_relative_l2": 0.04254107177257538,
+          "baseline_teacher_relative_l2": 0.03931956738233566,
+          "teacher_error_change_percentage_points": 0.32215043902397156
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a10353f56573",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "early",
+          "baseline_displacement": 0.08050310611724854,
+          "teacher_relative_l2": 0.1018681526184082,
+          "baseline_teacher_relative_l2": 0.06228191778063774,
+          "teacher_error_change_percentage_points": 3.958623483777046
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a10353f56573",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "middle",
+          "baseline_displacement": 0.02477930299937725,
+          "teacher_relative_l2": 0.03207505866885185,
+          "baseline_teacher_relative_l2": 0.023963553830981255,
+          "teacher_error_change_percentage_points": 0.8111504837870598
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a10353f56573",
+          "dimension": "alignment",
+          "subdimension": "materials",
+          "stage": "late",
+          "baseline_displacement": 0.023242942988872528,
+          "teacher_relative_l2": 0.03442544862627983,
+          "baseline_teacher_relative_l2": 0.033764638006687164,
+          "teacher_error_change_percentage_points": 0.06608106195926666
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ad4f062f00ce",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "early",
+          "baseline_displacement": 0.09788262844085693,
+          "teacher_relative_l2": 0.12322266399860382,
+          "baseline_teacher_relative_l2": 0.06683198362588882,
+          "teacher_error_change_percentage_points": 5.6390680372715
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ad4f062f00ce",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "middle",
+          "baseline_displacement": 0.02070179022848606,
+          "teacher_relative_l2": 0.02747754193842411,
+          "baseline_teacher_relative_l2": 0.01966136321425438,
+          "teacher_error_change_percentage_points": 0.7816178724169731
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ad4f062f00ce",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "late",
+          "baseline_displacement": 0.023928266018629074,
+          "teacher_relative_l2": 0.034267328679561615,
+          "baseline_teacher_relative_l2": 0.0316486656665802,
+          "teacher_error_change_percentage_points": 0.2618663012981415
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-06e87c218dc9",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "early",
+          "baseline_displacement": 0.05848660692572594,
+          "teacher_relative_l2": 0.12418748438358307,
+          "baseline_teacher_relative_l2": 0.12366798520088196,
+          "teacher_error_change_percentage_points": 0.051949918270111084
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-06e87c218dc9",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "middle",
+          "baseline_displacement": 0.019027357921004295,
+          "teacher_relative_l2": 0.021218882873654366,
+          "baseline_teacher_relative_l2": 0.015531273558735847,
+          "teacher_error_change_percentage_points": 0.5687609314918518
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-06e87c218dc9",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "late",
+          "baseline_displacement": 0.023106975480914116,
+          "teacher_relative_l2": 0.028372589498758316,
+          "baseline_teacher_relative_l2": 0.028763068839907646,
+          "teacher_error_change_percentage_points": -0.039047934114933014
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-271ab2e64bc6",
+          "dimension": "visual_quality",
+          "subdimension": "fur",
+          "stage": "early",
+          "baseline_displacement": 0.07147812843322754,
+          "teacher_relative_l2": 0.131303071975708,
+          "baseline_teacher_relative_l2": 0.13030309975147247,
+          "teacher_error_change_percentage_points": 0.09999722242355347
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-271ab2e64bc6",
+          "dimension": "visual_quality",
+          "subdimension": "fur",
+          "stage": "middle",
+          "baseline_displacement": 0.02708309516310692,
+          "teacher_relative_l2": 0.032023485749959946,
+          "baseline_teacher_relative_l2": 0.020017944276332855,
+          "teacher_error_change_percentage_points": 1.200554147362709
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-271ab2e64bc6",
+          "dimension": "visual_quality",
+          "subdimension": "fur",
+          "stage": "late",
+          "baseline_displacement": 0.024880677461624146,
+          "teacher_relative_l2": 0.03814223036170006,
+          "baseline_teacher_relative_l2": 0.0353207103908062,
+          "teacher_error_change_percentage_points": 0.282151997089386
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-fcecfd532ff3",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "early",
+          "baseline_displacement": 0.0430569089949131,
+          "teacher_relative_l2": 0.06608931720256805,
+          "baseline_teacher_relative_l2": 0.060877230018377304,
+          "teacher_error_change_percentage_points": 0.521208718419075
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-fcecfd532ff3",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "middle",
+          "baseline_displacement": 0.019280795007944107,
+          "teacher_relative_l2": 0.025859620422124863,
+          "baseline_teacher_relative_l2": 0.0190745759755373,
+          "teacher_error_change_percentage_points": 0.6785044446587563
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-fcecfd532ff3",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "late",
+          "baseline_displacement": 0.020725497975945473,
+          "teacher_relative_l2": 0.028573179617524147,
+          "baseline_teacher_relative_l2": 0.027409063652157784,
+          "teacher_error_change_percentage_points": 0.11641159653663635
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-056df011a834",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "early",
+          "baseline_displacement": 0.10552434623241425,
+          "teacher_relative_l2": 0.10653576999902725,
+          "baseline_teacher_relative_l2": 0.07084504514932632,
+          "teacher_error_change_percentage_points": 3.5690724849700928
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-056df011a834",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "middle",
+          "baseline_displacement": 0.03951168432831764,
+          "teacher_relative_l2": 0.04669110104441643,
+          "baseline_teacher_relative_l2": 0.027571938931941986,
+          "teacher_error_change_percentage_points": 1.9119162112474442
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-056df011a834",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "late",
+          "baseline_displacement": 0.02867353893816471,
+          "teacher_relative_l2": 0.041479676961898804,
+          "baseline_teacher_relative_l2": 0.0364883616566658,
+          "teacher_error_change_percentage_points": 0.49913153052330017
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-883e7c056f3c",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "early",
+          "baseline_displacement": 0.05943504720926285,
+          "teacher_relative_l2": 0.09826004505157471,
+          "baseline_teacher_relative_l2": 0.07084383070468903,
+          "teacher_error_change_percentage_points": 2.741621434688568
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-883e7c056f3c",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "middle",
+          "baseline_displacement": 0.031476277858018875,
+          "teacher_relative_l2": 0.04239088296890259,
+          "baseline_teacher_relative_l2": 0.03381098434329033,
+          "teacher_error_change_percentage_points": 0.8579898625612259
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-883e7c056f3c",
+          "dimension": "visual_quality",
+          "subdimension": "low_light",
+          "stage": "late",
+          "baseline_displacement": 0.02513134479522705,
+          "teacher_relative_l2": 0.03970862552523613,
+          "baseline_teacher_relative_l2": 0.03605181723833084,
+          "teacher_error_change_percentage_points": 0.36568082869052887
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-403f405d7727",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "early",
+          "baseline_displacement": 0.08392192423343658,
+          "teacher_relative_l2": 0.0885659009218216,
+          "baseline_teacher_relative_l2": 0.06274820119142532,
+          "teacher_error_change_percentage_points": 2.581769973039627
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-403f405d7727",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "middle",
+          "baseline_displacement": 0.027394358068704605,
+          "teacher_relative_l2": 0.038005076348781586,
+          "baseline_teacher_relative_l2": 0.02932497300207615,
+          "teacher_error_change_percentage_points": 0.8680103346705437
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-403f405d7727",
+          "dimension": "visual_quality",
+          "subdimension": "reflective_materials",
+          "stage": "late",
+          "baseline_displacement": 0.02136956714093685,
+          "teacher_relative_l2": 0.030007360503077507,
+          "baseline_teacher_relative_l2": 0.02914043702185154,
+          "teacher_error_change_percentage_points": 0.08669234812259674
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ac57f1ae0a8c",
+          "dimension": "visual_quality",
+          "subdimension": "textures",
+          "stage": "early",
+          "baseline_displacement": 0.09316577762365341,
+          "teacher_relative_l2": 0.09477853029966354,
+          "baseline_teacher_relative_l2": 0.0704084038734436,
+          "teacher_error_change_percentage_points": 2.437012642621994
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ac57f1ae0a8c",
+          "dimension": "visual_quality",
+          "subdimension": "textures",
+          "stage": "middle",
+          "baseline_displacement": 0.020444845780730247,
+          "teacher_relative_l2": 0.024733463302254677,
+          "baseline_teacher_relative_l2": 0.01642252504825592,
+          "teacher_error_change_percentage_points": 0.8310938253998756
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ac57f1ae0a8c",
+          "dimension": "visual_quality",
+          "subdimension": "textures",
+          "stage": "late",
+          "baseline_displacement": 0.021519452333450317,
+          "teacher_relative_l2": 0.03345532715320587,
+          "baseline_teacher_relative_l2": 0.03243539482355118,
+          "teacher_error_change_percentage_points": 0.10199323296546936
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2b6a0d317790",
+          "dimension": "visual_quality",
+          "subdimension": "textures",
+          "stage": "early",
+          "baseline_displacement": 0.07399385422468185,
+          "teacher_relative_l2": 0.11716078966856003,
+          "baseline_teacher_relative_l2": 0.08701054006814957,
+          "teacher_error_change_percentage_points": 3.015024960041046
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2b6a0d317790",
+          "dimension": "visual_quality",
+          "subdimension": "textures",
+          "stage": "middle",
+          "baseline_displacement": 0.023916427046060562,
+          "teacher_relative_l2": 0.040987394750118256,
+          "baseline_teacher_relative_l2": 0.03318490460515022,
+          "teacher_error_change_percentage_points": 0.7802490144968033
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2b6a0d317790",
+          "dimension": "visual_quality",
+          "subdimension": "textures",
+          "stage": "late",
+          "baseline_displacement": 0.019464915618300438,
+          "teacher_relative_l2": 0.0290231890976429,
+          "baseline_teacher_relative_l2": 0.028900669887661934,
+          "teacher_error_change_percentage_points": 0.012251920998096466
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-d2c7ab2a53d3",
+          "dimension": "visual_quality",
+          "subdimension": "skin",
+          "stage": "early",
+          "baseline_displacement": 0.09042327105998993,
+          "teacher_relative_l2": 0.1436389684677124,
+          "baseline_teacher_relative_l2": 0.15869303047657013,
+          "teacher_error_change_percentage_points": -1.5054062008857727
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-d2c7ab2a53d3",
+          "dimension": "visual_quality",
+          "subdimension": "skin",
+          "stage": "middle",
+          "baseline_displacement": 0.03339419141411781,
+          "teacher_relative_l2": 0.039400987327098846,
+          "baseline_teacher_relative_l2": 0.023570435121655464,
+          "teacher_error_change_percentage_points": 1.5830552205443382
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-d2c7ab2a53d3",
+          "dimension": "visual_quality",
+          "subdimension": "skin",
+          "stage": "late",
+          "baseline_displacement": 0.02173725701868534,
+          "teacher_relative_l2": 0.03133897855877876,
+          "baseline_teacher_relative_l2": 0.02948814071714878,
+          "teacher_error_change_percentage_points": 0.1850837841629982
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-edabf134dd58",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "early",
+          "baseline_displacement": 0.07808946818113327,
+          "teacher_relative_l2": 0.07980211824178696,
+          "baseline_teacher_relative_l2": 0.10908934473991394,
+          "teacher_error_change_percentage_points": -2.9287226498126984
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-edabf134dd58",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "middle",
+          "baseline_displacement": 0.013409330509603024,
+          "teacher_relative_l2": 0.01640707068145275,
+          "baseline_teacher_relative_l2": 0.015401734039187431,
+          "teacher_error_change_percentage_points": 0.10053366422653198
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-edabf134dd58",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "late",
+          "baseline_displacement": 0.019703317433595657,
+          "teacher_relative_l2": 0.032335080206394196,
+          "baseline_teacher_relative_l2": 0.03323502838611603,
+          "teacher_error_change_percentage_points": -0.08999481797218323
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-71c9b74b1792",
+          "dimension": "aesthetics",
+          "subdimension": "portraits",
+          "stage": "early",
+          "baseline_displacement": 0.09183113276958466,
+          "teacher_relative_l2": 0.12192254513502121,
+          "baseline_teacher_relative_l2": 0.13885554671287537,
+          "teacher_error_change_percentage_points": -1.6933001577854156
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-71c9b74b1792",
+          "dimension": "aesthetics",
+          "subdimension": "portraits",
+          "stage": "middle",
+          "baseline_displacement": 0.026002664119005203,
+          "teacher_relative_l2": 0.0315718874335289,
+          "baseline_teacher_relative_l2": 0.019750384613871574,
+          "teacher_error_change_percentage_points": 1.1821502819657326
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-71c9b74b1792",
+          "dimension": "aesthetics",
+          "subdimension": "portraits",
+          "stage": "late",
+          "baseline_displacement": 0.022456932812929153,
+          "teacher_relative_l2": 0.03612227365374565,
+          "baseline_teacher_relative_l2": 0.03465955704450607,
+          "teacher_error_change_percentage_points": 0.14627166092395782
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-888027c4ef34",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "early",
+          "baseline_displacement": 0.11615347862243652,
+          "teacher_relative_l2": 0.11391287297010422,
+          "baseline_teacher_relative_l2": 0.12614698708057404,
+          "teacher_error_change_percentage_points": -1.2234114110469818
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-888027c4ef34",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "middle",
+          "baseline_displacement": 0.03153363987803459,
+          "teacher_relative_l2": 0.037542495876550674,
+          "baseline_teacher_relative_l2": 0.022673455998301506,
+          "teacher_error_change_percentage_points": 1.4869039878249168
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-888027c4ef34",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "late",
+          "baseline_displacement": 0.05062159523367882,
+          "teacher_relative_l2": 0.06966532766819,
+          "baseline_teacher_relative_l2": 0.0568845272064209,
+          "teacher_error_change_percentage_points": 1.2780800461769104
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-9930c8a8bf41",
+          "dimension": "aesthetics",
+          "subdimension": "composition",
+          "stage": "early",
+          "baseline_displacement": 0.07901705056428909,
+          "teacher_relative_l2": 0.08188605308532715,
+          "baseline_teacher_relative_l2": 0.06877686083316803,
+          "teacher_error_change_percentage_points": 1.3109192252159119
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-9930c8a8bf41",
+          "dimension": "aesthetics",
+          "subdimension": "composition",
+          "stage": "middle",
+          "baseline_displacement": 0.0266758743673563,
+          "teacher_relative_l2": 0.03336865082383156,
+          "baseline_teacher_relative_l2": 0.020311251282691956,
+          "teacher_error_change_percentage_points": 1.3057399541139603
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-9930c8a8bf41",
+          "dimension": "aesthetics",
+          "subdimension": "composition",
+          "stage": "late",
+          "baseline_displacement": 0.02030792087316513,
+          "teacher_relative_l2": 0.030469505116343498,
+          "baseline_teacher_relative_l2": 0.030467554926872253,
+          "teacher_error_change_percentage_points": 0.0001950189471244812
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-72f6476062c2",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "early",
+          "baseline_displacement": 0.08294127881526947,
+          "teacher_relative_l2": 0.1493861973285675,
+          "baseline_teacher_relative_l2": 0.15104201436042786,
+          "teacher_error_change_percentage_points": -0.16558170318603516
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-72f6476062c2",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "middle",
+          "baseline_displacement": 0.024711115285754204,
+          "teacher_relative_l2": 0.02967160940170288,
+          "baseline_teacher_relative_l2": 0.024457987397909164,
+          "teacher_error_change_percentage_points": 0.5213622003793716
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-72f6476062c2",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "late",
+          "baseline_displacement": 0.026143277063965797,
+          "teacher_relative_l2": 0.037154097110033035,
+          "baseline_teacher_relative_l2": 0.035349730402231216,
+          "teacher_error_change_percentage_points": 0.18043667078018188
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-e870fd58694d",
+          "dimension": "aesthetics",
+          "subdimension": "cinematic_framing",
+          "stage": "early",
+          "baseline_displacement": 0.06853155791759491,
+          "teacher_relative_l2": 0.08189187943935394,
+          "baseline_teacher_relative_l2": 0.06928730010986328,
+          "teacher_error_change_percentage_points": 1.2604579329490662
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-e870fd58694d",
+          "dimension": "aesthetics",
+          "subdimension": "cinematic_framing",
+          "stage": "middle",
+          "baseline_displacement": 0.03232884779572487,
+          "teacher_relative_l2": 0.03914424031972885,
+          "baseline_teacher_relative_l2": 0.02778194099664688,
+          "teacher_error_change_percentage_points": 1.136229932308197
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-e870fd58694d",
+          "dimension": "aesthetics",
+          "subdimension": "cinematic_framing",
+          "stage": "late",
+          "baseline_displacement": 0.0260029174387455,
+          "teacher_relative_l2": 0.037514787167310715,
+          "baseline_teacher_relative_l2": 0.032570820301771164,
+          "teacher_error_change_percentage_points": 0.4943966865539551
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2b88b1fee46d",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "early",
+          "baseline_displacement": 0.14998356997966766,
+          "teacher_relative_l2": 0.12084542959928513,
+          "baseline_teacher_relative_l2": 0.09956052154302597,
+          "teacher_error_change_percentage_points": 2.1284908056259155
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2b88b1fee46d",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "middle",
+          "baseline_displacement": 0.02686762996017933,
+          "teacher_relative_l2": 0.02733110450208187,
+          "baseline_teacher_relative_l2": 0.026360249146819115,
+          "teacher_error_change_percentage_points": 0.09708553552627563
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2b88b1fee46d",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "late",
+          "baseline_displacement": 0.019658198580145836,
+          "teacher_relative_l2": 0.03328680992126465,
+          "baseline_teacher_relative_l2": 0.03300707787275314,
+          "teacher_error_change_percentage_points": 0.027973204851150513
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-48a4b5aa8377",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "early",
+          "baseline_displacement": 0.0627979040145874,
+          "teacher_relative_l2": 0.0974842831492424,
+          "baseline_teacher_relative_l2": 0.11355457454919815,
+          "teacher_error_change_percentage_points": -1.607029139995575
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-48a4b5aa8377",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "middle",
+          "baseline_displacement": 0.019259966909885406,
+          "teacher_relative_l2": 0.024183841422200203,
+          "baseline_teacher_relative_l2": 0.017195016145706177,
+          "teacher_error_change_percentage_points": 0.6988825276494026
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-48a4b5aa8377",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "late",
+          "baseline_displacement": 0.02745971642434597,
+          "teacher_relative_l2": 0.03902701288461685,
+          "baseline_teacher_relative_l2": 0.035435713827610016,
+          "teacher_error_change_percentage_points": 0.3591299057006836
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a483b1a96e16",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "early",
+          "baseline_displacement": 0.06976207345724106,
+          "teacher_relative_l2": 0.16098546981811523,
+          "baseline_teacher_relative_l2": 0.11595441401004791,
+          "teacher_error_change_percentage_points": 4.503105580806732
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a483b1a96e16",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "middle",
+          "baseline_displacement": 0.023065758869051933,
+          "teacher_relative_l2": 0.02988937310874462,
+          "baseline_teacher_relative_l2": 0.026170212775468826,
+          "teacher_error_change_percentage_points": 0.3719160333275795
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a483b1a96e16",
+          "dimension": "aesthetics",
+          "subdimension": "landscapes",
+          "stage": "late",
+          "baseline_displacement": 0.028607744723558426,
+          "teacher_relative_l2": 0.04041320085525513,
+          "baseline_teacher_relative_l2": 0.0373043455183506,
+          "teacher_error_change_percentage_points": 0.3108855336904526
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-93b1d5401c5b",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "early",
+          "baseline_displacement": 0.13672611117362976,
+          "teacher_relative_l2": 0.14225554466247559,
+          "baseline_teacher_relative_l2": 0.09538853913545609,
+          "teacher_error_change_percentage_points": 4.68670055270195
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-93b1d5401c5b",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "middle",
+          "baseline_displacement": 0.02734084241092205,
+          "teacher_relative_l2": 0.0340508408844471,
+          "baseline_teacher_relative_l2": 0.023646187037229538,
+          "teacher_error_change_percentage_points": 1.040465384721756
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-93b1d5401c5b",
+          "dimension": "aesthetics",
+          "subdimension": "illustration_styles",
+          "stage": "late",
+          "baseline_displacement": 0.02174372598528862,
+          "teacher_relative_l2": 0.03618723526597023,
+          "baseline_teacher_relative_l2": 0.034452296793460846,
+          "teacher_error_change_percentage_points": 0.17349384725093842
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-7f1939b2c5e7",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "early",
+          "baseline_displacement": 0.06790848076343536,
+          "teacher_relative_l2": 0.11677443236112595,
+          "baseline_teacher_relative_l2": 0.07770387083292007,
+          "teacher_error_change_percentage_points": 3.907056152820587
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-7f1939b2c5e7",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "middle",
+          "baseline_displacement": 0.03165208175778389,
+          "teacher_relative_l2": 0.041833046823740005,
+          "baseline_teacher_relative_l2": 0.031495314091444016,
+          "teacher_error_change_percentage_points": 1.033773273229599
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-7f1939b2c5e7",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "late",
+          "baseline_displacement": 0.02829025126993656,
+          "teacher_relative_l2": 0.042018771171569824,
+          "baseline_teacher_relative_l2": 0.03811915963888168,
+          "teacher_error_change_percentage_points": 0.3899611532688141
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b3fb8e8187c3",
+          "dimension": "real_world",
+          "subdimension": "architecture",
+          "stage": "early",
+          "baseline_displacement": 0.05176091939210892,
+          "teacher_relative_l2": 0.11574532091617584,
+          "baseline_teacher_relative_l2": 0.09432484954595566,
+          "teacher_error_change_percentage_points": 2.1420471370220184
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b3fb8e8187c3",
+          "dimension": "real_world",
+          "subdimension": "architecture",
+          "stage": "middle",
+          "baseline_displacement": 0.030337143689393997,
+          "teacher_relative_l2": 0.04038216546177864,
+          "baseline_teacher_relative_l2": 0.031207172200083733,
+          "teacher_error_change_percentage_points": 0.9174993261694908
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b3fb8e8187c3",
+          "dimension": "real_world",
+          "subdimension": "architecture",
+          "stage": "late",
+          "baseline_displacement": 0.0272116307169199,
+          "teacher_relative_l2": 0.0424031987786293,
+          "baseline_teacher_relative_l2": 0.038454558700323105,
+          "teacher_error_change_percentage_points": 0.3948640078306198
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-7745c2b6fa92",
+          "dimension": "real_world",
+          "subdimension": "everyday_objects",
+          "stage": "early",
+          "baseline_displacement": 0.08118195086717606,
+          "teacher_relative_l2": 0.11448241025209427,
+          "baseline_teacher_relative_l2": 0.11356619745492935,
+          "teacher_error_change_percentage_points": 0.0916212797164917
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-7745c2b6fa92",
+          "dimension": "real_world",
+          "subdimension": "everyday_objects",
+          "stage": "middle",
+          "baseline_displacement": 0.03532448410987854,
+          "teacher_relative_l2": 0.04332823306322098,
+          "baseline_teacher_relative_l2": 0.031908512115478516,
+          "teacher_error_change_percentage_points": 1.1419720947742462
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-7745c2b6fa92",
+          "dimension": "real_world",
+          "subdimension": "everyday_objects",
+          "stage": "late",
+          "baseline_displacement": 0.02861490659415722,
+          "teacher_relative_l2": 0.04964081197977066,
+          "baseline_teacher_relative_l2": 0.047285307198762894,
+          "teacher_error_change_percentage_points": 0.23555047810077667
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-3f13990fe1fe",
+          "dimension": "real_world",
+          "subdimension": "vehicles",
+          "stage": "early",
+          "baseline_displacement": 0.07539357990026474,
+          "teacher_relative_l2": 0.1250179558992386,
+          "baseline_teacher_relative_l2": 0.0777474194765091,
+          "teacher_error_change_percentage_points": 4.727053642272949
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-3f13990fe1fe",
+          "dimension": "real_world",
+          "subdimension": "vehicles",
+          "stage": "middle",
+          "baseline_displacement": 0.038296278566122055,
+          "teacher_relative_l2": 0.05111131817102432,
+          "baseline_teacher_relative_l2": 0.03605463355779648,
+          "teacher_error_change_percentage_points": 1.5056684613227844
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-3f13990fe1fe",
+          "dimension": "real_world",
+          "subdimension": "vehicles",
+          "stage": "late",
+          "baseline_displacement": 0.02819710224866867,
+          "teacher_relative_l2": 0.039511896669864655,
+          "baseline_teacher_relative_l2": 0.03630312532186508,
+          "teacher_error_change_percentage_points": 0.3208771347999573
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cac178cb0c00",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "early",
+          "baseline_displacement": 0.07403939217329025,
+          "teacher_relative_l2": 0.10549351572990417,
+          "baseline_teacher_relative_l2": 0.07863019406795502,
+          "teacher_error_change_percentage_points": 2.6863321661949158
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cac178cb0c00",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "middle",
+          "baseline_displacement": 0.034700214862823486,
+          "teacher_relative_l2": 0.043341752141714096,
+          "baseline_teacher_relative_l2": 0.033487558364868164,
+          "teacher_error_change_percentage_points": 0.9854193776845932
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cac178cb0c00",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "late",
+          "baseline_displacement": 0.027456022799015045,
+          "teacher_relative_l2": 0.04202457144856453,
+          "baseline_teacher_relative_l2": 0.03700294345617294,
+          "teacher_error_change_percentage_points": 0.5021627992391586
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cc8610175236",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "early",
+          "baseline_displacement": 0.052634384483098984,
+          "teacher_relative_l2": 0.1043282300233841,
+          "baseline_teacher_relative_l2": 0.09724403917789459,
+          "teacher_error_change_percentage_points": 0.7084190845489502
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cc8610175236",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "middle",
+          "baseline_displacement": 0.026129798963665962,
+          "teacher_relative_l2": 0.03698574751615524,
+          "baseline_teacher_relative_l2": 0.028571829199790955,
+          "teacher_error_change_percentage_points": 0.8413918316364288
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cc8610175236",
+          "dimension": "real_world",
+          "subdimension": "cultural_scenes",
+          "stage": "late",
+          "baseline_displacement": 0.02126711793243885,
+          "teacher_relative_l2": 0.033931538462638855,
+          "baseline_teacher_relative_l2": 0.031141309067606926,
+          "teacher_error_change_percentage_points": 0.2790229395031929
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cdcabba6d592",
+          "dimension": "real_world",
+          "subdimension": "everyday_objects",
+          "stage": "early",
+          "baseline_displacement": 0.054085418581962585,
+          "teacher_relative_l2": 0.08582805097103119,
+          "baseline_teacher_relative_l2": 0.07352565973997116,
+          "teacher_error_change_percentage_points": 1.2302391231060028
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cdcabba6d592",
+          "dimension": "real_world",
+          "subdimension": "everyday_objects",
+          "stage": "middle",
+          "baseline_displacement": 0.021541807800531387,
+          "teacher_relative_l2": 0.030204888433218002,
+          "baseline_teacher_relative_l2": 0.02176116220653057,
+          "teacher_error_change_percentage_points": 0.8443726226687431
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cdcabba6d592",
+          "dimension": "real_world",
+          "subdimension": "everyday_objects",
+          "stage": "late",
+          "baseline_displacement": 0.019782481715083122,
+          "teacher_relative_l2": 0.03001447580754757,
+          "baseline_teacher_relative_l2": 0.029521094635128975,
+          "teacher_error_change_percentage_points": 0.049338117241859436
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-84fbe95d634f",
+          "dimension": "real_world",
+          "subdimension": "physical_interactions",
+          "stage": "early",
+          "baseline_displacement": 0.06548602879047394,
+          "teacher_relative_l2": 0.07736529409885406,
+          "baseline_teacher_relative_l2": 0.06028617545962334,
+          "teacher_error_change_percentage_points": 1.7079118639230728
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-84fbe95d634f",
+          "dimension": "real_world",
+          "subdimension": "physical_interactions",
+          "stage": "middle",
+          "baseline_displacement": 0.02762513980269432,
+          "teacher_relative_l2": 0.03785354271531105,
+          "baseline_teacher_relative_l2": 0.028757546097040176,
+          "teacher_error_change_percentage_points": 0.9095996618270874
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-84fbe95d634f",
+          "dimension": "real_world",
+          "subdimension": "physical_interactions",
+          "stage": "late",
+          "baseline_displacement": 0.022125588729977608,
+          "teacher_relative_l2": 0.030010966584086418,
+          "baseline_teacher_relative_l2": 0.02978145331144333,
+          "teacher_error_change_percentage_points": 0.02295132726430893
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2a14a9aebaa7",
+          "dimension": "real_world",
+          "subdimension": "physical_interactions",
+          "stage": "early",
+          "baseline_displacement": 0.08527601510286331,
+          "teacher_relative_l2": 0.15462026000022888,
+          "baseline_teacher_relative_l2": 0.1294049769639969,
+          "teacher_error_change_percentage_points": 2.5215283036231995
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2a14a9aebaa7",
+          "dimension": "real_world",
+          "subdimension": "physical_interactions",
+          "stage": "middle",
+          "baseline_displacement": 0.025188764557242393,
+          "teacher_relative_l2": 0.033960022032260895,
+          "baseline_teacher_relative_l2": 0.027302999049425125,
+          "teacher_error_change_percentage_points": 0.665702298283577
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-2a14a9aebaa7",
+          "dimension": "real_world",
+          "subdimension": "physical_interactions",
+          "stage": "late",
+          "baseline_displacement": 0.02417754754424095,
+          "teacher_relative_l2": 0.03339894115924835,
+          "baseline_teacher_relative_l2": 0.03189412131905556,
+          "teacher_error_change_percentage_points": 0.15048198401927948
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-0871910b1774",
+          "dimension": "real_world",
+          "subdimension": "clothing",
+          "stage": "early",
+          "baseline_displacement": 0.052219077944755554,
+          "teacher_relative_l2": 0.06469221413135529,
+          "baseline_teacher_relative_l2": 0.07763177901506424,
+          "teacher_error_change_percentage_points": -1.2939564883708954
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-0871910b1774",
+          "dimension": "real_world",
+          "subdimension": "clothing",
+          "stage": "middle",
+          "baseline_displacement": 0.03423555567860603,
+          "teacher_relative_l2": 0.03799758106470108,
+          "baseline_teacher_relative_l2": 0.022552426904439926,
+          "teacher_error_change_percentage_points": 1.5445154160261154
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-0871910b1774",
+          "dimension": "real_world",
+          "subdimension": "clothing",
+          "stage": "late",
+          "baseline_displacement": 0.02772478386759758,
+          "teacher_relative_l2": 0.0372307188808918,
+          "baseline_teacher_relative_l2": 0.03288467228412628,
+          "teacher_error_change_percentage_points": 0.4346046596765518
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-41d2c4d8a3c5",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "early",
+          "baseline_displacement": 0.1054406687617302,
+          "teacher_relative_l2": 0.10505495965480804,
+          "baseline_teacher_relative_l2": 0.12503467500209808,
+          "teacher_error_change_percentage_points": -1.997971534729004
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-41d2c4d8a3c5",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "middle",
+          "baseline_displacement": 0.03819599375128746,
+          "teacher_relative_l2": 0.045485783368349075,
+          "baseline_teacher_relative_l2": 0.026567615568637848,
+          "teacher_error_change_percentage_points": 1.8918167799711227
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-41d2c4d8a3c5",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "late",
+          "baseline_displacement": 0.025337183848023415,
+          "teacher_relative_l2": 0.04182734340429306,
+          "baseline_teacher_relative_l2": 0.03914099559187889,
+          "teacher_error_change_percentage_points": 0.26863478124141693
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a0e8be3902b4",
+          "dimension": "creative",
+          "subdimension": "character_design",
+          "stage": "early",
+          "baseline_displacement": 0.12290018796920776,
+          "teacher_relative_l2": 0.10928474366664886,
+          "baseline_teacher_relative_l2": 0.12326334416866302,
+          "teacher_error_change_percentage_points": -1.397860050201416
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a0e8be3902b4",
+          "dimension": "creative",
+          "subdimension": "character_design",
+          "stage": "middle",
+          "baseline_displacement": 0.019070085138082504,
+          "teacher_relative_l2": 0.02794630639255047,
+          "baseline_teacher_relative_l2": 0.026555145159363747,
+          "teacher_error_change_percentage_points": 0.13911612331867218
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-a0e8be3902b4",
+          "dimension": "creative",
+          "subdimension": "character_design",
+          "stage": "late",
+          "baseline_displacement": 0.027487942948937416,
+          "teacher_relative_l2": 0.0453561432659626,
+          "baseline_teacher_relative_l2": 0.043241530656814575,
+          "teacher_error_change_percentage_points": 0.21146126091480255
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ae1d748b3f08",
+          "dimension": "creative",
+          "subdimension": "concept_art",
+          "stage": "early",
+          "baseline_displacement": 0.10862662643194199,
+          "teacher_relative_l2": 0.07917005568742752,
+          "baseline_teacher_relative_l2": 0.07683947682380676,
+          "teacher_error_change_percentage_points": 0.2330578863620758
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ae1d748b3f08",
+          "dimension": "creative",
+          "subdimension": "concept_art",
+          "stage": "middle",
+          "baseline_displacement": 0.021998433396220207,
+          "teacher_relative_l2": 0.02386864833533764,
+          "baseline_teacher_relative_l2": 0.014970694668591022,
+          "teacher_error_change_percentage_points": 0.8897953666746616
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-ae1d748b3f08",
+          "dimension": "creative",
+          "subdimension": "concept_art",
+          "stage": "late",
+          "baseline_displacement": 0.02058279514312744,
+          "teacher_relative_l2": 0.027242107316851616,
+          "baseline_teacher_relative_l2": 0.02794126234948635,
+          "teacher_error_change_percentage_points": -0.06991550326347351
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-36ff4b1a54bf",
+          "dimension": "creative",
+          "subdimension": "concept_art",
+          "stage": "early",
+          "baseline_displacement": 0.09228263795375824,
+          "teacher_relative_l2": 0.12406754493713379,
+          "baseline_teacher_relative_l2": 0.10881856828927994,
+          "teacher_error_change_percentage_points": 1.5248976647853851
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-36ff4b1a54bf",
+          "dimension": "creative",
+          "subdimension": "concept_art",
+          "stage": "middle",
+          "baseline_displacement": 0.027720384299755096,
+          "teacher_relative_l2": 0.029563002288341522,
+          "baseline_teacher_relative_l2": 0.018850820139050484,
+          "teacher_error_change_percentage_points": 1.0712182149291039
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-36ff4b1a54bf",
+          "dimension": "creative",
+          "subdimension": "concept_art",
+          "stage": "late",
+          "baseline_displacement": 0.02228681743144989,
+          "teacher_relative_l2": 0.03314588591456413,
+          "baseline_teacher_relative_l2": 0.033499911427497864,
+          "teacher_error_change_percentage_points": -0.03540255129337311
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cc415b67db6a",
+          "dimension": "creative",
+          "subdimension": "character_design",
+          "stage": "early",
+          "baseline_displacement": 0.09498607367277145,
+          "teacher_relative_l2": 0.0855107456445694,
+          "baseline_teacher_relative_l2": 0.1215120404958725,
+          "teacher_error_change_percentage_points": -3.60012948513031
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cc415b67db6a",
+          "dimension": "creative",
+          "subdimension": "character_design",
+          "stage": "middle",
+          "baseline_displacement": 0.029198916628956795,
+          "teacher_relative_l2": 0.032957639545202255,
+          "baseline_teacher_relative_l2": 0.022795649245381355,
+          "teacher_error_change_percentage_points": 1.01619902998209
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-cc415b67db6a",
+          "dimension": "creative",
+          "subdimension": "character_design",
+          "stage": "late",
+          "baseline_displacement": 0.023865962401032448,
+          "teacher_relative_l2": 0.03479635715484619,
+          "baseline_teacher_relative_l2": 0.032463397830724716,
+          "teacher_error_change_percentage_points": 0.23329593241214752
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-351eb248a104",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "early",
+          "baseline_displacement": 0.0721881166100502,
+          "teacher_relative_l2": 0.08955822885036469,
+          "baseline_teacher_relative_l2": 0.1054995059967041,
+          "teacher_error_change_percentage_points": -1.5941277146339417
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-351eb248a104",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "middle",
+          "baseline_displacement": 0.032522283494472504,
+          "teacher_relative_l2": 0.04401884600520134,
+          "baseline_teacher_relative_l2": 0.035079505294561386,
+          "teacher_error_change_percentage_points": 0.8939340710639954
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-351eb248a104",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "late",
+          "baseline_displacement": 0.026335962116718292,
+          "teacher_relative_l2": 0.043235890567302704,
+          "baseline_teacher_relative_l2": 0.04019790142774582,
+          "teacher_error_change_percentage_points": 0.3037989139556885
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-c70f1f321ce0",
+          "dimension": "creative",
+          "subdimension": "posters",
+          "stage": "early",
+          "baseline_displacement": 0.11395969241857529,
+          "teacher_relative_l2": 0.18465730547904968,
+          "baseline_teacher_relative_l2": 0.1613139510154724,
+          "teacher_error_change_percentage_points": 2.334335446357727
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-c70f1f321ce0",
+          "dimension": "creative",
+          "subdimension": "posters",
+          "stage": "middle",
+          "baseline_displacement": 0.0338112935423851,
+          "teacher_relative_l2": 0.03684375435113907,
+          "baseline_teacher_relative_l2": 0.02041410468518734,
+          "teacher_error_change_percentage_points": 1.6429649665951729
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-c70f1f321ce0",
+          "dimension": "creative",
+          "subdimension": "posters",
+          "stage": "late",
+          "baseline_displacement": 0.027371516451239586,
+          "teacher_relative_l2": 0.03943193703889847,
+          "baseline_teacher_relative_l2": 0.03829057887196541,
+          "teacher_error_change_percentage_points": 0.11413581669330597
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b1a16352de21",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "early",
+          "baseline_displacement": 0.11440182477235794,
+          "teacher_relative_l2": 0.13662980496883392,
+          "baseline_teacher_relative_l2": 0.09270814061164856,
+          "teacher_error_change_percentage_points": 4.392166435718536
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b1a16352de21",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "middle",
+          "baseline_displacement": 0.035441093146800995,
+          "teacher_relative_l2": 0.046166904270648956,
+          "baseline_teacher_relative_l2": 0.03619372099637985,
+          "teacher_error_change_percentage_points": 0.9973183274269104
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-b1a16352de21",
+          "dimension": "creative",
+          "subdimension": "comics",
+          "stage": "late",
+          "baseline_displacement": 0.027625219896435738,
+          "teacher_relative_l2": 0.04627206549048424,
+          "baseline_teacher_relative_l2": 0.04211059585213661,
+          "teacher_error_change_percentage_points": 0.4161469638347626
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-e2759953da6a",
+          "dimension": "creative",
+          "subdimension": "unusual_compositions",
+          "stage": "early",
+          "baseline_displacement": 0.05304978787899017,
+          "teacher_relative_l2": 0.14040620625019073,
+          "baseline_teacher_relative_l2": 0.14059600234031677,
+          "teacher_error_change_percentage_points": -0.01897960901260376
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-e2759953da6a",
+          "dimension": "creative",
+          "subdimension": "unusual_compositions",
+          "stage": "middle",
+          "baseline_displacement": 0.0328829251229763,
+          "teacher_relative_l2": 0.043324265629053116,
+          "baseline_teacher_relative_l2": 0.03309713676571846,
+          "teacher_error_change_percentage_points": 1.0227128863334656
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-e2759953da6a",
+          "dimension": "creative",
+          "subdimension": "unusual_compositions",
+          "stage": "late",
+          "baseline_displacement": 0.024869319051504135,
+          "teacher_relative_l2": 0.03975382074713707,
+          "baseline_teacher_relative_l2": 0.037890397012233734,
+          "teacher_error_change_percentage_points": 0.18634237349033356
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-9a0b638ea7a9",
+          "dimension": "creative",
+          "subdimension": "text_rendering",
+          "stage": "early",
+          "baseline_displacement": 0.05354490131139755,
+          "teacher_relative_l2": 0.06906364858150482,
+          "baseline_teacher_relative_l2": 0.07331083714962006,
+          "teacher_error_change_percentage_points": -0.42471885681152344
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-9a0b638ea7a9",
+          "dimension": "creative",
+          "subdimension": "text_rendering",
+          "stage": "middle",
+          "baseline_displacement": 0.024803783744573593,
+          "teacher_relative_l2": 0.02875230275094509,
+          "baseline_teacher_relative_l2": 0.02478388510644436,
+          "teacher_error_change_percentage_points": 0.39684176445007324
+        },
+        {
+          "panel": "wider50",
+          "source_id": "p1-9a0b638ea7a9",
+          "dimension": "creative",
+          "subdimension": "text_rendering",
+          "stage": "late",
+          "baseline_displacement": 0.028957614675164223,
+          "teacher_relative_l2": 0.04385778680443764,
+          "baseline_teacher_relative_l2": 0.04260141775012016,
+          "teacher_error_change_percentage_points": 0.12563690543174744
+        }
+      ]
+    }
+  },
+  "scope": "End-to-end bridge training (bridge weights only) and fixed-input velocity evaluation; images are separate."
+}
