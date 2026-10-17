@@ -1,0 +1,18 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-17",
+  "question": "Can a different bridge architecture replace block 13 inside B (blocks 5 and 13 removed, 30 blocks) without the visible losses of the first rank-256 bridge?",
+  "context": "The first bridge (unconditioned, rank 256) failed every velocity gate and was worse than B on 15 of 30 prompts in a qualitative image check. It ignores the timestep modulation that every real block receives, and its errors concentrate at early, high-noise steps.",
+  "variants": {
+    "plain_r1024": "Unconditioned residual MLP, rank 1024: tests whether capacity alone helps",
+    "cond_r256": "Timestep-conditioned bridge, rank 256: h + tanh(gate) * up(gelu(down(LN(h) * (1 + scale)))), scale and gate learned per-channel mixes of the model's shared modulation [attn scale, attn gate, MLP scale, MLP gate]; starts as identity",
+    "cond_r1024": "Same, rank 1024"
+  },
+  "fit": "Identical data, objective, optimizer, seeds and checkpoint selection to the first block-13 bridge (data/phase7/block13_bridge/protocol.json); modulation rows recorded per token with the block inputs and outputs",
+  "decision_rule": {
+    "principle": "The teacher is not a perfect reference, so velocity error screens and images decide.",
+    "velocity_screen": "A variant advances to images only if its gate10 teacher-relative velocity error is below the first bridge's 7.37%; all velocity gates of the first protocol are still reported.",
+    "qualitative_images": "Advancing variants are rendered on the same 30 Phase 7 prompts and seeds as teacher, B and the first C; judged against each prompt, compared with B and with the first C.",
+    "blinded_test": "If a variant looks comparable to B in the qualitative check, a fresh blinded panel graded against the prompts, registered before rendering, decides acceptance: adherence paired bootstrap 95% lower bound of (variant - B) clear-pass gain >= -0.05, text clear passes >= B - 1, plus measured latency below B."
+  }
+}
