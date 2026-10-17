@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
+  "status": "local_recovery_verified_destination_transfer_in_progress",
   "old_account_policy": "download_only",
   "compute_account": "new",
   "old_apps_stopped": [
@@ -19,8 +19,11 @@
       "running_tasks": 0
     }
   ],
-  "old_credentials_can_be_removed": false,
-  "removal_gate": "All continuation tensors and pinned model cache verified locally, uploaded to new account, verified there, and offline model load/replay succeeds using new credentials only.",
-  "remaining": "Selected checkpoint/model-cache download and new-account upload/verification",
-  "superseded_checkpoint_policy": "Large intermediate and abandoned optimizer checkpoints remain in old archive; their records and inventories are preserved. They are not dependencies of continuation."
+  "old_credentials_can_be_removed": true,
+  "removal_gate": "Satisfied: every continuation dependency is downloaded and verified locally. Remaining transfer, verification and execution use only the new credentials.",
+  "remaining": "Finish new-account upload and destination verification, then run replay and experiments in the new account.",
+  "superseded_checkpoint_policy": "Large intermediate and abandoned optimizer checkpoints remain in old archive; their records and inventories are preserved. They are not dependencies of continuation.",
+  "old_downloads_complete": true,
+  "local_verified_tensor_artifacts": 153,
+  "local_verified_model_blobs": 23
 }

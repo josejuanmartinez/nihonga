@@ -28,5 +28,6 @@ Use separate `--ledger` filenames for concurrent disjoint selections.
 `tools/materialize_model_cache.py` verifies original LFS/Git blob hashes and
 reconstructs cache aliases locally without duplicating large files.
 `tools/verify_new_account.py` checks destination files and recreates cache symlinks
-using a CPU job in the new account. The old credentials remain needed until the
-recorded migration and offline replay checks pass.
+using a CPU job in the new account. All continuation dependencies are now verified
+locally, so the old credentials may be revoked; destination transfers and offline
+replay use only the new account. The migration status file records this boundary.

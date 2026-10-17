@@ -1,7 +1,7 @@
 {
   "counts": {
-    "verified": 152,
-    "missing": 1,
+    "verified": 153,
+    "missing": 0,
     "FAILED": 0
   },
   "artifacts": [
@@ -914,8 +914,9 @@
     {
       "path": "phase7/blocks45_healing/95fcd2cfae35cb7f124b8af2865c30f928cbd681a0d015df5e56e8ae5ba4fd78/checkpoint_step_060.pt",
       "expected_sha256": "e22bb8771a81609a7f70043394652ae65b1e2876aaacd5c15256de98c9633885",
-      "actual_sha256": null,
-      "status": "missing"
+      "actual_sha256": "e22bb8771a81609a7f70043394652ae65b1e2876aaacd5c15256de98c9633885",
+      "status": "verified",
+      "verification": "Complete SHA-256 read matched the original; finalized after Windows reader lock closed."
     },
     {
       "path": "phase7/region_bridge_fit/f9077f043d0a6a440ed7feefd349993dd59b2a7c6b7f48858a34eaf329d70b32/region_rank512_selected.pt",
@@ -925,5 +926,5 @@
     }
   ],
   "local_root": ".archive/nihonga-phase3-artifacts",
-  "status": "incomplete"
+  "status": "verified"
 }

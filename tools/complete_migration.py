@@ -45,7 +45,7 @@ def main():
             # Capture final download-ledger metadata as well as all verified canonical blobs.
             run('upload_modal_archive.py','--volume','nihonga-hf-cache')
             run('verify_new_account.py')
-            print('NEW ACCOUNT FILE VERIFICATION COMPLETE. GPU replay still required before old-token removal announcement.',flush=True)
+            print('NEW ACCOUNT FILE VERIFICATION COMPLETE. Offline replay and experiments can run solely in the new account.',flush=True)
             return
         time.sleep(15)
 

@@ -35,6 +35,8 @@ def main():
     report_path=root/'data/recovery/model-cache-verification.json'
     previous=json.loads(report_path.read_bytes()) if report_path.exists() else {}
     verified_before={r['path']:r for r in previous.get('blobs',[]) if r.get('verified_sha256')}
+    download_ledger_path=base/'model-cache-ledger.json'
+    download_ledger=json.loads(download_ledger_path.read_bytes()) if download_ledger_path.exists() else {}
     for entry in blobs:
         source=base/entry['path']
         if not source.exists():missing.append(entry['path']);continue
@@ -43,6 +45,14 @@ def main():
         if old and old.get('verified_mtime_ns')==source.stat().st_mtime_ns:
             entry.update(verified_sha256=old['verified_sha256'],verified_mtime_ns=old['verified_mtime_ns'])
             checksums[entry['path']]=old['verified_sha256']
+            continue
+        downloaded=download_ledger.get(entry['path'])
+        if (entry['expected_sha256'] and downloaded and downloaded['sha256']==entry['expected_sha256']
+                and downloaded['size']==entry['size']
+                and source.stat().st_mtime_ns<=download_ledger_path.stat().st_mtime_ns):
+            entry.update(verified_sha256=downloaded['sha256'],verified_mtime_ns=source.stat().st_mtime_ns,
+                         verification='Downloader full-file SHA-256 matches original LFS SHA-256; file unchanged since ledger.')
+            checksums[entry['path']]=downloaded['sha256']
             continue
         sha256=hashlib.sha256()
         git_hash=hashlib.sha1(f"blob {entry['size']}\0".encode())
