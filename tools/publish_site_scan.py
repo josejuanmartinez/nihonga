@@ -75,7 +75,19 @@ def variant_review_parts():
     r = json.loads(path.read_text(encoding='utf-8'))
     c, f = r['cond_r1024_vs_B'], r['first_C_vs_B_earlier_review']
     return [f'<p class="summary"><b>Images.</b> On the same 30 prompts and seeds, the conditioned rank-1024 bridge was worse than B on <b>{c["worse"]}</b> prompts, similar on {c["same"]} and better on {c["better"]}, against {f["worse"]} worse for the first bridge. It fixes the hair smearing, spells &ldquo;Happy Birthday Emma&rdquo; correctly, keeps the alarm clock and one clean pair of glasses, and stops duplicating the pot. It does not recover fine local detail (lace and circuit board, the peacock eye, the star), the bent spoon or the melting clocks, and &ldquo;The Rusty Anchor&rdquo; is still misspelled.</p>',
-            '<p class="note">Unblinded AI visual review, two reviewers, one seed per prompt; reviewers were not fully consistent, so column-by-column comparisons within a sheet are the reliable signal.</p>']
+            '<p class="note">Unblinded AI visual review, two reviewers, one seed per prompt; reviewers were not fully consistent, so column-by-column comparisons within a sheet are the reliable signal.</p>'] + multiseed_parts()
+
+
+def multiseed_parts():
+    path = ROOT / 'data/phase7/multiseed_text/review.json'
+    if not path.exists():
+        return []
+    r = json.loads(path.read_text(encoding='utf-8'))
+    rows = [[html.escape(text), f"{c['teacher']}/4", f"{c['B']}/4", f"<b>{c['C']}/4</b>"] for text, c in r['counts_correct_of_4'].items()]
+    return ['<h3 id="phase7-multiseed-text">Is the misspelling systematic? Four seeds per text prompt</h3>',
+            '<p class="summary">One seed per prompt cannot separate a real loss from bad luck, so we rendered every text prompt with three more seeds for the teacher, B and the best bridge (conditioned rank 1024, 3,000 updates) and counted exact spellings.</p>',
+            table('Exactly spelled signs out of four seeds', ['Text', 'Teacher', 'B', 'C (best bridge)'], rows),
+            '<div class="verdict"><p><b>The loss is systematic.</b> Without block 13 the model loses the spelling of longer, less common Latin words (&ldquo;The Rusty Achor&rdquo;, &ldquo;Happy Bithday Enna&rdquo;, &ldquo;MonLght Motel&rdquo;), while short or common phrases and Chinese survive. The earlier correct &ldquo;Emma&rdquo; was seed luck. A bridge that sees neither the prompt nor neighbouring letters cannot carry this; the next candidate adds a small attention layer.</p></div>']
 
 
 def variants_parts():

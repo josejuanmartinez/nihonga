@@ -1,0 +1,15 @@
+{
+  "type": "multi-seed text check (seed 0 reused plus 3 new seeds), exact-spelling count per sign, read by Claude",
+  "c_variant": "cond_r1024_long",
+  "counts_correct_of_4": {
+    "The Rusty Anchor": {"teacher": 4, "B": 3, "C": 0},
+    "Moonlight Motel": {"teacher": 3, "B": 3, "C": 1},
+    "Happy Birthday Emma": {"teacher": 4, "B": 3, "C": 1},
+    "Welcome Home": {"teacher": 4, "B": 4, "C": 3},
+    "GOLDEN RIVER": {"teacher": 4, "B": 4, "C": 4},
+    "Live in Berlin": {"teacher": 3, "B": 3, "C": 4},
+    "营业中": {"teacher": 4, "B": 4, "C": 4}
+  },
+  "c_misspellings": ["The Rusty Achor", "The Rusty Acher", "The Rusty Anch·or", "The PIICHOR", "MonLght Motel", "Happy Bithday Enna", "Happy Birtday Ema"],
+  "verdict": "Systematic: without block 13 the model loses spelling of longer, less common Latin words; short or common phrases and Chinese survive. The earlier correct 'Emma' from the 1000-update bridge was seed luck."
+}

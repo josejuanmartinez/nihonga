@@ -1,0 +1,756 @@
+{
+  "request_key": "af4a34ba1a0c739121706991b89e79ec92bff3debaf1b1ddbf5b6188c182f514",
+  "status": "passed",
+  "rows": [
+    {
+      "source_id": "p1-e83d7dcacb2d-s1",
+      "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+      "seed": 3897344013,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "set": "text",
+      "target_strings": [
+        "GOLDEN RIVER",
+        "Live in Berlin"
+      ],
+      "teacher": {
+        "name": "p1-e83d7dcacb2d-s1-teacher.png",
+        "sha256": "7451ece2400f3e60c135c933d86821aa2840b678a57737e709c96a0bc7c59467",
+        "bytes": 2882504,
+        "seconds": 9.43908708
+      },
+      "B": {
+        "name": "p1-e83d7dcacb2d-s1-B.png",
+        "sha256": "fe18d2f7179661c5885aa5bbfa59fe2396caea14e0b9a134855c1e05d699e975",
+        "bytes": 2807421,
+        "seconds": 6.636443163999985
+      },
+      "cond_r1024_long": {
+        "name": "p1-e83d7dcacb2d-s1-cond_r1024_long.png",
+        "sha256": "11b3624de7dab3c4f9f8c7a0bd471d43c7f9b7ce217ba20d80dc1d56dfad85fe",
+        "bytes": 2817270,
+        "seconds": 6.497516230000031
+      }
+    },
+    {
+      "source_id": "p1-e83d7dcacb2d-s2",
+      "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+      "seed": 3898344016,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "set": "text",
+      "target_strings": [
+        "GOLDEN RIVER",
+        "Live in Berlin"
+      ],
+      "teacher": {
+        "name": "p1-e83d7dcacb2d-s2-teacher.png",
+        "sha256": "59bbe536d589130320e126a5b5c0dcc2c1d9657219083fe44820d8fae9c0cb09",
+        "bytes": 2731622,
+        "seconds": 6.872397077999999
+      },
+      "B": {
+        "name": "p1-e83d7dcacb2d-s2-B.png",
+        "sha256": "099eef3a2f661f645356fbdbcb624f891058cab148bee34b8b019db08213d1d3",
+        "bytes": 2600603,
+        "seconds": 6.648133364000017
+      },
+      "cond_r1024_long": {
+        "name": "p1-e83d7dcacb2d-s2-cond_r1024_long.png",
+        "sha256": "b6c0cff37fe74c0256b99124c8a33eef016ccab9965a69fc4ad7ff759052aaeb",
+        "bytes": 2699024,
+        "seconds": 6.512426321000021
+      }
+    },
+    {
+      "source_id": "p1-e83d7dcacb2d-s3",
+      "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+      "seed": 3899344019,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "set": "text",
+      "target_strings": [
+        "GOLDEN RIVER",
+        "Live in Berlin"
+      ],
+      "teacher": {
+        "name": "p1-e83d7dcacb2d-s3-teacher.png",
+        "sha256": "f5fde38002b5d45e061fd27dedddfaf1f9c5fc08a18e4271ffe8a66d1fe97dd1",
+        "bytes": 2235881,
+        "seconds": 6.871712040999995
+      },
+      "B": {
+        "name": "p1-e83d7dcacb2d-s3-B.png",
+        "sha256": "3535f8fa1c4544791634a28b964c750376dfae85c67a3351e0d7119af4083123",
+        "bytes": 2285350,
+        "seconds": 6.63750420400001
+      },
+      "cond_r1024_long": {
+        "name": "p1-e83d7dcacb2d-s3-cond_r1024_long.png",
+        "sha256": "a7bfa61ad38312c80b8605fb221557dcfc89e9235690fe3342e356824ede6d8a",
+        "bytes": 2306596,
+        "seconds": 6.503167049000012
+      }
+    },
+    {
+      "source_id": "p1-0b32a45e0b90-s1",
+      "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+      "seed": 188868257,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Welcome Home"
+      ],
+      "teacher": {
+        "name": "p1-0b32a45e0b90-s1-teacher.png",
+        "sha256": "6000f471c5ca5f595751153dda1e10d7ca639806843f974c55065afb86709fe9",
+        "bytes": 2205484,
+        "seconds": 6.873335753999996
+      },
+      "B": {
+        "name": "p1-0b32a45e0b90-s1-B.png",
+        "sha256": "3becb73055be12e74348daab7dbcc296d9e7cf6c4afb2769a9480641e68aa10d",
+        "bytes": 2166674,
+        "seconds": 6.586271793999998
+      },
+      "cond_r1024_long": {
+        "name": "p1-0b32a45e0b90-s1-cond_r1024_long.png",
+        "sha256": "c9d546f07aac29eecfd66dc318ad3314e8fdb698da21e76873c171a3c8aa7858",
+        "bytes": 2152547,
+        "seconds": 6.361380531999998
+      }
+    },
+    {
+      "source_id": "p1-0b32a45e0b90-s2",
+      "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+      "seed": 189868260,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Welcome Home"
+      ],
+      "teacher": {
+        "name": "p1-0b32a45e0b90-s2-teacher.png",
+        "sha256": "996c3ceee92412662aada8df139c0e06403930aacc057626d34c89eeadfec6c1",
+        "bytes": 2015328,
+        "seconds": 6.755668264999997
+      },
+      "B": {
+        "name": "p1-0b32a45e0b90-s2-B.png",
+        "sha256": "63d25f7f4e674f897eb7258f16b88d0bb367bc8c46dbf45f8f7d87e7bc114172",
+        "bytes": 2050327,
+        "seconds": 6.562467953999999
+      },
+      "cond_r1024_long": {
+        "name": "p1-0b32a45e0b90-s2-cond_r1024_long.png",
+        "sha256": "4d076307afa81fbe51cbb60eebc58206731a4bbdf4c6e0d515afad478cb2eb8b",
+        "bytes": 2090821,
+        "seconds": 6.415899532999958
+      }
+    },
+    {
+      "source_id": "p1-0b32a45e0b90-s3",
+      "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+      "seed": 190868263,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Welcome Home"
+      ],
+      "teacher": {
+        "name": "p1-0b32a45e0b90-s3-teacher.png",
+        "sha256": "d2a2c76c765404e575aec0a57a58944cd2152f8f7adf7d591cb9bd31d582e312",
+        "bytes": 2273092,
+        "seconds": 6.724884660000001
+      },
+      "B": {
+        "name": "p1-0b32a45e0b90-s3-B.png",
+        "sha256": "8dac70cab3df77fd1a8c19c2bd6115fa30f01d9f0f659bc6665032d1a0c491b2",
+        "bytes": 2237198,
+        "seconds": 6.587671764999982
+      },
+      "cond_r1024_long": {
+        "name": "p1-0b32a45e0b90-s3-cond_r1024_long.png",
+        "sha256": "00ab5df745b5a7e08ec46fca503512f34331c887275e61ec61610907d1bf6fff",
+        "bytes": 2272298,
+        "seconds": 6.39537353999998
+      }
+    },
+    {
+      "source_id": "p1-c9344c076abf-s1",
+      "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+      "seed": 3376647754,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Happy Birthday Emma"
+      ],
+      "teacher": {
+        "name": "p1-c9344c076abf-s1-teacher.png",
+        "sha256": "ce2e54751c5492895f22ce4d1359a50932f9f01f9ce87924504e8ba89b9dd03c",
+        "bytes": 1962572,
+        "seconds": 6.856731724000014
+      },
+      "B": {
+        "name": "p1-c9344c076abf-s1-B.png",
+        "sha256": "488d2e763f09b9b3a1a46ab7de1f2efcd79ec36163c9a3e074945b09caf47840",
+        "bytes": 1929556,
+        "seconds": 6.592758260000011
+      },
+      "cond_r1024_long": {
+        "name": "p1-c9344c076abf-s1-cond_r1024_long.png",
+        "sha256": "82298227464a667dba41b711d2957db5a051f8daa537355dc918cd371a7ba308",
+        "bytes": 1919313,
+        "seconds": 6.385702128999981
+      }
+    },
+    {
+      "source_id": "p1-c9344c076abf-s2",
+      "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+      "seed": 3377647757,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Happy Birthday Emma"
+      ],
+      "teacher": {
+        "name": "p1-c9344c076abf-s2-teacher.png",
+        "sha256": "19c2ecfffe5e3d39bdf205a86926d4dc4190a5e23625d0c9a7a32b41a135d425",
+        "bytes": 1997388,
+        "seconds": 6.727159139000008
+      },
+      "B": {
+        "name": "p1-c9344c076abf-s2-B.png",
+        "sha256": "0c75e4132ec1337e5b761b99c03192790d1ea0c79d0fb3b1fb8c2757d96ed1ac",
+        "bytes": 2123832,
+        "seconds": 6.590058703000011
+      },
+      "cond_r1024_long": {
+        "name": "p1-c9344c076abf-s2-cond_r1024_long.png",
+        "sha256": "16e975c80123c6db82e65edf80df9ec555b9b12a6fc37f0ede43e49aeb357782",
+        "bytes": 2133017,
+        "seconds": 6.381147668999972
+      }
+    },
+    {
+      "source_id": "p1-c9344c076abf-s3",
+      "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+      "seed": 3378647760,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Happy Birthday Emma"
+      ],
+      "teacher": {
+        "name": "p1-c9344c076abf-s3-teacher.png",
+        "sha256": "9f9a2356ca309821e4c76cf27b92b6fabc1a5254ee88e548fd2c5d1ed2719b84",
+        "bytes": 1890039,
+        "seconds": 6.727642629000002
+      },
+      "B": {
+        "name": "p1-c9344c076abf-s3-B.png",
+        "sha256": "0cad18804cf3a7e2565db51d4d33519e2b2332d9701a74e70359f875d1b725dc",
+        "bytes": 1801637,
+        "seconds": 6.593643995000008
+      },
+      "cond_r1024_long": {
+        "name": "p1-c9344c076abf-s3-cond_r1024_long.png",
+        "sha256": "bb61d0b228f3b7d3dbd06c843a26a01da4d76883df196ca7aa778c796a70b945",
+        "bytes": 1862251,
+        "seconds": 6.38271079499998
+      }
+    },
+    {
+      "source_id": "p1-f66dd8002f66-s1",
+      "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+      "seed": 4135393859,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "\u8425\u4e1a\u4e2d"
+      ],
+      "teacher": {
+        "name": "p1-f66dd8002f66-s1-teacher.png",
+        "sha256": "e127a1cd421550ac2682cc7ff58b38e17ccfb194425703a45e626db195fad5b8",
+        "bytes": 1166607,
+        "seconds": 6.700279870000003
+      },
+      "B": {
+        "name": "p1-f66dd8002f66-s1-B.png",
+        "sha256": "35fe3e401da1ac74a9a15ea9918f7276f7e6647da375fc6032b9ac9adfc72247",
+        "bytes": 1220014,
+        "seconds": 6.582027135000033
+      },
+      "cond_r1024_long": {
+        "name": "p1-f66dd8002f66-s1-cond_r1024_long.png",
+        "sha256": "9c03ad44061a4b865ffbec09615caca3d759455b4a97a48470e54aaee2cd01e8",
+        "bytes": 1173346,
+        "seconds": 6.381044209000038
+      }
+    },
+    {
+      "source_id": "p1-f66dd8002f66-s2",
+      "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+      "seed": 4136393862,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "\u8425\u4e1a\u4e2d"
+      ],
+      "teacher": {
+        "name": "p1-f66dd8002f66-s2-teacher.png",
+        "sha256": "d701b5fb7038982050ef3a8730fa65ee1511611b5cf0dfc66710a4748a4298cd",
+        "bytes": 1193836,
+        "seconds": 6.699364290999995
+      },
+      "B": {
+        "name": "p1-f66dd8002f66-s2-B.png",
+        "sha256": "46c9f5db1a7fa9ead4de3c39f138ae58225001150002d981e19f19fbb785df6a",
+        "bytes": 1235829,
+        "seconds": 6.584129792999988
+      },
+      "cond_r1024_long": {
+        "name": "p1-f66dd8002f66-s2-cond_r1024_long.png",
+        "sha256": "a456df0115234a5b4457a1b9acafc330ef2dc8fba0d79a6423a4ab98415a73a0",
+        "bytes": 1234260,
+        "seconds": 6.381190279999998
+      }
+    },
+    {
+      "source_id": "p1-f66dd8002f66-s3",
+      "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+      "seed": 4137393865,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "\u8425\u4e1a\u4e2d"
+      ],
+      "teacher": {
+        "name": "p1-f66dd8002f66-s3-teacher.png",
+        "sha256": "83648487d31d060d17a3bde0510c9fbeb3d2dee40b1944e2b3119ce9042d0aab",
+        "bytes": 1223708,
+        "seconds": 6.734858742
+      },
+      "B": {
+        "name": "p1-f66dd8002f66-s3-B.png",
+        "sha256": "f00ecf9867558bea78c4c2f5b939d5a7e9185c52a98e106ce0c970b014b8ec66",
+        "bytes": 1269210,
+        "seconds": 6.5768568539999706
+      },
+      "cond_r1024_long": {
+        "name": "p1-f66dd8002f66-s3-cond_r1024_long.png",
+        "sha256": "5c63d0a1f47357be01079a2608c2c026709c1e173a5eb7a867dff580b5ad7345",
+        "bytes": 1235963,
+        "seconds": 6.384228301999997
+      }
+    },
+    {
+      "source_id": "p1-2fa54a3c4eb8-s1",
+      "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+      "seed": 800361599,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "The Rusty Anchor",
+        "Moonlight Motel"
+      ],
+      "teacher": {
+        "name": "p1-2fa54a3c4eb8-s1-teacher.png",
+        "sha256": "8f501a4b0753dab3489d22e097bfb34b7b25cfa91966a4076c3c0685260a1545",
+        "bytes": 2089476,
+        "seconds": 6.841451847999991
+      },
+      "B": {
+        "name": "p1-2fa54a3c4eb8-s1-B.png",
+        "sha256": "1d66540016368ccbebef632cbf88e6f672e767b2d2b2fe85ef2419bb260ac56d",
+        "bytes": 2051305,
+        "seconds": 6.697688676000041
+      },
+      "cond_r1024_long": {
+        "name": "p1-2fa54a3c4eb8-s1-cond_r1024_long.png",
+        "sha256": "2a30d7fb98bc0ea0b64b421dbe8ad1d7f3151d093dd7cd9cc0c5468bc66509a3",
+        "bytes": 1993552,
+        "seconds": 6.483890104000011
+      }
+    },
+    {
+      "source_id": "p1-2fa54a3c4eb8-s2",
+      "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+      "seed": 801361602,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "The Rusty Anchor",
+        "Moonlight Motel"
+      ],
+      "teacher": {
+        "name": "p1-2fa54a3c4eb8-s2-teacher.png",
+        "sha256": "b7e8672bb18730870e20a257e971ff8a29e80b665d128a42d3d99eae3fadfcbb",
+        "bytes": 2382688,
+        "seconds": 6.8491246469999965
+      },
+      "B": {
+        "name": "p1-2fa54a3c4eb8-s2-B.png",
+        "sha256": "d36d62776e23b281ddd73d6b0993a484d0964403e27ec7e9353e0b9b9a6162b4",
+        "bytes": 2375086,
+        "seconds": 6.658243099999993
+      },
+      "cond_r1024_long": {
+        "name": "p1-2fa54a3c4eb8-s2-cond_r1024_long.png",
+        "sha256": "cd38598bb8a34544db0c329e877bb450abda594ee3dcc74576f4300dffa57ecc",
+        "bytes": 2361620,
+        "seconds": 6.4930383030000485
+      }
+    },
+    {
+      "source_id": "p1-2fa54a3c4eb8-s3",
+      "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+      "seed": 802361605,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "The Rusty Anchor",
+        "Moonlight Motel"
+      ],
+      "teacher": {
+        "name": "p1-2fa54a3c4eb8-s3-teacher.png",
+        "sha256": "6ef454165e12f8c5effdacd20e63082d2d9840b7560121e60969150fb1fb7c56",
+        "bytes": 2237521,
+        "seconds": 6.85362643900001
+      },
+      "B": {
+        "name": "p1-2fa54a3c4eb8-s3-B.png",
+        "sha256": "fa99620fd96dfd2c93d1c773ed9e08ef859a7abf67beb3b9374c02c07e82b68f",
+        "bytes": 2241472,
+        "seconds": 6.6597179529999835
+      },
+      "cond_r1024_long": {
+        "name": "p1-2fa54a3c4eb8-s3-cond_r1024_long.png",
+        "sha256": "5c3081bb6cdfbd982467dbed04316617d4aa23489d59b811d324253e9c049c65",
+        "bytes": 2232440,
+        "seconds": 6.491126097000006
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p1-e83d7dcacb2d-s1-teacher.png",
+      "sha256": "7451ece2400f3e60c135c933d86821aa2840b678a57737e709c96a0bc7c59467",
+      "bytes": 2882504,
+      "seconds": 9.43908708
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s1-B.png",
+      "sha256": "fe18d2f7179661c5885aa5bbfa59fe2396caea14e0b9a134855c1e05d699e975",
+      "bytes": 2807421,
+      "seconds": 6.636443163999985
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s1-cond_r1024_long.png",
+      "sha256": "11b3624de7dab3c4f9f8c7a0bd471d43c7f9b7ce217ba20d80dc1d56dfad85fe",
+      "bytes": 2817270,
+      "seconds": 6.497516230000031
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s2-teacher.png",
+      "sha256": "59bbe536d589130320e126a5b5c0dcc2c1d9657219083fe44820d8fae9c0cb09",
+      "bytes": 2731622,
+      "seconds": 6.872397077999999
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s2-B.png",
+      "sha256": "099eef3a2f661f645356fbdbcb624f891058cab148bee34b8b019db08213d1d3",
+      "bytes": 2600603,
+      "seconds": 6.648133364000017
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s2-cond_r1024_long.png",
+      "sha256": "b6c0cff37fe74c0256b99124c8a33eef016ccab9965a69fc4ad7ff759052aaeb",
+      "bytes": 2699024,
+      "seconds": 6.512426321000021
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s3-teacher.png",
+      "sha256": "f5fde38002b5d45e061fd27dedddfaf1f9c5fc08a18e4271ffe8a66d1fe97dd1",
+      "bytes": 2235881,
+      "seconds": 6.871712040999995
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s3-B.png",
+      "sha256": "3535f8fa1c4544791634a28b964c750376dfae85c67a3351e0d7119af4083123",
+      "bytes": 2285350,
+      "seconds": 6.63750420400001
+    },
+    {
+      "name": "p1-e83d7dcacb2d-s3-cond_r1024_long.png",
+      "sha256": "a7bfa61ad38312c80b8605fb221557dcfc89e9235690fe3342e356824ede6d8a",
+      "bytes": 2306596,
+      "seconds": 6.503167049000012
+    },
+    {
+      "name": "p1-0b32a45e0b90-s1-teacher.png",
+      "sha256": "6000f471c5ca5f595751153dda1e10d7ca639806843f974c55065afb86709fe9",
+      "bytes": 2205484,
+      "seconds": 6.873335753999996
+    },
+    {
+      "name": "p1-0b32a45e0b90-s1-B.png",
+      "sha256": "3becb73055be12e74348daab7dbcc296d9e7cf6c4afb2769a9480641e68aa10d",
+      "bytes": 2166674,
+      "seconds": 6.586271793999998
+    },
+    {
+      "name": "p1-0b32a45e0b90-s1-cond_r1024_long.png",
+      "sha256": "c9d546f07aac29eecfd66dc318ad3314e8fdb698da21e76873c171a3c8aa7858",
+      "bytes": 2152547,
+      "seconds": 6.361380531999998
+    },
+    {
+      "name": "p1-0b32a45e0b90-s2-teacher.png",
+      "sha256": "996c3ceee92412662aada8df139c0e06403930aacc057626d34c89eeadfec6c1",
+      "bytes": 2015328,
+      "seconds": 6.755668264999997
+    },
+    {
+      "name": "p1-0b32a45e0b90-s2-B.png",
+      "sha256": "63d25f7f4e674f897eb7258f16b88d0bb367bc8c46dbf45f8f7d87e7bc114172",
+      "bytes": 2050327,
+      "seconds": 6.562467953999999
+    },
+    {
+      "name": "p1-0b32a45e0b90-s2-cond_r1024_long.png",
+      "sha256": "4d076307afa81fbe51cbb60eebc58206731a4bbdf4c6e0d515afad478cb2eb8b",
+      "bytes": 2090821,
+      "seconds": 6.415899532999958
+    },
+    {
+      "name": "p1-0b32a45e0b90-s3-teacher.png",
+      "sha256": "d2a2c76c765404e575aec0a57a58944cd2152f8f7adf7d591cb9bd31d582e312",
+      "bytes": 2273092,
+      "seconds": 6.724884660000001
+    },
+    {
+      "name": "p1-0b32a45e0b90-s3-B.png",
+      "sha256": "8dac70cab3df77fd1a8c19c2bd6115fa30f01d9f0f659bc6665032d1a0c491b2",
+      "bytes": 2237198,
+      "seconds": 6.587671764999982
+    },
+    {
+      "name": "p1-0b32a45e0b90-s3-cond_r1024_long.png",
+      "sha256": "00ab5df745b5a7e08ec46fca503512f34331c887275e61ec61610907d1bf6fff",
+      "bytes": 2272298,
+      "seconds": 6.39537353999998
+    },
+    {
+      "name": "p1-c9344c076abf-s1-teacher.png",
+      "sha256": "ce2e54751c5492895f22ce4d1359a50932f9f01f9ce87924504e8ba89b9dd03c",
+      "bytes": 1962572,
+      "seconds": 6.856731724000014
+    },
+    {
+      "name": "p1-c9344c076abf-s1-B.png",
+      "sha256": "488d2e763f09b9b3a1a46ab7de1f2efcd79ec36163c9a3e074945b09caf47840",
+      "bytes": 1929556,
+      "seconds": 6.592758260000011
+    },
+    {
+      "name": "p1-c9344c076abf-s1-cond_r1024_long.png",
+      "sha256": "82298227464a667dba41b711d2957db5a051f8daa537355dc918cd371a7ba308",
+      "bytes": 1919313,
+      "seconds": 6.385702128999981
+    },
+    {
+      "name": "p1-c9344c076abf-s2-teacher.png",
+      "sha256": "19c2ecfffe5e3d39bdf205a86926d4dc4190a5e23625d0c9a7a32b41a135d425",
+      "bytes": 1997388,
+      "seconds": 6.727159139000008
+    },
+    {
+      "name": "p1-c9344c076abf-s2-B.png",
+      "sha256": "0c75e4132ec1337e5b761b99c03192790d1ea0c79d0fb3b1fb8c2757d96ed1ac",
+      "bytes": 2123832,
+      "seconds": 6.590058703000011
+    },
+    {
+      "name": "p1-c9344c076abf-s2-cond_r1024_long.png",
+      "sha256": "16e975c80123c6db82e65edf80df9ec555b9b12a6fc37f0ede43e49aeb357782",
+      "bytes": 2133017,
+      "seconds": 6.381147668999972
+    },
+    {
+      "name": "p1-c9344c076abf-s3-teacher.png",
+      "sha256": "9f9a2356ca309821e4c76cf27b92b6fabc1a5254ee88e548fd2c5d1ed2719b84",
+      "bytes": 1890039,
+      "seconds": 6.727642629000002
+    },
+    {
+      "name": "p1-c9344c076abf-s3-B.png",
+      "sha256": "0cad18804cf3a7e2565db51d4d33519e2b2332d9701a74e70359f875d1b725dc",
+      "bytes": 1801637,
+      "seconds": 6.593643995000008
+    },
+    {
+      "name": "p1-c9344c076abf-s3-cond_r1024_long.png",
+      "sha256": "bb61d0b228f3b7d3dbd06c843a26a01da4d76883df196ca7aa778c796a70b945",
+      "bytes": 1862251,
+      "seconds": 6.38271079499998
+    },
+    {
+      "name": "p1-f66dd8002f66-s1-teacher.png",
+      "sha256": "e127a1cd421550ac2682cc7ff58b38e17ccfb194425703a45e626db195fad5b8",
+      "bytes": 1166607,
+      "seconds": 6.700279870000003
+    },
+    {
+      "name": "p1-f66dd8002f66-s1-B.png",
+      "sha256": "35fe3e401da1ac74a9a15ea9918f7276f7e6647da375fc6032b9ac9adfc72247",
+      "bytes": 1220014,
+      "seconds": 6.582027135000033
+    },
+    {
+      "name": "p1-f66dd8002f66-s1-cond_r1024_long.png",
+      "sha256": "9c03ad44061a4b865ffbec09615caca3d759455b4a97a48470e54aaee2cd01e8",
+      "bytes": 1173346,
+      "seconds": 6.381044209000038
+    },
+    {
+      "name": "p1-f66dd8002f66-s2-teacher.png",
+      "sha256": "d701b5fb7038982050ef3a8730fa65ee1511611b5cf0dfc66710a4748a4298cd",
+      "bytes": 1193836,
+      "seconds": 6.699364290999995
+    },
+    {
+      "name": "p1-f66dd8002f66-s2-B.png",
+      "sha256": "46c9f5db1a7fa9ead4de3c39f138ae58225001150002d981e19f19fbb785df6a",
+      "bytes": 1235829,
+      "seconds": 6.584129792999988
+    },
+    {
+      "name": "p1-f66dd8002f66-s2-cond_r1024_long.png",
+      "sha256": "a456df0115234a5b4457a1b9acafc330ef2dc8fba0d79a6423a4ab98415a73a0",
+      "bytes": 1234260,
+      "seconds": 6.381190279999998
+    },
+    {
+      "name": "p1-f66dd8002f66-s3-teacher.png",
+      "sha256": "83648487d31d060d17a3bde0510c9fbeb3d2dee40b1944e2b3119ce9042d0aab",
+      "bytes": 1223708,
+      "seconds": 6.734858742
+    },
+    {
+      "name": "p1-f66dd8002f66-s3-B.png",
+      "sha256": "f00ecf9867558bea78c4c2f5b939d5a7e9185c52a98e106ce0c970b014b8ec66",
+      "bytes": 1269210,
+      "seconds": 6.5768568539999706
+    },
+    {
+      "name": "p1-f66dd8002f66-s3-cond_r1024_long.png",
+      "sha256": "5c63d0a1f47357be01079a2608c2c026709c1e173a5eb7a867dff580b5ad7345",
+      "bytes": 1235963,
+      "seconds": 6.384228301999997
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s1-teacher.png",
+      "sha256": "8f501a4b0753dab3489d22e097bfb34b7b25cfa91966a4076c3c0685260a1545",
+      "bytes": 2089476,
+      "seconds": 6.841451847999991
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s1-B.png",
+      "sha256": "1d66540016368ccbebef632cbf88e6f672e767b2d2b2fe85ef2419bb260ac56d",
+      "bytes": 2051305,
+      "seconds": 6.697688676000041
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s1-cond_r1024_long.png",
+      "sha256": "2a30d7fb98bc0ea0b64b421dbe8ad1d7f3151d093dd7cd9cc0c5468bc66509a3",
+      "bytes": 1993552,
+      "seconds": 6.483890104000011
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s2-teacher.png",
+      "sha256": "b7e8672bb18730870e20a257e971ff8a29e80b665d128a42d3d99eae3fadfcbb",
+      "bytes": 2382688,
+      "seconds": 6.8491246469999965
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s2-B.png",
+      "sha256": "d36d62776e23b281ddd73d6b0993a484d0964403e27ec7e9353e0b9b9a6162b4",
+      "bytes": 2375086,
+      "seconds": 6.658243099999993
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s2-cond_r1024_long.png",
+      "sha256": "cd38598bb8a34544db0c329e877bb450abda594ee3dcc74576f4300dffa57ecc",
+      "bytes": 2361620,
+      "seconds": 6.4930383030000485
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s3-teacher.png",
+      "sha256": "6ef454165e12f8c5effdacd20e63082d2d9840b7560121e60969150fb1fb7c56",
+      "bytes": 2237521,
+      "seconds": 6.85362643900001
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s3-B.png",
+      "sha256": "fa99620fd96dfd2c93d1c773ed9e08ef859a7abf67beb3b9374c02c07e82b68f",
+      "bytes": 2241472,
+      "seconds": 6.6597179529999835
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-s3-cond_r1024_long.png",
+      "sha256": "5c3081bb6cdfbd982467dbed04316617d4aa23489d59b811d324253e9c049c65",
+      "bytes": 2232440,
+      "seconds": 6.491126097000006
+    }
+  ],
+  "calls": {
+    "teacher": 15,
+    "B": 15,
+    "cond_r1024_long": 15
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3"
+}
