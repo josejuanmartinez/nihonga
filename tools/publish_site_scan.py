@@ -129,7 +129,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped.</p></div>'] + anchor_parts() + variant_review_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped.</p></div>'] + variant_review_parts() + anchor_parts()
 
 
 def bridge13_section(protocol, report):
@@ -172,9 +172,36 @@ def build(a, lat, b, q):
     best_a = rows_a[0]
     ta, tb = lat['summary']['teacher'], lat['summary']['candidate_A']
     speed = lat['paired_speedup']
-    parts = ['<h3 id="phase7-adaptive">Which block next? Importance measured inside the pruned student</h3>',
+    a_parts = ['<h3 id="phase7-a-tested">Candidate A under closer test: rejected</h3>',
+               '<p class="summary">The plan was to use candidate A (blocks 4-5 replaced, 30 blocks) as the base for further pruning. Before building on it we measured three things: its image quality in a larger blinded test, its real speed, and which block could go next inside it. The blinded image test decided the question.</p>']
+    adh, txt = q['counts']['adherence'], q['counts']['text']
+    pairs = q['pairs']
+    wins = sum(r['clear_pass_delta'] > 0 for r in pairs if r['group'] != 'text_rendering')
+    losses = sum(r['clear_pass_delta'] < 0 for r in pairs if r['group'] != 'text_rendering')
+    text_losses = sum(r['clear_pass_delta'] < 0 for r in pairs if r['group'] == 'text_rendering')
+    text_wins = sum(r['clear_pass_delta'] > 0 for r in pairs if r['group'] == 'text_rendering')
+    ci = q['paired_bootstrap_95pct']
+    a_parts.append('<h3 id="phase7-blind">Blinded image test: candidate A loses to the teacher</h3>')
+    a_parts.append(f'<p class="summary">Before viewing images we registered <b>159 fresh validation prompts</b> (35 counting, 34 spatial, 30 color, 30 multiple-object, 30 text), one seed each, rendered by the teacher and A at 40 steps. Each image was scored pass, fail or uncertain against one fixed question, with left/right positions randomized and the identity key committed by hash and revealed only after all 318 scores were committed.</p>')
+    a_parts.append(table('Blinded 159-prompt panel: clear passes for the teacher and candidate A',
+                       ['Panel', 'Teacher pass', 'A pass', 'A better', 'A worse', 'Gate'],
+                       [['Adherence (129)', adh['teacher'].get('pass', 0), adh['candidate_A'].get('pass', 0), wins, losses,
+                         f"gain {100*q['adherence_gain_fraction']:+.1f} points, 95% CI {100*ci[0]:+.1f} to {100*ci[1]:+.1f}; needs lower bound ≥ -5: <b>{'pass' if q['adherence_noninferiority_passed'] else 'fail'}</b>"],
+                        ['Text (30)', txt['teacher'].get('pass', 0), txt['candidate_A'].get('pass', 0), text_wins, text_losses,
+                         f"A must be within 1 of the teacher: <b>{'pass' if q['text_gate_passed'] else 'fail'}</b>"]]))
+    a_parts.append(f'<div class="verdict"><p><b>Candidate A is rejected as a base for further pruning.</b> It fails both image gates as well as the velocity gate; only the speed gate passes. The earlier impression that A matched the teacher came from a small unblinded screen. Further pruning starts from the accepted one-block student.</p></div>')
+    a_parts.append('<p class="note">One model-blind AI reviewer and one seed per prompt. The 10 and 50 validation prompts used for velocity are development data, not an untouched final test.</p>')
+    a_parts.append('<h3 id="phase7-latency">Measured speed of candidate A</h3>')
+    a_parts.append(f'<p class="summary">{len(speed["ratios"])} balanced, randomized teacher/A pairs on one H100, 1024×1024, 40 steps, BF16, same prompts and seeds, warm models. Median end-to-end time: <b>{ta["median_seconds"]:.2f} s</b> for the teacher and <b>{tb["median_seconds"]:.2f} s</b> for A. Paired speedup <b>{speed["median"]:.3f}×</b> (bootstrap 95% CI {speed["bootstrap_95pct"][0]:.3f}-{speed["bootstrap_95pct"][1]:.3f}). Peak allocated memory: {ta["peak_allocated_gib"]:.2f} GiB vs {tb["peak_allocated_gib"]:.2f} GiB.</p>')
+    a_parts.append('<h3 id="phase7-scan-a">Which block next inside A? The importance scan</h3>')
+    a_parts.append(f'<p class="summary">A alone measures <b>{pct(base_a)}</b> on all 180 comparisons ({pct(panels_a["wider50"])} on the 50 wider prompts and {pct(panels_a["gate10"])} on the 10 check prompts, reproducing the earlier 7.41% and 7.97%).</p>')
+    a_parts.append(table('Candidate A scan: velocity error against the teacher with one extra block bypassed (lower is better); A alone measures ' + pct(base_a),
+                       ['Block', 'A + bypass', 'Early', 'Middle', 'Late', 'p90'],
+                       [[r['block'], f"<b>{pct(r['mean'])}</b>", pct(r['early'], 1), pct(r['middle'], 1), pct(r['late'], 1), pct(r['p90'], 1)] for r in rows_a]))
+    a_parts.append(f'<div class="verdict"><p><b>Inside A, no single bypass stays within the gate.</b> The gentlest, block {best_a["block"]}, moves A from {pct(base_a)} to {pct(best_a["mean"])}. The middle blocks (6-17) cost least; blocks 0 and 31 cannot be skipped. A low bypass score only nominates a block for a learned bridge; it is not a removal.</p></div>')
+    parts = a_parts + ['<h3 id="phase7-adaptive">Which block next? Importance measured inside the accepted student</h3>',
              '<p class="summary">The original ranking measured blocks in the intact teacher. After a cut, surviving blocks may compensate or become more redundant, so we measure again inside the smaller student. Each trial <b>bypasses one surviving block</b>, compares the prediction with the teacher on the same <b>60 development prompts at early, middle and late moments</b> (180 comparisons), then restores the block. Bypasses never accumulate and no weight is updated. Before any trial, all 90 intact-teacher controls reproduced exactly and the student reproduced its saved predictions.</p>',
-             f'<p class="summary"><b>Correction to the plan.</b> The scan was first run inside candidate A (blocks 4-5 replaced), as the plan specified. A fails the {GATE:.2f}% gate, so its ranking describes a model we have not accepted. The same scan is therefore repeated inside <b>candidate B</b>: the accepted one-block student, 31 blocks plus the pretrained block-5 bridge. Block 4 is eligible again in B.</p>']
+             '<p class="summary">Because A is rejected, its scan describes a model we will not build on. The same scan is repeated inside <b>candidate B</b>: the accepted one-block student, 31 blocks plus the pretrained block-5 bridge. Block 4 is eligible again in B. Everything after this point starts from B.</p>']
     if b is None:
         parts.append('<p class="summary"><b>Candidate B scan: running.</b> Its ranking will be compared with A\'s below once it completes.</p>')
     else:
@@ -199,31 +226,6 @@ def build(a, lat, b, q):
     if b13 is not None:
         parts.extend(bridge13_section(b13_protocol, b13))
         parts.extend(variants_parts())
-    parts.append('<h3>The same scan inside candidate A</h3>')
-    parts.append(f'<p class="summary">A alone measures <b>{pct(base_a)}</b> on all 180 comparisons ({pct(panels_a["wider50"])} on the 50 wider prompts and {pct(panels_a["gate10"])} on the 10 check prompts, reproducing the earlier 7.41% and 7.97%).</p>')
-    parts.append(table('Candidate A scan: velocity error against the teacher with one extra block bypassed (lower is better); A alone measures ' + pct(base_a),
-                       ['Block', 'A + bypass', 'Early', 'Middle', 'Late', 'p90'],
-                       [[r['block'], f"<b>{pct(r['mean'])}</b>", pct(r['early'], 1), pct(r['middle'], 1), pct(r['late'], 1), pct(r['p90'], 1)] for r in rows_a]))
-    parts.append(f'<div class="verdict"><p><b>Inside A, no single bypass stays within the gate.</b> The gentlest, block {best_a["block"]}, moves A from {pct(base_a)} to {pct(best_a["mean"])}. The middle blocks (6-17) cost least; blocks 0 and 31 cannot be skipped. A low bypass score only nominates a block for a learned bridge; it is not a removal.</p></div>')
-    parts.append('<h3 id="phase7-latency">Measured speed of candidate A</h3>')
-    parts.append(f'<p class="summary">{len(speed["ratios"])} balanced, randomized teacher/A pairs on one H100, 1024×1024, 40 steps, BF16, same prompts and seeds, warm models. Median end-to-end time: <b>{ta["median_seconds"]:.2f} s</b> for the teacher and <b>{tb["median_seconds"]:.2f} s</b> for A. Paired speedup <b>{speed["median"]:.3f}×</b> (bootstrap 95% CI {speed["bootstrap_95pct"][0]:.3f}-{speed["bootstrap_95pct"][1]:.3f}). Peak allocated memory: {ta["peak_allocated_gib"]:.2f} GiB vs {tb["peak_allocated_gib"]:.2f} GiB.</p>')
-    adh, txt = q['counts']['adherence'], q['counts']['text']
-    pairs = q['pairs']
-    wins = sum(r['clear_pass_delta'] > 0 for r in pairs if r['group'] != 'text_rendering')
-    losses = sum(r['clear_pass_delta'] < 0 for r in pairs if r['group'] != 'text_rendering')
-    text_losses = sum(r['clear_pass_delta'] < 0 for r in pairs if r['group'] == 'text_rendering')
-    text_wins = sum(r['clear_pass_delta'] > 0 for r in pairs if r['group'] == 'text_rendering')
-    ci = q['paired_bootstrap_95pct']
-    parts.append('<h3 id="phase7-blind">Blinded image test: candidate A loses to the teacher</h3>')
-    parts.append(f'<p class="summary">Before viewing images we registered <b>159 fresh validation prompts</b> (35 counting, 34 spatial, 30 color, 30 multiple-object, 30 text), one seed each, rendered by the teacher and A at 40 steps. Each image was scored pass, fail or uncertain against one fixed question, with left/right positions randomized and the identity key committed by hash and revealed only after all 318 scores were committed.</p>')
-    parts.append(table('Blinded 159-prompt panel: clear passes for the teacher and candidate A',
-                       ['Panel', 'Teacher pass', 'A pass', 'A better', 'A worse', 'Gate'],
-                       [['Adherence (129)', adh['teacher'].get('pass', 0), adh['candidate_A'].get('pass', 0), wins, losses,
-                         f"gain {100*q['adherence_gain_fraction']:+.1f} points, 95% CI {100*ci[0]:+.1f} to {100*ci[1]:+.1f}; needs lower bound ≥ -5: <b>{'pass' if q['adherence_noninferiority_passed'] else 'fail'}</b>"],
-                        ['Text (30)', txt['teacher'].get('pass', 0), txt['candidate_A'].get('pass', 0), text_wins, text_losses,
-                         f"A must be within 1 of the teacher: <b>{'pass' if q['text_gate_passed'] else 'fail'}</b>"]]))
-    parts.append(f'<div class="verdict"><p><b>Candidate A is rejected as a base for further pruning.</b> It fails both image gates as well as the velocity gate; only the speed gate passes. The earlier impression that A matched the teacher came from a small unblinded screen. Further pruning starts from the accepted one-block student.</p></div>')
-    parts.append('<p class="note">One model-blind AI reviewer and one seed per prompt. The 10 and 50 validation prompts used for velocity are development data, not an untouched final test.</p>')
     scan = '\n    '.join(parts)
 
     if b is None:
