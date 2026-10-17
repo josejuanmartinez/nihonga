@@ -1,0 +1,1413 @@
+{
+  "request_key": "d4530312b0f69c14bb9bbc8ad15d2514f3e8cb009caa860eed3b1702ff22ad7b",
+  "status": "passed",
+  "rows": [
+    {
+      "source_id": "p1-ecb07d42d1aa",
+      "prompt": "A high-resolution DSLR photo of a dog in the upper half of the image and a vase in the lower half. Sharp focus. DSLR photo, high resolution.",
+      "seed": 3970989378,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "composition_layout",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-ecb07d42d1aa-teacher.png",
+        "sha256": "b79dd7d45e472ecc8e22a80b127dd2849ee798b21102846aaf7d631def8415f0",
+        "bytes": 2253004,
+        "seconds": 8.790758175
+      },
+      "B": {
+        "name": "p1-ecb07d42d1aa-B.png",
+        "sha256": "faba4a1bdeb8df70f2d3daa862f3d951a7c694a06fec56ed7637b66f51602830",
+        "bytes": 2186139,
+        "seconds": 6.584287559000018
+      },
+      "C": {
+        "name": "p1-ecb07d42d1aa-C.png",
+        "sha256": "0d40b02aef482ed5da8f0009a14cc5e11eb981ac1c3f73be3f58bdb79d7752ab",
+        "bytes": 2237500,
+        "seconds": 6.385200454000028
+      }
+    },
+    {
+      "source_id": "p1-a2bdeab6aa35",
+      "prompt": "\u4e00\u4e2a\u5706\u76d8\u653e\u5728\u68cb\u76d8\u5730\u677f\u4e0a\uff0c35\u6beb\u7c73\u80f6\u7247\u7167\u7247\uff0c\u80f6\u7247\u9897\u7c92",
+      "seed": 2730355382,
+      "width": 768,
+      "height": 1376,
+      "dimension": "alignment",
+      "subdimension": "shapes",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-a2bdeab6aa35-teacher.png",
+        "sha256": "dec0017dd7725e77a8d477f6d6d058c9383b0e1d95ca290d67962b644345af34",
+        "bytes": 2565635,
+        "seconds": 6.971647771999997
+      },
+      "B": {
+        "name": "p1-a2bdeab6aa35-B.png",
+        "sha256": "05c26cd37cd680fa06425c81e0a36c2283a75c9db77e2964aa3735dd6e89a25d",
+        "bytes": 2577412,
+        "seconds": 6.672191828999985
+      },
+      "C": {
+        "name": "p1-a2bdeab6aa35-C.png",
+        "sha256": "ce9baba60310a3e530a976e8077e01bd5e650ad7e97bfee395b00d3407a37f90",
+        "bytes": 2335945,
+        "seconds": 6.472195435999993
+      }
+    },
+    {
+      "source_id": "p1-39f4413adbe6",
+      "prompt": "A 3D render of three shapes on a mirror surface: white star-shaped block, purple cone, blue triangular prism. Clean composition. 3D render, soft global illumination.",
+      "seed": 972308794,
+      "width": 1248,
+      "height": 832,
+      "dimension": "alignment",
+      "subdimension": "shapes",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-39f4413adbe6-teacher.png",
+        "sha256": "fc8d5df3dce3f9728a9657ac720ebd4221d4c2e8b9ff3dcab2e28f93ea61848e",
+        "bytes": 926293,
+        "seconds": 6.8476629299999985
+      },
+      "B": {
+        "name": "p1-39f4413adbe6-B.png",
+        "sha256": "c4c54a48cc84a6030f54f3e5fde1733a3c41d22039bae4363b0a9b19b8809eb7",
+        "bytes": 954167,
+        "seconds": 6.556426561000023
+      },
+      "C": {
+        "name": "p1-39f4413adbe6-C.png",
+        "sha256": "8ef24eaa17c5f959dcdfc4ffa530568c00523a52f86cf2976452a8fdd039ac04",
+        "bytes": 944859,
+        "seconds": 6.373791845999904
+      }
+    },
+    {
+      "source_id": "p1-271794e7e3fc",
+      "prompt": "A crystal cone next to a gray octahedron floating in empty space, anime style",
+      "seed": 655856871,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "alignment",
+      "subdimension": "shapes",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-271794e7e3fc-teacher.png",
+        "sha256": "990d096d8cdd92788f59f216616c1e44be3e13ab7b7a79aae9dd253bd7cdd0cf",
+        "bytes": 1064575,
+        "seconds": 6.828350499000003
+      },
+      "B": {
+        "name": "p1-271794e7e3fc-B.png",
+        "sha256": "867ae4c52180f178004bdf348d01655d26dfc95596ef09729a13b71158738eb6",
+        "bytes": 1222507,
+        "seconds": 6.577429703000007
+      },
+      "C": {
+        "name": "p1-271794e7e3fc-C.png",
+        "sha256": "1ef22fa5ab46302460c9f5989cdfe61203d3585e2f28bcd3f767c8148f256510",
+        "bytes": 1187629,
+        "seconds": 6.380327707999982
+      }
+    },
+    {
+      "source_id": "p1-47d1be211277",
+      "prompt": "\u4e00\u4f4d\u4e2d\u5e74\u6df7\u8840\u7537\u5b50\u5728\u9633\u53f0\u4e0a\u5582\u72d7\uff0cDSLR\u7167\u7247",
+      "seed": 1204928033,
+      "width": 832,
+      "height": 1248,
+      "dimension": "alignment",
+      "subdimension": "actions",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-47d1be211277-teacher.png",
+        "sha256": "bca0263dc7a9ba9dd3308b44be24a15e7a0d942f1aca18a5bdeeaac30654f831",
+        "bytes": 1839792,
+        "seconds": 6.755209187999995
+      },
+      "B": {
+        "name": "p1-47d1be211277-B.png",
+        "sha256": "88bd4fc83a27d2c3a5c7a67bf968f640cadd855092621b65bf2b4de52a6c0038",
+        "bytes": 1736788,
+        "seconds": 6.568458841999984
+      },
+      "C": {
+        "name": "p1-47d1be211277-C.png",
+        "sha256": "7e15786a172263b40738656ad9a027b13a67deb54dc928309805ca43a05d5f76",
+        "bytes": 1867173,
+        "seconds": 6.3631790279999905
+      }
+    },
+    {
+      "source_id": "p1-cef0daad2aa6",
+      "prompt": "Show a lace wedding veil beside a detailed circuit board, extreme close-up, extremely intricate detail, even studio lighting, clean composition. Style: cinematic still, anamorphic, color graded.",
+      "seed": 3471891117,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "visual_quality",
+      "subdimension": "fine_detail",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-cef0daad2aa6-teacher.png",
+        "sha256": "9ef30804becaa5fa48aa9db6deb0d7a40f21dcbbaf85bb70429c1a5a0a392f38",
+        "bytes": 2811438,
+        "seconds": 6.7838841239999965
+      },
+      "B": {
+        "name": "p1-cef0daad2aa6-B.png",
+        "sha256": "36af3bf349d8583892584fe87a9ef5fbfe7181650e67fbf9e91e052e488b95b7",
+        "bytes": 2784851,
+        "seconds": 6.578756151999983
+      },
+      "C": {
+        "name": "p1-cef0daad2aa6-C.png",
+        "sha256": "1e451599fa031b170293480e7003b482002f21c32ed9b8ce9a474e7fc69fd713",
+        "bytes": 2781749,
+        "seconds": 6.383419118000006
+      }
+    },
+    {
+      "source_id": "p1-682468cd7087",
+      "prompt": "Make a picture of a peacock feather eye, extreme close-up, razor-sharp fine detail, highly detailed. Style: stylized 3D, clay-like materials.",
+      "seed": 1747216589,
+      "width": 896,
+      "height": 1184,
+      "dimension": "visual_quality",
+      "subdimension": "fine_detail",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-682468cd7087-teacher.png",
+        "sha256": "323c75bce6629e426563bd4f1d06601b5de6a4402d827b8a39b6dd1974b0b856",
+        "bytes": 2526114,
+        "seconds": 6.9210477960000105
+      },
+      "B": {
+        "name": "p1-682468cd7087-B.png",
+        "sha256": "8c6e6ca7dfafc5dd8a882de3432f3abae0bb18b786c8d1373d8c3061eae529d8",
+        "bytes": 2537956,
+        "seconds": 6.699725612999998
+      },
+      "C": {
+        "name": "p1-682468cd7087-C.png",
+        "sha256": "679a0be4c5e4993cafd9919f7764ac91e7ebd204a69f15b05f05a14cfbb5cd4d",
+        "bytes": 2563277,
+        "seconds": 6.48897278000004
+      }
+    },
+    {
+      "source_id": "p1-cf35e4976f11",
+      "prompt": "An elderly white man with natural, unaltered skin tone and no makeup, extreme close-up capturing the detailed texture of his face, candid photograph with raw and authentic expression",
+      "seed": 3476415639,
+      "width": 832,
+      "height": 1248,
+      "dimension": "visual_quality",
+      "subdimension": "skin",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-cf35e4976f11-teacher.png",
+        "sha256": "015147081506775785b5f2acf44be0cd9784558a38f313e97bb89031bfa148bb",
+        "bytes": 2200040,
+        "seconds": 6.7730224660000005
+      },
+      "B": {
+        "name": "p1-cf35e4976f11-B.png",
+        "sha256": "4c4d8c7a4466ce91d786bd0776e5941acd3d8f0fd03c0f16031fc107c6d05400",
+        "bytes": 2210678,
+        "seconds": 6.561039171999994
+      },
+      "C": {
+        "name": "p1-cf35e4976f11-C.png",
+        "sha256": "bc205aea88de4939c7bee950ba4c0c1f038d1468b8cc358b4a6797b4c5ed716f",
+        "bytes": 2257797,
+        "seconds": 6.352816533000009
+      }
+    },
+    {
+      "source_id": "p1-9a66654bd414",
+      "prompt": "A watercolor painting of a stack of aged books resting next to a hand-thrown clay pot. Extreme close-up shot capturing every grain and fiber in exquisite detail. Raking side light accentuates the textures, creating a highly detailed and realistic rendering. Soft washes of watercolor with visible paper texture.",
+      "seed": 2590401867,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "visual_quality",
+      "subdimension": "textures",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-9a66654bd414-teacher.png",
+        "sha256": "0de25006ac1fa48be0ad531cec1fee2c4bf71f7d19336474f869e03d5ee90c48",
+        "bytes": 2321804,
+        "seconds": 6.927324538000008
+      },
+      "B": {
+        "name": "p1-9a66654bd414-B.png",
+        "sha256": "c1816d27c0357fe672c55e0e0a03da85ad610493a635fa3da0b051d0191aa9fe",
+        "bytes": 2354652,
+        "seconds": 6.587648473999991
+      },
+      "C": {
+        "name": "p1-9a66654bd414-C.png",
+        "sha256": "833696729974c4f52a608f19e186626e51107556cb1244c9f6d119bb874eab15",
+        "bytes": 2290277,
+        "seconds": 6.389781354999968
+      }
+    },
+    {
+      "source_id": "p1-df82ff32e45b",
+      "prompt": "\u4e00\u5f20\u5728\u9ed1\u6697\u623f\u95f4\u4e2d\u62cd\u6444\u7684 candid \u7167\u7247\uff0c\u4eba\u8138\u88ab\u7b14\u8bb0\u672c\u7535\u8111\u5c4f\u5e55\u7167\u4eae\u3002\u5e7f\u89d2\u955c\u5934\u3002\u6df1\u9083\u7684\u9634\u5f71\u4e2d\u7ec6\u8282\u6e05\u6670\u3002\u660e\u6697\u5bf9\u6bd4\u5f3a\u70c8\u3002\u81ea\u7136\u8272\u5f69\u3002 candid \u7167\u7247\uff0c\u81ea\u7136\u5149\u7ebf\u3002",
+      "seed": 3749904178,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "visual_quality",
+      "subdimension": "low_light",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-df82ff32e45b-teacher.png",
+        "sha256": "af16d64550113a5b54a97b5d706947966136dd42120783662f927b803868694c",
+        "bytes": 1007991,
+        "seconds": 6.797708400000005
+      },
+      "B": {
+        "name": "p1-df82ff32e45b-B.png",
+        "sha256": "80ecb6c765ba9d3dd501a329a257fb975f9f271b9eff69720ed1658abf89dd27",
+        "bytes": 999028,
+        "seconds": 6.585922310000001
+      },
+      "C": {
+        "name": "p1-df82ff32e45b-C.png",
+        "sha256": "6319203a194fb0b11fa23a03aeb2f7391a8f806e1f1ac477e59601f997ed697a",
+        "bytes": 928953,
+        "seconds": 6.3862469859999464
+      }
+    },
+    {
+      "source_id": "p1-8bdc83e503ad",
+      "prompt": "A movie still of four friends posing together in a wheat field. Group portrait. Late afternoon sun. Clean composition. Movie still, dramatic lighting.",
+      "seed": 2346484709,
+      "width": 896,
+      "height": 1184,
+      "dimension": "aesthetics",
+      "subdimension": "portraits",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-8bdc83e503ad-teacher.png",
+        "sha256": "3b64b4a55414dcfce1412945b0c46aa0e8b4fac724c08e07b4922957e23cf354",
+        "bytes": 2253526,
+        "seconds": 6.931121630000007
+      },
+      "B": {
+        "name": "p1-8bdc83e503ad-B.png",
+        "sha256": "02ee093cbda030e82ec13f5510a061407fba9755fd073d5a7b5002f322a6b97b",
+        "bytes": 2071744,
+        "seconds": 6.704314850999992
+      },
+      "C": {
+        "name": "p1-8bdc83e503ad-C.png",
+        "sha256": "ffa1d23710c11ebe3db0b708a47b7e4820ee2faf6a151a98b9ed8ce3a61009d4",
+        "bytes": 2120358,
+        "seconds": 6.4984340549999615
+      }
+    },
+    {
+      "source_id": "p1-b2e087f02067",
+      "prompt": "A claymation scene of an old man feeding pigeons, calm atmosphere, high dynamic range.",
+      "seed": 3001059312,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "aesthetics",
+      "subdimension": "illustration_styles",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-b2e087f02067-teacher.png",
+        "sha256": "2c64c59d307a9473ade83df03639f49ab8063def6b825cf844fbb9fcc9ca6f86",
+        "bytes": 1915377,
+        "seconds": 6.785034542000005
+      },
+      "B": {
+        "name": "p1-b2e087f02067-B.png",
+        "sha256": "0ff2cde59fe2c55bcd4b6b79980770eadd98f240db9736b611c3520b87dfe232",
+        "bytes": 1872916,
+        "seconds": 6.591843101999984
+      },
+      "C": {
+        "name": "p1-b2e087f02067-C.png",
+        "sha256": "a77f26fc7084383276da198077df013bb35ba997d51028e9ccdc84701aa067de",
+        "bytes": 1869455,
+        "seconds": 6.376590800999907
+      }
+    },
+    {
+      "source_id": "p1-2d014d9d92c6",
+      "prompt": "A 3D render of a cyclist on a country road, melancholic tone, soft shadows.",
+      "seed": 755060125,
+      "width": 1376,
+      "height": 768,
+      "dimension": "aesthetics",
+      "subdimension": "illustration_styles",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-2d014d9d92c6-teacher.png",
+        "sha256": "4fbc99e2c0b4f7af083c979b9a70ee9bcf42762d4e3cd90e012bb62736c0c983",
+        "bytes": 1809033,
+        "seconds": 6.881543154000013
+      },
+      "B": {
+        "name": "p1-2d014d9d92c6-B.png",
+        "sha256": "7ca931c076ef0e097b143992df17882ffa6fcdb2c31593b1c1f2445792afe8a2",
+        "bytes": 1706003,
+        "seconds": 6.675999972999989
+      },
+      "C": {
+        "name": "p1-2d014d9d92c6-C.png",
+        "sha256": "9fb461824c26e8173b0b1a486c28dcb75154e201e72d1bd428c5d73b5094e5a4",
+        "bytes": 1512950,
+        "seconds": 6.474555645999999
+      }
+    },
+    {
+      "source_id": "p1-79d02f27f6ef",
+      "prompt": "A candid shot of a college student appearing contemplative in a sunlit studio setting. Profile portrait view. Overcast sky with diffused lighting. Gentle, soft shadows. Natural illumination. Candid photograph.",
+      "seed": 2043686695,
+      "width": 832,
+      "height": 1248,
+      "dimension": "aesthetics",
+      "subdimension": "portraits",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-79d02f27f6ef-teacher.png",
+        "sha256": "d22143cc0c6658a385d5a0461b51d937b81b4064c186a295aad7ad074535575a",
+        "bytes": 1328111,
+        "seconds": 6.760374448000022
+      },
+      "B": {
+        "name": "p1-79d02f27f6ef-B.png",
+        "sha256": "7bf0826f0ccb5e2e1b96f6c0450bc940d171b26cf800a2b3d74956c128f9f1f8",
+        "bytes": 1343149,
+        "seconds": 6.623331169999972
+      },
+      "C": {
+        "name": "p1-79d02f27f6ef-C.png",
+        "sha256": "7dc52e9e7767b8c39626d864a4d4077951df52bd817bbfdc5a1dfa3aadb8f45f",
+        "bytes": 1313281,
+        "seconds": 6.369649976999995
+      }
+    },
+    {
+      "source_id": "p1-cd77b482d916",
+      "prompt": "\u4e00\u5e45\u6c34\u5f69\u753b\uff0c\u63cf\u7ed8\u4e00\u4f4d\u9752\u5c11\u5e74\u592a\u5e73\u6d0b\u5c9b\u6c11\u7537\u5b69\u5728\u6d77\u8fb9\u6c89\u601d\u7684\u6837\u5b50\uff0c\u534a\u8eab\u8096\u50cf\uff0c\u67d4\u548c\u7684\u6668\u5149\uff0c\u67d4\u548c\u7684\u9634\u5f71\u3002",
+      "seed": 3447174274,
+      "width": 768,
+      "height": 1376,
+      "dimension": "aesthetics",
+      "subdimension": "portraits",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-cd77b482d916-teacher.png",
+        "sha256": "d4b9e32c718d8f52ffe9938e8828b1c2da3561052236a4c0192acd1126a033ca",
+        "bytes": 2078556,
+        "seconds": 6.884384902000022
+      },
+      "B": {
+        "name": "p1-cd77b482d916-B.png",
+        "sha256": "e6619b587de7db37e0b305f3b00f5289f60c88c8032bd63512253fef0380df24",
+        "bytes": 2169065,
+        "seconds": 6.799503067000046
+      },
+      "C": {
+        "name": "p1-cd77b482d916-C.png",
+        "sha256": "078cf6ca884f4a846d5e1fbad9d21c75b38c053a60061bc68b229b9e8e959a35",
+        "bytes": 2237092,
+        "seconds": 6.489125408999939
+      }
+    },
+    {
+      "source_id": "p1-64b66354b27c",
+      "prompt": "A cinematic film still of a messy desk with a frying pan, a wallet, a sewing machine and a coffee grinder. Natural light. Nostalgic feeling. Rich colors. 50mm lens. Cinematic still, anamorphic, color graded.",
+      "seed": 1689674580,
+      "width": 1184,
+      "height": 896,
+      "dimension": "real_world",
+      "subdimension": "everyday_objects",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-64b66354b27c-teacher.png",
+        "sha256": "7c13ac56489005462ac90cee10079c0a97e21520785abd9e4714be7468cafb97",
+        "bytes": 1428288,
+        "seconds": 6.91287505599999
+      },
+      "B": {
+        "name": "p1-64b66354b27c-B.png",
+        "sha256": "475c5fee23dca2d8903a81a3ab2cccedc1dd85b171bee82100b04a29f3bba607",
+        "bytes": 1419859,
+        "seconds": 6.725273377999997
+      },
+      "C": {
+        "name": "p1-64b66354b27c-C.png",
+        "sha256": "0ab3f7f968705affc1972f6f81b0e938fe297e2ff69f8712f8d746f6dba68721",
+        "bytes": 1346502,
+        "seconds": 6.491315734999944
+      }
+    },
+    {
+      "source_id": "p1-1eb4795a4a26",
+      "prompt": "A vintage biplane, 35mm film photo",
+      "seed": 515144026,
+      "width": 896,
+      "height": 1184,
+      "dimension": "real_world",
+      "subdimension": "vehicles",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-1eb4795a4a26-teacher.png",
+        "sha256": "4e5aae01baff62d433690e30ba623e12c6ea816486934833a4298d3e14be1729",
+        "bytes": 1812094,
+        "seconds": 6.909587590000001
+      },
+      "B": {
+        "name": "p1-1eb4795a4a26-B.png",
+        "sha256": "6a20356fec2b3cf3eaf52866db5069cc7e0d8d3ae26c0de6ad62604fc0b2adca",
+        "bytes": 1760312,
+        "seconds": 6.724316022000039
+      },
+      "C": {
+        "name": "p1-1eb4795a4a26-C.png",
+        "sha256": "3749fca80dac652f9e5107f71d238a190a972465e4d14b240279b42eee5394eb",
+        "bytes": 1714273,
+        "seconds": 6.493615872000078
+      }
+    },
+    {
+      "source_id": "p1-87ab7bffaa94",
+      "prompt": "a spoon in a glass of water appearing bent, high-speed photography, serene mood, isometric view, clean 3D illustration",
+      "seed": 2276162559,
+      "width": 832,
+      "height": 1248,
+      "dimension": "real_world",
+      "subdimension": "physical_interactions",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-87ab7bffaa94-teacher.png",
+        "sha256": "a7bb7f492e2f6acbcb2285187f6316883f1f02e4de7c91260e3d3fdecbe8a108",
+        "bytes": 980072,
+        "seconds": 6.835130428999975
+      },
+      "B": {
+        "name": "p1-87ab7bffaa94-B.png",
+        "sha256": "f433010dcd0c035220144ec496ece36efc3c2a4b94c48ca645d153db3956574b",
+        "bytes": 1028763,
+        "seconds": 6.574758773999974
+      },
+      "C": {
+        "name": "p1-87ab7bffaa94-C.png",
+        "sha256": "665096613c7d5f5fd26d2416b2d6da88c72023d8845e99185283bf6c6b749dec",
+        "bytes": 1016697,
+        "seconds": 6.3524911730000895
+      }
+    },
+    {
+      "source_id": "p1-ac649400b1e1",
+      "prompt": "A candid photograph of an alarm clock, a pair of reading glasses and a frying pan neatly arranged, flat lay, top-down view, mysterious atmosphere, overcast diffuse light.",
+      "seed": 2892272640,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "real_world",
+      "subdimension": "everyday_objects",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-ac649400b1e1-teacher.png",
+        "sha256": "377f4e0d893caf3c2f054d11f7fc24954a19a96f2a6f995a5e1c0ca728977af7",
+        "bytes": 2411177,
+        "seconds": 6.800896157000011
+      },
+      "B": {
+        "name": "p1-ac649400b1e1-B.png",
+        "sha256": "d715aaf6c9eae748444c5fb8d713102ae8bd020550082d2647ce36d373a2f3e1",
+        "bytes": 2319462,
+        "seconds": 6.589246765999974
+      },
+      "C": {
+        "name": "p1-ac649400b1e1-C.png",
+        "sha256": "cfc9c897b3e19bc7a0460a0d408322024f41929de827a4643fd7b026b46b24bb",
+        "bytes": 2144817,
+        "seconds": 6.384276058000069
+      }
+    },
+    {
+      "source_id": "p1-010ab142fc14",
+      "prompt": "A stylized 3D scene featuring sunlight creating window-like shadows on the floor, high-speed capture, uniform lighting direction, realistic color tones.",
+      "seed": 17477954,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "real_world",
+      "subdimension": "physical_interactions",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-010ab142fc14-teacher.png",
+        "sha256": "59ea5f51ccc5694e3d49153479adc77c7cb18375602e876f47778594e4ff234e",
+        "bytes": 1267669,
+        "seconds": 6.796187382999989
+      },
+      "B": {
+        "name": "p1-010ab142fc14-B.png",
+        "sha256": "67e694ed67b1f86a0ffc0fa72feac019e20208478adcf60bd58e9ec443fa259f",
+        "bytes": 1270115,
+        "seconds": 6.5813130500000625
+      },
+      "C": {
+        "name": "p1-010ab142fc14-C.png",
+        "sha256": "49626c5c81122585f1e8b5e4758b3efbfa0c5d364747718de47e9e3d85813467",
+        "bytes": 1275692,
+        "seconds": 6.38033226899995
+      }
+    },
+    {
+      "source_id": "p1-b16a0b2869d5",
+      "prompt": "a hover tank, sense of scale with tiny figures, detailed design, rich colors, stylized 3D, clay-like materials",
+      "seed": 2976516904,
+      "width": 1376,
+      "height": 768,
+      "dimension": "creative",
+      "subdimension": "concept_art",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-b16a0b2869d5-teacher.png",
+        "sha256": "aa2a21f774ab28ca2f4fbad57da57b4c7fab26962ed3b85adb41d66f427c91b8",
+        "bytes": 1595782,
+        "seconds": 6.916650263999998
+      },
+      "B": {
+        "name": "p1-b16a0b2869d5-B.png",
+        "sha256": "54803b98f1ce296492ed882f3740f4d283eef1694221d21435ff0eaf4928d289",
+        "bytes": 1585099,
+        "seconds": 6.690795789000049
+      },
+      "C": {
+        "name": "p1-b16a0b2869d5-C.png",
+        "sha256": "9254dd5ac6ec15f7e64f5d7348d160c45091127496fa702988a4697e9f3d0bb1",
+        "bytes": 1589670,
+        "seconds": 6.487338403999956
+      }
+    },
+    {
+      "source_id": "p1-9090c0f5a9b8",
+      "prompt": "A digital illustration of clocks melting over the branches of a tree in a city square, dreamlike atmosphere, precise perspective, soft morning light, clean composition.",
+      "seed": 2425405685,
+      "width": 1376,
+      "height": 768,
+      "dimension": "creative",
+      "subdimension": "surreal",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-9090c0f5a9b8-teacher.png",
+        "sha256": "88c8e0078f57d7fecf76bf520d4467a5f12932b0971c1672fe17f395a9f60f2d",
+        "bytes": 2021174,
+        "seconds": 6.905147666000005
+      },
+      "B": {
+        "name": "p1-9090c0f5a9b8-B.png",
+        "sha256": "cb9ea621004ee82af016534d06118bf0537f3c6739acc23d9a0a2a6188ab9d77",
+        "bytes": 2040207,
+        "seconds": 6.6840237929999375
+      },
+      "C": {
+        "name": "p1-9090c0f5a9b8-C.png",
+        "sha256": "094bcc6c8db3ea16a95f8a8a4c9543c2b1c060133e34e560a868cbcb77fa7dba",
+        "bytes": 2134822,
+        "seconds": 6.517071764999969
+      }
+    },
+    {
+      "source_id": "p1-513061408026",
+      "prompt": "A digital illustration of clocks melting over the branches of a tree in the ocean. Surrealism. Photorealistic details. Clean composition. Digital illustration, clean lines.",
+      "seed": 1362125120,
+      "width": 1376,
+      "height": 768,
+      "dimension": "creative",
+      "subdimension": "surreal",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-513061408026-teacher.png",
+        "sha256": "3814ced3ab6cdf6423cf4fead775a5c88493a04c8a0597080f833554c494bd09",
+        "bytes": 1533085,
+        "seconds": 6.903949527000009
+      },
+      "B": {
+        "name": "p1-513061408026-B.png",
+        "sha256": "e18ff0e15c95f1d1636a32f8aa290a830911e71aa146e985db6a2887f082e350",
+        "bytes": 1557629,
+        "seconds": 6.684002253000017
+      },
+      "C": {
+        "name": "p1-513061408026-C.png",
+        "sha256": "c1a4c8130e7e3fa4bc256e9b256234f2af591d8df827b9d85f16b54da062b3f1",
+        "bytes": 1667630,
+        "seconds": 6.506751078999969
+      }
+    },
+    {
+      "source_id": "p1-35b465dfc187",
+      "prompt": "A digital illustration depicting a solitary musician playing the violin on a slowly sinking ship, with a hopeful atmosphere illuminated by a gentle backlight.",
+      "seed": 901015007,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "storytelling",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-35b465dfc187-teacher.png",
+        "sha256": "fcf631b730c420512b67eecbfc5b72eee9870d5fb3814a9cb19efa13234a5c28",
+        "bytes": 1558224,
+        "seconds": 6.7746728719999965
+      },
+      "B": {
+        "name": "p1-35b465dfc187-B.png",
+        "sha256": "20bad8420dd6cebb54c6f810ba5de9a26a73a409fadb64f763de4634b5d5d636",
+        "bytes": 1589782,
+        "seconds": 6.58241624499999
+      },
+      "C": {
+        "name": "p1-35b465dfc187-C.png",
+        "sha256": "dc3634f1950a9612b704c22ed395673e48b23fca8082ee0a68253149678de0fd",
+        "bytes": 1633194,
+        "seconds": 6.385771875999922
+      }
+    },
+    {
+      "source_id": "p1-708a4ed371cc",
+      "prompt": "An oil painting depicting a cross-section of a historic home with all interior elements visible.",
+      "seed": 1888112339,
+      "width": 832,
+      "height": 1248,
+      "dimension": "creative",
+      "subdimension": "unusual_compositions",
+      "set": "fresh",
+      "teacher": {
+        "name": "p1-708a4ed371cc-teacher.png",
+        "sha256": "9fcb6b9691eeff5b5400bfd8c9fc2360760ece15a6283e9e9f1f6e451ca9e6e7",
+        "bytes": 1929416,
+        "seconds": 6.757662229999994
+      },
+      "B": {
+        "name": "p1-708a4ed371cc-B.png",
+        "sha256": "a3e8c9ff11135856e3ca04a184efeacb93d1aa1fb7d716d0ef712e06b55eea2e",
+        "bytes": 1891217,
+        "seconds": 6.549024093999947
+      },
+      "C": {
+        "name": "p1-708a4ed371cc-C.png",
+        "sha256": "8d92ae9d3c4d371810880107fc611e75eb4c36eef17ae52ec5770adaa6cf4333",
+        "bytes": 1884613,
+        "seconds": 6.359560597999916
+      }
+    },
+    {
+      "source_id": "p1-e83d7dcacb2d",
+      "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+      "seed": 3896344010,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "posters",
+      "set": "text",
+      "target_strings": [
+        "GOLDEN RIVER",
+        "Live in Berlin"
+      ],
+      "teacher": {
+        "name": "p1-e83d7dcacb2d-teacher.png",
+        "sha256": "03e078f275e7d4780ec7a45d33823e4907d7316ee86f52573932bd549e05b854",
+        "bytes": 2729042,
+        "seconds": 6.9323156789999985
+      },
+      "B": {
+        "name": "p1-e83d7dcacb2d-B.png",
+        "sha256": "11b828ba8bf55b903d823d257cef073addf859c436e1ce2ecc5e11f71dcdda08",
+        "bytes": 2632313,
+        "seconds": 6.70596336899996
+      },
+      "C": {
+        "name": "p1-e83d7dcacb2d-C.png",
+        "sha256": "ec6e67a0015a45a8e53e00582f25628636c577a74630d79d859d93313f3d9dd1",
+        "bytes": 2652740,
+        "seconds": 6.505799138000043
+      }
+    },
+    {
+      "source_id": "p1-0b32a45e0b90",
+      "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+      "seed": 187868254,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Welcome Home"
+      ],
+      "teacher": {
+        "name": "p1-0b32a45e0b90-teacher.png",
+        "sha256": "f30f79f30636fb3526bd89f1ace65b4deff3ae63a5c0eff09069d9ac830fcba1",
+        "bytes": 2113445,
+        "seconds": 6.783430445000022
+      },
+      "B": {
+        "name": "p1-0b32a45e0b90-B.png",
+        "sha256": "036a321fdfb86e198adf9eec4bc84b10f91eca375ed25f52bc0f9485f82de779",
+        "bytes": 2102191,
+        "seconds": 6.587299547999919
+      },
+      "C": {
+        "name": "p1-0b32a45e0b90-C.png",
+        "sha256": "b2ca4f1a1e348da4f1d895c0cc030e08fac57a9f7d9d176988cb7a5992b5974e",
+        "bytes": 1944411,
+        "seconds": 6.389182521999942
+      }
+    },
+    {
+      "source_id": "p1-c9344c076abf",
+      "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+      "seed": 3375647751,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "Happy Birthday Emma"
+      ],
+      "teacher": {
+        "name": "p1-c9344c076abf-teacher.png",
+        "sha256": "12bb3c1246e0eeab41ee4c69473bc5bf4861525312f3a1e0450d97e961ede990",
+        "bytes": 1865625,
+        "seconds": 6.779448155000011
+      },
+      "B": {
+        "name": "p1-c9344c076abf-B.png",
+        "sha256": "dbba634e1478718087c294b6df851d01796b8d10a9ce122e464153710948dede",
+        "bytes": 1887957,
+        "seconds": 6.589075684000022
+      },
+      "C": {
+        "name": "p1-c9344c076abf-C.png",
+        "sha256": "5df7b9981c0ff21381c87fd71d0e018ef0a054eb8266b70662e5d22d214d5a4d",
+        "bytes": 1875494,
+        "seconds": 6.400388421999992
+      }
+    },
+    {
+      "source_id": "p1-f66dd8002f66",
+      "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+      "seed": 4134393856,
+      "width": 1024,
+      "height": 1024,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "\u8425\u4e1a\u4e2d"
+      ],
+      "teacher": {
+        "name": "p1-f66dd8002f66-teacher.png",
+        "sha256": "343561d3932f2cca919acb3134e23de7998ea67569347b4b43621821d79bc83d",
+        "bytes": 1148861,
+        "seconds": 6.768261218000021
+      },
+      "B": {
+        "name": "p1-f66dd8002f66-B.png",
+        "sha256": "321e364b9d540756687512f76261e9e372306744a886e691d41354b7d18c93d8",
+        "bytes": 1308791,
+        "seconds": 6.5809798039999805
+      },
+      "C": {
+        "name": "p1-f66dd8002f66-C.png",
+        "sha256": "dc882aaf857926aaa624dffe405d2b2afd3cf46662e6ff1d6b3e09f1ead50f91",
+        "bytes": 1302894,
+        "seconds": 6.407031804999974
+      }
+    },
+    {
+      "source_id": "p1-2fa54a3c4eb8",
+      "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+      "seed": 799361596,
+      "width": 896,
+      "height": 1184,
+      "dimension": "creative",
+      "subdimension": "text_rendering",
+      "set": "text",
+      "target_strings": [
+        "The Rusty Anchor",
+        "Moonlight Motel"
+      ],
+      "teacher": {
+        "name": "p1-2fa54a3c4eb8-teacher.png",
+        "sha256": "77decb608062ec6536dd7f0f5d7549dbf8fdb6767ef7dd9fd21b6dbfe2300b9a",
+        "bytes": 2077417,
+        "seconds": 6.9015133740000465
+      },
+      "B": {
+        "name": "p1-2fa54a3c4eb8-B.png",
+        "sha256": "b88ea06a26fbea03fd85a1a781cbab85645759a655011c764b6bf3934289757b",
+        "bytes": 2098766,
+        "seconds": 6.691498539000008
+      },
+      "C": {
+        "name": "p1-2fa54a3c4eb8-C.png",
+        "sha256": "f80d0dddc46f5c2f4bde65f0d4081a090c11cbcea42bada074b54061194803f5",
+        "bytes": 1827389,
+        "seconds": 6.511178222000012
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "p1-ecb07d42d1aa-teacher.png",
+      "sha256": "b79dd7d45e472ecc8e22a80b127dd2849ee798b21102846aaf7d631def8415f0",
+      "bytes": 2253004,
+      "seconds": 8.790758175
+    },
+    {
+      "name": "p1-ecb07d42d1aa-B.png",
+      "sha256": "faba4a1bdeb8df70f2d3daa862f3d951a7c694a06fec56ed7637b66f51602830",
+      "bytes": 2186139,
+      "seconds": 6.584287559000018
+    },
+    {
+      "name": "p1-ecb07d42d1aa-C.png",
+      "sha256": "0d40b02aef482ed5da8f0009a14cc5e11eb981ac1c3f73be3f58bdb79d7752ab",
+      "bytes": 2237500,
+      "seconds": 6.385200454000028
+    },
+    {
+      "name": "p1-a2bdeab6aa35-teacher.png",
+      "sha256": "dec0017dd7725e77a8d477f6d6d058c9383b0e1d95ca290d67962b644345af34",
+      "bytes": 2565635,
+      "seconds": 6.971647771999997
+    },
+    {
+      "name": "p1-a2bdeab6aa35-B.png",
+      "sha256": "05c26cd37cd680fa06425c81e0a36c2283a75c9db77e2964aa3735dd6e89a25d",
+      "bytes": 2577412,
+      "seconds": 6.672191828999985
+    },
+    {
+      "name": "p1-a2bdeab6aa35-C.png",
+      "sha256": "ce9baba60310a3e530a976e8077e01bd5e650ad7e97bfee395b00d3407a37f90",
+      "bytes": 2335945,
+      "seconds": 6.472195435999993
+    },
+    {
+      "name": "p1-39f4413adbe6-teacher.png",
+      "sha256": "fc8d5df3dce3f9728a9657ac720ebd4221d4c2e8b9ff3dcab2e28f93ea61848e",
+      "bytes": 926293,
+      "seconds": 6.8476629299999985
+    },
+    {
+      "name": "p1-39f4413adbe6-B.png",
+      "sha256": "c4c54a48cc84a6030f54f3e5fde1733a3c41d22039bae4363b0a9b19b8809eb7",
+      "bytes": 954167,
+      "seconds": 6.556426561000023
+    },
+    {
+      "name": "p1-39f4413adbe6-C.png",
+      "sha256": "8ef24eaa17c5f959dcdfc4ffa530568c00523a52f86cf2976452a8fdd039ac04",
+      "bytes": 944859,
+      "seconds": 6.373791845999904
+    },
+    {
+      "name": "p1-271794e7e3fc-teacher.png",
+      "sha256": "990d096d8cdd92788f59f216616c1e44be3e13ab7b7a79aae9dd253bd7cdd0cf",
+      "bytes": 1064575,
+      "seconds": 6.828350499000003
+    },
+    {
+      "name": "p1-271794e7e3fc-B.png",
+      "sha256": "867ae4c52180f178004bdf348d01655d26dfc95596ef09729a13b71158738eb6",
+      "bytes": 1222507,
+      "seconds": 6.577429703000007
+    },
+    {
+      "name": "p1-271794e7e3fc-C.png",
+      "sha256": "1ef22fa5ab46302460c9f5989cdfe61203d3585e2f28bcd3f767c8148f256510",
+      "bytes": 1187629,
+      "seconds": 6.380327707999982
+    },
+    {
+      "name": "p1-47d1be211277-teacher.png",
+      "sha256": "bca0263dc7a9ba9dd3308b44be24a15e7a0d942f1aca18a5bdeeaac30654f831",
+      "bytes": 1839792,
+      "seconds": 6.755209187999995
+    },
+    {
+      "name": "p1-47d1be211277-B.png",
+      "sha256": "88bd4fc83a27d2c3a5c7a67bf968f640cadd855092621b65bf2b4de52a6c0038",
+      "bytes": 1736788,
+      "seconds": 6.568458841999984
+    },
+    {
+      "name": "p1-47d1be211277-C.png",
+      "sha256": "7e15786a172263b40738656ad9a027b13a67deb54dc928309805ca43a05d5f76",
+      "bytes": 1867173,
+      "seconds": 6.3631790279999905
+    },
+    {
+      "name": "p1-cef0daad2aa6-teacher.png",
+      "sha256": "9ef30804becaa5fa48aa9db6deb0d7a40f21dcbbaf85bb70429c1a5a0a392f38",
+      "bytes": 2811438,
+      "seconds": 6.7838841239999965
+    },
+    {
+      "name": "p1-cef0daad2aa6-B.png",
+      "sha256": "36af3bf349d8583892584fe87a9ef5fbfe7181650e67fbf9e91e052e488b95b7",
+      "bytes": 2784851,
+      "seconds": 6.578756151999983
+    },
+    {
+      "name": "p1-cef0daad2aa6-C.png",
+      "sha256": "1e451599fa031b170293480e7003b482002f21c32ed9b8ce9a474e7fc69fd713",
+      "bytes": 2781749,
+      "seconds": 6.383419118000006
+    },
+    {
+      "name": "p1-682468cd7087-teacher.png",
+      "sha256": "323c75bce6629e426563bd4f1d06601b5de6a4402d827b8a39b6dd1974b0b856",
+      "bytes": 2526114,
+      "seconds": 6.9210477960000105
+    },
+    {
+      "name": "p1-682468cd7087-B.png",
+      "sha256": "8c6e6ca7dfafc5dd8a882de3432f3abae0bb18b786c8d1373d8c3061eae529d8",
+      "bytes": 2537956,
+      "seconds": 6.699725612999998
+    },
+    {
+      "name": "p1-682468cd7087-C.png",
+      "sha256": "679a0be4c5e4993cafd9919f7764ac91e7ebd204a69f15b05f05a14cfbb5cd4d",
+      "bytes": 2563277,
+      "seconds": 6.48897278000004
+    },
+    {
+      "name": "p1-cf35e4976f11-teacher.png",
+      "sha256": "015147081506775785b5f2acf44be0cd9784558a38f313e97bb89031bfa148bb",
+      "bytes": 2200040,
+      "seconds": 6.7730224660000005
+    },
+    {
+      "name": "p1-cf35e4976f11-B.png",
+      "sha256": "4c4d8c7a4466ce91d786bd0776e5941acd3d8f0fd03c0f16031fc107c6d05400",
+      "bytes": 2210678,
+      "seconds": 6.561039171999994
+    },
+    {
+      "name": "p1-cf35e4976f11-C.png",
+      "sha256": "bc205aea88de4939c7bee950ba4c0c1f038d1468b8cc358b4a6797b4c5ed716f",
+      "bytes": 2257797,
+      "seconds": 6.352816533000009
+    },
+    {
+      "name": "p1-9a66654bd414-teacher.png",
+      "sha256": "0de25006ac1fa48be0ad531cec1fee2c4bf71f7d19336474f869e03d5ee90c48",
+      "bytes": 2321804,
+      "seconds": 6.927324538000008
+    },
+    {
+      "name": "p1-9a66654bd414-B.png",
+      "sha256": "c1816d27c0357fe672c55e0e0a03da85ad610493a635fa3da0b051d0191aa9fe",
+      "bytes": 2354652,
+      "seconds": 6.587648473999991
+    },
+    {
+      "name": "p1-9a66654bd414-C.png",
+      "sha256": "833696729974c4f52a608f19e186626e51107556cb1244c9f6d119bb874eab15",
+      "bytes": 2290277,
+      "seconds": 6.389781354999968
+    },
+    {
+      "name": "p1-df82ff32e45b-teacher.png",
+      "sha256": "af16d64550113a5b54a97b5d706947966136dd42120783662f927b803868694c",
+      "bytes": 1007991,
+      "seconds": 6.797708400000005
+    },
+    {
+      "name": "p1-df82ff32e45b-B.png",
+      "sha256": "80ecb6c765ba9d3dd501a329a257fb975f9f271b9eff69720ed1658abf89dd27",
+      "bytes": 999028,
+      "seconds": 6.585922310000001
+    },
+    {
+      "name": "p1-df82ff32e45b-C.png",
+      "sha256": "6319203a194fb0b11fa23a03aeb2f7391a8f806e1f1ac477e59601f997ed697a",
+      "bytes": 928953,
+      "seconds": 6.3862469859999464
+    },
+    {
+      "name": "p1-8bdc83e503ad-teacher.png",
+      "sha256": "3b64b4a55414dcfce1412945b0c46aa0e8b4fac724c08e07b4922957e23cf354",
+      "bytes": 2253526,
+      "seconds": 6.931121630000007
+    },
+    {
+      "name": "p1-8bdc83e503ad-B.png",
+      "sha256": "02ee093cbda030e82ec13f5510a061407fba9755fd073d5a7b5002f322a6b97b",
+      "bytes": 2071744,
+      "seconds": 6.704314850999992
+    },
+    {
+      "name": "p1-8bdc83e503ad-C.png",
+      "sha256": "ffa1d23710c11ebe3db0b708a47b7e4820ee2faf6a151a98b9ed8ce3a61009d4",
+      "bytes": 2120358,
+      "seconds": 6.4984340549999615
+    },
+    {
+      "name": "p1-b2e087f02067-teacher.png",
+      "sha256": "2c64c59d307a9473ade83df03639f49ab8063def6b825cf844fbb9fcc9ca6f86",
+      "bytes": 1915377,
+      "seconds": 6.785034542000005
+    },
+    {
+      "name": "p1-b2e087f02067-B.png",
+      "sha256": "0ff2cde59fe2c55bcd4b6b79980770eadd98f240db9736b611c3520b87dfe232",
+      "bytes": 1872916,
+      "seconds": 6.591843101999984
+    },
+    {
+      "name": "p1-b2e087f02067-C.png",
+      "sha256": "a77f26fc7084383276da198077df013bb35ba997d51028e9ccdc84701aa067de",
+      "bytes": 1869455,
+      "seconds": 6.376590800999907
+    },
+    {
+      "name": "p1-2d014d9d92c6-teacher.png",
+      "sha256": "4fbc99e2c0b4f7af083c979b9a70ee9bcf42762d4e3cd90e012bb62736c0c983",
+      "bytes": 1809033,
+      "seconds": 6.881543154000013
+    },
+    {
+      "name": "p1-2d014d9d92c6-B.png",
+      "sha256": "7ca931c076ef0e097b143992df17882ffa6fcdb2c31593b1c1f2445792afe8a2",
+      "bytes": 1706003,
+      "seconds": 6.675999972999989
+    },
+    {
+      "name": "p1-2d014d9d92c6-C.png",
+      "sha256": "9fb461824c26e8173b0b1a486c28dcb75154e201e72d1bd428c5d73b5094e5a4",
+      "bytes": 1512950,
+      "seconds": 6.474555645999999
+    },
+    {
+      "name": "p1-79d02f27f6ef-teacher.png",
+      "sha256": "d22143cc0c6658a385d5a0461b51d937b81b4064c186a295aad7ad074535575a",
+      "bytes": 1328111,
+      "seconds": 6.760374448000022
+    },
+    {
+      "name": "p1-79d02f27f6ef-B.png",
+      "sha256": "7bf0826f0ccb5e2e1b96f6c0450bc940d171b26cf800a2b3d74956c128f9f1f8",
+      "bytes": 1343149,
+      "seconds": 6.623331169999972
+    },
+    {
+      "name": "p1-79d02f27f6ef-C.png",
+      "sha256": "7dc52e9e7767b8c39626d864a4d4077951df52bd817bbfdc5a1dfa3aadb8f45f",
+      "bytes": 1313281,
+      "seconds": 6.369649976999995
+    },
+    {
+      "name": "p1-cd77b482d916-teacher.png",
+      "sha256": "d4b9e32c718d8f52ffe9938e8828b1c2da3561052236a4c0192acd1126a033ca",
+      "bytes": 2078556,
+      "seconds": 6.884384902000022
+    },
+    {
+      "name": "p1-cd77b482d916-B.png",
+      "sha256": "e6619b587de7db37e0b305f3b00f5289f60c88c8032bd63512253fef0380df24",
+      "bytes": 2169065,
+      "seconds": 6.799503067000046
+    },
+    {
+      "name": "p1-cd77b482d916-C.png",
+      "sha256": "078cf6ca884f4a846d5e1fbad9d21c75b38c053a60061bc68b229b9e8e959a35",
+      "bytes": 2237092,
+      "seconds": 6.489125408999939
+    },
+    {
+      "name": "p1-64b66354b27c-teacher.png",
+      "sha256": "7c13ac56489005462ac90cee10079c0a97e21520785abd9e4714be7468cafb97",
+      "bytes": 1428288,
+      "seconds": 6.91287505599999
+    },
+    {
+      "name": "p1-64b66354b27c-B.png",
+      "sha256": "475c5fee23dca2d8903a81a3ab2cccedc1dd85b171bee82100b04a29f3bba607",
+      "bytes": 1419859,
+      "seconds": 6.725273377999997
+    },
+    {
+      "name": "p1-64b66354b27c-C.png",
+      "sha256": "0ab3f7f968705affc1972f6f81b0e938fe297e2ff69f8712f8d746f6dba68721",
+      "bytes": 1346502,
+      "seconds": 6.491315734999944
+    },
+    {
+      "name": "p1-1eb4795a4a26-teacher.png",
+      "sha256": "4e5aae01baff62d433690e30ba623e12c6ea816486934833a4298d3e14be1729",
+      "bytes": 1812094,
+      "seconds": 6.909587590000001
+    },
+    {
+      "name": "p1-1eb4795a4a26-B.png",
+      "sha256": "6a20356fec2b3cf3eaf52866db5069cc7e0d8d3ae26c0de6ad62604fc0b2adca",
+      "bytes": 1760312,
+      "seconds": 6.724316022000039
+    },
+    {
+      "name": "p1-1eb4795a4a26-C.png",
+      "sha256": "3749fca80dac652f9e5107f71d238a190a972465e4d14b240279b42eee5394eb",
+      "bytes": 1714273,
+      "seconds": 6.493615872000078
+    },
+    {
+      "name": "p1-87ab7bffaa94-teacher.png",
+      "sha256": "a7bb7f492e2f6acbcb2285187f6316883f1f02e4de7c91260e3d3fdecbe8a108",
+      "bytes": 980072,
+      "seconds": 6.835130428999975
+    },
+    {
+      "name": "p1-87ab7bffaa94-B.png",
+      "sha256": "f433010dcd0c035220144ec496ece36efc3c2a4b94c48ca645d153db3956574b",
+      "bytes": 1028763,
+      "seconds": 6.574758773999974
+    },
+    {
+      "name": "p1-87ab7bffaa94-C.png",
+      "sha256": "665096613c7d5f5fd26d2416b2d6da88c72023d8845e99185283bf6c6b749dec",
+      "bytes": 1016697,
+      "seconds": 6.3524911730000895
+    },
+    {
+      "name": "p1-ac649400b1e1-teacher.png",
+      "sha256": "377f4e0d893caf3c2f054d11f7fc24954a19a96f2a6f995a5e1c0ca728977af7",
+      "bytes": 2411177,
+      "seconds": 6.800896157000011
+    },
+    {
+      "name": "p1-ac649400b1e1-B.png",
+      "sha256": "d715aaf6c9eae748444c5fb8d713102ae8bd020550082d2647ce36d373a2f3e1",
+      "bytes": 2319462,
+      "seconds": 6.589246765999974
+    },
+    {
+      "name": "p1-ac649400b1e1-C.png",
+      "sha256": "cfc9c897b3e19bc7a0460a0d408322024f41929de827a4643fd7b026b46b24bb",
+      "bytes": 2144817,
+      "seconds": 6.384276058000069
+    },
+    {
+      "name": "p1-010ab142fc14-teacher.png",
+      "sha256": "59ea5f51ccc5694e3d49153479adc77c7cb18375602e876f47778594e4ff234e",
+      "bytes": 1267669,
+      "seconds": 6.796187382999989
+    },
+    {
+      "name": "p1-010ab142fc14-B.png",
+      "sha256": "67e694ed67b1f86a0ffc0fa72feac019e20208478adcf60bd58e9ec443fa259f",
+      "bytes": 1270115,
+      "seconds": 6.5813130500000625
+    },
+    {
+      "name": "p1-010ab142fc14-C.png",
+      "sha256": "49626c5c81122585f1e8b5e4758b3efbfa0c5d364747718de47e9e3d85813467",
+      "bytes": 1275692,
+      "seconds": 6.38033226899995
+    },
+    {
+      "name": "p1-b16a0b2869d5-teacher.png",
+      "sha256": "aa2a21f774ab28ca2f4fbad57da57b4c7fab26962ed3b85adb41d66f427c91b8",
+      "bytes": 1595782,
+      "seconds": 6.916650263999998
+    },
+    {
+      "name": "p1-b16a0b2869d5-B.png",
+      "sha256": "54803b98f1ce296492ed882f3740f4d283eef1694221d21435ff0eaf4928d289",
+      "bytes": 1585099,
+      "seconds": 6.690795789000049
+    },
+    {
+      "name": "p1-b16a0b2869d5-C.png",
+      "sha256": "9254dd5ac6ec15f7e64f5d7348d160c45091127496fa702988a4697e9f3d0bb1",
+      "bytes": 1589670,
+      "seconds": 6.487338403999956
+    },
+    {
+      "name": "p1-9090c0f5a9b8-teacher.png",
+      "sha256": "88c8e0078f57d7fecf76bf520d4467a5f12932b0971c1672fe17f395a9f60f2d",
+      "bytes": 2021174,
+      "seconds": 6.905147666000005
+    },
+    {
+      "name": "p1-9090c0f5a9b8-B.png",
+      "sha256": "cb9ea621004ee82af016534d06118bf0537f3c6739acc23d9a0a2a6188ab9d77",
+      "bytes": 2040207,
+      "seconds": 6.6840237929999375
+    },
+    {
+      "name": "p1-9090c0f5a9b8-C.png",
+      "sha256": "094bcc6c8db3ea16a95f8a8a4c9543c2b1c060133e34e560a868cbcb77fa7dba",
+      "bytes": 2134822,
+      "seconds": 6.517071764999969
+    },
+    {
+      "name": "p1-513061408026-teacher.png",
+      "sha256": "3814ced3ab6cdf6423cf4fead775a5c88493a04c8a0597080f833554c494bd09",
+      "bytes": 1533085,
+      "seconds": 6.903949527000009
+    },
+    {
+      "name": "p1-513061408026-B.png",
+      "sha256": "e18ff0e15c95f1d1636a32f8aa290a830911e71aa146e985db6a2887f082e350",
+      "bytes": 1557629,
+      "seconds": 6.684002253000017
+    },
+    {
+      "name": "p1-513061408026-C.png",
+      "sha256": "c1a4c8130e7e3fa4bc256e9b256234f2af591d8df827b9d85f16b54da062b3f1",
+      "bytes": 1667630,
+      "seconds": 6.506751078999969
+    },
+    {
+      "name": "p1-35b465dfc187-teacher.png",
+      "sha256": "fcf631b730c420512b67eecbfc5b72eee9870d5fb3814a9cb19efa13234a5c28",
+      "bytes": 1558224,
+      "seconds": 6.7746728719999965
+    },
+    {
+      "name": "p1-35b465dfc187-B.png",
+      "sha256": "20bad8420dd6cebb54c6f810ba5de9a26a73a409fadb64f763de4634b5d5d636",
+      "bytes": 1589782,
+      "seconds": 6.58241624499999
+    },
+    {
+      "name": "p1-35b465dfc187-C.png",
+      "sha256": "dc3634f1950a9612b704c22ed395673e48b23fca8082ee0a68253149678de0fd",
+      "bytes": 1633194,
+      "seconds": 6.385771875999922
+    },
+    {
+      "name": "p1-708a4ed371cc-teacher.png",
+      "sha256": "9fcb6b9691eeff5b5400bfd8c9fc2360760ece15a6283e9e9f1f6e451ca9e6e7",
+      "bytes": 1929416,
+      "seconds": 6.757662229999994
+    },
+    {
+      "name": "p1-708a4ed371cc-B.png",
+      "sha256": "a3e8c9ff11135856e3ca04a184efeacb93d1aa1fb7d716d0ef712e06b55eea2e",
+      "bytes": 1891217,
+      "seconds": 6.549024093999947
+    },
+    {
+      "name": "p1-708a4ed371cc-C.png",
+      "sha256": "8d92ae9d3c4d371810880107fc611e75eb4c36eef17ae52ec5770adaa6cf4333",
+      "bytes": 1884613,
+      "seconds": 6.359560597999916
+    },
+    {
+      "name": "p1-e83d7dcacb2d-teacher.png",
+      "sha256": "03e078f275e7d4780ec7a45d33823e4907d7316ee86f52573932bd549e05b854",
+      "bytes": 2729042,
+      "seconds": 6.9323156789999985
+    },
+    {
+      "name": "p1-e83d7dcacb2d-B.png",
+      "sha256": "11b828ba8bf55b903d823d257cef073addf859c436e1ce2ecc5e11f71dcdda08",
+      "bytes": 2632313,
+      "seconds": 6.70596336899996
+    },
+    {
+      "name": "p1-e83d7dcacb2d-C.png",
+      "sha256": "ec6e67a0015a45a8e53e00582f25628636c577a74630d79d859d93313f3d9dd1",
+      "bytes": 2652740,
+      "seconds": 6.505799138000043
+    },
+    {
+      "name": "p1-0b32a45e0b90-teacher.png",
+      "sha256": "f30f79f30636fb3526bd89f1ace65b4deff3ae63a5c0eff09069d9ac830fcba1",
+      "bytes": 2113445,
+      "seconds": 6.783430445000022
+    },
+    {
+      "name": "p1-0b32a45e0b90-B.png",
+      "sha256": "036a321fdfb86e198adf9eec4bc84b10f91eca375ed25f52bc0f9485f82de779",
+      "bytes": 2102191,
+      "seconds": 6.587299547999919
+    },
+    {
+      "name": "p1-0b32a45e0b90-C.png",
+      "sha256": "b2ca4f1a1e348da4f1d895c0cc030e08fac57a9f7d9d176988cb7a5992b5974e",
+      "bytes": 1944411,
+      "seconds": 6.389182521999942
+    },
+    {
+      "name": "p1-c9344c076abf-teacher.png",
+      "sha256": "12bb3c1246e0eeab41ee4c69473bc5bf4861525312f3a1e0450d97e961ede990",
+      "bytes": 1865625,
+      "seconds": 6.779448155000011
+    },
+    {
+      "name": "p1-c9344c076abf-B.png",
+      "sha256": "dbba634e1478718087c294b6df851d01796b8d10a9ce122e464153710948dede",
+      "bytes": 1887957,
+      "seconds": 6.589075684000022
+    },
+    {
+      "name": "p1-c9344c076abf-C.png",
+      "sha256": "5df7b9981c0ff21381c87fd71d0e018ef0a054eb8266b70662e5d22d214d5a4d",
+      "bytes": 1875494,
+      "seconds": 6.400388421999992
+    },
+    {
+      "name": "p1-f66dd8002f66-teacher.png",
+      "sha256": "343561d3932f2cca919acb3134e23de7998ea67569347b4b43621821d79bc83d",
+      "bytes": 1148861,
+      "seconds": 6.768261218000021
+    },
+    {
+      "name": "p1-f66dd8002f66-B.png",
+      "sha256": "321e364b9d540756687512f76261e9e372306744a886e691d41354b7d18c93d8",
+      "bytes": 1308791,
+      "seconds": 6.5809798039999805
+    },
+    {
+      "name": "p1-f66dd8002f66-C.png",
+      "sha256": "dc882aaf857926aaa624dffe405d2b2afd3cf46662e6ff1d6b3e09f1ead50f91",
+      "bytes": 1302894,
+      "seconds": 6.407031804999974
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-teacher.png",
+      "sha256": "77decb608062ec6536dd7f0f5d7549dbf8fdb6767ef7dd9fd21b6dbfe2300b9a",
+      "bytes": 2077417,
+      "seconds": 6.9015133740000465
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-B.png",
+      "sha256": "b88ea06a26fbea03fd85a1a781cbab85645759a655011c764b6bf3934289757b",
+      "bytes": 2098766,
+      "seconds": 6.691498539000008
+    },
+    {
+      "name": "p1-2fa54a3c4eb8-C.png",
+      "sha256": "f80d0dddc46f5c2f4bde65f0d4081a090c11cbcea42bada074b54061194803f5",
+      "bytes": 1827389,
+      "seconds": 6.511178222000012
+    }
+  ],
+  "calls": {
+    "teacher": 30,
+    "B": 30,
+    "C": 30
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "surviving_blocks": 30
+}
