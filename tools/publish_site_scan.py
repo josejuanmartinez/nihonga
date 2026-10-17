@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCAN_A = 'data/phase7/conditional_importance/7454da6a5c1dc33af23dd46833e698f9b759d14985ca96340bc3d40cd47fb4f5/summary.json'
 LATENCY_A = 'data/phase7/latency_benchmark/29f50a4db5f63a6c73135438800ab2d5413e32878bc3fa61284aebbb5c165f4c/summary.json'
 SCAN_B_DIR = 'data/phase7/conditional_importance_b'
+QUALITY_A = 'data/phase7/blind_quality_v1/review_summary.json'
 GATE = 6.52
 
 
@@ -55,7 +56,7 @@ def table(caption, headers, rows):
             f'<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>')
 
 
-def build(a, lat, b):
+def build(a, lat, b, q):
     rows_a = scan_rows(a)
     base_a = a['baseline']['teacher_relative_l2']['mean']
     panels_a = panel_baseline(a)
@@ -93,12 +94,28 @@ def build(a, lat, b):
     parts.append(f'<div class="verdict"><p><b>Inside A, no single bypass stays within the gate.</b> The gentlest, block {best_a["block"]}, moves A from {pct(base_a)} to {pct(best_a["mean"])}. The middle blocks (6-17) cost least; blocks 0 and 31 cannot be skipped. A low bypass score only nominates a block for a learned bridge; it is not a removal.</p></div>')
     parts.append('<h3 id="phase7-latency">Measured speed of candidate A</h3>')
     parts.append(f'<p class="summary">{len(speed["ratios"])} balanced, randomized teacher/A pairs on one H100, 1024×1024, 40 steps, BF16, same prompts and seeds, warm models. Median end-to-end time: <b>{ta["median_seconds"]:.2f} s</b> for the teacher and <b>{tb["median_seconds"]:.2f} s</b> for A. Paired speedup <b>{speed["median"]:.3f}×</b> (bootstrap 95% CI {speed["bootstrap_95pct"][0]:.3f}-{speed["bootstrap_95pct"][1]:.3f}). Peak allocated memory: {ta["peak_allocated_gib"]:.2f} GiB vs {tb["peak_allocated_gib"]:.2f} GiB.</p>')
-    parts.append('<p class="note">Removing 2 of 32 blocks buys about 6% speed. A larger blinded 159-prompt teacher/A image comparison has been generated; its scoring is not yet unblinded. The 10 and 50 validation prompts are development data, not an untouched final test.</p>')
+    adh, txt = q['counts']['adherence'], q['counts']['text']
+    pairs = q['pairs']
+    wins = sum(r['clear_pass_delta'] > 0 for r in pairs if r['group'] != 'text_rendering')
+    losses = sum(r['clear_pass_delta'] < 0 for r in pairs if r['group'] != 'text_rendering')
+    text_losses = sum(r['clear_pass_delta'] < 0 for r in pairs if r['group'] == 'text_rendering')
+    text_wins = sum(r['clear_pass_delta'] > 0 for r in pairs if r['group'] == 'text_rendering')
+    ci = q['paired_bootstrap_95pct']
+    parts.append('<h3 id="phase7-blind">Blinded image test: candidate A loses to the teacher</h3>')
+    parts.append(f'<p class="summary">Before viewing images we registered <b>159 fresh validation prompts</b> (35 counting, 34 spatial, 30 color, 30 multiple-object, 30 text), one seed each, rendered by the teacher and A at 40 steps. Each image was scored pass, fail or uncertain against one fixed question, with left/right positions randomized and the identity key committed by hash and revealed only after all 318 scores were committed.</p>')
+    parts.append(table('Blinded 159-prompt panel: clear passes for the teacher and candidate A',
+                       ['Panel', 'Teacher pass', 'A pass', 'A better', 'A worse', 'Gate'],
+                       [['Adherence (129)', adh['teacher'].get('pass', 0), adh['candidate_A'].get('pass', 0), wins, losses,
+                         f"gain {100*q['adherence_gain_fraction']:+.1f} points, 95% CI {100*ci[0]:+.1f} to {100*ci[1]:+.1f}; needs lower bound ≥ -5: <b>{'pass' if q['adherence_noninferiority_passed'] else 'fail'}</b>"],
+                        ['Text (30)', txt['teacher'].get('pass', 0), txt['candidate_A'].get('pass', 0), text_wins, text_losses,
+                         f"A must be within 1 of the teacher: <b>{'pass' if q['text_gate_passed'] else 'fail'}</b>"]]))
+    parts.append(f'<div class="verdict"><p><b>Candidate A is rejected as a base for further pruning.</b> It fails both image gates as well as the velocity gate; only the speed gate passes. The earlier impression that A matched the teacher came from a small unblinded screen. Further pruning starts from the accepted one-block student.</p></div>')
+    parts.append('<p class="note">One model-blind AI reviewer and one seed per prompt. The 10 and 50 validation prompts used for velocity are development data, not an untouched final test.</p>')
     scan = '\n    '.join(parts)
 
     if b is None:
         status_text = ('<p class="summary"><b>Research direction:</b> the accepted model is still the one-block student (block 5 replaced by its pretrained bridge). '
-                       'The importance scan inside candidate A has finished, but A failed the velocity gate, so the scan is being repeated inside the accepted student before choosing a learned replacement. '
+                       'Candidate A (blocks 4-5) failed the velocity gate and the blinded image test, so the importance scan is being repeated inside the accepted student before choosing a learned replacement. '
                        f'A\'s measured speedup is {speed["median"]:.3f}×.</p>')
     else:
         status_text = ('<p class="summary"><b>Research direction:</b> the accepted model is still the one-block student. '
@@ -106,7 +123,7 @@ def build(a, lat, b):
                        'The next step is a learned bridge for a shortlisted block, with predeclared velocity, image and latency gates. '
                        f'A\'s measured speedup is {speed["median"]:.3f}×.</p>')
     status = (status_text + '\n    <p class="note">Velocity errors are measured on saved teacher inputs at three denoising moments, not on finished images. '
-              'The 30-prompt image screen was unblinded with one seed per prompt; the larger blinded comparison is pending scoring.</p>')
+              'Image results come from one model-blind AI reviewer with one seed per prompt.</p>')
     record = dict(candidate_A=dict(request_key=a['request_key'], baseline_mean_relative_l2=base_a, baseline_by_panel=panels_a,
                                    blocks=rows_a),
                   candidate_B=None if b is None else dict(request_key=b['request_key'], baseline_mean_relative_l2=b['baseline']['teacher_relative_l2']['mean'],
@@ -114,6 +131,7 @@ def build(a, lat, b):
                   candidate_B_status='running' if b is None else 'passed',
                   comparisons_per_block=a['blocks'][0]['overall']['comparisons'], gate_percent=GATE)
     latency = dict(request_key=lat['request_key'], summary=lat['summary'], paired_speedup={k: v for k, v in speed.items() if k != 'ratios'})
+    record['blind_quality_candidate_A'] = {k: v for k, v in q.items() if k != 'pairs'}
     return scan, status, record, latency
 
 
@@ -140,8 +158,8 @@ def main():
     parser.add_argument('--site', default=str(ROOT.parent / 'niwaki-page'))
     args = parser.parse_args()
     site = Path(args.site)
-    a, lat, b = load(SCAN_A), load(LATENCY_A), scan_b()
-    scan, status, record, latency = build(a, lat, b)
+    a, lat, b, q = load(SCAN_A), load(LATENCY_A), scan_b(), load(QUALITY_A)
+    scan, status, record, latency = build(a, lat, b, q)
     today = datetime.date.today()
     stamp = f'<time datetime="{today.isoformat()}">{today.day} {today:%B %Y}</time>'
     edits = {
@@ -153,6 +171,14 @@ def main():
             'One block removed is still the accepted model. The next cut is ranked inside it',
         'It now plans to recalculate importance in the changed student before choosing another removal.':
             'Importance is now recalculated inside the smaller student before choosing another removal.',
+        'a learned replacement follows, with reranking after each accepted removal. Scoring of the blinded 159-prompt comparison, a speed-distillation LoRA':
+            'a learned replacement follows, with reranking after each accepted removal. A speed-distillation LoRA',
+        'Candidate A is not accepted; the one-block student remains the selected model.</dd>':
+            'Candidate A is not accepted: in a blinded 159-prompt test it fell behind the teacher on adherence and text. The one-block student remains the selected model.</dd>',
+        'it looks like the teacher and renders all five text prompts correctly.</p>':
+            'it looked like the teacher and rendered all five text prompts correctly. The larger <a href="#phase7-blind">blinded 159-prompt test</a> then showed A falling behind the teacher, so A is rejected as a base.</p>',
+        'A promising two-block cut. Reassess the remaining network':
+            'A two-block cut that fails blinded review. Reassess from one block',
     }
     import re
     for path in (site / 'nihonga/index.html', site / 'tools/build_nihonga.py'):
