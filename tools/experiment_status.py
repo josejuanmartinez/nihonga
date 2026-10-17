@@ -14,8 +14,10 @@ def main():
     import modal
     root=Path(__file__).resolve().parents[1]
     volume=modal.Volume.from_name('nihonga-phase3-artifacts')
-    for experiment in ('conditional_importance','latency_benchmark','blind_quality'):
-        for call_path in (root/'data/phase7'/experiment).glob('*/call.json'):
+    # Local folder -> remote experiment folder; candidate B's scan shares the remote scan folder.
+    for local,experiment in (('conditional_importance','conditional_importance'),('conditional_importance_b','conditional_importance'),
+                             ('latency_benchmark','latency_benchmark'),('blind_quality','blind_quality')):
+        for call_path in (root/'data/phase7'/local).glob('*/call.json'):
             call=json.loads(call_path.read_bytes())
             for filename in ('summary.json','progress.json','started.json'):
                 try:
@@ -29,12 +31,12 @@ def main():
                 status=report.get('status')
                 if filename!='summary.json' and not report.get('error'):
                     status='in_progress'
-                print(json.dumps(dict(experiment=experiment,file=filename,status=status,
+                print(json.dumps(dict(experiment=local,file=filename,status=status,
                     teacher_controls=len(report.get('controls',[])),blocks=len(report.get('blocks',[])),
                     timed_images=len(report.get('rows',[])),calls=report.get('calls'),error=report.get('error'))))
                 break
             else:
-                print(experiment+': waiting for container start')
+                print(local+': waiting for container start')
 
 
 if __name__=='__main__':main()

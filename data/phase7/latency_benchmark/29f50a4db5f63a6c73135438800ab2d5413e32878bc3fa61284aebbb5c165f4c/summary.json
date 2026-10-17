@@ -1,0 +1,1418 @@
+{
+  "request_key": "29f50a4db5f63a6c73135438800ab2d5413e32878bc3fa61284aebbb5c165f4c",
+  "status": "passed",
+  "rows": [
+    {
+      "pair": 0,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-ecb07d42d1aa",
+      "seed": 3970989378,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.876883072999988,
+      "denoiser_seconds": 21.663892578125,
+      "restore_seconds_excluded": 2.1341255680000017,
+      "peak_allocated_gib": 36.847272872924805,
+      "peak_reserved_gib": 38.748046875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_00_teacher.png",
+        "sha256": "7dc035912382ce85c855045f98cdb015a1c60ca27100098e999825953da2b93e",
+        "bytes": 2254619
+      }
+    },
+    {
+      "pair": 0,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-ecb07d42d1aa",
+      "seed": 3970989378,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.546878426999996,
+      "denoiser_seconds": 20.337698303222655,
+      "restore_seconds_excluded": 4.807001326999995,
+      "peak_allocated_gib": 36.05391311645508,
+      "peak_reserved_gib": 37.953125,
+      "resident_allocated_gib": 29.472733974456787,
+      "image": {
+        "name": "pair_00_candidate_A.png",
+        "sha256": "f1608feabb575d66b9170770cffa16de0a28d623d1101b5eae37d55d193a3490",
+        "bytes": 2137225
+      }
+    },
+    {
+      "pair": 1,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-a2bdeab6aa35",
+      "seed": 2730355382,
+      "width": 768,
+      "height": 1376,
+      "seconds": 20.82527234600002,
+      "denoiser_seconds": 20.618815490722657,
+      "restore_seconds_excluded": 4.890539558,
+      "peak_allocated_gib": 36.09867525100708,
+      "peak_reserved_gib": 38.044921875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_01_candidate_A.png",
+        "sha256": "4a4f6d0ede64d7cfe12710f402ead7fa952d3aa9146fce42e91531fb479f5330",
+        "bytes": 2504255
+      }
+    },
+    {
+      "pair": 1,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-a2bdeab6aa35",
+      "seed": 2730355382,
+      "width": 768,
+      "height": 1376,
+      "seconds": 22.17616991,
+      "denoiser_seconds": 21.96875439453125,
+      "restore_seconds_excluded": 2.299464945000011,
+      "peak_allocated_gib": 36.89215660095215,
+      "peak_reserved_gib": 37.931640625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_01_teacher.png",
+        "sha256": "36fc028549e427954382def0e6101444b5d09a6e20b463f080c09fbdb85e9bf8",
+        "bytes": 2565036
+      }
+    },
+    {
+      "pair": 2,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-39f4413adbe6",
+      "seed": 972308794,
+      "width": 1248,
+      "height": 832,
+      "seconds": 21.647738809000032,
+      "denoiser_seconds": 21.431219970703125,
+      "restore_seconds_excluded": 2.333237509000014,
+      "peak_allocated_gib": 36.78474140167236,
+      "peak_reserved_gib": 37.765625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_02_teacher.png",
+        "sha256": "3af29439de1783d56accef034d09706104fe26eb6dbceca44d6407becbfc4aac",
+        "bytes": 933558
+      }
+    },
+    {
+      "pair": 2,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-39f4413adbe6",
+      "seed": 972308794,
+      "width": 1248,
+      "height": 832,
+      "seconds": 20.314536996000015,
+      "denoiser_seconds": 20.106739074707033,
+      "restore_seconds_excluded": 4.650553051999964,
+      "peak_allocated_gib": 35.990397453308105,
+      "peak_reserved_gib": 36.998046875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_02_candidate_A.png",
+        "sha256": "ff285d1e607fb283c9c5a7dae96e914cef043f6c1bc3a0cc506ed7a2ab2b9c46",
+        "bytes": 944269
+      }
+    },
+    {
+      "pair": 3,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-271794e7e3fc",
+      "seed": 655856871,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.498717224000018,
+      "denoiser_seconds": 20.29333676147461,
+      "restore_seconds_excluded": 4.677205159000039,
+      "peak_allocated_gib": 36.04557418823242,
+      "peak_reserved_gib": 37.28125,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_03_candidate_A.png",
+        "sha256": "a245e3c83cf470f851476e93e6873819f538916fa06db35051786d459c0707fb",
+        "bytes": 1135877
+      }
+    },
+    {
+      "pair": 3,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-271794e7e3fc",
+      "seed": 655856871,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.90729734499996,
+      "denoiser_seconds": 21.655342407226563,
+      "restore_seconds_excluded": 2.347722174000012,
+      "peak_allocated_gib": 36.840314865112305,
+      "peak_reserved_gib": 38.3203125,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_03_teacher.png",
+        "sha256": "590e478b70a24bf0af842a424b02d0b62a4b04c08296c9ca0f7cdc2a73e1ee17",
+        "bytes": 1122667
+      }
+    },
+    {
+      "pair": 4,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-47d1be211277",
+      "seed": 1204928033,
+      "width": 832,
+      "height": 1248,
+      "seconds": 20.088116973999945,
+      "denoiser_seconds": 19.857671447753905,
+      "restore_seconds_excluded": 4.377989465999974,
+      "peak_allocated_gib": 35.980628490448,
+      "peak_reserved_gib": 37.787109375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_04_candidate_A.png",
+        "sha256": "f5ef8490e602512fd7c9d5a948503e1ac1aafd640240c28290082595f1633bc1",
+        "bytes": 1751212
+      }
+    },
+    {
+      "pair": 4,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-47d1be211277",
+      "seed": 1204928033,
+      "width": 832,
+      "height": 1248,
+      "seconds": 21.35571078800001,
+      "denoiser_seconds": 21.1446533203125,
+      "restore_seconds_excluded": 2.238910368000006,
+      "peak_allocated_gib": 36.773831367492676,
+      "peak_reserved_gib": 37.96484375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_04_teacher.png",
+        "sha256": "a06d216518b69fa8f2d879c8d2264d384b454e87b2d55ea31157954e17ef3c31",
+        "bytes": 1840390
+      }
+    },
+    {
+      "pair": 5,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-cef0daad2aa6",
+      "seed": 3471891117,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.86685593499999,
+      "denoiser_seconds": 21.656052490234377,
+      "restore_seconds_excluded": 2.0950332039999466,
+      "peak_allocated_gib": 36.84967517852783,
+      "peak_reserved_gib": 38.400390625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_05_teacher.png",
+        "sha256": "2cf864b0f51cb9c71e06f3a9732916b0b14bfef80b83bd82dd23e09a59877e05",
+        "bytes": 2809449
+      }
+    },
+    {
+      "pair": 5,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-cef0daad2aa6",
+      "seed": 3471891117,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.584409444000016,
+      "denoiser_seconds": 20.347266296386717,
+      "restore_seconds_excluded": 4.553124619000073,
+      "peak_allocated_gib": 36.05488204956055,
+      "peak_reserved_gib": 37.087890625,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_05_candidate_A.png",
+        "sha256": "11965162902f23c85d9d7b10a27dd022e399f1606600cc7063487a1e65ece05e",
+        "bytes": 2781735
+      }
+    },
+    {
+      "pair": 6,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-682468cd7087",
+      "seed": 1747216589,
+      "width": 896,
+      "height": 1184,
+      "seconds": 21.167771063000032,
+      "denoiser_seconds": 20.8409365234375,
+      "restore_seconds_excluded": 4.4271449060000805,
+      "peak_allocated_gib": 36.13097620010376,
+      "peak_reserved_gib": 37.802734375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_06_candidate_A.png",
+        "sha256": "3eb93fa99f96cb7f907dd1c677c3c81fdb3ed51b42d4498d354e79a21d00494a",
+        "bytes": 2483592
+      }
+    },
+    {
+      "pair": 6,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-682468cd7087",
+      "seed": 1747216589,
+      "width": 896,
+      "height": 1184,
+      "seconds": 22.309028670999965,
+      "denoiser_seconds": 22.102275024414062,
+      "restore_seconds_excluded": 2.2460434540000733,
+      "peak_allocated_gib": 36.92515563964844,
+      "peak_reserved_gib": 38.513671875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_06_teacher.png",
+        "sha256": "edef9e75d3e14dd9ba1b48b525f2b2560a4373e02c9ffdc794b71f631afc6123",
+        "bytes": 2517234
+      }
+    },
+    {
+      "pair": 7,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-cf35e4976f11",
+      "seed": 3476415639,
+      "width": 832,
+      "height": 1248,
+      "seconds": 21.645373889999973,
+      "denoiser_seconds": 21.427656311035157,
+      "restore_seconds_excluded": 2.1322481219999645,
+      "peak_allocated_gib": 36.78325366973877,
+      "peak_reserved_gib": 38.24609375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_07_teacher.png",
+        "sha256": "5e9f68de407b7432aaed6a682a6c00acbfc53c7efc2c2959ce6be9524910a5ab",
+        "bytes": 2200014
+      }
+    },
+    {
+      "pair": 7,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-cf35e4976f11",
+      "seed": 3476415639,
+      "width": 832,
+      "height": 1248,
+      "seconds": 20.368063731999996,
+      "denoiser_seconds": 20.099088317871093,
+      "restore_seconds_excluded": 4.401030864000063,
+      "peak_allocated_gib": 35.98900127410889,
+      "peak_reserved_gib": 36.974609375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_07_candidate_A.png",
+        "sha256": "8bb287498d2b39165cd11045738983c30e806daef910b41c780a547edcd6f5cc",
+        "bytes": 2211961
+      }
+    },
+    {
+      "pair": 8,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-9a66654bd414",
+      "seed": 2590401867,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.922799458999975,
+      "denoiser_seconds": 21.712672912597657,
+      "restore_seconds_excluded": 2.598119386999997,
+      "peak_allocated_gib": 36.86163902282715,
+      "peak_reserved_gib": 38.5078125,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_08_teacher.png",
+        "sha256": "5f2f946a5c73b93a029fa009a21549a5f02ec8b0821eaefa893d9009d9b5c0c8",
+        "bytes": 2323943
+      }
+    },
+    {
+      "pair": 8,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-9a66654bd414",
+      "seed": 2590401867,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.656277120000027,
+      "denoiser_seconds": 20.44626956176758,
+      "restore_seconds_excluded": 4.650540619000026,
+      "peak_allocated_gib": 36.06558609008789,
+      "peak_reserved_gib": 38.02734375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_08_candidate_A.png",
+        "sha256": "ca7b0a0e81a1b26e37b638bc875bfbd317a386625a13327b14da430e07ec561a",
+        "bytes": 2327765
+      }
+    },
+    {
+      "pair": 9,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-df82ff32e45b",
+      "seed": 3749904178,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.902590210000085,
+      "denoiser_seconds": 21.695737060546875,
+      "restore_seconds_excluded": 2.288857084999904,
+      "peak_allocated_gib": 36.85371971130371,
+      "peak_reserved_gib": 38.138671875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_09_teacher.png",
+        "sha256": "9cf2e4d216faebf32d82df45781caef90cae8d20518358d2fba5dbb751a69fe5",
+        "bytes": 1008106
+      }
+    },
+    {
+      "pair": 9,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-df82ff32e45b",
+      "seed": 3749904178,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.60401461299989,
+      "denoiser_seconds": 20.381842529296875,
+      "restore_seconds_excluded": 4.491168062999918,
+      "peak_allocated_gib": 36.0590705871582,
+      "peak_reserved_gib": 38.03515625,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_09_candidate_A.png",
+        "sha256": "c2f1b2562106b7c6e7f60b64d5883894f7148a1110b90c06100d67338d713227",
+        "bytes": 945043
+      }
+    },
+    {
+      "pair": 10,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-8bdc83e503ad",
+      "seed": 2346484709,
+      "width": 896,
+      "height": 1184,
+      "seconds": 22.306492559999924,
+      "denoiser_seconds": 22.073276611328126,
+      "restore_seconds_excluded": 2.2536392099998466,
+      "peak_allocated_gib": 36.92218017578125,
+      "peak_reserved_gib": 38.216796875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_10_teacher.png",
+        "sha256": "b399fa909742e59b49bf0dbebc230d8bd7e6ab38ad3d70b445048c317d0c9d04",
+        "bytes": 2249334
+      }
+    },
+    {
+      "pair": 10,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-8bdc83e503ad",
+      "seed": 2346484709,
+      "width": 896,
+      "height": 1184,
+      "seconds": 20.924086963000036,
+      "denoiser_seconds": 20.714210693359377,
+      "restore_seconds_excluded": 4.605874067000059,
+      "peak_allocated_gib": 36.12818384170532,
+      "peak_reserved_gib": 37.802734375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_10_candidate_A.png",
+        "sha256": "7686938b0460aa1085f38ebf867594f99b678c2ed780da0f21f3041f99a3c00f",
+        "bytes": 2151586
+      }
+    },
+    {
+      "pair": 11,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-b2e087f02067",
+      "seed": 3001059312,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.787574996000103,
+      "denoiser_seconds": 21.58654754638672,
+      "restore_seconds_excluded": 2.222024322999914,
+      "peak_allocated_gib": 36.84130668640137,
+      "peak_reserved_gib": 37.84375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_11_teacher.png",
+        "sha256": "5254cc7c2fb6d2e9b9ce92a1236d5a7d8ed0274ed4210f6d658060c494f47ef0",
+        "bytes": 1909685
+      }
+    },
+    {
+      "pair": 11,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-b2e087f02067",
+      "seed": 3001059312,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.537357004999876,
+      "denoiser_seconds": 20.274163970947267,
+      "restore_seconds_excluded": 4.442178667000007,
+      "peak_allocated_gib": 36.046504974365234,
+      "peak_reserved_gib": 37.95703125,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_11_candidate_A.png",
+        "sha256": "9d593136891cf347e5ef4bfbca53afe50e3d46157f83f8d291c922e3f9617c0d",
+        "bytes": 1845638
+      }
+    },
+    {
+      "pair": 12,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-2d014d9d92c6",
+      "seed": 755060125,
+      "width": 1376,
+      "height": 768,
+      "seconds": 22.149517341999854,
+      "denoiser_seconds": 21.941079040527345,
+      "restore_seconds_excluded": 2.2550778260001607,
+      "peak_allocated_gib": 36.89265251159668,
+      "peak_reserved_gib": 37.951171875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_12_teacher.png",
+        "sha256": "4dd1b3bc00a9e4ce6d38b02678fd39a5e96082cbd961d350522a53f879f36195",
+        "bytes": 1801323
+      }
+    },
+    {
+      "pair": 12,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-2d014d9d92c6",
+      "seed": 755060125,
+      "width": 1376,
+      "height": 768,
+      "seconds": 20.818066130000034,
+      "denoiser_seconds": 20.600772705078125,
+      "restore_seconds_excluded": 4.875962659999914,
+      "peak_allocated_gib": 36.099140644073486,
+      "peak_reserved_gib": 38.126953125,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_12_candidate_A.png",
+        "sha256": "811d1780720bb8906d04565f799cc3641f7bd45951847fa3e107e26cde91c9a1",
+        "bytes": 1603385
+      }
+    },
+    {
+      "pair": 13,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-79d02f27f6ef",
+      "seed": 2043686695,
+      "width": 832,
+      "height": 1248,
+      "seconds": 20.269375296999897,
+      "denoiser_seconds": 20.062012115478517,
+      "restore_seconds_excluded": 4.85720872800016,
+      "peak_allocated_gib": 35.992263317108154,
+      "peak_reserved_gib": 37.880859375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_13_candidate_A.png",
+        "sha256": "ce30e2bd51a15872e8079afaaf3e2fa71acba07bddab5f0168e305e765d14eda",
+        "bytes": 1352497
+      }
+    },
+    {
+      "pair": 13,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-79d02f27f6ef",
+      "seed": 2043686695,
+      "width": 832,
+      "height": 1248,
+      "seconds": 21.671058323999887,
+      "denoiser_seconds": 21.393426025390625,
+      "restore_seconds_excluded": 2.2462868099999014,
+      "peak_allocated_gib": 36.78622913360596,
+      "peak_reserved_gib": 38.0234375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_13_teacher.png",
+        "sha256": "93ab32b11cc99acfe79255b4892af661409f894249e54a0aa3ae6e53c3e90131",
+        "bytes": 1327848
+      }
+    },
+    {
+      "pair": 14,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-cd77b482d916",
+      "seed": 3447174274,
+      "width": 768,
+      "height": 1376,
+      "seconds": 20.845009066000102,
+      "denoiser_seconds": 20.606483154296875,
+      "restore_seconds_excluded": 5.2025145810000595,
+      "peak_allocated_gib": 36.10472536087036,
+      "peak_reserved_gib": 37.751953125,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_14_candidate_A.png",
+        "sha256": "9db8102df5d15dc69b09746978b8db565c82d05806f21a62964077ff40da1a1c",
+        "bytes": 2186932
+      }
+    },
+    {
+      "pair": 14,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-cd77b482d916",
+      "seed": 3447174274,
+      "width": 768,
+      "height": 1376,
+      "seconds": 22.17051960499998,
+      "denoiser_seconds": 21.95763494873047,
+      "restore_seconds_excluded": 2.255073361000086,
+      "peak_allocated_gib": 36.898603439331055,
+      "peak_reserved_gib": 38.458984375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_14_teacher.png",
+        "sha256": "3eee8e571c87692cccd929ef0960a74623d186cc2448ead83a533939e91eac61",
+        "bytes": 2079533
+      }
+    },
+    {
+      "pair": 15,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-64b66354b27c",
+      "seed": 1689674580,
+      "width": 1184,
+      "height": 896,
+      "seconds": 21.04372843400006,
+      "denoiser_seconds": 20.79483026123047,
+      "restore_seconds_excluded": 4.334241261999978,
+      "peak_allocated_gib": 36.13924980163574,
+      "peak_reserved_gib": 37.30859375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_15_candidate_A.png",
+        "sha256": "ec940302a5e4c8d1faa2c88e0f91d7ca5a2285e080861d0f202f0451de5d69e5",
+        "bytes": 1512072
+      }
+    },
+    {
+      "pair": 15,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-64b66354b27c",
+      "seed": 1689674580,
+      "width": 1184,
+      "height": 896,
+      "seconds": 22.359879312999965,
+      "denoiser_seconds": 22.14991552734375,
+      "restore_seconds_excluded": 2.2720968079997874,
+      "peak_allocated_gib": 36.93408203125,
+      "peak_reserved_gib": 38.54296875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_15_teacher.png",
+        "sha256": "add609a576b9092b8f7b5651060b69fce2f52da86186990ee9332c9ab6048679",
+        "bytes": 1431617
+      }
+    },
+    {
+      "pair": 16,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-1eb4795a4a26",
+      "seed": 515144026,
+      "width": 896,
+      "height": 1184,
+      "seconds": 20.860760819999996,
+      "denoiser_seconds": 20.6541767578125,
+      "restore_seconds_excluded": 4.567653151999821,
+      "peak_allocated_gib": 36.11970329284668,
+      "peak_reserved_gib": 37.2421875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_16_candidate_A.png",
+        "sha256": "25353149c6bc6ff0fff73888c1705832c80cdcb2efb0380385f8cc1ea64923e2",
+        "bytes": 1852125
+      }
+    },
+    {
+      "pair": 16,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-1eb4795a4a26",
+      "seed": 515144026,
+      "width": 896,
+      "height": 1184,
+      "seconds": 22.260794753000027,
+      "denoiser_seconds": 22.024092529296876,
+      "restore_seconds_excluded": 2.391516274999958,
+      "peak_allocated_gib": 36.91325378417969,
+      "peak_reserved_gib": 38.466796875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_16_teacher.png",
+        "sha256": "fa943a7111e70c7ce47aadca36be8e68eae9920e5ec543d2f38f8565ba3198e7",
+        "bytes": 1815373
+      }
+    },
+    {
+      "pair": 17,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-87ab7bffaa94",
+      "seed": 2276162559,
+      "width": 832,
+      "height": 1248,
+      "seconds": 21.384004702000084,
+      "denoiser_seconds": 21.175169982910155,
+      "restore_seconds_excluded": 2.1627295590001268,
+      "peak_allocated_gib": 36.77928638458252,
+      "peak_reserved_gib": 38.228515625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_17_teacher.png",
+        "sha256": "71234932644934475edb87d10f49362882ac2e2752db8073bd1ef4eec561dbb6",
+        "bytes": 979297
+      }
+    },
+    {
+      "pair": 17,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-87ab7bffaa94",
+      "seed": 2276162559,
+      "width": 832,
+      "height": 1248,
+      "seconds": 20.054467405000196,
+      "denoiser_seconds": 19.848996978759764,
+      "restore_seconds_excluded": 4.60927484900003,
+      "peak_allocated_gib": 35.98527812957764,
+      "peak_reserved_gib": 37.119140625,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_17_candidate_A.png",
+        "sha256": "17930d602af204c17f2302c0ff7dd2d19d4ebe7252d1764c3d8188814bd26bd6",
+        "bytes": 1048606
+      }
+    },
+    {
+      "pair": 18,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-ac649400b1e1",
+      "seed": 2892272640,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.535069195000005,
+      "denoiser_seconds": 20.330001892089843,
+      "restore_seconds_excluded": 4.683822439000096,
+      "peak_allocated_gib": 36.05348587036133,
+      "peak_reserved_gib": 37.0859375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_18_candidate_A.png",
+        "sha256": "f32c74efbd498d4be00cb5a5b6c4961a23ecff7c7f353a807eead8d5e2feb85f",
+        "bytes": 2233875
+      }
+    },
+    {
+      "pair": 18,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-ac649400b1e1",
+      "seed": 2892272640,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.873875120999855,
+      "denoiser_seconds": 21.666949279785158,
+      "restore_seconds_excluded": 2.8532723459998124,
+      "peak_allocated_gib": 36.848745346069336,
+      "peak_reserved_gib": 38.353515625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_18_teacher.png",
+        "sha256": "252f2a32948814c4d0d2a255bd2425432d76962c532dd3843b427fc83460008d",
+        "bytes": 2417542
+      }
+    },
+    {
+      "pair": 19,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-010ab142fc14",
+      "seed": 17477954,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.532220970000026,
+      "denoiser_seconds": 20.321168151855467,
+      "restore_seconds_excluded": 5.0775762609998765,
+      "peak_allocated_gib": 36.05069351196289,
+      "peak_reserved_gib": 37.974609375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_19_candidate_A.png",
+        "sha256": "fdd9dcd65a9acdfc4f9f6b5179ceb734151127dacda31edb64bd68a15a2ef6fd",
+        "bytes": 1305676
+      }
+    },
+    {
+      "pair": 19,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-010ab142fc14",
+      "seed": 17477954,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.909474041000067,
+      "denoiser_seconds": 21.684089050292968,
+      "restore_seconds_excluded": 2.2433830060001583,
+      "peak_allocated_gib": 36.84479331970215,
+      "peak_reserved_gib": 38.103515625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_19_teacher.png",
+        "sha256": "61aeceab22fb67c8d7a28a73a54584e08339155b9e1831ea786dc831c720aa23",
+        "bytes": 1269782
+      }
+    },
+    {
+      "pair": 20,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-b16a0b2869d5",
+      "seed": 2976516904,
+      "width": 1376,
+      "height": 768,
+      "seconds": 20.85151301699989,
+      "denoiser_seconds": 20.636139526367188,
+      "restore_seconds_excluded": 4.687280780999799,
+      "peak_allocated_gib": 36.101933002471924,
+      "peak_reserved_gib": 38.13671875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_20_candidate_A.png",
+        "sha256": "97c87c8dcb334daf3fd27927e47ae0ee855c6f7f35a7bbc1c7f1cbea86174f4f",
+        "bytes": 1629936
+      }
+    },
+    {
+      "pair": 20,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-b16a0b2869d5",
+      "seed": 2976516904,
+      "width": 1376,
+      "height": 768,
+      "seconds": 22.15400151499989,
+      "denoiser_seconds": 21.942944458007812,
+      "restore_seconds_excluded": 2.2258107940001537,
+      "peak_allocated_gib": 36.8968448638916,
+      "peak_reserved_gib": 37.947265625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_20_teacher.png",
+        "sha256": "ee8cb082a1d62b628cc0e0d2a90a76c7633255ff3849483f4fb05501e147529c",
+        "bytes": 1600834
+      }
+    },
+    {
+      "pair": 21,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-9090c0f5a9b8",
+      "seed": 2425405685,
+      "width": 1376,
+      "height": 768,
+      "seconds": 20.853350062000118,
+      "denoiser_seconds": 20.64687634277344,
+      "restore_seconds_excluded": 4.509008442999857,
+      "peak_allocated_gib": 36.104259967803955,
+      "peak_reserved_gib": 37.763671875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_21_candidate_A.png",
+        "sha256": "6283653b01c7fe1327f1aa6af0f0b5adfd8cf0c6a165f05cef13fe99b14bfe64",
+        "bytes": 1875026
+      }
+    },
+    {
+      "pair": 21,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-9090c0f5a9b8",
+      "seed": 2425405685,
+      "width": 1376,
+      "height": 768,
+      "seconds": 22.181358976999945,
+      "denoiser_seconds": 21.979694091796876,
+      "restore_seconds_excluded": 2.8804871020001883,
+      "peak_allocated_gib": 36.89810752868652,
+      "peak_reserved_gib": 37.95703125,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_21_teacher.png",
+        "sha256": "a00c1e922b97f4ecd2f6c32d7e309e3f6a03a20e9cddde4e70ae3388ae3fe2ac",
+        "bytes": 2020114
+      }
+    },
+    {
+      "pair": 22,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-513061408026",
+      "seed": 1362125120,
+      "width": 1376,
+      "height": 768,
+      "seconds": 20.87412879800013,
+      "denoiser_seconds": 20.657308227539062,
+      "restore_seconds_excluded": 5.324653825000041,
+      "peak_allocated_gib": 36.105656147003174,
+      "peak_reserved_gib": 38.1171875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_22_candidate_A.png",
+        "sha256": "bfa0ef833c67e34b368266618a45b143375287ec5c15db5ef0b40d7512d3e8c1",
+        "bytes": 1584031
+      }
+    },
+    {
+      "pair": 22,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-513061408026",
+      "seed": 1362125120,
+      "width": 1376,
+      "height": 768,
+      "seconds": 22.187262087999898,
+      "denoiser_seconds": 21.97387744140625,
+      "restore_seconds_excluded": 2.305180860999826,
+      "peak_allocated_gib": 36.90081214904785,
+      "peak_reserved_gib": 37.958984375,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_22_teacher.png",
+        "sha256": "3fd66c73f6a9b0a03000545630640bd8b818a382662fae53b46e3add5868b547",
+        "bytes": 1549991
+      }
+    },
+    {
+      "pair": 23,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-35b465dfc187",
+      "seed": 901015007,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.510280686999977,
+      "denoiser_seconds": 20.303974853515626,
+      "restore_seconds_excluded": 4.762933967999743,
+      "peak_allocated_gib": 36.04929733276367,
+      "peak_reserved_gib": 37.08984375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_23_candidate_A.png",
+        "sha256": "7a3a8ffef82802c1abf9d2f5b1fcc53e8efeb40f8ed430335633281507bd7c83",
+        "bytes": 1566633
+      }
+    },
+    {
+      "pair": 23,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-35b465dfc187",
+      "seed": 901015007,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.886439168999914,
+      "denoiser_seconds": 21.650994812011717,
+      "restore_seconds_excluded": 2.265806147999683,
+      "peak_allocated_gib": 36.844282150268555,
+      "peak_reserved_gib": 38.357421875,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_23_teacher.png",
+        "sha256": "a8268b1b4ed93c2546892a4b17b2a41a872cf8ee911e07943c1bdd7da27ee931",
+        "bytes": 1559623
+      }
+    },
+    {
+      "pair": 24,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-708a4ed371cc",
+      "seed": 1888112339,
+      "width": 832,
+      "height": 1248,
+      "seconds": 21.33847155600006,
+      "denoiser_seconds": 21.13373663330078,
+      "restore_seconds_excluded": 2.2511860560002788,
+      "peak_allocated_gib": 36.77529287338257,
+      "peak_reserved_gib": 38.28125,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_24_teacher.png",
+        "sha256": "e91881124824e4aa2ce6e8c2a3fbc4b0eb43f94ffc3af42dd0b202d67fbb076c",
+        "bytes": 1930729
+      }
+    },
+    {
+      "pair": 24,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-708a4ed371cc",
+      "seed": 1888112339,
+      "width": 832,
+      "height": 1248,
+      "seconds": 20.07250035099969,
+      "denoiser_seconds": 19.86492007446289,
+      "restore_seconds_excluded": 4.601776164999592,
+      "peak_allocated_gib": 35.98155927658081,
+      "peak_reserved_gib": 37.791015625,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_24_candidate_A.png",
+        "sha256": "7d1bf3b1949058f5b4756378ef0fd693fae10d76518a1632bd79371386a39e2e",
+        "bytes": 1906661
+      }
+    },
+    {
+      "pair": 25,
+      "position": 0,
+      "variant": "candidate_A",
+      "source_id": "p1-e83d7dcacb2d",
+      "seed": 3896344010,
+      "width": 896,
+      "height": 1184,
+      "seconds": 21.022310111000024,
+      "denoiser_seconds": 20.768389709472658,
+      "restore_seconds_excluded": 4.6168294730000525,
+      "peak_allocated_gib": 36.1342339515686,
+      "peak_reserved_gib": 37.8125,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_25_candidate_A.png",
+        "sha256": "ea3b49bb28a3600f4b57d83b4521b7de1cd83ac56a2f0002df890cd0a8d66c75",
+        "bytes": 2590510
+      }
+    },
+    {
+      "pair": 25,
+      "position": 1,
+      "variant": "teacher",
+      "source_id": "p1-e83d7dcacb2d",
+      "seed": 3896344010,
+      "width": 896,
+      "height": 1184,
+      "seconds": 22.356563120000374,
+      "denoiser_seconds": 22.140055603027342,
+      "restore_seconds_excluded": 2.296217826999964,
+      "peak_allocated_gib": 36.928627014160156,
+      "peak_reserved_gib": 38.525390625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_25_teacher.png",
+        "sha256": "0b938bf5f39e01f418fb38dc3956b24f8d486d78dab436979456957715958779",
+        "bytes": 2730789
+      }
+    },
+    {
+      "pair": 26,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-0b32a45e0b90",
+      "seed": 187868254,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.915128730000106,
+      "denoiser_seconds": 21.71184265136719,
+      "restore_seconds_excluded": 2.2433846769999946,
+      "peak_allocated_gib": 36.851736068725586,
+      "peak_reserved_gib": 38.376953125,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_26_teacher.png",
+        "sha256": "9b57d5cc20cfe53284af87788805686fbedebbb14cb68f35f84fd79930f1132b",
+        "bytes": 2113659
+      }
+    },
+    {
+      "pair": 26,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-0b32a45e0b90",
+      "seed": 187868254,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.57992904899993,
+      "denoiser_seconds": 20.366731109619142,
+      "restore_seconds_excluded": 4.597997207999924,
+      "peak_allocated_gib": 36.05720901489258,
+      "peak_reserved_gib": 37.091796875,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_26_candidate_A.png",
+        "sha256": "6d7670e0a3561b7c4ec0f6aea1f1b8476927a432cb3273ba08604ddbf8315d46",
+        "bytes": 2067920
+      }
+    },
+    {
+      "pair": 27,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-c9344c076abf",
+      "seed": 3375647751,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.84394641400013,
+      "denoiser_seconds": 21.639713562011718,
+      "restore_seconds_excluded": 2.246107850000044,
+      "peak_allocated_gib": 36.84229850769043,
+      "peak_reserved_gib": 38.330078125,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_27_teacher.png",
+        "sha256": "3ec5e22b6eef569ca1aa32f2179337db15b3b5e43faaf6f4900b6c3e82683b44",
+        "bytes": 1865992
+      }
+    },
+    {
+      "pair": 27,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-c9344c076abf",
+      "seed": 3375647751,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.551603177999823,
+      "denoiser_seconds": 20.318135192871093,
+      "restore_seconds_excluded": 4.427010306999819,
+      "peak_allocated_gib": 36.04743576049805,
+      "peak_reserved_gib": 37.962890625,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_27_candidate_A.png",
+        "sha256": "f6bfa034474e209863a742bb3a59f28a294fc78bf34abbc8e91de7d70ce0ba5e",
+        "bytes": 1952683
+      }
+    },
+    {
+      "pair": 28,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-f66dd8002f66",
+      "seed": 4134393856,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 21.878399442000045,
+      "denoiser_seconds": 21.66682775878906,
+      "restore_seconds_excluded": 2.2461709150002207,
+      "peak_allocated_gib": 36.84479331970215,
+      "peak_reserved_gib": 38.1015625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_28_teacher.png",
+        "sha256": "646914e1178bee1b4bcaa5b810efdd36b82fb55ae1182553ca00ff1350e363ad",
+        "bytes": 1144682
+      }
+    },
+    {
+      "pair": 28,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-f66dd8002f66",
+      "seed": 4134393856,
+      "width": 1024,
+      "height": 1024,
+      "seconds": 20.549308075000226,
+      "denoiser_seconds": 20.340820526123046,
+      "restore_seconds_excluded": 4.50072793299978,
+      "peak_allocated_gib": 36.05069351196289,
+      "peak_reserved_gib": 38.0078125,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_28_candidate_A.png",
+        "sha256": "96dff5fefefe9d0721427874a05fe8fe622bb9992bd604e73220e96e55ff170c",
+        "bytes": 1275946
+      }
+    },
+    {
+      "pair": 29,
+      "position": 0,
+      "variant": "teacher",
+      "source_id": "p1-2fa54a3c4eb8",
+      "seed": 799361596,
+      "width": 896,
+      "height": 1184,
+      "seconds": 22.317302524000297,
+      "denoiser_seconds": 22.099218444824217,
+      "restore_seconds_excluded": 2.3646260180003082,
+      "peak_allocated_gib": 36.924659729003906,
+      "peak_reserved_gib": 38.22265625,
+      "resident_allocated_gib": 30.264811992645264,
+      "image": {
+        "name": "pair_29_teacher.png",
+        "sha256": "d41d209651b0095f07963291690f714b767a5167b6f6a11aa9e9e5a68b18eb40",
+        "bytes": 2067874
+      }
+    },
+    {
+      "pair": 29,
+      "position": 1,
+      "variant": "candidate_A",
+      "source_id": "p1-2fa54a3c4eb8",
+      "seed": 799361596,
+      "width": 896,
+      "height": 1184,
+      "seconds": 21.1075966479998,
+      "denoiser_seconds": 20.88193127441406,
+      "restore_seconds_excluded": 5.442296086999704,
+      "peak_allocated_gib": 36.13051080703735,
+      "peak_reserved_gib": 37.80859375,
+      "resident_allocated_gib": 29.47184133529663,
+      "image": {
+        "name": "pair_29_candidate_A.png",
+        "sha256": "2a65b5b2c045fb9dcc2e91a461ca95e6c517b029d1d6e06d26f6dcc04635fa3b",
+        "bytes": 2074638
+      }
+    }
+  ],
+  "artifacts": [],
+  "calls": {
+    "teacher": 30,
+    "candidate_A": 30
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "cpu_snapshot_and_checkpoint_seconds": 53.16253582,
+  "protocol": {
+    "pairs": 30,
+    "order_seed": 20261017,
+    "warmups_per_restore": 1,
+    "precision": "BF16 with original FP32 bridge masters cast per forward",
+    "attention": "SDPBackend.MATH",
+    "steps": 40,
+    "batch_size": 1,
+    "kv_cache": true,
+    "timing": "CUDA-synchronized pipeline wall time, excluding restoration, warmup and image serialization; CUDA events for denoiser",
+    "memory": "one active variant; unused teacher blocks moved to CPU; reset peaks after warmup; no offload of active pipeline"
+  },
+  "packages": {
+    "torch": "2.14.0",
+    "diffusers": "0.41.0.dev0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0"
+  },
+  "torch_cuda": "13.0",
+  "cold_pipeline_load_seconds": 34.343048308,
+  "pair_orders": [
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "candidate_A",
+      "teacher"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ],
+    [
+      "teacher",
+      "candidate_A"
+    ]
+  ],
+  "paired_speedup": {
+    "median": 1.0636360546532349,
+    "bootstrap_95pct": [
+      1.0629662909112976,
+      1.0648734566799223
+    ],
+    "replicates": 20000,
+    "ratios": [
+      1.0647302533436065,
+      1.0648681823486188,
+      1.0656279694320636,
+      1.0687155252500762,
+      1.063101674270451,
+      1.0623018354978255,
+      1.0539148691944604,
+      1.0627114179730894,
+      1.0613141628398113,
+      1.0630253676961028,
+      1.066067666390624,
+      1.0608753108151092,
+      1.0639565271666191,
+      1.0691527492318649,
+      1.0635888684338302,
+      1.0625436164094106,
+      1.0671132728609671,
+      1.0662963154368483,
+      1.0651960757125587,
+      1.0670776470315788,
+      1.0624649394477084,
+      1.0636832408726395,
+      1.0629072141264921,
+      1.0670960335941275,
+      1.0630699306445557,
+      1.0634684295853,
+      1.0648787310112258,
+      1.062882842998046,
+      1.0646781566634236,
+      1.0573113981745115
+    ]
+  },
+  "summary": {
+    "teacher": {
+      "pairs": 30,
+      "median_seconds": 21.908385693000014,
+      "p90_seconds": 22.3098560563,
+      "throughput_images_per_second": 0.04564462274915635,
+      "median_denoiser_seconds": 21.68991305541992,
+      "peak_allocated_gib": 36.93408203125,
+      "peak_reserved_gib": 38.748046875
+    },
+    "candidate_A": {
+      "pairs": 30,
+      "median_seconds": 20.582169246499973,
+      "p90_seconds": 21.02445194330003,
+      "throughput_images_per_second": 0.048585743709694325,
+      "median_denoiser_seconds": 20.35699870300293,
+      "peak_allocated_gib": 36.13924980163574,
+      "peak_reserved_gib": 38.13671875
+    }
+  },
+  "scope": "Matched 40-step teacher vs provisional candidate A, one H100, 30 balanced randomized pairs; no quality promotion."
+}
