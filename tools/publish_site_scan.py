@@ -193,6 +193,24 @@ def block13_alone_parts():
             'prompts.</p></div>']
 
 
+def text_selection_parts():
+    rows = [['The Rusty Anchor', '4', '3', '2', '3', '<b>4</b>', '3', '2', '1'],
+            ['Happy Birthday Emma', '4', '3', '2', '3-4', '<b>4</b>', '3', '3', '4'],
+            ['Moonlight Motel', '3', '3', '~1', '~2', '~2-3', '~1', '~2-3', '~2'],
+            ['<b>Total / 12</b>', '<b>11</b>', '<b>9</b>', '<b>~5</b>', '<b>~8</b>', '<b>~10-11</b>', '<b>~7</b>', '<b>~7-8</b>', '<b>~7</b>']]
+    return ['<h3 id="phase7-text-selection">Choosing the next block by spelling</h3>',
+            '<p class="summary">A scan skipped each block of B and measured velocity on 80 saved text prompts. It filters overall damage but '
+            'cannot see spelling: block 13, which breaks it, sits mid-table, because letters are a tiny fraction of the pixels. So the five '
+            'blocks with the lowest velocity cost and not next to block 5 (17, 25, 20, 18, 16) were each skipped inside B and rendered on the '
+            'text prompts with four seeds. Block 25 ranked second only after the first images had been launched; it was added afterwards, '
+            'as recorded in a dated addendum.</p>',
+            table('Exactly spelled signs out of four seeds, with one block skipped inside B (no bridge)',
+                  ['Text', 'Teacher', 'B', 'Teacher &minus; 13', 'B &minus; 17', 'B &minus; 20', 'B &minus; 18', 'B &minus; 16', 'B &minus; 25'], rows),
+            '<div class="verdict"><p><b>Block 20 keeps spelling.</b> Skipped with no bridge at all, the student writes both long signs correctly '
+            'on every seed, at the level of B or better; block 17 also holds up well. Blocks 20 and 13 cost about the same by velocity, yet one '
+            'keeps spelling and the other breaks it. Block 25 shows a systematic error of its own (&ldquo;Anchar&rdquo;).</p></div>']
+
+
 def variant_review_parts():
     path = ROOT / 'data/phase7/bridge_variant_images/review.json'
     if not path.exists():
@@ -245,7 +263,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts() + healing_parts() + block13_alone_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts() + healing_parts() + block13_alone_parts() + text_selection_parts()
 
 
 def bridge13_section(protocol, report):

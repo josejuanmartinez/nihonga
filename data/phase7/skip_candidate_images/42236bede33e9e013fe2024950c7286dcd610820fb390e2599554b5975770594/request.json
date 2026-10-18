@@ -1,0 +1,374 @@
+{
+  "request_key": "42236bede33e9e013fe2024950c7286dcd610820fb390e2599554b5975770594",
+  "request": {
+    "teacher": {
+      "model_repo": "Qwen/Qwen-Image-2.1",
+      "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+      "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "num_teacher_blocks": 32,
+      "hidden_dim": 4096,
+      "dtype": "bfloat16",
+      "scheduler_class": "FlowMatchEulerDiscreteScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "shift": 1.0,
+        "use_dynamic_shifting": true,
+        "base_shift": 0.5,
+        "max_shift": 0.9,
+        "base_image_seq_len": 256,
+        "max_image_seq_len": 8192,
+        "invert_sigmas": false,
+        "shift_terminal": 0.02,
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "time_shift_type": "exponential",
+        "stochastic_sampling": false,
+        "_class_name": "FlowMatchEulerDiscreteScheduler",
+        "_diffusers_version": "0.37.0.dev0"
+      },
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "runtime": {
+        "version": "phase3-modal-preflight-v1",
+        "model_repo": "Qwen/Qwen-Image-2.1",
+        "model_revision": "790c92633540aa0cb11d9abf19eb46d861714758",
+        "config_sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+        "num_layers": 32,
+        "packages": [
+          "torch==2.14.0",
+          "torchvision==0.29.0",
+          "transformers==5.17.0",
+          "accelerate==1.15.0",
+          "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+          "pillow"
+        ],
+        "python_version": "3.13",
+        "gpu_requested": "H100!",
+        "weights_volume": "nihonga-hf-cache",
+        "results_volume": "nihonga-phase3-artifacts"
+      }
+    },
+    "transformer_source_sha256": "0eb0555e21ca93195e1fe9389113cafbf0e8822f6454c3001cebb3d21521ebd7",
+    "runtime_environment": {
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_derived_tables": {
+      "pos_embed.freqs.0": "d9f978ae9c2ee6aef13d2aa18347b93df320f4f6b05d0742e57116f02d77be7f",
+      "pos_embed.freqs.1": "3015ce7f0237fbdd7a7488973b1a4a386016545c82df983713812edc05d46ee2",
+      "pos_embed.freqs.2": "3015ce7f0237fbdd7a7488973b1a4a386016545c82df983713812edc05d46ee2",
+      "time_text_embed.time_proj.freqs": "b0027ea79a908a68429763225ca6c1f7f988692cfd20a922185a0bb73bc3c1c6"
+    },
+    "canonical_tables_key": "c8de0bd9af682097371de501b8d4feeea34badd5dc911a880f144de450b1dd9f",
+    "core_source": "import torch\nfrom torch import nn\n\nclass ResidualBottleneckBridge(nn.Module):\n    \"\"\"Trainable tokenwise residual approximation; pipeline integration is a separate wrapper.\"\"\"\n    def __init__(self, hidden_dim=4096, bottleneck_dim=256):\n        super().__init__()\n        self.down = nn.Linear(hidden_dim, bottleneck_dim, bias=False)\n        self.activation = nn.GELU()\n        self.up = nn.Linear(bottleneck_dim, hidden_dim, bias=False)\n        # Identity initialization is a starting point for learning, not the final replacement.\n        nn.init.zeros_(self.up.weight)\n\n    def forward(self, hidden_states):\n        return hidden_states + self.up(self.activation(self.down(hidden_states)))\n",
+    "wrapper_source": "\"\"\"Qwen-Image 2.1 block contract for an unconditioned tokenwise bridge.\"\"\"\nfrom types import SimpleNamespace\nfrom torch import nn\n\n\nclass QwenImage21BridgeBlock(nn.Module):\n    def __init__(self, bridge, processor):\n        super().__init__()\n        self.bridge = bridge\n        # Parent forward inspects this processor to choose mask construction.\n        # This contains no attention projections and performs no attention.\n        self.attn = SimpleNamespace(processor=processor)\n\n    def forward(self, hidden_states, modulation, rotary_emb=None,\n                attention_mask=None, target_token_mask=None, layer_cache=None,\n                kv_cache_mode=None, cache_write_slice=None, segments=None,\n                key_valid=None):\n        if kv_cache_mode not in (None, 'extract', 'cached'):\n            raise ValueError('Unknown KV cache mode.')\n        # No K/V is required in this slot. Subsequent surviving blocks build\n        # their own prefix K/V from the transformed prefix during extraction.\n        return self.bridge(hidden_states)\n\n\ndef insert_bridge(transformer, layer, bridge, cache_class):\n    \"\"\"Replace one slot; caller must discard all prior caches and use returned cache.\"\"\"\n    if not 0 <= layer < len(transformer.transformer_blocks):\n        raise IndexError('Bridge slot is outside transformer depth.')\n    if bridge.down.in_features != transformer.config.num_attention_heads * transformer.config.attention_head_dim:\n        raise ValueError('Bridge width differs from transformer width.')\n    old = transformer.transformer_blocks[layer]\n    reference = next(transformer.parameters())\n    bridge = bridge.to(device=reference.device, dtype=reference.dtype)\n    wrapper = QwenImage21BridgeBlock(bridge, old.attn.processor)\n    wrapper.train(transformer.training)\n    transformer.transformer_blocks[layer] = wrapper\n    return old, cache_class(len(transformer.transformer_blocks))\n",
+    "version": "phase7-skip-candidate-images-v1",
+    "rows": [
+      {
+        "source_id": "p1-e83d7dcacb2d",
+        "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+        "seed": 3896344010,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "set": "text",
+        "target_strings": [
+          "GOLDEN RIVER",
+          "Live in Berlin"
+        ]
+      },
+      {
+        "source_id": "p1-0b32a45e0b90",
+        "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+        "seed": 187868254,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Welcome Home"
+        ]
+      },
+      {
+        "source_id": "p1-c9344c076abf",
+        "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+        "seed": 3375647751,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Happy Birthday Emma"
+        ]
+      },
+      {
+        "source_id": "p1-f66dd8002f66",
+        "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+        "seed": 4134393856,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "\u8425\u4e1a\u4e2d"
+        ]
+      },
+      {
+        "source_id": "p1-2fa54a3c4eb8",
+        "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+        "seed": 799361596,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "The Rusty Anchor",
+          "Moonlight Motel"
+        ]
+      },
+      {
+        "source_id": "p1-e83d7dcacb2d-s1",
+        "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+        "seed": 3897344013,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "set": "text",
+        "target_strings": [
+          "GOLDEN RIVER",
+          "Live in Berlin"
+        ]
+      },
+      {
+        "source_id": "p1-e83d7dcacb2d-s2",
+        "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+        "seed": 3898344016,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "set": "text",
+        "target_strings": [
+          "GOLDEN RIVER",
+          "Live in Berlin"
+        ]
+      },
+      {
+        "source_id": "p1-e83d7dcacb2d-s3",
+        "prompt": "An Art Nouveau illustration of a public information poster with the title \"GOLDEN RIVER\" and the tagline \"Live in Berlin\", featuring a crystal cave with glowing minerals, overcast diffuse light.",
+        "seed": 3899344019,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "posters",
+        "set": "text",
+        "target_strings": [
+          "GOLDEN RIVER",
+          "Live in Berlin"
+        ]
+      },
+      {
+        "source_id": "p1-0b32a45e0b90-s1",
+        "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+        "seed": 188868257,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Welcome Home"
+        ]
+      },
+      {
+        "source_id": "p1-0b32a45e0b90-s2",
+        "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+        "seed": 189868260,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Welcome Home"
+        ]
+      },
+      {
+        "source_id": "p1-0b32a45e0b90-s3",
+        "prompt": "Create an image of a banner hanging between two tall trees, displaying the text \"Welcome Home\" in correct spelling, with a mysterious and atmospheric feel. Style: 35mm film photo with visible film grain.",
+        "seed": 190868263,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Welcome Home"
+        ]
+      },
+      {
+        "source_id": "p1-c9344c076abf-s1",
+        "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+        "seed": 3376647754,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Happy Birthday Emma"
+        ]
+      },
+      {
+        "source_id": "p1-c9344c076abf-s2",
+        "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+        "seed": 3377647757,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Happy Birthday Emma"
+        ]
+      },
+      {
+        "source_id": "p1-c9344c076abf-s3",
+        "prompt": "a shop storefront with the name \"Happy Birthday Emma\" painted above the door, photorealistic, professional photography",
+        "seed": 3378647760,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "Happy Birthday Emma"
+        ]
+      },
+      {
+        "source_id": "p1-f66dd8002f66-s1",
+        "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+        "seed": 4135393859,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "\u8425\u4e1a\u4e2d"
+        ]
+      },
+      {
+        "source_id": "p1-f66dd8002f66-s2",
+        "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+        "seed": 4136393862,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "\u8425\u4e1a\u4e2d"
+        ]
+      },
+      {
+        "source_id": "p1-f66dd8002f66-s3",
+        "prompt": "Create a sharp focus image of a handwritten note on lined paper stating \"\u8425\u4e1a\u4e2d\" in a graphic design style with clean typography and print layout.",
+        "seed": 4137393865,
+        "width": 1024,
+        "height": 1024,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "\u8425\u4e1a\u4e2d"
+        ]
+      },
+      {
+        "source_id": "p1-2fa54a3c4eb8-s1",
+        "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+        "seed": 800361599,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "The Rusty Anchor",
+          "Moonlight Motel"
+        ]
+      },
+      {
+        "source_id": "p1-2fa54a3c4eb8-s2",
+        "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+        "seed": 801361602,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "The Rusty Anchor",
+          "Moonlight Motel"
+        ]
+      },
+      {
+        "source_id": "p1-2fa54a3c4eb8-s3",
+        "prompt": "A high-resolution DSLR photo of a storefront named \"The Rusty Anchor\" with a small sign in the window saying \"Moonlight Motel\", warm window light.",
+        "seed": 802361605,
+        "width": 896,
+        "height": 1184,
+        "dimension": "creative",
+        "subdimension": "text_rendering",
+        "set": "text",
+        "target_strings": [
+          "The Rusty Anchor",
+          "Moonlight Motel"
+        ]
+      }
+    ],
+    "worker_source": "def generate_multiseed_text(request, key):\n    \"\"\"Extra seeds for the text prompts: teacher, B, and C with the best block-13 bridge.\n    Same prompt, CPU noise seed, size, scheduler and 40 steps for every model. Qualitative screen only.\"\"\"\n    import gc\n    import hashlib\n    import inspect\n    import json\n    import os\n    import time\n    from pathlib import Path\n\n    import torch\n    from diffusers import QwenImage21Pipeline\n    from diffusers.models.transformers.transformer_qwenimage21 import QwenImage21KVCache, QwenImage21KVLayerCache\n\n    directory = Path('/phase3/phase7/skip_candidate_images') / key\n    directory.mkdir(parents=True, exist_ok=True)\n    report_path = directory / 'summary.json'\n    if report_path.exists():\n        return json.loads(report_path.read_text())\n    if (directory / 'started.json').exists():\n        raise RuntimeError('Incomplete image attempt exists; inspect before repeating calls.')\n    (directory / 'started.json').write_text(json.dumps({'request_key': key}))\n    (directory / 'request.json').write_text(json.dumps({'request_key': key, 'request': request}, indent=2))\n    results_volume.commit()\n\n    def digest(path):\n        h = hashlib.sha256()\n        with path.open('rb') as handle:\n            for chunk in iter(lambda: handle.read(1024 * 1024), b''):\n                h.update(chunk)\n        return h.hexdigest()\n\n    def table_hash(value):\n        return hashlib.sha256(memoryview(value.detach().cpu().contiguous().view(torch.uint8).numpy())).hexdigest()\n\n    variants = [f'B_skip{b}' for b in request['skip_blocks']]\n    report = {'request_key': key, 'status': 'running', 'rows': [], 'artifacts': [],\n              'calls': {v: 0 for v in variants}, 'optimizer_updates': 0}\n    try:\n        if os.environ.get('CUBLAS_WORKSPACE_CONFIG') != ':4096:8':\n            raise RuntimeError('Deterministic workspace environment differs.')\n        teacher = request['teacher']\n        report['gpu'] = torch.cuda.get_device_name(0)\n        if 'H100' not in report['gpu']:\n            raise RuntimeError('Expected H100.')\n        pipe = QwenImage21Pipeline.from_pretrained(teacher['model_repo'], revision=teacher['model_revision'],\n                                                   dtype=torch.bfloat16, local_files_only=True).to('cuda')\n        pipe.set_progress_bar_config(disable=True)\n        model = pipe.transformer.eval()\n        for component in (model, pipe.text_encoder, pipe.vae):\n            component.requires_grad_(False)\n        torch.use_deterministic_algorithms(True)\n        torch.set_float32_matmul_precision('highest')\n        torch.backends.cuda.matmul.allow_tf32 = False\n        torch.backends.cudnn.allow_tf32 = False\n        torch.backends.cudnn.benchmark = False\n        torch.backends.cudnn.deterministic = True\n        torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = False\n        torch.backends.cuda.allow_fp16_bf16_reduction_math_sdp(False)\n        if digest(Path(inspect.getfile(type(model)))) != request['transformer_source_sha256']:\n            raise RuntimeError('Transformer source differs.')\n        config_path = (Path('/root/.cache/huggingface/hub') / ('models--' + teacher['model_repo'].replace('/', '--')) /\n                       'snapshots' / teacher['model_revision'] / 'transformer/config.json')\n        if digest(config_path) != teacher['config_sha256'] or len(model.transformer_blocks) != 32:\n            raise RuntimeError('Teacher configuration differs.')\n        # Derived position/time tables: use the audited values on every host (as in steps 7-11).\n        derived = {f'pos_embed.freqs.{axis}': value for axis, value in enumerate(model.pos_embed.freqs)}\n        derived['time_text_embed.time_proj.freqs'] = model.time_text_embed.time_proj.freqs\n        expected = request['expected_derived_tables']\n        mismatched = sorted(n for n, v in derived.items() if table_hash(v) != expected[n])\n        if mismatched:\n            canonical = torch.load(Path('/phase3/phase7/canonical_derived_tables') / (request['canonical_tables_key'] + '.pt'),\n                                   weights_only=True, map_location='cpu')\n            if any(table_hash(canonical[n]) != expected[n] for n in expected):\n                raise RuntimeError('Canonical derived tables differ from the audited hashes.')\n            original = model.pos_embed.freqs\n            replaced = [canonical[f'pos_embed.freqs.{a}'].to(device=v.device, dtype=v.dtype) for a, v in enumerate(original)]\n            model.pos_embed.freqs = tuple(replaced) if isinstance(original, tuple) else replaced\n            with torch.no_grad():\n                model.time_text_embed.time_proj.freqs.copy_(canonical['time_text_embed.time_proj.freqs'])\n            if any(table_hash(v) != expected[n] for n, v in\n                   list({f'pos_embed.freqs.{a}': v for a, v in enumerate(model.pos_embed.freqs)}.items()) +\n                   [('time_text_embed.time_proj.freqs', model.time_text_embed.time_proj.freqs)]):\n                raise RuntimeError('Derived tables still differ after loading the audited copy.')\n            report['canonical_tables_applied'] = mismatched\n\n        def generate(row, variant):\n            path = directory / (row['source_id'] + '-' + variant + '.png')\n            torch.cuda.synchronize()\n            started = time.perf_counter()\n            with torch.inference_mode():\n                image = pipe(prompt=row['prompt'], width=row['width'], height=row['height'],\n                             num_inference_steps=40, true_cfg_scale=teacher['true_cfg_scale'],\n                             generator=torch.Generator('cpu').manual_seed(row['seed']),\n                             use_kv_cache=True, output_type='pil').images[0]\n            torch.cuda.synchronize()\n            elapsed = time.perf_counter() - started\n            temporary = path.with_suffix('.tmp')\n            image.save(temporary, format='PNG')\n            temporary.replace(path)\n            results_volume.commit()\n            report['calls'][variant] += 1\n            (directory / 'progress.json').write_text(json.dumps(report, indent=2))\n            results_volume.commit()\n            return {'name': path.name, 'sha256': digest(path), 'bytes': path.stat().st_size, 'seconds': elapsed}\n\n        namespace = {}\n        exec(compile(request['core_source'], 'bridge_definition.py', 'exec'), namespace)\n        exec(compile(request['wrapper_source'], 'bridge_block_definition.py', 'exec'), namespace)\n        conditioned = {}\n        exec(compile(request['conditioned_bridge_source'], 'conditioned_bridge.py', 'exec'), conditioned)\n\n        def load_checkpoint(spec):\n            path = Path(spec['remote_path'])\n            if digest(path) != spec['sha256']:\n                raise RuntimeError('Bridge checkpoint differs: ' + spec['remote_path'])\n            return torch.load(path, weights_only=True, map_location='cpu')\n\n        outputs = {v: {} for v in variants}\n        references = False\n        if references:\n            for row in request['rows']:\n                outputs['teacher'][row['source_id']] = generate(row, 'teacher')\n        block5 = request['block5_bridge']\n        checkpoint = load_checkpoint(block5)\n        if checkpoint['layer'] != 5 or checkpoint['step'] != block5['step']:\n            raise RuntimeError('Block-5 bridge provenance differs.')\n        bridge = namespace['ResidualBottleneckBridge'](4096, 256)\n        bridge.load_state_dict(checkpoint['state_dict'])\n        bridge.requires_grad_(False)\n        namespace['insert_bridge'](model, 5, bridge, QwenImage21KVCache)\n        model.eval()\n        if references:\n            for row in request['rows']:\n                outputs['B'][row['source_id']] = generate(row, 'B')\n        from types import SimpleNamespace\n\n        class IdentityBlock(torch.nn.Module):\n            def __init__(self, original):\n                super().__init__()\n                self.attn = SimpleNamespace(processor=original.attn.processor)\n\n            def forward(self, hidden_states, *args, **kwargs):\n                return hidden_states\n\n        for slot in request['skip_blocks']:\n            original = model.transformer_blocks[slot]\n            model.transformer_blocks[slot] = IdentityBlock(original)\n            model.eval()\n            try:\n                for row in request['rows']:\n                    outputs[f'B_skip{slot}'][row['source_id']] = generate(row, f'B_skip{slot}')\n            finally:\n                model.transformer_blocks[slot] = original\n        rendered = [v for v in variants if outputs[v]]\n        for row in request['rows']:\n            report['rows'].append({**row, **{v: outputs[v][row['source_id']] for v in rendered}})\n            report['artifacts'].extend(outputs[v][row['source_id']] for v in rendered)\n        report['status'] = 'passed'\n    except Exception as exc:\n        report['status'] = 'failed'\n        report['error'] = type(exc).__name__ + ': ' + str(exc)\n    report_path.write_text(json.dumps(report, indent=2, ensure_ascii=True) + '\\n')\n    results_volume.commit()\n    return report\n",
+    "conditioned_bridge_source": "import torch\nfrom torch import nn\nfrom types import SimpleNamespace\n\n\nclass ConditionedBridge(nn.Module):\n    \"\"\"Residual bottleneck bridge that can read the model's shared timestep modulation.\n\n    The transformer computes one modulation tensor per timestep, [attn scale, attn gate, MLP scale, MLP gate],\n    shared by every block. A conditioned bridge mirrors a block's MLP branch:\n    h + tanh(gate) * up(gelu(down(LN(h) * (1 + scale)))), with scale and gate learned per-channel mixes of the\n    shared values. Unconditioned, it is the original Phase 4 bridge: h + up(gelu(down(h))).\n    \"\"\"\n\n    def __init__(self, hidden_dim=4096, rank=256, conditioned=True, eps=1e-6):\n        super().__init__()\n        self.conditioned = conditioned\n        self.down = nn.Linear(hidden_dim, rank, bias=False)\n        self.up = nn.Linear(rank, hidden_dim, bias=False)\n        nn.init.zeros_(self.up.weight)\n        if conditioned:\n            self.norm = nn.LayerNorm(hidden_dim, elementwise_affine=False, eps=eps)\n            # Start from the block's own MLP modulation (weight 1 on the MLP terms, 0 on the attention terms).\n            mix = torch.zeros(2, hidden_dim)\n            mix[1] = 1\n            self.scale_mix = nn.Parameter(mix.clone())\n            self.gate_mix = nn.Parameter(mix.clone())\n            self.scale_bias = nn.Parameter(torch.zeros(hidden_dim))\n            self.gate_bias = nn.Parameter(torch.zeros(hidden_dim))\n\n    def scale_gate(self, modulation_rows):\n        scale1, gate1, scale2, gate2 = modulation_rows.chunk(4, dim=-1)\n        scale = self.scale_mix[0] * scale1 + self.scale_mix[1] * scale2 + self.scale_bias\n        gate = self.gate_mix[0] * gate1 + self.gate_mix[1] * gate2 + self.gate_bias\n        return scale, gate\n\n    def forward(self, hidden_states, modulation_rows=None):\n        if not self.conditioned:\n            return hidden_states + self.up(nn.functional.gelu(self.down(hidden_states)))\n        scale, gate = self.scale_gate(modulation_rows)\n        update = self.up(nn.functional.gelu(self.down(self.norm(hidden_states) * (1 + scale))))\n        return hidden_states + torch.tanh(gate) * update\n\n\nclass LocalConditionedBridge(ConditionedBridge):\n    \"\"\"Conditioned bridge plus a depthwise 3x3 convolution over the image-token grid inside the bottleneck.\n\n    The convolution starts at zero (identity start) and is applied to target-image tokens only; prompt tokens have\n    no grid and pass through the per-token path.\n    \"\"\"\n    local = True\n\n    def __init__(self, hidden_dim=4096, rank=1024, eps=1e-6):\n        super().__init__(hidden_dim, rank, True, eps)\n        self.mix = nn.Parameter(torch.zeros(rank, 9))\n\n    def forward(self, hidden_states, modulation_rows=None, image_mask=None, grid=None):\n        scale, gate = self.scale_gate(modulation_rows)\n        z = self.down(self.norm(hidden_states) * (1 + scale))\n        if grid is not None:\n            height, width = grid\n            image = z[:, image_mask]\n            batch, tokens, rank = image.shape\n            planes = image.transpose(1, 2).reshape(batch, rank, height, width)\n            mixed = nn.functional.conv2d(planes, self.mix.view(rank, 1, 3, 3).to(planes.dtype), padding=1, groups=rank)\n            z = z.clone()\n            z[:, image_mask] = image + mixed.reshape(batch, rank, tokens).transpose(1, 2)\n        return hidden_states + torch.tanh(gate) * self.up(nn.functional.gelu(z))\n\n    def forward_neighborhood(self, neighborhood, modulation_rows):\n        \"\"\"Training path: neighborhood is (tokens, 9, hidden) in 3x3 raster order, zeros outside the grid.\"\"\"\n        scale, gate = self.scale_gate(modulation_rows)\n        z = self.down(self.norm(neighborhood) * (1 + scale.unsqueeze(1)))\n        z = z[:, 4] + (z * self.mix.t().unsqueeze(0)).sum(1)\n        return neighborhood[:, 4] + torch.tanh(gate) * self.up(nn.functional.gelu(z))\n\n\nclass AttentionConditionedBridge(ConditionedBridge):\n    \"\"\"Conditioned bridge with a small attention branch in front of its MLP, mirroring a block.\n\n    Target-image tokens attend to the prompt prefix and all image tokens with the model's RoPE and key masks; prefix\n    tokens only take the MLP path. The branch keeps its own prefix K/V in the layer cache of the slot it replaces.\n    The output projection starts at zero, so a fresh branch leaves the conditioned MLP bridge unchanged.\n    \"\"\"\n    attention = True\n\n    def __init__(self, hidden_dim=4096, rank=1024, heads=4, head_dim=128, eps=1e-6):\n        super().__init__(hidden_dim, rank, True, eps)\n        inner = heads * head_dim\n        self.heads, self.head_dim, self.eps = heads, head_dim, eps\n        self.to_q = nn.Linear(hidden_dim, inner, bias=False)\n        self.to_k = nn.Linear(hidden_dim, inner, bias=False)\n        self.to_v = nn.Linear(hidden_dim, inner, bias=False)\n        self.to_out = nn.Linear(inner, hidden_dim, bias=False)\n        nn.init.zeros_(self.to_out.weight)\n        self.norm_q = nn.Parameter(torch.ones(head_dim))\n        self.norm_k = nn.Parameter(torch.ones(head_dim))\n        # Attention modulation starts from the block's own attention terms (weight 1 on scale1/gate1).\n        mix = torch.zeros(2, hidden_dim)\n        mix[0] = 1\n        self.attn_scale_mix = nn.Parameter(mix.clone())\n        self.attn_gate_mix = nn.Parameter(mix.clone())\n        self.attn_scale_bias = nn.Parameter(torch.zeros(hidden_dim))\n        self.attn_gate_bias = nn.Parameter(torch.zeros(hidden_dim))\n\n    def _rms(self, x, weight):\n        return x * torch.rsqrt(x.float().square().mean(-1, keepdim=True) + self.eps).to(x.dtype) * weight\n\n    @staticmethod\n    def _rope(x, freqs):\n        rotated = torch.view_as_complex(x.float().reshape(*x.shape[:-1], -1, 2)) * freqs.unsqueeze(1)\n        return torch.view_as_real(rotated).flatten(3).type_as(x)\n\n    def attend(self, hidden_states, modulation_rows, rotary_emb, target_count, layer_cache, kv_cache_mode,\n               cache_write_slice, key_mask):\n        scale1, gate1, scale2, gate2 = modulation_rows.chunk(4, dim=-1)\n        scale = self.attn_scale_mix[0] * scale1 + self.attn_scale_mix[1] * scale2 + self.attn_scale_bias\n        gate = self.attn_gate_mix[0] * gate1 + self.attn_gate_mix[1] * gate2 + self.attn_gate_bias\n        x = self.norm(hidden_states) * (1 + scale)\n        q, k, v = (proj(x).unflatten(-1, (self.heads, self.head_dim)) for proj in (self.to_q, self.to_k, self.to_v))\n        q, k = self._rms(q, self.norm_q), self._rms(k, self.norm_k)\n        if rotary_emb is not None:\n            q, k = self._rope(q, rotary_emb), self._rope(k, rotary_emb)\n        if layer_cache is not None:\n            if kv_cache_mode == 'extract' and cache_write_slice is not None:\n                layer_cache.store(k[:, cache_write_slice].clone(), v[:, cache_write_slice].clone())\n            elif kv_cache_mode == 'cached':\n                cached_k, cached_v = layer_cache.get()\n                k, v = torch.cat([cached_k, k], dim=1), torch.cat([cached_v, v], dim=1)\n        prefix = hidden_states.shape[1] - target_count\n        out = nn.functional.scaled_dot_product_attention(\n            q[:, prefix:].transpose(1, 2), k.transpose(1, 2), v.transpose(1, 2), attn_mask=key_mask)\n        update = torch.tanh(gate[:, prefix:]) * self.to_out(out.transpose(1, 2).flatten(2))\n        return torch.cat([hidden_states[:, :prefix], hidden_states[:, prefix:] + update], dim=1)\n\n\ndef modulation_rows(modulation, target_token_mask):\n    \"\"\"Per-token modulation rows, selected exactly as the transformer block does.\"\"\"\n    if target_token_mask is None:\n        return modulation.unsqueeze(1)\n    real, zero = modulation[:-1].unsqueeze(1), modulation[-1:].unsqueeze(0)\n    return torch.where(target_token_mask.view(1, -1, 1), real, zero)\n\n\nclass ConditionedBridgeBlock(nn.Module):\n    def __init__(self, bridge, processor):\n        super().__init__()\n        self.bridge = bridge\n        # Parent forward inspects this processor to choose mask construction; no attention is performed here.\n        self.attn = SimpleNamespace(processor=processor)\n\n    def forward(self, hidden_states, modulation, rotary_emb=None, attention_mask=None, target_token_mask=None,\n                layer_cache=None, kv_cache_mode=None, cache_write_slice=None, segments=None, key_valid=None):\n        if kv_cache_mode not in (None, 'extract', 'cached'):\n            raise ValueError('Unknown KV cache mode.')\n        rows = modulation_rows(modulation, target_token_mask) if self.bridge.conditioned else None\n        dtype = hidden_states.dtype\n        bridge_dtype = next(self.bridge.parameters()).dtype\n        if getattr(self.bridge, 'attention', False):\n            # Small bridges may keep FP32 weights for training; compute in their dtype and return the model dtype.\n            target_count = hidden_states.shape[1] if target_token_mask is None else int(target_token_mask.sum())\n            key_mask = key_valid[:, None, None, :] if key_valid is not None else attention_mask\n            h = hidden_states.to(bridge_dtype)\n            r = rows.to(bridge_dtype)\n            h = self.bridge.attend(h, r, rotary_emb, target_count, layer_cache, kv_cache_mode, cache_write_slice, key_mask)\n            return self.bridge(h, r).to(dtype)\n        if bridge_dtype != dtype:\n            return self.bridge(hidden_states.to(bridge_dtype), None if rows is None else rows.to(bridge_dtype)).to(dtype)\n        if getattr(self.bridge, 'local', False):\n            mask = target_token_mask if target_token_mask is not None else torch.ones(\n                hidden_states.shape[1], dtype=torch.bool, device=hidden_states.device)\n            height, width = self.grid\n            if height * width != int(mask.sum()):\n                raise RuntimeError('Target image grid does not match the image-token count.')\n            return self.bridge(hidden_states, rows, mask, (height, width))\n        return self.bridge(hidden_states, rows)\n\n\ndef insert_conditioned_bridge(transformer, layer, bridge, keep_dtype=False):\n    \"\"\"Replace one slot; callers must use fresh KV caches afterwards. keep_dtype keeps FP32 bridge weights.\"\"\"\n    old = transformer.transformer_blocks[layer]\n    reference = next(transformer.parameters())\n    bridge = bridge.to(device=reference.device) if keep_dtype else bridge.to(device=reference.device, dtype=reference.dtype)\n    wrapper = ConditionedBridgeBlock(bridge, old.attn.processor)\n    wrapper.train(transformer.training)\n    transformer.transformer_blocks[layer] = wrapper\n    if getattr(bridge, 'local', False) and not getattr(transformer, '_bridge_grid_hook', False):\n        # The block never sees img_shapes; record the target image's (height, width) in tokens on every call.\n        def record_grid(module, args, kwargs):\n            frames, height, width = kwargs['img_shapes'][0][-1]\n            for block in module.transformer_blocks:\n                if isinstance(block, ConditionedBridgeBlock):\n                    block.grid = (int(height), int(width))\n        transformer.register_forward_pre_hook(record_grid, with_kwargs=True)\n        transformer._bridge_grid_hook = True\n    return old\n",
+    "execution_account": "new",
+    "candidate_only": true,
+    "skip_blocks": [
+      25
+    ],
+    "block5_bridge": {
+      "remote_path": "/phase3/phase5/fitting/7b4a6c98bebb74cdf4d75bf8cdde7a0923fa3ffec07195cb6de25d83c5670618/bridge_block_05_selected.pt",
+      "sha256": "1106d6740ac780a86031b9c1fcf114e87c8c4b165f5d756353776268a7d5f356",
+      "step": 300
+    },
+    "c_variant": {
+      "name": "unused"
+    },
+    "scope": "Inside B: each shortlisted block skipped in turn; 4-seed text grid for the qualitative test of the text-aware scan",
+    "execution_packages": [
+      "torch==2.14.0",
+      "torchvision==0.29.0",
+      "transformers==5.17.0",
+      "accelerate==1.15.0",
+      "diffusers @ git+https://github.com/huggingface/diffusers@bdc2bea37a36038c44452811610489ea30ede229",
+      "pillow==12.3.0"
+    ],
+    "execution_reference_runtime": {
+      "packages": {
+        "torch": "2.14.0",
+        "diffusers": "0.41.0.dev0",
+        "transformers": "5.17.0",
+        "accelerate": "1.15.0",
+        "pillow": "12.3.0"
+      },
+      "torch_cuda": "13.0",
+      "cudnn_version": 92400
+    }
+  }
+}
