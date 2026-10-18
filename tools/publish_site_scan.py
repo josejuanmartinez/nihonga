@@ -273,7 +273,12 @@ def block5_bridge_parts():
             '<p class="summary"><b>The 30-block student</b> is now B plus both attention bridges (block 5 at step 200, block 20 at step 600). '
             'Next it is healed: a rank-16 LoRA on the attention of all blocks, trained jointly with both bridges at a low learning rate, '
             'with every checkpoint saved and judged by velocity and by spelling. Removals three and four are then chosen by a new text-aware '
-            'scan inside the healed student.</p>']
+            'scan inside the healed student.</p>',
+            '<figure class="chart"><figcaption><b>The 30-block student before healing, and after healing with the LoRA fused</b></figcaption>'
+            '<a href="student30-architecture.svg"><img loading="lazy" src="student30-architecture.svg" width="1200" height="1270" '
+            'alt="Left: 32 slots, 30 original blocks plus attention bridges in slots 5 and 20. Middle: healing trains a rank-16 LoRA on q, k, v '
+            'and out of the 30 blocks together with both bridges, then merges each LoRA into its weight matrix, W prime equals W plus B times A. '
+            'Right: the same slots with fused blocks and fine-tuned bridges and no extra weights."></a></figure>']
 
 
 def variant_review_parts():
