@@ -1,0 +1,9 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Which blocks can be removed with the least damage to spelling, rather than to average velocity?",
+  "context": "Removing block 13 (first in the general velocity ranking) breaks spelling; neither bridges (best 6/12 exact signs) nor LoRA healing (about 7/12) bring it back to B (9/12).",
+  "quantitative": "Inside B, bypass each block 2-29 except 5 one at a time; velocity error against the recorded teacher targets on 80 saved text prompts and 50 saved general prompts (early and middle moments). text_cost = bypass error minus B error on the text prompts; general_cost likewise. Block 13 is included as a check.",
+  "qualitative": "For the three non-adjacent candidates with the lowest text cost (excluding blocks 4 and 6, next to 5), render the 4-seed text grid with that block skipped, beside B; choose by exact signs.",
+  "decision_rule": "Blocks #2-#4 are chosen among candidates whose skipped-block text grid stays close to B (exact signs) and whose text cost is low; bridges are then fitted with the attention recipe. Velocity is reported throughout."
+}
