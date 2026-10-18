@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-18",
+  "type": "protocol addendum, written after the scan results were seen",
+  "what_happened": "The qualitative test (step 16c) was launched for blocks 17, 20, 18 and 16 while the scan was still running blocks 23-29, to save time. When the scan finished, block 25 ranked second by text cost (8.33%, after 17 at 7.93%) but had not been included.",
+  "change": "Block 25 is added to the qualitative test as step 16d. The decision rule is unchanged: candidates are chosen by exact signs in the 4-seed text grid, with velocity reported.",
+  "scan_check_failed": "Block 13, whose removal breaks spelling, does not stand out in the velocity scan (text cost +3.10 points, general cost +3.66), so velocity on text prompts is used only as a filter for overall damage; images decide."
+}
