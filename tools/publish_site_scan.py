@@ -158,6 +158,26 @@ def inside_bridge_parts():
                    ['Weights', '2.1M', '25.2M', '218.1M']])]
 
 
+def healing_parts():
+    rows = [['step 0 (C, no healing)', '6.11%', '6.08%', '6/12'], ['step 50', '6.11%', '6.06%', '5-6/12'],
+            ['step 100', '6.06%', '6.00%', '6/12'], ['<b>step 150</b>', '<b>6.04%</b>', '<b>5.98%</b>', '<b>~7/12</b>'],
+            ['step 200', '6.19%', '6.13%', '6-7/12']]
+    return ['<h3 id="phase7-healing">Healing the whole student does not bring spelling back</h3>',
+            '<p class="summary">If one bridge cannot carry block 13, perhaps the rest of the network can adapt around it. We healed the '
+            'two-bridge student (blocks 5 and 13 removed) with LoRA adapters (rank 16) on the attention of all 30 remaining blocks, '
+            'the bridges trainable too, on the saved recordings (450 text prompts). A first run with a higher learning rate made the '
+            'velocity worse at every evaluation and kept only its best-velocity checkpoint, so its spelling could not be checked; it '
+            'was stopped. The second run saved <b>every checkpoint</b> and judged each by both tests: velocity on 180 comparisons '
+            '(quantitative) and exact spelling of three signs over four seeds (qualitative).</p>',
+            table('Gentle LoRA healing: velocity and spelling at every checkpoint (teacher 11/12, B 9/12 exact signs)',
+                  ['Checkpoint', 'Overall velocity', 'Wider (50)', 'Exact signs'], rows),
+            '<div class="verdict"><p><b>Healing moves velocity slightly and spelling hardly at all.</b> The same seeds keep failing the '
+            'same way at every step (&ldquo;Achar&rdquo;, &ldquo;Acher&rdquo;; &ldquo;Cnna&rdquo;, &ldquo;Enna&rdquo;). By the rule '
+            'registered beforehand (8/12 or more), healing does not recover spelling. Removing block 13 takes something the model '
+            'needs for spelling. The next step changes <b>which</b> blocks are removed: a text-aware scan measures what each block '
+            'costs on text prompts, not on average velocity.</p></div>']
+
+
 def variant_review_parts():
     path = ROOT / 'data/phase7/bridge_variant_images/review.json'
     if not path.exists():
@@ -210,7 +230,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts() + healing_parts()
 
 
 def bridge13_section(protocol, report):
