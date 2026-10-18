@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-18",
+  "reviewer": "Claude (full-resolution crops)",
+  "method": "Exact signs: The Rusty Anchor, Happy Birthday Emma, Moonlight Motel x seeds 0-3; the seed-2 motel plaque is cut off by the frame, 11 scorable.",
+  "scores": {
+    "unhealed": {
+      "anchor": 4,
+      "emma": 4,
+      "motel": 2,
+      "total": 10
+    },
+    "s050": {
+      "anchor": 4,
+      "emma": 4,
+      "motel": 1,
+      "total": 9
+    },
+    "s100": {
+      "anchor": 4,
+      "emma": 4,
+      "motel": 1,
+      "total": 9
+    },
+    "s150": {
+      "anchor": 2,
+      "emma": 4,
+      "motel": 1,
+      "total": 7
+    },
+    "s200": {
+      "anchor": 4,
+      "emma": 3,
+      "motel": 2,
+      "total": 9
+    }
+  },
+  "notes": [
+    "s050-s150: seed-1 motel sign Moonight / Mownlight. s150: Anchar (seed 0) and Achor (seed 3). s200: Birihday (seed 3), seed-1 motel sign correct and cleaner.",
+    "Poster, banner and handwritten note: unchanged across checkpoints (all titles correct; seed-2 poster tagline garbled everywhere, as unhealed)."
+  ],
+  "conclusion": "Healing does not improve spelling: every checkpoint is within one or two signs of the unhealed student (10/11), with no trend; velocity improves only 0.25 points."
+}
