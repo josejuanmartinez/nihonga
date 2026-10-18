@@ -31,3 +31,14 @@ reconstructs cache aliases locally without duplicating large files.
 using a CPU job in the new account. All continuation dependencies are now verified
 locally, so the old credentials may be revoked; destination transfers and offline
 replay use only the new account. The migration status file records this boundary.
+
+Monitoring and verification, from the repository root:
+
+```powershell
+.venv/Scripts/python.exe tools/experiment_status.py   # sync progress of registered runs; schedules no model work
+python tools/verify_recovered_tensors.py              # verify restored tensors against the ledgers
+```
+
+The recovered end of Phase 6 is read in the final section of `phase6.ipynb`; the recovered
+Phase 7 history opens `phase7-adaptive-pruning.ipynb`. The reconstructed
+`phase6-7-recovered-continuation.ipynb` was folded into those two notebooks on 18 October 2026.

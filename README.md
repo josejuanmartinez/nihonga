@@ -5,8 +5,8 @@ Compression research for Qwen Image 2.1: 32 transformer blocks, approximately
 
 The original notebooks end during Phase 6. Later Modal experiment records and
 embedded worker sources have now been recovered under `data/recovered/`.
-`phase6-7-recovered-continuation.ipynb` is an explicitly reconstructed notebook;
-the original later notebooks were not present in the archive.
+The original later notebooks were not present in the archive; the recovered end of
+Phase 6 is read from those records in the final section of `phase6.ipynb`.
 `phase7-adaptive-pruning.ipynb` is the Phase 7 notebook: every step with its exact
 worker code (as executed), results and interpretation. Re-running it reuses saved
 results; it only launches Modal work for a missing result when `ALLOW_GPU = True`.
