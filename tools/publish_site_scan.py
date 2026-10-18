@@ -298,7 +298,40 @@ def healing30_parts():
             '<b>unhealed</b> 30-block student, the best speller; the healed checkpoint at step 200 is kept as a backup. Next, a speed-distillation '
             '(lightning) LoRA takes sampling from 40 steps to 8, about five times faster, since the model already runs without classifier-free '
             'guidance. Every checkpoint is judged by velocity, by the text grids and by general images, and the chosen one is fused into the '
-            'weights. Quantization follows, judged the same way. Removing blocks three and four may come in a later version.</p>']
+            'weights. Quantization follows, judged the same way. Removing blocks three and four may come in a later version.</p>'] + phase9_parts()
+
+
+
+def phase9_parts():
+    base = [['teacher, 40 steps', '11', 'reference', 'about 6.9'], ['teacher, 8 steps, no LoRA', '0', '15.1 dB', '1.53'],
+            ['teacher, 4 steps, no LoRA', '0', '14.1 dB', '0.86'], ['teacher + LightX2V LoRA, 4 steps', '9', '11.8 dB', '0.87']]
+    speed = [['teacher (32 blocks)', '165', '5.0 (real block)', '39.6'], ['version 1, FP32 bridges', '172', '8.8', '38.9'],
+             ['<b>version 1, BF16 bridges</b>', '<b>159</b>', '<b>2.2</b>', '38.9']]
+    return ['<h3 id="phase9-baseline">Few steps without distillation, and a published lightning LoRA</h3>',
+            '<p class="summary">Before training our own speed LoRA, the intact teacher was sampled with the same prompts and seeds as every '
+            'earlier grid in 8 and 4 steps without any LoRA, and in 4 steps with the LightX2V Lightning LoRA for Qwen-Image 2.1 (a published '
+            'distribution-matching distillation, rank 16 on attention, used here for comparison only; it is not reused).</p>',
+            table('Few-step baselines on the teacher', ['Variant', 'Exact signs (of 12)', 'PSNR to the 40-step image', 'Seconds per image'], base),
+            '<figure class="comparison"><a href="images/phase9-baseline-anchor.jpg"><img loading="lazy" src="images/phase9-baseline-anchor.jpg" '
+            'alt="The Rusty Anchor, four seeds: teacher at 40 steps, smeared at 8 steps, no image at 4 steps, LightX2V clean but Acchor three times"></a>'
+            '<figcaption><b>The Rusty Anchor, four seeds</b> | without distillation 8 steps smear and 4 steps give no image; the LightX2V LoRA is '
+            'clean and sharp but writes &ldquo;Acchor&rdquo; in three of four seeds</figcaption></figure>',
+            '<div class="verdict"><p><b>Distillation is required, and it costs letters even when done well.</b> The published 4-step LoRA spells '
+            'Emma and the motel sign but misspells the Rusty Anchor three times, so our own training data is mostly text (450 of 500 prompts). '
+            'It also has the cleanest images and the lowest PSNR: it reproduces the teacher&rsquo;s kind of image, not the teacher&rsquo;s image for '
+            'the same noise, so distance to the teacher is not a quality score on its own. Spelling and the images remain the judges.</p></div>',
+            '<h3 id="phase9-speed">What removing two blocks buys</h3>',
+            '<p class="summary">Batch 1 at 1024 by 1024 on one H100, each component timed separately. The transformer is almost all the time: '
+            'text encoding takes 0.03 s and VAE decoding 0.13 s per image. The transformer shrinks from 7.12 to 6.73 billion weights (14.2 to 13.6 GB), '
+            'but the untouched text encoder holds 17.5 GB, so memory falls by only 0.7 GB.</p>',
+            table('Time per denoising step and per slot (milliseconds)', ['Model', 'Transformer step', 'Slot 5 (block or bridge)', 'Peak memory (GB)'], speed),
+            '<div class="verdict"><p><b>The bridges had to run in BF16.</b> Kept in FP32 from training, each bridge cost 1.75 times a real block '
+            'and made version 1 slower than the teacher. In BF16 a bridge costs less than half a block and version 1 is about 4% faster per step, '
+            'as expected from removing 2 of 32 blocks, with nearly identical images (one small sign flips). The large gain is still to come from '
+            'step distillation: 40 steps take 6.9 s per image, 8 steps about 1.5 s. Memory will fall with quantization.</p></div>',
+            '<p class="summary"><b>Now training:</b> our own 8-step and 4-step lightning LoRAs on version 1 (BF16 bridges), by trajectory '
+            'distillation from 545 recorded 40-step teacher trajectories; every checkpoint is judged by its distance to the teacher and by the '
+            'text grids and general images.</p>']
 
 
 def variant_review_parts():
