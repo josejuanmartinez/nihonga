@@ -1,0 +1,12 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Does healing the whole student recover spelling, judged by both velocity and images?",
+  "previous_attempt": "healing_pilot v1 (LoRA lr 1e-4, one prompt per update) was stopped at update ~250: gate10 velocity rose 6.27% -> 6.46% -> 7.09%, and only the best-velocity checkpoint would have been kept, so spelling could not be checked.",
+  "student": "C = B + block-13 8-head attention bridge e2e_attn8_text; 30 surviving blocks",
+  "healing": "LoRA rank 16 (alpha 16) on to_q, to_k, to_v and to_out.0 of all 30 original blocks; both bridges trainable",
+  "data": "Same as v1: 60 original TRAIN prompts, 600 early-pool examples, 500 saved recordings (450 text)",
+  "training": "LoRA lr 2e-5, bridges lr 1e-5, 10-update warmup, clip 1.0; each update accumulates 2 full prompts (40% text) weighted 0.7 and 2 early examples weighted 0.3; 200 updates",
+  "checkpoints": "Steps 0 (= C), 50, 100, 150, 200: every checkpoint saved; each gets the QUANTITATIVE test (velocity on all 180 comparisons) and the QUALITATIVE test (4-seed text grid: The Rusty Anchor, Happy Birthday Emma, Moonlight Motel, plus the other text prompts)",
+  "decision_rule": "Choose the checkpoint with the most exact signs (3 signs x 4 seeds); velocity is reported for every checkpoint and breaks ties. >= 8/12 means healing recovers spelling and the plan continues; < 8/12 rethink. The 30-prompt sheets are rendered for the chosen checkpoint."
+}
