@@ -1,0 +1,20 @@
+{
+  "request_key": "3b12a7b70fe12c47c48febb60276eb71f34e5ea8fff0a4d4b0a58a012bf15085",
+  "status": "failed",
+  "rows": [],
+  "artifacts": [],
+  "calls": {
+    "step_0000": 0,
+    "step_0500": 0,
+    "step_1000": 0,
+    "step_1500": 0,
+    "step_2000": 0
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "trainable_parameters": 31457280,
+  "train_items": 500,
+  "checkpoints": [],
+  "losses": [],
+  "error": "RuntimeError: Student sigma grid differs from the teacher subset."
+}

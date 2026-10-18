@@ -1,0 +1,28 @@
+{
+  "request_key": "1d506138b024aca1a79f76aa8055f25a0bedcf0d329514a75cddc8152aea521a",
+  "status": "failed",
+  "rows": [],
+  "artifacts": [],
+  "calls": {
+    "step_0000": 45,
+    "step_0500": 0,
+    "step_1000": 0,
+    "step_1500": 0,
+    "step_2000": 0
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "trainable_parameters": 31457280,
+  "train_items": 500,
+  "checkpoints": [
+    {
+      "step": 0,
+      "seconds": 93.45618206,
+      "endpoint_mean": 0.41460186309284636,
+      "endpoint_text": 0.38939506858587264,
+      "endpoint_general": 0.4347672986984253
+    }
+  ],
+  "losses": [],
+  "error": "AttributeError: 'NoneType' object has no attribute 'to'"
+}

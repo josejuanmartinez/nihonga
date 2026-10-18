@@ -1,0 +1,20 @@
+{
+  "request_key": "448fe6a41c2d9c11775a97d183adc7bb78c6c012a6881b706038533e4ad3b52f",
+  "status": "failed",
+  "rows": [],
+  "artifacts": [],
+  "calls": {
+    "step_0000": 0,
+    "step_0500": 0,
+    "step_1000": 0,
+    "step_1500": 0,
+    "step_2000": 0
+  },
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "trainable_parameters": 31457280,
+  "train_items": 500,
+  "checkpoints": [],
+  "losses": [],
+  "error": "ValueError: The current scheduler class <class 'SubsetScheduler'>'s `set_timesteps` does not support custom sigmas schedules. Please check whether you are using the correct scheduler."
+}
