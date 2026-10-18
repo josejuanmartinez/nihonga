@@ -87,6 +87,77 @@ def anchor_parts():
             '<div class="verdict"><p><b>Spelling recovers step by step, then plateaus below B.</b> More text data and a larger attention branch kept improving velocity (6.11% overall) but brought exact signs only from 5/12 to 6/12, against 9/12 for B. The rule registered before this last run said that 6/12 or fewer means a bridge alone does not carry spelling. <b>Strategy change:</b> choose and bridge the four blocks with this recipe, then heal the whole 28-block student on text-rich data, instead of perfecting each bridge on its own.</p></div>']
 
 
+def bridge5_explainer():
+    rows = [['Hidden state of every token (4,096 numbers)', 'yes', 'yes'],
+            ['Other tokens (attention)', 'no: each token is transformed alone', 'yes: 8 heads'],
+            ['Timestep (how noisy the image is)', 'no: same correction at every step', 'yes: scale and gate'],
+            ['Token positions (RoPE)', 'no', 'yes'],
+            ['Prompt key/value cache', 'no', 'yes: its own slot'],
+            ['Weights', '2.1M', '25.2M (original block: 218M)']]
+    return ('<h3 id="bridge-inputs">What this bridge sees, and what it ignores</h3>'
+            '<p class="summary">The rank-256 bridge receives exactly one thing: each token&rsquo;s hidden state. It never looks at '
+            'other tokens, does not know which denoising step it is in, and has no notion of where a token sits in the image. '
+            'That is enough for block 5, whose update is small, but not for a block like 13. The attention bridge designed in '
+            '<a href="#phase7-inside-bridge">Phase 7</a> adds each missing input.</p>'
+            + table('What each bridge receives', ['Input', 'Rank-256 bridge (block 5)', 'Attention bridge (block 13, Phase 7)'], rows))
+
+
+def inside_bridge_parts():
+    return ['<h3 id="phase7-inside-bridge">Inside the attention bridge</h3>',
+            '<p class="summary">The best bridge for block 13 is a miniature block: modulated attention followed by a modulated MLP, '
+            'the same structure as the original, with a quarter of the attention heads and a much narrower MLP. Its attention '
+            'output starts at zero, so a fresh attention branch leaves the conditioned MLP bridge unchanged.</p>',
+            '<div class="charts bridge-diagrams">'
+            '<figure class="chart"><figcaption><b>The attention bridge for block 13</b></figcaption><a href="bridge13-architecture.svg">'
+            '<img src="bridge13-architecture.svg" width="560" height="1060" alt="Inputs: hidden states, timestep modulation, positions and a prefix cache. '
+            'An attention branch with 8 heads updates image tokens; a conditioned MLP branch updates all tokens. About 25.2 million weights."></a></figure>'
+            '<figure class="chart"><figcaption><b>RoPE: position as a rotation</b></figcaption><a href="rope-explainer.svg">'
+            '<img src="rope-explainer.svg" width="760" height="1090" alt="One pair of query numbers drawn as an arrow, rotated by position times a fixed '
+            'frequency; the attention score depends only on the distance between tokens; pairs turn at different speeds; in images some pairs follow '
+            'the row and others the column."></a></figure></div>',
+            '<p class="summary"><b>Timestep modulation: scale and gate.</b> At every step the model turns the timestep into one vector shared by '
+            'all blocks: <code>[scale1, gate1, scale2, gate2]</code>, 4 &times; 4,096 numbers. A real block multiplies its normalised input by '
+            '<code>(1 + scale)</code>, which turns each channel up or down for this noise level, and its output by <code>tanh(gate)</code>, which '
+            'decides how much of the update to add. The bridge learns per-channel mixes of these same values (about 25,000 weights) and starts '
+            'exactly like a real block: <code>scale_attn = scale1</code>, <code>gate_attn = gate1</code>, <code>scale_mlp = scale2</code>, '
+            '<code>gate_mlp = gate2</code>. Prompt tokens use the row for a clean image (t = 0), as in the model.</p>',
+            '<p class="summary"><b>Heads: 4,096 &rarr; 1,024 = 8 &times; 128.</b> Each token&rsquo;s query, key and value are projected to 1,024 '
+            'numbers and split into 8 heads of 128. Each head compares tokens in its own 128-number space, so different heads can attend to '
+            'different things; their outputs are joined and projected back to 4,096. The original block has 32 such heads. The bridge keeps '
+            '128 per head, because the model&rsquo;s position code is built for that size, and saves cost with fewer heads.</p>',
+            '<p class="summary"><b>RMSNorm on Q and K.</b> Before comparing tokens, each 128-number query and key is rescaled to a standard '
+            'length, <code>x / &radic;mean(x&sup2;)</code>, times learned weights. An attention score is a dot product; without this, a few large '
+            'vectors can make scores explode and the softmax lock onto one token. The original blocks do the same.</p>',
+            '<p class="summary"><b>RoPE: position as a rotation.</b> On its own, attention does not know where a token is: shuffle the tokens and '
+            'the scores do not change. RoPE pairs up each head&rsquo;s 128 numbers into 64 two-dimensional pairs and rotates every pair by '
+            '<code>angle = position &times; frequency</code>. Two patches showing the same letter at different places get the same arrows pointing '
+            'in different directions. When a rotated query meets a rotated key, their score depends only on the difference of the angles, '
+            'that is, on <b>how far apart</b> the two tokens are, so a head can learn &ldquo;look at the patch just to my right&rdquo; once and use '
+            'it anywhere in the image. Nothing about the rotation is learned: <code>frequency = 1 / 10000^(2i/d)</code> per pair, fast for some '
+            'pairs (neighbours) and slow for others (coarse layout), like the hands of a clock. In Qwen-Image 2.1 the 64 pairs are split by axis: '
+            '8 follow the image or text segment, 28 the row and 28 the column; image tokens get a (row, column) on their grid, centred at zero, '
+            'and prompt tokens advance one step per word. The angles are precomputed once as a table. RoPE is applied to Q and K only, after '
+            'RMSNorm; V, the content being passed along, is not rotated. This is why the attention bridge can help spelling: to write '
+            '&ldquo;Anchor&rdquo;, the patch for &ldquo;c&rdquo; must know that &ldquo;n&rdquo; is just left of it and &ldquo;h&rdquo; just right.</p>',
+            '<p class="summary"><b>Why rotations rather than classic position embeddings?</b> The classic approach adds a learned (or fixed '
+            'sinusoidal) vector for each absolute position to every token once, at the input. RoPE differs in four ways that matter here. '
+            '(1) <b>Relative by construction</b>: the score depends exactly on the offset between two tokens, so a pattern learned in one corner '
+            'works everywhere; with absolute vectors the model has to infer offsets indirectly. (2) <b>Applied in every attention layer</b>, '
+            'directly to queries and keys, so position information cannot fade as it travels through 32 blocks, and it never mixes into the '
+            'content passed in V. (3) <b>Any grid size</b>: the formula works for any number of rows and columns, which suits a model that renders '
+            '1024&times;1024, 1376&times;768 or 896&times;1184 images; a learned table only covers the sizes it was trained on. (4) <b>No extra '
+            'weights</b>, and two-dimensional by simply splitting the pairs between rows and columns. RoPE is not perfect: positions far beyond '
+            'the trained range still behave worse, but it has become the standard choice in modern diffusion transformers.</p>',
+            table('The two bridges and the block they replace',
+                  ['', 'Rank-256 bridge (block 5)', 'Attention bridge (block 13)', 'Original block 13'],
+                  [['Looks at other tokens', 'no', 'yes, 8 heads &times; 128', 'yes, 32 heads &times; 128'],
+                   ['Knows the timestep', 'no', 'yes (scale, gate)', 'yes (scale, gate)'],
+                   ['Token positions', 'no', 'yes (RoPE)', 'yes (RoPE)'],
+                   ['Prompt key/value cache', 'no', 'yes, own slot', 'yes'],
+                   ['MLP', '4,096 &rarr; 256 &rarr; 4,096, GELU', '4,096 &rarr; 1,024 &rarr; 4,096, GELU, conditioned', '4,096 &rarr; 12,288 &rarr; 4,096, SwiGLU'],
+                   ['Weights', '2.1M', '25.2M', '218.1M']])]
+
+
 def variant_review_parts():
     path = ROOT / 'data/phase7/bridge_variant_images/review.json'
     if not path.exists():
@@ -139,7 +210,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + variant_review_parts() + anchor_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts()
 
 
 def bridge13_section(protocol, report):
@@ -274,6 +345,10 @@ def replace_between(text, marker, content):
 
 
 def ensure_markers(text):
+    if '<!-- p4-bridge -->' not in text:
+        anchor = 'Open either diagram for the standalone SVG.</p>'
+        i = text.index(anchor) + len(anchor)
+        text = text[:i] + '\n    <!-- p4-bridge --><!-- /p4-bridge -->' + text[i:]
     if '<!-- p7-scan -->' not in text:
         i = text.index('<h3 id="phase7-adaptive">')
         j = text.index('</p>', text.index('<p class="note">The existing 10 and 50 validation prompts', i)) + 4
@@ -320,6 +395,7 @@ def main():
         is_template = path.suffix == '.py'
         if '{' in scan + status or '}' in scan + status:
             raise RuntimeError('Generated HTML must not contain braces (the build script embeds it in f-strings).')
+        text = replace_between(text, 'p4-bridge', bridge5_explainer())
         text = replace_between(text, 'p7-scan', scan)
         text = replace_between(text, 'p7-status', status)
         text = re.sub(r'(Research notebook \| updated )<time datetime="[0-9-]+">[^<]+</time>', lambda m: m.group(1) + stamp, text)
