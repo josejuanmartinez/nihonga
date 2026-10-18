@@ -329,9 +329,28 @@ def phase9_parts():
             'and made version 1 slower than the teacher. In BF16 a bridge costs less than half a block and version 1 is about 4% faster per step, '
             'as expected from removing 2 of 32 blocks, with nearly identical images (one small sign flips). The large gain is still to come from '
             'step distillation: 40 steps take 6.9 s per image, 8 steps about 1.5 s. Memory will fall with quantization.</p></div>',
-            '<p class="summary"><b>Now training:</b> our own 8-step and 4-step lightning LoRAs on version 1 (BF16 bridges), by trajectory '
-            'distillation from 545 recorded 40-step teacher trajectories; every checkpoint is judged by its distance to the teacher and by the '
-            'text grids and general images.</p>']
+            ] + phase10_parts()
+
+
+
+def phase10_parts():
+    rows = [['8 steps, naive (step 0)', '41.5%', '38.9%', '43.5%'], ['8 steps, LoRA step 500', '<b>37.0%</b>', '<b>35.8%</b>', '37.9%'],
+            ['4 steps, naive (step 0)', '49.6%', '48.0%', '50.9%']]
+    return ['<h3 id="phase10-lightning">Our own lightning LoRAs (in progress)</h3>',
+            '<p class="summary"><b>Method: trajectory distillation.</b> The intact teacher (32 blocks, 40 steps) was run on 500 training prompts '
+            '(450 with text) and 45 held-out prompts, saving the latent after every step: 545 trajectories, 11.9 GB. The student&rsquo;s 8 (or 4) '
+            'steps are exact subsets of the teacher&rsquo;s 40-step schedule, every 5th (or 10th) point. Starting from a teacher latent, one student '
+            'step is trained to land where 5 (or 10) teacher steps land. A rank-32 LoRA on the attention of the 30 blocks of version 1 learns it '
+            '(31.5 million weights; the BF16 bridges stay frozen). Every 500 of 2000 updates the LoRA is saved and judged: the distance between its '
+            'final latent and the teacher&rsquo;s 40-step final latent for the same noise (relative L2, on the 45 held-out prompts, text and general '
+            'separately), and the same 45 images for spelling and quality, beside the LightX2V 4-step LoRA.</p>',
+            table('Distance to the teacher&rsquo;s 40-step result (lower is closer)', ['Checkpoint', 'All 45', 'Text (20)', 'General (25)'], rows),
+            '<figure class="comparison"><a href="images/phase10-8step-s500.jpg"><img loading="lazy" src="images/phase10-8step-s500.jpg" '
+            'alt="Top row: version 1 sampled in 8 steps without the LoRA. Bottom row: after 500 updates of the 8-step LoRA, the Rusty Anchor seed 1 is '
+            'spelled correctly and compositions move towards the teacher; small text and the Chinese strokes are not yet right"></a>'
+            '<figcaption><b>8 steps, before (top) and after 500 updates (bottom)</b> | the teacher&rsquo;s layouts return and &ldquo;The Rusty '
+            'Anchor&rdquo; is spelled in seed 1; small text and fine strokes are not there yet</figcaption></figure>',
+            '<p class="note">Training continues to 2000 updates for both LoRAs; the spelling count of every checkpoint follows.</p>']
 
 
 def variant_review_parts():
