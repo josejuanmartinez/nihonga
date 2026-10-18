@@ -1,6 +1,6 @@
 # Phase 6 research record
 
-`phase6-architecture-healing.ipynb` is the step-by-step notebook. The Python files here implement its
+`phase6-one-block-student.ipynb` is the step-by-step notebook. The Python files here implement its
 replay diagnostics, teacher controls, hidden-state capture, bridge assessment, and
 two parameter-efficient healing pilots. JSON summaries, requests, checksums,
 manifests are versioned with the source so the saved
