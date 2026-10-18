@@ -1,0 +1,31 @@
+{
+  "type": "qualitative, two AI visual reviewers against each prompt, one seed per prompt",
+  "model": "B with block 20 skipped (blocks 5 and 20 removed, 30 blocks), no bridge for block 20",
+  "vs_B": {
+    "worse": [
+      "P02",
+      "P03",
+      "P04",
+      "P11",
+      "P13",
+      "P19",
+      "P22",
+      "P23",
+      "P28"
+    ],
+    "same": 20,
+    "better": [
+      "P01"
+    ]
+  },
+  "findings": [
+    "No loss of fine detail, texture or sharpness: P06, P07, P08 and P14 match B",
+    "Losses are mid-scale structure: repeating patterns (P02), geometry (P03, P04), object identity (P19), figure coherence (P11, P13), composition (P22, P23)",
+    "One malformed letter on seed 0 of the Emma sign ('Bizthday'): exact signs for 5+20 corrected from ~11 to ~10/12"
+  ],
+  "comparison": {
+    "first block-13 bridge": 15,
+    "best per-token block-13 bridge (cond r1024)": 8,
+    "5+20 no bridge": 9
+  }
+}

@@ -224,7 +224,13 @@ def combination_parts():
             '<div class="verdict"><p><b>Removing 5 and 20 keeps spelling at teacher level, with no bridge for 20.</b> Its velocity error doubles, '
             'almost entirely at the last denoising moment: block 20 refines detail after the letters have formed. The two tests disagree, so '
             'general images decide next. Removals compound: 17 keeps spelling alone but not on top of 20, and four blocks skipped without '
-            'bridges break text, completely when 16 sits next to 17.</p></div>']
+            'bridges break text, completely when 16 sits next to 17.</p></div>',
+            '<p class="summary"><b>General images with 5 and 20 removed.</b> On the 30 standard prompts it is worse than B on 9, similar on 20 '
+            'and better on 1. Fine detail and texture are intact (lace, circuit board, skin, hair). The losses are mid-scale structure: a '
+            'checkerboard breaks apart, simple solids lose their geometry, an alarm clock disappears, crowded scenes and figures lose coherence, '
+            'and one letter is malformed (so about 10/12 exact signs). The first block-13 bridge was worse on 15 of these prompts and the best '
+            'per-token one on 8: removing 20 with no bridge already matches the best block-13 bridge on general quality while keeping '
+            'spelling. A bridge for block 20 is the next step.</p>']
 
 
 def variant_review_parts():
