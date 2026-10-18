@@ -10,8 +10,8 @@ Phase 6 is read from those records in the final section of `phase6-one-block-stu
 `phase7-second-block-removal.ipynb` is the Phase 7 notebook: every step with its exact
 worker code (as executed), results and interpretation. Re-running it reuses saved
 results; it only launches Modal work for a missing result when `ALLOW_GPU = True`.
-`phase8-heal-30-block-student.ipynb` is Phase 8: healing the 30-block student (blocks 5 and 20 bridged);
-removals three and four follow in Phase 9. New experiments are added there as notebook steps.
+`phase8-heal-30-block-student.ipynb` is Phase 8: healing the 30-block student (blocks 5 and 20 bridged).
+Version 1 keeps two blocks removed, unhealed; Phase 9 adds the 8-step lightning LoRA and Phase 10 quantization. New experiments are added there as notebook steps.
 The published 4 October record is preserved byte for byte in
 `data/published/2026-10-04/results.json`; its source inventory is in
 `reconciliation.json` beside it. These are published summaries, not recovered
