@@ -7,6 +7,10 @@ The original notebooks end during Phase 6. Later Modal experiment records and
 embedded worker sources have now been recovered under `data/recovered/`.
 `phase6-7-recovered-continuation.ipynb` is an explicitly reconstructed notebook;
 the original later notebooks were not present in the archive.
+`phase7-adaptive-pruning.ipynb` is the Phase 7 notebook: every step with its exact
+worker code (as executed), results and interpretation. Re-running it reuses saved
+results; it only launches Modal work for a missing result when `ALLOW_GPU = True`.
+New experiments are added there as notebook steps.
 The published 4 October record is preserved byte for byte in
 `data/published/2026-10-04/results.json`; its source inventory is in
 `reconciliation.json` beside it. These are published summaries, not recovered
