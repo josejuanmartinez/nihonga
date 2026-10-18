@@ -1,0 +1,10 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Can an attention bridge recover the mid-scale structure lost when block 20 is removed, without losing spelling?",
+  "base": "B with block 20 removed: ~10/12 exact signs; against B on the 30 general prompts worse on 9, similar on 20, better on 1; velocity 10.46% overall (late moment 13.6%)",
+  "bridge": "AttentionConditionedBridge at slot 20: rank-1024 conditioned MLP plus 8 heads x 128 attention with its own prefix cache; outputs zero-initialised, so step 0 equals skipping block 20; block-5 bridge frozen",
+  "training": "End to end against live teacher velocity; data: 60 original TRAIN prompts, 600 early examples, 500 saved recordings (450 text); 40% text; AdamW lr 4e-4, 20-update warmup, clip 1.0, 600 updates",
+  "checkpoints": "Every 100 updates (0-600), each saved and evaluated on 180 velocity comparisons (quantitative); the 4-seed text grid and the 30 general prompts are rendered for the checkpoints that velocity does not rule out (qualitative)",
+  "decision_rule": "Choose the checkpoint that keeps exact signs at >= 9/12 (B level) and is worse than B on the fewest of the 30 general prompts; velocity is reported and breaks ties."
+}
