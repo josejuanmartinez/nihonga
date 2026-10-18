@@ -1,0 +1,10 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Does healing the whole student recover the spelling that a block-13 bridge alone cannot?",
+  "student": "C = B (block 5 pretrained bridge) + block-13 8-head attention bridge e2e_attn8_text; 30 surviving blocks",
+  "healing": "LoRA rank 16 (alpha 16) on to_q, to_k, to_v and to_out.0 of all 30 original blocks, base weights frozen; both bridges fully trainable (FP32 masters)",
+  "data": "60 original TRAIN prompts (three moments), 600 early-pool TRAIN examples and the 500 saved recordings (450 text, 50 general; early and middle moments) from the 8-head bridge run",
+  "training": "Final-velocity loss against live teacher targets; each update one full prompt (40% text recordings, 60% original + general) weighted 0.7 plus one early-pool example weighted 0.3; AdamW, LoRA lr 1e-4, bridges lr 2e-5, 20-update warmup, clip 1.0, 400 updates, gate10 every 100, lowest selected (including the unhealed start)",
+  "decision_rule": "Exact signs across four seeds on The Rusty Anchor, Happy Birthday Emma and Moonlight Motel: >= 8/12 means healing recovers spelling and the plan continues (upgrade the block-5 bridge, bridges for blocks #3 and #4 chosen non-adjacent after re-ranking, one final healing, then the speed LoRA); < 8/12 means rethink before spending more. Velocity and the 30-prompt sheets are reported; velocity on the wider prompts must not get worse than C (6.08%)."
+}
