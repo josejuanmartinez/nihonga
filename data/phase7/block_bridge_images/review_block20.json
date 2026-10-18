@@ -1,0 +1,46 @@
+{
+  "type": "qualitative, two AI reviewers against each prompt; text count by Claude (4 seeds)",
+  "step_200": {
+    "exact_signs": "~11/12",
+    "worse_than_B": [
+      "P02",
+      "P03",
+      "P04",
+      "P11",
+      "P13",
+      "P19",
+      "P23"
+    ],
+    "same": 23
+  },
+  "step_600": {
+    "exact_signs": "~10/12",
+    "worse_than_B": [
+      "P02",
+      "P10",
+      "P19",
+      "P23",
+      "P30"
+    ],
+    "same": 25
+  },
+  "no_bridge": {
+    "exact_signs": "~10/12",
+    "worse_than_B": 9
+  },
+  "recovered_by_step_600": [
+    "P03 star",
+    "P04 polyhedron",
+    "P11 four adults",
+    "P13 cyclist",
+    "P20 wall seam",
+    "P22 melting clocks",
+    "P28 'Birthday'"
+  ],
+  "not_recovered": [
+    "P19 alarm clock",
+    "P23 clutter",
+    "P02 upper checkerboard"
+  ],
+  "decision": "Step 600 chosen by the preregistered rule (exact signs >= 9/12, fewest prompts worse than B); frozen for the block-5 bridge."
+}

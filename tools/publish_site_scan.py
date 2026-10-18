@@ -233,6 +233,19 @@ def combination_parts():
             'spelling. A bridge for block 20 is the next step.</p>']
 
 
+def block20_bridge_parts():
+    rows = [['no bridge for 20', '10.46%', '~10/12', '9'], ['bridge, step 200', '7.92%', '<b>~11/12</b>', '7'],
+            ['<b>bridge, step 600</b>', '<b>7.76%</b>', '~10/12', '<b>5</b>']]
+    return ['<h3 id="phase7-block20-bridge">A bridge for block 20</h3>',
+            '<p class="summary">Block 20 got the recipe that worked best for block 13 (timestep-conditioned MLP plus an 8-head attention '
+            'branch, trained end to end on 450 text and general recordings), starting from &ldquo;skip block 20&rdquo;. Every 100 updates it '
+            'was saved and measured; two checkpoints were rendered on the 30 standard prompts and the four-seed text grid.</p>',
+            table('Blocks 5 and 20 removed: velocity, spelling and general quality', ['Block 20', 'Overall velocity', 'Exact signs', 'Worse than B (of 30)'], rows),
+            '<div class="verdict"><p><b>Step 600 is chosen.</b> It keeps spelling above B and restores most of the structure lost without a '
+            'bridge: simple solids, the four friends, the cyclist, the melting clocks. A missing alarm clock and some clutter remain. The '
+            'block-5 bridge is now being rebuilt with the same recipe, with this block-20 bridge frozen in place.</p></div>']
+
+
 def variant_review_parts():
     path = ROOT / 'data/phase7/bridge_variant_images/review.json'
     if not path.exists():
@@ -285,7 +298,7 @@ def variants_parts():
             '<p class="summary">Every real block receives the model’s shared timestep modulation (scale and gate values that tell it how noisy the image is); the first bridge ignored it, and its errors were worst at early, high-noise steps. We fitted three variants on identical data: a 4× wider plain bridge, and a bridge that mirrors a block’s MLP branch, h + tanh(gate) · MLP(LN(h) · (1 + scale)), with scale and gate learned mixes of the model’s own modulation, at rank 256 and 1024.</p>',
             table('Block-13 bridge variants inside B: velocity error against the teacher (B with block 13 kept: 5.40% overall)',
                   ['Bridge', 'Parameters', 'Overall', 'Check (10)', 'Wider (50)', 'Early / middle / late'], rows),
-            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts() + healing_parts() + block13_alone_parts() + text_selection_parts() + combination_parts()
+            '<div class="verdict"><p><b>Capacity alone does nothing; conditioning does.</b> The conditioned rank-1024 bridge recovers about a third of the gap between the first bridge and B on the wider prompts. Training three times longer, or adding 3×3 local mixing over the image-token grid, moves the error by only about 0.05 points: the per-token fitting objective has reached its ceiling. Training the same bridge on the final velocity instead (gradients through the frozen blocks 14-31) did not help either. Adding a small attention branch (4 heads, image tokens attending to the prompt and to each other, with its own prefix cache) and training it on the final velocity gave the first clear step: 6.42% overall and 6.29% on the wider prompts, still improving when training stopped. Continuing it on 200 newly recorded training prompts, 150 of them text, brought it to 6.25% overall and 6.21% on the wider prompts, and cut its single worst comparison from about 26% to 18.5% (B: 17.9%). Growing the attention branch to 8 heads and training on 450 text prompts reached 6.11% overall and 6.08% on the wider prompts, 0.7 points from B.</p></div>'] + inside_bridge_parts() + variant_review_parts() + anchor_parts() + healing_parts() + block13_alone_parts() + text_selection_parts() + combination_parts() + block20_bridge_parts()
 
 
 def bridge13_section(protocol, report):

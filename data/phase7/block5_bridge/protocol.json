@@ -1,0 +1,9 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Does the attention-bridge recipe for block 5 recover what the simple block-5 bridge loses (B: 9/12 exact signs vs teacher 11/12), with block 20 already bridged?",
+  "student": "Blocks 5 and 20 removed (30 blocks); the chosen block-20 bridge checkpoint frozen in place; block 5 gets a new AttentionConditionedBridge (rank-1024 conditioned MLP plus 8 heads) whose outputs start at zero (= skipping block 5)",
+  "training": "Same recipe as the block-20 bridge: end to end against live teacher velocity, 500 saved recordings (450 text) plus the original prompts, 40% text, AdamW lr 4e-4, 600 updates",
+  "checkpoints": "Every 100 updates, each saved and evaluated on 180 velocity comparisons; image tests (4-seed text grid and the 30 general prompts) for the promising checkpoints",
+  "decision_rule": "Accept the new block-5 bridge if it keeps exact signs >= the 5+20 model with the old block-5 bridge and is worse than B on no more of the 30 general prompts; velocity reported. Then fine-tune both bridges jointly, then decide on healing with both tests."
+}
