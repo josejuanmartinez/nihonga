@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-18",
+  "reviewer": "Claude (full-resolution crops)",
+  "method": "Exact signs: The Rusty Anchor, Happy Birthday Emma, Moonlight Motel x seeds 0-3. The seed-2 Moonlight Motel plaque is cut off by the frame bottom in every 5+20 row, so 11 signs are scorable.",
+  "scores": {
+    "old_bridge5": {
+      "anchor": 3,
+      "emma": 4,
+      "motel": 2,
+      "total": 9
+    },
+    "s100": {
+      "anchor": 3,
+      "emma": 4,
+      "motel": 2,
+      "total": 9
+    },
+    "s200": {
+      "anchor": 4,
+      "emma": 4,
+      "motel": 2,
+      "total": 10
+    },
+    "s300": {
+      "anchor": 3,
+      "emma": 4,
+      "motel": 1,
+      "total": 8
+    },
+    "s400": {
+      "anchor": 4,
+      "emma": 4,
+      "motel": 1,
+      "total": 9
+    },
+    "s500": {
+      "anchor": 4,
+      "emma": 2,
+      "motel": 0,
+      "total": 6
+    },
+    "s600": {
+      "anchor": 3,
+      "emma": 3,
+      "motel": 1,
+      "total": 7
+    }
+  },
+  "notes": [
+    "Old: seed 0 Anchar. s100: seed 3 Achor. s200: all headlines right, but seed 3 adds a second garbled plaque (RTONSIY ATCHAD). s300: seed 0 Anchior. s500: Emmaa, Mooslight. s600: Ancher, Emraa, Aloonlight Hotel.",
+    "Poster: all new checkpoints write the seed-0 tagline Live in Berlin legibly (old bridge garbles it). Handwritten note: correct everywhere."
+  ],
+  "conclusion": "No clear spelling gain: best new checkpoint (step 200) is one sign above the old bridge, within seed noise, with worse velocity (8.09% vs 7.76%) and 12x the parameters (25.2M vs 2.1M)."
+}
