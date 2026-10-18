@@ -1,11 +1,38 @@
 {
   "type": "multi-seed text check, exact-spelling count per sign out of 4 seeds, read by Claude",
-  "The Rusty Anchor": {"teacher": 4, "B": 3, "cond_r1024_long": 0, "e2e_attn": 1, "e2e_attn_text": 1},
-  "Happy Birthday Emma": {"teacher": 4, "B": 3, "cond_r1024_long": 1, "e2e_attn": 1, "e2e_attn_text": 2},
-  "Moonlight Motel": {"teacher": 3, "B": 3, "cond_r1024_long": 1, "e2e_attn": 2, "e2e_attn_text": 2},
+  "The Rusty Anchor": {
+    "teacher": 4,
+    "B": 3,
+    "cond_r1024_long": 0,
+    "e2e_attn": 1,
+    "e2e_attn_text": 1,
+    "e2e_attn8_text": 1
+  },
+  "Happy Birthday Emma": {
+    "teacher": 4,
+    "B": 3,
+    "cond_r1024_long": 1,
+    "e2e_attn": 1,
+    "e2e_attn_text": 2,
+    "e2e_attn8_text": 2
+  },
+  "Moonlight Motel": {
+    "teacher": 3,
+    "B": 3,
+    "cond_r1024_long": 1,
+    "e2e_attn": 2,
+    "e2e_attn_text": 2,
+    "e2e_attn8_text": 3
+  },
   "notes": {
     "e2e_attn_text": "Rusty Anchor: seed 0 correct, seed 1 'Achar', seed 2 'Ancher', seed 3 'The Rust Anchor'. Emma: seed 0 correct, seed 1 'Emmaa', seed 2 matches B's stylised script, seed 3 'Lmna'. Moonlight: seed 3 'Moonlght'.",
-    "e2e_attn": "Emma counted 1 on the most lenient reading of seed 2 (same stylised script as B)."
+    "e2e_attn": "Emma counted 1 on the most lenient reading of seed 2 (same stylised script as B).",
+    "e2e_attn8_text": "Rusty Anchor: seed 0 correct, seed 1 'Achar', seed 2 'Anch-or', seed 3 'RustVnchor'. Emma: seeds 0 and 1 correct, seed 2 'Birlday Cnna', seed 3 'Birthay Emna'. Moonlight Motel: seeds 1-3 readable (seed 0 sign too small, as for teacher and B)."
   },
-  "verdict": "Text improves step by step (per-token 2/12, attention 4/12, attention + text data 5/12 across the three signs) but stays below B (9/12)."
+  "verdict": "Text improves step by step (per-token 2/12, attention 4/12, + 150 text prompts 5/12, 8 heads + 450 text prompts 6/12) but plateaus below B (9/12); velocity keeps improving (6.11% overall).",
+  "decision": {
+    "rule": "data/phase7/block13_bridge_e2e_text8/protocol.json: >=8/12 continue with bridges; <=6/12 bridges alone do not carry spelling",
+    "e2e_attn8_text_total": "6/12",
+    "outcome": "Strategy switch: choose and bridge four blocks with the attention recipe, then heal the whole 28-block student on text-rich data."
+  }
 }

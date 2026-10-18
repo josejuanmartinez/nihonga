@@ -79,12 +79,12 @@ def anchor_parts():
             '<figure class="comparison"><a href="images/phase7-anchor-seeds.jpg"><img loading="lazy" src="images/phase7-anchor-seeds.jpg" alt="B versus the attention bridge on four seeds: B correct three times, the attention bridge once"></a>'
             '<figcaption><b>Four seeds, B (top) and the attention bridge (bottom)</b> | B 3/4 correct; attention bridge 1/4 (&ldquo;Achar&rdquo;, &ldquo;Ancher&rdquo;, garbled)</figcaption></figure></div>',
             table('Exactly spelled signs out of four seeds, by bridge',
-                  ['Text', 'Teacher', 'B', 'Per-token (cond r1024)', 'Attention', 'Attention + 150 text prompts'],
-                  [['The Rusty Anchor', '4/4', '3/4', '0/4', '1/4', '1/4'],
-                   ['Happy Birthday Emma', '4/4', '3/4', '1/4', '1/4', '2/4'],
-                   ['Moonlight Motel', '3/4', '3/4', '1/4', '2/4', '2/4'],
-                   ['<b>All three</b>', '<b>11/12</b>', '<b>9/12</b>', '<b>2/12</b>', '<b>4/12</b>', '<b>5/12</b>']]),
-            '<div class="verdict"><p><b>Spelling recovers step by step but not yet to B.</b> Only 2 of the bridge&rsquo;s first 60 training prompts contained text; adding 150 recorded text prompts improved velocity everywhere and fixed &ldquo;Emma&rdquo; on one more seed, while &ldquo;The Rusty Anchor&rdquo; stays at one seed of four (seed 3 now reads &ldquo;The Rust Anchor&rdquo;).</p></div>']
+                  ['Text', 'Teacher', 'B', 'Per-token (cond r1024)', 'Attention', '+ 150 text prompts', '8 heads + 450 text prompts'],
+                  [['The Rusty Anchor', '4/4', '3/4', '0/4', '1/4', '1/4', '1/4'],
+                   ['Happy Birthday Emma', '4/4', '3/4', '1/4', '1/4', '2/4', '2/4'],
+                   ['Moonlight Motel', '3/4', '3/4', '1/4', '2/4', '2/4', '3/4'],
+                   ['<b>All three</b>', '<b>11/12</b>', '<b>9/12</b>', '<b>2/12</b>', '<b>4/12</b>', '<b>5/12</b>', '<b>6/12</b>']]),
+            '<div class="verdict"><p><b>Spelling recovers step by step, then plateaus below B.</b> More text data and a larger attention branch kept improving velocity (6.11% overall) but brought exact signs only from 5/12 to 6/12, against 9/12 for B. The rule registered before this last run said that 6/12 or fewer means a bridge alone does not carry spelling. <b>Strategy change:</b> choose and bridge the four blocks with this recipe, then heal the whole 28-block student on text-rich data, instead of perfecting each bridge on its own.</p></div>']
 
 
 def variant_review_parts():
