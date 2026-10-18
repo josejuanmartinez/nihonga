@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-10-18",
+    "test": "Phase 6 blinded 129-prompt adherence test (pretrained bridge vs update 120)",
+    "source_id": "p1-0c99a4e9e487",
+    "prompt": "A giraffe partially hidden behind a coffee mug, stylized 3D",
+    "blind_scores": {
+      "pretrained": "fail",
+      "update120": "pass"
+    },
+    "corrected_scores": {
+      "pretrained": "pass",
+      "update120": "fail"
+    },
+    "reason": "Human review: the pretrained bridge hides the giraffe's neck behind the mug as requested; update 120 draws the neck coming out of the mug, as if the giraffe were inside it.",
+    "original_result": {
+      "clear_passes": {
+        "pretrained": 83,
+        "update120": 86
+      },
+      "gain_points": 2.3,
+      "paired_bootstrap_95pct_points": [
+        0.0,
+        5.4
+      ]
+    },
+    "corrected_result": {
+      "clear_passes": {
+        "pretrained": 84,
+        "update120": 85
+      },
+      "update120_wins": 2,
+      "pretrained_wins": 1,
+      "gain_points": 0.8,
+      "paired_bootstrap_95pct_points": [
+        -1.6,
+        3.9
+      ],
+      "bootstrap": "20000 replicates, seed 20261018"
+    },
+    "decision": "Unchanged: keep the pretrained bridge; update 120 is not promoted.",
+    "policy": "The locked blind scores are preserved; this correction is recorded alongside them, not substituted."
+  }
+]
