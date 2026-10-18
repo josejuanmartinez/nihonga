@@ -1,0 +1,10 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Does LoRA healing, trained jointly with both attention bridges, recover what removing blocks 5 and 20 cost, without losing spelling?",
+  "base": "30-block student: B with block 5 replaced by the new attention bridge (step 200) and block 20 by its attention bridge (step 600); 10/11 legible exact signs; 8.09% velocity",
+  "training": "Rank-16 LoRA (alpha 16) on to_q, to_k, to_v, to_out of the 30 original blocks, lr 2e-5; both bridges fine-tuned at lr 1e-5; original weights frozen. End to end against live teacher velocity: 60 TRAIN prompts, 600 early examples, 500 saved recordings (450 text); 40% text. 200 updates of 2 examples, warmup 10, clip 1.0",
+  "checkpoints": "Every 50 updates (0-200): saved, velocity on 180 comparisons (quantitative), four-seed text grid (qualitative); the chosen checkpoint is also rendered on the 25 general prompts",
+  "decision_rule": "Choose the checkpoint with the most exact signs that is not worse than the unhealed 30-block student on the general prompts; velocity is reported and breaks ties. If no checkpoint beats the unhealed student on spelling or images, keep it unhealed.",
+  "after": "LoRA merged into the weights (W + B*A); then a text-aware scan inside the healed student chooses removals three and four."
+}

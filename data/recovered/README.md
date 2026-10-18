@@ -39,6 +39,6 @@ Monitoring and verification, from the repository root:
 python tools/verify_recovered_tensors.py              # verify restored tensors against the ledgers
 ```
 
-The recovered end of Phase 6 is read in the final section of `phase6.ipynb`; the recovered
+The recovered end of Phase 6 is read in the final section of `phase6-architecture-healing.ipynb`; the recovered
 Phase 7 history opens `phase7-adaptive-pruning.ipynb`. The reconstructed
 `phase6-7-recovered-continuation.ipynb` was folded into those two notebooks on 18 October 2026.
