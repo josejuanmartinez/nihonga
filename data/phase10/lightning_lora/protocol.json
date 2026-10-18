@@ -1,0 +1,11 @@
+{
+  "status": "preregistered_not_executed",
+  "date": "2026-10-18",
+  "question": "Can a LoRA on version 1 sample in 8 (and 4) steps while keeping spelling and images close to the 40-step teacher?",
+  "base": "Version 1: unhealed 30-block student (block-5 attention bridge step 200, block-20 attention bridge step 600); bridges frozen",
+  "method": "Trajectory distillation: teacher (32 blocks, 40 steps) latents recorded for 500 training prompts (450 text); the K-step grid is every (40/K)-th point of the teacher grid; from the teacher latent at a grid point, one student step must reach the teacher latent at the next grid point (normalized velocity loss)",
+  "training": "LoRA rank 32 (alpha 32) on to_q, to_k, to_v, to_out of the 30 original blocks; AdamW lr 1e-4, warmup 50, clip 1.0, 2000 updates of one example; 8 steps and 4 steps trained separately",
+  "checkpoints": "Every 500 updates (0-2000): saved; quantitative = relative L2 between the K-step final latent and the teacher 40-step final latent for the same noise, on 45 held-out prompts; qualitative = the same 45 images (four-seed text grids, 25 general prompts)",
+  "references": "Phase 9: teacher naive 8/4 steps (0 signs), LightX2V 4-step LoRA on the teacher (9/12 signs), teacher 40 steps (11/12), version 1 at 40 steps (10/11 legible)",
+  "decision_rule": "For each K, choose the checkpoint with the most exact signs whose general images are not clearly worse than its neighbours; endpoint distance reported and breaks ties."
+}
