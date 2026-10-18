@@ -243,7 +243,37 @@ def block20_bridge_parts():
             table('Blocks 5 and 20 removed: velocity, spelling and general quality', ['Block 20', 'Overall velocity', 'Exact signs', 'Worse than B (of 30)'], rows),
             '<div class="verdict"><p><b>Step 600 is chosen.</b> It keeps spelling above B and restores most of the structure lost without a '
             'bridge: simple solids, the four friends, the cyclist, the melting clocks. A missing alarm clock and some clutter remain. The '
-            'block-5 bridge is now being rebuilt with the same recipe, with this block-20 bridge frozen in place.</p></div>']
+            'block-5 bridge was then rebuilt with the same recipe, with this block-20 bridge frozen in place.</p></div>'] + block5_bridge_parts()
+
+
+def block5_bridge_parts():
+    rows = [['old rank-256 bridge (2.1M weights)', '<b>7.76%</b>', '9'], ['new bridge, step 100', '8.09%', '9'],
+            ['<b>new bridge, step 200</b>', '8.09%', '<b>10</b>'], ['new bridge, step 300', '8.06%', '8'],
+            ['new bridge, step 400', '8.11%', '9'], ['new bridge, step 500', '8.20%', '6'], ['new bridge, step 600', '7.93%', '7']]
+    return ['<h3 id="phase7-block5-bridge">A new bridge for block 5</h3>',
+            '<p class="summary">Block 5 had kept its first bridge, a plain rank-256 bottleneck fitted per token in Phase 5. It was rebuilt with '
+            'exactly the architecture and training of the block-20 bridge (timestep-conditioned rank-1024 MLP plus an 8-head attention branch '
+            'with its own prefix cache, about 25.2 million weights, trained end to end against the teacher velocity for 600 updates), with the '
+            'block-20 bridge (step 600) frozen. Every 100 updates the bridge was saved, measured on 180 velocity comparisons, and rendered on '
+            'the four-seed text grid; the best spelling checkpoint was also rendered on the 25 general prompts.</p>',
+            table('Blocks 5 and 20 removed, block-20 bridge fixed: which block-5 bridge', ['Block 5', 'Overall velocity', 'Exact signs (of 11 legible)'], rows),
+            '<div class="decision-examples"><figure class="comparison"><a href="images/phase7-block5-anchor.jpg"><img loading="lazy" src="images/phase7-block5-anchor.jpg" '
+            'alt="The Rusty Anchor, four seeds: teacher, B, old block-5 bridge (seed 0 Anchar) and new block-5 bridge at step 200 (all correct)"></a>'
+            '<figcaption><b>The Rusty Anchor, four seeds</b> | the old block-5 bridge writes &ldquo;Anchar&rdquo; in seed 0; the new bridge at step 200 '
+            'spells all four headlines but adds a garbled second plaque in seed 3</figcaption></figure>'
+            '<figure class="comparison"><a href="images/phase7-block5-poster.jpg"><img loading="lazy" src="images/phase7-block5-poster.jpg" '
+            'alt="GOLDEN RIVER poster, four seeds: the new bridge writes the tagline Live in Berlin legibly in seed 0"></a>'
+            '<figcaption><b>Poster, four seeds</b> | the new bridge writes the tagline &ldquo;Live in Berlin&rdquo; in seed 0, which the old '
+            'bridge garbles</figcaption></figure></div>',
+            '<div class="verdict"><p><b>Decision: the new block-5 bridge at step 200 replaces the old one.</b> It spells one more sign '
+            '(10 of 11 against 9; the seed-2 motel plaque is cut off by the frame in every row) and writes the poster tagline, while on the 25 '
+            'general prompts it is indistinguishable from the old bridge. Its velocity is 0.3 points worse, but velocity cannot see letters: '
+            'the checkpoint with the best velocity (step 600) is among the worst at spelling. The extra 23 million weights are about 0.3% of '
+            'the model. One sign over four seeds is close to noise, so the next text grids will show whether the gain holds.</p></div>',
+            '<p class="summary"><b>The 30-block student</b> is now B plus both attention bridges (block 5 at step 200, block 20 at step 600). '
+            'Next it is healed: a rank-16 LoRA on the attention of all blocks, trained jointly with both bridges at a low learning rate, '
+            'with every checkpoint saved and judged by velocity and by spelling. Removals three and four are then chosen by a new text-aware '
+            'scan inside the healed student.</p>']
 
 
 def variant_review_parts():
