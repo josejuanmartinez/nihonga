@@ -1,0 +1,114 @@
+{
+  "request_key": "0798f8a0e7e69d6315db348b0ab97b9fb960634505592bffdbcddbecd4ecbcc5",
+  "status": "failed",
+  "rows": [],
+  "artifacts": [],
+  "calls": {
+    "step_0000": 45,
+    "step_0500": 45,
+    "step_1000": 0,
+    "step_1500": 0,
+    "step_2000": 0,
+    "step_2500": 0,
+    "step_3000": 0
+  },
+  "optimizer_updates": 500,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "trainable_parameters": 31457280,
+  "train_items": 1000,
+  "checkpoints": [
+    {
+      "step": 0,
+      "seconds": 97.47809289499992,
+      "endpoint_mean": 0.3853103253576491,
+      "endpoint_text": 0.38270830512046816,
+      "endpoint_general": 0.3873919415473938,
+      "teacher_mean": 0.41460186309284636,
+      "teacher_text": 0.38939506858587264,
+      "teacher_general": 0.4347672986984253
+    }
+  ],
+  "losses": [
+    {
+      "step": 25,
+      "mean_loss": 0.025346067781792953
+    },
+    {
+      "step": 50,
+      "mean_loss": 0.01092406356241554
+    },
+    {
+      "step": 75,
+      "mean_loss": 0.010375646129250526
+    },
+    {
+      "step": 100,
+      "mean_loss": 0.012354244303423911
+    },
+    {
+      "step": 125,
+      "mean_loss": 0.009345098499907181
+    },
+    {
+      "step": 150,
+      "mean_loss": 0.00821820920042228
+    },
+    {
+      "step": 175,
+      "mean_loss": 0.004259758889675141
+    },
+    {
+      "step": 200,
+      "mean_loss": 0.00433453043573536
+    },
+    {
+      "step": 225,
+      "mean_loss": 0.007442240552627481
+    },
+    {
+      "step": 250,
+      "mean_loss": 0.00735618012258783
+    },
+    {
+      "step": 275,
+      "mean_loss": 0.0030850996845401824
+    },
+    {
+      "step": 300,
+      "mean_loss": 0.0043494273710530254
+    },
+    {
+      "step": 325,
+      "mean_loss": 0.004595331713790074
+    },
+    {
+      "step": 350,
+      "mean_loss": 0.005795707777142525
+    },
+    {
+      "step": 375,
+      "mean_loss": 0.00737199979077559
+    },
+    {
+      "step": 400,
+      "mean_loss": 0.006742852139868773
+    },
+    {
+      "step": 425,
+      "mean_loss": 0.006507161094923504
+    },
+    {
+      "step": 450,
+      "mean_loss": 0.006434164851671084
+    },
+    {
+      "step": 475,
+      "mean_loss": 0.006986390572274103
+    },
+    {
+      "step": 500,
+      "mean_loss": 0.010483791109290905
+    }
+  ],
+  "error": "KeyError: 'init_lora'"
+}
