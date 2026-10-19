@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 1640" role="img" aria-labelledby="t d">
+<title id="t">Nihonga v1 architecture</title>
+<desc id="d">The Qwen-Image-2.1 transformer with 32 slots: blocks 5 and 20 are replaced by bridges, shown in detail (an 8-head attention branch with its own prompt cache, then a conditioned MLP); the other 30 blocks carry a fused rank-32 Lightning LoRA. Sampling uses 10 points of the 40-step schedule: three small steps, then seven large ones.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="#231F1A"/></marker></defs>
+<rect width="1120" height="1640" fill="#F7EEE3"/>
+<g font-family="Georgia,serif">
+<text x="560.0" y="44" font-size="25" text-anchor="middle" fill="#231F1A" font-style="italic">Nihonga v1: 30 blocks, 2 bridges, a fused Lightning LoRA, 10 steps</text>
+<text x="560.0" y="74" font-size="15" text-anchor="middle" fill="#5E564B" >The Qwen-Image-2.1 transformer; text encoder and VAE unchanged</text>
+<rect x="40" y="114" width="400" height="30" rx="2" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="134" font-size="14" text-anchor="middle" fill="#231F1A" >prompt tokens + image tokens</text>
+<path d="M240.0 144 L240.0 158" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="40" y="160" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="176" font-size="12" text-anchor="middle" fill="#231F1A" >block 0 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="187" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="203" font-size="12" text-anchor="middle" fill="#231F1A" >block 1 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="214" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="230" font-size="12" text-anchor="middle" fill="#231F1A" >block 2 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="241" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="257" font-size="12" text-anchor="middle" fill="#231F1A" >block 3 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="268" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="284" font-size="12" text-anchor="middle" fill="#231F1A" >block 4 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="295" width="400" height="23" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="311" font-size="13" text-anchor="middle" fill="#231F1A" font-weight="bold">slot 5 · bridge · ~25 M</text>
+<rect x="40" y="322" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="338" font-size="12" text-anchor="middle" fill="#231F1A" >block 6 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="349" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="365" font-size="12" text-anchor="middle" fill="#231F1A" >block 7 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="376" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="392" font-size="12" text-anchor="middle" fill="#231F1A" >block 8 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="403" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="419" font-size="12" text-anchor="middle" fill="#231F1A" >block 9 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="430" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="446" font-size="12" text-anchor="middle" fill="#231F1A" >block 10 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="457" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="473" font-size="12" text-anchor="middle" fill="#231F1A" >block 11 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="484" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="500" font-size="12" text-anchor="middle" fill="#231F1A" >block 12 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="511" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="527" font-size="12" text-anchor="middle" fill="#231F1A" >block 13 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="538" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="554" font-size="12" text-anchor="middle" fill="#231F1A" >block 14 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="565" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="581" font-size="12" text-anchor="middle" fill="#231F1A" >block 15 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="592" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="608" font-size="12" text-anchor="middle" fill="#231F1A" >block 16 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="619" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="635" font-size="12" text-anchor="middle" fill="#231F1A" >block 17 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="646" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="662" font-size="12" text-anchor="middle" fill="#231F1A" >block 18 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="673" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="689" font-size="12" text-anchor="middle" fill="#231F1A" >block 19 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="700" width="400" height="23" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="716" font-size="13" text-anchor="middle" fill="#231F1A" font-weight="bold">slot 20 · bridge · ~25 M</text>
+<rect x="40" y="727" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="743" font-size="12" text-anchor="middle" fill="#231F1A" >block 21 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="754" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="770" font-size="12" text-anchor="middle" fill="#231F1A" >block 22 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="781" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="797" font-size="12" text-anchor="middle" fill="#231F1A" >block 23 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="808" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="824" font-size="12" text-anchor="middle" fill="#231F1A" >block 24 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="835" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="851" font-size="12" text-anchor="middle" fill="#231F1A" >block 25 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="862" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="878" font-size="12" text-anchor="middle" fill="#231F1A" >block 26 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="889" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="905" font-size="12" text-anchor="middle" fill="#231F1A" >block 27 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="916" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="932" font-size="12" text-anchor="middle" fill="#231F1A" >block 28 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="943" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="959" font-size="12" text-anchor="middle" fill="#231F1A" >block 29 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="970" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="986" font-size="12" text-anchor="middle" fill="#231F1A" >block 30 · 218 M · Lightning LoRA fused in</text>
+<rect x="40" y="997" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="1013" font-size="12" text-anchor="middle" fill="#231F1A" >block 31 · 218 M · Lightning LoRA fused in</text>
+<path d="M240.0 1026 L240.0 1040" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="40" y="1042" width="400" height="30" rx="2" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="1062" font-size="14" text-anchor="middle" fill="#231F1A" >velocity → next latent</text>
+<rect x="512" y="88" width="576.0" height="1076.0" fill="none" stroke="#E8D5B5" stroke-width="3" rx="4"/>
+<g transform="translate(520,96) scale(1.0)">
+
+
+
+
+<g font-family="Georgia,serif">
+<text x="280.0" y="36" font-size="23" text-anchor="middle" fill="#231F1A" font-style="italic">The bridge in slots 5 and 20</text>
+<rect x="20" y="56" width="122" height="46" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="81" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >hidden h</text>
+<text x="81" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 per token</text>
+<rect x="152" y="56" width="122" height="46" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="213" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >timestep</text>
+<text x="213" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >scale · gate</text>
+<rect x="284" y="56" width="122" height="46" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="345" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >positions</text>
+<text x="345" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >RoPE</text>
+<rect x="416" y="56" width="122" height="46" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="477" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >cache</text>
+<text x="477" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >prompt K, V</text>
+<rect x="30" y="122" width="500" height="430" rx="4" fill="none" stroke="#5E564B" stroke-dasharray="5 4"/>
+<text x="44" y="142" font-size="13" text-anchor="start" fill="#5E564B" >ATTENTION BRANCH · image tokens</text>
+<path d="M81 102 V160" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="60" y="160" width="440" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="186" font-size="16" text-anchor="middle" fill="#231F1A" >LayerNorm(h) × (1 + scale_attn)</text>
+<path d="M150 200 V228" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 200 V228" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M410 200 V228" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="228" width="120" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="150" y="250" font-size="13" text-anchor="middle" fill="#231F1A" >Q · 4,096 → 1,024</text>
+<text x="150" y="266" font-size="12" text-anchor="middle" fill="#231F1A" >8 heads × 128</text>
+<rect x="220" y="228" width="120" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="250" font-size="13" text-anchor="middle" fill="#231F1A" >K · 4,096 → 1,024</text>
+<text x="280" y="266" font-size="12" text-anchor="middle" fill="#231F1A" >8 heads × 128</text>
+<rect x="350" y="228" width="120" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="410" y="250" font-size="13" text-anchor="middle" fill="#231F1A" >V · 4,096 → 1,024</text>
+<text x="410" y="266" font-size="12" text-anchor="middle" fill="#231F1A" >8 heads × 128</text>
+<path d="M150 274 V300" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 274 V300" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="300" width="250" height="44" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="215" y="320" font-size="15" text-anchor="middle" fill="#231F1A" >RMSNorm, then RoPE</text>
+<text x="215" y="336" font-size="12" text-anchor="middle" fill="#231F1A" >on Q and K, per 128-d head</text>
+<path d="M347 102 V118" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M347 118 H520 V322 H346" stroke="#231F1A" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+<path d="M480 102 V112 H530 V400 H471" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M215 344 V372" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M410 274 V372" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="372" width="380" height="58" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="394" font-size="16" text-anchor="middle" fill="#231F1A" >softmax(Q·Kᵀ / √128) · V</text>
+<text x="280" y="414" font-size="12" text-anchor="middle" fill="#231F1A" >queries: image tokens · keys: prompt + image</text>
+<text x="522" y="360" font-size="11" text-anchor="end" fill="#5E564B" >step 0: store</text>
+<text x="522" y="374" font-size="11" text-anchor="end" fill="#5E564B" >later: reuse</text>
+<path d="M280 430 V458" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="458" width="380" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="480" font-size="15" text-anchor="middle" fill="#231F1A" >out · 1,024 → 4,096</text>
+<text x="280" y="496" font-size="12" text-anchor="middle" fill="#231F1A" >× tanh(gate_attn) · starts at zero</text>
+<path d="M280 504 V524" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="538" r="14" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="544" font-size="20" text-anchor="middle" fill="#231F1A" >+</text>
+<path d="M44 180 H38 V538 H265" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<text x="150" y="530" font-size="11" text-anchor="middle" fill="#5E564B" >h kept on the residual path</text>
+<rect x="30" y="572" width="500" height="372" rx="4" fill="none" stroke="#5E564B" stroke-dasharray="5 4"/>
+<text x="44" y="592" font-size="13" text-anchor="start" fill="#5E564B" >CONDITIONED MLP BRANCH · all tokens</text>
+<path d="M280 552 V610" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="60" y="610" width="440" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="636" font-size="16" text-anchor="middle" fill="#231F1A" >LayerNorm(h′) × (1 + scale_mlp)</text>
+<path d="M280 650 V676" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="130" y="676" width="300" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="701" font-size="15" text-anchor="middle" fill="#231F1A" >down · 4,096 → 1,024</text>
+<path d="M280 716 V740" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="200" y="740" width="160" height="36" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="763" font-size="15" text-anchor="middle" fill="#231F1A" >GELU</text>
+<path d="M280 776 V800" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="130" y="800" width="300" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="825" font-size="15" text-anchor="middle" fill="#231F1A" >up · 1,024 → 4,096</text>
+<path d="M280 840 V864" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="130" y="864" width="300" height="36" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="887" font-size="15" text-anchor="middle" fill="#231F1A" >× tanh(gate_mlp)</text>
+<path d="M280 900 V912" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="926" r="14" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="932" font-size="20" text-anchor="middle" fill="#231F1A" >+</text>
+<path d="M60 630 H44 V926 H265" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 940 V966" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="110" y="966" width="340" height="42" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="992" font-size="16" text-anchor="middle" fill="#231F1A" >h_out · 4,096 per token</text>
+<text x="280" y="1036" font-size="14" text-anchor="middle" fill="#5E564B" >≈ 25.2M weights · 8 heads   (an original block: 218M · 32 heads)</text>
+</g></g>
+<path d="M440 306 C480 306, 470 136, 512 136" stroke="#231F1A" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow)"/>
+<path d="M440 711 C480 711, 470 136, 512 136" stroke="#231F1A" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow)"/>
+<rect x="40" y="1196.0" width="500" height="380" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="290" y="1228.0" font-size="19" text-anchor="middle" fill="#231F1A" font-weight="bold">The Lightning LoRA (fused)</text>
+<text x="62" y="1262.0" font-size="15" text-anchor="start" fill="#231F1A" >A LoRA learns a thin correction beside a frozen</text>
+<text x="62" y="1288.0" font-size="15" text-anchor="start" fill="#231F1A" >matrix: W·x + B·(A·x), with B 4,096 × 32 and A 32 × 4,096.</text>
+<text x="62" y="1314.0" font-size="15" text-anchor="start" fill="#231F1A" >Ours: q, k, v and out of the 30 blocks, 31.5 M weights.</text>
+<text x="62" y="1340.0" font-size="15" text-anchor="start" fill="#231F1A" ></text>
+<text x="62" y="1366.0" font-size="15" text-anchor="start" fill="#231F1A" >Step distillation: one LoRA step is trained to land</text>
+<text x="62" y="1392.0" font-size="15" text-anchor="start" fill="#231F1A" >where five steps of the pruned model’s own 40-step</text>
+<text x="62" y="1418.0" font-size="15" text-anchor="start" fill="#231F1A" >path land, on 1,000 prompts; letter tokens, found by</text>
+<text x="62" y="1444.0" font-size="15" text-anchor="start" fill="#231F1A" >OCR, count ten times in the loss.</text>
+<text x="62" y="1470.0" font-size="15" text-anchor="start" fill="#231F1A" ></text>
+<text x="62" y="1496.0" font-size="15" text-anchor="start" fill="#231F1A" >Fused after training: W′ = W + B·A.</text>
+<text x="62" y="1522.0" font-size="15" text-anchor="start" fill="#231F1A" >No extra weights, files or time.</text>
+<rect x="580" y="1196.0" width="500" height="380" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="830" y="1228.0" font-size="19" text-anchor="middle" fill="#231F1A" font-weight="bold">The 10-step schedule</text>
+<text x="830" y="1252.0" font-size="13" text-anchor="middle" fill="#5E564B" >points of the stock 40-step schedule</text>
+<line x1="610" y1="1326.0" x2="1050" y2="1326.0" stroke="#231F1A" stroke-width="1.2"/>
+<line x1="610.0" y1="1322.0" x2="610.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="621.0" y1="1322.0" x2="621.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="632.0" y1="1322.0" x2="632.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="643.0" y1="1322.0" x2="643.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="654.0" y1="1322.0" x2="654.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="665.0" y1="1322.0" x2="665.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="676.0" y1="1322.0" x2="676.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="687.0" y1="1322.0" x2="687.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="698.0" y1="1322.0" x2="698.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="709.0" y1="1322.0" x2="709.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="720.0" y1="1322.0" x2="720.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="731.0" y1="1322.0" x2="731.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="742.0" y1="1322.0" x2="742.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="753.0" y1="1322.0" x2="753.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="764.0" y1="1322.0" x2="764.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="775.0" y1="1322.0" x2="775.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="786.0" y1="1322.0" x2="786.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="797.0" y1="1322.0" x2="797.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="808.0" y1="1322.0" x2="808.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="819.0" y1="1322.0" x2="819.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="830.0" y1="1322.0" x2="830.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="841.0" y1="1322.0" x2="841.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="852.0" y1="1322.0" x2="852.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="863.0" y1="1322.0" x2="863.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="874.0" y1="1322.0" x2="874.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="885.0" y1="1322.0" x2="885.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="896.0" y1="1322.0" x2="896.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="907.0" y1="1322.0" x2="907.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="918.0" y1="1322.0" x2="918.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="929.0" y1="1322.0" x2="929.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="940.0" y1="1322.0" x2="940.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="951.0" y1="1322.0" x2="951.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="962.0" y1="1322.0" x2="962.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="973.0" y1="1322.0" x2="973.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="984.0" y1="1322.0" x2="984.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="995.0" y1="1322.0" x2="995.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1006.0" y1="1322.0" x2="1006.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1017.0" y1="1322.0" x2="1017.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1028.0" y1="1322.0" x2="1028.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1039.0" y1="1322.0" x2="1039.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1050.0" y1="1322.0" x2="1050.0" y2="1330.0" stroke="#5E564B" stroke-width="0.8"/>
+<path d="M610.0 1320.0 Q615.5 1296.0 621.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="610.0" cy="1326.0" r="5" fill="#E8D5B5" stroke="#231F1A" stroke-width="1"/>
+<path d="M621.0 1320.0 Q632.0 1294.0 643.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="621.0" cy="1326.0" r="5" fill="#E8D5B5" stroke="#231F1A" stroke-width="1"/>
+<path d="M643.0 1320.0 Q654.0 1294.0 665.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="643.0" cy="1326.0" r="5" fill="#E8D5B5" stroke="#231F1A" stroke-width="1"/>
+<path d="M665.0 1320.0 Q692.5 1288.0 720.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="665.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M720.0 1320.0 Q747.5 1288.0 775.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="720.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M775.0 1320.0 Q802.5 1288.0 830.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="775.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M830.0 1320.0 Q857.5 1288.0 885.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="830.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M885.0 1320.0 Q912.5 1288.0 940.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="885.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M940.0 1320.0 Q967.5 1288.0 995.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="940.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M995.0 1320.0 Q1022.5 1288.0 1050.0 1320.0" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="995.0" cy="1326.0" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<circle cx="1050.0" cy="1326.0" r="5" fill="#231F1A"/>
+<text x="610" y="1352.0" font-size="12" text-anchor="start" fill="#5E564B" >noise</text>
+<text x="1050" y="1352.0" font-size="12" text-anchor="end" fill="#5E564B" >image</text>
+<text x="602" y="1392.0" font-size="15" text-anchor="start" fill="#231F1A" >Three small steps first (0, 1, 3, 5): the layout</text>
+<text x="602" y="1417.0" font-size="15" text-anchor="start" fill="#231F1A" >is decided there, and one big jump merged</text>
+<text x="602" y="1442.0" font-size="15" text-anchor="start" fill="#231F1A" >figures and dropped small objects.</text>
+<text x="602" y="1467.0" font-size="15" text-anchor="start" fill="#231F1A" >Then seven big LoRA steps (5, 10, …, 35, end).</text>
+<text x="602" y="1492.0" font-size="15" text-anchor="start" fill="#231F1A" ></text>
+<text x="602" y="1517.0" font-size="15" text-anchor="start" fill="#231F1A" >No classifier-free guidance:</text>
+<text x="602" y="1542.0" font-size="15" text-anchor="start" fill="#231F1A" >10 transformer calls per image instead of 40.</text>
+</g></svg>
