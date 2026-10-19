@@ -390,7 +390,55 @@ def phase10_parts():
             'reach the 32-block teacher&rsquo;s images, which version 1 cannot draw even in 40 steps, so it settles between the two; and only 50 of '
             'its 500 training prompts were general. The next run records <b>version 1&rsquo;s own 40-step trajectories</b> on 500 text and 500 '
             'general prompts and trains a fresh 8-step LoRA on them, with letters weighted as here, so it only has to compress steps; its '
-            'ceiling is version 1 at 40 steps.</p></div>']
+            'ceiling is version 1 at 40 steps.</p></div>'] + phase10_v1_parts()
+
+
+
+def phase10_v1_parts():
+    dist = [['0 (8 steps, no LoRA)', '38.5%', '38.3%', '38.7%', '41.5%'], ['500', '29.2%', '29.5%', '28.9%', '36.7%'],
+            ['1000', '29.5%', '28.4%', '30.4%', '36.7%'], ['1500', '29.2%', '29.1%', '29.3%', '36.3%'],
+            ['2000', '<b>27.6%</b>', '<b>26.9%</b>', '28.1%', '34.6%']]
+    spell = [['version 1, 40 steps', '4', '4', '3', '4', '15'], ['8 steps, teacher targets (+2000)', '2', '4', '3', '3', '12'],
+             ['8 steps, version 1 targets, update 1000', '<b>4</b>', '2', '3', '<b>4</b>', '<b>13</b>'],
+             ['8 steps, version 1 targets, update 1500', '3', '3', '<b>4</b>', '3', '<b>13</b>']]
+    drift = [['Checkerboard plate', '31.8%', '12.5%', '7.3%', '2.4%'], ['White star', '28.5%', '<b>3.1%</b>', '2.1%', '1.2%'],
+             ['Four friends', '24.0%', '6.7%', '2.9%', '1.9%'], ['Cyclist', '39.4%', '10.8%', '5.5%', '1.8%'],
+             ['Alarm clock', '39.9%', '12.2%', '3.2%', '1.7%']]
+    return ['<h3 id="phase10-v1-targets">Learning from version 1&rsquo;s own images</h3>',
+            '<p class="summary">Version 1 recorded its own 40-step trajectories (BF16 bridges, as it ships) on 1000 training prompts, now '
+            'balanced: 500 with text and 500 general, drawn from the Phase 1 training split across 38 subjects and checked against the held-out '
+            'prompts (1045 trajectories with the 45 held-out ones). OCR found text in 406 of the 500 text images. A fresh 8-step LoRA was trained on '
+            'them from zero, with letters weighted 10 times and a decaying learning rate. Its targets are now images version 1 can actually draw, '
+            'so its ceiling is version 1 at 40 steps.</p>',
+            table('Distance to version 1 at 40 steps (its target) and to the teacher, by update', ['Update', 'All 45', 'Text', 'General', 'Teacher, all'], dist),
+            table('Spelling, four seeds each (16 items)', ['Model', 'Rusty Anchor', 'Emma', 'Poster tagline', 'Handwritten note', 'Total'], spell),
+            '<figure class="comparison"><a href="images/phase10-v1targets-anchor.jpg"><img loading="lazy" src="images/phase10-v1targets-anchor.jpg" '
+            'alt="The Rusty Anchor, four seeds: version 1 at 40 steps, the earlier 8-step LoRA, and the new one at updates 500, 1000 and 1500; the '
+            'new one spells all four at update 1000"></a><figcaption><b>The Rusty Anchor</b> | learning from version 1&rsquo;s images, the 8-step LoRA '
+            'spells all four seeds at update 1000; with teacher targets it never passed two</figcaption></figure>',
+            '<p class="summary"><b>Structure.</b> Against version 1 at 40 steps, 20 of the 25 general images match closely; 5 are clearly worse. '
+            'The four friends are now right, but a new case appeared (the laptop lighting a face disappears), so the count stays at 5: the '
+            'checkerboard pattern, the star&rsquo;s outline, the semi-transparent cyclist, the missing alarm clock and the missing laptop. They are '
+            'not random: precise geometry, a small object the image depends on, or a thin subject. These five did not change between updates 500 '
+            'and 2000.</p>',
+            '<figure class="comparison"><a href="images/phase10-v1targets-general.jpg"><img loading="lazy" src="images/phase10-v1targets-general.jpg" '
+            'alt="The 25 general prompts in pairs: version 1 at 40 steps and the new 8-step LoRA at update 2000"></a><figcaption><b>All 25 general '
+            'prompts</b> | version 1 at 40 steps (left) and the new 8-step LoRA at update 2000 (right)</figcaption></figure>',
+            '<h4>Where the failures are made: a drift test</h4>',
+            '<p class="summary">If the student&rsquo;s first jump lands slightly off, the later steps may never recover. On the five failure prompts '
+            'the 8-step LoRA was started not from noise but from version 1&rsquo;s own latent after 5, 10 or 20 of its 40 steps.</p>',
+            table('Distance to version 1 at 40 steps, by starting point', ['Prompt', 'From noise', 'From step 5', 'From step 10', 'From step 20'], drift),
+            '<figure class="comparison"><a href="images/phase10-drift-test.jpg"><img loading="lazy" src="images/phase10-drift-test.jpg" '
+            'alt="Five failure prompts: version 1 at 40 steps, our 8-step LoRA from noise (broken), and from version 1 step 5, 10 and 20 (all right)"></a>'
+            '<figcaption><b>The first jump is the whole problem</b> | from version 1&rsquo;s step 5 the checkerboard is regular, the star is a star, '
+            'the cyclist is solid and the clock is there</figcaption></figure>',
+            '<div class="verdict"><p><b>The structure failures are made entirely in the first jump</b>, from noise to step 5 of 40, where the layout '
+            'is decided. The LoRA does the other seven jumps well. That suggests a fix without training: let version 1 itself take the start in a '
+            'few small steps, then hand over to the LoRA.</p></div>',
+            '<p class="summary"><b>Testing now.</b> Version 1 reaches step 5 in 1, 2, 3 or 5 small steps (8, 9, 10 or 12 model calls instead of '
+            '40), with the LoRA off for the start; and the same with the LoRA on throughout. The second matters for shipping: fused into the '
+            'weights, the LoRA cannot be switched off, so a single fused model would need to handle the small first steps itself. Otherwise the '
+            'LoRA stays separate and is switched off for the start, or it is retrained on the uneven schedule.</p>']
 
 
 def variant_review_parts():
