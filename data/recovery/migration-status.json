@@ -30,5 +30,27 @@
   "new_account_files_verified": 3374,
   "new_account_bytes_verified": 76502494509,
   "new_account_cache_aliases_verified": 31,
-  "new_account_verification_report": "data/recovery/new-account-verification.json"
+  "new_account_verification_report": "data/recovery/new-account-verification.json",
+  "neopolita_local_backup": {
+    "date": "2026-10-19",
+    "status": "complete",
+    "verified": "Every file on both new-account volumes exists under .archive/<volume>/ at the same path and size",
+    "nihonga_hf_cache": {
+      "files": 50,
+      "bytes_gb": 33.13
+    },
+    "nihonga_phase3_artifacts": {
+      "files": 9657,
+      "bytes_gb": 114.94
+    },
+    "downloaded_this_pass": {
+      "files": 6333,
+      "bytes_gb": 71.57,
+      "failures": 0
+    },
+    "inventory": "data/recovery/neopolita-nihonga-phase3-artifacts-inventory.json",
+    "sha256_ledger": "data/recovery/neopolita-nihonga-phase3-artifacts-ledger.json",
+    "release_weights": "phase10/release transformer shards also on huggingface.co/jjmcarrascosa/Nihonga-v1.0 (sizes match)",
+    "modal_volumes_can_be_deleted": true
+  }
 }
