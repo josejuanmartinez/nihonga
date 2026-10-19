@@ -961,11 +961,6 @@ Nihonga v1.0: 6.73 B parameters, 10 steps (3 small + 7 large), no CFG, 1.75 s pe
 Each item keeps the rule: a quantitative and a qualitative test, every checkpoint saved, Modal jobs watched and
 nothing left running.
 
-**Housekeeping**
-- [ ] Delete the duplicate Hugging Face repo `jjmcarrascosa/nihonga-v1` (keep `jjmcarrascosa/Nihonga-v1.0`) — needs explicit OK.
-- [ ] Run `example.py` from a clean environment against the Hugging Face repo (end-to-end install test).
-- [ ] Publish the LinkedIn post (`release/social/linkedin-nihonga.jpg`).
-
 **Phase 11: quantization**
 - [ ] Quantize the fused v1 transformer (FP8 first, then 4-bit), and the text encoder, which holds 17.5 GB and dominates memory.
 - [ ] Compare quantized against unquantized v1: speed, peak memory, spelling (16 items) and the 25 general prompts.
