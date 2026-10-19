@@ -435,10 +435,50 @@ def phase10_v1_parts():
             '<div class="verdict"><p><b>The structure failures are made entirely in the first jump</b>, from noise to step 5 of 40, where the layout '
             'is decided. The LoRA does the other seven jumps well. That suggests a fix without training: let version 1 itself take the start in a '
             'few small steps, then hand over to the LoRA.</p></div>',
-            '<p class="summary"><b>Testing now.</b> Version 1 reaches step 5 in 1, 2, 3 or 5 small steps (8, 9, 10 or 12 model calls instead of '
-            '40), with the LoRA off for the start; and the same with the LoRA on throughout. The second matters for shipping: fused into the '
-            'weights, the LoRA cannot be switched off, so a single fused model would need to handle the small first steps itself. Otherwise the '
-            'LoRA stays separate and is switched off for the start, or it is retrained on the uneven schedule.</p>']
+            ] + phase10_ship_parts()
+
+
+
+def phase10_ship_parts():
+    hybrid = [['8 (1 start step)', '37.7%', '25.8%'], ['9 (2)', '23.1%', '26.2%'], ['10 (3)', '14.5%', '29.1%'], ['12 (5)', '<b>7.7%</b>', '34.7%']]
+    spell = [['teacher', '40', '16'], ['version 1', '40', '15'], ['<b>version 1, fused, uneven schedule</b>', '12', '15'],
+             ['<b>version 1, fused, uneven schedule</b>', '<b>10</b>', '<b>14</b>'], ['version 1, 8-step LoRA from noise', '8', '13'],
+             ['LightX2V on the teacher', '4', '13']]
+    return ['<h4>A gentler start</h4>',
+            '<p class="summary">Version 1 takes the start from noise to step 5 of 40 in a few small Euler steps of its own schedule, then the '
+            'LoRA does the seven big jumps. Two variants: with the LoRA switched off for the start (which needs the LoRA kept separate), and with '
+            'it on throughout (what a single model with the LoRA fused into its weights does).</p>',
+            table('Median distance to version 1 at 40 steps, all 45 held-out images', ['Model calls (start steps)', 'LoRA off for the start', 'LoRA fused'], hybrid),
+            '<figure class="comparison"><a href="images/phase10-hybrid-off-fused.jpg"><img loading="lazy" src="images/phase10-hybrid-off-fused.jpg" '
+            'alt="Checkerboard, star, laptop, four friends, cyclist, alarm clock, Rusty Anchor, Emma, handwritten note: version 1 at 40 steps, then '
+            '10 and 12 steps with the LoRA off for the start and fused"></a><figcaption><b>Version 1 at 40 steps, then 10 and 12 steps, LoRA off '
+            'for the start or fused</b> | off reproduces version 1; fused draws different but clean images</figcaption></figure>',
+            '<p class="summary">With the LoRA off for the start, 12 steps reproduce version 1 almost exactly (7.7%). Fused, the distance looks '
+            'worse, but the images are not broken: the start drifts to a different composition and every step stays clean, so the star, cyclist, '
+            'alarm clock and checkerboard come out sharp. Distance cannot tell a different good image from a broken one. A separate LoRA was '
+            'ruled out, so the fused route was scored in full.</p>',
+            table('Spelling, four seeds each (16 items)', ['Model', 'Steps', 'Correct'], spell),
+            '<div class="decision-examples"><figure class="comparison"><a href="images/phase10-fused10-anchor.jpg"><img loading="lazy" src="images/phase10-fused10-anchor.jpg" '
+            'alt="The Rusty Anchor, four seeds: version 1 at 40 steps, fused at 10 and 12 steps"></a><figcaption><b>The Rusty Anchor</b> | '
+            'version 1 at 40 steps, fused at 10 and 12 steps</figcaption></figure>'
+            '<figure class="comparison"><a href="images/phase10-fused10-general.jpg"><img loading="lazy" src="images/phase10-fused10-general.jpg" '
+            'alt="The 25 general prompts as triplets: version 1 at 40 steps, fused at 10 steps, fused at 12 steps"></a><figcaption><b>All 25 '
+            'general prompts</b> | version 1 at 40, fused 10, fused 12</figcaption></figure></div>',
+            '<div class="verdict"><p><b>Version 1 ships fused, at 10 steps</b>: 4 times faster than 40, 14 of 16 spelling items (version 1 itself '
+            '15), and 2 of 25 general images clearly wrong (a laptop missing, five friends instead of four) instead of 5. 12 steps gains one sign '
+            'and no structure.</p></div>',
+            '<h4>How version 1 is run</h4>',
+            '<p class="summary">The LoRA is fused into the weights (W + B&middot;A in 120 attention layers), so the model is a single checkpoint. '
+            'The 10-step schedule is points 0, 1, 3, 5, 10, 15, 20, 25, 30 and 35 of the stock 40-step schedule for the image size, then the end. '
+            'The stock scheduler cannot produce it on its own, and passing those values naively would shift and stretch them a second time. Two '
+            'ways to run it:</p>',
+            '<dl class="facts"><div><dt>A &middot; scheduler class</dt><dd>A small scheduler that builds the stock 40-step schedule for the image '
+            'size and keeps those ten points; the reference implementation, shipped with the model.</dd></div>'
+            '<div><dt>B &middot; plain sigmas</dt><dd>A helper returns the ten values for a width and height; they are passed as '
+            '<code>sigmas</code> to the stock pipeline with a neutral scheduler (no shift, no terminal stretch). Works in diffusers as is, and in '
+            'ComfyUI and other interfaces through a custom-sigmas input.</dd></div></dl>',
+            '<p class="note">Being checked now: the stock pipeline with fused weights and route B, exactly as a user would run it, against the '
+            'tested images; and the later LoRA checkpoints.</p>']
 
 
 def variant_review_parts():
