@@ -69,7 +69,7 @@ def review_parts():
 
 
 def anchor_parts():
-    site = ROOT.parent / 'niwaki-page/nihonga/images'
+    site = ROOT.parent / 'josejuanmartinez.github.io/research/nihonga/images'
     if not (site / 'phase7-anchor-seed0.jpg').exists():
         return []
     return ['<h3 id="phase7-anchor">The attention bridge spells &ldquo;The Rusty Anchor&rdquo; on one seed</h3>',
@@ -704,7 +704,7 @@ def ensure_markers(text):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--site', default=str(ROOT.parent / 'niwaki-page'))
+    parser.add_argument('--site', default=str(ROOT.parent / 'josejuanmartinez.github.io/research'))  # the full research log moved here; niwakiai.com/nihonga is the release page
     args = parser.parse_args()
     site = Path(args.site)
     a, lat, b, q = load(SCAN_A), load(LATENCY_A), scan_b(), load(QUALITY_A)
@@ -730,7 +730,7 @@ def main():
             'A two-block cut that fails blinded review. Reassess from one block',
     }
     import re
-    for path in (site / 'nihonga/index.html', site / 'tools/build_nihonga.py'):
+    for path in (site / 'nihonga/index.html', site / 'nihonga/build_nihonga.py'):
         text = ensure_markers(path.read_text(encoding='utf-8'))
         for old, new in edits.items():
             text = text.replace(old, new)

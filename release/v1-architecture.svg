@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100" role="img" aria-labelledby="t d">
+<title id="t">Nihonga v1 architecture</title>
+<desc id="d">Qwen-Image-2.1 transformer with 32 slots: blocks 5 and 20 are replaced by small attention bridges, and a rank-32 adapter is fused into the attention of the other 30 blocks. Sampling uses 10 points of the stock 40-step schedule: three small steps, then seven large ones.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="#231F1A"/></marker></defs>
+<rect width="1100" height="1100" fill="#F7EEE3"/>
+<g font-family="Georgia,serif">
+<text x="550.0" y="44" font-size="26" text-anchor="middle" fill="#231F1A" font-style="italic">Nihonga v1: 30 blocks, 2 bridges, 10 steps</text>
+<text x="550.0" y="76" font-size="15" text-anchor="middle" fill="#5E564B" >The Qwen-Image-2.1 transformer, with the text encoder and VAE unchanged</text>
+<rect x="40" y="106" width="400" height="30" rx="2" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="126" font-size="14" text-anchor="middle" fill="#231F1A" >prompt tokens + image tokens</text>
+<path d="M240.0 136 L240.0 148" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="40" y="150" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="166" font-size="12" text-anchor="middle" fill="#231F1A" >block 0 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="177" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="193" font-size="12" text-anchor="middle" fill="#231F1A" >block 1 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="204" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="220" font-size="12" text-anchor="middle" fill="#231F1A" >block 2 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="231" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="247" font-size="12" text-anchor="middle" fill="#231F1A" >block 3 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="258" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="274" font-size="12" text-anchor="middle" fill="#231F1A" >block 4 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="285" width="400" height="23" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="301" font-size="13" text-anchor="middle" fill="#231F1A" font-weight="bold">slot 5 · bridge (attention + MLP) · ~25 M</text>
+<rect x="40" y="312" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="328" font-size="12" text-anchor="middle" fill="#231F1A" >block 6 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="339" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="355" font-size="12" text-anchor="middle" fill="#231F1A" >block 7 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="366" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="382" font-size="12" text-anchor="middle" fill="#231F1A" >block 8 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="393" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="409" font-size="12" text-anchor="middle" fill="#231F1A" >block 9 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="420" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="436" font-size="12" text-anchor="middle" fill="#231F1A" >block 10 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="447" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="463" font-size="12" text-anchor="middle" fill="#231F1A" >block 11 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="474" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="490" font-size="12" text-anchor="middle" fill="#231F1A" >block 12 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="501" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="517" font-size="12" text-anchor="middle" fill="#231F1A" >block 13 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="528" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="544" font-size="12" text-anchor="middle" fill="#231F1A" >block 14 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="555" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="571" font-size="12" text-anchor="middle" fill="#231F1A" >block 15 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="582" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="598" font-size="12" text-anchor="middle" fill="#231F1A" >block 16 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="609" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="625" font-size="12" text-anchor="middle" fill="#231F1A" >block 17 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="636" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="652" font-size="12" text-anchor="middle" fill="#231F1A" >block 18 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="663" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="679" font-size="12" text-anchor="middle" fill="#231F1A" >block 19 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="690" width="400" height="23" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="706" font-size="13" text-anchor="middle" fill="#231F1A" font-weight="bold">slot 20 · bridge (attention + MLP) · ~25 M</text>
+<rect x="40" y="717" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="733" font-size="12" text-anchor="middle" fill="#231F1A" >block 21 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="744" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="760" font-size="12" text-anchor="middle" fill="#231F1A" >block 22 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="771" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="787" font-size="12" text-anchor="middle" fill="#231F1A" >block 23 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="798" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="814" font-size="12" text-anchor="middle" fill="#231F1A" >block 24 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="825" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="841" font-size="12" text-anchor="middle" fill="#231F1A" >block 25 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="852" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="868" font-size="12" text-anchor="middle" fill="#231F1A" >block 26 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="879" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="895" font-size="12" text-anchor="middle" fill="#231F1A" >block 27 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="906" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="922" font-size="12" text-anchor="middle" fill="#231F1A" >block 28 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="933" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="949" font-size="12" text-anchor="middle" fill="#231F1A" >block 29 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="960" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="976" font-size="12" text-anchor="middle" fill="#231F1A" >block 30 · 218 M · adapter fused into q, k, v, out</text>
+<rect x="40" y="987" width="400" height="23" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="1003" font-size="12" text-anchor="middle" fill="#231F1A" >block 31 · 218 M · adapter fused into q, k, v, out</text>
+<path d="M240.0 1016 L240.0 1030" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="40" y="1032" width="400" height="30" rx="2" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="240.0" y="1052" font-size="14" text-anchor="middle" fill="#231F1A" >velocity → next latent (Euler step)</text>
+<rect x="500" y="106" width="560" height="200" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="780.0" y="134" font-size="18" text-anchor="middle" fill="#231F1A" font-weight="bold">The fused adapter</text>
+<text x="522" y="164" font-size="14" text-anchor="start" fill="#231F1A" >Rank 32 on q, k, v and out of the 30 blocks, trained so</text>
+<text x="522" y="186" font-size="14" text-anchor="start" fill="#231F1A" >that one step lands where five steps of the pruned</text>
+<text x="522" y="208" font-size="14" text-anchor="start" fill="#231F1A" >model’s own 40-step path land; letter tokens (found</text>
+<text x="522" y="230" font-size="14" text-anchor="start" fill="#231F1A" >by OCR) weigh ten times in the loss.</text>
+<text x="522" y="252" font-size="14" text-anchor="start" fill="#231F1A" ></text>
+<text x="522" y="274" font-size="14" text-anchor="start" fill="#231F1A" >Merged once: W′ = W + B·A. No extra weights or time.</text>
+<rect x="500" y="336" width="560" height="330" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="780.0" y="364" font-size="18" text-anchor="middle" fill="#231F1A" font-weight="bold">The 10-step schedule</text>
+<text x="780.0" y="390" font-size="13" text-anchor="middle" fill="#5E564B" >points of the stock 40-step schedule (noise → image)</text>
+<line x1="530" y1="456" x2="1030" y2="456" stroke="#231F1A" stroke-width="1.2"/>
+<line x1="530.0" y1="452" x2="530.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="542.5" y1="452" x2="542.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="555.0" y1="452" x2="555.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="567.5" y1="452" x2="567.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="580.0" y1="452" x2="580.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="592.5" y1="452" x2="592.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="605.0" y1="452" x2="605.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="617.5" y1="452" x2="617.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="630.0" y1="452" x2="630.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="642.5" y1="452" x2="642.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="655.0" y1="452" x2="655.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="667.5" y1="452" x2="667.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="680.0" y1="452" x2="680.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="692.5" y1="452" x2="692.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="705.0" y1="452" x2="705.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="717.5" y1="452" x2="717.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="730.0" y1="452" x2="730.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="742.5" y1="452" x2="742.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="755.0" y1="452" x2="755.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="767.5" y1="452" x2="767.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="780.0" y1="452" x2="780.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="792.5" y1="452" x2="792.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="805.0" y1="452" x2="805.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="817.5" y1="452" x2="817.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="830.0" y1="452" x2="830.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="842.5" y1="452" x2="842.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="855.0" y1="452" x2="855.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="867.5" y1="452" x2="867.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="880.0" y1="452" x2="880.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="892.5" y1="452" x2="892.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="905.0" y1="452" x2="905.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="917.5" y1="452" x2="917.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="930.0" y1="452" x2="930.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="942.5" y1="452" x2="942.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="955.0" y1="452" x2="955.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="967.5" y1="452" x2="967.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="980.0" y1="452" x2="980.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="992.5" y1="452" x2="992.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1005.0" y1="452" x2="1005.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1017.5" y1="452" x2="1017.5" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1030.0" y1="452" x2="1030.0" y2="460" stroke="#5E564B" stroke-width="0.8"/>
+<path d="M530.0 450 Q536.2 424 542.5 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="530.0" cy="456" r="5" fill="#E8D5B5" stroke="#231F1A" stroke-width="1"/>
+<path d="M542.5 450 Q555.0 422 567.5 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="542.5" cy="456" r="5" fill="#E8D5B5" stroke="#231F1A" stroke-width="1"/>
+<path d="M567.5 450 Q580.0 422 592.5 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="567.5" cy="456" r="5" fill="#E8D5B5" stroke="#231F1A" stroke-width="1"/>
+<path d="M592.5 450 Q623.8 416 655.0 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="592.5" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M655.0 450 Q686.2 416 717.5 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="655.0" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M717.5 450 Q748.8 416 780.0 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="717.5" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M780.0 450 Q811.2 416 842.5 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="780.0" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M842.5 450 Q873.8 416 905.0 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="842.5" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M905.0 450 Q936.2 416 967.5 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="905.0" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<path d="M967.5 450 Q998.8 416 1030.0 450" stroke="#231F1A" stroke-width="1.3" fill="none"/>
+<circle cx="967.5" cy="456" r="5" fill="#A7C2A0" stroke="#231F1A" stroke-width="1"/>
+<circle cx="1030.0" cy="456" r="5" fill="#231F1A"/>
+<text x="530" y="482" font-size="12" text-anchor="start" fill="#5E564B" >noise</text>
+<text x="1030" y="482" font-size="12" text-anchor="end" fill="#5E564B" >image</text>
+<text x="522" y="514" font-size="14" text-anchor="start" fill="#231F1A" >Three small steps first (points 0, 1, 3, 5): the layout is</text>
+<text x="522" y="535" font-size="14" text-anchor="start" fill="#231F1A" >decided at the start, and one big jump there merged</text>
+<text x="522" y="556" font-size="14" text-anchor="start" fill="#231F1A" >figures, dropped small objects and broke patterns.</text>
+<text x="522" y="577" font-size="14" text-anchor="start" fill="#231F1A" >Then seven large jumps (5, 10, …, 35, end), each five</text>
+<text x="522" y="598" font-size="14" text-anchor="start" fill="#231F1A" >steps of the original schedule.</text>
+<text x="522" y="619" font-size="14" text-anchor="start" fill="#231F1A" ></text>
+<text x="522" y="640" font-size="14" text-anchor="start" fill="#231F1A" >No classifier-free guidance; 10 transformer calls per image.</text>
+</g></svg>

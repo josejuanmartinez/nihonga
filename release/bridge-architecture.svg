@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 1060" role="img" aria-labelledby="t d">
+<title id="t">The Nihonga bridge (slots 5 and 20)</title>
+<desc id="d">Inputs: hidden states, the shared timestep modulation, token positions and a prefix key/value cache. An attention branch (8 heads of 128) updates image tokens, then a conditioned MLP branch updates all tokens. About 25.2 million weights, against 218 million in an original block. One replaces block 5 and one block 20.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="#231F1A"/></marker></defs>
+<rect width="560" height="1060" fill="#F7EEE3"/>
+<g font-family="Georgia,serif">
+<text x="280.0" y="36" font-size="23" text-anchor="middle" fill="#231F1A" font-style="italic">The bridge in slots 5 and 20</text>
+<rect x="20" y="56" width="122" height="46" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="81" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >hidden h</text>
+<text x="81" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 per token</text>
+<rect x="152" y="56" width="122" height="46" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="213" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >timestep</text>
+<text x="213" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >scale · gate</text>
+<rect x="284" y="56" width="122" height="46" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="345" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >positions</text>
+<text x="345" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >RoPE</text>
+<rect x="416" y="56" width="122" height="46" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="477" y="76" font-size="15" text-anchor="middle" fill="#231F1A" >cache</text>
+<text x="477" y="94" font-size="12" text-anchor="middle" fill="#231F1A" >prompt K, V</text>
+<rect x="30" y="122" width="500" height="430" rx="4" fill="none" stroke="#5E564B" stroke-dasharray="5 4"/>
+<text x="44" y="142" font-size="13" text-anchor="start" fill="#5E564B" >ATTENTION BRANCH · image tokens</text>
+<path d="M81 102 V160" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="60" y="160" width="440" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="186" font-size="16" text-anchor="middle" fill="#231F1A" >LayerNorm(h) × (1 + scale_attn)</text>
+<path d="M150 200 V228" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 200 V228" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M410 200 V228" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="228" width="120" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="150" y="250" font-size="13" text-anchor="middle" fill="#231F1A" >Q · 4,096 → 1,024</text>
+<text x="150" y="266" font-size="12" text-anchor="middle" fill="#231F1A" >8 heads × 128</text>
+<rect x="220" y="228" width="120" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="250" font-size="13" text-anchor="middle" fill="#231F1A" >K · 4,096 → 1,024</text>
+<text x="280" y="266" font-size="12" text-anchor="middle" fill="#231F1A" >8 heads × 128</text>
+<rect x="350" y="228" width="120" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="410" y="250" font-size="13" text-anchor="middle" fill="#231F1A" >V · 4,096 → 1,024</text>
+<text x="410" y="266" font-size="12" text-anchor="middle" fill="#231F1A" >8 heads × 128</text>
+<path d="M150 274 V300" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 274 V300" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="300" width="250" height="44" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="215" y="320" font-size="15" text-anchor="middle" fill="#231F1A" >RMSNorm, then RoPE</text>
+<text x="215" y="336" font-size="12" text-anchor="middle" fill="#231F1A" >on Q and K, per 128-d head</text>
+<path d="M347 102 V118" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M347 118 H520 V322 H346" stroke="#231F1A" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+<path d="M480 102 V112 H530 V400 H471" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M215 344 V372" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M410 274 V372" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="372" width="380" height="58" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="394" font-size="16" text-anchor="middle" fill="#231F1A" >softmax(Q·Kᵀ / √128) · V</text>
+<text x="280" y="414" font-size="12" text-anchor="middle" fill="#231F1A" >queries: image tokens · keys: prompt + image</text>
+<text x="522" y="360" font-size="11" text-anchor="end" fill="#5E564B" >step 0: store</text>
+<text x="522" y="374" font-size="11" text-anchor="end" fill="#5E564B" >later: reuse</text>
+<path d="M280 430 V458" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="90" y="458" width="380" height="46" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="480" font-size="15" text-anchor="middle" fill="#231F1A" >out · 1,024 → 4,096</text>
+<text x="280" y="496" font-size="12" text-anchor="middle" fill="#231F1A" >× tanh(gate_attn) · starts at zero</text>
+<path d="M280 504 V524" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="538" r="14" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="544" font-size="20" text-anchor="middle" fill="#231F1A" >+</text>
+<path d="M44 180 H38 V538 H265" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<text x="150" y="530" font-size="11" text-anchor="middle" fill="#5E564B" >h kept on the residual path</text>
+<rect x="30" y="572" width="500" height="372" rx="4" fill="none" stroke="#5E564B" stroke-dasharray="5 4"/>
+<text x="44" y="592" font-size="13" text-anchor="start" fill="#5E564B" >CONDITIONED MLP BRANCH · all tokens</text>
+<path d="M280 552 V610" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="60" y="610" width="440" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="636" font-size="16" text-anchor="middle" fill="#231F1A" >LayerNorm(h′) × (1 + scale_mlp)</text>
+<path d="M280 650 V676" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="130" y="676" width="300" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="701" font-size="15" text-anchor="middle" fill="#231F1A" >down · 4,096 → 1,024</text>
+<path d="M280 716 V740" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="200" y="740" width="160" height="36" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="763" font-size="15" text-anchor="middle" fill="#231F1A" >GELU</text>
+<path d="M280 776 V800" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="130" y="800" width="300" height="40" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="825" font-size="15" text-anchor="middle" fill="#231F1A" >up · 1,024 → 4,096</text>
+<path d="M280 840 V864" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="130" y="864" width="300" height="36" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="887" font-size="15" text-anchor="middle" fill="#231F1A" >× tanh(gate_mlp)</text>
+<path d="M280 900 V912" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="926" r="14" fill="#F7EEE3" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="932" font-size="20" text-anchor="middle" fill="#231F1A" >+</text>
+<path d="M60 630 H44 V926 H265" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 940 V966" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<rect x="110" y="966" width="340" height="42" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="280" y="992" font-size="16" text-anchor="middle" fill="#231F1A" >h_out · 4,096 per token</text>
+<text x="280" y="1036" font-size="14" text-anchor="middle" fill="#5E564B" >≈ 25.2M weights · 8 heads   (an original block: 218M · 32 heads)</text>
+</g></svg>
