@@ -1,22 +1,46 @@
 # NIHONGA: Qwen Image 2.1 Compression and Acceleration Plan
 
-## Recorded status (17 October 2026)
+## Status (19 October 2026): Nihonga v1.0 released
 
-The measured teacher has 32 blocks (~6.9B DiT parameters). Phases 0-5 are complete.
-The published Phase 6 conclusion selects the pretrained block-5 bridge; full-weight
-healing was not promoted after blinded image QA. Phase 7 candidate A removes blocks
-4-5 with a rank-512 region bridge and 60 healing updates. Its 7.41% wider validation
-error fails the historical 6.52% gate; the 30-prompt image screen was unblinded.
-The four-block cut (2-5) failed. Initial 17 October scan/benchmark/image jobs were
-stopped because they used the old account. The old account is download-only;
-continuation must run in the new account after payload migration and verification.
+**Nihonga v1.0** is Qwen-Image-2.1 with two of its 32 transformer blocks replaced by learned bridges and a fused
+Lightning LoRA, sampled in 10 steps instead of 40.
 
-Published summaries are preserved under `data/published/2026-10-04`; original
-Phase 6/7 requests, embedded sources and experiment summaries have been recovered
-from Modal; 10 original local review/protocol artifacts remain missing. Selected
-large tensors are being restored outside Git. See README.md and
-`data/phase7/NEXT_EXPERIMENT.md` for recovery prerequisites and experiment order.
-This status distinguishes published findings from locally reproduced evidence.
+| | Qwen-Image-2.1 | Nihonga v1.0 |
+|---|---|---|
+| Transformer | 32 blocks, 7.115 B parameters | 30 blocks + 2 bridges (slots 5 and 20), 6.729 B |
+| Steps | 40 | 10 (points 0, 1, 3, 5, 10, 15, 20, 25, 30, 35 of the 40-step schedule) |
+| Time per 1024 × 1024 image, one H100 | 6.89 s | 1.75 s (3.9× faster) |
+| Exact spelling, 16 hard items | 16 | 15 |
+| Peak GPU memory | 39.6 GB | 39.3 GB (the 17.5 GB text encoder is unchanged) |
+
+Weights: https://huggingface.co/jjmcarrascosa/Nihonga-v1.0 · release page: https://niwakiai.com/nihonga/ ·
+research log: https://josejuanmartinez.github.io/research/nihonga/ · shipped code: `release/nihonga.py`.
+Built with Qwen; Qwen Research License (non-commercial).
+
+### What we did, by notebook
+
+| Notebook | Outcome |
+|---|---|
+| `phase0-exploration` | 32-block single-stream DiT, hidden 4096, ~7.1 B parameters; no CFG at default |
+| `phase1-20k-pilot-dataset` | 20k prompts (17,991 train / 1,002 validation / 1,007 internal test), text rendering weighted ×2 |
+| `phase2-20k-pilot-baseline-established` | Teacher baseline on the internal test split and Qwen-Image-Bench |
+| `phase3-identify-layers-to-remove` | Block importance scans; first removal candidates |
+| `phase4-insert-bridge-modules` | Residual bottleneck bridges inserted and verified |
+| `phase5-pretrain-bridge-candidates` | Bridges pretrained; block 5, rank 256 selected (5.52% velocity error) |
+| `phase6-one-block-student` | One-block student **B** accepted; full-weight healing not promoted after blinded QA |
+| `phase7-second-block-removal` | Candidate A (blocks 4-5) rejected. Block 13 looked cheapest by velocity but carries spelling (teacher without it: ~5/12 signs); no bridge or healing recovered it. A **text-aware scan** chose **block 20**. Attention-conditioned bridges (8 heads, rank-1024 MLP, own prompt cache, ~25 M weights) trained end to end for block 20 (step 600) and a rebuilt block 5 (step 200) |
+| `phase8-heal-30-block-student` | LoRA healing improved velocity (8.09% → 7.84%) but not spelling, so **v1 stays unhealed and keeps two removed blocks** (decision: first release with 2 blocks, not 4) |
+| `phase9-lightning-baseline` | Few steps without distillation are unusable; the published LightX2V 4-step LoRA spells 13/16 ("Acchor"). Benchmark: FP32 bridges made v1 slower than the teacher; **BF16 bridges** make it ~4% faster per step |
+| `phase10-lightning-lora` | Our own **Lightning LoRA** (rank 32, attention of the 30 blocks) by trajectory distillation. Teacher targets plateaued (12/16, 5 of 25 structure failures); **OCR text-region weighting** (letters ×10) helped text; **training on v1's own trajectories** (500 text + 500 general prompts) fixed the Rusty Anchor; a **drift test** showed structure failures are made in the first jump; a **gentler start** (3 small steps) plus the fused LoRA gives 10 steps with 15/16 spelling and 2 of 25 structure differences. Release build verified (identical reload, two scheduler routes pixel-identical) |
+
+### Key lessons
+
+- Spelling breaks first, and average metrics (velocity, latent distance, PSNR) cannot see it. Every run needs a
+  quantitative and a qualitative test, and every checkpoint is kept.
+- Choose blocks to prune by text, not only by average error.
+- Small learned modules must run in BF16 at inference, or they cost more than the blocks they replace.
+- Distill towards targets the student can draw (its own trajectories), not the teacher's.
+- Few-step failures are made at the start; a gentler first segment fixes them without retraining.
 
 ## Goal
 
@@ -870,17 +894,13 @@ We tick each step as we complete it (`- [ ]` → `- [x]`).
 - [x] 4. Insert and verify residual bottleneck bridges (Phase 4).
 - [x] 5. Pretrain bridges; select block 5, rank 256 (Phase 5, 5.518% validation velocity error).
 - [x] 6. Close Phase 6: healing not promoted. Published full-weight continuation and blinded 129-prompt adherence QA retain pretrained; gain +2.3 points, 95% CI [0.0, 5.4], below +5 promotion bar. Original later records await recovery.
-- [ ] 7. We benchmark ([Phase 8](#phase-8--evaluate-the-pruned-model))
-- [ ] 8. We expand the dataset toward 100k ([Phase 15](#phase-15--dataset-size-strategy))
-- [ ] 9. We try 50 → accepted student architecture (31 or 30 blocks) ([Phase 18](#phase-18--progressive-architecture-reduction))
-- [ ] 10. We heal again
-- [ ] 11. We benchmark
-- [ ] 12. We distill 40 steps → 8 steps ([Phases 9–12](#phase-9--speed-distillation))
-- [ ] 13. We benchmark
-- [ ] 14. We distill 8 → 4 if worthwhile ([Phase 19](#phase-19--progressive-speed-reduction))
-- [ ] 15. We benchmark
-- [ ] 16. We quantize ([Phase 20](#phase-20--quantization))
-- [ ] 17. We run the final quality / latency / VRAM evaluation ([Phase 21](#phase-21--final-evaluation-matrix))
+- [x] 7. Second removal (Phase 7 notebook): candidate A (blocks 4-5) rejected; block 13 rejected on spelling; block 20 chosen by a text-aware scan; attention bridges for blocks 5 and 20.
+- [x] 8. Heal the 30-block student (Phase 8 notebook): velocity better, spelling not; v1 ships unhealed.
+- [x] 9. Few-step baselines and speed/memory benchmark (Phase 9 notebook); BF16 bridges.
+- [x] 10. Distill 40 → 8 steps with a Lightning LoRA (Phase 10 notebook): OCR-weighted letters, v1's own trajectories, gentler start → **10 steps**, fused.
+- [x] 11. Benchmark the release: 1.75 s vs 6.89 s per image, 15/16 spelling, 2/25 structure differences.
+- [x] 12. Release Nihonga v1.0 (Hugging Face, niwakiai.com/nihonga, research log on josejuanmartinez.github.io).
+- [ ] 13. Next steps: see the TODO below.
 
 # Final Architecture Concept
 
@@ -920,3 +940,51 @@ minimal quality loss
 The core principle is:
 
 **We do not simply remove computation. We replace expensive computation with cheap approximations, then we distill the original model's behavior back into the smaller architecture, and only then do we compress the denoising trajectory.**
+
+## As built: Nihonga v1.0
+
+```text
+Qwen-Image-2.1 (32 blocks, 40 steps, BF16)
+        │ text-aware block selection; blocks 5 and 20 replaced
+        ▼
+30 blocks + 2 attention bridges (~25 M weights each, BF16)
+        │ Lightning LoRA (rank 32), trajectory distillation on the student's own 40-step paths,
+        │ letter tokens ×10 (OCR); fused into the weights
+        ▼
+Nihonga v1.0: 6.73 B parameters, 10 steps (3 small + 7 large), no CFG, 1.75 s per 1024² image on an H100
+```
+
+---
+
+# TODO: next steps
+
+Each item keeps the rule: a quantitative and a qualitative test, every checkpoint saved, Modal jobs watched and
+nothing left running.
+
+**Housekeeping**
+- [ ] Delete the duplicate Hugging Face repo `jjmcarrascosa/nihonga-v1` (keep `jjmcarrascosa/Nihonga-v1.0`) — needs explicit OK.
+- [ ] Run `example.py` from a clean environment against the Hugging Face repo (end-to-end install test).
+- [ ] Publish the LinkedIn post (`release/social/linkedin-nihonga.jpg`).
+
+**Phase 11: quantization**
+- [ ] Quantize the fused v1 transformer (FP8 first, then 4-bit), and the text encoder, which holds 17.5 GB and dominates memory.
+- [ ] Compare quantized against unquantized v1: speed, peak memory, spelling (16 items) and the 25 general prompts.
+
+**Quality of v1**
+- [ ] Fix the 2 remaining structure differences (missing laptop, five friends): on-policy training (from the student's own states) for the start, or a longer small-step start.
+- [ ] Larger blinded evaluation (e.g. the 159-prompt protocol) of v1 against the teacher, plus Qwen-Image-Bench.
+- [ ] More text data (2k+ text trajectories), and stylized lettering that OCR missed (sand, 3D, large characters).
+
+**Faster**
+- [ ] 4 steps: progressive distillation from the 8/10-step LoRA, then distribution matching or an adversarial loss if still soft (our trajectory-only 4-step LoRA stayed grey; LightX2V is crisp but misspells).
+- [ ] Retrain the LoRA on the uneven schedule itself, aiming at 8 steps with the gentle start built in.
+
+**Smaller (version 2)**
+- [ ] Removals three and four: a text-aware scan inside v1, non-adjacent blocks, bridges as for block 20, then re-distill.
+- [ ] Revisit healing once four blocks are removed (more damage to repair).
+
+**Beyond text to image**
+- [ ] Test image editing, reference images and RGBA output, which v1 did not train or test.
+- [ ] A ComfyUI node or workflow using `sigmas.json`; optionally a diffusers custom pipeline.
+- [ ] Write the paper ("Lost Letters: how to prune a diffusion transformer without breaking what fails first").
+
