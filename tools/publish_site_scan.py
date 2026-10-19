@@ -351,6 +351,11 @@ def phase10_parts():
             'and then plateaued; letters are a few percent of the latent, so the loss hardly notices a misspelled sign. An OCR detector found the '
             'words in 370 of the 450 teacher text images (a median 12% of their tokens); the best checkpoint was continued for 2000 updates with '
             'those tokens weighted 10 times, a learning rate decaying to zero and 2 examples per update.</p>',
+            '<figure class="comparison"><a href="images/phase10-ocr-previews.jpg"><img loading="lazy" src="images/phase10-ocr-previews.jpg" '
+            'alt="Sixteen teacher training images with the latent tokens that hold text outlined in red: chalk menus, shop signs, a banner, a mug, '
+            'Chinese characters; the word HOTEL written in sand and the large 3D characters on a blue sign are missed"></a>'
+            '<figcaption><b>Where the loss now looks hardest</b> | red squares are the 16-pixel tokens weighted 10 times; stylized lettering '
+            '(sand, puffy 3D letters, large carved characters) is sometimes missed and keeps weight 1</figcaption></figure>',
             table('Spelling, four seeds each (16 items)', ['Model', 'Rusty Anchor', 'Emma', 'Poster tagline', 'Handwritten note', 'Total'], spell),
             '<div class="decision-examples"><figure class="comparison"><a href="images/phase10-8step-anchor.jpg"><img loading="lazy" src="images/phase10-8step-anchor.jpg" '
             'alt="The Rusty Anchor, four seeds: teacher, version 1, LightX2V and our 8-step LoRA checkpoints"></a><figcaption><b>The Rusty Anchor</b> | '
@@ -362,8 +367,20 @@ def phase10_parts():
             '40 steps, spells better than the published 4-step LoRA on the hardest sign, and keeps the general images of the first run, but it '
             'stays below version 1 at 40 steps (12 against 15 of 16) and loses some structure (a star shape, a group of four friends, an alarm '
             'clock). Our 4-step LoRA learns the layouts but stays soft and grey: copying the teacher&rsquo;s path averages at 4 steps, which '
-            'distribution matching avoids. Next: learning from version 1&rsquo;s own trajectories, so the LoRA only compresses steps, and more '
-            'text data.</p></div>']
+            'distribution matching avoids.</p></div>',
+            '<h3 id="phase10-structure">Structure, not only letters</h3>',
+            '<p class="summary">On the 25 general prompts the continued 8-step LoRA is, on average, as close to the teacher as version 1 at '
+            '40 steps (median PSNR 17.7 against 17.8 dB; naive 8 steps 15.0 dB): most of the distance comes from removing two blocks. Averages '
+            'hide the failures, though. Side by side with version 1 at 40 steps, 5 of the 25 images are clearly worse: the checkerboard breaks up '
+            'further, the white star becomes a blob, four friends become a crowd, the cyclist turns semi-transparent and the alarm clock '
+            'disappears; textures are slightly softer.</p>',
+            '<figure class="comparison"><a href="images/phase10-general-triplets.jpg"><img loading="lazy" src="images/phase10-general-triplets.jpg" '
+            'alt="The 25 general prompts as triplets: teacher at 40 steps, version 1 at 40 steps, our continued 8-step LoRA"></a>'
+            '<figcaption><b>Teacher | version 1 at 40 steps | ours at 8 steps</b>, for each of the 25 general prompts</figcaption></figure>',
+            '<div class="verdict"><p><b>Why, and what next.</b> These look like averaging: the LoRA is asked to reach the 32-block teacher&rsquo;s '
+            'images, which version 1 cannot draw even in 40 steps, and settles between the two. Only 50 of the 500 training prompts were general. '
+            'The next run therefore records <b>version 1&rsquo;s own 40-step trajectories</b> on 500 text and 500 general prompts and trains a fresh '
+            '8-step LoRA on them, so it only has to compress steps; its ceiling is version 1 at 40 steps.</p></div>']
 
 
 def variant_review_parts():
