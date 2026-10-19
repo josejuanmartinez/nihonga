@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-19",
+  "reviewer": "Claude (sheets at 300 px per seed, uncertain signs zoomed)",
+  "method": "Per model, 4 seeds each: Rusty Anchor headline, Emma headline, poster tagline Live in Berlin, handwritten note (16 items)",
+  "scores": {
+    "teacher_40": {
+      "anchor": 4,
+      "emma": 4,
+      "tagline": 4,
+      "note": 4,
+      "total": 16
+    },
+    "v1_40_bf16": {
+      "anchor": 4,
+      "emma": 4,
+      "tagline": 3,
+      "note": 4,
+      "total": 15
+    },
+    "lightx2v_4": {
+      "anchor": 1,
+      "emma": 4,
+      "tagline": 4,
+      "note": 4,
+      "total": 13
+    },
+    "ours8_step1500": {
+      "anchor": 3,
+      "emma": 3,
+      "tagline": 2,
+      "note": 3,
+      "total": 11
+    },
+    "continued_500": {
+      "anchor": 1,
+      "emma": 3,
+      "tagline": 3,
+      "note": 2,
+      "total": 9
+    },
+    "continued_1000": {
+      "anchor": 2,
+      "emma": 4,
+      "tagline": 3,
+      "note": 3,
+      "total": 12
+    },
+    "continued_1500": {
+      "anchor": 2,
+      "emma": 3,
+      "tagline": 3,
+      "note": 3,
+      "total": 11
+    },
+    "continued_2000": {
+      "anchor": 2,
+      "emma": 4,
+      "tagline": 3,
+      "note": 3,
+      "total": 12
+    }
+  },
+  "notes": [
+    "Continued: Rusty Anchor seeds 0 and 3 fail at every checkpoint (Hunor, Tho, Rust), seeds 1 and 2 are right; Emma right in all four seeds at +1000 and +2000; poster seed-0 tagline now legible; note seed 1 still broken.",
+    "General prompts: continued checkpoints match step 1500; against version 1 at 40 steps the 8-step LoRA loses the star shape, groups the four friends into a crowd and drops the alarm clock."
+  ],
+  "conclusion": "Text weighting and the decaying learning rate lower the text distance (37.9% to 31.9%) and raise the item count from 11 to 12 of 16, but spelling stays below version 1 at 40 steps (15 of 16); the Rusty Anchor is the hard case."
+}
