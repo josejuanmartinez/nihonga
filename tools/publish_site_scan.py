@@ -477,8 +477,27 @@ def phase10_ship_parts():
             '<div><dt>B &middot; plain sigmas</dt><dd>A helper returns the ten values for a width and height; they are passed as '
             '<code>sigmas</code> to the stock pipeline with a neutral scheduler (no shift, no terminal stretch). Works in diffusers as is, and in '
             'ComfyUI and other interfaces through a custom-sigmas input.</dd></div></dl>',
-            '<p class="note">Being checked now: the stock pipeline with fused weights and route B, exactly as a user would run it, against the '
-            'tested images; and the later LoRA checkpoints.</p>']
+            '<dl class="facts"><div><dt>shipping</dt><dd>Both routes ship as files next to the weights: <code>nihonga.py</code> (the bridge '
+            'modules, the loader, the scheduler class and the sigma helper) and <code>sigmas.json</code> (the ten values for each standard image '
+            'size, for interfaces without code).</dd></div></dl>'] + release_parts()
+
+
+
+def release_parts():
+    rows = [['Transformer blocks', '32', '30 + 2 bridges'], ['Transformer parameters', '7.115 B (14.2 GB)', '6.729 B (13.5 GB)'],
+            ['Sampling steps', '40', '<b>10</b>'], ['Time per 1024 &times; 1024 image, one H100', '6.89 s', '<b>1.75 s</b>'],
+            ['Peak GPU memory', '39.6 GB', '39.3 GB'], ['Spelling, 16 hard items', '16', '15'],
+            ['General images unlike the 40-step pruned model', '&ndash;', '2 of 25']]
+    return ['<h3 id="v1-release">Nihonga v1</h3>',
+            '<p class="summary">The release checkpoint uses the adapter of update 2500 (15 of 16 spelling items at 10 steps, against 14 for '
+            'update 2000). Built in the shipping format, the transformer was reloaded through the shipped code with every tensor identical; the '
+            'scheduler class and the plain sigmas used exactly the intended schedule and give pixel-identical images.</p>',
+            table('Qwen-Image-2.1 and Nihonga v1', ['', 'Qwen-Image-2.1', 'Nihonga v1'], rows),
+            '<div class="verdict"><p><b>3.9 times faster, the original&rsquo;s spelling level less one item.</b> Pruning gives a small part of '
+            'the speed (about 4% per step); the 10-step schedule gives the rest. Memory hardly changes, because the unchanged text encoder holds '
+            '17.5 GB; that is for quantization, which is not part of v1. Nihonga v1 makes text-to-image only: editing, reference images and '
+            'transparency were not trained or tested. It is a derivative of Qwen-Image-2.1 under the Qwen Research License, for non-commercial '
+            'use, distributed as the modified transformer plus code, with the text encoder and VAE loaded from the original.</p></div>']
 
 
 def variant_review_parts():
