@@ -24,14 +24,14 @@ def main():
         if slot in (5, 20):
             s += [box(x, y, w, 23, SAND), text(x + w / 2, y + 16, f'slot {slot} · bridge (attention + MLP) · ~25 M', 13, style='font-weight="bold"')]
         else:
-            s += [box(x, y, w, 23, BLUE), text(x + w / 2, y + 16, f'block {slot} · 218 M · adapter fused into q, k, v, out', 12)]
+            s += [box(x, y, w, 23, BLUE), text(x + w / 2, y + 16, f'block {slot} · 218 M · Lightning LoRA fused into q, k, v, out', 12)]
     end = top + 32 * 27
     s += [arrow(f'M{x + w / 2} {end + 2} L{x + w / 2} {end + 16}'), box(x, end + 18, w, 30, PAPER),
           text(x + w / 2, end + 38, 'velocity → next latent (Euler step)', 14)]
     # Right: the bridge, the adapter, the schedule.
     rx, rw = 500, 560
     y2 = top - 44
-    s += [box(rx, y2, rw, 200, '#FFFFFF'), text(rx + rw / 2, y2 + 28, 'The fused adapter', 18, style='font-weight="bold"')]
+    s += [box(rx, y2, rw, 200, '#FFFFFF'), text(rx + rw / 2, y2 + 28, 'The Lightning LoRA (fused)', 18, style='font-weight="bold"')]
     lines = ['Rank 32 on q, k, v and out of the 30 blocks, trained so', 'that one step lands where five steps of the pruned',
              'model’s own 40-step path land; letter tokens (found', 'by OCR) weigh ten times in the loss.', '',
              'Merged once: W′ = W + B·A. No extra weights or time.']

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1240" role="img" aria-labelledby="t d">
+<title id="t">The Nihonga Lightning LoRA</title>
+<desc id="d">1. A LoRA leaves a weight matrix W frozen and learns a thin correction B times A of rank 32. 2. The Lightning LoRA is trained so that one 10-step-sampler step lands where five steps of the model's own 40-step path land, with letter tokens weighted ten times. 3. After training it is fused: W prime equals W plus B times A, the same shape and cost as before.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="#231F1A"/></marker></defs>
+<rect width="1100" height="1240" fill="#F7EEE3"/>
+<g font-family="Georgia,serif">
+<text x="550.0" y="44" font-size="25" text-anchor="middle" fill="#231F1A" font-style="italic">The Lightning LoRA: what it is, how it learned, how it was fused</text>
+<rect x="30" y="80" width="1040" height="330" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="56" y="112" font-size="19" text-anchor="start" fill="#231F1A" font-weight="bold">1 · What a LoRA is</text>
+<text x="56" y="138" font-size="14" text-anchor="start" fill="#231F1A" >Instead of changing a big weight matrix, learn a thin correction next to it. Here: every attention projection</text>
+<text x="56" y="158" font-size="14" text-anchor="start" fill="#231F1A" >(q, k, v, out) of the 30 blocks, 120 matrices of 4,096 × 4,096, each with a rank-32 pair B·A.</text>
+<rect x="80" y="190" width="170" height="170" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="165.0" y="269.0" font-size="17" text-anchor="middle" fill="#231F1A" font-weight="bold">W</text>
+<text x="165.0" y="289.0" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 × 4,096</text>
+<text x="165.0" y="378" font-size="12" text-anchor="middle" fill="#5E564B" >frozen · 16.8 M weights</text>
+<text x="285" y="280" font-size="34" text-anchor="middle" fill="#231F1A" >+</text>
+<rect x="330" y="250" width="70" height="110" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="365.0" y="299.0" font-size="17" text-anchor="middle" fill="#231F1A" font-weight="bold">B</text>
+<text x="365.0" y="319.0" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 × 32</text>
+<text x="420" y="310" font-size="34" text-anchor="middle" fill="#231F1A" >·</text>
+<rect x="445" y="275" width="170" height="40" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="530.0" y="289.0" font-size="17" text-anchor="middle" fill="#231F1A" font-weight="bold">A</text>
+<text x="530.0" y="309.0" font-size="12" text-anchor="middle" fill="#231F1A" >32 × 4,096</text>
+<text x="472" y="380" font-size="12" text-anchor="middle" fill="#5E564B" >trained · 262 K weights per matrix (1.6%)</text>
+<text x="660" y="240" font-size="20" text-anchor="start" fill="#231F1A" >y = W·x + B·(A·x)</text>
+<text x="660" y="272" font-size="14" text-anchor="start" fill="#231F1A" >A squeezes the input to 32 numbers,</text>
+<text x="660" y="292" font-size="14" text-anchor="start" fill="#231F1A" >B expands them back: a low-rank nudge.</text>
+<text x="660" y="324" font-size="14" text-anchor="start" fill="#231F1A" >B starts at zero, so training starts from</text>
+<text x="660" y="344" font-size="14" text-anchor="start" fill="#231F1A" >the unchanged model.</text>
+<text x="660" y="376" font-size="14" text-anchor="start" fill="#231F1A" font-weight="bold">120 pairs: 31.5 M trainable weights.</text>
+<rect x="30" y="440" width="1040" height="430" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="56" y="472" font-size="19" text-anchor="start" fill="#231F1A" font-weight="bold">2 · How it learned to be fast (step distillation)</text>
+<text x="56" y="498" font-size="14" text-anchor="start" fill="#231F1A" >The pruned model was run in its normal 40 steps on 1,000 prompts (500 with text), saving the image after every step.</text>
+<text x="56" y="518" font-size="14" text-anchor="start" fill="#231F1A" >The LoRA is trained so that one big step lands where five small steps of that recorded path land.</text>
+<line x1="90" y1="630" x2="1010" y2="630" stroke="#231F1A" stroke-width="1.2"/>
+<line x1="90.0" y1="625" x2="90.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="113.0" y1="625" x2="113.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="136.0" y1="625" x2="136.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="159.0" y1="625" x2="159.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="182.0" y1="625" x2="182.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="205.0" y1="625" x2="205.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="228.0" y1="625" x2="228.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="251.0" y1="625" x2="251.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="274.0" y1="625" x2="274.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="297.0" y1="625" x2="297.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="320.0" y1="625" x2="320.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="343.0" y1="625" x2="343.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="366.0" y1="625" x2="366.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="389.0" y1="625" x2="389.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="412.0" y1="625" x2="412.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="435.0" y1="625" x2="435.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="458.0" y1="625" x2="458.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="481.0" y1="625" x2="481.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="504.0" y1="625" x2="504.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="527.0" y1="625" x2="527.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="550.0" y1="625" x2="550.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="573.0" y1="625" x2="573.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="596.0" y1="625" x2="596.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="619.0" y1="625" x2="619.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="642.0" y1="625" x2="642.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="665.0" y1="625" x2="665.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="688.0" y1="625" x2="688.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="711.0" y1="625" x2="711.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="734.0" y1="625" x2="734.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="757.0" y1="625" x2="757.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="780.0" y1="625" x2="780.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="803.0" y1="625" x2="803.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="826.0" y1="625" x2="826.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="849.0" y1="625" x2="849.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="872.0" y1="625" x2="872.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="895.0" y1="625" x2="895.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="918.0" y1="625" x2="918.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="941.0" y1="625" x2="941.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="964.0" y1="625" x2="964.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="987.0" y1="625" x2="987.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<line x1="1010.0" y1="625" x2="1010.0" y2="635" stroke="#5E564B" stroke-width="0.8"/>
+<path d="M320.0 638 Q331.5 656 343.0 638" stroke="#5E564B" stroke-width="1.2" fill="none"/>
+<path d="M343.0 638 Q354.5 656 366.0 638" stroke="#5E564B" stroke-width="1.2" fill="none"/>
+<path d="M366.0 638 Q377.5 656 389.0 638" stroke="#5E564B" stroke-width="1.2" fill="none"/>
+<path d="M389.0 638 Q400.5 656 412.0 638" stroke="#5E564B" stroke-width="1.2" fill="none"/>
+<path d="M412.0 638 Q423.5 656 435.0 638" stroke="#5E564B" stroke-width="1.2" fill="none"/>
+<path d="M320.0 622 Q377.5 560 435.0 622" stroke="#231F1A" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="377.5" y="552" font-size="14" text-anchor="middle" fill="#231F1A" font-weight="bold">one LoRA step</text>
+<text x="377.5" y="676" font-size="13" text-anchor="middle" fill="#5E564B" >five recorded steps of the pruned model</text>
+<text x="90" y="660" font-size="12" text-anchor="start" fill="#5E564B" >noise</text>
+<text x="1010" y="660" font-size="12" text-anchor="end" fill="#5E564B" >image</text>
+<text x="56" y="730" font-size="14" text-anchor="start" fill="#231F1A" >Loss: the gap between where the LoRA step lands and where the recorded path lands, over every token of the latent.</text>
+<text x="56" y="751" font-size="14" text-anchor="start" fill="#231F1A" >Letters are a few percent of the tokens, so an OCR detector marked the tokens that hold text in each training image;</text>
+<text x="56" y="772" font-size="14" text-anchor="start" fill="#231F1A" >those count ten times in the loss. 3,000 updates on one H100, learning rate decaying to zero.</text>
+<text x="56" y="793" font-size="14" text-anchor="start" fill="#231F1A" ></text>
+<text x="56" y="814" font-size="14" text-anchor="start" fill="#231F1A" >At use, the first jump out of noise is split into three small steps (0, 1, 3, 5): one big first jump merged figures</text>
+<text x="56" y="835" font-size="14" text-anchor="start" fill="#231F1A" >and dropped small objects. Then seven big LoRA steps (5, 10, …, 35, end): 10 steps in all, instead of 40.</text>
+<rect x="30" y="900" width="1040" height="330" rx="2" fill="#FFFFFF" stroke="#231F1A" stroke-width="1.2"/>
+<text x="56" y="932" font-size="19" text-anchor="start" fill="#231F1A" font-weight="bold">3 · How it was fused</text>
+<text x="56" y="958" font-size="14" text-anchor="start" fill="#231F1A" >After training, each pair is multiplied out once and added to its matrix. The LoRA disappears into the weights.</text>
+<rect x="80" y="1000" width="150" height="150" rx="2" fill="#A7C2A0" stroke="#231F1A" stroke-width="1.2"/>
+<text x="155.0" y="1069.0" font-size="17" text-anchor="middle" fill="#231F1A" font-weight="bold">W</text>
+<text x="155.0" y="1089.0" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 × 4,096</text>
+<text x="262" y="1080" font-size="34" text-anchor="middle" fill="#231F1A" >+</text>
+<rect x="300" y="1000" width="150" height="150" rx="2" fill="#E8D5B5" stroke="#231F1A" stroke-width="1.2"/>
+<text x="375.0" y="1069.0" font-size="17" text-anchor="middle" fill="#231F1A" font-weight="bold">B·A</text>
+<text x="375.0" y="1089.0" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 × 4,096</text>
+<text x="375.0" y="1168" font-size="12" text-anchor="middle" fill="#5E564B" >rank 32, computed once</text>
+<path d="M470 1075 L560 1075" stroke="#231F1A" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+<text x="515" y="1062" font-size="13" text-anchor="middle" fill="#5E564B" >merge</text>
+<rect x="580" y="1000" width="150" height="150" rx="2" fill="#C3D3DB" stroke="#231F1A" stroke-width="1.2"/>
+<text x="655.0" y="1069.0" font-size="17" text-anchor="middle" fill="#231F1A" font-weight="bold">W′</text>
+<text x="655.0" y="1089.0" font-size="12" text-anchor="middle" fill="#231F1A" >4,096 × 4,096</text>
+<text x="760" y="1040" font-size="19" text-anchor="start" fill="#231F1A" >W′ = W + B·A</text>
+<text x="760" y="1072" font-size="14" text-anchor="start" fill="#231F1A" >Same shape and size as W:</text>
+<text x="760" y="1092" font-size="14" text-anchor="start" fill="#231F1A" >no extra weights, no extra time,</text>
+<text x="760" y="1112" font-size="14" text-anchor="start" fill="#231F1A" >one ordinary checkpoint.</text>
+<text x="760" y="1144" font-size="14" text-anchor="start" fill="#5E564B" >Fused in FP32, stored in BF16.</text>
+</g></svg>
